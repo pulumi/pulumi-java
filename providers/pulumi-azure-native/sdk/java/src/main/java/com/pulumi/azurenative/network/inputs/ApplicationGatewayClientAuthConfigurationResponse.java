@@ -25,6 +25,10 @@ public final class ApplicationGatewayClientAuthConfigurationResponse extends com
     @Import(name="verifyClientCertIssuerDN")
     private @Nullable Boolean verifyClientCertIssuerDN;
 
+    /**
+     * @return Verify client certificate issuer name on the application gateway.
+     * 
+     */
     public Optional<Boolean> verifyClientCertIssuerDN() {
         return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }
@@ -53,6 +57,12 @@ public final class ApplicationGatewayClientAuthConfigurationResponse extends com
             $ = new ApplicationGatewayClientAuthConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param verifyClientCertIssuerDN Verify client certificate issuer name on the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
             $.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;

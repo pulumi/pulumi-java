@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MarkdownPartMetadataResponse {
     /**
-     * Input to dashboard part.
+     * @return Input to dashboard part.
      * 
      */
     private final @Nullable List<Object> inputs;
     /**
-     * Markdown part settings.
+     * @return Markdown part settings.
      * 
      */
     private final @Nullable MarkdownPartMetadataResponseSettings settings;
     /**
-     * The type of dashboard part.
+     * @return The type of dashboard part.
      * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
      * 
      */
@@ -42,24 +42,24 @@ public final class MarkdownPartMetadataResponse {
     }
 
     /**
-     * Input to dashboard part.
+     * @return Input to dashboard part.
      * 
-    */
+     */
     public List<Object> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
-     * Markdown part settings.
+     * @return Markdown part settings.
      * 
-    */
+     */
     public Optional<MarkdownPartMetadataResponseSettings> settings() {
         return Optional.ofNullable(this.settings);
     }
     /**
-     * The type of dashboard part.
+     * @return The type of dashboard part.
      * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

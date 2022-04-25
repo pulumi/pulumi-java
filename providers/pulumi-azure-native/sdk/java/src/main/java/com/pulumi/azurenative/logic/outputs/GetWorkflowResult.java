@@ -20,97 +20,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkflowResult {
     /**
-     * The access control configuration.
+     * @return The access control configuration.
      * 
      */
     private final @Nullable FlowAccessControlConfigurationResponse accessControl;
     /**
-     * Gets the access endpoint.
+     * @return Gets the access endpoint.
      * 
      */
     private final String accessEndpoint;
     /**
-     * Gets the changed time.
+     * @return Gets the changed time.
      * 
      */
     private final String changedTime;
     /**
-     * Gets the created time.
+     * @return Gets the created time.
      * 
      */
     private final String createdTime;
     /**
-     * The definition.
+     * @return The definition.
      * 
      */
     private final @Nullable Object definition;
     /**
-     * The endpoints configuration.
+     * @return The endpoints configuration.
      * 
      */
     private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
     /**
-     * The resource id.
+     * @return The resource id.
      * 
      */
     private final String id;
     /**
-     * Managed service identity properties.
+     * @return Managed service identity properties.
      * 
      */
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
-     * The integration account.
+     * @return The integration account.
      * 
      */
     private final @Nullable ResourceReferenceResponse integrationAccount;
     /**
-     * The integration service environment.
+     * @return The integration service environment.
      * 
      */
     private final @Nullable ResourceReferenceResponse integrationServiceEnvironment;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
      */
     private final String name;
     /**
-     * The parameters.
+     * @return The parameters.
      * 
      */
     private final @Nullable Map<String,WorkflowParameterResponse> parameters;
     /**
-     * Gets the provisioning state.
+     * @return Gets the provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The sku.
+     * @return The sku.
      * 
      */
     private final SkuResponse sku;
     /**
-     * The state.
+     * @return The state.
      * 
      */
     private final @Nullable String state;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
      */
     private final String type;
     /**
-     * Gets the version.
+     * @return Gets the version.
      * 
      */
     private final String version;
@@ -158,135 +158,135 @@ public final class GetWorkflowResult {
     }
 
     /**
-     * The access control configuration.
+     * @return The access control configuration.
      * 
-    */
+     */
     public Optional<FlowAccessControlConfigurationResponse> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
-     * Gets the access endpoint.
+     * @return Gets the access endpoint.
      * 
-    */
+     */
     public String accessEndpoint() {
         return this.accessEndpoint;
     }
     /**
-     * Gets the changed time.
+     * @return Gets the changed time.
      * 
-    */
+     */
     public String changedTime() {
         return this.changedTime;
     }
     /**
-     * Gets the created time.
+     * @return Gets the created time.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The definition.
+     * @return The definition.
      * 
-    */
+     */
     public Optional<Object> definition() {
         return Optional.ofNullable(this.definition);
     }
     /**
-     * The endpoints configuration.
+     * @return The endpoints configuration.
      * 
-    */
+     */
     public Optional<FlowEndpointsConfigurationResponse> endpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed service identity properties.
+     * @return Managed service identity properties.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The integration account.
+     * @return The integration account.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> integrationAccount() {
         return Optional.ofNullable(this.integrationAccount);
     }
     /**
-     * The integration service environment.
+     * @return The integration service environment.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parameters.
+     * @return The parameters.
      * 
-    */
+     */
     public Map<String,WorkflowParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Gets the provisioning state.
+     * @return Gets the provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The sku.
+     * @return The sku.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * The state.
+     * @return The state.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets the version.
+     * @return Gets the version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

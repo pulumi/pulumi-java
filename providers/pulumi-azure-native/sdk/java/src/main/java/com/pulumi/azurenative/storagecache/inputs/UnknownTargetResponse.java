@@ -26,6 +26,10 @@ public final class UnknownTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="attributes")
     private @Nullable Map<String,String> attributes;
 
+    /**
+     * @return Dictionary of string-&gt;string pairs containing information about the Storage Target.
+     * 
+     */
     public Optional<Map<String,String>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -54,6 +58,12 @@ public final class UnknownTargetResponse extends com.pulumi.resources.InvokeArgs
             $ = new UnknownTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Dictionary of string-&gt;string pairs containing information about the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Map<String,String> attributes) {
             $.attributes = attributes;
             return this;

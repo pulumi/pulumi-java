@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ReportDeliveryInfoResponse {
     /**
-     * Has destination for the report being delivered.
+     * @return Has destination for the report being delivered.
      * 
      */
     private final ReportDeliveryDestinationResponse destination;
@@ -21,9 +21,9 @@ public final class ReportDeliveryInfoResponse {
     }
 
     /**
-     * Has destination for the report being delivered.
+     * @return Has destination for the report being delivered.
      * 
-    */
+     */
     public ReportDeliveryDestinationResponse destination() {
         return this.destination;
     }

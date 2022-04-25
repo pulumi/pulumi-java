@@ -31,6 +31,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="autoDownloadCertificate")
     private @Nullable Output<Boolean> autoDownloadCertificate;
 
+    /**
+     * @return Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+     * 
+     */
     public Optional<Output<Boolean>> autoDownloadCertificate() {
         return Optional.ofNullable(this.autoDownloadCertificate);
     }
@@ -42,6 +46,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="caCertificateURI")
     private @Nullable Output<String> caCertificateURI;
 
+    /**
+     * @return The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+     * 
+     */
     public Optional<Output<String>> caCertificateURI() {
         return Optional.ofNullable(this.caCertificateURI);
     }
@@ -53,6 +61,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="credentials")
     private @Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
 
+    /**
+     * @return When present, these are the credentials for the secure LDAP connection.
+     * 
+     */
     public Optional<Output<CacheUsernameDownloadSettingsCredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -64,6 +76,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="encryptLdapConnection")
     private @Nullable Output<Boolean> encryptLdapConnection;
 
+    /**
+     * @return Whether or not the LDAP connection should be encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> encryptLdapConnection() {
         return Optional.ofNullable(this.encryptLdapConnection);
     }
@@ -75,6 +91,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="extendedGroups")
     private @Nullable Output<Boolean> extendedGroups;
 
+    /**
+     * @return Whether or not Extended Groups is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> extendedGroups() {
         return Optional.ofNullable(this.extendedGroups);
     }
@@ -86,6 +106,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="groupFileURI")
     private @Nullable Output<String> groupFileURI;
 
+    /**
+     * @return The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+     * 
+     */
     public Optional<Output<String>> groupFileURI() {
         return Optional.ofNullable(this.groupFileURI);
     }
@@ -97,6 +121,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="ldapBaseDN")
     private @Nullable Output<String> ldapBaseDN;
 
+    /**
+     * @return The base distinguished name for the LDAP domain.
+     * 
+     */
     public Optional<Output<String>> ldapBaseDN() {
         return Optional.ofNullable(this.ldapBaseDN);
     }
@@ -108,6 +136,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="ldapServer")
     private @Nullable Output<String> ldapServer;
 
+    /**
+     * @return The fully qualified domain name or IP address of the LDAP server to use.
+     * 
+     */
     public Optional<Output<String>> ldapServer() {
         return Optional.ofNullable(this.ldapServer);
     }
@@ -119,6 +151,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="requireValidCertificate")
     private @Nullable Output<Boolean> requireValidCertificate;
 
+    /**
+     * @return Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+     * 
+     */
     public Optional<Output<Boolean>> requireValidCertificate() {
         return Optional.ofNullable(this.requireValidCertificate);
     }
@@ -130,6 +166,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="userFileURI")
     private @Nullable Output<String> userFileURI;
 
+    /**
+     * @return The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+     * 
+     */
     public Optional<Output<String>> userFileURI() {
         return Optional.ofNullable(this.userFileURI);
     }
@@ -141,6 +181,10 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
     @Import(name="usernameSource")
     private @Nullable Output<Either<String,UsernameSource>> usernameSource;
 
+    /**
+     * @return This setting determines how the cache gets username and group names for clients.
+     * 
+     */
     public Optional<Output<Either<String,UsernameSource>>> usernameSource() {
         return Optional.ofNullable(this.usernameSource);
     }
@@ -179,109 +223,253 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
             $ = new CacheUsernameDownloadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDownloadCertificate Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDownloadCertificate(@Nullable Output<Boolean> autoDownloadCertificate) {
             $.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
 
+        /**
+         * @param autoDownloadCertificate Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDownloadCertificate(Boolean autoDownloadCertificate) {
             return autoDownloadCertificate(Output.of(autoDownloadCertificate));
         }
 
+        /**
+         * @param caCertificateURI The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificateURI(@Nullable Output<String> caCertificateURI) {
             $.caCertificateURI = caCertificateURI;
             return this;
         }
 
+        /**
+         * @param caCertificateURI The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificateURI(String caCertificateURI) {
             return caCertificateURI(Output.of(caCertificateURI));
         }
 
+        /**
+         * @param credentials When present, these are the credentials for the secure LDAP connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials When present, these are the credentials for the secure LDAP connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(CacheUsernameDownloadSettingsCredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param encryptLdapConnection Whether or not the LDAP connection should be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptLdapConnection(@Nullable Output<Boolean> encryptLdapConnection) {
             $.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
 
+        /**
+         * @param encryptLdapConnection Whether or not the LDAP connection should be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptLdapConnection(Boolean encryptLdapConnection) {
             return encryptLdapConnection(Output.of(encryptLdapConnection));
         }
 
+        /**
+         * @param extendedGroups Whether or not Extended Groups is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedGroups(@Nullable Output<Boolean> extendedGroups) {
             $.extendedGroups = extendedGroups;
             return this;
         }
 
+        /**
+         * @param extendedGroups Whether or not Extended Groups is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedGroups(Boolean extendedGroups) {
             return extendedGroups(Output.of(extendedGroups));
         }
 
+        /**
+         * @param groupFileURI The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupFileURI(@Nullable Output<String> groupFileURI) {
             $.groupFileURI = groupFileURI;
             return this;
         }
 
+        /**
+         * @param groupFileURI The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupFileURI(String groupFileURI) {
             return groupFileURI(Output.of(groupFileURI));
         }
 
+        /**
+         * @param ldapBaseDN The base distinguished name for the LDAP domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapBaseDN(@Nullable Output<String> ldapBaseDN) {
             $.ldapBaseDN = ldapBaseDN;
             return this;
         }
 
+        /**
+         * @param ldapBaseDN The base distinguished name for the LDAP domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapBaseDN(String ldapBaseDN) {
             return ldapBaseDN(Output.of(ldapBaseDN));
         }
 
+        /**
+         * @param ldapServer The fully qualified domain name or IP address of the LDAP server to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapServer(@Nullable Output<String> ldapServer) {
             $.ldapServer = ldapServer;
             return this;
         }
 
+        /**
+         * @param ldapServer The fully qualified domain name or IP address of the LDAP server to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapServer(String ldapServer) {
             return ldapServer(Output.of(ldapServer));
         }
 
+        /**
+         * @param requireValidCertificate Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireValidCertificate(@Nullable Output<Boolean> requireValidCertificate) {
             $.requireValidCertificate = requireValidCertificate;
             return this;
         }
 
+        /**
+         * @param requireValidCertificate Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireValidCertificate(Boolean requireValidCertificate) {
             return requireValidCertificate(Output.of(requireValidCertificate));
         }
 
+        /**
+         * @param userFileURI The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userFileURI(@Nullable Output<String> userFileURI) {
             $.userFileURI = userFileURI;
             return this;
         }
 
+        /**
+         * @param userFileURI The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userFileURI(String userFileURI) {
             return userFileURI(Output.of(userFileURI));
         }
 
+        /**
+         * @param usernameSource This setting determines how the cache gets username and group names for clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameSource(@Nullable Output<Either<String,UsernameSource>> usernameSource) {
             $.usernameSource = usernameSource;
             return this;
         }
 
+        /**
+         * @param usernameSource This setting determines how the cache gets username and group names for clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameSource(Either<String,UsernameSource> usernameSource) {
             return usernameSource(Output.of(usernameSource));
         }
 
+        /**
+         * @param usernameSource This setting determines how the cache gets username and group names for clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameSource(String usernameSource) {
             return usernameSource(Either.ofLeft(usernameSource));
         }
 
+        /**
+         * @param usernameSource This setting determines how the cache gets username and group names for clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameSource(UsernameSource usernameSource) {
             return usernameSource(Either.ofRight(usernameSource));
         }

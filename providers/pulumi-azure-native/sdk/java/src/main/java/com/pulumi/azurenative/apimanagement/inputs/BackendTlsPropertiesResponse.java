@@ -26,6 +26,10 @@ public final class BackendTlsPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="validateCertificateChain")
     private @Nullable Boolean validateCertificateChain;
 
+    /**
+     * @return Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     public Optional<Boolean> validateCertificateChain() {
         return Optional.ofNullable(this.validateCertificateChain);
     }
@@ -37,6 +41,10 @@ public final class BackendTlsPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="validateCertificateName")
     private @Nullable Boolean validateCertificateName;
 
+    /**
+     * @return Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     public Optional<Boolean> validateCertificateName() {
         return Optional.ofNullable(this.validateCertificateName);
     }
@@ -66,11 +74,23 @@ public final class BackendTlsPropertiesResponse extends com.pulumi.resources.Inv
             $ = new BackendTlsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param validateCertificateChain Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
             $.validateCertificateChain = validateCertificateChain;
             return this;
         }
 
+        /**
+         * @param validateCertificateName Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
             $.validateCertificateName = validateCertificateName;
             return this;

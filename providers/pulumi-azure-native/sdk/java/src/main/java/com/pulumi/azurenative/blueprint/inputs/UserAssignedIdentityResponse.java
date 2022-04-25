@@ -25,6 +25,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return Client App Id associated with this identity.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -36,6 +40,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -65,11 +73,23 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
             $ = new UserAssignedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client App Id associated with this identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId Azure Active Directory principal ID associated with this Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;

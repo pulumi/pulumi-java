@@ -19,6 +19,10 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
     @Import(name="accessKeyName", required=true)
     private String accessKeyName;
 
+    /**
+     * @return The workflow access key name.
+     * 
+     */
     public String accessKeyName() {
         return this.accessKeyName;
     }
@@ -30,6 +34,10 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
     @Import(name="workflowName", required=true)
     private String workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public String workflowName() {
         return this.workflowName;
     }
@@ -71,16 +83,34 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
             $ = new ListWorkflowAccessKeySecretKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyName The workflow access key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyName(String accessKeyName) {
             $.accessKeyName = accessKeyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             $.workflowName = workflowName;
             return this;

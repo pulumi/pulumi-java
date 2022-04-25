@@ -24,6 +24,10 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -35,6 +39,10 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
     @Import(name="privateEndpoint")
     private @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
+    /**
+     * @return Private endpoint which the connection belongs to.
+     * 
+     */
     public Optional<Output<ManagedInstancePrivateEndpointPropertyArgs>> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -53,6 +61,10 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Connection State of the Private Endpoint Connection.
+     * 
+     */
     public Optional<Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -64,6 +76,10 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -96,20 +112,44 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
             $ = new ManagedInstancePrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(ManagedInstancePrivateEndpointPropertyArgs privateEndpoint) {
             return privateEndpoint(Output.of(privateEndpoint));
         }
@@ -123,20 +163,44 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection State of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection State of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

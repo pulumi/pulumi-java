@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ComputeInstanceConnectivityEndpointsResponse {
     /**
-     * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+     * @return Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
      * 
      */
     private final String privateIpAddress;
     /**
-     * Public IP Address of this ComputeInstance.
+     * @return Public IP Address of this ComputeInstance.
      * 
      */
     private final String publicIpAddress;
@@ -29,16 +29,16 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
     }
 
     /**
-     * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+     * @return Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
      * 
-    */
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
-     * Public IP Address of this ComputeInstance.
+     * @return Public IP Address of this ComputeInstance.
      * 
-    */
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }

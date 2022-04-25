@@ -19,6 +19,10 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
     @Import(name="linkedSubscriptionName", required=true)
     private String linkedSubscriptionName;
 
+    /**
+     * @return Name of the Linked Subscription resource.
+     * 
+     */
     public String linkedSubscriptionName() {
         return this.linkedSubscriptionName;
     }
@@ -30,6 +34,10 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -59,11 +67,23 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
             $ = new GetLinkedSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedSubscriptionName Name of the Linked Subscription resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedSubscriptionName(String linkedSubscriptionName) {
             $.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

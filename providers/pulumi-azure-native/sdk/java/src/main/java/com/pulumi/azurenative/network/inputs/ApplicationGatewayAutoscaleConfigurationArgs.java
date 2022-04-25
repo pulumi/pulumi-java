@@ -26,6 +26,10 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends com.pulu
     @Import(name="maxCapacity")
     private @Nullable Output<Integer> maxCapacity;
 
+    /**
+     * @return Upper bound on number of Application Gateway capacity.
+     * 
+     */
     public Optional<Output<Integer>> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends com.pulu
     @Import(name="minCapacity", required=true)
     private Output<Integer> minCapacity;
 
+    /**
+     * @return Lower bound on number of Application Gateway capacity.
+     * 
+     */
     public Output<Integer> minCapacity() {
         return this.minCapacity;
     }
@@ -66,20 +74,44 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends com.pulu
             $ = new ApplicationGatewayAutoscaleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCapacity Upper bound on number of Application Gateway capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             $.maxCapacity = maxCapacity;
             return this;
         }
 
+        /**
+         * @param maxCapacity Upper bound on number of Application Gateway capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(Integer maxCapacity) {
             return maxCapacity(Output.of(maxCapacity));
         }
 
+        /**
+         * @param minCapacity Lower bound on number of Application Gateway capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Output<Integer> minCapacity) {
             $.minCapacity = minCapacity;
             return this;
         }
 
+        /**
+         * @param minCapacity Lower bound on number of Application Gateway capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Integer minCapacity) {
             return minCapacity(Output.of(minCapacity));
         }

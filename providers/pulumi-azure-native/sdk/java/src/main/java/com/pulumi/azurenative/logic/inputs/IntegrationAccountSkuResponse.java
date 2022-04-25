@@ -23,6 +23,10 @@ public final class IntegrationAccountSkuResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class IntegrationAccountSkuResponse extends com.pulumi.resources.In
             $ = new IntegrationAccountSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

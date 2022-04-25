@@ -19,6 +19,10 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -30,6 +34,10 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return The user ID. Use * to retrieve hub level view.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -52,6 +64,10 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="viewName", required=true)
     private String viewName;
 
+    /**
+     * @return The name of the view.
+     * 
+     */
     public String viewName() {
         return this.viewName;
     }
@@ -83,21 +99,45 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param userId The user ID. Use * to retrieve hub level view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param viewName The name of the view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewName(String viewName) {
             $.viewName = viewName;
             return this;

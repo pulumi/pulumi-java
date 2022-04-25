@@ -29,6 +29,10 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
     @Import(name="diskConfigurationType")
     private @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
+    /**
+     * @return Disk configuration to apply to SQL Server.
+     * 
+     */
     public Optional<Output<Either<String,DiskConfigurationType>>> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
@@ -40,6 +44,10 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
     @Import(name="diskCount")
     private @Nullable Output<Integer> diskCount;
 
+    /**
+     * @return Virtual machine disk count.
+     * 
+     */
     public Optional<Output<Integer>> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
@@ -51,6 +59,10 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
     @Import(name="startingDeviceId")
     private @Nullable Output<Integer> startingDeviceId;
 
+    /**
+     * @return Device id of the first disk to be updated.
+     * 
+     */
     public Optional<Output<Integer>> startingDeviceId() {
         return Optional.ofNullable(this.startingDeviceId);
     }
@@ -81,37 +93,85 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
             $ = new SqlStorageUpdateSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(@Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType) {
             $.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(Either<String,DiskConfigurationType> diskConfigurationType) {
             return diskConfigurationType(Output.of(diskConfigurationType));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(String diskConfigurationType) {
             return diskConfigurationType(Either.ofLeft(diskConfigurationType));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(DiskConfigurationType diskConfigurationType) {
             return diskConfigurationType(Either.ofRight(diskConfigurationType));
         }
 
+        /**
+         * @param diskCount Virtual machine disk count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param diskCount Virtual machine disk count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(Integer diskCount) {
             return diskCount(Output.of(diskCount));
         }
 
+        /**
+         * @param startingDeviceId Device id of the first disk to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingDeviceId(@Nullable Output<Integer> startingDeviceId) {
             $.startingDeviceId = startingDeviceId;
             return this;
         }
 
+        /**
+         * @param startingDeviceId Device id of the first disk to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingDeviceId(Integer startingDeviceId) {
             return startingDeviceId(Output.of(startingDeviceId));
         }

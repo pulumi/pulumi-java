@@ -26,6 +26,10 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metadata")
     private @Nullable MarkdownPartMetadataResponse metadata;
 
+    /**
+     * @return The dashboard part&#39;s metadata.
+     * 
+     */
     public Optional<MarkdownPartMetadataResponse> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -37,6 +41,10 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="position", required=true)
     private DashboardPartsResponsePosition position;
 
+    /**
+     * @return The dashboard&#39;s part position.
+     * 
+     */
     public DashboardPartsResponsePosition position() {
         return this.position;
     }
@@ -66,11 +74,23 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
             $ = new DashboardPartsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata The dashboard part&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable MarkdownPartMetadataResponse metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param position The dashboard&#39;s part position.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(DashboardPartsResponsePosition position) {
             $.position = position;
             return this;

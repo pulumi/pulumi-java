@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
     /**
-     * The Activity query to run on a given entity
+     * @return The Activity query to run on a given entity
      * 
      */
     private final @Nullable String query;
@@ -23,9 +23,9 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
     }
 
     /**
-     * The Activity query to run on a given entity
+     * @return The Activity query to run on a given entity
      * 
-    */
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }

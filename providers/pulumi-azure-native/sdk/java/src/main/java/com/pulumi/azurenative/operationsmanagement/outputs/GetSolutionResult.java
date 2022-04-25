@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSolutionResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Plan for solution object supported by the OperationsManagement resource provider.
+     * @return Plan for solution object supported by the OperationsManagement resource provider.
      * 
      */
     private final @Nullable SolutionPlanResponse plan;
     /**
-     * Properties for solution object supported by the OperationsManagement resource provider.
+     * @return Properties for solution object supported by the OperationsManagement resource provider.
      * 
      */
     private final SolutionPropertiesResponse properties;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class GetSolutionResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Plan for solution object supported by the OperationsManagement resource provider.
+     * @return Plan for solution object supported by the OperationsManagement resource provider.
      * 
-    */
+     */
     public Optional<SolutionPlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Properties for solution object supported by the OperationsManagement resource provider.
+     * @return Properties for solution object supported by the OperationsManagement resource provider.
      * 
-    */
+     */
     public SolutionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

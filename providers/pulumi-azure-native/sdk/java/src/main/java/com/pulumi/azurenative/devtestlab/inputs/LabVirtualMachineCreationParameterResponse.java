@@ -35,6 +35,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="allowClaim")
     private @Nullable Boolean allowClaim;
 
+    /**
+     * @return Indicates whether another user can take ownership of the virtual machine
+     * 
+     */
     public Optional<Boolean> allowClaim() {
         return Optional.ofNullable(this.allowClaim);
     }
@@ -46,6 +50,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="artifacts")
     private @Nullable List<ArtifactInstallPropertiesResponse> artifacts;
 
+    /**
+     * @return The artifacts to be installed on the virtual machine.
+     * 
+     */
     public Optional<List<ArtifactInstallPropertiesResponse>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -57,6 +65,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="bulkCreationParameters")
     private @Nullable BulkCreationParametersResponse bulkCreationParameters;
 
+    /**
+     * @return The number of virtual machine instances to create.
+     * 
+     */
     public Optional<BulkCreationParametersResponse> bulkCreationParameters() {
         return Optional.ofNullable(this.bulkCreationParameters);
     }
@@ -68,6 +80,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="createdDate")
     private @Nullable String createdDate;
 
+    /**
+     * @return The creation date of the virtual machine.
+     * 
+     */
     public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -79,6 +95,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="customImageId")
     private @Nullable String customImageId;
 
+    /**
+     * @return The custom image identifier of the virtual machine.
+     * 
+     */
     public Optional<String> customImageId() {
         return Optional.ofNullable(this.customImageId);
     }
@@ -90,6 +110,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="dataDiskParameters")
     private @Nullable List<DataDiskPropertiesResponse> dataDiskParameters;
 
+    /**
+     * @return New or existing data disks to attach to the virtual machine after creation
+     * 
+     */
     public Optional<List<DataDiskPropertiesResponse>> dataDiskParameters() {
         return Optional.ofNullable(this.dataDiskParameters);
     }
@@ -101,6 +125,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="disallowPublicIpAddress")
     private @Nullable Boolean disallowPublicIpAddress;
 
+    /**
+     * @return Indicates whether the virtual machine is to be created without a public IP address.
+     * 
+     */
     public Optional<Boolean> disallowPublicIpAddress() {
         return Optional.ofNullable(this.disallowPublicIpAddress);
     }
@@ -112,6 +140,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="environmentId")
     private @Nullable String environmentId;
 
+    /**
+     * @return The resource ID of the environment that contains this virtual machine, if any.
+     * 
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -123,6 +155,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="expirationDate")
     private @Nullable String expirationDate;
 
+    /**
+     * @return The expiration date for VM.
+     * 
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -134,6 +170,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="galleryImageReference")
     private @Nullable GalleryImageReferenceResponse galleryImageReference;
 
+    /**
+     * @return The Microsoft Azure Marketplace image reference of the virtual machine.
+     * 
+     */
     public Optional<GalleryImageReferenceResponse> galleryImageReference() {
         return Optional.ofNullable(this.galleryImageReference);
     }
@@ -145,6 +185,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="isAuthenticationWithSshKey")
     private @Nullable Boolean isAuthenticationWithSshKey;
 
+    /**
+     * @return Indicates whether this virtual machine uses an SSH key for authentication.
+     * 
+     */
     public Optional<Boolean> isAuthenticationWithSshKey() {
         return Optional.ofNullable(this.isAuthenticationWithSshKey);
     }
@@ -156,6 +200,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="labSubnetName")
     private @Nullable String labSubnetName;
 
+    /**
+     * @return The lab subnet name of the virtual machine.
+     * 
+     */
     public Optional<String> labSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
@@ -167,6 +215,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="labVirtualNetworkId")
     private @Nullable String labVirtualNetworkId;
 
+    /**
+     * @return The lab virtual network identifier of the virtual machine.
+     * 
+     */
     public Optional<String> labVirtualNetworkId() {
         return Optional.ofNullable(this.labVirtualNetworkId);
     }
@@ -178,6 +230,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location of the new virtual machine or environment
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -189,6 +245,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the virtual machine or environment
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -200,6 +260,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="networkInterface")
     private @Nullable NetworkInterfacePropertiesResponse networkInterface;
 
+    /**
+     * @return The network interface properties.
+     * 
+     */
     public Optional<NetworkInterfacePropertiesResponse> networkInterface() {
         return Optional.ofNullable(this.networkInterface);
     }
@@ -211,6 +275,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="notes")
     private @Nullable String notes;
 
+    /**
+     * @return The notes of the virtual machine.
+     * 
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -222,6 +290,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="ownerObjectId")
     private @Nullable String ownerObjectId;
 
+    /**
+     * @return The object identifier of the owner of the virtual machine.
+     * 
+     */
     public Optional<String> ownerObjectId() {
         return Optional.ofNullable(this.ownerObjectId);
     }
@@ -233,6 +305,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="ownerUserPrincipalName")
     private @Nullable String ownerUserPrincipalName;
 
+    /**
+     * @return The user principal name of the virtual machine owner.
+     * 
+     */
     public Optional<String> ownerUserPrincipalName() {
         return Optional.ofNullable(this.ownerUserPrincipalName);
     }
@@ -244,6 +320,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password of the virtual machine administrator.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -255,6 +335,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="planId")
     private @Nullable String planId;
 
+    /**
+     * @return The id of the plan associated with the virtual machine image
+     * 
+     */
     public Optional<String> planId() {
         return Optional.ofNullable(this.planId);
     }
@@ -266,6 +350,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="scheduleParameters")
     private @Nullable List<ScheduleCreationParameterResponse> scheduleParameters;
 
+    /**
+     * @return Virtual Machine schedules to be created
+     * 
+     */
     public Optional<List<ScheduleCreationParameterResponse>> scheduleParameters() {
         return Optional.ofNullable(this.scheduleParameters);
     }
@@ -277,6 +365,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The size of the virtual machine.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -288,6 +380,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="sshKey")
     private @Nullable String sshKey;
 
+    /**
+     * @return The SSH key of the virtual machine administrator.
+     * 
+     */
     public Optional<String> sshKey() {
         return Optional.ofNullable(this.sshKey);
     }
@@ -299,6 +395,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="storageType")
     private @Nullable String storageType;
 
+    /**
+     * @return Storage type to use for virtual machine (i.e. Standard, Premium).
+     * 
+     */
     public Optional<String> storageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -310,6 +410,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -321,6 +425,10 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return The user name of the virtual machine.
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -375,148 +483,328 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
             $ = new LabVirtualMachineCreationParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowClaim Indicates whether another user can take ownership of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowClaim(@Nullable Boolean allowClaim) {
             $.allowClaim = allowClaim;
             return this;
         }
 
+        /**
+         * @param artifacts The artifacts to be installed on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable List<ArtifactInstallPropertiesResponse> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts The artifacts to be installed on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(ArtifactInstallPropertiesResponse... artifacts) {
             return artifacts(List.of(artifacts));
         }
 
+        /**
+         * @param bulkCreationParameters The number of virtual machine instances to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bulkCreationParameters(@Nullable BulkCreationParametersResponse bulkCreationParameters) {
             $.bulkCreationParameters = bulkCreationParameters;
             return this;
         }
 
+        /**
+         * @param createdDate The creation date of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable String createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param customImageId The custom image identifier of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImageId(@Nullable String customImageId) {
             $.customImageId = customImageId;
             return this;
         }
 
+        /**
+         * @param dataDiskParameters New or existing data disks to attach to the virtual machine after creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesResponse> dataDiskParameters) {
             $.dataDiskParameters = dataDiskParameters;
             return this;
         }
 
+        /**
+         * @param dataDiskParameters New or existing data disks to attach to the virtual machine after creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskParameters(DataDiskPropertiesResponse... dataDiskParameters) {
             return dataDiskParameters(List.of(dataDiskParameters));
         }
 
+        /**
+         * @param disallowPublicIpAddress Indicates whether the virtual machine is to be created without a public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
             $.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
 
+        /**
+         * @param environmentId The resource ID of the environment that contains this virtual machine, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param expirationDate The expiration date for VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param galleryImageReference The Microsoft Azure Marketplace image reference of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageReference(@Nullable GalleryImageReferenceResponse galleryImageReference) {
             $.galleryImageReference = galleryImageReference;
             return this;
         }
 
+        /**
+         * @param isAuthenticationWithSshKey Indicates whether this virtual machine uses an SSH key for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
             $.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
 
+        /**
+         * @param labSubnetName The lab subnet name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labSubnetName(@Nullable String labSubnetName) {
             $.labSubnetName = labSubnetName;
             return this;
         }
 
+        /**
+         * @param labVirtualNetworkId The lab virtual network identifier of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
             $.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
 
+        /**
+         * @param location The location of the new virtual machine or environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the virtual machine or environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkInterface The network interface properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterface(@Nullable NetworkInterfacePropertiesResponse networkInterface) {
             $.networkInterface = networkInterface;
             return this;
         }
 
+        /**
+         * @param notes The notes of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable String notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param ownerObjectId The object identifier of the owner of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerObjectId(@Nullable String ownerObjectId) {
             $.ownerObjectId = ownerObjectId;
             return this;
         }
 
+        /**
+         * @param ownerUserPrincipalName The user principal name of the virtual machine owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
             $.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
 
+        /**
+         * @param password The password of the virtual machine administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param planId The id of the plan associated with the virtual machine image
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(@Nullable String planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param scheduleParameters Virtual Machine schedules to be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterResponse> scheduleParameters) {
             $.scheduleParameters = scheduleParameters;
             return this;
         }
 
+        /**
+         * @param scheduleParameters Virtual Machine schedules to be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleParameters(ScheduleCreationParameterResponse... scheduleParameters) {
             return scheduleParameters(List.of(scheduleParameters));
         }
 
+        /**
+         * @param size The size of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param sshKey The SSH key of the virtual machine administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshKey(@Nullable String sshKey) {
             $.sshKey = sshKey;
             return this;
         }
 
+        /**
+         * @param storageType Storage type to use for virtual machine (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(@Nullable String storageType) {
             $.storageType = storageType;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param userName The user name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

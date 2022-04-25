@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTemplateManagedImageDistributorResponse {
     /**
-     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
      */
     private final @Nullable Map<String,String> artifactTags;
     /**
-     * Resource Id of the Managed Disk Image
+     * @return Resource Id of the Managed Disk Image
      * 
      */
     private final String imageId;
     /**
-     * Azure location for the image, should match if image already exists
+     * @return Azure location for the image, should match if image already exists
      * 
      */
     private final String location;
     /**
-     * The name to be used for the associated RunOutput.
+     * @return The name to be used for the associated RunOutput.
      * 
      */
     private final String runOutputName;
     /**
-     * Type of distribution.
+     * @return Type of distribution.
      * Expected value is &#39;ManagedImage&#39;.
      * 
      */
@@ -53,38 +53,38 @@ public final class ImageTemplateManagedImageDistributorResponse {
     }
 
     /**
-     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
-    */
+     */
     public Map<String,String> artifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
     /**
-     * Resource Id of the Managed Disk Image
+     * @return Resource Id of the Managed Disk Image
      * 
-    */
+     */
     public String imageId() {
         return this.imageId;
     }
     /**
-     * Azure location for the image, should match if image already exists
+     * @return Azure location for the image, should match if image already exists
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name to be used for the associated RunOutput.
+     * @return The name to be used for the associated RunOutput.
      * 
-    */
+     */
     public String runOutputName() {
         return this.runOutputName;
     }
     /**
-     * Type of distribution.
+     * @return Type of distribution.
      * Expected value is &#39;ManagedImage&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

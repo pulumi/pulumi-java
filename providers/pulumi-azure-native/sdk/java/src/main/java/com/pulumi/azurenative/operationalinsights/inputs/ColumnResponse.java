@@ -26,6 +26,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataTypeHint")
     private @Nullable String dataTypeHint;
 
+    /**
+     * @return Column data type logical hint.
+     * 
+     */
     public Optional<String> dataTypeHint() {
         return Optional.ofNullable(this.dataTypeHint);
     }
@@ -37,6 +41,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Column description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Column display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -59,6 +71,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isDefaultDisplay", required=true)
     private Boolean isDefaultDisplay;
 
+    /**
+     * @return Is displayed by default.
+     * 
+     */
     public Boolean isDefaultDisplay() {
         return this.isDefaultDisplay;
     }
@@ -70,6 +86,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isHidden", required=true)
     private Boolean isHidden;
 
+    /**
+     * @return Is column hidden.
+     * 
+     */
     public Boolean isHidden() {
         return this.isHidden;
     }
@@ -81,6 +101,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Column name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,6 +116,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Column data type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -126,36 +154,78 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTypeHint Column data type logical hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeHint(@Nullable String dataTypeHint) {
             $.dataTypeHint = dataTypeHint;
             return this;
         }
 
+        /**
+         * @param description Column description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Column display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param isDefaultDisplay Is displayed by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefaultDisplay(Boolean isDefaultDisplay) {
             $.isDefaultDisplay = isDefaultDisplay;
             return this;
         }
 
+        /**
+         * @param isHidden Is column hidden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHidden(Boolean isHidden) {
             $.isHidden = isHidden;
             return this;
         }
 
+        /**
+         * @param name Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Column data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

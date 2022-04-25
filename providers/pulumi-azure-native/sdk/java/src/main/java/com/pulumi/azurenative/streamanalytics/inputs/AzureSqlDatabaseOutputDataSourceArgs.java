@@ -27,6 +27,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
     @Import(name="database")
     private @Nullable Output<String> database;
 
+    /**
+     * @return The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -38,6 +42,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
     @Import(name="server")
     private @Nullable Output<String> server;
 
+    /**
+     * @return The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> server() {
         return Optional.ofNullable(this.server);
     }
@@ -60,6 +72,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
     @Import(name="table")
     private @Nullable Output<String> table;
 
+    /**
+     * @return The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -72,6 +88,11 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.Sql/Server/Database&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -83,6 +104,10 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -116,56 +141,130 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
             $ = new AzureSqlDatabaseOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param password The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param server The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(@Nullable Output<String> server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param server The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(String server) {
             return server(Output.of(server));
         }
 
+        /**
+         * @param table The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<String> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             return table(Output.of(table));
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Sql/Server/Database&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Sql/Server/Database&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param user The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

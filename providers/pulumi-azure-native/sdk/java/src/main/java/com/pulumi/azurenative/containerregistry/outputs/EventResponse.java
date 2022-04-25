@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventResponse {
     /**
-     * The event request message sent to the service URI.
+     * @return The event request message sent to the service URI.
      * 
      */
     private final @Nullable EventRequestMessageResponse eventRequestMessage;
     /**
-     * The event response message received from the service URI.
+     * @return The event response message received from the service URI.
      * 
      */
     private final @Nullable EventResponseMessageResponse eventResponseMessage;
     /**
-     * The event ID.
+     * @return The event ID.
      * 
      */
     private final @Nullable String id;
@@ -40,23 +40,23 @@ public final class EventResponse {
     }
 
     /**
-     * The event request message sent to the service URI.
+     * @return The event request message sent to the service URI.
      * 
-    */
+     */
     public Optional<EventRequestMessageResponse> eventRequestMessage() {
         return Optional.ofNullable(this.eventRequestMessage);
     }
     /**
-     * The event response message received from the service URI.
+     * @return The event response message received from the service URI.
      * 
-    */
+     */
     public Optional<EventResponseMessageResponse> eventResponseMessage() {
         return Optional.ofNullable(this.eventResponseMessage);
     }
     /**
-     * The event ID.
+     * @return The event ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

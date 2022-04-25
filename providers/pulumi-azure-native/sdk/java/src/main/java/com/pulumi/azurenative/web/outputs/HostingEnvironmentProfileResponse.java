@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HostingEnvironmentProfileResponse {
     /**
-     * Resource ID of the App Service Environment.
+     * @return Resource ID of the App Service Environment.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the App Service Environment.
+     * @return Name of the App Service Environment.
      * 
      */
     private final String name;
     /**
-     * Resource type of the App Service Environment.
+     * @return Resource type of the App Service Environment.
      * 
      */
     private final String type;
@@ -38,23 +38,23 @@ public final class HostingEnvironmentProfileResponse {
     }
 
     /**
-     * Resource ID of the App Service Environment.
+     * @return Resource ID of the App Service Environment.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the App Service Environment.
+     * @return Name of the App Service Environment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type of the App Service Environment.
+     * @return Resource type of the App Service Environment.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

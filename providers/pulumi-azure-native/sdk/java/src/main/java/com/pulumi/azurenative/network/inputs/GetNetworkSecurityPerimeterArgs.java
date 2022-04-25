@@ -19,6 +19,10 @@ public final class GetNetworkSecurityPerimeterArgs extends com.pulumi.resources.
     @Import(name="networkSecurityPerimeterName", required=true)
     private String networkSecurityPerimeterName;
 
+    /**
+     * @return The name of the network security perimeter.
+     * 
+     */
     public String networkSecurityPerimeterName() {
         return this.networkSecurityPerimeterName;
     }
@@ -30,6 +34,10 @@ public final class GetNetworkSecurityPerimeterArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetNetworkSecurityPerimeterArgs extends com.pulumi.resources.
             $ = new GetNetworkSecurityPerimeterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkSecurityPerimeterName The name of the network security perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityPerimeterName(String networkSecurityPerimeterName) {
             $.networkSecurityPerimeterName = networkSecurityPerimeterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

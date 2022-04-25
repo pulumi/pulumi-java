@@ -24,6 +24,10 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
     @Import(name="exponent", required=true)
     private String exponent;
 
+    /**
+     * @return The RSA Parameter exponent
+     * 
+     */
     public String exponent() {
         return this.exponent;
     }
@@ -35,6 +39,10 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
     @Import(name="modulus", required=true)
     private String modulus;
 
+    /**
+     * @return The RSA Parameter modulus
+     * 
+     */
     public String modulus() {
         return this.modulus;
     }
@@ -47,6 +55,11 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -77,16 +90,35 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
             $ = new ContentKeyPolicyRsaTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exponent The RSA Parameter exponent
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponent(String exponent) {
             $.exponent = exponent;
             return this;
         }
 
+        /**
+         * @param modulus The RSA Parameter modulus
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulus(String modulus) {
             $.modulus = modulus;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetGlobalUserOperationBatchStatusResult {
     /**
-     * Gets a collection of items that contain the operation url and status.
+     * @return Gets a collection of items that contain the operation url and status.
      * 
      */
     private final List<OperationBatchStatusResponseItemResponse> items;
@@ -22,9 +22,9 @@ public final class GetGlobalUserOperationBatchStatusResult {
     }
 
     /**
-     * Gets a collection of items that contain the operation url and status.
+     * @return Gets a collection of items that contain the operation url and status.
      * 
-    */
+     */
     public List<OperationBatchStatusResponseItemResponse> items() {
         return this.items;
     }

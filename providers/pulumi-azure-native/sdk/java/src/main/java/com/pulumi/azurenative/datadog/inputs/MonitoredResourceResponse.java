@@ -26,6 +26,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ARM id of the resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="reasonForLogsStatus")
     private @Nullable String reasonForLogsStatus;
 
+    /**
+     * @return Reason for why the resource is sending logs (or why it is not sending).
+     * 
+     */
     public Optional<String> reasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
@@ -48,6 +56,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="reasonForMetricsStatus")
     private @Nullable String reasonForMetricsStatus;
 
+    /**
+     * @return Reason for why the resource is sending metrics (or why it is not sending).
+     * 
+     */
     public Optional<String> reasonForMetricsStatus() {
         return Optional.ofNullable(this.reasonForMetricsStatus);
     }
@@ -59,6 +71,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="sendingLogs")
     private @Nullable Boolean sendingLogs;
 
+    /**
+     * @return Flag indicating if resource is sending logs to Datadog.
+     * 
+     */
     public Optional<Boolean> sendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
@@ -70,6 +86,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="sendingMetrics")
     private @Nullable Boolean sendingMetrics;
 
+    /**
+     * @return Flag indicating if resource is sending metrics to Datadog.
+     * 
+     */
     public Optional<Boolean> sendingMetrics() {
         return Optional.ofNullable(this.sendingMetrics);
     }
@@ -102,26 +122,56 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
             $ = new MonitoredResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param reasonForLogsStatus Reason for why the resource is sending logs (or why it is not sending).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             $.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
 
+        /**
+         * @param reasonForMetricsStatus Reason for why the resource is sending metrics (or why it is not sending).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
             $.reasonForMetricsStatus = reasonForMetricsStatus;
             return this;
         }
 
+        /**
+         * @param sendingLogs Flag indicating if resource is sending logs to Datadog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendingLogs(@Nullable Boolean sendingLogs) {
             $.sendingLogs = sendingLogs;
             return this;
         }
 
+        /**
+         * @param sendingMetrics Flag indicating if resource is sending metrics to Datadog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendingMetrics(@Nullable Boolean sendingMetrics) {
             $.sendingMetrics = sendingMetrics;
             return this;

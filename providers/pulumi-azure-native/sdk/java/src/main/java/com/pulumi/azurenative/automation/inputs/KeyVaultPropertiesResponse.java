@@ -25,6 +25,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return The name of key used to encrypt data.
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -36,6 +40,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The key version of the key used to encrypt data.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -47,6 +55,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyvaultUri")
     private @Nullable String keyvaultUri;
 
+    /**
+     * @return The URI of the key vault key used to encrypt data.
+     * 
+     */
     public Optional<String> keyvaultUri() {
         return Optional.ofNullable(this.keyvaultUri);
     }
@@ -77,16 +89,34 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVersion The key version of the key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyvaultUri The URI of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyvaultUri(@Nullable String keyvaultUri) {
             $.keyvaultUri = keyvaultUri;
             return this;

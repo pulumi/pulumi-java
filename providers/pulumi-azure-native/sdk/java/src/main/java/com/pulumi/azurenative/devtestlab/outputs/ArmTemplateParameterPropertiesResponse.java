@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ArmTemplateParameterPropertiesResponse {
     /**
-     * The name of the template parameter.
+     * @return The name of the template parameter.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of the template parameter.
+     * @return The value of the template parameter.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class ArmTemplateParameterPropertiesResponse {
     }
 
     /**
-     * The name of the template parameter.
+     * @return The name of the template parameter.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of the template parameter.
+     * @return The value of the template parameter.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

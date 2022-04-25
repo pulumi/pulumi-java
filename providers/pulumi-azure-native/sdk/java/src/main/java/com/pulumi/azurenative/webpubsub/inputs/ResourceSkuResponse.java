@@ -30,6 +30,14 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return Optional, integer. The unit count of the resource. 1 by default.
+     * 
+     * If present, following values are allowed:
+     *     Free: 1
+     *     Standard: 1,2,5,10,20,50,100
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -41,6 +49,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family", required=true)
     private String family;
 
+    /**
+     * @return Not used. Retained for future use.
+     * 
+     */
     public String family() {
         return this.family;
     }
@@ -54,6 +66,12 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the SKU. Required.
+     * 
+     * Allowed values: Standard_S1, Free_F1
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,6 +83,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size", required=true)
     private String size;
 
+    /**
+     * @return Not used. Retained for future use.
+     * 
+     */
     public String size() {
         return this.size;
     }
@@ -78,6 +100,12 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+     * 
+     * `Basic` is deprecated, use `Standard` instead.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -110,26 +138,64 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Optional, integer. The unit count of the resource. 1 by default.
+         * 
+         * If present, following values are allowed:
+         *     Free: 1
+         *     Standard: 1,2,5,10,20,50,100
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family Not used. Retained for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU. Required.
+         * 
+         * Allowed values: Standard_S1, Free_F1
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size Not used. Retained for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tier Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+         * 
+         * `Basic` is deprecated, use `Standard` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RoleSinkInfoResponse {
     /**
-     * Compute role ID.
+     * @return Compute role ID.
      * 
      */
     private final String roleId;
@@ -21,9 +21,9 @@ public final class RoleSinkInfoResponse {
     }
 
     /**
-     * Compute role ID.
+     * @return Compute role ID.
      * 
-    */
+     */
     public String roleId() {
         return this.roleId;
     }

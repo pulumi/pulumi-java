@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlElasticPoolResourceSettingsResponse {
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
      * 
      */
     private final String resourceType;
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
      */
     private final String targetResourceName;
     /**
-     * Defines the zone redundant resource setting.
+     * @return Defines the zone redundant resource setting.
      * 
      */
     private final @Nullable String zoneRedundant;
@@ -39,24 +39,24 @@ public final class SqlElasticPoolResourceSettingsResponse {
     }
 
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
-     * Defines the zone redundant resource setting.
+     * @return Defines the zone redundant resource setting.
      * 
-    */
+     */
     public Optional<String> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }

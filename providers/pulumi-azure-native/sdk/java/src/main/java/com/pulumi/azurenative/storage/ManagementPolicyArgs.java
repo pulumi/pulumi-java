@@ -23,6 +23,10 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="managementPolicyName")
     private @Nullable Output<String> managementPolicyName;
 
+    /**
+     * @return The name of the Storage Account Management Policy. It should always be &#39;default&#39;
+     * 
+     */
     public Optional<Output<String>> managementPolicyName() {
         return Optional.ofNullable(this.managementPolicyName);
     }
@@ -45,6 +53,10 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policy", required=true)
     private Output<ManagementPolicySchemaArgs> policy;
 
+    /**
+     * @return The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+     * 
+     */
     public Output<ManagementPolicySchemaArgs> policy() {
         return this.policy;
     }
@@ -56,6 +68,10 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new ManagementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param managementPolicyName The name of the Storage Account Management Policy. It should always be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementPolicyName(@Nullable Output<String> managementPolicyName) {
             $.managementPolicyName = managementPolicyName;
             return this;
         }
 
+        /**
+         * @param managementPolicyName The name of the Storage Account Management Policy. It should always be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementPolicyName(String managementPolicyName) {
             return managementPolicyName(Output.of(managementPolicyName));
         }
 
+        /**
+         * @param policy The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<ManagementPolicySchemaArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ManagementPolicySchemaArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

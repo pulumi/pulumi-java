@@ -23,6 +23,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
     private @Nullable Output<String> environmentId;
 
+    /**
+     * @return The resource id of the environment under which the service fabric resource is present
+     * 
+     */
     public Optional<Output<String>> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -34,6 +38,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalServiceFabricId")
     private @Nullable Output<String> externalServiceFabricId;
 
+    /**
+     * @return The backing service fabric resource&#39;s id
+     * 
+     */
     public Optional<Output<String>> externalServiceFabricId() {
         return Optional.ofNullable(this.externalServiceFabricId);
     }
@@ -45,6 +53,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -56,6 +68,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -67,6 +83,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the service fabric.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,6 +98,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -89,6 +113,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,6 +128,10 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return The name of the user profile.
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -135,74 +167,170 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceFabricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentId The resource id of the environment under which the service fabric resource is present
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId The resource id of the environment under which the service fabric resource is present
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param externalServiceFabricId The backing service fabric resource&#39;s id
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalServiceFabricId(@Nullable Output<String> externalServiceFabricId) {
             $.externalServiceFabricId = externalServiceFabricId;
             return this;
         }
 
+        /**
+         * @param externalServiceFabricId The backing service fabric resource&#39;s id
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalServiceFabricId(String externalServiceFabricId) {
             return externalServiceFabricId(Output.of(externalServiceFabricId));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the service fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the service fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userName The name of the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The name of the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

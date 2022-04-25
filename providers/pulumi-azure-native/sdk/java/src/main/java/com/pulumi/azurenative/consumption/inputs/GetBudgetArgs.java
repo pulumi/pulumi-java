@@ -19,6 +19,10 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="budgetName", required=true)
     private String budgetName;
 
+    /**
+     * @return Budget Name.
+     * 
+     */
     public String budgetName() {
         return this.budgetName;
     }
@@ -30,6 +34,10 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope associated with budget operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBudgetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param budgetName Budget Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(String budgetName) {
             $.budgetName = budgetName;
             return this;
         }
 
+        /**
+         * @param scope The scope associated with budget operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

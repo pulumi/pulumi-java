@@ -19,6 +19,10 @@ public final class ListLocationConsortiumsArgs extends com.pulumi.resources.Invo
     @Import(name="locationName", required=true)
     private String locationName;
 
+    /**
+     * @return Location Name.
+     * 
+     */
     public String locationName() {
         return this.locationName;
     }
@@ -47,6 +51,12 @@ public final class ListLocationConsortiumsArgs extends com.pulumi.resources.Invo
             $ = new ListLocationConsortiumsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locationName Location Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(String locationName) {
             $.locationName = locationName;
             return this;

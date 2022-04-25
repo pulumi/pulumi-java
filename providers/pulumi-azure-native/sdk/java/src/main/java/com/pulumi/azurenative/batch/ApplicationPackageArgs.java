@@ -22,6 +22,10 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the Batch account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
     @Import(name="applicationName", required=true)
     private Output<String> applicationName;
 
+    /**
+     * @return The name of the application. This must be unique within the account.
+     * 
+     */
     public Output<String> applicationName() {
         return this.applicationName;
     }
@@ -44,6 +52,10 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
     @Import(name="versionName")
     private @Nullable Output<String> versionName;
 
+    /**
+     * @return The version of the application.
+     * 
+     */
     public Optional<Output<String>> versionName() {
         return Optional.ofNullable(this.versionName);
     }
@@ -86,38 +102,86 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
             $ = new ApplicationPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param applicationName The name of the application. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the application. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param versionName The version of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(@Nullable Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName The version of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

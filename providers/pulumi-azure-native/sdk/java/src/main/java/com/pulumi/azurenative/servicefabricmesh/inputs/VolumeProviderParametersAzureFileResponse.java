@@ -25,6 +25,10 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
     @Import(name="accountKey")
     private @Nullable String accountKey;
 
+    /**
+     * @return Access key of the Azure storage account for the File Share.
+     * 
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -36,6 +40,10 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Name of the Azure storage account for the File Share.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -47,6 +55,10 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return Name of the Azure Files file share that provides storage for the volume.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -77,16 +89,34 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
             $ = new VolumeProviderParametersAzureFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey Access key of the Azure storage account for the File Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable String accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountName Name of the Azure storage account for the File Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param shareName Name of the Azure Files file share that provides storage for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;

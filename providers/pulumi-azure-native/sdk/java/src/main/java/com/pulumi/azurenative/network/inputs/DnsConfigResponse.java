@@ -26,6 +26,10 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn", required=true)
     private String fqdn;
 
+    /**
+     * @return The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
+     * 
+     */
     public String fqdn() {
         return this.fqdn;
     }
@@ -37,6 +41,10 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="relativeName")
     private @Nullable String relativeName;
 
+    /**
+     * @return The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+     * 
+     */
     public Optional<String> relativeName() {
         return Optional.ofNullable(this.relativeName);
     }
@@ -48,6 +56,10 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ttl")
     private @Nullable Double ttl;
 
+    /**
+     * @return The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+     * 
+     */
     public Optional<Double> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -78,16 +90,34 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DnsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdn The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param relativeName The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeName(@Nullable String relativeName) {
             $.relativeName = relativeName;
             return this;
         }
 
+        /**
+         * @param ttl The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Double ttl) {
             $.ttl = ttl;
             return this;

@@ -31,6 +31,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="applicationState", required=true)
     private String applicationState;
 
+    /**
+     * @return The application state.
+     * 
+     */
     public String applicationState() {
         return this.applicationState;
     }
@@ -42,6 +46,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="applicationType")
     private @Nullable String applicationType;
 
+    /**
+     * @return The application type.
+     * 
+     */
     public Optional<String> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
@@ -53,6 +61,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="computeProfile")
     private @Nullable ComputeProfileResponse computeProfile;
 
+    /**
+     * @return The list of roles in the cluster.
+     * 
+     */
     public Optional<ComputeProfileResponse> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
@@ -64,6 +76,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="createdDate", required=true)
     private String createdDate;
 
+    /**
+     * @return The application create date time.
+     * 
+     */
     public String createdDate() {
         return this.createdDate;
     }
@@ -75,6 +91,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="errors")
     private @Nullable List<ErrorsResponse> errors;
 
+    /**
+     * @return The list of errors.
+     * 
+     */
     public Optional<List<ErrorsResponse>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -86,6 +106,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="httpsEndpoints")
     private @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
 
+    /**
+     * @return The list of application HTTPS endpoints.
+     * 
+     */
     public Optional<List<ApplicationGetHttpsEndpointResponse>> httpsEndpoints() {
         return Optional.ofNullable(this.httpsEndpoints);
     }
@@ -97,6 +121,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="installScriptActions")
     private @Nullable List<RuntimeScriptActionResponse> installScriptActions;
 
+    /**
+     * @return The list of install script actions.
+     * 
+     */
     public Optional<List<RuntimeScriptActionResponse>> installScriptActions() {
         return Optional.ofNullable(this.installScriptActions);
     }
@@ -108,6 +136,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="marketplaceIdentifier", required=true)
     private String marketplaceIdentifier;
 
+    /**
+     * @return The marketplace identifier.
+     * 
+     */
     public String marketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
@@ -119,6 +151,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the application.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -130,6 +166,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="sshEndpoints")
     private @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
 
+    /**
+     * @return The list of application SSH endpoints.
+     * 
+     */
     public Optional<List<ApplicationGetEndpointResponse>> sshEndpoints() {
         return Optional.ofNullable(this.sshEndpoints);
     }
@@ -141,6 +181,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="uninstallScriptActions")
     private @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
+    /**
+     * @return The list of uninstall script actions.
+     * 
+     */
     public Optional<List<RuntimeScriptActionResponse>> uninstallScriptActions() {
         return Optional.ofNullable(this.uninstallScriptActions);
     }
@@ -179,77 +223,173 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
             $ = new ApplicationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationState The application state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationState(String applicationState) {
             $.applicationState = applicationState;
             return this;
         }
 
+        /**
+         * @param applicationType The application type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(@Nullable String applicationType) {
             $.applicationType = applicationType;
             return this;
         }
 
+        /**
+         * @param computeProfile The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
             $.computeProfile = computeProfile;
             return this;
         }
 
+        /**
+         * @param createdDate The application create date time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param errors The list of errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<ErrorsResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors The list of errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ErrorsResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param httpsEndpoints The list of application HTTPS endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
             $.httpsEndpoints = httpsEndpoints;
             return this;
         }
 
+        /**
+         * @param httpsEndpoints The list of application HTTPS endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsEndpoints(ApplicationGetHttpsEndpointResponse... httpsEndpoints) {
             return httpsEndpoints(List.of(httpsEndpoints));
         }
 
+        /**
+         * @param installScriptActions The list of install script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
             $.installScriptActions = installScriptActions;
             return this;
         }
 
+        /**
+         * @param installScriptActions The list of install script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installScriptActions(RuntimeScriptActionResponse... installScriptActions) {
             return installScriptActions(List.of(installScriptActions));
         }
 
+        /**
+         * @param marketplaceIdentifier The marketplace identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceIdentifier(String marketplaceIdentifier) {
             $.marketplaceIdentifier = marketplaceIdentifier;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sshEndpoints The list of application SSH endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
             $.sshEndpoints = sshEndpoints;
             return this;
         }
 
+        /**
+         * @param sshEndpoints The list of application SSH endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshEndpoints(ApplicationGetEndpointResponse... sshEndpoints) {
             return sshEndpoints(List.of(sshEndpoints));
         }
 
+        /**
+         * @param uninstallScriptActions The list of uninstall script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
             $.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
 
+        /**
+         * @param uninstallScriptActions The list of uninstall script actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uninstallScriptActions(RuntimeScriptActionResponse... uninstallScriptActions) {
             return uninstallScriptActions(List.of(uninstallScriptActions));
         }

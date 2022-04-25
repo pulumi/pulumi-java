@@ -30,6 +30,10 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -41,6 +45,10 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -80,20 +88,44 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

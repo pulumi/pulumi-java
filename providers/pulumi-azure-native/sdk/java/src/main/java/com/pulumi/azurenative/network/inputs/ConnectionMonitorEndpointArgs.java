@@ -31,6 +31,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return Address of the connection monitor endpoint (IP or domain name).
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -42,6 +46,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="coverageLevel")
     private @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
 
+    /**
+     * @return Test coverage for the endpoint.
+     * 
+     */
     public Optional<Output<Either<String,CoverageLevel>>> coverageLevel() {
         return Optional.ofNullable(this.coverageLevel);
     }
@@ -53,6 +61,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="filter")
     private @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
 
+    /**
+     * @return Filter for sub-items within the endpoint.
+     * 
+     */
     public Optional<Output<ConnectionMonitorEndpointFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -64,6 +76,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the connection monitor endpoint.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -75,6 +91,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource ID of the connection monitor endpoint.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -86,6 +106,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="scope")
     private @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
 
+    /**
+     * @return Endpoint scope.
+     * 
+     */
     public Optional<Output<ConnectionMonitorEndpointScopeArgs>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -97,6 +121,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<Either<String,EndpointType>> type;
 
+    /**
+     * @return The endpoint type.
+     * 
+     */
     public Optional<Output<Either<String,EndpointType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -131,81 +159,189 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
             $ = new ConnectionMonitorEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Address of the connection monitor endpoint (IP or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address Address of the connection monitor endpoint (IP or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param coverageLevel Test coverage for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coverageLevel(@Nullable Output<Either<String,CoverageLevel>> coverageLevel) {
             $.coverageLevel = coverageLevel;
             return this;
         }
 
+        /**
+         * @param coverageLevel Test coverage for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coverageLevel(Either<String,CoverageLevel> coverageLevel) {
             return coverageLevel(Output.of(coverageLevel));
         }
 
+        /**
+         * @param coverageLevel Test coverage for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coverageLevel(String coverageLevel) {
             return coverageLevel(Either.ofLeft(coverageLevel));
         }
 
+        /**
+         * @param coverageLevel Test coverage for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coverageLevel(CoverageLevel coverageLevel) {
             return coverageLevel(Either.ofRight(coverageLevel));
         }
 
+        /**
+         * @param filter Filter for sub-items within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<ConnectionMonitorEndpointFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Filter for sub-items within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(ConnectionMonitorEndpointFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param name The name of the connection monitor endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the connection monitor endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceId Resource ID of the connection monitor endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource ID of the connection monitor endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param scope Endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<ConnectionMonitorEndpointScopeArgs> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ConnectionMonitorEndpointScopeArgs scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param type The endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,EndpointType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,EndpointType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(EndpointType type) {
             return type(Either.ofRight(type));
         }

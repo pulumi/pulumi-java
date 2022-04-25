@@ -24,6 +24,10 @@ public final class TlsPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="certificate", required=true)
     private TlsCertificatePropertiesResponse certificate;
 
+    /**
+     * @return The certificate used to configure HTTPS for the login server.
+     * 
+     */
     public TlsCertificatePropertiesResponse certificate() {
         return this.certificate;
     }
@@ -35,6 +39,10 @@ public final class TlsPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Indicates whether HTTPS is enabled for the login server.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -64,11 +72,23 @@ public final class TlsPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new TlsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate The certificate used to configure HTTPS for the login server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(TlsCertificatePropertiesResponse certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param status Indicates whether HTTPS is enabled for the login server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

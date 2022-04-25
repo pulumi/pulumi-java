@@ -19,6 +19,10 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
     @Import(name="collectionId", required=true)
     private String collectionId;
 
+    /**
+     * @return The collection ID
+     * 
+     */
     public String collectionId() {
         return this.collectionId;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
     @Import(name="privateStoreId", required=true)
     private String privateStoreId;
 
+    /**
+     * @return The store ID - must use the tenant ID
+     * 
+     */
     public String privateStoreId() {
         return this.privateStoreId;
     }
@@ -59,11 +67,23 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
             $ = new GetPrivateStoreCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectionId The collection ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionId(String collectionId) {
             $.collectionId = collectionId;
             return this;
         }
 
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateStoreId(String privateStoreId) {
             $.privateStoreId = privateStoreId;
             return this;

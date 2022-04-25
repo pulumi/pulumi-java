@@ -25,6 +25,10 @@ public final class AlertRuleAllOfConditionArgs extends com.pulumi.resources.Reso
     @Import(name="allOf", required=true)
     private Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
+    /**
+     * @return The list of Activity Log Alert rule conditions.
+     * 
+     */
     public Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf() {
         return this.allOf;
     }
@@ -53,15 +57,33 @@ public final class AlertRuleAllOfConditionArgs extends com.pulumi.resources.Reso
             $ = new AlertRuleAllOfConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allOf The list of Activity Log Alert rule conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
             $.allOf = allOf;
             return this;
         }
 
+        /**
+         * @param allOf The list of Activity Log Alert rule conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(List<AlertRuleAnyOfOrLeafConditionArgs> allOf) {
             return allOf(Output.of(allOf));
         }
 
+        /**
+         * @param allOf The list of Activity Log Alert rule conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(AlertRuleAnyOfOrLeafConditionArgs... allOf) {
             return allOf(List.of(allOf));
         }

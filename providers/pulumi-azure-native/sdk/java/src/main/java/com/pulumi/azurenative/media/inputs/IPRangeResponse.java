@@ -26,6 +26,10 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return The IP address.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -37,6 +41,10 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The friendly name for the IP address range.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetPrefixLength")
     private @Nullable Integer subnetPrefixLength;
 
+    /**
+     * @return The subnet mask prefix length (see CIDR notation).
+     * 
+     */
     public Optional<Integer> subnetPrefixLength() {
         return Optional.ofNullable(this.subnetPrefixLength);
     }
@@ -78,16 +90,34 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IPRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param name The friendly name for the IP address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param subnetPrefixLength The subnet mask prefix length (see CIDR notation).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
             $.subnetPrefixLength = subnetPrefixLength;
             return this;

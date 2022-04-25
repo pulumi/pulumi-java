@@ -26,6 +26,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="activateDate", required=true)
     private String activateDate;
 
+    /**
+     * @return The activate date of certificate.
+     * 
+     */
     public String activateDate() {
         return this.activateDate;
     }
@@ -37,6 +41,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="certVersion")
     private @Nullable String certVersion;
 
+    /**
+     * @return The certificate version of key vault.
+     * 
+     */
     public Optional<String> certVersion() {
         return Optional.ofNullable(this.certVersion);
     }
@@ -48,6 +56,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="dnsNames", required=true)
     private List<String> dnsNames;
 
+    /**
+     * @return The domain list of certificate.
+     * 
+     */
     public List<String> dnsNames() {
         return this.dnsNames;
     }
@@ -59,6 +71,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="expirationDate", required=true)
     private String expirationDate;
 
+    /**
+     * @return The expiration date of certificate.
+     * 
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
@@ -70,6 +86,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="issuedDate", required=true)
     private String issuedDate;
 
+    /**
+     * @return The issue date of certificate.
+     * 
+     */
     public String issuedDate() {
         return this.issuedDate;
     }
@@ -81,6 +101,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return The issuer of certificate.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -92,6 +116,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="keyVaultCertName", required=true)
     private String keyVaultCertName;
 
+    /**
+     * @return The certificate name of key vault.
+     * 
+     */
     public String keyVaultCertName() {
         return this.keyVaultCertName;
     }
@@ -103,6 +131,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="subjectName", required=true)
     private String subjectName;
 
+    /**
+     * @return The subject name of certificate.
+     * 
+     */
     public String subjectName() {
         return this.subjectName;
     }
@@ -114,6 +146,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return The thumbprint of certificate.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -125,6 +161,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="vaultUri", required=true)
     private String vaultUri;
 
+    /**
+     * @return The vault uri of user key vault.
+     * 
+     */
     public String vaultUri() {
         return this.vaultUri;
     }
@@ -162,55 +202,121 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
             $ = new CertificatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activateDate The activate date of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activateDate(String activateDate) {
             $.activateDate = activateDate;
             return this;
         }
 
+        /**
+         * @param certVersion The certificate version of key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certVersion(@Nullable String certVersion) {
             $.certVersion = certVersion;
             return this;
         }
 
+        /**
+         * @param dnsNames The domain list of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(List<String> dnsNames) {
             $.dnsNames = dnsNames;
             return this;
         }
 
+        /**
+         * @param dnsNames The domain list of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(String... dnsNames) {
             return dnsNames(List.of(dnsNames));
         }
 
+        /**
+         * @param expirationDate The expiration date of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param issuedDate The issue date of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuedDate(String issuedDate) {
             $.issuedDate = issuedDate;
             return this;
         }
 
+        /**
+         * @param issuer The issuer of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param keyVaultCertName The certificate name of key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultCertName(String keyVaultCertName) {
             $.keyVaultCertName = keyVaultCertName;
             return this;
         }
 
+        /**
+         * @param subjectName The subject name of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectName(String subjectName) {
             $.subjectName = subjectName;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint of certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param vaultUri The vault uri of user key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(String vaultUri) {
             $.vaultUri = vaultUri;
             return this;

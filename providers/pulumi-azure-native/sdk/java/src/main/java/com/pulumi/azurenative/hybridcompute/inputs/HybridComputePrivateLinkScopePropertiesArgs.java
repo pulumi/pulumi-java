@@ -28,6 +28,10 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends com.pulum
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
+    /**
+     * @return Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccessType>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -56,19 +60,43 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends com.pulum
             $ = new HybridComputePrivateLinkScopePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccessType> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccessType publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }

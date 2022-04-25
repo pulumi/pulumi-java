@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TaskRunRequestResponse {
     /**
-     * The dedicated agent pool for the run.
+     * @return The dedicated agent pool for the run.
      * 
      */
     private final @Nullable String agentPoolName;
     /**
-     * The value that indicates whether archiving is enabled for the run or not.
+     * @return The value that indicates whether archiving is enabled for the run or not.
      * 
      */
     private final @Nullable Boolean isArchiveEnabled;
     /**
-     * The template that describes the repository and tag information for run log artifact.
+     * @return The template that describes the repository and tag information for run log artifact.
      * 
      */
     private final @Nullable String logTemplate;
     /**
-     * Set of overridable parameters that can be passed when running a Task.
+     * @return Set of overridable parameters that can be passed when running a Task.
      * 
      */
     private final @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
     /**
-     * The resource ID of task against which run has to be queued.
+     * @return The resource ID of task against which run has to be queued.
      * 
      */
     private final String taskId;
     /**
-     * The type of the run request.
+     * @return The type of the run request.
      * Expected value is &#39;TaskRunRequest&#39;.
      * 
      */
@@ -62,45 +62,45 @@ public final class TaskRunRequestResponse {
     }
 
     /**
-     * The dedicated agent pool for the run.
+     * @return The dedicated agent pool for the run.
      * 
-    */
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
-     * The value that indicates whether archiving is enabled for the run or not.
+     * @return The value that indicates whether archiving is enabled for the run or not.
      * 
-    */
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
-     * The template that describes the repository and tag information for run log artifact.
+     * @return The template that describes the repository and tag information for run log artifact.
      * 
-    */
+     */
     public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
-     * Set of overridable parameters that can be passed when running a Task.
+     * @return Set of overridable parameters that can be passed when running a Task.
      * 
-    */
+     */
     public Optional<OverrideTaskStepPropertiesResponse> overrideTaskStepProperties() {
         return Optional.ofNullable(this.overrideTaskStepProperties);
     }
     /**
-     * The resource ID of task against which run has to be queued.
+     * @return The resource ID of task against which run has to be queued.
      * 
-    */
+     */
     public String taskId() {
         return this.taskId;
     }
     /**
-     * The type of the run request.
+     * @return The type of the run request.
      * Expected value is &#39;TaskRunRequest&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

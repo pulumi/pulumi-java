@@ -37,6 +37,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="commands")
     private @Nullable List<String> commands;
 
+    /**
+     * @return Command array to execute within the container in exec form.
+     * 
+     */
     public Optional<List<String>> commands() {
         return Optional.ofNullable(this.commands);
     }
@@ -48,6 +52,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="diagnostics")
     private @Nullable DiagnosticsRefResponse diagnostics;
 
+    /**
+     * @return Reference to sinks in DiagnosticsDescription.
+     * 
+     */
     public Optional<DiagnosticsRefResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
@@ -59,6 +67,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="endpoints")
     private @Nullable List<EndpointPropertiesResponse> endpoints;
 
+    /**
+     * @return The endpoints exposed by this container.
+     * 
+     */
     public Optional<List<EndpointPropertiesResponse>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -70,6 +82,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="entrypoint")
     private @Nullable String entrypoint;
 
+    /**
+     * @return Override for the default entry point in the container.
+     * 
+     */
     public Optional<String> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
@@ -81,6 +97,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="environmentVariables")
     private @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
+    /**
+     * @return The environment variables to set in this container
+     * 
+     */
     public Optional<List<EnvironmentVariableResponse>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -92,6 +112,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return The Container image to use.
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -103,6 +127,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="imageRegistryCredential")
     private @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
 
+    /**
+     * @return Image registry credential.
+     * 
+     */
     public Optional<ImageRegistryCredentialResponse> imageRegistryCredential() {
         return Optional.ofNullable(this.imageRegistryCredential);
     }
@@ -114,6 +142,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="instanceView", required=true)
     private ContainerInstanceViewResponse instanceView;
 
+    /**
+     * @return Runtime information of a container instance.
+     * 
+     */
     public ContainerInstanceViewResponse instanceView() {
         return this.instanceView;
     }
@@ -125,6 +157,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="labels")
     private @Nullable List<ContainerLabelResponse> labels;
 
+    /**
+     * @return The labels to set in this container.
+     * 
+     */
     public Optional<List<ContainerLabelResponse>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -136,6 +172,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the code package.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -147,6 +187,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="reliableCollectionsRefs")
     private @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
 
+    /**
+     * @return A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
+     * 
+     */
     public Optional<List<ReliableCollectionsRefResponse>> reliableCollectionsRefs() {
         return Optional.ofNullable(this.reliableCollectionsRefs);
     }
@@ -158,6 +202,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="resources", required=true)
     private ResourceRequirementsResponse resources;
 
+    /**
+     * @return The resources required by this container.
+     * 
+     */
     public ResourceRequirementsResponse resources() {
         return this.resources;
     }
@@ -169,6 +217,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="settings")
     private @Nullable List<SettingResponse> settings;
 
+    /**
+     * @return The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
+     * 
+     */
     public Optional<List<SettingResponse>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -180,6 +232,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="volumeRefs")
     private @Nullable List<VolumeReferenceResponse> volumeRefs;
 
+    /**
+     * @return Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
+     * 
+     */
     public Optional<List<VolumeReferenceResponse>> volumeRefs() {
         return Optional.ofNullable(this.volumeRefs);
     }
@@ -191,6 +247,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
     @Import(name="volumes")
     private @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
+    /**
+     * @return Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
+     * 
+     */
     public Optional<List<ApplicationScopedVolumeResponse>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -233,109 +293,247 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
             $ = new ContainerCodePackagePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commands Command array to execute within the container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(@Nullable List<String> commands) {
             $.commands = commands;
             return this;
         }
 
+        /**
+         * @param commands Command array to execute within the container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(String... commands) {
             return commands(List.of(commands));
         }
 
+        /**
+         * @param diagnostics Reference to sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
             $.diagnostics = diagnostics;
             return this;
         }
 
+        /**
+         * @param endpoints The endpoints exposed by this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable List<EndpointPropertiesResponse> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints The endpoints exposed by this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(EndpointPropertiesResponse... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param entrypoint Override for the default entry point in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoint(@Nullable String entrypoint) {
             $.entrypoint = entrypoint;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in this container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in this container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param image The Container image to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param imageRegistryCredential Image registry credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialResponse imageRegistryCredential) {
             $.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
 
+        /**
+         * @param instanceView Runtime information of a container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceView(ContainerInstanceViewResponse instanceView) {
             $.instanceView = instanceView;
             return this;
         }
 
+        /**
+         * @param labels The labels to set in this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable List<ContainerLabelResponse> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels to set in this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(ContainerLabelResponse... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name The name of the code package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param reliableCollectionsRefs A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs) {
             $.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
 
+        /**
+         * @param reliableCollectionsRefs A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reliableCollectionsRefs(ReliableCollectionsRefResponse... reliableCollectionsRefs) {
             return reliableCollectionsRefs(List.of(reliableCollectionsRefs));
         }
 
+        /**
+         * @param resources The resources required by this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(ResourceRequirementsResponse resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param settings The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable List<SettingResponse> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(SettingResponse... settings) {
             return settings(List.of(settings));
         }
 
+        /**
+         * @param volumeRefs Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeRefs(@Nullable List<VolumeReferenceResponse> volumeRefs) {
             $.volumeRefs = volumeRefs;
             return this;
         }
 
+        /**
+         * @param volumeRefs Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeRefs(VolumeReferenceResponse... volumeRefs) {
             return volumeRefs(List.of(volumeRefs));
         }
 
+        /**
+         * @param volumes Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable List<ApplicationScopedVolumeResponse> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(ApplicationScopedVolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }

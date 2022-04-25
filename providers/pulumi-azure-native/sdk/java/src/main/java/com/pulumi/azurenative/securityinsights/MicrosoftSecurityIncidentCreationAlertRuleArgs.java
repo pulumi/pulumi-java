@@ -28,6 +28,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="alertRuleTemplateName")
     private @Nullable Output<String> alertRuleTemplateName;
 
+    /**
+     * @return The Name of the alert rule template used to create this rule.
+     * 
+     */
     public Optional<Output<String>> alertRuleTemplateName() {
         return Optional.ofNullable(this.alertRuleTemplateName);
     }
@@ -39,6 +43,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the alert rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name for alerts created by this alert rule.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -61,6 +73,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="displayNamesExcludeFilter")
     private @Nullable Output<List<String>> displayNamesExcludeFilter;
 
+    /**
+     * @return the alerts&#39; displayNames on which the cases will not be generated
+     * 
+     */
     public Optional<Output<List<String>>> displayNamesExcludeFilter() {
         return Optional.ofNullable(this.displayNamesExcludeFilter);
     }
@@ -72,6 +88,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="displayNamesFilter")
     private @Nullable Output<List<String>> displayNamesFilter;
 
+    /**
+     * @return the alerts&#39; displayNames on which the cases will be generated
+     * 
+     */
     public Optional<Output<List<String>>> displayNamesFilter() {
         return Optional.ofNullable(this.displayNamesFilter);
     }
@@ -83,6 +103,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether this alert rule is enabled or disabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -95,6 +119,11 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the alert rule
+     * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -106,6 +135,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="productFilter", required=true)
     private Output<Either<String,MicrosoftSecurityProductName>> productFilter;
 
+    /**
+     * @return The alerts&#39; productName on which the cases will be generated
+     * 
+     */
     public Output<Either<String,MicrosoftSecurityProductName>> productFilter() {
         return this.productFilter;
     }
@@ -117,6 +150,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -128,6 +165,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
+    /**
+     * @return Alert rule ID
+     * 
+     */
     public Optional<Output<String>> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -139,6 +180,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="severitiesFilter")
     private @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
 
+    /**
+     * @return the alerts&#39; severities on which the cases will be generated
+     * 
+     */
     public Optional<Output<List<Either<String,AlertSeverity>>>> severitiesFilter() {
         return Optional.ofNullable(this.severitiesFilter);
     }
@@ -150,6 +195,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -189,130 +238,306 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
             $ = new MicrosoftSecurityIncidentCreationAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertRuleTemplateName The Name of the alert rule template used to create this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleTemplateName(@Nullable Output<String> alertRuleTemplateName) {
             $.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
+        /**
+         * @param alertRuleTemplateName The Name of the alert rule template used to create this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleTemplateName(String alertRuleTemplateName) {
             return alertRuleTemplateName(Output.of(alertRuleTemplateName));
         }
 
+        /**
+         * @param description The description of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param displayNamesExcludeFilter the alerts&#39; displayNames on which the cases will not be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamesExcludeFilter(@Nullable Output<List<String>> displayNamesExcludeFilter) {
             $.displayNamesExcludeFilter = displayNamesExcludeFilter;
             return this;
         }
 
+        /**
+         * @param displayNamesExcludeFilter the alerts&#39; displayNames on which the cases will not be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamesExcludeFilter(List<String> displayNamesExcludeFilter) {
             return displayNamesExcludeFilter(Output.of(displayNamesExcludeFilter));
         }
 
+        /**
+         * @param displayNamesExcludeFilter the alerts&#39; displayNames on which the cases will not be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamesExcludeFilter(String... displayNamesExcludeFilter) {
             return displayNamesExcludeFilter(List.of(displayNamesExcludeFilter));
         }
 
+        /**
+         * @param displayNamesFilter the alerts&#39; displayNames on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamesFilter(@Nullable Output<List<String>> displayNamesFilter) {
             $.displayNamesFilter = displayNamesFilter;
             return this;
         }
 
+        /**
+         * @param displayNamesFilter the alerts&#39; displayNames on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamesFilter(List<String> displayNamesFilter) {
             return displayNamesFilter(Output.of(displayNamesFilter));
         }
 
+        /**
+         * @param displayNamesFilter the alerts&#39; displayNames on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamesFilter(String... displayNamesFilter) {
             return displayNamesFilter(List.of(displayNamesFilter));
         }
 
+        /**
+         * @param enabled Determines whether this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param kind The kind of the alert rule
+         * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the alert rule
+         * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param productFilter The alerts&#39; productName on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFilter(Output<Either<String,MicrosoftSecurityProductName>> productFilter) {
             $.productFilter = productFilter;
             return this;
         }
 
+        /**
+         * @param productFilter The alerts&#39; productName on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFilter(Either<String,MicrosoftSecurityProductName> productFilter) {
             return productFilter(Output.of(productFilter));
         }
 
+        /**
+         * @param productFilter The alerts&#39; productName on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFilter(String productFilter) {
             return productFilter(Either.ofLeft(productFilter));
         }
 
+        /**
+         * @param productFilter The alerts&#39; productName on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFilter(MicrosoftSecurityProductName productFilter) {
             return productFilter(Either.ofRight(productFilter));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param severitiesFilter the alerts&#39; severities on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder severitiesFilter(@Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter) {
             $.severitiesFilter = severitiesFilter;
             return this;
         }
 
+        /**
+         * @param severitiesFilter the alerts&#39; severities on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder severitiesFilter(List<Either<String,AlertSeverity>> severitiesFilter) {
             return severitiesFilter(Output.of(severitiesFilter));
         }
 
+        /**
+         * @param severitiesFilter the alerts&#39; severities on which the cases will be generated
+         * 
+         * @return builder
+         * 
+         */
         public Builder severitiesFilter(Either<String,AlertSeverity>... severitiesFilter) {
             return severitiesFilter(List.of(severitiesFilter));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

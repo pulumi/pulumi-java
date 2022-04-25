@@ -28,6 +28,11 @@ public final class MpiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distributionType", required=true)
     private String distributionType;
 
+    /**
+     * @return Enum to determine the job distribution type.
+     * Expected value is &#39;Mpi&#39;.
+     * 
+     */
     public String distributionType() {
         return this.distributionType;
     }
@@ -39,6 +44,10 @@ public final class MpiResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="processCountPerInstance")
     private @Nullable Integer processCountPerInstance;
 
+    /**
+     * @return Number of processes per MPI node.
+     * 
+     */
     public Optional<Integer> processCountPerInstance() {
         return Optional.ofNullable(this.processCountPerInstance);
     }
@@ -68,11 +77,24 @@ public final class MpiResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MpiResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;Mpi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(String distributionType) {
             $.distributionType = distributionType;
             return this;
         }
 
+        /**
+         * @param processCountPerInstance Number of processes per MPI node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
             $.processCountPerInstance = processCountPerInstance;
             return this;

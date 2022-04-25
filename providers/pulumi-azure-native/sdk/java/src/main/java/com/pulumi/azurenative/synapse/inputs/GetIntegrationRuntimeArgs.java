@@ -19,6 +19,10 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
     @Import(name="integrationRuntimeName", required=true)
     private String integrationRuntimeName;
 
+    /**
+     * @return Integration runtime name
+     * 
+     */
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
             $ = new GetIntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationRuntimeName Integration runtime name
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
             $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

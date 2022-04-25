@@ -29,6 +29,10 @@ public final class PublicIPPrefixSkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<Either<String,PublicIPPrefixSkuName>> name;
 
+    /**
+     * @return Name of a public IP prefix SKU.
+     * 
+     */
     public Optional<Output<Either<String,PublicIPPrefixSkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class PublicIPPrefixSkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
     private @Nullable Output<Either<String,PublicIPPrefixSkuTier>> tier;
 
+    /**
+     * @return Tier of a public IP prefix SKU.
+     * 
+     */
     public Optional<Output<Either<String,PublicIPPrefixSkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -69,36 +77,84 @@ public final class PublicIPPrefixSkuArgs extends com.pulumi.resources.ResourceAr
             $ = new PublicIPPrefixSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,PublicIPPrefixSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,PublicIPPrefixSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(PublicIPPrefixSkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Tier of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,PublicIPPrefixSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,PublicIPPrefixSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Tier of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Tier of a public IP prefix SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(PublicIPPrefixSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

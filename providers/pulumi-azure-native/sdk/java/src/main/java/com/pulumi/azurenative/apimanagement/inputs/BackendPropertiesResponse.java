@@ -25,6 +25,10 @@ public final class BackendPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="serviceFabricCluster")
     private @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
 
+    /**
+     * @return Backend Service Fabric Cluster Properties
+     * 
+     */
     public Optional<BackendServiceFabricClusterPropertiesResponse> serviceFabricCluster() {
         return Optional.ofNullable(this.serviceFabricCluster);
     }
@@ -53,6 +57,12 @@ public final class BackendPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new BackendPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceFabricCluster Backend Service Fabric Cluster Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
             $.serviceFabricCluster = serviceFabricCluster;
             return this;

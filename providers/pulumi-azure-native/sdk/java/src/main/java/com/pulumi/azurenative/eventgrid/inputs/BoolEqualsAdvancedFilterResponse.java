@@ -27,6 +27,10 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The field/property in the event based on which you want to filter.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -39,6 +43,11 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
     @Import(name="operatorType", required=true)
     private String operatorType;
 
+    /**
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is &#39;BoolEquals&#39;.
+     * 
+     */
     public String operatorType() {
         return this.operatorType;
     }
@@ -50,6 +59,10 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
     @Import(name="value")
     private @Nullable Boolean value;
 
+    /**
+     * @return The boolean filter value.
+     * 
+     */
     public Optional<Boolean> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,16 +93,35 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
             $ = new BoolEqualsAdvancedFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;BoolEquals&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(String operatorType) {
             $.operatorType = operatorType;
             return this;
         }
 
+        /**
+         * @param value The boolean filter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Boolean value) {
             $.value = value;
             return this;

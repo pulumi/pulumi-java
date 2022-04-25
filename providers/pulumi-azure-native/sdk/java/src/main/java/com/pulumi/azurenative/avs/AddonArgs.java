@@ -24,6 +24,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
     private @Nullable Output<String> addonName;
 
+    /**
+     * @return Name of the addon for the private cloud
+     * 
+     */
     public Optional<Output<String>> addonName() {
         return Optional.ofNullable(this.addonName);
     }
@@ -35,6 +39,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonType")
     private @Nullable Output<Either<String,AddonType>> addonType;
 
+    /**
+     * @return The type of private cloud addon
+     * 
+     */
     public Optional<Output<Either<String,AddonType>>> addonType() {
         return Optional.ofNullable(this.addonType);
     }
@@ -46,6 +54,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseKey")
     private @Nullable Output<String> licenseKey;
 
+    /**
+     * @return The SRM license
+     * 
+     */
     public Optional<Output<String>> licenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
@@ -57,6 +69,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return The name of the private cloud.
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -68,6 +84,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,55 +120,127 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName Name of the addon for the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(@Nullable Output<String> addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param addonName Name of the addon for the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             return addonName(Output.of(addonName));
         }
 
+        /**
+         * @param addonType The type of private cloud addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonType(@Nullable Output<Either<String,AddonType>> addonType) {
             $.addonType = addonType;
             return this;
         }
 
+        /**
+         * @param addonType The type of private cloud addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonType(Either<String,AddonType> addonType) {
             return addonType(Output.of(addonType));
         }
 
+        /**
+         * @param addonType The type of private cloud addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonType(String addonType) {
             return addonType(Either.ofLeft(addonType));
         }
 
+        /**
+         * @param addonType The type of private cloud addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonType(AddonType addonType) {
             return addonType(Either.ofRight(addonType));
         }
 
+        /**
+         * @param licenseKey The SRM license
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseKey(@Nullable Output<String> licenseKey) {
             $.licenseKey = licenseKey;
             return this;
         }
 
+        /**
+         * @param licenseKey The SRM license
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseKey(String licenseKey) {
             return licenseKey(Output.of(licenseKey));
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

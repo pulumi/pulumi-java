@@ -26,6 +26,10 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends com.pulu
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value of parsed pattern
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -37,6 +41,10 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends com.pulu
     @Import(name="valueType")
     private @Nullable Output<String> valueType;
 
+    /**
+     * @return Type of the value
+     * 
+     */
     public Optional<Output<String>> valueType() {
         return Optional.ofNullable(this.valueType);
     }
@@ -66,20 +74,44 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends com.pulu
             $ = new ThreatIntelligenceParsedPatternTypeValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value Value of parsed pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of parsed pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param valueType Type of the value
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(@Nullable Output<String> valueType) {
             $.valueType = valueType;
             return this;
         }
 
+        /**
+         * @param valueType Type of the value
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(String valueType) {
             return valueType(Output.of(valueType));
         }

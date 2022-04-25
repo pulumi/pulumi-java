@@ -17,88 +17,88 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetActivityCustomEntityQueryResult {
     /**
-     * The entity query content to display in timeline
+     * @return The entity query content to display in timeline
      * 
      */
     private final @Nullable String content;
     /**
-     * The time the activity was created
+     * @return The time the activity was created
      * 
      */
     private final String createdTimeUtc;
     /**
-     * The entity query description
+     * @return The entity query description
      * 
      */
     private final @Nullable String description;
     /**
-     * Determines whether this activity is enabled or disabled.
+     * @return Determines whether this activity is enabled or disabled.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The query applied only to entities matching to all filters
+     * @return The query applied only to entities matching to all filters
      * 
      */
     private final @Nullable Map<String,List<String>> entitiesFilter;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * The type of the query&#39;s source entity
+     * @return The type of the query&#39;s source entity
      * 
      */
     private final @Nullable String inputEntityType;
     /**
-     * The kind of the entity query
+     * @return The kind of the entity query
      * Expected value is &#39;Activity&#39;.
      * 
      */
     private final String kind;
     /**
-     * The last time the activity was updated
+     * @return The last time the activity was updated
      * 
      */
     private final String lastModifiedTimeUtc;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The Activity query definitions
+     * @return The Activity query definitions
      * 
      */
     private final @Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions;
     /**
-     * List of the fields of the source entity that are required to run the query
+     * @return List of the fields of the source entity that are required to run the query
      * 
      */
     private final @Nullable List<List<String>> requiredInputFieldsSets;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The template id this activity was created from
+     * @return The template id this activity was created from
      * 
      */
     private final @Nullable String templateName;
     /**
-     * The entity query title
+     * @return The entity query title
      * 
      */
     private final @Nullable String title;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -142,122 +142,122 @@ public final class GetActivityCustomEntityQueryResult {
     }
 
     /**
-     * The entity query content to display in timeline
+     * @return The entity query content to display in timeline
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The time the activity was created
+     * @return The time the activity was created
      * 
-    */
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
-     * The entity query description
+     * @return The entity query description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Determines whether this activity is enabled or disabled.
+     * @return Determines whether this activity is enabled or disabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The query applied only to entities matching to all filters
+     * @return The query applied only to entities matching to all filters
      * 
-    */
+     */
     public Map<String,List<String>> entitiesFilter() {
         return this.entitiesFilter == null ? Map.of() : this.entitiesFilter;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The type of the query&#39;s source entity
+     * @return The type of the query&#39;s source entity
      * 
-    */
+     */
     public Optional<String> inputEntityType() {
         return Optional.ofNullable(this.inputEntityType);
     }
     /**
-     * The kind of the entity query
+     * @return The kind of the entity query
      * Expected value is &#39;Activity&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The last time the activity was updated
+     * @return The last time the activity was updated
      * 
-    */
+     */
     public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Activity query definitions
+     * @return The Activity query definitions
      * 
-    */
+     */
     public Optional<ActivityEntityQueriesPropertiesResponseQueryDefinitions> queryDefinitions() {
         return Optional.ofNullable(this.queryDefinitions);
     }
     /**
-     * List of the fields of the source entity that are required to run the query
+     * @return List of the fields of the source entity that are required to run the query
      * 
-    */
+     */
     public List<List<String>> requiredInputFieldsSets() {
         return this.requiredInputFieldsSets == null ? List.of() : this.requiredInputFieldsSets;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The template id this activity was created from
+     * @return The template id this activity was created from
      * 
-    */
+     */
     public Optional<String> templateName() {
         return Optional.ofNullable(this.templateName);
     }
     /**
-     * The entity query title
+     * @return The entity query title
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageSid")
     private @Nullable Output<String> packageSid;
 
+    /**
+     * @return The package ID for this credential.
+     * 
+     */
     public Optional<Output<String>> packageSid() {
         return Optional.ofNullable(this.packageSid);
     }
@@ -37,6 +41,10 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretKey")
     private @Nullable Output<String> secretKey;
 
+    /**
+     * @return The secret key.
+     * 
+     */
     public Optional<Output<String>> secretKey() {
         return Optional.ofNullable(this.secretKey);
     }
@@ -48,6 +56,10 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsLiveEndpoint")
     private @Nullable Output<String> windowsLiveEndpoint;
 
+    /**
+     * @return The Windows Live endpoint.
+     * 
+     */
     public Optional<Output<String>> windowsLiveEndpoint() {
         return Optional.ofNullable(this.windowsLiveEndpoint);
     }
@@ -78,29 +90,65 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WnsCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageSid The package ID for this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageSid(@Nullable Output<String> packageSid) {
             $.packageSid = packageSid;
             return this;
         }
 
+        /**
+         * @param packageSid The package ID for this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageSid(String packageSid) {
             return packageSid(Output.of(packageSid));
         }
 
+        /**
+         * @param secretKey The secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(@Nullable Output<String> secretKey) {
             $.secretKey = secretKey;
             return this;
         }
 
+        /**
+         * @param secretKey The secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(String secretKey) {
             return secretKey(Output.of(secretKey));
         }
 
+        /**
+         * @param windowsLiveEndpoint The Windows Live endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsLiveEndpoint(@Nullable Output<String> windowsLiveEndpoint) {
             $.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
         }
 
+        /**
+         * @param windowsLiveEndpoint The Windows Live endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsLiveEndpoint(String windowsLiveEndpoint) {
             return windowsLiveEndpoint(Output.of(windowsLiveEndpoint));
         }

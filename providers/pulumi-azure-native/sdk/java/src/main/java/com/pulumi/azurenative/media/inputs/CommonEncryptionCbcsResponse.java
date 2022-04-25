@@ -29,6 +29,10 @@ public final class CommonEncryptionCbcsResponse extends com.pulumi.resources.Inv
     @Import(name="clearTracks")
     private @Nullable List<TrackSelectionResponse> clearTracks;
 
+    /**
+     * @return Representing which tracks should not be encrypted
+     * 
+     */
     public Optional<List<TrackSelectionResponse>> clearTracks() {
         return Optional.ofNullable(this.clearTracks);
     }
@@ -40,6 +44,10 @@ public final class CommonEncryptionCbcsResponse extends com.pulumi.resources.Inv
     @Import(name="contentKeys")
     private @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
+    /**
+     * @return Representing default content key for each encryption scheme and separate content keys for specific tracks
+     * 
+     */
     public Optional<StreamingPolicyContentKeysResponse> contentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
@@ -51,6 +59,10 @@ public final class CommonEncryptionCbcsResponse extends com.pulumi.resources.Inv
     @Import(name="drm")
     private @Nullable CbcsDrmConfigurationResponse drm;
 
+    /**
+     * @return Configuration of DRMs for current encryption scheme
+     * 
+     */
     public Optional<CbcsDrmConfigurationResponse> drm() {
         return Optional.ofNullable(this.drm);
     }
@@ -62,6 +74,10 @@ public final class CommonEncryptionCbcsResponse extends com.pulumi.resources.Inv
     @Import(name="enabledProtocols")
     private @Nullable EnabledProtocolsResponse enabledProtocols;
 
+    /**
+     * @return Representing supported protocols
+     * 
+     */
     public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -93,25 +109,55 @@ public final class CommonEncryptionCbcsResponse extends com.pulumi.resources.Inv
             $ = new CommonEncryptionCbcsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
             $.clearTracks = clearTracks;
             return this;
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(TrackSelectionResponse... clearTracks) {
             return clearTracks(List.of(clearTracks));
         }
 
+        /**
+         * @param contentKeys Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             $.contentKeys = contentKeys;
             return this;
         }
 
+        /**
+         * @param drm Configuration of DRMs for current encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder drm(@Nullable CbcsDrmConfigurationResponse drm) {
             $.drm = drm;
             return this;
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             $.enabledProtocols = enabledProtocols;
             return this;

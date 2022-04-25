@@ -27,6 +27,10 @@ public final class EventRequestMessageResponse extends com.pulumi.resources.Invo
     @Import(name="content")
     private @Nullable EventContentResponse content;
 
+    /**
+     * @return The content of the event request message.
+     * 
+     */
     public Optional<EventContentResponse> content() {
         return Optional.ofNullable(this.content);
     }
@@ -38,6 +42,10 @@ public final class EventRequestMessageResponse extends com.pulumi.resources.Invo
     @Import(name="headers")
     private @Nullable Map<String,String> headers;
 
+    /**
+     * @return The headers of the event request message.
+     * 
+     */
     public Optional<Map<String,String>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -49,6 +57,10 @@ public final class EventRequestMessageResponse extends com.pulumi.resources.Invo
     @Import(name="method")
     private @Nullable String method;
 
+    /**
+     * @return The HTTP method used to send the event request message.
+     * 
+     */
     public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
@@ -60,6 +72,10 @@ public final class EventRequestMessageResponse extends com.pulumi.resources.Invo
     @Import(name="requestUri")
     private @Nullable String requestUri;
 
+    /**
+     * @return The URI used to send the event request message.
+     * 
+     */
     public Optional<String> requestUri() {
         return Optional.ofNullable(this.requestUri);
     }
@@ -71,6 +87,10 @@ public final class EventRequestMessageResponse extends com.pulumi.resources.Invo
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The HTTP message version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -103,26 +123,56 @@ public final class EventRequestMessageResponse extends com.pulumi.resources.Invo
             $ = new EventRequestMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of the event request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable EventContentResponse content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param headers The headers of the event request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Map<String,String> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param method The HTTP method used to send the event request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param requestUri The URI used to send the event request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUri(@Nullable String requestUri) {
             $.requestUri = requestUri;
             return this;
         }
 
+        /**
+         * @param version The HTTP message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

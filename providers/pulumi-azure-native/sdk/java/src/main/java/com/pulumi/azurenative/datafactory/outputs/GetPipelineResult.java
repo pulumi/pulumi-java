@@ -58,67 +58,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPipelineResult {
     /**
-     * List of activities in pipeline.
+     * @return List of activities in pipeline.
      * 
      */
     private final @Nullable List<Object> activities;
     /**
-     * List of tags that can be used for describing the Pipeline.
+     * @return List of tags that can be used for describing the Pipeline.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The max number of concurrent runs for the pipeline.
+     * @return The max number of concurrent runs for the pipeline.
      * 
      */
     private final @Nullable Integer concurrency;
     /**
-     * The description of the pipeline.
+     * @return The description of the pipeline.
      * 
      */
     private final @Nullable String description;
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
      */
     private final String etag;
     /**
-     * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+     * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
      */
     private final @Nullable PipelineResponseFolder folder;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * List of parameters for pipeline.
+     * @return List of parameters for pipeline.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Pipeline Policy.
+     * @return Pipeline Policy.
      * 
      */
     private final @Nullable PipelinePolicyResponse policy;
     /**
-     * Dimensions emitted by Pipeline.
+     * @return Dimensions emitted by Pipeline.
      * 
      */
     private final @Nullable Map<String,Object> runDimensions;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
     /**
-     * List of variables for pipeline.
+     * @return List of variables for pipeline.
      * 
      */
     private final @Nullable Map<String,VariableSpecificationResponse> variables;
@@ -154,93 +154,93 @@ public final class GetPipelineResult {
     }
 
     /**
-     * List of activities in pipeline.
+     * @return List of activities in pipeline.
      * 
-    */
+     */
     public List<Object> activities() {
         return this.activities == null ? List.of() : this.activities;
     }
     /**
-     * List of tags that can be used for describing the Pipeline.
+     * @return List of tags that can be used for describing the Pipeline.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The max number of concurrent runs for the pipeline.
+     * @return The max number of concurrent runs for the pipeline.
      * 
-    */
+     */
     public Optional<Integer> concurrency() {
         return Optional.ofNullable(this.concurrency);
     }
     /**
-     * The description of the pipeline.
+     * @return The description of the pipeline.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+     * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
-    */
+     */
     public Optional<PipelineResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of parameters for pipeline.
+     * @return List of parameters for pipeline.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Pipeline Policy.
+     * @return Pipeline Policy.
      * 
-    */
+     */
     public Optional<PipelinePolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Dimensions emitted by Pipeline.
+     * @return Dimensions emitted by Pipeline.
      * 
-    */
+     */
     public Map<String,Object> runDimensions() {
         return this.runDimensions == null ? Map.of() : this.runDimensions;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * List of variables for pipeline.
+     * @return List of variables for pipeline.
      * 
-    */
+     */
     public Map<String,VariableSpecificationResponse> variables() {
         return this.variables == null ? Map.of() : this.variables;
     }

@@ -27,6 +27,10 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return The end time.
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -38,6 +42,10 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="frequency")
     private @Nullable String frequency;
 
+    /**
+     * @return The frequency.
+     * 
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -49,6 +57,10 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="interval")
     private @Nullable Integer interval;
 
+    /**
+     * @return The interval.
+     * 
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -60,6 +72,10 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="schedule")
     private @Nullable RecurrenceScheduleResponse schedule;
 
+    /**
+     * @return The recurrence schedule.
+     * 
+     */
     public Optional<RecurrenceScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -71,6 +87,10 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return The start time.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -82,6 +102,10 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return The time zone.
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -115,31 +139,67 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
             $ = new ScheduleTriggerRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param frequency The frequency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param interval The interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Integer interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param schedule The recurrence schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable RecurrenceScheduleResponse schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param startTime The start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param timeZone The time zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

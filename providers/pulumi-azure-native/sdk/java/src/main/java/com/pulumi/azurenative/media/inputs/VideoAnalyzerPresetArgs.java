@@ -31,6 +31,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="audioLanguage")
     private @Nullable Output<String> audioLanguage;
 
+    /**
+     * @return The language for the audio payload in the input using the BCP-47 format of &#39;language tag-region&#39; (e.g: &#39;en-US&#39;).  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn&#39;t specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to &#39;en-US&#39;.&#34; The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+     * 
+     */
     public Optional<Output<String>> audioLanguage() {
         return Optional.ofNullable(this.audioLanguage);
     }
@@ -42,6 +46,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="experimentalOptions")
     private @Nullable Output<Map<String,String>> experimentalOptions;
 
+    /**
+     * @return Dictionary containing key value pairs for parameters not exposed in the preset itself
+     * 
+     */
     public Optional<Output<Map<String,String>>> experimentalOptions() {
         return Optional.ofNullable(this.experimentalOptions);
     }
@@ -53,6 +61,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="insightsToExtract")
     private @Nullable Output<Either<String,InsightsType>> insightsToExtract;
 
+    /**
+     * @return Defines the type of insights that you want the service to generate. The allowed values are &#39;AudioInsightsOnly&#39;, &#39;VideoInsightsOnly&#39;, and &#39;AllInsights&#39;. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+     * 
+     */
     public Optional<Output<Either<String,InsightsType>>> insightsToExtract() {
         return Optional.ofNullable(this.insightsToExtract);
     }
@@ -64,6 +76,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="mode")
     private @Nullable Output<Either<String,AudioAnalysisMode>> mode;
 
+    /**
+     * @return Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
+     * 
+     */
     public Optional<Output<Either<String,AudioAnalysisMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -76,6 +92,11 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.VideoAnalyzerPreset&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -108,63 +129,149 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
             $ = new VideoAnalyzerPresetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioLanguage The language for the audio payload in the input using the BCP-47 format of &#39;language tag-region&#39; (e.g: &#39;en-US&#39;).  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn&#39;t specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to &#39;en-US&#39;.&#34; The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioLanguage(@Nullable Output<String> audioLanguage) {
             $.audioLanguage = audioLanguage;
             return this;
         }
 
+        /**
+         * @param audioLanguage The language for the audio payload in the input using the BCP-47 format of &#39;language tag-region&#39; (e.g: &#39;en-US&#39;).  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn&#39;t specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to &#39;en-US&#39;.&#34; The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioLanguage(String audioLanguage) {
             return audioLanguage(Output.of(audioLanguage));
         }
 
+        /**
+         * @param experimentalOptions Dictionary containing key value pairs for parameters not exposed in the preset itself
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
             $.experimentalOptions = experimentalOptions;
             return this;
         }
 
+        /**
+         * @param experimentalOptions Dictionary containing key value pairs for parameters not exposed in the preset itself
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentalOptions(Map<String,String> experimentalOptions) {
             return experimentalOptions(Output.of(experimentalOptions));
         }
 
+        /**
+         * @param insightsToExtract Defines the type of insights that you want the service to generate. The allowed values are &#39;AudioInsightsOnly&#39;, &#39;VideoInsightsOnly&#39;, and &#39;AllInsights&#39;. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsToExtract(@Nullable Output<Either<String,InsightsType>> insightsToExtract) {
             $.insightsToExtract = insightsToExtract;
             return this;
         }
 
+        /**
+         * @param insightsToExtract Defines the type of insights that you want the service to generate. The allowed values are &#39;AudioInsightsOnly&#39;, &#39;VideoInsightsOnly&#39;, and &#39;AllInsights&#39;. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsToExtract(Either<String,InsightsType> insightsToExtract) {
             return insightsToExtract(Output.of(insightsToExtract));
         }
 
+        /**
+         * @param insightsToExtract Defines the type of insights that you want the service to generate. The allowed values are &#39;AudioInsightsOnly&#39;, &#39;VideoInsightsOnly&#39;, and &#39;AllInsights&#39;. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsToExtract(String insightsToExtract) {
             return insightsToExtract(Either.ofLeft(insightsToExtract));
         }
 
+        /**
+         * @param insightsToExtract Defines the type of insights that you want the service to generate. The allowed values are &#39;AudioInsightsOnly&#39;, &#39;VideoInsightsOnly&#39;, and &#39;AllInsights&#39;. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsToExtract(InsightsType insightsToExtract) {
             return insightsToExtract(Either.ofRight(insightsToExtract));
         }
 
+        /**
+         * @param mode Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,AudioAnalysisMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(AudioAnalysisMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.VideoAnalyzerPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.VideoAnalyzerPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

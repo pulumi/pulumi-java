@@ -33,6 +33,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="azureVmDiskDetails")
     private @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
 
+    /**
+     * @return Azure VM Disk details.
+     * 
+     */
     public Optional<List<AzureVmDiskDetailsResponse>> azureVmDiskDetails() {
         return Optional.ofNullable(this.azureVmDiskDetails);
     }
@@ -44,6 +48,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="enableRdpOnTargetOption")
     private @Nullable String enableRdpOnTargetOption;
 
+    /**
+     * @return The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     public Optional<String> enableRdpOnTargetOption() {
         return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
@@ -55,6 +63,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="encryption")
     private @Nullable String encryption;
 
+    /**
+     * @return The encryption info.
+     * 
+     */
     public Optional<String> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -66,6 +78,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="initialReplicationDetails")
     private @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
+    /**
+     * @return Initial replication details.
+     * 
+     */
     public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
@@ -78,6 +94,11 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -89,6 +110,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="lastReplicatedTime")
     private @Nullable String lastReplicatedTime;
 
+    /**
+     * @return The Last replication time.
+     * 
+     */
     public Optional<String> lastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
@@ -100,6 +125,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="lastRpoCalculatedTime")
     private @Nullable String lastRpoCalculatedTime;
 
+    /**
+     * @return The last RPO calculated time.
+     * 
+     */
     public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
@@ -111,6 +140,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return License Type of the VM to be used.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -122,6 +155,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="oSDetails")
     private @Nullable OSDetailsResponse oSDetails;
 
+    /**
+     * @return The operating system info.
+     * 
+     */
     public Optional<OSDetailsResponse> oSDetails() {
         return Optional.ofNullable(this.oSDetails);
     }
@@ -133,6 +170,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAvailabilitySetId")
     private @Nullable String recoveryAvailabilitySetId;
 
+    /**
+     * @return The recovery availability set Id.
+     * 
+     */
     public Optional<String> recoveryAvailabilitySetId() {
         return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
@@ -144,6 +185,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureLogStorageAccountId")
     private @Nullable String recoveryAzureLogStorageAccountId;
 
+    /**
+     * @return The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+     * 
+     */
     public Optional<String> recoveryAzureLogStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
@@ -155,6 +200,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureResourceGroupId")
     private @Nullable String recoveryAzureResourceGroupId;
 
+    /**
+     * @return The target resource group Id.
+     * 
+     */
     public Optional<String> recoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
@@ -166,6 +215,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureStorageAccount")
     private @Nullable String recoveryAzureStorageAccount;
 
+    /**
+     * @return The recovery Azure storage account.
+     * 
+     */
     public Optional<String> recoveryAzureStorageAccount() {
         return Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
@@ -177,6 +230,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureVMSize")
     private @Nullable String recoveryAzureVMSize;
 
+    /**
+     * @return The Recovery Azure VM size.
+     * 
+     */
     public Optional<String> recoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
@@ -188,6 +245,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureVmName")
     private @Nullable String recoveryAzureVmName;
 
+    /**
+     * @return Recovery Azure given name.
+     * 
+     */
     public Optional<String> recoveryAzureVmName() {
         return Optional.ofNullable(this.recoveryAzureVmName);
     }
@@ -199,6 +260,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="rpoInSeconds")
     private @Nullable Double rpoInSeconds;
 
+    /**
+     * @return Last RPO value.
+     * 
+     */
     public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
@@ -210,6 +275,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="selectedRecoveryAzureNetworkId")
     private @Nullable String selectedRecoveryAzureNetworkId;
 
+    /**
+     * @return The selected recovery azure network Id.
+     * 
+     */
     public Optional<String> selectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
@@ -221,6 +290,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="selectedSourceNicId")
     private @Nullable String selectedSourceNicId;
 
+    /**
+     * @return The selected source nic Id which will be used as the primary nic during failover.
+     * 
+     */
     public Optional<String> selectedSourceNicId() {
         return Optional.ofNullable(this.selectedSourceNicId);
     }
@@ -232,6 +305,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="sourceVmCpuCount")
     private @Nullable Integer sourceVmCpuCount;
 
+    /**
+     * @return The CPU count of the VM on the primary side.
+     * 
+     */
     public Optional<Integer> sourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
@@ -243,6 +320,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="sourceVmRamSizeInMB")
     private @Nullable Integer sourceVmRamSizeInMB;
 
+    /**
+     * @return The RAM size of the VM on the primary side.
+     * 
+     */
     public Optional<Integer> sourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
@@ -254,6 +335,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="targetAvailabilityZone")
     private @Nullable String targetAvailabilityZone;
 
+    /**
+     * @return The target availability zone.
+     * 
+     */
     public Optional<String> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
@@ -265,6 +350,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="targetProximityPlacementGroupId")
     private @Nullable String targetProximityPlacementGroupId;
 
+    /**
+     * @return The target proximity placement group Id.
+     * 
+     */
     public Optional<String> targetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
@@ -276,6 +365,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="useManagedDisks")
     private @Nullable String useManagedDisks;
 
+    /**
+     * @return A value indicating whether managed disks should be used during failover.
+     * 
+     */
     public Optional<String> useManagedDisks() {
         return Optional.ofNullable(this.useManagedDisks);
     }
@@ -287,6 +380,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmId")
     private @Nullable String vmId;
 
+    /**
+     * @return The virtual machine Id.
+     * 
+     */
     public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -298,6 +395,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmNics")
     private @Nullable List<VMNicDetailsResponse> vmNics;
 
+    /**
+     * @return The PE Network details.
+     * 
+     */
     public Optional<List<VMNicDetailsResponse>> vmNics() {
         return Optional.ofNullable(this.vmNics);
     }
@@ -309,6 +410,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmProtectionState")
     private @Nullable String vmProtectionState;
 
+    /**
+     * @return The protection state for the vm.
+     * 
+     */
     public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
@@ -320,6 +425,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmProtectionStateDescription")
     private @Nullable String vmProtectionStateDescription;
 
+    /**
+     * @return The protection state description for the vm.
+     * 
+     */
     public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
@@ -374,144 +483,319 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
             $ = new HyperVReplicaAzureReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureVmDiskDetails Azure VM Disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails) {
             $.azureVmDiskDetails = azureVmDiskDetails;
             return this;
         }
 
+        /**
+         * @param azureVmDiskDetails Azure VM Disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmDiskDetails(AzureVmDiskDetailsResponse... azureVmDiskDetails) {
             return azureVmDiskDetails(List.of(azureVmDiskDetails));
         }
 
+        /**
+         * @param enableRdpOnTargetOption The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             $.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
+        /**
+         * @param encryption The encryption info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable String encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param initialReplicationDetails Initial replication details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
             $.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;HyperVReplicaAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param lastReplicatedTime The Last replication time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             $.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
 
+        /**
+         * @param lastRpoCalculatedTime The last RPO calculated time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
+        /**
+         * @param licenseType License Type of the VM to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param oSDetails The operating system info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oSDetails(@Nullable OSDetailsResponse oSDetails) {
             $.oSDetails = oSDetails;
             return this;
         }
 
+        /**
+         * @param recoveryAvailabilitySetId The recovery availability set Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             $.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureLogStorageAccountId The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
             $.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureResourceGroupId The target resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             $.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureStorageAccount The recovery Azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
             $.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
 
+        /**
+         * @param recoveryAzureVMSize The Recovery Azure VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             $.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
 
+        /**
+         * @param recoveryAzureVmName Recovery Azure given name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureVmName(@Nullable String recoveryAzureVmName) {
             $.recoveryAzureVmName = recoveryAzureVmName;
             return this;
         }
 
+        /**
+         * @param rpoInSeconds Last RPO value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             $.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
+        /**
+         * @param selectedRecoveryAzureNetworkId The selected recovery azure network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             $.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param selectedSourceNicId The selected source nic Id which will be used as the primary nic during failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
             $.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
 
+        /**
+         * @param sourceVmCpuCount The CPU count of the VM on the primary side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             $.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
 
+        /**
+         * @param sourceVmRamSizeInMB The RAM size of the VM on the primary side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             $.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The target proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param useManagedDisks A value indicating whether managed disks should be used during failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useManagedDisks(@Nullable String useManagedDisks) {
             $.useManagedDisks = useManagedDisks;
             return this;
         }
 
+        /**
+         * @param vmId The virtual machine Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable String vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmNics The PE Network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             $.vmNics = vmNics;
             return this;
         }
 
+        /**
+         * @param vmNics The PE Network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
 
+        /**
+         * @param vmProtectionState The protection state for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             $.vmProtectionState = vmProtectionState;
             return this;
         }
 
+        /**
+         * @param vmProtectionStateDescription The protection state description for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;

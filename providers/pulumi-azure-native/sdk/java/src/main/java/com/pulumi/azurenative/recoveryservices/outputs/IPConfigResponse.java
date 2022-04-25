@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IPConfigResponse {
     /**
-     * The backend address pools associated with the IP configuration.
+     * @return The backend address pools associated with the IP configuration.
      * 
      */
     private final @Nullable List<String> lBBackendAddressPoolIds;
     /**
-     * The Id of the public IP address associated with the IP configuration.
+     * @return The Id of the public IP address associated with the IP configuration.
      * 
      */
     private final @Nullable String publicIpAddressId;
     /**
-     * The static IP address of the IP configuration.
+     * @return The static IP address of the IP configuration.
      * 
      */
     private final @Nullable String staticIPAddress;
@@ -39,23 +39,23 @@ public final class IPConfigResponse {
     }
 
     /**
-     * The backend address pools associated with the IP configuration.
+     * @return The backend address pools associated with the IP configuration.
      * 
-    */
+     */
     public List<String> lBBackendAddressPoolIds() {
         return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
     }
     /**
-     * The Id of the public IP address associated with the IP configuration.
+     * @return The Id of the public IP address associated with the IP configuration.
      * 
-    */
+     */
     public Optional<String> publicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
     /**
-     * The static IP address of the IP configuration.
+     * @return The static IP address of the IP configuration.
      * 
-    */
+     */
     public Optional<String> staticIPAddress() {
         return Optional.ofNullable(this.staticIPAddress);
     }

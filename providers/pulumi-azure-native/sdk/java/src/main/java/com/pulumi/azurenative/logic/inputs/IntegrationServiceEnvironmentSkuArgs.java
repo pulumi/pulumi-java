@@ -29,6 +29,10 @@ public final class IntegrationServiceEnvironmentSkuArgs extends com.pulumi.resou
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The sku capacity.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class IntegrationServiceEnvironmentSkuArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<Output<Either<String,IntegrationServiceEnvironmentSkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,28 +77,64 @@ public final class IntegrationServiceEnvironmentSkuArgs extends com.pulumi.resou
             $ = new IntegrationServiceEnvironmentSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The sku capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The sku capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,IntegrationServiceEnvironmentSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(IntegrationServiceEnvironmentSkuName name) {
             return name(Either.ofRight(name));
         }

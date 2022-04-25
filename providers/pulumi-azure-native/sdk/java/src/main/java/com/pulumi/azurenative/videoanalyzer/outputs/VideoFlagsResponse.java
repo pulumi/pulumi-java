@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class VideoFlagsResponse {
     /**
-     * Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
+     * @return Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
      * 
      */
     private final Boolean canStream;
     /**
-     * Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
+     * @return Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
      * 
      */
     private final Boolean hasData;
     /**
-     * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
+     * @return Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
      * 
      */
     private final Boolean isRecording;
@@ -36,23 +36,23 @@ public final class VideoFlagsResponse {
     }
 
     /**
-     * Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
+     * @return Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
      * 
-    */
+     */
     public Boolean canStream() {
         return this.canStream;
     }
     /**
-     * Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
+     * @return Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
      * 
-    */
+     */
     public Boolean hasData() {
         return this.hasData;
     }
     /**
-     * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
+     * @return Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
      * 
-    */
+     */
     public Boolean isRecording() {
         return this.isRecording;
     }

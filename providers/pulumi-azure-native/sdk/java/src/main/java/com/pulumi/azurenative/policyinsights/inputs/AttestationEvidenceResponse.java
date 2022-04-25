@@ -25,6 +25,10 @@ public final class AttestationEvidenceResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description for this piece of evidence.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class AttestationEvidenceResponse extends com.pulumi.resources.Invo
     @Import(name="sourceUri")
     private @Nullable String sourceUri;
 
+    /**
+     * @return The URI location of the evidence.
+     * 
+     */
     public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -65,11 +73,23 @@ public final class AttestationEvidenceResponse extends com.pulumi.resources.Invo
             $ = new AttestationEvidenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description for this piece of evidence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param sourceUri The URI location of the evidence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(@Nullable String sourceUri) {
             $.sourceUri = sourceUri;
             return this;

@@ -19,6 +19,10 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the kubernetes cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="clusterResourceName", required=true)
     private String clusterResourceName;
 
+    /**
+     * @return The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+     * 
+     */
     public String clusterResourceName() {
         return this.clusterResourceName;
     }
@@ -41,6 +49,10 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="clusterRp", required=true)
     private String clusterRp;
 
+    /**
+     * @return The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+     * 
+     */
     public String clusterRp() {
         return this.clusterRp;
     }
@@ -52,6 +64,10 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="fluxConfigurationName", required=true)
     private String fluxConfigurationName;
 
+    /**
+     * @return Name of the Flux Configuration.
+     * 
+     */
     public String fluxConfigurationName() {
         return this.fluxConfigurationName;
     }
@@ -63,6 +79,10 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -95,26 +115,56 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
             $ = new GetFluxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceName(String clusterResourceName) {
             $.clusterResourceName = clusterResourceName;
             return this;
         }
 
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRp(String clusterRp) {
             $.clusterRp = clusterRp;
             return this;
         }
 
+        /**
+         * @param fluxConfigurationName Name of the Flux Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fluxConfigurationName(String fluxConfigurationName) {
             $.fluxConfigurationName = fluxConfigurationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

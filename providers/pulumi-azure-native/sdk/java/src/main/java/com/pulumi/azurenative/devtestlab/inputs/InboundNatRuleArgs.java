@@ -29,6 +29,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backendPort")
     private @Nullable Output<Integer> backendPort;
 
+    /**
+     * @return The port to which the external traffic will be redirected.
+     * 
+     */
     public Optional<Output<Integer>> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
@@ -40,6 +44,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPort")
     private @Nullable Output<Integer> frontendPort;
 
+    /**
+     * @return The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+     * 
+     */
     public Optional<Output<Integer>> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
@@ -51,6 +59,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="transportProtocol")
     private @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
+    /**
+     * @return The transport protocol for the endpoint.
+     * 
+     */
     public Optional<Output<Either<String,TransportProtocol>>> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
@@ -81,37 +93,85 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new InboundNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort The port to which the external traffic will be redirected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(@Nullable Output<Integer> backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param backendPort The port to which the external traffic will be redirected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Integer backendPort) {
             return backendPort(Output.of(backendPort));
         }
 
+        /**
+         * @param frontendPort The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(@Nullable Output<Integer> frontendPort) {
             $.frontendPort = frontendPort;
             return this;
         }
 
+        /**
+         * @param frontendPort The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(Integer frontendPort) {
             return frontendPort(Output.of(frontendPort));
         }
 
+        /**
+         * @param transportProtocol The transport protocol for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
             $.transportProtocol = transportProtocol;
             return this;
         }
 
+        /**
+         * @param transportProtocol The transport protocol for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(Either<String,TransportProtocol> transportProtocol) {
             return transportProtocol(Output.of(transportProtocol));
         }
 
+        /**
+         * @param transportProtocol The transport protocol for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(String transportProtocol) {
             return transportProtocol(Either.ofLeft(transportProtocol));
         }
 
+        /**
+         * @param transportProtocol The transport protocol for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(TransportProtocol transportProtocol) {
             return transportProtocol(Either.ofRight(transportProtocol));
         }

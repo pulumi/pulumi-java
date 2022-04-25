@@ -40,6 +40,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return Type of the hyperparameter sampling algorithms
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -51,6 +55,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="compute", required=true)
     private ComputeConfigurationResponse compute;
 
+    /**
+     * @return Compute binding for the job.
+     * 
+     */
     public ComputeConfigurationResponse compute() {
         return this.compute;
     }
@@ -62,6 +70,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +85,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="earlyTermination")
     private @Nullable Object earlyTermination;
 
+    /**
+     * @return Early termination policies enable canceling poor-performing runs before they complete.
+     * 
+     */
     public Optional<Object> earlyTermination() {
         return Optional.ofNullable(this.earlyTermination);
     }
@@ -84,6 +100,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName")
     private @Nullable String experimentName;
 
+    /**
+     * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+     * 
+     */
     public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
@@ -96,6 +116,11 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identity")
     private @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
+    /**
+     * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+     * Defaults to AmlToken if null.
+     * 
+     */
     public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -108,6 +133,11 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="interactionEndpoints", required=true)
     private Map<String,JobEndpointResponse> interactionEndpoints;
 
+    /**
+     * @return List of JobEndpoints.
+     * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+     * 
+     */
     public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
@@ -120,6 +150,11 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobType", required=true)
     private String jobType;
 
+    /**
+     * @return Enum to determine the type of job.
+     * Expected value is &#39;Sweep&#39;.
+     * 
+     */
     public String jobType() {
         return this.jobType;
     }
@@ -131,6 +166,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentTrials")
     private @Nullable Integer maxConcurrentTrials;
 
+    /**
+     * @return An upper bound on the number of trials performed in parallel.
+     * 
+     */
     public Optional<Integer> maxConcurrentTrials() {
         return Optional.ofNullable(this.maxConcurrentTrials);
     }
@@ -142,6 +181,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxTotalTrials")
     private @Nullable Integer maxTotalTrials;
 
+    /**
+     * @return An upper bound on the number of trials to perform.
+     * 
+     */
     public Optional<Integer> maxTotalTrials() {
         return Optional.ofNullable(this.maxTotalTrials);
     }
@@ -153,6 +196,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="objective", required=true)
     private ObjectiveResponse objective;
 
+    /**
+     * @return Optimization objective.
+     * 
+     */
     public ObjectiveResponse objective() {
         return this.objective;
     }
@@ -164,6 +211,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="output", required=true)
     private JobOutputResponse output;
 
+    /**
+     * @return Location of the job output logs and artifacts.
+     * 
+     */
     public JobOutputResponse output() {
         return this.output;
     }
@@ -176,6 +227,11 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Job priority for scheduling policy. Only applies to AMLCompute.
+     * Private preview feature and only available to users on the allow list.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -187,6 +243,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -198,6 +258,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Specifies the job provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -209,6 +273,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="searchSpace", required=true)
     private Map<String,Object> searchSpace;
 
+    /**
+     * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * 
+     */
     public Map<String,Object> searchSpace() {
         return this.searchSpace;
     }
@@ -220,6 +288,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of a job.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -231,6 +303,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -242,6 +318,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeout")
     private @Nullable String timeout;
 
+    /**
+     * @return The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+     * 
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -253,6 +333,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trial")
     private @Nullable TrialComponentResponse trial;
 
+    /**
+     * @return Trial component definition.
+     * 
+     */
     public Optional<TrialComponentResponse> trial() {
         return Optional.ofNullable(this.trial);
     }
@@ -300,109 +384,247 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SweepJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Type of the hyperparameter sampling algorithms
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param compute Compute binding for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(ComputeConfigurationResponse compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param earlyTermination Early termination policies enable canceling poor-performing runs before they complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder earlyTermination(@Nullable Object earlyTermination) {
             $.earlyTermination = earlyTermination;
             return this;
         }
 
+        /**
+         * @param experimentName The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(@Nullable String experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(AmlTokenResponse identity) {
             return identity(Either.ofLeft(identity));
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedIdentityResponse identity) {
             return identity(Either.ofRight(identity));
         }
 
+        /**
+         * @param interactionEndpoints List of JobEndpoints.
+         * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
             $.interactionEndpoints = interactionEndpoints;
             return this;
         }
 
+        /**
+         * @param jobType Enum to determine the type of job.
+         * Expected value is &#39;Sweep&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(String jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param maxConcurrentTrials An upper bound on the number of trials performed in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentTrials(@Nullable Integer maxConcurrentTrials) {
             $.maxConcurrentTrials = maxConcurrentTrials;
             return this;
         }
 
+        /**
+         * @param maxTotalTrials An upper bound on the number of trials to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTotalTrials(@Nullable Integer maxTotalTrials) {
             $.maxTotalTrials = maxTotalTrials;
             return this;
         }
 
+        /**
+         * @param objective Optimization objective.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objective(ObjectiveResponse objective) {
             $.objective = objective;
             return this;
         }
 
+        /**
+         * @param output Location of the job output logs and artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(JobOutputResponse output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param priority Job priority for scheduling policy. Only applies to AMLCompute.
+         * Private preview feature and only available to users on the allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param provisioningState Specifies the job provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param searchSpace A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchSpace(Map<String,Object> searchSpace) {
             $.searchSpace = searchSpace;
             return this;
         }
 
+        /**
+         * @param status The status of a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param timeout The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable String timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param trial Trial component definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trial(@Nullable TrialComponentResponse trial) {
             $.trial = trial;
             return this;

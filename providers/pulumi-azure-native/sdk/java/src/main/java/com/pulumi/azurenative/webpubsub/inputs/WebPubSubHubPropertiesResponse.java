@@ -28,6 +28,10 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
     @Import(name="anonymousConnectPolicy")
     private @Nullable String anonymousConnectPolicy;
 
+    /**
+     * @return The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+     * 
+     */
     public Optional<String> anonymousConnectPolicy() {
         return Optional.ofNullable(this.anonymousConnectPolicy);
     }
@@ -39,6 +43,10 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
     @Import(name="eventHandlers")
     private @Nullable List<EventHandlerResponse> eventHandlers;
 
+    /**
+     * @return Event handler of a hub.
+     * 
+     */
     public Optional<List<EventHandlerResponse>> eventHandlers() {
         return Optional.ofNullable(this.eventHandlers);
     }
@@ -68,16 +76,34 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
             $ = new WebPubSubHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param anonymousConnectPolicy The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
             $.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
 
+        /**
+         * @param eventHandlers Event handler of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(@Nullable List<EventHandlerResponse> eventHandlers) {
             $.eventHandlers = eventHandlers;
             return this;
         }
 
+        /**
+         * @param eventHandlers Event handler of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(EventHandlerResponse... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }

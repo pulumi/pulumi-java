@@ -25,6 +25,10 @@ public final class IotMappingPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="content")
     private @Nullable Object content;
 
+    /**
+     * @return The mapping.
+     * 
+     */
     public Optional<Object> content() {
         return Optional.ofNullable(this.content);
     }
@@ -53,6 +57,12 @@ public final class IotMappingPropertiesResponse extends com.pulumi.resources.Inv
             $ = new IotMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Object content) {
             $.content = content;
             return this;

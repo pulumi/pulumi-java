@@ -33,6 +33,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="arguments")
     private @Nullable List<Object> arguments;
 
+    /**
+     * @return User specified arguments to HDInsightActivity.
+     * 
+     */
     public Optional<List<Object>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -44,6 +48,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="className", required=true)
     private Object className;
 
+    /**
+     * @return Class name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object className() {
         return this.className;
     }
@@ -55,6 +63,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="defines")
     private @Nullable Map<String,Object> defines;
 
+    /**
+     * @return Allows user to specify defines for the MapReduce job request.
+     * 
+     */
     public Optional<Map<String,Object>> defines() {
         return Optional.ofNullable(this.defines);
     }
@@ -66,6 +78,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -77,6 +93,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -88,6 +108,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="getDebugInfo")
     private @Nullable String getDebugInfo;
 
+    /**
+     * @return Debug info option.
+     * 
+     */
     public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
@@ -99,6 +123,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="jarFilePath", required=true)
     private Object jarFilePath;
 
+    /**
+     * @return Jar path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object jarFilePath() {
         return this.jarFilePath;
     }
@@ -110,6 +138,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="jarLibs")
     private @Nullable List<Object> jarLibs;
 
+    /**
+     * @return Jar libs.
+     * 
+     */
     public Optional<List<Object>> jarLibs() {
         return Optional.ofNullable(this.jarLibs);
     }
@@ -121,6 +153,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="jarLinkedService")
     private @Nullable LinkedServiceReferenceResponse jarLinkedService;
 
+    /**
+     * @return Jar linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> jarLinkedService() {
         return Optional.ofNullable(this.jarLinkedService);
     }
@@ -132,6 +168,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -143,6 +183,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -154,6 +198,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -165,6 +213,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="storageLinkedServices")
     private @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
+    /**
+     * @return Storage linked service references.
+     * 
+     */
     public Optional<List<LinkedServiceReferenceResponse>> storageLinkedServices() {
         return Optional.ofNullable(this.storageLinkedServices);
     }
@@ -177,6 +229,11 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;HDInsightMapReduce&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -188,6 +245,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -230,97 +291,218 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
             $ = new HDInsightMapReduceActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable List<Object> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param className Class name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder className(Object className) {
             $.className = className;
             return this;
         }
 
+        /**
+         * @param defines Allows user to specify defines for the MapReduce job request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defines(@Nullable Map<String,Object> defines) {
             $.defines = defines;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             $.getDebugInfo = getDebugInfo;
             return this;
         }
 
+        /**
+         * @param jarFilePath Jar path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFilePath(Object jarFilePath) {
             $.jarFilePath = jarFilePath;
             return this;
         }
 
+        /**
+         * @param jarLibs Jar libs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarLibs(@Nullable List<Object> jarLibs) {
             $.jarLibs = jarLibs;
             return this;
         }
 
+        /**
+         * @param jarLibs Jar libs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarLibs(Object... jarLibs) {
             return jarLibs(List.of(jarLibs));
         }
 
+        /**
+         * @param jarLinkedService Jar linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarLinkedService(@Nullable LinkedServiceReferenceResponse jarLinkedService) {
             $.jarLinkedService = jarLinkedService;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             $.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;HDInsightMapReduce&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

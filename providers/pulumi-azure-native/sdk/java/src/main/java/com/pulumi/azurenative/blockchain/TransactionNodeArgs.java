@@ -24,6 +24,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="blockchainMemberName", required=true)
     private Output<String> blockchainMemberName;
 
+    /**
+     * @return Blockchain member name.
+     * 
+     */
     public Output<String> blockchainMemberName() {
         return this.blockchainMemberName;
     }
@@ -35,6 +39,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="firewallRules")
     private @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
+    /**
+     * @return Gets or sets the firewall rules.
+     * 
+     */
     public Optional<Output<List<FirewallRuleArgs>>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -46,6 +54,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets the transaction node location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Sets the transaction node dns endpoint basic auth password.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -68,6 +84,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="transactionNodeName")
     private @Nullable Output<String> transactionNodeName;
 
+    /**
+     * @return Transaction node name.
+     * 
+     */
     public Optional<Output<String>> transactionNodeName() {
         return Optional.ofNullable(this.transactionNodeName);
     }
@@ -112,60 +136,138 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
             $ = new TransactionNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockchainMemberName Blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockchainMemberName(Output<String> blockchainMemberName) {
             $.blockchainMemberName = blockchainMemberName;
             return this;
         }
 
+        /**
+         * @param blockchainMemberName Blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockchainMemberName(String blockchainMemberName) {
             return blockchainMemberName(Output.of(blockchainMemberName));
         }
 
+        /**
+         * @param firewallRules Gets or sets the firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules Gets or sets the firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(List<FirewallRuleArgs> firewallRules) {
             return firewallRules(Output.of(firewallRules));
         }
 
+        /**
+         * @param firewallRules Gets or sets the firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(FirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
 
+        /**
+         * @param location Gets or sets the transaction node location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets the transaction node location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param password Sets the transaction node dns endpoint basic auth password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Sets the transaction node dns endpoint basic auth password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param transactionNodeName Transaction node name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionNodeName(@Nullable Output<String> transactionNodeName) {
             $.transactionNodeName = transactionNodeName;
             return this;
         }
 
+        /**
+         * @param transactionNodeName Transaction node name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionNodeName(String transactionNodeName) {
             return transactionNodeName(Output.of(transactionNodeName));
         }

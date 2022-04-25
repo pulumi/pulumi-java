@@ -22,6 +22,10 @@ public final class ResourceGuardProxyArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -40,6 +44,10 @@ public final class ResourceGuardProxyArgs extends com.pulumi.resources.ResourceA
     @Import(name="vaultName", required=true)
     private Output<String> vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> vaultName() {
         return this.vaultName;
     }
@@ -70,11 +78,23 @@ public final class ResourceGuardProxyArgs extends com.pulumi.resources.ResourceA
             $ = new ResourceGuardProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
@@ -88,11 +108,23 @@ public final class ResourceGuardProxyArgs extends com.pulumi.resources.ResourceA
             return resourceGuardProxyName(Output.of(resourceGuardProxyName));
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(Output<String> vaultName) {
             $.vaultName = vaultName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             return vaultName(Output.of(vaultName));
         }

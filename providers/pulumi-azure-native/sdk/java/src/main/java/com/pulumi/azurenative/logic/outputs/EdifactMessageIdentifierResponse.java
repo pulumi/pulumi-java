@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EdifactMessageIdentifierResponse {
     /**
-     * The message id on which this envelope settings has to be applied.
+     * @return The message id on which this envelope settings has to be applied.
      * 
      */
     private final String messageId;
@@ -21,9 +21,9 @@ public final class EdifactMessageIdentifierResponse {
     }
 
     /**
-     * The message id on which this envelope settings has to be applied.
+     * @return The message id on which this envelope settings has to be applied.
      * 
-    */
+     */
     public String messageId() {
         return this.messageId;
     }

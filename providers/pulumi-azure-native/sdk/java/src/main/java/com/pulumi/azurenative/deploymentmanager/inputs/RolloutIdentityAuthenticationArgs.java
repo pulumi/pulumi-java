@@ -26,6 +26,11 @@ public final class RolloutIdentityAuthenticationArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;RolloutIdentity&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -54,11 +59,25 @@ public final class RolloutIdentityAuthenticationArgs extends com.pulumi.resource
             $ = new RolloutIdentityAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The authentication type.
+         * Expected value is &#39;RolloutIdentity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The authentication type.
+         * Expected value is &#39;RolloutIdentity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

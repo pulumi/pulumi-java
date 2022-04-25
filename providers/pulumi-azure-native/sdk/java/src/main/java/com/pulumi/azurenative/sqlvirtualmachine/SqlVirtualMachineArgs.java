@@ -34,6 +34,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="autoBackupSettings")
     private @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings;
 
+    /**
+     * @return Auto backup settings for SQL Server.
+     * 
+     */
     public Optional<Output<AutoBackupSettingsArgs>> autoBackupSettings() {
         return Optional.ofNullable(this.autoBackupSettings);
     }
@@ -45,6 +49,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="autoPatchingSettings")
     private @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings;
 
+    /**
+     * @return Auto patching settings for applying critical security updates to SQL virtual machine.
+     * 
+     */
     public Optional<Output<AutoPatchingSettingsArgs>> autoPatchingSettings() {
         return Optional.ofNullable(this.autoPatchingSettings);
     }
@@ -56,6 +64,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return Azure Active Directory identity of the server.
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -67,6 +79,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyVaultCredentialSettings")
     private @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
 
+    /**
+     * @return Key vault credential settings.
+     * 
+     */
     public Optional<Output<KeyVaultCredentialSettingsArgs>> keyVaultCredentialSettings() {
         return Optional.ofNullable(this.keyVaultCredentialSettings);
     }
@@ -78,6 +94,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -89,6 +109,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,6 +124,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serverConfigurationsManagementSettings")
     private @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
 
+    /**
+     * @return SQL Server configuration management settings.
+     * 
+     */
     public Optional<Output<ServerConfigurationsManagementSettingsArgs>> serverConfigurationsManagementSettings() {
         return Optional.ofNullable(this.serverConfigurationsManagementSettings);
     }
@@ -111,6 +139,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlImageOffer")
     private @Nullable Output<String> sqlImageOffer;
 
+    /**
+     * @return SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
+     * 
+     */
     public Optional<Output<String>> sqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
@@ -122,6 +154,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlImageSku")
     private @Nullable Output<Either<String,SqlImageSku>> sqlImageSku;
 
+    /**
+     * @return SQL Server edition type.
+     * 
+     */
     public Optional<Output<Either<String,SqlImageSku>>> sqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
@@ -133,6 +169,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlManagement")
     private @Nullable Output<Either<String,SqlManagementMode>> sqlManagement;
 
+    /**
+     * @return SQL Server Management type.
+     * 
+     */
     public Optional<Output<Either<String,SqlManagementMode>>> sqlManagement() {
         return Optional.ofNullable(this.sqlManagement);
     }
@@ -144,6 +184,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlServerLicenseType")
     private @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
 
+    /**
+     * @return SQL Server license type.
+     * 
+     */
     public Optional<Output<Either<String,SqlServerLicenseType>>> sqlServerLicenseType() {
         return Optional.ofNullable(this.sqlServerLicenseType);
     }
@@ -155,6 +199,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlVirtualMachineGroupResourceId")
     private @Nullable Output<String> sqlVirtualMachineGroupResourceId;
 
+    /**
+     * @return ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
+     * 
+     */
     public Optional<Output<String>> sqlVirtualMachineGroupResourceId() {
         return Optional.ofNullable(this.sqlVirtualMachineGroupResourceId);
     }
@@ -166,6 +214,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlVirtualMachineName")
     private @Nullable Output<String> sqlVirtualMachineName;
 
+    /**
+     * @return Name of the SQL virtual machine.
+     * 
+     */
     public Optional<Output<String>> sqlVirtualMachineName() {
         return Optional.ofNullable(this.sqlVirtualMachineName);
     }
@@ -177,6 +229,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageConfigurationSettings")
     private @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings;
 
+    /**
+     * @return Storage Configuration Settings.
+     * 
+     */
     public Optional<Output<StorageConfigurationSettingsArgs>> storageConfigurationSettings() {
         return Optional.ofNullable(this.storageConfigurationSettings);
     }
@@ -188,6 +244,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -199,6 +259,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="virtualMachineResourceId")
     private @Nullable Output<String> virtualMachineResourceId;
 
+    /**
+     * @return ARM Resource id of underlying virtual machine created from SQL marketplace image.
+     * 
+     */
     public Optional<Output<String>> virtualMachineResourceId() {
         return Optional.ofNullable(this.virtualMachineResourceId);
     }
@@ -210,6 +274,10 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="wsfcDomainCredentials")
     private @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 
+    /**
+     * @return Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+     * 
+     */
     public Optional<Output<WsfcDomainCredentialsArgs>> wsfcDomainCredentials() {
         return Optional.ofNullable(this.wsfcDomainCredentials);
     }
@@ -254,179 +322,419 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
             $ = new SqlVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoBackupSettings Auto backup settings for SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBackupSettings(@Nullable Output<AutoBackupSettingsArgs> autoBackupSettings) {
             $.autoBackupSettings = autoBackupSettings;
             return this;
         }
 
+        /**
+         * @param autoBackupSettings Auto backup settings for SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBackupSettings(AutoBackupSettingsArgs autoBackupSettings) {
             return autoBackupSettings(Output.of(autoBackupSettings));
         }
 
+        /**
+         * @param autoPatchingSettings Auto patching settings for applying critical security updates to SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoPatchingSettings(@Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings) {
             $.autoPatchingSettings = autoPatchingSettings;
             return this;
         }
 
+        /**
+         * @param autoPatchingSettings Auto patching settings for applying critical security updates to SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoPatchingSettings(AutoPatchingSettingsArgs autoPatchingSettings) {
             return autoPatchingSettings(Output.of(autoPatchingSettings));
         }
 
+        /**
+         * @param identity Azure Active Directory identity of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Azure Active Directory identity of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param keyVaultCredentialSettings Key vault credential settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultCredentialSettings(@Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
             $.keyVaultCredentialSettings = keyVaultCredentialSettings;
             return this;
         }
 
+        /**
+         * @param keyVaultCredentialSettings Key vault credential settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultCredentialSettings(KeyVaultCredentialSettingsArgs keyVaultCredentialSettings) {
             return keyVaultCredentialSettings(Output.of(keyVaultCredentialSettings));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverConfigurationsManagementSettings SQL Server configuration management settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverConfigurationsManagementSettings(@Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings) {
             $.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
             return this;
         }
 
+        /**
+         * @param serverConfigurationsManagementSettings SQL Server configuration management settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverConfigurationsManagementSettings(ServerConfigurationsManagementSettingsArgs serverConfigurationsManagementSettings) {
             return serverConfigurationsManagementSettings(Output.of(serverConfigurationsManagementSettings));
         }
 
+        /**
+         * @param sqlImageOffer SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
             $.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
+        /**
+         * @param sqlImageOffer SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageOffer(String sqlImageOffer) {
             return sqlImageOffer(Output.of(sqlImageOffer));
         }
 
+        /**
+         * @param sqlImageSku SQL Server edition type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlImageSku>> sqlImageSku) {
             $.sqlImageSku = sqlImageSku;
             return this;
         }
 
+        /**
+         * @param sqlImageSku SQL Server edition type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(Either<String,SqlImageSku> sqlImageSku) {
             return sqlImageSku(Output.of(sqlImageSku));
         }
 
+        /**
+         * @param sqlImageSku SQL Server edition type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(String sqlImageSku) {
             return sqlImageSku(Either.ofLeft(sqlImageSku));
         }
 
+        /**
+         * @param sqlImageSku SQL Server edition type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(SqlImageSku sqlImageSku) {
             return sqlImageSku(Either.ofRight(sqlImageSku));
         }
 
+        /**
+         * @param sqlManagement SQL Server Management type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlManagement(@Nullable Output<Either<String,SqlManagementMode>> sqlManagement) {
             $.sqlManagement = sqlManagement;
             return this;
         }
 
+        /**
+         * @param sqlManagement SQL Server Management type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlManagement(Either<String,SqlManagementMode> sqlManagement) {
             return sqlManagement(Output.of(sqlManagement));
         }
 
+        /**
+         * @param sqlManagement SQL Server Management type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlManagement(String sqlManagement) {
             return sqlManagement(Either.ofLeft(sqlManagement));
         }
 
+        /**
+         * @param sqlManagement SQL Server Management type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlManagement(SqlManagementMode sqlManagement) {
             return sqlManagement(Either.ofRight(sqlManagement));
         }
 
+        /**
+         * @param sqlServerLicenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerLicenseType(@Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
             $.sqlServerLicenseType = sqlServerLicenseType;
             return this;
         }
 
+        /**
+         * @param sqlServerLicenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerLicenseType(Either<String,SqlServerLicenseType> sqlServerLicenseType) {
             return sqlServerLicenseType(Output.of(sqlServerLicenseType));
         }
 
+        /**
+         * @param sqlServerLicenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerLicenseType(String sqlServerLicenseType) {
             return sqlServerLicenseType(Either.ofLeft(sqlServerLicenseType));
         }
 
+        /**
+         * @param sqlServerLicenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerLicenseType(SqlServerLicenseType sqlServerLicenseType) {
             return sqlServerLicenseType(Either.ofRight(sqlServerLicenseType));
         }
 
+        /**
+         * @param sqlVirtualMachineGroupResourceId ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupResourceId(@Nullable Output<String> sqlVirtualMachineGroupResourceId) {
             $.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineGroupResourceId ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupResourceId(String sqlVirtualMachineGroupResourceId) {
             return sqlVirtualMachineGroupResourceId(Output.of(sqlVirtualMachineGroupResourceId));
         }
 
+        /**
+         * @param sqlVirtualMachineName Name of the SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineName(@Nullable Output<String> sqlVirtualMachineName) {
             $.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineName Name of the SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineName(String sqlVirtualMachineName) {
             return sqlVirtualMachineName(Output.of(sqlVirtualMachineName));
         }
 
+        /**
+         * @param storageConfigurationSettings Storage Configuration Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfigurationSettings(@Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
             $.storageConfigurationSettings = storageConfigurationSettings;
             return this;
         }
 
+        /**
+         * @param storageConfigurationSettings Storage Configuration Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfigurationSettings(StorageConfigurationSettingsArgs storageConfigurationSettings) {
             return storageConfigurationSettings(Output.of(storageConfigurationSettings));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualMachineResourceId ARM Resource id of underlying virtual machine created from SQL marketplace image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineResourceId(@Nullable Output<String> virtualMachineResourceId) {
             $.virtualMachineResourceId = virtualMachineResourceId;
             return this;
         }
 
+        /**
+         * @param virtualMachineResourceId ARM Resource id of underlying virtual machine created from SQL marketplace image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineResourceId(String virtualMachineResourceId) {
             return virtualMachineResourceId(Output.of(virtualMachineResourceId));
         }
 
+        /**
+         * @param wsfcDomainCredentials Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsfcDomainCredentials(@Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
             $.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }
 
+        /**
+         * @param wsfcDomainCredentials Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsfcDomainCredentials(WsfcDomainCredentialsArgs wsfcDomainCredentials) {
             return wsfcDomainCredentials(Output.of(wsfcDomainCredentials));
         }

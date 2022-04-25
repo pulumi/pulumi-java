@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PowerStateResponse {
     /**
-     * Tells whether the cluster is Running or Stopped
+     * @return Tells whether the cluster is Running or Stopped
      * 
      */
     private final @Nullable String code;
@@ -23,9 +23,9 @@ public final class PowerStateResponse {
     }
 
     /**
-     * Tells whether the cluster is Running or Stopped
+     * @return Tells whether the cluster is Running or Stopped
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }

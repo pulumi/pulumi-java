@@ -26,6 +26,10 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
     @Import(name="activeDirectoryProperties")
     private @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
 
+    /**
+     * @return Required if choose AD.
+     * 
+     */
     public Optional<ActiveDirectoryPropertiesResponse> activeDirectoryProperties() {
         return Optional.ofNullable(this.activeDirectoryProperties);
     }
@@ -37,6 +41,10 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
     @Import(name="directoryServiceOptions", required=true)
     private String directoryServiceOptions;
 
+    /**
+     * @return Indicates the directory service used.
+     * 
+     */
     public String directoryServiceOptions() {
         return this.directoryServiceOptions;
     }
@@ -66,11 +74,23 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
             $ = new AzureFilesIdentityBasedAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDirectoryProperties Required if choose AD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectoryProperties(@Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties) {
             $.activeDirectoryProperties = activeDirectoryProperties;
             return this;
         }
 
+        /**
+         * @param directoryServiceOptions Indicates the directory service used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryServiceOptions(String directoryServiceOptions) {
             $.directoryServiceOptions = directoryServiceOptions;
             return this;

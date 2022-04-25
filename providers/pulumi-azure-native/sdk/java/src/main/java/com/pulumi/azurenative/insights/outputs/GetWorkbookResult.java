@@ -14,82 +14,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkbookResult {
     /**
-     * Workbook category, as defined by the user at creation time.
+     * @return Workbook category, as defined by the user at creation time.
      * 
      */
     private final String category;
     /**
-     * The user-defined name (display name) of the workbook.
+     * @return The user-defined name (display name) of the workbook.
      * 
      */
     private final String displayName;
     /**
-     * Resource etag
+     * @return Resource etag
      * 
      */
     private final @Nullable Map<String,String> etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final @Nullable String id;
     /**
-     * Identity used for BYOS
+     * @return Identity used for BYOS
      * 
      */
     private final @Nullable WorkbookManagedIdentityResponse identity;
     /**
-     * The kind of workbook. Choices are user and shared.
+     * @return The kind of workbook. Choices are user and shared.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final @Nullable String name;
     /**
-     * Configuration of this particular workbook. Configuration data is a string containing valid JSON
+     * @return Configuration of this particular workbook. Configuration data is a string containing valid JSON
      * 
      */
     private final String serializedData;
     /**
-     * ResourceId for a source resource.
+     * @return ResourceId for a source resource.
      * 
      */
     private final @Nullable String sourceId;
     /**
-     * BYOS Storage Account URI
+     * @return BYOS Storage Account URI
      * 
      */
     private final @Nullable String storageUri;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Date and time in UTC of the last modification that was made to this workbook definition.
+     * @return Date and time in UTC of the last modification that was made to this workbook definition.
      * 
      */
     private final String timeModified;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final @Nullable String type;
     /**
-     * Unique user id of the specific user that owns this workbook.
+     * @return Unique user id of the specific user that owns this workbook.
      * 
      */
     private final String userId;
     /**
-     * Workbook version
+     * @return Workbook version
      * 
      */
     private final @Nullable String version;
@@ -131,114 +131,114 @@ public final class GetWorkbookResult {
     }
 
     /**
-     * Workbook category, as defined by the user at creation time.
+     * @return Workbook category, as defined by the user at creation time.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * The user-defined name (display name) of the workbook.
+     * @return The user-defined name (display name) of the workbook.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource etag
+     * @return Resource etag
      * 
-    */
+     */
     public Map<String,String> etag() {
         return this.etag == null ? Map.of() : this.etag;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Identity used for BYOS
+     * @return Identity used for BYOS
      * 
-    */
+     */
     public Optional<WorkbookManagedIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The kind of workbook. Choices are user and shared.
+     * @return The kind of workbook. Choices are user and shared.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Configuration of this particular workbook. Configuration data is a string containing valid JSON
+     * @return Configuration of this particular workbook. Configuration data is a string containing valid JSON
      * 
-    */
+     */
     public String serializedData() {
         return this.serializedData;
     }
     /**
-     * ResourceId for a source resource.
+     * @return ResourceId for a source resource.
      * 
-    */
+     */
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
     /**
-     * BYOS Storage Account URI
+     * @return BYOS Storage Account URI
      * 
-    */
+     */
     public Optional<String> storageUri() {
         return Optional.ofNullable(this.storageUri);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Date and time in UTC of the last modification that was made to this workbook definition.
+     * @return Date and time in UTC of the last modification that was made to this workbook definition.
      * 
-    */
+     */
     public String timeModified() {
         return this.timeModified;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Unique user id of the specific user that owns this workbook.
+     * @return Unique user id of the specific user that owns this workbook.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }
     /**
-     * Workbook version
+     * @return Workbook version
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

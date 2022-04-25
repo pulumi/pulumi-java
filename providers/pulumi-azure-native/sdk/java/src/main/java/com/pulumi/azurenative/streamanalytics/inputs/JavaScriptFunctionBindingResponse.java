@@ -26,6 +26,10 @@ public final class JavaScriptFunctionBindingResponse extends com.pulumi.resource
     @Import(name="script")
     private @Nullable String script;
 
+    /**
+     * @return The JavaScript code containing a single function definition. For example: &#39;function (x, y) { return x + y; }&#39;
+     * 
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
@@ -38,6 +42,11 @@ public final class JavaScriptFunctionBindingResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the function binding type.
+     * Expected value is &#39;Microsoft.StreamAnalytics/JavascriptUdf&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -67,11 +76,24 @@ public final class JavaScriptFunctionBindingResponse extends com.pulumi.resource
             $ = new JavaScriptFunctionBindingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param script The JavaScript code containing a single function definition. For example: &#39;function (x, y) { return x + y; }&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable String script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param type Indicates the function binding type.
+         * Expected value is &#39;Microsoft.StreamAnalytics/JavascriptUdf&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

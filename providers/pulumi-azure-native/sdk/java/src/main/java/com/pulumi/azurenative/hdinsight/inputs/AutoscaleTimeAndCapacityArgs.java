@@ -27,6 +27,10 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
     @Import(name="maxInstanceCount")
     private @Nullable Output<Integer> maxInstanceCount;
 
+    /**
+     * @return The maximum instance count of the cluster
+     * 
+     */
     public Optional<Output<Integer>> maxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
@@ -38,6 +42,10 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
     @Import(name="minInstanceCount")
     private @Nullable Output<Integer> minInstanceCount;
 
+    /**
+     * @return The minimum instance count of the cluster
+     * 
+     */
     public Optional<Output<Integer>> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
@@ -49,6 +57,10 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return 24-hour time in the form xx:xx
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -79,29 +91,65 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
             $ = new AutoscaleTimeAndCapacityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstanceCount The maximum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(@Nullable Output<Integer> maxInstanceCount) {
             $.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
+        /**
+         * @param maxInstanceCount The maximum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(Integer maxInstanceCount) {
             return maxInstanceCount(Output.of(maxInstanceCount));
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(Integer minInstanceCount) {
             return minInstanceCount(Output.of(minInstanceCount));
         }
 
+        /**
+         * @param time 24-hour time in the form xx:xx
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time 24-hour time in the form xx:xx
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

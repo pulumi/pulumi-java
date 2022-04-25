@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureDataLakeStoreOutputDataSourceResponse {
     /**
-     * The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String accountName;
     /**
-     * The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
+     * @return The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
      * 
      */
     private final @Nullable String dateFormat;
     /**
-     * The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
+     * @return The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String filePathPrefix;
     /**
-     * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+     * @return A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String refreshToken;
     /**
-     * The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
+     * @return The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
+     * @return The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
      * 
      */
     private final @Nullable String timeFormat;
     /**
-     * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * @return The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
      */
     private final @Nullable String tokenUserDisplayName;
     /**
-     * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * @return The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
      */
     private final @Nullable String tokenUserPrincipalName;
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
      * 
      */
@@ -81,66 +81,66 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
     }
 
     /**
-     * The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
+     * @return The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
      * 
-    */
+     */
     public Optional<String> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
-     * The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
+     * @return The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> filePathPrefix() {
         return Optional.ofNullable(this.filePathPrefix);
     }
     /**
-     * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+     * @return A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
-     * The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
+     * @return The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
+     * @return The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
      * 
-    */
+     */
     public Optional<String> timeFormat() {
         return Optional.ofNullable(this.timeFormat);
     }
     /**
-     * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * @return The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-    */
+     */
     public Optional<String> tokenUserDisplayName() {
         return Optional.ofNullable(this.tokenUserDisplayName);
     }
     /**
-     * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * @return The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-    */
+     */
     public Optional<String> tokenUserPrincipalName() {
         return Optional.ofNullable(this.tokenUserPrincipalName);
     }
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

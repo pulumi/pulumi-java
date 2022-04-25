@@ -25,6 +25,10 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nfsFilePath")
     private @Nullable String nfsFilePath;
 
+    /**
+     * @return File path through which the NFS volume is exposed by the provider
+     * 
+     */
     public Optional<String> nfsFilePath() {
         return Optional.ofNullable(this.nfsFilePath);
     }
@@ -36,6 +40,10 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nfsProviderIp")
     private @Nullable String nfsProviderIp;
 
+    /**
+     * @return IP address of the NFS provider
+     * 
+     */
     public Optional<String> nfsProviderIp() {
         return Optional.ofNullable(this.nfsProviderIp);
     }
@@ -65,11 +73,23 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
             $ = new NetAppVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nfsFilePath File path through which the NFS volume is exposed by the provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsFilePath(@Nullable String nfsFilePath) {
             $.nfsFilePath = nfsFilePath;
             return this;
         }
 
+        /**
+         * @param nfsProviderIp IP address of the NFS provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
             $.nfsProviderIp = nfsProviderIp;
             return this;

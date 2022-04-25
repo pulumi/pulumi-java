@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualNetworkRuleResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Virtual Network Rule State
+     * @return Virtual Network Rule State
      * 
      */
     private final String state;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The ARM resource id of the virtual network subnet.
+     * @return The ARM resource id of the virtual network subnet.
      * 
      */
     private final String virtualNetworkSubnetId;
@@ -60,44 +60,44 @@ public final class GetVirtualNetworkRuleResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
-    */
+     */
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Virtual Network Rule State
+     * @return Virtual Network Rule State
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The ARM resource id of the virtual network subnet.
+     * @return The ARM resource id of the virtual network subnet.
      * 
-    */
+     */
     public String virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }

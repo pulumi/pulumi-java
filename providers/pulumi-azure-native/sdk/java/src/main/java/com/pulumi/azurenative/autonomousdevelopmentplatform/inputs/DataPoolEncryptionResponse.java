@@ -25,6 +25,10 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of Key Vault key
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -36,6 +40,10 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultUri", required=true)
     private String keyVaultUri;
 
+    /**
+     * @return The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
+     * 
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
@@ -47,6 +55,10 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The version of Key Vault key
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -58,6 +70,10 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="userAssignedIdentity", required=true)
     private String userAssignedIdentity;
 
+    /**
+     * @return The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
+     * 
+     */
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
@@ -89,21 +105,45 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
             $ = new DataPoolEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of Key Vault key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVersion The version of Key Vault key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

@@ -27,6 +27,10 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="gradeName")
     private @Nullable Output<String> gradeName;
 
+    /**
+     * @return Name of the grade.
+     * 
+     */
     public Optional<Output<String>> gradeName() {
         return Optional.ofNullable(this.gradeName);
     }
@@ -38,6 +42,10 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="maxScoreThreshold")
     private @Nullable Output<Integer> maxScoreThreshold;
 
+    /**
+     * @return Maximum score threshold.
+     * 
+     */
     public Optional<Output<Integer>> maxScoreThreshold() {
         return Optional.ofNullable(this.maxScoreThreshold);
     }
@@ -49,6 +57,10 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="minScoreThreshold")
     private @Nullable Output<Integer> minScoreThreshold;
 
+    /**
+     * @return Minimum score threshold.
+     * 
+     */
     public Optional<Output<Integer>> minScoreThreshold() {
         return Optional.ofNullable(this.minScoreThreshold);
     }
@@ -79,29 +91,65 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
             $ = new PredictionGradesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gradeName Name of the grade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gradeName(@Nullable Output<String> gradeName) {
             $.gradeName = gradeName;
             return this;
         }
 
+        /**
+         * @param gradeName Name of the grade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gradeName(String gradeName) {
             return gradeName(Output.of(gradeName));
         }
 
+        /**
+         * @param maxScoreThreshold Maximum score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScoreThreshold(@Nullable Output<Integer> maxScoreThreshold) {
             $.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
 
+        /**
+         * @param maxScoreThreshold Maximum score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScoreThreshold(Integer maxScoreThreshold) {
             return maxScoreThreshold(Output.of(maxScoreThreshold));
         }
 
+        /**
+         * @param minScoreThreshold Minimum score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minScoreThreshold(@Nullable Output<Integer> minScoreThreshold) {
             $.minScoreThreshold = minScoreThreshold;
             return this;
         }
 
+        /**
+         * @param minScoreThreshold Minimum score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minScoreThreshold(Integer minScoreThreshold) {
             return minScoreThreshold(Output.of(minScoreThreshold));
         }

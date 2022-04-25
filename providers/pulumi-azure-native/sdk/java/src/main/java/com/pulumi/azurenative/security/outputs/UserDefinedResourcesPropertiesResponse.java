@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class UserDefinedResourcesPropertiesResponse {
     /**
-     * Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+     * @return Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
      * 
      */
     private final String query;
     /**
-     * List of Azure subscription ids on which the user defined resources query should be executed.
+     * @return List of Azure subscription ids on which the user defined resources query should be executed.
      * 
      */
     private final List<String> querySubscriptions;
@@ -30,16 +30,16 @@ public final class UserDefinedResourcesPropertiesResponse {
     }
 
     /**
-     * Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+     * @return Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * List of Azure subscription ids on which the user defined resources query should be executed.
+     * @return List of Azure subscription ids on which the user defined resources query should be executed.
      * 
-    */
+     */
     public List<String> querySubscriptions() {
         return this.querySubscriptions;
     }

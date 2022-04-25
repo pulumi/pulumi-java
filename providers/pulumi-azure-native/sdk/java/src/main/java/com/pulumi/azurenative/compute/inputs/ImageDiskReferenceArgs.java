@@ -27,6 +27,10 @@ public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return A relative uri containing either a Platform Image Repository or user image reference.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="lun")
     private @Nullable Output<Integer> lun;
 
+    /**
+     * @return If the disk is created from an image&#39;s data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+     * 
+     */
     public Optional<Output<Integer>> lun() {
         return Optional.ofNullable(this.lun);
     }
@@ -67,20 +75,44 @@ public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceA
             $ = new ImageDiskReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id A relative uri containing either a Platform Image Repository or user image reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id A relative uri containing either a Platform Image Repository or user image reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param lun If the disk is created from an image&#39;s data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(@Nullable Output<Integer> lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param lun If the disk is created from an image&#39;s data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             return lun(Output.of(lun));
         }

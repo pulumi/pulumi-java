@@ -25,6 +25,10 @@ public final class VideoPublishingOptionsResponse extends com.pulumi.resources.I
     @Import(name="disableArchive")
     private @Nullable String disableArchive;
 
+    /**
+     * @return When set to &#39;true&#39; content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableRtspPublishing&#34; must be set to &#39;false&#39;.
+     * 
+     */
     public Optional<String> disableArchive() {
         return Optional.ofNullable(this.disableArchive);
     }
@@ -36,6 +40,10 @@ public final class VideoPublishingOptionsResponse extends com.pulumi.resources.I
     @Import(name="disableRtspPublishing")
     private @Nullable String disableRtspPublishing;
 
+    /**
+     * @return When set to &#39;true&#39; the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableArchive&#34; must be set to &#39;false&#39;.
+     * 
+     */
     public Optional<String> disableRtspPublishing() {
         return Optional.ofNullable(this.disableRtspPublishing);
     }
@@ -65,11 +73,23 @@ public final class VideoPublishingOptionsResponse extends com.pulumi.resources.I
             $ = new VideoPublishingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableArchive When set to &#39;true&#39; content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableRtspPublishing&#34; must be set to &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableArchive(@Nullable String disableArchive) {
             $.disableArchive = disableArchive;
             return this;
         }
 
+        /**
+         * @param disableRtspPublishing When set to &#39;true&#39; the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableArchive&#34; must be set to &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
             $.disableRtspPublishing = disableRtspPublishing;
             return this;

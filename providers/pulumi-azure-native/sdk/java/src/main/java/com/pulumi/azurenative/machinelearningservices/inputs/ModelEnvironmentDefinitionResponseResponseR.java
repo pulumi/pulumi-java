@@ -29,6 +29,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="bioConductorPackages")
     private @Nullable List<String> bioConductorPackages;
 
+    /**
+     * @return The packages from Bioconductor.
+     * 
+     */
     public Optional<List<String>> bioConductorPackages() {
         return Optional.ofNullable(this.bioConductorPackages);
     }
@@ -40,6 +44,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="cranPackages")
     private @Nullable List<RCranPackageResponse> cranPackages;
 
+    /**
+     * @return The CRAN packages to use.
+     * 
+     */
     public Optional<List<RCranPackageResponse>> cranPackages() {
         return Optional.ofNullable(this.cranPackages);
     }
@@ -51,6 +59,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="customUrlPackages")
     private @Nullable List<String> customUrlPackages;
 
+    /**
+     * @return The packages from custom urls.
+     * 
+     */
     public Optional<List<String>> customUrlPackages() {
         return Optional.ofNullable(this.customUrlPackages);
     }
@@ -62,6 +74,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="gitHubPackages")
     private @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
 
+    /**
+     * @return The packages directly from GitHub.
+     * 
+     */
     public Optional<List<RGitHubPackageResponseResponse>> gitHubPackages() {
         return Optional.ofNullable(this.gitHubPackages);
     }
@@ -73,6 +89,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="rVersion")
     private @Nullable String rVersion;
 
+    /**
+     * @return The version of R to be installed
+     * 
+     */
     public Optional<String> rVersion() {
         return Optional.ofNullable(this.rVersion);
     }
@@ -85,6 +105,11 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="rscriptPath")
     private @Nullable String rscriptPath;
 
+    /**
+     * @return The Rscript path to use if an environment build is not required.
+     * The path specified gets used to call the user script.
+     * 
+     */
     public Optional<String> rscriptPath() {
         return Optional.ofNullable(this.rscriptPath);
     }
@@ -96,6 +121,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="snapshotDate")
     private @Nullable String snapshotDate;
 
+    /**
+     * @return Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. &#34;2019-04-17&#34;
+     * 
+     */
     public Optional<String> snapshotDate() {
         return Optional.ofNullable(this.snapshotDate);
     }
@@ -107,6 +136,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="userManaged")
     private @Nullable Boolean userManaged;
 
+    /**
+     * @return Indicates whether the environment is managed by user or by AzureML.
+     * 
+     */
     public Optional<Boolean> userManaged() {
         return Optional.ofNullable(this.userManaged);
     }
@@ -142,57 +175,130 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
             $ = new ModelEnvironmentDefinitionResponseResponseR(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bioConductorPackages The packages from Bioconductor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
             $.bioConductorPackages = bioConductorPackages;
             return this;
         }
 
+        /**
+         * @param bioConductorPackages The packages from Bioconductor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bioConductorPackages(String... bioConductorPackages) {
             return bioConductorPackages(List.of(bioConductorPackages));
         }
 
+        /**
+         * @param cranPackages The CRAN packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cranPackages(@Nullable List<RCranPackageResponse> cranPackages) {
             $.cranPackages = cranPackages;
             return this;
         }
 
+        /**
+         * @param cranPackages The CRAN packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cranPackages(RCranPackageResponse... cranPackages) {
             return cranPackages(List.of(cranPackages));
         }
 
+        /**
+         * @param customUrlPackages The packages from custom urls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
             $.customUrlPackages = customUrlPackages;
             return this;
         }
 
+        /**
+         * @param customUrlPackages The packages from custom urls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customUrlPackages(String... customUrlPackages) {
             return customUrlPackages(List.of(customUrlPackages));
         }
 
+        /**
+         * @param gitHubPackages The packages directly from GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitHubPackages(@Nullable List<RGitHubPackageResponseResponse> gitHubPackages) {
             $.gitHubPackages = gitHubPackages;
             return this;
         }
 
+        /**
+         * @param gitHubPackages The packages directly from GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitHubPackages(RGitHubPackageResponseResponse... gitHubPackages) {
             return gitHubPackages(List.of(gitHubPackages));
         }
 
+        /**
+         * @param rVersion The version of R to be installed
+         * 
+         * @return builder
+         * 
+         */
         public Builder rVersion(@Nullable String rVersion) {
             $.rVersion = rVersion;
             return this;
         }
 
+        /**
+         * @param rscriptPath The Rscript path to use if an environment build is not required.
+         * The path specified gets used to call the user script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rscriptPath(@Nullable String rscriptPath) {
             $.rscriptPath = rscriptPath;
             return this;
         }
 
+        /**
+         * @param snapshotDate Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. &#34;2019-04-17&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotDate(@Nullable String snapshotDate) {
             $.snapshotDate = snapshotDate;
             return this;
         }
 
+        /**
+         * @param userManaged Indicates whether the environment is managed by user or by AzureML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManaged(@Nullable Boolean userManaged) {
             $.userManaged = userManaged;
             return this;

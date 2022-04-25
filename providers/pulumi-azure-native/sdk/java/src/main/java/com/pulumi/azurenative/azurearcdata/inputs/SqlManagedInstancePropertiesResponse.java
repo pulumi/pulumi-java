@@ -27,6 +27,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="admin")
     private @Nullable String admin;
 
+    /**
+     * @return The instance admin user
+     * 
+     */
     public Optional<String> admin() {
         return Optional.ofNullable(this.admin);
     }
@@ -38,6 +42,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="basicLoginInformation")
     private @Nullable BasicLoginInformationResponse basicLoginInformation;
 
+    /**
+     * @return Username and password for basic authentication.
+     * 
+     */
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
@@ -49,6 +57,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="dataControllerId")
     private @Nullable String dataControllerId;
 
+    /**
+     * @return null
+     * 
+     */
     public Optional<String> dataControllerId() {
         return Optional.ofNullable(this.dataControllerId);
     }
@@ -60,6 +72,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return The instance end time
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -71,6 +87,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="k8sRaw")
     private @Nullable Object k8sRaw;
 
+    /**
+     * @return The raw kubernetes information
+     * 
+     */
     public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
@@ -82,6 +102,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="lastUploadedDate")
     private @Nullable String lastUploadedDate;
 
+    /**
+     * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
@@ -100,6 +124,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return The instance start time
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -135,31 +163,67 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
             $ = new SqlManagedInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param admin The instance admin user
+         * 
+         * @return builder
+         * 
+         */
         public Builder admin(@Nullable String admin) {
             $.admin = admin;
             return this;
         }
 
+        /**
+         * @param basicLoginInformation Username and password for basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             $.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
+        /**
+         * @param dataControllerId null
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataControllerId(@Nullable String dataControllerId) {
             $.dataControllerId = dataControllerId;
             return this;
         }
 
+        /**
+         * @param endTime The instance end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param k8sRaw The raw kubernetes information
+         * 
+         * @return builder
+         * 
+         */
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             $.k8sRaw = k8sRaw;
             return this;
         }
 
+        /**
+         * @param lastUploadedDate Last uploaded date from Kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             $.lastUploadedDate = lastUploadedDate;
             return this;
@@ -170,6 +234,12 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
             return this;
         }
 
+        /**
+         * @param startTime The instance start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

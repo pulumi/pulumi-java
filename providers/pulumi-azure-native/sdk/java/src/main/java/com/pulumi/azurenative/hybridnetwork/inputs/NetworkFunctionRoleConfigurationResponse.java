@@ -31,6 +31,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="customProfile")
     private @Nullable CustomProfileResponse customProfile;
 
+    /**
+     * @return Specifies the custom settings for the virtual machine.
+     * 
+     */
     public Optional<CustomProfileResponse> customProfile() {
         return Optional.ofNullable(this.customProfile);
     }
@@ -42,6 +46,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="networkInterfaces")
     private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return The network interface configurations.
+     * 
+     */
     public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -53,6 +61,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="osProfile")
     private @Nullable OsProfileResponse osProfile;
 
+    /**
+     * @return Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
+     * 
+     */
     public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -64,6 +76,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="roleName")
     private @Nullable String roleName;
 
+    /**
+     * @return The name of the network function role.
+     * 
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -75,6 +91,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="roleType")
     private @Nullable String roleType;
 
+    /**
+     * @return Role type.
+     * 
+     */
     public Optional<String> roleType() {
         return Optional.ofNullable(this.roleType);
     }
@@ -86,6 +106,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="storageProfile")
     private @Nullable StorageProfileResponse storageProfile;
 
+    /**
+     * @return Specifies the storage settings for the virtual machine disks.
+     * 
+     */
     public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
@@ -97,6 +121,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="userDataParameters")
     private @Nullable Object userDataParameters;
 
+    /**
+     * @return The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
+     * 
+     */
     public Optional<Object> userDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }
@@ -108,6 +136,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="userDataTemplate")
     private @Nullable Object userDataTemplate;
 
+    /**
+     * @return The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
+     * 
+     */
     public Optional<Object> userDataTemplate() {
         return Optional.ofNullable(this.userDataTemplate);
     }
@@ -119,6 +151,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
     @Import(name="virtualMachineSize")
     private @Nullable String virtualMachineSize;
 
+    /**
+     * @return The size of the virtual machine.
+     * 
+     */
     public Optional<String> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }
@@ -155,50 +191,110 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
             $ = new NetworkFunctionRoleConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customProfile Specifies the custom settings for the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customProfile(@Nullable CustomProfileResponse customProfile) {
             $.customProfile = customProfile;
             return this;
         }
 
+        /**
+         * @param networkInterfaces The network interface configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces The network interface configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param osProfile Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param roleName The name of the network function role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable String roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleType Role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleType(@Nullable String roleType) {
             $.roleType = roleType;
             return this;
         }
 
+        /**
+         * @param storageProfile Specifies the storage settings for the virtual machine disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param userDataParameters The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataParameters(@Nullable Object userDataParameters) {
             $.userDataParameters = userDataParameters;
             return this;
         }
 
+        /**
+         * @param userDataTemplate The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataTemplate(@Nullable Object userDataTemplate) {
             $.userDataTemplate = userDataTemplate;
             return this;
         }
 
+        /**
+         * @param virtualMachineSize The size of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             $.virtualMachineSize = virtualMachineSize;
             return this;

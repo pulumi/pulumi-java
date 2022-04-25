@@ -25,6 +25,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="subnetResourceId")
     private @Nullable String subnetResourceId;
 
+    /**
+     * @return The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+     * 
+     */
     public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
@@ -36,6 +40,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="subnetname", required=true)
     private String subnetname;
 
+    /**
+     * @return The name of the subnet.
+     * 
+     */
     public String subnetname() {
         return this.subnetname;
     }
@@ -47,6 +55,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="vnetid", required=true)
     private String vnetid;
 
+    /**
+     * @return The virtual network ID. This is typically a GUID. Expect a null GUID by default.
+     * 
+     */
     public String vnetid() {
         return this.vnetid;
     }
@@ -77,16 +89,34 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
             $ = new VirtualNetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetResourceId The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
             $.subnetResourceId = subnetResourceId;
             return this;
         }
 
+        /**
+         * @param subnetname The name of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetname(String subnetname) {
             $.subnetname = subnetname;
             return this;
         }
 
+        /**
+         * @param vnetid The virtual network ID. This is typically a GUID. Expect a null GUID by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetid(String vnetid) {
             $.vnetid = vnetid;
             return this;

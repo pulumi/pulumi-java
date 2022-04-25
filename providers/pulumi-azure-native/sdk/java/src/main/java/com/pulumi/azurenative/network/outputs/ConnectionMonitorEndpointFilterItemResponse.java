@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectionMonitorEndpointFilterItemResponse {
     /**
-     * The address of the filter item.
+     * @return The address of the filter item.
      * 
      */
     private final @Nullable String address;
     /**
-     * The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+     * @return The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
      * 
      */
     private final @Nullable String type;
@@ -31,16 +31,16 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
     }
 
     /**
-     * The address of the filter item.
+     * @return The address of the filter item.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+     * @return The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

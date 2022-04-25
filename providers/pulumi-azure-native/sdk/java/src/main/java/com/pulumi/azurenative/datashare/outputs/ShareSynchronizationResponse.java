@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ShareSynchronizationResponse {
     /**
-     * Email of the user who created the synchronization
+     * @return Email of the user who created the synchronization
      * 
      */
     private final @Nullable String consumerEmail;
     /**
-     * Name of the user who created the synchronization
+     * @return Name of the user who created the synchronization
      * 
      */
     private final @Nullable String consumerName;
     /**
-     * Tenant name of the consumer who created the synchronization
+     * @return Tenant name of the consumer who created the synchronization
      * 
      */
     private final @Nullable String consumerTenantName;
     /**
-     * synchronization duration
+     * @return synchronization duration
      * 
      */
     private final @Nullable Integer durationMs;
     /**
-     * End time of synchronization
+     * @return End time of synchronization
      * 
      */
     private final @Nullable String endTime;
     /**
-     * message of synchronization
+     * @return message of synchronization
      * 
      */
     private final @Nullable String message;
     /**
-     * start time of synchronization
+     * @return start time of synchronization
      * 
      */
     private final @Nullable String startTime;
     /**
-     * Raw Status
+     * @return Raw Status
      * 
      */
     private final @Nullable String status;
     /**
-     * Synchronization id
+     * @return Synchronization id
      * 
      */
     private final @Nullable String synchronizationId;
     /**
-     * Synchronization mode
+     * @return Synchronization mode
      * 
      */
     private final String synchronizationMode;
@@ -88,72 +88,72 @@ public final class ShareSynchronizationResponse {
     }
 
     /**
-     * Email of the user who created the synchronization
+     * @return Email of the user who created the synchronization
      * 
-    */
+     */
     public Optional<String> consumerEmail() {
         return Optional.ofNullable(this.consumerEmail);
     }
     /**
-     * Name of the user who created the synchronization
+     * @return Name of the user who created the synchronization
      * 
-    */
+     */
     public Optional<String> consumerName() {
         return Optional.ofNullable(this.consumerName);
     }
     /**
-     * Tenant name of the consumer who created the synchronization
+     * @return Tenant name of the consumer who created the synchronization
      * 
-    */
+     */
     public Optional<String> consumerTenantName() {
         return Optional.ofNullable(this.consumerTenantName);
     }
     /**
-     * synchronization duration
+     * @return synchronization duration
      * 
-    */
+     */
     public Optional<Integer> durationMs() {
         return Optional.ofNullable(this.durationMs);
     }
     /**
-     * End time of synchronization
+     * @return End time of synchronization
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * message of synchronization
+     * @return message of synchronization
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * start time of synchronization
+     * @return start time of synchronization
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Raw Status
+     * @return Raw Status
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Synchronization id
+     * @return Synchronization id
      * 
-    */
+     */
     public Optional<String> synchronizationId() {
         return Optional.ofNullable(this.synchronizationId);
     }
     /**
-     * Synchronization mode
+     * @return Synchronization mode
      * 
-    */
+     */
     public String synchronizationMode() {
         return this.synchronizationMode;
     }

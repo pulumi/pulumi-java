@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SettingsParameterDescriptionResponse {
     /**
-     * The parameter name of fabric setting.
+     * @return The parameter name of fabric setting.
      * 
      */
     private final String name;
     /**
-     * The parameter value of fabric setting.
+     * @return The parameter value of fabric setting.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class SettingsParameterDescriptionResponse {
     }
 
     /**
-     * The parameter name of fabric setting.
+     * @return The parameter name of fabric setting.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parameter value of fabric setting.
+     * @return The parameter value of fabric setting.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -27,6 +27,10 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
     private @Nullable Output<AuthenticationArgs> authentication;
 
+    /**
+     * @return Encrypted IoT device/IoT edge device connection string.
+     * 
+     */
     public Optional<Output<AuthenticationArgs>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -38,6 +42,10 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceId", required=true)
     private Output<String> deviceId;
 
+    /**
+     * @return ID of the IoT device/edge device.
+     * 
+     */
     public Output<String> deviceId() {
         return this.deviceId;
     }
@@ -49,6 +57,10 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTHostHub", required=true)
     private Output<String> ioTHostHub;
 
+    /**
+     * @return Host name for the IoT hub associated to the device.
+     * 
+     */
     public Output<String> ioTHostHub() {
         return this.ioTHostHub;
     }
@@ -60,6 +72,10 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTHostHubId")
     private @Nullable Output<String> ioTHostHubId;
 
+    /**
+     * @return Id for the IoT hub associated to the device.
+     * 
+     */
     public Optional<Output<String>> ioTHostHubId() {
         return Optional.ofNullable(this.ioTHostHubId);
     }
@@ -91,38 +107,86 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IoTDeviceInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Encrypted IoT device/IoT edge device connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Output<AuthenticationArgs> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Encrypted IoT device/IoT edge device connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(AuthenticationArgs authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param deviceId ID of the IoT device/edge device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param deviceId ID of the IoT device/edge device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(String deviceId) {
             return deviceId(Output.of(deviceId));
         }
 
+        /**
+         * @param ioTHostHub Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHostHub(Output<String> ioTHostHub) {
             $.ioTHostHub = ioTHostHub;
             return this;
         }
 
+        /**
+         * @param ioTHostHub Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHostHub(String ioTHostHub) {
             return ioTHostHub(Output.of(ioTHostHub));
         }
 
+        /**
+         * @param ioTHostHubId Id for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHostHubId(@Nullable Output<String> ioTHostHubId) {
             $.ioTHostHubId = ioTHostHubId;
             return this;
         }
 
+        /**
+         * @param ioTHostHubId Id for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHostHubId(String ioTHostHubId) {
             return ioTHostHubId(Output.of(ioTHostHubId));
         }

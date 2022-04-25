@@ -26,6 +26,10 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accessType", required=true)
     private Output<Either<String,ShareAccessType>> accessType;
 
+    /**
+     * @return Type of access to be allowed for the user.
+     * 
+     */
     public Output<Either<String,ShareAccessType>> accessType() {
         return this.accessType;
     }
@@ -37,6 +41,10 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return User ID (already existing in the device).
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -66,28 +74,64 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
             $ = new UserAccessRightArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType Type of access to be allowed for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(Output<Either<String,ShareAccessType>> accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param accessType Type of access to be allowed for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(Either<String,ShareAccessType> accessType) {
             return accessType(Output.of(accessType));
         }
 
+        /**
+         * @param accessType Type of access to be allowed for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             return accessType(Either.ofLeft(accessType));
         }
 
+        /**
+         * @param accessType Type of access to be allowed for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(ShareAccessType accessType) {
             return accessType(Either.ofRight(accessType));
         }
 
+        /**
+         * @param userId User ID (already existing in the device).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId User ID (already existing in the device).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

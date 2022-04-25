@@ -26,6 +26,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
     @Import(name="blob")
     private @Nullable Output<EncryptionServiceArgs> blob;
 
+    /**
+     * @return The encryption function of the blob storage service.
+     * 
+     */
     public Optional<Output<EncryptionServiceArgs>> blob() {
         return Optional.ofNullable(this.blob);
     }
@@ -37,6 +41,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
     @Import(name="file")
     private @Nullable Output<EncryptionServiceArgs> file;
 
+    /**
+     * @return The encryption function of the file storage service.
+     * 
+     */
     public Optional<Output<EncryptionServiceArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -48,6 +56,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
     @Import(name="queue")
     private @Nullable Output<EncryptionServiceArgs> queue;
 
+    /**
+     * @return The encryption function of the queue storage service.
+     * 
+     */
     public Optional<Output<EncryptionServiceArgs>> queue() {
         return Optional.ofNullable(this.queue);
     }
@@ -59,6 +71,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
     @Import(name="table")
     private @Nullable Output<EncryptionServiceArgs> table;
 
+    /**
+     * @return The encryption function of the table storage service.
+     * 
+     */
     public Optional<Output<EncryptionServiceArgs>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -90,38 +106,86 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
             $ = new EncryptionServicesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blob The encryption function of the blob storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blob(@Nullable Output<EncryptionServiceArgs> blob) {
             $.blob = blob;
             return this;
         }
 
+        /**
+         * @param blob The encryption function of the blob storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blob(EncryptionServiceArgs blob) {
             return blob(Output.of(blob));
         }
 
+        /**
+         * @param file The encryption function of the file storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<EncryptionServiceArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file The encryption function of the file storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(EncryptionServiceArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param queue The encryption function of the queue storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(@Nullable Output<EncryptionServiceArgs> queue) {
             $.queue = queue;
             return this;
         }
 
+        /**
+         * @param queue The encryption function of the queue storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(EncryptionServiceArgs queue) {
             return queue(Output.of(queue));
         }
 
+        /**
+         * @param table The encryption function of the table storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<EncryptionServiceArgs> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table The encryption function of the table storage service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(EncryptionServiceArgs table) {
             return table(Output.of(table));
         }

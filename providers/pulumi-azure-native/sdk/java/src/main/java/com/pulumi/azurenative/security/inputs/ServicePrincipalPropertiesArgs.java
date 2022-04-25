@@ -26,6 +26,10 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return Application ID of service principal.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -37,6 +41,10 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -66,20 +74,44 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
             $ = new ServicePrincipalPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId Application ID of service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId Application ID of service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param secret A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

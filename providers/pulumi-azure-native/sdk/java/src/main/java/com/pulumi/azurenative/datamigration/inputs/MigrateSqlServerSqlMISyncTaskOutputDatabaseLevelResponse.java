@@ -24,6 +24,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="activeBackupSets", required=true)
     private List<BackupSetInfoResponse> activeBackupSets;
 
+    /**
+     * @return Backup sets that are currently active (Either being uploaded or getting restored)
+     * 
+     */
     public List<BackupSetInfoResponse> activeBackupSets() {
         return this.activeBackupSets;
     }
@@ -35,6 +39,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return Name of container created in the Azure Storage account where backups are copied to
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -46,6 +54,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Database migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -57,6 +69,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="errorPrefix", required=true)
     private String errorPrefix;
 
+    /**
+     * @return prefix string to use for querying errors for this database
+     * 
+     */
     public String errorPrefix() {
         return this.errorPrefix;
     }
@@ -68,6 +84,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Migration exceptions and warnings
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -79,6 +99,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="fullBackupSetInfo", required=true)
     private BackupSetInfoResponse fullBackupSetInfo;
 
+    /**
+     * @return Details of full backup set
+     * 
+     */
     public BackupSetInfoResponse fullBackupSetInfo() {
         return this.fullBackupSetInfo;
     }
@@ -90,6 +114,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -101,6 +129,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="isFullBackupRestored", required=true)
     private Boolean isFullBackupRestored;
 
+    /**
+     * @return Whether full backup has been applied to the target database or not
+     * 
+     */
     public Boolean isFullBackupRestored() {
         return this.isFullBackupRestored;
     }
@@ -112,6 +144,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="lastRestoredBackupSetInfo", required=true)
     private BackupSetInfoResponse lastRestoredBackupSetInfo;
 
+    /**
+     * @return Last applied backup set information
+     * 
+     */
     public BackupSetInfoResponse lastRestoredBackupSetInfo() {
         return this.lastRestoredBackupSetInfo;
     }
@@ -123,6 +159,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="migrationState", required=true)
     private String migrationState;
 
+    /**
+     * @return Current state of database
+     * 
+     */
     public String migrationState() {
         return this.migrationState;
     }
@@ -135,6 +175,11 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -146,6 +191,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="sourceDatabaseName", required=true)
     private String sourceDatabaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
@@ -157,6 +206,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Database migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -197,74 +250,165 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
             $ = new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeBackupSets Backup sets that are currently active (Either being uploaded or getting restored)
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeBackupSets(List<BackupSetInfoResponse> activeBackupSets) {
             $.activeBackupSets = activeBackupSets;
             return this;
         }
 
+        /**
+         * @param activeBackupSets Backup sets that are currently active (Either being uploaded or getting restored)
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeBackupSets(BackupSetInfoResponse... activeBackupSets) {
             return activeBackupSets(List.of(activeBackupSets));
         }
 
+        /**
+         * @param containerName Name of container created in the Azure Storage account where backups are copied to
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param endedOn Database migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param errorPrefix prefix string to use for querying errors for this database
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorPrefix(String errorPrefix) {
             $.errorPrefix = errorPrefix;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param fullBackupSetInfo Details of full backup set
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupSetInfo(BackupSetInfoResponse fullBackupSetInfo) {
             $.fullBackupSetInfo = fullBackupSetInfo;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isFullBackupRestored Whether full backup has been applied to the target database or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder isFullBackupRestored(Boolean isFullBackupRestored) {
             $.isFullBackupRestored = isFullBackupRestored;
             return this;
         }
 
+        /**
+         * @param lastRestoredBackupSetInfo Last applied backup set information
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRestoredBackupSetInfo(BackupSetInfoResponse lastRestoredBackupSetInfo) {
             $.lastRestoredBackupSetInfo = lastRestoredBackupSetInfo;
             return this;
         }
 
+        /**
+         * @param migrationState Current state of database
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationState(String migrationState) {
             $.migrationState = migrationState;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;DatabaseLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sourceDatabaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
 
+        /**
+         * @param startedOn Database migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;

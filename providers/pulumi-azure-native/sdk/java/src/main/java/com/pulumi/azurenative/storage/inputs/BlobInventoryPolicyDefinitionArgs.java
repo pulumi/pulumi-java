@@ -24,6 +24,10 @@ public final class BlobInventoryPolicyDefinitionArgs extends com.pulumi.resource
     @Import(name="filters", required=true)
     private Output<BlobInventoryPolicyFilterArgs> filters;
 
+    /**
+     * @return An object that defines the filter set.
+     * 
+     */
     public Output<BlobInventoryPolicyFilterArgs> filters() {
         return this.filters;
     }
@@ -52,11 +56,23 @@ public final class BlobInventoryPolicyDefinitionArgs extends com.pulumi.resource
             $ = new BlobInventoryPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(Output<BlobInventoryPolicyFilterArgs> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(BlobInventoryPolicyFilterArgs filters) {
             return filters(Output.of(filters));
         }

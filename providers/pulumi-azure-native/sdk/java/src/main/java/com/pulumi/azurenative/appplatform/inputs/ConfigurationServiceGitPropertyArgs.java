@@ -27,6 +27,10 @@ public final class ConfigurationServiceGitPropertyArgs extends com.pulumi.resour
     @Import(name="repositories")
     private @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
 
+    /**
+     * @return Repositories of Application Configuration Service git property.
+     * 
+     */
     public Optional<Output<List<ConfigurationServiceGitRepositoryArgs>>> repositories() {
         return Optional.ofNullable(this.repositories);
     }
@@ -55,15 +59,33 @@ public final class ConfigurationServiceGitPropertyArgs extends com.pulumi.resour
             $ = new ConfigurationServiceGitPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repositories Repositories of Application Configuration Service git property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(@Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories) {
             $.repositories = repositories;
             return this;
         }
 
+        /**
+         * @param repositories Repositories of Application Configuration Service git property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(List<ConfigurationServiceGitRepositoryArgs> repositories) {
             return repositories(Output.of(repositories));
         }
 
+        /**
+         * @param repositories Repositories of Application Configuration Service git property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(ConfigurationServiceGitRepositoryArgs... repositories) {
             return repositories(List.of(repositories));
         }

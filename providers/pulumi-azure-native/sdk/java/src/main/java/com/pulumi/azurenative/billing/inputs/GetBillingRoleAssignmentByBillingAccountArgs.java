@@ -19,6 +19,10 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
     @Import(name="billingAccountName", required=true)
     private String billingAccountName;
 
+    /**
+     * @return The ID that uniquely identifies a billing account.
+     * 
+     */
     public String billingAccountName() {
         return this.billingAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
     @Import(name="billingRoleAssignmentName", required=true)
     private String billingRoleAssignmentName;
 
+    /**
+     * @return The ID that uniquely identifies a role assignment.
+     * 
+     */
     public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
@@ -59,11 +67,23 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
             $ = new GetBillingRoleAssignmentByBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountName(String billingAccountName) {
             $.billingAccountName = billingAccountName;
             return this;
         }
 
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;

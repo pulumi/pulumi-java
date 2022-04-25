@@ -25,6 +25,10 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyVaultId")
     private @Nullable String keyVaultId;
 
+    /**
+     * @return The ID of the user&#39;s Key vault.
+     * 
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -36,6 +40,10 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyVaultUri")
     private @Nullable String keyVaultUri;
 
+    /**
+     * @return The URI of the user&#39;s Key vault.
+     * 
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -65,11 +73,23 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
             $ = new UserSecretStoreResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultId The ID of the user&#39;s Key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable String keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The URI of the user&#39;s Key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;

@@ -26,6 +26,10 @@ public final class HttpSettingsRoutesArgs extends com.pulumi.resources.ResourceA
     @Import(name="apiPrefix")
     private @Nullable Output<String> apiPrefix;
 
+    /**
+     * @return The prefix that should precede all the authentication/authorization paths.
+     * 
+     */
     public Optional<Output<String>> apiPrefix() {
         return Optional.ofNullable(this.apiPrefix);
     }
@@ -54,11 +58,23 @@ public final class HttpSettingsRoutesArgs extends com.pulumi.resources.ResourceA
             $ = new HttpSettingsRoutesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiPrefix The prefix that should precede all the authentication/authorization paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPrefix(@Nullable Output<String> apiPrefix) {
             $.apiPrefix = apiPrefix;
             return this;
         }
 
+        /**
+         * @param apiPrefix The prefix that should precede all the authentication/authorization paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPrefix(String apiPrefix) {
             return apiPrefix(Output.of(apiPrefix));
         }

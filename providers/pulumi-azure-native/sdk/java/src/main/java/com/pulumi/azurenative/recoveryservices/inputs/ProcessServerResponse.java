@@ -31,6 +31,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentExpiryDate")
     private @Nullable String agentExpiryDate;
 
+    /**
+     * @return Agent expiry date.
+     * 
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
@@ -42,6 +46,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The version of the scout component on the server.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -53,6 +61,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="agentVersionDetails")
     private @Nullable VersionDetailsResponse agentVersionDetails;
 
+    /**
+     * @return The agent version details.
+     * 
+     */
     public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
@@ -64,6 +76,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="availableMemoryInBytes")
     private @Nullable Double availableMemoryInBytes;
 
+    /**
+     * @return The available memory.
+     * 
+     */
     public Optional<Double> availableMemoryInBytes() {
         return Optional.ofNullable(this.availableMemoryInBytes);
     }
@@ -75,6 +91,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="availableSpaceInBytes")
     private @Nullable Double availableSpaceInBytes;
 
+    /**
+     * @return The available space.
+     * 
+     */
     public Optional<Double> availableSpaceInBytes() {
         return Optional.ofNullable(this.availableSpaceInBytes);
     }
@@ -86,6 +106,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cpuLoad")
     private @Nullable String cpuLoad;
 
+    /**
+     * @return The percentage of the CPU load.
+     * 
+     */
     public Optional<String> cpuLoad() {
         return Optional.ofNullable(this.cpuLoad);
     }
@@ -97,6 +121,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cpuLoadStatus")
     private @Nullable String cpuLoadStatus;
 
+    /**
+     * @return The CPU load status.
+     * 
+     */
     public Optional<String> cpuLoadStatus() {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
@@ -108,6 +136,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return The Process Server&#39;s friendly name.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -119,6 +151,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return The health of Process Server.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -130,6 +166,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="healthErrors")
     private @Nullable List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return Health errors.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> healthErrors() {
         return Optional.ofNullable(this.healthErrors);
     }
@@ -141,6 +181,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hostId")
     private @Nullable String hostId;
 
+    /**
+     * @return The agent generated Id.
+     * 
+     */
     public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
@@ -152,6 +196,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The Process Server Id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -163,6 +211,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The IP address of the server.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -174,6 +226,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lastHeartbeat")
     private @Nullable String lastHeartbeat;
 
+    /**
+     * @return The last heartbeat received from the server.
+     * 
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
@@ -185,6 +241,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="machineCount")
     private @Nullable String machineCount;
 
+    /**
+     * @return The servers configured with this PS.
+     * 
+     */
     public Optional<String> machineCount() {
         return Optional.ofNullable(this.machineCount);
     }
@@ -196,6 +256,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="marsCommunicationStatus", required=true)
     private String marsCommunicationStatus;
 
+    /**
+     * @return The MARS communication status.
+     * 
+     */
     public String marsCommunicationStatus() {
         return this.marsCommunicationStatus;
     }
@@ -207,6 +271,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="marsRegistrationStatus", required=true)
     private String marsRegistrationStatus;
 
+    /**
+     * @return The MARS registration status.
+     * 
+     */
     public String marsRegistrationStatus() {
         return this.marsRegistrationStatus;
     }
@@ -218,6 +286,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="memoryUsageStatus")
     private @Nullable String memoryUsageStatus;
 
+    /**
+     * @return The memory usage status.
+     * 
+     */
     public Optional<String> memoryUsageStatus() {
         return Optional.ofNullable(this.memoryUsageStatus);
     }
@@ -229,6 +301,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mobilityServiceUpdates")
     private @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
 
+    /**
+     * @return The list of the mobility service updates available on the Process Server.
+     * 
+     */
     public Optional<List<MobilityServiceUpdateResponse>> mobilityServiceUpdates() {
         return Optional.ofNullable(this.mobilityServiceUpdates);
     }
@@ -240,6 +316,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The OS type of the server.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -251,6 +331,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="osVersion")
     private @Nullable String osVersion;
 
+    /**
+     * @return OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
+     * 
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -262,6 +346,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="psServiceStatus")
     private @Nullable String psServiceStatus;
 
+    /**
+     * @return The PS service status.
+     * 
+     */
     public Optional<String> psServiceStatus() {
         return Optional.ofNullable(this.psServiceStatus);
     }
@@ -273,6 +361,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="psStatsRefreshTime", required=true)
     private String psStatsRefreshTime;
 
+    /**
+     * @return The process server stats refresh time.
+     * 
+     */
     public String psStatsRefreshTime() {
         return this.psStatsRefreshTime;
     }
@@ -284,6 +376,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="replicationPairCount")
     private @Nullable String replicationPairCount;
 
+    /**
+     * @return The number of replication pairs configured in this PS.
+     * 
+     */
     public Optional<String> replicationPairCount() {
         return Optional.ofNullable(this.replicationPairCount);
     }
@@ -295,6 +391,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="spaceUsageStatus")
     private @Nullable String spaceUsageStatus;
 
+    /**
+     * @return The space usage status.
+     * 
+     */
     public Optional<String> spaceUsageStatus() {
         return Optional.ofNullable(this.spaceUsageStatus);
     }
@@ -306,6 +406,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sslCertExpiryDate")
     private @Nullable String sslCertExpiryDate;
 
+    /**
+     * @return The PS SSL cert expiry date.
+     * 
+     */
     public Optional<String> sslCertExpiryDate() {
         return Optional.ofNullable(this.sslCertExpiryDate);
     }
@@ -317,6 +421,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sslCertExpiryRemainingDays")
     private @Nullable Integer sslCertExpiryRemainingDays;
 
+    /**
+     * @return CS SSL cert expiry date.
+     * 
+     */
     public Optional<Integer> sslCertExpiryRemainingDays() {
         return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
@@ -328,6 +436,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemLoad")
     private @Nullable String systemLoad;
 
+    /**
+     * @return The percentage of the system load.
+     * 
+     */
     public Optional<String> systemLoad() {
         return Optional.ofNullable(this.systemLoad);
     }
@@ -339,6 +451,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemLoadStatus")
     private @Nullable String systemLoadStatus;
 
+    /**
+     * @return The system load status.
+     * 
+     */
     public Optional<String> systemLoadStatus() {
         return Optional.ofNullable(this.systemLoadStatus);
     }
@@ -350,6 +466,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="throughputInBytes", required=true)
     private Double throughputInBytes;
 
+    /**
+     * @return The throughput in bytes.
+     * 
+     */
     public Double throughputInBytes() {
         return this.throughputInBytes;
     }
@@ -361,6 +481,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="throughputInMBps", required=true)
     private Double throughputInMBps;
 
+    /**
+     * @return The throughput in MBps.
+     * 
+     */
     public Double throughputInMBps() {
         return this.throughputInMBps;
     }
@@ -372,6 +496,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="throughputStatus", required=true)
     private String throughputStatus;
 
+    /**
+     * @return The throughput status.
+     * 
+     */
     public String throughputStatus() {
         return this.throughputStatus;
     }
@@ -383,6 +511,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="throughputUploadPendingDataInBytes", required=true)
     private Double throughputUploadPendingDataInBytes;
 
+    /**
+     * @return The uploading pending data in bytes.
+     * 
+     */
     public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
@@ -394,6 +526,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="totalMemoryInBytes")
     private @Nullable Double totalMemoryInBytes;
 
+    /**
+     * @return The total memory.
+     * 
+     */
     public Optional<Double> totalMemoryInBytes() {
         return Optional.ofNullable(this.totalMemoryInBytes);
     }
@@ -405,6 +541,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="totalSpaceInBytes")
     private @Nullable Double totalSpaceInBytes;
 
+    /**
+     * @return The total space.
+     * 
+     */
     public Optional<Double> totalSpaceInBytes() {
         return Optional.ofNullable(this.totalSpaceInBytes);
     }
@@ -416,6 +556,10 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="versionStatus")
     private @Nullable String versionStatus;
 
+    /**
+     * @return Version status
+     * 
+     */
     public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
@@ -479,189 +623,417 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
             $ = new ProcessServerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentExpiryDate Agent expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             $.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
+        /**
+         * @param agentVersion The version of the scout component on the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersionDetails The agent version details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             $.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
+        /**
+         * @param availableMemoryInBytes The available memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             $.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param availableSpaceInBytes The available space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             $.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param cpuLoad The percentage of the CPU load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuLoad(@Nullable String cpuLoad) {
             $.cpuLoad = cpuLoad;
             return this;
         }
 
+        /**
+         * @param cpuLoadStatus The CPU load status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             $.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
 
+        /**
+         * @param friendlyName The Process Server&#39;s friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param health The health of Process Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrors Health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors Health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param hostId The agent generated Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostId(@Nullable String hostId) {
             $.hostId = hostId;
             return this;
         }
 
+        /**
+         * @param id The Process Server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param lastHeartbeat The last heartbeat received from the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             $.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
+        /**
+         * @param machineCount The servers configured with this PS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineCount(@Nullable String machineCount) {
             $.machineCount = machineCount;
             return this;
         }
 
+        /**
+         * @param marsCommunicationStatus The MARS communication status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marsCommunicationStatus(String marsCommunicationStatus) {
             $.marsCommunicationStatus = marsCommunicationStatus;
             return this;
         }
 
+        /**
+         * @param marsRegistrationStatus The MARS registration status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marsRegistrationStatus(String marsRegistrationStatus) {
             $.marsRegistrationStatus = marsRegistrationStatus;
             return this;
         }
 
+        /**
+         * @param memoryUsageStatus The memory usage status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             $.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
 
+        /**
+         * @param mobilityServiceUpdates The list of the mobility service updates available on the Process Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobilityServiceUpdates(@Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates) {
             $.mobilityServiceUpdates = mobilityServiceUpdates;
             return this;
         }
 
+        /**
+         * @param mobilityServiceUpdates The list of the mobility service updates available on the Process Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobilityServiceUpdates(MobilityServiceUpdateResponse... mobilityServiceUpdates) {
             return mobilityServiceUpdates(List.of(mobilityServiceUpdates));
         }
 
+        /**
+         * @param osType The OS type of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osVersion OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(@Nullable String osVersion) {
             $.osVersion = osVersion;
             return this;
         }
 
+        /**
+         * @param psServiceStatus The PS service status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder psServiceStatus(@Nullable String psServiceStatus) {
             $.psServiceStatus = psServiceStatus;
             return this;
         }
 
+        /**
+         * @param psStatsRefreshTime The process server stats refresh time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder psStatsRefreshTime(String psStatsRefreshTime) {
             $.psStatsRefreshTime = psStatsRefreshTime;
             return this;
         }
 
+        /**
+         * @param replicationPairCount The number of replication pairs configured in this PS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationPairCount(@Nullable String replicationPairCount) {
             $.replicationPairCount = replicationPairCount;
             return this;
         }
 
+        /**
+         * @param spaceUsageStatus The space usage status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             $.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
 
+        /**
+         * @param sslCertExpiryDate The PS SSL cert expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             $.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
 
+        /**
+         * @param sslCertExpiryRemainingDays CS SSL cert expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             $.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
 
+        /**
+         * @param systemLoad The percentage of the system load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemLoad(@Nullable String systemLoad) {
             $.systemLoad = systemLoad;
             return this;
         }
 
+        /**
+         * @param systemLoadStatus The system load status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             $.systemLoadStatus = systemLoadStatus;
             return this;
         }
 
+        /**
+         * @param throughputInBytes The throughput in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputInBytes(Double throughputInBytes) {
             $.throughputInBytes = throughputInBytes;
             return this;
         }
 
+        /**
+         * @param throughputInMBps The throughput in MBps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputInMBps(Double throughputInMBps) {
             $.throughputInMBps = throughputInMBps;
             return this;
         }
 
+        /**
+         * @param throughputStatus The throughput status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputStatus(String throughputStatus) {
             $.throughputStatus = throughputStatus;
             return this;
         }
 
+        /**
+         * @param throughputUploadPendingDataInBytes The uploading pending data in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
             $.throughputUploadPendingDataInBytes = throughputUploadPendingDataInBytes;
             return this;
         }
 
+        /**
+         * @param totalMemoryInBytes The total memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             $.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param totalSpaceInBytes The total space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             $.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param versionStatus Version status
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionStatus(@Nullable String versionStatus) {
             $.versionStatus = versionStatus;
             return this;

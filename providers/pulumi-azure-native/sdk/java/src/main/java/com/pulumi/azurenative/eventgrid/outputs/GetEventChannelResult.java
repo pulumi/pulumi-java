@@ -16,59 +16,59 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventChannelResult {
     /**
-     * Represents the destination of an event channel.
+     * @return Represents the destination of an event channel.
      * 
      */
     private final @Nullable EventChannelDestinationResponse destination;
     /**
-     * Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+     * @return Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
      * the event channel and corresponding partner topic are deleted.
      * 
      */
     private final @Nullable String expirationTimeIfNotActivatedUtc;
     /**
-     * Information about the filter for the event channel.
+     * @return Information about the filter for the event channel.
      * 
      */
     private final @Nullable EventChannelFilterResponse filter;
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+     * @return Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
      * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
      * 
      */
     private final @Nullable String partnerTopicFriendlyDescription;
     /**
-     * The readiness state of the corresponding partner topic.
+     * @return The readiness state of the corresponding partner topic.
      * 
      */
     private final String partnerTopicReadinessState;
     /**
-     * Provisioning state of the event channel.
+     * @return Provisioning state of the event channel.
      * 
      */
     private final String provisioningState;
     /**
-     * Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
+     * @return Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     private final @Nullable EventChannelSourceResponse source;
     /**
-     * The system metadata relating to Event Channel resource.
+     * @return The system metadata relating to Event Channel resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -100,81 +100,81 @@ public final class GetEventChannelResult {
     }
 
     /**
-     * Represents the destination of an event channel.
+     * @return Represents the destination of an event channel.
      * 
-    */
+     */
     public Optional<EventChannelDestinationResponse> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
-     * Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+     * @return Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
      * the event channel and corresponding partner topic are deleted.
      * 
-    */
+     */
     public Optional<String> expirationTimeIfNotActivatedUtc() {
         return Optional.ofNullable(this.expirationTimeIfNotActivatedUtc);
     }
     /**
-     * Information about the filter for the event channel.
+     * @return Information about the filter for the event channel.
      * 
-    */
+     */
     public Optional<EventChannelFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+     * @return Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
      * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
      * 
-    */
+     */
     public Optional<String> partnerTopicFriendlyDescription() {
         return Optional.ofNullable(this.partnerTopicFriendlyDescription);
     }
     /**
-     * The readiness state of the corresponding partner topic.
+     * @return The readiness state of the corresponding partner topic.
      * 
-    */
+     */
     public String partnerTopicReadinessState() {
         return this.partnerTopicReadinessState;
     }
     /**
-     * Provisioning state of the event channel.
+     * @return Provisioning state of the event channel.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
+     * @return Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
-    */
+     */
     public Optional<EventChannelSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The system metadata relating to Event Channel resource.
+     * @return The system metadata relating to Event Channel resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

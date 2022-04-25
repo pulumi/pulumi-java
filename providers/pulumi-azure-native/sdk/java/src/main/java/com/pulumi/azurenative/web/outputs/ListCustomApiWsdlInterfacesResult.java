@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListCustomApiWsdlInterfacesResult {
     /**
-     * Collection of WSDL interfaces
+     * @return Collection of WSDL interfaces
      * 
      */
     private final @Nullable List<WsdlServiceResponse> value;
@@ -23,9 +23,9 @@ public final class ListCustomApiWsdlInterfacesResult {
     }
 
     /**
-     * Collection of WSDL interfaces
+     * @return Collection of WSDL interfaces
      * 
-    */
+     */
     public List<WsdlServiceResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

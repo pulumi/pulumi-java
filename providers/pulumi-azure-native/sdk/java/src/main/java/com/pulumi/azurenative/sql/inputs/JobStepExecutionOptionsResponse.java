@@ -27,6 +27,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="initialRetryIntervalSeconds")
     private @Nullable Integer initialRetryIntervalSeconds;
 
+    /**
+     * @return Initial delay between retries for job step execution.
+     * 
+     */
     public Optional<Integer> initialRetryIntervalSeconds() {
         return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
@@ -38,6 +42,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="maximumRetryIntervalSeconds")
     private @Nullable Integer maximumRetryIntervalSeconds;
 
+    /**
+     * @return The maximum amount of time to wait between retries for job step execution.
+     * 
+     */
     public Optional<Integer> maximumRetryIntervalSeconds() {
         return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
@@ -49,6 +57,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="retryAttempts")
     private @Nullable Integer retryAttempts;
 
+    /**
+     * @return Maximum number of times the job step will be reattempted if the first attempt fails.
+     * 
+     */
     public Optional<Integer> retryAttempts() {
         return Optional.ofNullable(this.retryAttempts);
     }
@@ -60,6 +72,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="retryIntervalBackoffMultiplier")
     private @Nullable Double retryIntervalBackoffMultiplier;
 
+    /**
+     * @return The backoff multiplier for the time between retries.
+     * 
+     */
     public Optional<Double> retryIntervalBackoffMultiplier() {
         return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
@@ -71,6 +87,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="timeoutSeconds")
     private @Nullable Integer timeoutSeconds;
 
+    /**
+     * @return Execution timeout for the job step.
+     * 
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -103,26 +123,56 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
             $ = new JobStepExecutionOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialRetryIntervalSeconds Initial delay between retries for job step execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
             $.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param maximumRetryIntervalSeconds The maximum amount of time to wait between retries for job step execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
             $.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param retryAttempts Maximum number of times the job step will be reattempted if the first attempt fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttempts(@Nullable Integer retryAttempts) {
             $.retryAttempts = retryAttempts;
             return this;
         }
 
+        /**
+         * @param retryIntervalBackoffMultiplier The backoff multiplier for the time between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
             $.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds Execution timeout for the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;

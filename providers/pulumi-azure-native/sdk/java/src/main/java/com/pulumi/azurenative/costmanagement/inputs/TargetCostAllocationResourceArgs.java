@@ -29,6 +29,10 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -40,6 +44,10 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="policyType", required=true)
     private Output<Either<String,CostAllocationPolicyType>> policyType;
 
+    /**
+     * @return Method of cost allocation for the rule
+     * 
+     */
     public Output<Either<String,CostAllocationPolicyType>> policyType() {
         return this.policyType;
     }
@@ -51,6 +59,10 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="resourceType", required=true)
     private Output<Either<String,CostAllocationResourceType>> resourceType;
 
+    /**
+     * @return Type of resources contained in this cost allocation rule
+     * 
+     */
     public Output<Either<String,CostAllocationResourceType>> resourceType() {
         return this.resourceType;
     }
@@ -62,6 +74,10 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="values", required=true)
     private Output<List<CostAllocationProportionArgs>> values;
 
+    /**
+     * @return Target resources for cost allocation. This list cannot contain more than 25 values.
+     * 
+     */
     public Output<List<CostAllocationProportionArgs>> values() {
         return this.values;
     }
@@ -93,58 +109,136 @@ public final class TargetCostAllocationResourceArgs extends com.pulumi.resources
             $ = new TargetCostAllocationResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policyType Method of cost allocation for the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(Output<Either<String,CostAllocationPolicyType>> policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param policyType Method of cost allocation for the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(Either<String,CostAllocationPolicyType> policyType) {
             return policyType(Output.of(policyType));
         }
 
+        /**
+         * @param policyType Method of cost allocation for the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             return policyType(Either.ofLeft(policyType));
         }
 
+        /**
+         * @param policyType Method of cost allocation for the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(CostAllocationPolicyType policyType) {
             return policyType(Either.ofRight(policyType));
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Either.ofLeft(resourceType));
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(CostAllocationResourceType resourceType) {
             return resourceType(Either.ofRight(resourceType));
         }
 
+        /**
+         * @param values Target resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<CostAllocationProportionArgs>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Target resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<CostAllocationProportionArgs> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Target resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(CostAllocationProportionArgs... values) {
             return values(List.of(values));
         }

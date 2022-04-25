@@ -22,6 +22,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the Tag.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +52,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="externalDocsDescription")
     private @Nullable Output<String> externalDocsDescription;
 
+    /**
+     * @return Description of the external resources describing the tag.
+     * 
+     */
     public Optional<Output<String>> externalDocsDescription() {
         return Optional.ofNullable(this.externalDocsDescription);
     }
@@ -55,6 +67,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="externalDocsUrl")
     private @Nullable Output<String> externalDocsUrl;
 
+    /**
+     * @return Absolute URL of external resources describing the tag.
+     * 
+     */
     public Optional<Output<String>> externalDocsUrl() {
         return Optional.ofNullable(this.externalDocsUrl);
     }
@@ -66,6 +82,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -88,6 +112,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tagDescriptionId")
     private @Nullable Output<String> tagDescriptionId;
 
+    /**
+     * @return Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
+     * 
+     */
     public Optional<Output<String>> tagDescriptionId() {
         return Optional.ofNullable(this.tagDescriptionId);
     }
@@ -122,65 +150,149 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
             $ = new ApiTagDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param description Description of the Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param externalDocsDescription Description of the external resources describing the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDocsDescription(@Nullable Output<String> externalDocsDescription) {
             $.externalDocsDescription = externalDocsDescription;
             return this;
         }
 
+        /**
+         * @param externalDocsDescription Description of the external resources describing the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDocsDescription(String externalDocsDescription) {
             return externalDocsDescription(Output.of(externalDocsDescription));
         }
 
+        /**
+         * @param externalDocsUrl Absolute URL of external resources describing the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDocsUrl(@Nullable Output<String> externalDocsUrl) {
             $.externalDocsUrl = externalDocsUrl;
             return this;
         }
 
+        /**
+         * @param externalDocsUrl Absolute URL of external resources describing the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDocsUrl(String externalDocsUrl) {
             return externalDocsUrl(Output.of(externalDocsUrl));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param tagDescriptionId Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagDescriptionId(@Nullable Output<String> tagDescriptionId) {
             $.tagDescriptionId = tagDescriptionId;
             return this;
         }
 
+        /**
+         * @param tagDescriptionId Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagDescriptionId(String tagDescriptionId) {
             return tagDescriptionId(Output.of(tagDescriptionId));
         }

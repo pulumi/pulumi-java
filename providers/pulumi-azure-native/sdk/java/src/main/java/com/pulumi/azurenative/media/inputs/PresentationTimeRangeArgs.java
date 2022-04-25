@@ -27,6 +27,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
     @Import(name="endTimestamp")
     private @Nullable Output<Double> endTimestamp;
 
+    /**
+     * @return The absolute end time boundary.
+     * 
+     */
     public Optional<Output<Double>> endTimestamp() {
         return Optional.ofNullable(this.endTimestamp);
     }
@@ -38,6 +42,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
     @Import(name="forceEndTimestamp")
     private @Nullable Output<Boolean> forceEndTimestamp;
 
+    /**
+     * @return The indicator of forcing existing of end time stamp.
+     * 
+     */
     public Optional<Output<Boolean>> forceEndTimestamp() {
         return Optional.ofNullable(this.forceEndTimestamp);
     }
@@ -49,6 +57,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
     @Import(name="liveBackoffDuration")
     private @Nullable Output<Double> liveBackoffDuration;
 
+    /**
+     * @return The relative to end right edge.
+     * 
+     */
     public Optional<Output<Double>> liveBackoffDuration() {
         return Optional.ofNullable(this.liveBackoffDuration);
     }
@@ -60,6 +72,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
     @Import(name="presentationWindowDuration")
     private @Nullable Output<Double> presentationWindowDuration;
 
+    /**
+     * @return The relative to end sliding window.
+     * 
+     */
     public Optional<Output<Double>> presentationWindowDuration() {
         return Optional.ofNullable(this.presentationWindowDuration);
     }
@@ -71,6 +87,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
     @Import(name="startTimestamp")
     private @Nullable Output<Double> startTimestamp;
 
+    /**
+     * @return The absolute start time boundary.
+     * 
+     */
     public Optional<Output<Double>> startTimestamp() {
         return Optional.ofNullable(this.startTimestamp);
     }
@@ -82,6 +102,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
     @Import(name="timescale")
     private @Nullable Output<Double> timescale;
 
+    /**
+     * @return The time scale of time stamps.
+     * 
+     */
     public Optional<Output<Double>> timescale() {
         return Optional.ofNullable(this.timescale);
     }
@@ -115,56 +139,128 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
             $ = new PresentationTimeRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTimestamp The absolute end time boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimestamp(@Nullable Output<Double> endTimestamp) {
             $.endTimestamp = endTimestamp;
             return this;
         }
 
+        /**
+         * @param endTimestamp The absolute end time boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimestamp(Double endTimestamp) {
             return endTimestamp(Output.of(endTimestamp));
         }
 
+        /**
+         * @param forceEndTimestamp The indicator of forcing existing of end time stamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceEndTimestamp(@Nullable Output<Boolean> forceEndTimestamp) {
             $.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
 
+        /**
+         * @param forceEndTimestamp The indicator of forcing existing of end time stamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceEndTimestamp(Boolean forceEndTimestamp) {
             return forceEndTimestamp(Output.of(forceEndTimestamp));
         }
 
+        /**
+         * @param liveBackoffDuration The relative to end right edge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveBackoffDuration(@Nullable Output<Double> liveBackoffDuration) {
             $.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
 
+        /**
+         * @param liveBackoffDuration The relative to end right edge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveBackoffDuration(Double liveBackoffDuration) {
             return liveBackoffDuration(Output.of(liveBackoffDuration));
         }
 
+        /**
+         * @param presentationWindowDuration The relative to end sliding window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentationWindowDuration(@Nullable Output<Double> presentationWindowDuration) {
             $.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
 
+        /**
+         * @param presentationWindowDuration The relative to end sliding window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentationWindowDuration(Double presentationWindowDuration) {
             return presentationWindowDuration(Output.of(presentationWindowDuration));
         }
 
+        /**
+         * @param startTimestamp The absolute start time boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimestamp(@Nullable Output<Double> startTimestamp) {
             $.startTimestamp = startTimestamp;
             return this;
         }
 
+        /**
+         * @param startTimestamp The absolute start time boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimestamp(Double startTimestamp) {
             return startTimestamp(Output.of(startTimestamp));
         }
 
+        /**
+         * @param timescale The time scale of time stamps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timescale(@Nullable Output<Double> timescale) {
             $.timescale = timescale;
             return this;
         }
 
+        /**
+         * @param timescale The time scale of time stamps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timescale(Double timescale) {
             return timescale(Output.of(timescale));
         }

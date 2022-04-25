@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpAddressResponse {
     /**
-     * The address.
+     * @return The address.
      * 
      */
     private final @Nullable String address;
@@ -23,9 +23,9 @@ public final class IpAddressResponse {
     }
 
     /**
-     * The address.
+     * @return The address.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }

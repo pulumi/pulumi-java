@@ -28,6 +28,10 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="distributionGroupListReceiverValue")
     private @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
 
+    /**
+     * @return The user object receiver value.
+     * 
+     */
     public Optional<Output<DistributionGroupListReceiverValueArgs>> distributionGroupListReceiverValue() {
         return Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
@@ -39,6 +43,10 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="subscriptionReceiverValue")
     private @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
 
+    /**
+     * @return The user object receiver value.
+     * 
+     */
     public Optional<Output<SubscriptionReceiverValueArgs>> subscriptionReceiverValue() {
         return Optional.ofNullable(this.subscriptionReceiverValue);
     }
@@ -50,6 +58,10 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="userObjectReceiverValue")
     private @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue;
 
+    /**
+     * @return The user object receiver value.
+     * 
+     */
     public Optional<Output<UserObjectReceiverValueArgs>> userObjectReceiverValue() {
         return Optional.ofNullable(this.userObjectReceiverValue);
     }
@@ -80,29 +92,65 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
             $ = new NotificationReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionGroupListReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionGroupListReceiverValue(@Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue) {
             $.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
 
+        /**
+         * @param distributionGroupListReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionGroupListReceiverValue(DistributionGroupListReceiverValueArgs distributionGroupListReceiverValue) {
             return distributionGroupListReceiverValue(Output.of(distributionGroupListReceiverValue));
         }
 
+        /**
+         * @param subscriptionReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionReceiverValue(@Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue) {
             $.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
 
+        /**
+         * @param subscriptionReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionReceiverValue(SubscriptionReceiverValueArgs subscriptionReceiverValue) {
             return subscriptionReceiverValue(Output.of(subscriptionReceiverValue));
         }
 
+        /**
+         * @param userObjectReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectReceiverValue(@Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue) {
             $.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }
 
+        /**
+         * @param userObjectReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectReceiverValue(UserObjectReceiverValueArgs userObjectReceiverValue) {
             return userObjectReceiverValue(Output.of(userObjectReceiverValue));
         }

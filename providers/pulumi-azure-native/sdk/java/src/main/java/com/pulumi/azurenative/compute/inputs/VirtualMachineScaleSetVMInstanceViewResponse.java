@@ -34,6 +34,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="assignedHost", required=true)
     private String assignedHost;
 
+    /**
+     * @return Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * 
+     */
     public String assignedHost() {
         return this.assignedHost;
     }
@@ -45,6 +49,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="bootDiagnostics")
     private @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
 
+    /**
+     * @return Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * 
+     */
     public Optional<BootDiagnosticsInstanceViewResponse> bootDiagnostics() {
         return Optional.ofNullable(this.bootDiagnostics);
     }
@@ -56,6 +64,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="disks")
     private @Nullable List<DiskInstanceViewResponse> disks;
 
+    /**
+     * @return The disks information.
+     * 
+     */
     public Optional<List<DiskInstanceViewResponse>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -67,6 +79,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="extensions")
     private @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
 
+    /**
+     * @return The extensions information.
+     * 
+     */
     public Optional<List<VirtualMachineExtensionInstanceViewResponse>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -78,6 +94,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="maintenanceRedeployStatus")
     private @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
 
+    /**
+     * @return The Maintenance Operation status on the virtual machine.
+     * 
+     */
     public Optional<MaintenanceRedeployStatusResponse> maintenanceRedeployStatus() {
         return Optional.ofNullable(this.maintenanceRedeployStatus);
     }
@@ -89,6 +109,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="placementGroupId")
     private @Nullable String placementGroupId;
 
+    /**
+     * @return The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
+     * 
+     */
     public Optional<String> placementGroupId() {
         return Optional.ofNullable(this.placementGroupId);
     }
@@ -100,6 +124,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="platformFaultDomain")
     private @Nullable Integer platformFaultDomain;
 
+    /**
+     * @return The Fault Domain count.
+     * 
+     */
     public Optional<Integer> platformFaultDomain() {
         return Optional.ofNullable(this.platformFaultDomain);
     }
@@ -111,6 +139,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="platformUpdateDomain")
     private @Nullable Integer platformUpdateDomain;
 
+    /**
+     * @return The Update Domain count.
+     * 
+     */
     public Optional<Integer> platformUpdateDomain() {
         return Optional.ofNullable(this.platformUpdateDomain);
     }
@@ -122,6 +154,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="rdpThumbPrint")
     private @Nullable String rdpThumbPrint;
 
+    /**
+     * @return The Remote desktop certificate thumbprint.
+     * 
+     */
     public Optional<String> rdpThumbPrint() {
         return Optional.ofNullable(this.rdpThumbPrint);
     }
@@ -133,6 +169,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -144,6 +184,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="vmAgent")
     private @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
 
+    /**
+     * @return The VM Agent running on the virtual machine.
+     * 
+     */
     public Optional<VirtualMachineAgentInstanceViewResponse> vmAgent() {
         return Optional.ofNullable(this.vmAgent);
     }
@@ -155,6 +199,10 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     @Import(name="vmHealth", required=true)
     private VirtualMachineHealthStatusResponse vmHealth;
 
+    /**
+     * @return The health status for the VM.
+     * 
+     */
     public VirtualMachineHealthStatusResponse vmHealth() {
         return this.vmHealth;
     }
@@ -194,73 +242,163 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
             $ = new VirtualMachineScaleSetVMInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignedHost Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedHost(String assignedHost) {
             $.assignedHost = assignedHost;
             return this;
         }
 
+        /**
+         * @param bootDiagnostics Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiagnostics(@Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics) {
             $.bootDiagnostics = bootDiagnostics;
             return this;
         }
 
+        /**
+         * @param disks The disks information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable List<DiskInstanceViewResponse> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks The disks information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(DiskInstanceViewResponse... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param extensions The extensions information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions The extensions information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(VirtualMachineExtensionInstanceViewResponse... extensions) {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param maintenanceRedeployStatus The Maintenance Operation status on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceRedeployStatus(@Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus) {
             $.maintenanceRedeployStatus = maintenanceRedeployStatus;
             return this;
         }
 
+        /**
+         * @param placementGroupId The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementGroupId(@Nullable String placementGroupId) {
             $.placementGroupId = placementGroupId;
             return this;
         }
 
+        /**
+         * @param platformFaultDomain The Fault Domain count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             $.platformFaultDomain = platformFaultDomain;
             return this;
         }
 
+        /**
+         * @param platformUpdateDomain The Update Domain count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformUpdateDomain(@Nullable Integer platformUpdateDomain) {
             $.platformUpdateDomain = platformUpdateDomain;
             return this;
         }
 
+        /**
+         * @param rdpThumbPrint The Remote desktop certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpThumbPrint(@Nullable String rdpThumbPrint) {
             $.rdpThumbPrint = rdpThumbPrint;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param vmAgent The VM Agent running on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmAgent(@Nullable VirtualMachineAgentInstanceViewResponse vmAgent) {
             $.vmAgent = vmAgent;
             return this;
         }
 
+        /**
+         * @param vmHealth The health status for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmHealth(VirtualMachineHealthStatusResponse vmHealth) {
             $.vmHealth = vmHealth;
             return this;

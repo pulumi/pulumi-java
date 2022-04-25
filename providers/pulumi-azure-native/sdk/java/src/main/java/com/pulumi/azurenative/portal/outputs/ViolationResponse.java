@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ViolationResponse {
     /**
-     * Error message.
+     * @return Error message.
      * 
      */
     private final String errorMessage;
     /**
-     * Id of the item that violates tenant configuration.
+     * @return Id of the item that violates tenant configuration.
      * 
      */
     private final String id;
     /**
-     * Id of the user who owns violated item.
+     * @return Id of the user who owns violated item.
      * 
      */
     private final String userId;
@@ -36,23 +36,23 @@ public final class ViolationResponse {
     }
 
     /**
-     * Error message.
+     * @return Error message.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * Id of the item that violates tenant configuration.
+     * @return Id of the item that violates tenant configuration.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Id of the user who owns violated item.
+     * @return Id of the user who owns violated item.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

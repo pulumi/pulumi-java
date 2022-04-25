@@ -28,6 +28,10 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Localized descriptions.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Localized display name.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -50,6 +58,10 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyPropertyNames", required=true)
     private Output<List<String>> keyPropertyNames;
 
+    /**
+     * @return The properties which make up the unique ID.
+     * 
+     */
     public Output<List<String>> keyPropertyNames() {
         return this.keyPropertyNames;
     }
@@ -61,6 +73,10 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="strongIdName", required=true)
     private Output<String> strongIdName;
 
+    /**
+     * @return The Name identifying the strong ID.
+     * 
+     */
     public Output<String> strongIdName() {
         return this.strongIdName;
     }
@@ -92,42 +108,96 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StrongIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Localized descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Localized descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Localized display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Localized display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param keyPropertyNames The properties which make up the unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPropertyNames(Output<List<String>> keyPropertyNames) {
             $.keyPropertyNames = keyPropertyNames;
             return this;
         }
 
+        /**
+         * @param keyPropertyNames The properties which make up the unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
             return keyPropertyNames(Output.of(keyPropertyNames));
         }
 
+        /**
+         * @param keyPropertyNames The properties which make up the unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPropertyNames(String... keyPropertyNames) {
             return keyPropertyNames(List.of(keyPropertyNames));
         }
 
+        /**
+         * @param strongIdName The Name identifying the strong ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongIdName(Output<String> strongIdName) {
             $.strongIdName = strongIdName;
             return this;
         }
 
+        /**
+         * @param strongIdName The Name identifying the strong ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongIdName(String strongIdName) {
             return strongIdName(Output.of(strongIdName));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClfsTargetResponse {
     /**
-     * Resource ID of storage container.
+     * @return Resource ID of storage container.
      * 
      */
     private final @Nullable String target;
@@ -23,9 +23,9 @@ public final class ClfsTargetResponse {
     }
 
     /**
-     * Resource ID of storage container.
+     * @return Resource ID of storage container.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

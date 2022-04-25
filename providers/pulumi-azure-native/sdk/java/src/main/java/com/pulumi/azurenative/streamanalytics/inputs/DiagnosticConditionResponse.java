@@ -23,6 +23,10 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The opaque diagnostic code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -45,6 +53,10 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
     @Import(name="since", required=true)
     private String since;
 
+    /**
+     * @return The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+     * 
+     */
     public String since() {
         return this.since;
     }
@@ -75,16 +87,34 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
             $ = new DiagnosticConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The opaque diagnostic code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param since The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder since(String since) {
             $.since = since;
             return this;

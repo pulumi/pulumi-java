@@ -28,6 +28,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Flag to enable/disable traffic analytics.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -39,6 +43,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
     @Import(name="trafficAnalyticsInterval")
     private @Nullable Output<Integer> trafficAnalyticsInterval;
 
+    /**
+     * @return The interval in minutes which would decide how frequently TA service should do flow analytics.
+     * 
+     */
     public Optional<Output<Integer>> trafficAnalyticsInterval() {
         return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
@@ -50,6 +58,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
     @Import(name="workspaceId")
     private @Nullable Output<String> workspaceId;
 
+    /**
+     * @return The resource guid of the attached workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -61,6 +73,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
     @Import(name="workspaceRegion")
     private @Nullable Output<String> workspaceRegion;
 
+    /**
+     * @return The location of the attached workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceRegion() {
         return Optional.ofNullable(this.workspaceRegion);
     }
@@ -72,6 +88,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
     @Import(name="workspaceResourceId")
     private @Nullable Output<String> workspaceResourceId;
 
+    /**
+     * @return Resource Id of the attached workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -104,47 +124,107 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
             $ = new TrafficAnalyticsConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag to enable/disable traffic analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Flag to enable/disable traffic analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param trafficAnalyticsInterval The interval in minutes which would decide how frequently TA service should do flow analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficAnalyticsInterval(@Nullable Output<Integer> trafficAnalyticsInterval) {
             $.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
 
+        /**
+         * @param trafficAnalyticsInterval The interval in minutes which would decide how frequently TA service should do flow analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficAnalyticsInterval(Integer trafficAnalyticsInterval) {
             return trafficAnalyticsInterval(Output.of(trafficAnalyticsInterval));
         }
 
+        /**
+         * @param workspaceId The resource guid of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The resource guid of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }
 
+        /**
+         * @param workspaceRegion The location of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceRegion(@Nullable Output<String> workspaceRegion) {
             $.workspaceRegion = workspaceRegion;
             return this;
         }
 
+        /**
+         * @param workspaceRegion The location of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceRegion(String workspaceRegion) {
             return workspaceRegion(Output.of(workspaceRegion));
         }
 
+        /**
+         * @param workspaceResourceId Resource Id of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId Resource Id of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(String workspaceResourceId) {
             return workspaceResourceId(Output.of(workspaceResourceId));
         }

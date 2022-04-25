@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedRulesDefinitionResponse {
     /**
-     * The Exclusions that are applied on the policy.
+     * @return The Exclusions that are applied on the policy.
      * 
      */
     private final @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
     /**
-     * The managed rule sets that are associated with the policy.
+     * @return The managed rule sets that are associated with the policy.
      * 
      */
     private final List<ManagedRuleSetResponse> managedRuleSets;
@@ -32,16 +32,16 @@ public final class ManagedRulesDefinitionResponse {
     }
 
     /**
-     * The Exclusions that are applied on the policy.
+     * @return The Exclusions that are applied on the policy.
      * 
-    */
+     */
     public List<OwaspCrsExclusionEntryResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
-     * The managed rule sets that are associated with the policy.
+     * @return The managed rule sets that are associated with the policy.
      * 
-    */
+     */
     public List<ManagedRuleSetResponse> managedRuleSets() {
         return this.managedRuleSets;
     }

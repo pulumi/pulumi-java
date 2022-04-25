@@ -28,6 +28,10 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="defaultTtlAsIso8601")
     private @Nullable Output<String> defaultTtlAsIso8601;
 
+    /**
+     * @return The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<Output<String>> defaultTtlAsIso8601() {
         return Optional.ofNullable(this.defaultTtlAsIso8601);
     }
@@ -39,6 +43,10 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="feedback")
     private @Nullable Output<FeedbackPropertiesArgs> feedback;
 
+    /**
+     * @return The properties of the feedback queue for cloud-to-device messages.
+     * 
+     */
     public Optional<Output<FeedbackPropertiesArgs>> feedback() {
         return Optional.ofNullable(this.feedback);
     }
@@ -50,6 +58,10 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="maxDeliveryCount")
     private @Nullable Output<Integer> maxDeliveryCount;
 
+    /**
+     * @return The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<Output<Integer>> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
@@ -80,29 +92,65 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
             $ = new CloudToDevicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultTtlAsIso8601 The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtlAsIso8601(@Nullable Output<String> defaultTtlAsIso8601) {
             $.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
 
+        /**
+         * @param defaultTtlAsIso8601 The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtlAsIso8601(String defaultTtlAsIso8601) {
             return defaultTtlAsIso8601(Output.of(defaultTtlAsIso8601));
         }
 
+        /**
+         * @param feedback The properties of the feedback queue for cloud-to-device messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedback(@Nullable Output<FeedbackPropertiesArgs> feedback) {
             $.feedback = feedback;
             return this;
         }
 
+        /**
+         * @param feedback The properties of the feedback queue for cloud-to-device messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedback(FeedbackPropertiesArgs feedback) {
             return feedback(Output.of(feedback));
         }
 
+        /**
+         * @param maxDeliveryCount The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
             $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
+        /**
+         * @param maxDeliveryCount The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(Integer maxDeliveryCount) {
             return maxDeliveryCount(Output.of(maxDeliveryCount));
         }

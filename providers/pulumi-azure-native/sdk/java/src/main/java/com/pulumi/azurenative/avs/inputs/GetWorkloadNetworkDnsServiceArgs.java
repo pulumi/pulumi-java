@@ -19,6 +19,10 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     @Import(name="dnsServiceId", required=true)
     private String dnsServiceId;
 
+    /**
+     * @return NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
+     * 
+     */
     public String dnsServiceId() {
         return this.dnsServiceId;
     }
@@ -30,6 +34,10 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -41,6 +49,10 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
             $ = new GetWorkloadNetworkDnsServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServiceId NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceId(String dnsServiceId) {
             $.dnsServiceId = dnsServiceId;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

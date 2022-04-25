@@ -27,6 +27,10 @@ public final class B2CResourceSKUArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<B2CResourceSKUName> name;
 
+    /**
+     * @return The name of the SKU for the tenant.
+     * 
+     */
     public Optional<Output<B2CResourceSKUName>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class B2CResourceSKUArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tier")
     private @Nullable Output<B2CResourceSKUTier> tier;
 
+    /**
+     * @return The tier of the tenant.
+     * 
+     */
     public Optional<Output<B2CResourceSKUTier>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -67,20 +75,44 @@ public final class B2CResourceSKUArgs extends com.pulumi.resources.ResourceArgs 
             $ = new B2CResourceSKUArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the SKU for the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<B2CResourceSKUName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU for the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(B2CResourceSKUName name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier The tier of the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<B2CResourceSKUTier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier of the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(B2CResourceSKUTier tier) {
             return tier(Output.of(tier));
         }

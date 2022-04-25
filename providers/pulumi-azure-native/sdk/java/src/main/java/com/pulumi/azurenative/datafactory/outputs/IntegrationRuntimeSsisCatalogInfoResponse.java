@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IntegrationRuntimeSsisCatalogInfoResponse {
     /**
-     * The password of the administrator user account of the catalog database.
+     * @return The password of the administrator user account of the catalog database.
      * 
      */
     private final @Nullable SecureStringResponse catalogAdminPassword;
     /**
-     * The administrator user name of catalog database.
+     * @return The administrator user name of catalog database.
      * 
      */
     private final @Nullable String catalogAdminUserName;
     /**
-     * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     * @return The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
      * 
      */
     private final @Nullable String catalogPricingTier;
     /**
-     * The catalog database server URL.
+     * @return The catalog database server URL.
      * 
      */
     private final @Nullable String catalogServerEndpoint;
     /**
-     * The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
+     * @return The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
      * 
      */
     private final @Nullable String dualStandbyPairName;
@@ -53,37 +53,37 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
     }
 
     /**
-     * The password of the administrator user account of the catalog database.
+     * @return The password of the administrator user account of the catalog database.
      * 
-    */
+     */
     public Optional<SecureStringResponse> catalogAdminPassword() {
         return Optional.ofNullable(this.catalogAdminPassword);
     }
     /**
-     * The administrator user name of catalog database.
+     * @return The administrator user name of catalog database.
      * 
-    */
+     */
     public Optional<String> catalogAdminUserName() {
         return Optional.ofNullable(this.catalogAdminUserName);
     }
     /**
-     * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     * @return The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
      * 
-    */
+     */
     public Optional<String> catalogPricingTier() {
         return Optional.ofNullable(this.catalogPricingTier);
     }
     /**
-     * The catalog database server URL.
+     * @return The catalog database server URL.
      * 
-    */
+     */
     public Optional<String> catalogServerEndpoint() {
         return Optional.ofNullable(this.catalogServerEndpoint);
     }
     /**
-     * The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
+     * @return The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
      * 
-    */
+     */
     public Optional<String> dualStandbyPairName() {
         return Optional.ofNullable(this.dualStandbyPairName);
     }

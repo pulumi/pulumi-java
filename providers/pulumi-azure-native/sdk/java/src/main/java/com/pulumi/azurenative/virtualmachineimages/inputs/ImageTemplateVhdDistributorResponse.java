@@ -27,6 +27,10 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
     @Import(name="artifactTags")
     private @Nullable Map<String,String> artifactTags;
 
+    /**
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     public Optional<Map<String,String>> artifactTags() {
         return Optional.ofNullable(this.artifactTags);
     }
@@ -38,6 +42,10 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
     @Import(name="runOutputName", required=true)
     private String runOutputName;
 
+    /**
+     * @return The name to be used for the associated RunOutput.
+     * 
+     */
     public String runOutputName() {
         return this.runOutputName;
     }
@@ -50,6 +58,11 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of distribution.
+     * Expected value is &#39;VHD&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -80,16 +93,35 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
             $ = new ImageTemplateVhdDistributorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             $.artifactTags = artifactTags;
             return this;
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(String runOutputName) {
             $.runOutputName = runOutputName;
             return this;
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;VHD&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

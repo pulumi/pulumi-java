@@ -26,6 +26,11 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return A friendly name for the destination.
+     * This name should be unique across all destinations (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +42,10 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
     @Import(name="workspaceId", required=true)
     private String workspaceId;
 
+    /**
+     * @return The Customer ID of the Log Analytics workspace.
+     * 
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
@@ -48,6 +57,10 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
     @Import(name="workspaceResourceId")
     private @Nullable String workspaceResourceId;
 
+    /**
+     * @return The resource ID of the Log Analytics workspace.
+     * 
+     */
     public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -78,16 +91,35 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
             $ = new LogAnalyticsDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A friendly name for the destination.
+         * This name should be unique across all destinations (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param workspaceId The Customer ID of the Log Analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId The resource ID of the Log Analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

@@ -26,6 +26,10 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionString")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
+    /**
+     * @return Activation key of the MEC.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -37,6 +41,10 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -49,6 +57,11 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Role type.
+     * Expected value is &#39;MEC&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -60,6 +73,10 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +88,10 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -82,6 +103,10 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleStatus", required=true)
     private Output<Either<String,RoleStatus>> roleStatus;
 
+    /**
+     * @return Role status.
+     * 
+     */
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
@@ -115,64 +140,150 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MECRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Activation key of the MEC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<AsymmetricEncryptedSecretArgs> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Activation key of the MEC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(AsymmetricEncryptedSecretArgs connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;MEC&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;MEC&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             $.roleStatus = roleStatus;
             return this;
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             return roleStatus(Output.of(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(String roleStatus) {
             return roleStatus(Either.ofLeft(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(RoleStatus roleStatus) {
             return roleStatus(Either.ofRight(roleStatus));
         }

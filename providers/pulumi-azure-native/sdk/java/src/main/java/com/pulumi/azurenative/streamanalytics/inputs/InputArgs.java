@@ -29,6 +29,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
+    /**
+     * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -69,28 +77,64 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ReferenceInputPropertiesArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(StreamInputPropertiesArgs properties) {
             return properties(Either.ofRight(properties));
         }

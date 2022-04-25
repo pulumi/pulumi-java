@@ -26,6 +26,10 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends com.pulu
     @Import(name="bindDn")
     private @Nullable Output<String> bindDn;
 
+    /**
+     * @return The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Optional<Output<String>> bindDn() {
         return Optional.ofNullable(this.bindDn);
     }
@@ -37,6 +41,10 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends com.pulu
     @Import(name="bindPassword")
     private @Nullable Output<String> bindPassword;
 
+    /**
+     * @return The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Optional<Output<String>> bindPassword() {
         return Optional.ofNullable(this.bindPassword);
     }
@@ -66,20 +74,44 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends com.pulu
             $ = new CacheUsernameDownloadSettingsCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindDn The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindDn(@Nullable Output<String> bindDn) {
             $.bindDn = bindDn;
             return this;
         }
 
+        /**
+         * @param bindDn The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindDn(String bindDn) {
             return bindDn(Output.of(bindDn));
         }
 
+        /**
+         * @param bindPassword The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindPassword(@Nullable Output<String> bindPassword) {
             $.bindPassword = bindPassword;
             return this;
         }
 
+        /**
+         * @param bindPassword The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindPassword(String bindPassword) {
             return bindPassword(Output.of(bindPassword));
         }

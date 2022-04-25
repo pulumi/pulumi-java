@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedServiceIdentityResponse {
     /**
-     * The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
     private final String tenantId;
     /**
-     * The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the virtual machine.
+     * @return The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the virtual machine.
      * 
      */
     private final @Nullable String type;
     /**
-     * The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> userAssignedIdentities;
@@ -47,30 +47,30 @@ public final class ManagedServiceIdentityResponse {
     }
 
     /**
-     * The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the virtual machine.
+     * @return The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the virtual machine.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

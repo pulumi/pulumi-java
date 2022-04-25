@@ -27,6 +27,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
     @Import(name="blockSizeInMB")
     private @Nullable Object blockSizeInMB;
 
+    /**
+     * @return Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> blockSizeInMB() {
         return Optional.ofNullable(this.blockSizeInMB);
     }
@@ -38,6 +42,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
     @Import(name="copyBehavior")
     private @Nullable Object copyBehavior;
 
+    /**
+     * @return The type of copy behavior for copy sink.
+     * 
+     */
     public Optional<Object> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
@@ -49,6 +57,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -60,6 +72,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -72,6 +88,11 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;AzureBlobStorageWriteSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -104,26 +125,57 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
             $ = new AzureBlobStorageWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockSizeInMB Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSizeInMB(@Nullable Object blockSizeInMB) {
             $.blockSizeInMB = blockSizeInMB;
             return this;
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(@Nullable Object copyBehavior) {
             $.copyBehavior = copyBehavior;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;AzureBlobStorageWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

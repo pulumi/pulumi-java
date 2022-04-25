@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricSettingsResponse {
     /**
-     * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+     * @return Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
      * 
      */
     private final @Nullable String category;
     /**
-     * a value indicating whether this category is enabled.
+     * @return a value indicating whether this category is enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * the retention policy for this category.
+     * @return the retention policy for this category.
      * 
      */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
     /**
-     * the timegrain of the metric in ISO8601 format.
+     * @return the timegrain of the metric in ISO8601 format.
      * 
      */
     private final @Nullable String timeGrain;
@@ -47,30 +47,30 @@ public final class MetricSettingsResponse {
     }
 
     /**
-     * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+     * @return Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * a value indicating whether this category is enabled.
+     * @return a value indicating whether this category is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * the retention policy for this category.
+     * @return the retention policy for this category.
      * 
-    */
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * the timegrain of the metric in ISO8601 format.
+     * @return the timegrain of the metric in ISO8601 format.
      * 
-    */
+     */
     public Optional<String> timeGrain() {
         return Optional.ofNullable(this.timeGrain);
     }

@@ -24,6 +24,10 @@ public final class RecurrenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frequency", required=true)
     private String frequency;
 
+    /**
+     * @return the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
+     * 
+     */
     public String frequency() {
         return this.frequency;
     }
@@ -35,6 +39,10 @@ public final class RecurrenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="schedule", required=true)
     private RecurrentScheduleResponse schedule;
 
+    /**
+     * @return the scheduling constraints for when the profile begins.
+     * 
+     */
     public RecurrentScheduleResponse schedule() {
         return this.schedule;
     }
@@ -64,11 +72,23 @@ public final class RecurrenceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param schedule the scheduling constraints for when the profile begins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(RecurrentScheduleResponse schedule) {
             $.schedule = schedule;
             return this;

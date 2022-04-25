@@ -36,6 +36,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="dnsSettings")
     private @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
 
+    /**
+     * @return The DNS settings in network interface.
+     * 
+     */
     public Optional<NetworkInterfaceDnsSettingsResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -47,6 +51,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="dscpConfiguration", required=true)
     private SubResourceResponse dscpConfiguration;
 
+    /**
+     * @return A reference to the dscp configuration to which the network interface is linked.
+     * 
+     */
     public SubResourceResponse dscpConfiguration() {
         return this.dscpConfiguration;
     }
@@ -58,6 +66,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="enableAcceleratedNetworking")
     private @Nullable Boolean enableAcceleratedNetworking;
 
+    /**
+     * @return If the network interface is accelerated networking enabled.
+     * 
+     */
     public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
@@ -69,6 +81,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="enableIPForwarding")
     private @Nullable Boolean enableIPForwarding;
 
+    /**
+     * @return Indicates whether IP forwarding is enabled on this network interface.
+     * 
+     */
     public Optional<Boolean> enableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
@@ -80,6 +96,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -91,6 +111,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="extendedLocation")
     private @Nullable ExtendedLocationResponse extendedLocation;
 
+    /**
+     * @return The extended location of the network interface.
+     * 
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -102,6 +126,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostedWorkloads", required=true)
     private List<String> hostedWorkloads;
 
+    /**
+     * @return A list of references to linked BareMetal resources.
+     * 
+     */
     public List<String> hostedWorkloads() {
         return this.hostedWorkloads;
     }
@@ -113,6 +141,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -124,6 +156,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipConfigurations")
     private @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
+    /**
+     * @return A list of IPConfigurations of the network interface.
+     * 
+     */
     public Optional<List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -135,6 +171,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -146,6 +186,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="macAddress", required=true)
     private String macAddress;
 
+    /**
+     * @return The MAC address of the network interface.
+     * 
+     */
     public String macAddress() {
         return this.macAddress;
     }
@@ -157,6 +201,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="migrationPhase")
     private @Nullable String migrationPhase;
 
+    /**
+     * @return Migration phase of Network Interface resource.
+     * 
+     */
     public Optional<String> migrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
@@ -168,6 +216,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -179,6 +231,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkSecurityGroup")
     private @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
+    /**
+     * @return The reference to the NetworkSecurityGroup resource.
+     * 
+     */
     public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
@@ -190,6 +246,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="nicType")
     private @Nullable String nicType;
 
+    /**
+     * @return Type of Network Interface resource.
+     * 
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -201,6 +261,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="primary", required=true)
     private Boolean primary;
 
+    /**
+     * @return Whether this is a primary network interface on a virtual machine.
+     * 
+     */
     public Boolean primary() {
         return this.primary;
     }
@@ -212,6 +276,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateEndpoint", required=true)
     private PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return A reference to the private endpoint to which the network interface is linked.
+     * 
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
@@ -223,6 +291,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateLinkService")
     private @Nullable PrivateLinkServiceResponse privateLinkService;
 
+    /**
+     * @return Privatelinkservice of the network interface resource.
+     * 
+     */
     public Optional<PrivateLinkServiceResponse> privateLinkService() {
         return Optional.ofNullable(this.privateLinkService);
     }
@@ -234,6 +306,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the network interface resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -245,6 +321,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the network interface resource.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -256,6 +336,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -267,6 +351,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="tapConfigurations", required=true)
     private List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
 
+    /**
+     * @return A list of TapConfigurations of the network interface.
+     * 
+     */
     public List<NetworkInterfaceTapConfigurationResponse> tapConfigurations() {
         return this.tapConfigurations;
     }
@@ -278,6 +366,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -289,6 +381,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="virtualMachine", required=true)
     private SubResourceResponse virtualMachine;
 
+    /**
+     * @return The reference to a virtual machine.
+     * 
+     */
     public SubResourceResponse virtualMachine() {
         return this.virtualMachine;
     }
@@ -340,133 +436,295 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
             $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsSettings The DNS settings in network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable NetworkInterfaceDnsSettingsResponse dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param dscpConfiguration A reference to the dscp configuration to which the network interface is linked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dscpConfiguration(SubResourceResponse dscpConfiguration) {
             $.dscpConfiguration = dscpConfiguration;
             return this;
         }
 
+        /**
+         * @param enableAcceleratedNetworking If the network interface is accelerated networking enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
+        /**
+         * @param enableIPForwarding Indicates whether IP forwarding is enabled on this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             $.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param hostedWorkloads A list of references to linked BareMetal resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedWorkloads(List<String> hostedWorkloads) {
             $.hostedWorkloads = hostedWorkloads;
             return this;
         }
 
+        /**
+         * @param hostedWorkloads A list of references to linked BareMetal resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedWorkloads(String... hostedWorkloads) {
             return hostedWorkloads(List.of(hostedWorkloads));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of IPConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of IPConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param macAddress The MAC address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(String macAddress) {
             $.macAddress = macAddress;
             return this;
         }
 
+        /**
+         * @param migrationPhase Migration phase of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(@Nullable String migrationPhase) {
             $.migrationPhase = migrationPhase;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroup The reference to the NetworkSecurityGroup resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
             $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
+        /**
+         * @param nicType Type of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable String nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param primary Whether this is a primary network interface on a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(Boolean primary) {
             $.primary = primary;
             return this;
         }
 
+        /**
+         * @param privateEndpoint A reference to the private endpoint to which the network interface is linked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkService Privatelinkservice of the network interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkService(@Nullable PrivateLinkServiceResponse privateLinkService) {
             $.privateLinkService = privateLinkService;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the network interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the network interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tapConfigurations A list of TapConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapConfigurations(List<NetworkInterfaceTapConfigurationResponse> tapConfigurations) {
             $.tapConfigurations = tapConfigurations;
             return this;
         }
 
+        /**
+         * @param tapConfigurations A list of TapConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapConfigurations(NetworkInterfaceTapConfigurationResponse... tapConfigurations) {
             return tapConfigurations(List.of(tapConfigurations));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param virtualMachine The reference to a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(SubResourceResponse virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;

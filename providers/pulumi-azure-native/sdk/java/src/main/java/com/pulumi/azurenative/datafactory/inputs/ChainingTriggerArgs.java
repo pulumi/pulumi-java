@@ -31,6 +31,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -42,6 +46,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dependsOn", required=true)
     private Output<List<PipelineReferenceArgs>> dependsOn;
 
+    /**
+     * @return Upstream Pipelines.
+     * 
+     */
     public Output<List<PipelineReferenceArgs>> dependsOn() {
         return this.dependsOn;
     }
@@ -53,6 +61,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="pipeline", required=true)
     private Output<TriggerPipelineReferenceArgs> pipeline;
 
+    /**
+     * @return Pipeline for which runs are created when all upstream pipelines complete successfully.
+     * 
+     */
     public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
     }
@@ -75,6 +91,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="runDimension", required=true)
     private Output<String> runDimension;
 
+    /**
+     * @return Run Dimension property that needs to be emitted by upstream pipelines.
+     * 
+     */
     public Output<String> runDimension() {
         return this.runDimension;
     }
@@ -87,6 +107,11 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;ChainingTrigger&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -120,64 +145,150 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
             $ = new ChainingTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param dependsOn Upstream Pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(Output<List<PipelineReferenceArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Upstream Pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<PipelineReferenceArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Upstream Pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(PipelineReferenceArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param pipeline Pipeline for which runs are created when all upstream pipelines complete successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
             $.pipeline = pipeline;
             return this;
         }
 
+        /**
+         * @param pipeline Pipeline for which runs are created when all upstream pipelines complete successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
             return pipeline(Output.of(pipeline));
         }
 
+        /**
+         * @param runDimension Run Dimension property that needs to be emitted by upstream pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDimension(Output<String> runDimension) {
             $.runDimension = runDimension;
             return this;
         }
 
+        /**
+         * @param runDimension Run Dimension property that needs to be emitted by upstream pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDimension(String runDimension) {
             return runDimension(Output.of(runDimension));
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;ChainingTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;ChainingTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

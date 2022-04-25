@@ -27,6 +27,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filteringTags")
     private @Nullable List<FilteringTagResponse> filteringTags;
 
+    /**
+     * @return List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+     * 
+     */
     public Optional<List<FilteringTagResponse>> filteringTags() {
         return Optional.ofNullable(this.filteringTags);
     }
@@ -38,6 +42,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sendAadLogs")
     private @Nullable Boolean sendAadLogs;
 
+    /**
+     * @return Flag specifying if AAD logs should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Boolean> sendAadLogs() {
         return Optional.ofNullable(this.sendAadLogs);
     }
@@ -49,6 +57,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sendActivityLogs")
     private @Nullable Boolean sendActivityLogs;
 
+    /**
+     * @return Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Boolean> sendActivityLogs() {
         return Optional.ofNullable(this.sendActivityLogs);
     }
@@ -60,6 +72,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sendSubscriptionLogs")
     private @Nullable Boolean sendSubscriptionLogs;
 
+    /**
+     * @return Flag specifying if subscription logs should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Boolean> sendSubscriptionLogs() {
         return Optional.ofNullable(this.sendSubscriptionLogs);
     }
@@ -91,25 +107,55 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LogRulesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
             $.filteringTags = filteringTags;
             return this;
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(FilteringTagResponse... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
 
+        /**
+         * @param sendAadLogs Flag specifying if AAD logs should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
             $.sendAadLogs = sendAadLogs;
             return this;
         }
 
+        /**
+         * @param sendActivityLogs Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
             $.sendActivityLogs = sendActivityLogs;
             return this;
         }
 
+        /**
+         * @param sendSubscriptionLogs Flag specifying if subscription logs should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
             $.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;

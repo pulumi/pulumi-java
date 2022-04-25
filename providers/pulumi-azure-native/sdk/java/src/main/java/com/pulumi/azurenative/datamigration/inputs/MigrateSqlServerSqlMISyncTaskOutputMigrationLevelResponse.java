@@ -21,6 +21,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="databaseCount", required=true)
     private Integer databaseCount;
 
+    /**
+     * @return Count of databases
+     * 
+     */
     public Integer databaseCount() {
         return this.databaseCount;
     }
@@ -32,6 +36,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="databaseErrorCount", required=true)
     private Integer databaseErrorCount;
 
+    /**
+     * @return Number of database level errors
+     * 
+     */
     public Integer databaseErrorCount() {
         return this.databaseErrorCount;
     }
@@ -43,6 +51,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -54,6 +66,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -66,6 +82,11 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;MigrationLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -77,6 +98,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerBrandVersion", required=true)
     private String sourceServerBrandVersion;
 
+    /**
+     * @return Source server brand version
+     * 
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
@@ -88,6 +113,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerName", required=true)
     private String sourceServerName;
 
+    /**
+     * @return Source server name
+     * 
+     */
     public String sourceServerName() {
         return this.sourceServerName;
     }
@@ -99,6 +128,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerVersion", required=true)
     private String sourceServerVersion;
 
+    /**
+     * @return Source server version
+     * 
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
@@ -110,6 +143,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -121,6 +158,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -132,6 +173,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerBrandVersion", required=true)
     private String targetServerBrandVersion;
 
+    /**
+     * @return Target server brand version
+     * 
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
@@ -143,6 +188,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerName", required=true)
     private String targetServerName;
 
+    /**
+     * @return Target server name
+     * 
+     */
     public String targetServerName() {
         return this.targetServerName;
     }
@@ -154,6 +203,10 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerVersion", required=true)
     private String targetServerVersion;
 
+    /**
+     * @return Target server version
+     * 
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
@@ -194,66 +247,145 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
             $ = new MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseCount Count of databases
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseCount(Integer databaseCount) {
             $.databaseCount = databaseCount;
             return this;
         }
 
+        /**
+         * @param databaseErrorCount Number of database level errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseErrorCount(Integer databaseErrorCount) {
             $.databaseErrorCount = databaseErrorCount;
             return this;
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;MigrationLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sourceServerBrandVersion Source server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param sourceServerName Source server name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerName(String sourceServerName) {
             $.sourceServerName = sourceServerName;
             return this;
         }
 
+        /**
+         * @param sourceServerVersion Source server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerVersion(String sourceServerVersion) {
             $.sourceServerVersion = sourceServerVersion;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param state Current state of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param targetServerBrandVersion Target server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param targetServerName Target server name
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerName(String targetServerName) {
             $.targetServerName = targetServerName;
             return this;
         }
 
+        /**
+         * @param targetServerVersion Target server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerVersion(String targetServerVersion) {
             $.targetServerVersion = targetServerVersion;
             return this;

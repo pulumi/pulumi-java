@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata {
     /**
-     * expiration date of service principal secret
+     * @return expiration date of service principal secret
      * 
      */
     private final @Nullable String expiryDate;
     /**
-     * name of secret resource in parameter store
+     * @return name of secret resource in parameter store
      * 
      */
     private final @Nullable String parameterNameInStore;
     /**
-     * region of parameter store where secret is kept
+     * @return region of parameter store where secret is kept
      * 
      */
     private final @Nullable String parameterStoreRegion;
@@ -38,23 +38,23 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     }
 
     /**
-     * expiration date of service principal secret
+     * @return expiration date of service principal secret
      * 
-    */
+     */
     public Optional<String> expiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
-     * name of secret resource in parameter store
+     * @return name of secret resource in parameter store
      * 
-    */
+     */
     public Optional<String> parameterNameInStore() {
         return Optional.ofNullable(this.parameterNameInStore);
     }
     /**
-     * region of parameter store where secret is kept
+     * @return region of parameter store where secret is kept
      * 
-    */
+     */
     public Optional<String> parameterStoreRegion() {
         return Optional.ofNullable(this.parameterStoreRegion);
     }

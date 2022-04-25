@@ -27,6 +27,10 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A unique name for this check.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="request", required=true)
     private RestRequestResponse request;
 
+    /**
+     * @return The request to the health provider.
+     * 
+     */
     public RestRequestResponse request() {
         return this.request;
     }
@@ -49,6 +57,10 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="response")
     private @Nullable RestResponseResponse response;
 
+    /**
+     * @return The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+     * 
+     */
     public Optional<RestResponseResponse> response() {
         return Optional.ofNullable(this.response);
     }
@@ -79,16 +91,34 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
             $ = new RestHealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A unique name for this check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param request The request to the health provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(RestRequestResponse request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param response The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(@Nullable RestResponseResponse response) {
             $.response = response;
             return this;

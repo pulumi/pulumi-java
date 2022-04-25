@@ -24,6 +24,10 @@ public final class AttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication", required=true)
     private Output<Boolean> authentication;
 
+    /**
+     * @return Indicates whether or not authentication is enabled on the ACL.
+     * 
+     */
     public Output<Boolean> authentication() {
         return this.authentication;
     }
@@ -35,6 +39,10 @@ public final class AttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prodModeWriteProtect", required=true)
     private Output<Boolean> prodModeWriteProtect;
 
+    /**
+     * @return Indicates whether or not write protect is enabled on the LUNs.
+     * 
+     */
     public Output<Boolean> prodModeWriteProtect() {
         return this.prodModeWriteProtect;
     }
@@ -64,20 +72,44 @@ public final class AttributesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Indicates whether or not authentication is enabled on the ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Output<Boolean> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Indicates whether or not authentication is enabled on the ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Boolean authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param prodModeWriteProtect Indicates whether or not write protect is enabled on the LUNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prodModeWriteProtect(Output<Boolean> prodModeWriteProtect) {
             $.prodModeWriteProtect = prodModeWriteProtect;
             return this;
         }
 
+        /**
+         * @param prodModeWriteProtect Indicates whether or not write protect is enabled on the LUNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
             return prodModeWriteProtect(Output.of(prodModeWriteProtect));
         }

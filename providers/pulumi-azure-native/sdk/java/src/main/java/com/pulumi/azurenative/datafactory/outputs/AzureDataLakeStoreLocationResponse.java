@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureDataLakeStoreLocationResponse {
     /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object fileName;
     /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
      */
     private final @Nullable Object folderPath;
     /**
-     * Type of dataset storage location.
+     * @return Type of dataset storage location.
      * Expected value is &#39;AzureDataLakeStoreLocation&#39;.
      * 
      */
@@ -40,24 +40,24 @@ public final class AzureDataLakeStoreLocationResponse {
     }
 
     /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
-     * Type of dataset storage location.
+     * @return Type of dataset storage location.
      * Expected value is &#39;AzureDataLakeStoreLocation&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

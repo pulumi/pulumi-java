@@ -27,6 +27,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="authMode")
     private @Nullable String authMode;
 
+    /**
+     * @return Enum to determine endpoint authentication mode.
+     * 
+     */
     public Optional<String> authMode() {
         return Optional.ofNullable(this.authMode);
     }
@@ -38,6 +42,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the inference endpoint.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -60,6 +72,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="scoringUri", required=true)
     private String scoringUri;
 
+    /**
+     * @return Endpoint URI.
+     * 
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
@@ -71,6 +87,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="swaggerUri", required=true)
     private String swaggerUri;
 
+    /**
+     * @return Endpoint Swagger URI.
+     * 
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
@@ -82,6 +102,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="traffic")
     private @Nullable Map<String,Integer> traffic;
 
+    /**
+     * @return Traffic rules on how the traffic will be routed across deployments.
+     * 
+     */
     public Optional<Map<String,Integer>> traffic() {
         return Optional.ofNullable(this.traffic);
     }
@@ -115,31 +139,67 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
             $ = new BatchEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authMode Enum to determine endpoint authentication mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(@Nullable String authMode) {
             $.authMode = authMode;
             return this;
         }
 
+        /**
+         * @param description Description of the inference endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param scoringUri Endpoint URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringUri(String scoringUri) {
             $.scoringUri = scoringUri;
             return this;
         }
 
+        /**
+         * @param swaggerUri Endpoint Swagger URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swaggerUri(String swaggerUri) {
             $.swaggerUri = swaggerUri;
             return this;
         }
 
+        /**
+         * @param traffic Traffic rules on how the traffic will be routed across deployments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
             $.traffic = traffic;
             return this;

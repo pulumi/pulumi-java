@@ -30,6 +30,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="backendAddressPool")
     private @Nullable Output<SubResourceArgs> backendAddressPool;
 
+    /**
+     * @return Backend address pool resource of the application gateway.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
@@ -41,6 +45,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="backendHttpSettings")
     private @Nullable Output<SubResourceArgs> backendHttpSettings;
 
+    /**
+     * @return Backend http settings resource of the application gateway.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> backendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
@@ -52,6 +60,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="httpListener")
     private @Nullable Output<SubResourceArgs> httpListener;
 
+    /**
+     * @return Http listener resource of the application gateway.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> httpListener() {
         return Optional.ofNullable(this.httpListener);
     }
@@ -63,6 +75,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -74,6 +90,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the request routing rule that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +105,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority of the request routing rule.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -96,6 +120,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="redirectConfiguration")
     private @Nullable Output<SubResourceArgs> redirectConfiguration;
 
+    /**
+     * @return Redirect configuration resource of the application gateway.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> redirectConfiguration() {
         return Optional.ofNullable(this.redirectConfiguration);
     }
@@ -107,6 +135,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="rewriteRuleSet")
     private @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
+    /**
+     * @return Rewrite Rule Set resource in Basic rule of the application gateway.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> rewriteRuleSet() {
         return Optional.ofNullable(this.rewriteRuleSet);
     }
@@ -118,6 +150,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="ruleType")
     private @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
 
+    /**
+     * @return Rule type.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewayRequestRoutingRuleType>>> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
@@ -129,6 +165,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
     @Import(name="urlPathMap")
     private @Nullable Output<SubResourceArgs> urlPathMap;
 
+    /**
+     * @return URL path map resource of the application gateway.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> urlPathMap() {
         return Optional.ofNullable(this.urlPathMap);
     }
@@ -166,100 +206,232 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
             $ = new ApplicationGatewayRequestRoutingRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddressPool Backend address pool resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPool(@Nullable Output<SubResourceArgs> backendAddressPool) {
             $.backendAddressPool = backendAddressPool;
             return this;
         }
 
+        /**
+         * @param backendAddressPool Backend address pool resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPool(SubResourceArgs backendAddressPool) {
             return backendAddressPool(Output.of(backendAddressPool));
         }
 
+        /**
+         * @param backendHttpSettings Backend http settings resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHttpSettings(@Nullable Output<SubResourceArgs> backendHttpSettings) {
             $.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
+        /**
+         * @param backendHttpSettings Backend http settings resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHttpSettings(SubResourceArgs backendHttpSettings) {
             return backendHttpSettings(Output.of(backendHttpSettings));
         }
 
+        /**
+         * @param httpListener Http listener resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpListener(@Nullable Output<SubResourceArgs> httpListener) {
             $.httpListener = httpListener;
             return this;
         }
 
+        /**
+         * @param httpListener Http listener resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpListener(SubResourceArgs httpListener) {
             return httpListener(Output.of(httpListener));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the request routing rule that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the request routing rule that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority of the request routing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of the request routing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param redirectConfiguration Redirect configuration resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectConfiguration(@Nullable Output<SubResourceArgs> redirectConfiguration) {
             $.redirectConfiguration = redirectConfiguration;
             return this;
         }
 
+        /**
+         * @param redirectConfiguration Redirect configuration resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectConfiguration(SubResourceArgs redirectConfiguration) {
             return redirectConfiguration(Output.of(redirectConfiguration));
         }
 
+        /**
+         * @param rewriteRuleSet Rewrite Rule Set resource in Basic rule of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRuleSet(@Nullable Output<SubResourceArgs> rewriteRuleSet) {
             $.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
 
+        /**
+         * @param rewriteRuleSet Rewrite Rule Set resource in Basic rule of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRuleSet(SubResourceArgs rewriteRuleSet) {
             return rewriteRuleSet(Output.of(rewriteRuleSet));
         }
 
+        /**
+         * @param ruleType Rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(@Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param ruleType Rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(Either<String,ApplicationGatewayRequestRoutingRuleType> ruleType) {
             return ruleType(Output.of(ruleType));
         }
 
+        /**
+         * @param ruleType Rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             return ruleType(Either.ofLeft(ruleType));
         }
 
+        /**
+         * @param ruleType Rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(ApplicationGatewayRequestRoutingRuleType ruleType) {
             return ruleType(Either.ofRight(ruleType));
         }
 
+        /**
+         * @param urlPathMap URL path map resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMap(@Nullable Output<SubResourceArgs> urlPathMap) {
             $.urlPathMap = urlPathMap;
             return this;
         }
 
+        /**
+         * @param urlPathMap URL path map resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMap(SubResourceArgs urlPathMap) {
             return urlPathMap(Output.of(urlPathMap));
         }

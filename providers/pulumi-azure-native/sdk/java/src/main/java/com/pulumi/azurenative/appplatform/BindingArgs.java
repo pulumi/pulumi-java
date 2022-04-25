@@ -23,6 +23,10 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appName", required=true)
     private Output<String> appName;
 
+    /**
+     * @return The name of the App resource.
+     * 
+     */
     public Output<String> appName() {
         return this.appName;
     }
@@ -34,6 +38,10 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bindingName")
     private @Nullable Output<String> bindingName;
 
+    /**
+     * @return The name of the Binding resource.
+     * 
+     */
     public Optional<Output<String>> bindingName() {
         return Optional.ofNullable(this.bindingName);
     }
@@ -45,6 +53,10 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<BindingResourcePropertiesArgs> properties;
 
+    /**
+     * @return Properties of the Binding resource
+     * 
+     */
     public Optional<Output<BindingResourcePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(Output<String> appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             return appName(Output.of(appName));
         }
 
+        /**
+         * @param bindingName The name of the Binding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingName(@Nullable Output<String> bindingName) {
             $.bindingName = bindingName;
             return this;
         }
 
+        /**
+         * @param bindingName The name of the Binding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingName(String bindingName) {
             return bindingName(Output.of(bindingName));
         }
 
+        /**
+         * @param properties Properties of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<BindingResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(BindingResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

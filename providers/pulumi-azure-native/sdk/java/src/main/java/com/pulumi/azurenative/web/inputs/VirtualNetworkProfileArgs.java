@@ -26,6 +26,10 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Resource id of the Virtual Network.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
     @Import(name="subnet")
     private @Nullable Output<String> subnet;
 
+    /**
+     * @return Subnet within the Virtual Network.
+     * 
+     */
     public Optional<Output<String>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -66,20 +74,44 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
             $ = new VirtualNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource id of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource id of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param subnet Subnet within the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<String> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Subnet within the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             return subnet(Output.of(subnet));
         }

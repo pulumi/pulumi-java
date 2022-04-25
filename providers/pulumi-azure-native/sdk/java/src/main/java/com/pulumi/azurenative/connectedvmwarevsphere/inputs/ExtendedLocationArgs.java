@@ -26,6 +26,10 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The extended location name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The extended location type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,20 +74,44 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
             $ = new ExtendedLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The extended location name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The extended location name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The extended location type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The extended location type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

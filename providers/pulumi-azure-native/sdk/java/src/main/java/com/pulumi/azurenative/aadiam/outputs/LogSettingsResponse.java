@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogSettingsResponse {
     /**
-     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * @return Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
      * 
      */
     private final @Nullable String category;
     /**
-     * A value indicating whether this log is enabled.
+     * @return A value indicating whether this log is enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * The retention policy for this log.
+     * @return The retention policy for this log.
      * 
      */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
@@ -40,23 +40,23 @@ public final class LogSettingsResponse {
     }
 
     /**
-     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * @return Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * A value indicating whether this log is enabled.
+     * @return A value indicating whether this log is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The retention policy for this log.
+     * @return The retention policy for this log.
      * 
-    */
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }

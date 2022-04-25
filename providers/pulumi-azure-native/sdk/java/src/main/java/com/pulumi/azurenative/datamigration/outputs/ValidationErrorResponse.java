@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ValidationErrorResponse {
     /**
-     * Severity of the error
+     * @return Severity of the error
      * 
      */
     private final String severity;
     /**
-     * Error Text
+     * @return Error Text
      * 
      */
     private final String text;
@@ -29,16 +29,16 @@ public final class ValidationErrorResponse {
     }
 
     /**
-     * Severity of the error
+     * @return Severity of the error
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * Error Text
+     * @return Error Text
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

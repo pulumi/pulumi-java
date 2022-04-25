@@ -33,6 +33,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="baseParameters")
     private @Nullable Map<String,Object> baseParameters;
 
+    /**
+     * @return Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
+     * 
+     */
     public Optional<Map<String,Object>> baseParameters() {
         return Optional.ofNullable(this.baseParameters);
     }
@@ -44,6 +48,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -55,6 +63,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -66,6 +78,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="libraries")
     private @Nullable List<Map<String,Object>> libraries;
 
+    /**
+     * @return A list of libraries to be installed on the cluster that will execute the job.
+     * 
+     */
     public Optional<List<Map<String,Object>>> libraries() {
         return Optional.ofNullable(this.libraries);
     }
@@ -77,6 +93,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -88,6 +108,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -99,6 +123,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="notebookPath", required=true)
     private Object notebookPath;
 
+    /**
+     * @return The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object notebookPath() {
         return this.notebookPath;
     }
@@ -110,6 +138,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -122,6 +154,11 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;DatabricksNotebook&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -133,6 +170,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -170,64 +211,143 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
             $ = new DatabricksNotebookActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseParameters Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseParameters(@Nullable Map<String,Object> baseParameters) {
             $.baseParameters = baseParameters;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
             $.libraries = libraries;
             return this;
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(Map<String,Object>... libraries) {
             return libraries(List.of(libraries));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param notebookPath The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookPath(Object notebookPath) {
             $.notebookPath = notebookPath;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;DatabricksNotebook&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

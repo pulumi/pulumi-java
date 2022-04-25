@@ -25,6 +25,10 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
     @Import(name="ip")
     private @Nullable String ip;
 
+    /**
+     * @return Proxy server IP
+     * 
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -36,6 +40,10 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
     @Import(name="port")
     private @Nullable String port;
 
+    /**
+     * @return Proxy server port
+     * 
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
@@ -65,11 +73,23 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
             $ = new ProxyServerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip Proxy server IP
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable String ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param port Proxy server port
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable String port) {
             $.port = port;
             return this;

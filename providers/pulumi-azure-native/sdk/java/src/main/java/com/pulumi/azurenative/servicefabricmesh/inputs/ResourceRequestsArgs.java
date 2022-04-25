@@ -24,6 +24,10 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cpu", required=true)
     private Output<Double> cpu;
 
+    /**
+     * @return Requested number of CPU cores. At present, only full cores are supported.
+     * 
+     */
     public Output<Double> cpu() {
         return this.cpu;
     }
@@ -35,6 +39,10 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memoryInGB", required=true)
     private Output<Double> memoryInGB;
 
+    /**
+     * @return The memory request in GB for this container.
+     * 
+     */
     public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
@@ -64,20 +72,44 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceRequestsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Requested number of CPU cores. At present, only full cores are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Requested number of CPU cores. At present, only full cores are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param memoryInGB The memory request in GB for this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Output<Double> memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory request in GB for this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             return memoryInGB(Output.of(memoryInGB));
         }

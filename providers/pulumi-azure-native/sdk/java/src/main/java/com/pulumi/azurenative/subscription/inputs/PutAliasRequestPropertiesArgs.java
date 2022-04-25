@@ -28,6 +28,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="billingScope")
     private @Nullable Output<String> billingScope;
 
+    /**
+     * @return Determines whether subscription is fieldLed, partnerLed or LegacyEA
+     * 
+     */
     public Optional<Output<String>> billingScope() {
         return Optional.ofNullable(this.billingScope);
     }
@@ -39,6 +43,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The friendly name of the subscription.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -50,6 +58,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="resellerId")
     private @Nullable Output<String> resellerId;
 
+    /**
+     * @return Reseller ID, basically MPN Id
+     * 
+     */
     public Optional<Output<String>> resellerId() {
         return Optional.ofNullable(this.resellerId);
     }
@@ -61,6 +73,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return This parameter can be used to create alias for existing subscription Id
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -72,6 +88,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="workload")
     private @Nullable Output<Either<String,Workload>> workload;
 
+    /**
+     * @return The workload type of the subscription. It can be either Production or DevTest.
+     * 
+     */
     public Optional<Output<Either<String,Workload>>> workload() {
         return Optional.ofNullable(this.workload);
     }
@@ -104,55 +124,127 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
             $ = new PutAliasRequestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingScope Determines whether subscription is fieldLed, partnerLed or LegacyEA
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingScope(@Nullable Output<String> billingScope) {
             $.billingScope = billingScope;
             return this;
         }
 
+        /**
+         * @param billingScope Determines whether subscription is fieldLed, partnerLed or LegacyEA
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingScope(String billingScope) {
             return billingScope(Output.of(billingScope));
         }
 
+        /**
+         * @param displayName The friendly name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The friendly name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param resellerId Reseller ID, basically MPN Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resellerId(@Nullable Output<String> resellerId) {
             $.resellerId = resellerId;
             return this;
         }
 
+        /**
+         * @param resellerId Reseller ID, basically MPN Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resellerId(String resellerId) {
             return resellerId(Output.of(resellerId));
         }
 
+        /**
+         * @param subscriptionId This parameter can be used to create alias for existing subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId This parameter can be used to create alias for existing subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param workload The workload type of the subscription. It can be either Production or DevTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workload(@Nullable Output<Either<String,Workload>> workload) {
             $.workload = workload;
             return this;
         }
 
+        /**
+         * @param workload The workload type of the subscription. It can be either Production or DevTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workload(Either<String,Workload> workload) {
             return workload(Output.of(workload));
         }
 
+        /**
+         * @param workload The workload type of the subscription. It can be either Production or DevTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workload(String workload) {
             return workload(Either.ofLeft(workload));
         }
 
+        /**
+         * @param workload The workload type of the subscription. It can be either Production or DevTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workload(Workload workload) {
             return workload(Either.ofRight(workload));
         }

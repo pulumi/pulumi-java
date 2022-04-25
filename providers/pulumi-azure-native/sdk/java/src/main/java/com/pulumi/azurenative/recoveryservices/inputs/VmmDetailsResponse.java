@@ -25,6 +25,11 @@ public final class VmmDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;VMM&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -53,6 +58,13 @@ public final class VmmDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VmmDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMM&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;

@@ -28,6 +28,12 @@ public final class ServiceTypeDeltaHealthPolicyResponse extends com.pulumi.resou
     @Import(name="maxPercentDeltaUnhealthyServices")
     private @Nullable Integer maxPercentDeltaUnhealthyServices;
 
+    /**
+     * @return The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+     * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+     * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+     * 
+     */
     public Optional<Integer> maxPercentDeltaUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);
     }
@@ -56,6 +62,14 @@ public final class ServiceTypeDeltaHealthPolicyResponse extends com.pulumi.resou
             $ = new ServiceTypeDeltaHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPercentDeltaUnhealthyServices The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+         * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+         * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
             $.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;

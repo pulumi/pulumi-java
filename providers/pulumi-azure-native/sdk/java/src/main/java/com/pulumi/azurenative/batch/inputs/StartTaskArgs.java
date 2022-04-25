@@ -33,6 +33,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commandLine")
     private @Nullable Output<String> commandLine;
 
+    /**
+     * @return The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using &#34;cmd /c MyCommand&#34; in Windows or &#34;/bin/sh -c MyCommand&#34; in Linux. Required if any other properties of the startTask are specified.
+     * 
+     */
     public Optional<Output<String>> commandLine() {
         return Optional.ofNullable(this.commandLine);
     }
@@ -44,6 +48,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerSettings")
     private @Nullable Output<TaskContainerSettingsArgs> containerSettings;
 
+    /**
+     * @return When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.
+     * 
+     */
     public Optional<Output<TaskContainerSettingsArgs>> containerSettings() {
         return Optional.ofNullable(this.containerSettings);
     }
@@ -62,6 +70,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxTaskRetryCount")
     private @Nullable Output<Integer> maxTaskRetryCount;
 
+    /**
+     * @return The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.
+     * 
+     */
     public Optional<Output<Integer>> maxTaskRetryCount() {
         return Optional.ofNullable(this.maxTaskRetryCount);
     }
@@ -80,6 +92,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userIdentity")
     private @Nullable Output<UserIdentityArgs> userIdentity;
 
+    /**
+     * @return If omitted, the task runs as a non-administrative user unique to the task.
+     * 
+     */
     public Optional<Output<UserIdentityArgs>> userIdentity() {
         return Optional.ofNullable(this.userIdentity);
     }
@@ -91,6 +107,10 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitForSuccess")
     private @Nullable Output<Boolean> waitForSuccess;
 
+    /**
+     * @return If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and scheduling error detail. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is true.
+     * 
+     */
     public Optional<Output<Boolean>> waitForSuccess() {
         return Optional.ofNullable(this.waitForSuccess);
     }
@@ -125,20 +145,44 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StartTaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commandLine The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using &#34;cmd /c MyCommand&#34; in Windows or &#34;/bin/sh -c MyCommand&#34; in Linux. Required if any other properties of the startTask are specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLine(@Nullable Output<String> commandLine) {
             $.commandLine = commandLine;
             return this;
         }
 
+        /**
+         * @param commandLine The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using &#34;cmd /c MyCommand&#34; in Windows or &#34;/bin/sh -c MyCommand&#34; in Linux. Required if any other properties of the startTask are specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLine(String commandLine) {
             return commandLine(Output.of(commandLine));
         }
 
+        /**
+         * @param containerSettings When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerSettings(@Nullable Output<TaskContainerSettingsArgs> containerSettings) {
             $.containerSettings = containerSettings;
             return this;
         }
 
+        /**
+         * @param containerSettings When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerSettings(TaskContainerSettingsArgs containerSettings) {
             return containerSettings(Output.of(containerSettings));
         }
@@ -156,11 +200,23 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
             return environmentSettings(List.of(environmentSettings));
         }
 
+        /**
+         * @param maxTaskRetryCount The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTaskRetryCount(@Nullable Output<Integer> maxTaskRetryCount) {
             $.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
 
+        /**
+         * @param maxTaskRetryCount The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTaskRetryCount(Integer maxTaskRetryCount) {
             return maxTaskRetryCount(Output.of(maxTaskRetryCount));
         }
@@ -178,20 +234,44 @@ public final class StartTaskArgs extends com.pulumi.resources.ResourceArgs {
             return resourceFiles(List.of(resourceFiles));
         }
 
+        /**
+         * @param userIdentity If omitted, the task runs as a non-administrative user unique to the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIdentity(@Nullable Output<UserIdentityArgs> userIdentity) {
             $.userIdentity = userIdentity;
             return this;
         }
 
+        /**
+         * @param userIdentity If omitted, the task runs as a non-administrative user unique to the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIdentity(UserIdentityArgs userIdentity) {
             return userIdentity(Output.of(userIdentity));
         }
 
+        /**
+         * @param waitForSuccess If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and scheduling error detail. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForSuccess(@Nullable Output<Boolean> waitForSuccess) {
             $.waitForSuccess = waitForSuccess;
             return this;
         }
 
+        /**
+         * @param waitForSuccess If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and scheduling error detail. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForSuccess(Boolean waitForSuccess) {
             return waitForSuccess(Output.of(waitForSuccess));
         }

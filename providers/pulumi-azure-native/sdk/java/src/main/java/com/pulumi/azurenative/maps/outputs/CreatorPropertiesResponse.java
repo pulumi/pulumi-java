@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CreatorPropertiesResponse {
     /**
-     * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+     * @return The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
      * 
      */
     private final @Nullable String provisioningState;
@@ -23,9 +23,9 @@ public final class CreatorPropertiesResponse {
     }
 
     /**
-     * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+     * @return The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

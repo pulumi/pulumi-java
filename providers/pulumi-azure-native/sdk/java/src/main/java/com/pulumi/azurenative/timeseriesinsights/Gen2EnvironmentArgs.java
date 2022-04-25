@@ -29,6 +29,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="environmentName")
     private @Nullable Output<String> environmentName;
 
+    /**
+     * @return Name of the environment
+     * 
+     */
     public Optional<Output<String>> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
@@ -41,6 +45,11 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the environment.
+     * Expected value is &#39;Gen2&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -52,6 +61,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -63,6 +76,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,6 +91,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -85,6 +106,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="storageConfiguration", required=true)
     private Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
 
+    /**
+     * @return The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
+     * 
+     */
     public Output<Gen2StorageConfigurationInputArgs> storageConfiguration() {
         return this.storageConfiguration;
     }
@@ -96,6 +121,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional properties for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -107,6 +136,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeSeriesIdProperties", required=true)
     private Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
 
+    /**
+     * @return The list of event properties which will be used to define the environment&#39;s time series id.
+     * 
+     */
     public Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties() {
         return this.timeSeriesIdProperties;
     }
@@ -118,6 +151,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="warmStoreConfiguration")
     private @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
+    /**
+     * @return The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
+     * 
+     */
     public Optional<Output<WarmStoreConfigurationPropertiesArgs>> warmStoreConfiguration() {
         return Optional.ofNullable(this.warmStoreConfiguration);
     }
@@ -154,87 +191,203 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
             $ = new Gen2EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentName Name of the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(@Nullable Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName Name of the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param kind The kind of the environment.
+         * Expected value is &#39;Gen2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the environment.
+         * Expected value is &#39;Gen2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param storageConfiguration The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfiguration(Output<Gen2StorageConfigurationInputArgs> storageConfiguration) {
             $.storageConfiguration = storageConfiguration;
             return this;
         }
 
+        /**
+         * @param storageConfiguration The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfiguration(Gen2StorageConfigurationInputArgs storageConfiguration) {
             return storageConfiguration(Output.of(storageConfiguration));
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param timeSeriesIdProperties The list of event properties which will be used to define the environment&#39;s time series id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesIdProperties(Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
             $.timeSeriesIdProperties = timeSeriesIdProperties;
             return this;
         }
 
+        /**
+         * @param timeSeriesIdProperties The list of event properties which will be used to define the environment&#39;s time series id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesIdProperties(List<TimeSeriesIdPropertyArgs> timeSeriesIdProperties) {
             return timeSeriesIdProperties(Output.of(timeSeriesIdProperties));
         }
 
+        /**
+         * @param timeSeriesIdProperties The list of event properties which will be used to define the environment&#39;s time series id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesIdProperties(TimeSeriesIdPropertyArgs... timeSeriesIdProperties) {
             return timeSeriesIdProperties(List.of(timeSeriesIdProperties));
         }
 
+        /**
+         * @param warmStoreConfiguration The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmStoreConfiguration(@Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
             $.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
 
+        /**
+         * @param warmStoreConfiguration The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmStoreConfiguration(WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
             return warmStoreConfiguration(Output.of(warmStoreConfiguration));
         }

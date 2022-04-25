@@ -27,6 +27,10 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends com.pulu
     @Import(name="antiMalware")
     private @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
+    /**
+     * @return The custom preferences for Azure Antimalware.
+     * 
+     */
     public Optional<Output<ConfigurationProfilePreferenceAntiMalwareArgs>> antiMalware() {
         return Optional.ofNullable(this.antiMalware);
     }
@@ -38,6 +42,10 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends com.pulu
     @Import(name="vmBackup")
     private @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
+    /**
+     * @return The custom preferences for Azure VM Backup.
+     * 
+     */
     public Optional<Output<ConfigurationProfilePreferenceVmBackupArgs>> vmBackup() {
         return Optional.ofNullable(this.vmBackup);
     }
@@ -67,20 +75,44 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends com.pulu
             $ = new ConfigurationProfilePreferencePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param antiMalware The custom preferences for Azure Antimalware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder antiMalware(@Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware) {
             $.antiMalware = antiMalware;
             return this;
         }
 
+        /**
+         * @param antiMalware The custom preferences for Azure Antimalware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder antiMalware(ConfigurationProfilePreferenceAntiMalwareArgs antiMalware) {
             return antiMalware(Output.of(antiMalware));
         }
 
+        /**
+         * @param vmBackup The custom preferences for Azure VM Backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmBackup(@Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
             $.vmBackup = vmBackup;
             return this;
         }
 
+        /**
+         * @param vmBackup The custom preferences for Azure VM Backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmBackup(ConfigurationProfilePreferenceVmBackupArgs vmBackup) {
             return vmBackup(Output.of(vmBackup));
         }

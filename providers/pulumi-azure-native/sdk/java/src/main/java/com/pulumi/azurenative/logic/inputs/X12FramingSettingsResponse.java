@@ -25,6 +25,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="characterSet", required=true)
     private String characterSet;
 
+    /**
+     * @return The X12 character set.
+     * 
+     */
     public String characterSet() {
         return this.characterSet;
     }
@@ -36,6 +40,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="componentSeparator", required=true)
     private Integer componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
@@ -47,6 +55,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="dataElementSeparator", required=true)
     private Integer dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -58,6 +70,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="replaceCharacter", required=true)
     private Integer replaceCharacter;
 
+    /**
+     * @return The replacement character.
+     * 
+     */
     public Integer replaceCharacter() {
         return this.replaceCharacter;
     }
@@ -69,6 +85,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="replaceSeparatorsInPayload", required=true)
     private Boolean replaceSeparatorsInPayload;
 
+    /**
+     * @return The value indicating whether to replace separators in payload.
+     * 
+     */
     public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
@@ -80,6 +100,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="segmentTerminator", required=true)
     private Integer segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -91,6 +115,10 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="segmentTerminatorSuffix", required=true)
     private String segmentTerminatorSuffix;
 
+    /**
+     * @return The segment terminator suffix.
+     * 
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -125,36 +153,78 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
             $ = new X12FramingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param characterSet The X12 character set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(String characterSet) {
             $.characterSet = characterSet;
             return this;
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param replaceCharacter The replacement character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceCharacter(Integer replaceCharacter) {
             $.replaceCharacter = replaceCharacter;
             return this;
         }
 
+        /**
+         * @param replaceSeparatorsInPayload The value indicating whether to replace separators in payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             $.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;

@@ -28,6 +28,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="adminGroupObjectIDs")
     private @Nullable Output<List<String>> adminGroupObjectIDs;
 
+    /**
+     * @return AAD group object IDs that will have admin role of the cluster.
+     * 
+     */
     public Optional<Output<List<String>>> adminGroupObjectIDs() {
         return Optional.ofNullable(this.adminGroupObjectIDs);
     }
@@ -39,6 +43,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="clientAppID")
     private @Nullable Output<String> clientAppID;
 
+    /**
+     * @return The client AAD application ID.
+     * 
+     */
     public Optional<Output<String>> clientAppID() {
         return Optional.ofNullable(this.clientAppID);
     }
@@ -50,6 +58,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="enableAzureRBAC")
     private @Nullable Output<Boolean> enableAzureRBAC;
 
+    /**
+     * @return Whether to enable Azure RBAC for Kubernetes authorization.
+     * 
+     */
     public Optional<Output<Boolean>> enableAzureRBAC() {
         return Optional.ofNullable(this.enableAzureRBAC);
     }
@@ -61,6 +73,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="managed")
     private @Nullable Output<Boolean> managed;
 
+    /**
+     * @return Whether to enable managed AAD.
+     * 
+     */
     public Optional<Output<Boolean>> managed() {
         return Optional.ofNullable(this.managed);
     }
@@ -72,6 +88,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="serverAppID")
     private @Nullable Output<String> serverAppID;
 
+    /**
+     * @return The server AAD application ID.
+     * 
+     */
     public Optional<Output<String>> serverAppID() {
         return Optional.ofNullable(this.serverAppID);
     }
@@ -83,6 +103,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="serverAppSecret")
     private @Nullable Output<String> serverAppSecret;
 
+    /**
+     * @return The server AAD application secret.
+     * 
+     */
     public Optional<Output<String>> serverAppSecret() {
         return Optional.ofNullable(this.serverAppSecret);
     }
@@ -94,6 +118,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
     @Import(name="tenantID")
     private @Nullable Output<String> tenantID;
 
+    /**
+     * @return The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
+     * 
+     */
     public Optional<Output<String>> tenantID() {
         return Optional.ofNullable(this.tenantID);
     }
@@ -128,69 +156,159 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
             $ = new ManagedClusterAADProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminGroupObjectIDs AAD group object IDs that will have admin role of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminGroupObjectIDs(@Nullable Output<List<String>> adminGroupObjectIDs) {
             $.adminGroupObjectIDs = adminGroupObjectIDs;
             return this;
         }
 
+        /**
+         * @param adminGroupObjectIDs AAD group object IDs that will have admin role of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminGroupObjectIDs(List<String> adminGroupObjectIDs) {
             return adminGroupObjectIDs(Output.of(adminGroupObjectIDs));
         }
 
+        /**
+         * @param adminGroupObjectIDs AAD group object IDs that will have admin role of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminGroupObjectIDs(String... adminGroupObjectIDs) {
             return adminGroupObjectIDs(List.of(adminGroupObjectIDs));
         }
 
+        /**
+         * @param clientAppID The client AAD application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAppID(@Nullable Output<String> clientAppID) {
             $.clientAppID = clientAppID;
             return this;
         }
 
+        /**
+         * @param clientAppID The client AAD application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAppID(String clientAppID) {
             return clientAppID(Output.of(clientAppID));
         }
 
+        /**
+         * @param enableAzureRBAC Whether to enable Azure RBAC for Kubernetes authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAzureRBAC(@Nullable Output<Boolean> enableAzureRBAC) {
             $.enableAzureRBAC = enableAzureRBAC;
             return this;
         }
 
+        /**
+         * @param enableAzureRBAC Whether to enable Azure RBAC for Kubernetes authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAzureRBAC(Boolean enableAzureRBAC) {
             return enableAzureRBAC(Output.of(enableAzureRBAC));
         }
 
+        /**
+         * @param managed Whether to enable managed AAD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(@Nullable Output<Boolean> managed) {
             $.managed = managed;
             return this;
         }
 
+        /**
+         * @param managed Whether to enable managed AAD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(Boolean managed) {
             return managed(Output.of(managed));
         }
 
+        /**
+         * @param serverAppID The server AAD application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAppID(@Nullable Output<String> serverAppID) {
             $.serverAppID = serverAppID;
             return this;
         }
 
+        /**
+         * @param serverAppID The server AAD application ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAppID(String serverAppID) {
             return serverAppID(Output.of(serverAppID));
         }
 
+        /**
+         * @param serverAppSecret The server AAD application secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAppSecret(@Nullable Output<String> serverAppSecret) {
             $.serverAppSecret = serverAppSecret;
             return this;
         }
 
+        /**
+         * @param serverAppSecret The server AAD application secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAppSecret(String serverAppSecret) {
             return serverAppSecret(Output.of(serverAppSecret));
         }
 
+        /**
+         * @param tenantID The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantID(@Nullable Output<String> tenantID) {
             $.tenantID = tenantID;
             return this;
         }
 
+        /**
+         * @param tenantID The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantID(String tenantID) {
             return tenantID(Output.of(tenantID));
         }

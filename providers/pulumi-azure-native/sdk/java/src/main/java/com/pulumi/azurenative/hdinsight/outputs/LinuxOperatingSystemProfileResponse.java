@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LinuxOperatingSystemProfileResponse {
     /**
-     * The password.
+     * @return The password.
      * 
      */
     private final @Nullable String password;
     /**
-     * The SSH profile.
+     * @return The SSH profile.
      * 
      */
     private final @Nullable SshProfileResponse sshProfile;
     /**
-     * The username.
+     * @return The username.
      * 
      */
     private final @Nullable String username;
@@ -39,23 +39,23 @@ public final class LinuxOperatingSystemProfileResponse {
     }
 
     /**
-     * The password.
+     * @return The password.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The SSH profile.
+     * @return The SSH profile.
      * 
-    */
+     */
     public Optional<SshProfileResponse> sshProfile() {
         return Optional.ofNullable(this.sshProfile);
     }
     /**
-     * The username.
+     * @return The username.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

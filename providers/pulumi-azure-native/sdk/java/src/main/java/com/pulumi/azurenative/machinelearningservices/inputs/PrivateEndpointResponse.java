@@ -23,6 +23,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ARM identifier for Private Endpoint
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="subnetArmId", required=true)
     private String subnetArmId;
 
+    /**
+     * @return The ARM identifier for Subnet resource that private endpoint links to
+     * 
+     */
     public String subnetArmId() {
         return this.subnetArmId;
     }
@@ -63,11 +71,23 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
             $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM identifier for Private Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param subnetArmId The ARM identifier for Subnet resource that private endpoint links to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetArmId(String subnetArmId) {
             $.subnetArmId = subnetArmId;
             return this;

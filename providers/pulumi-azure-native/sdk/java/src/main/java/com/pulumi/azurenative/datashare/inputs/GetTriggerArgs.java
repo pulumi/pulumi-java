@@ -19,6 +19,10 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="shareSubscriptionName", required=true)
     private String shareSubscriptionName;
 
+    /**
+     * @return The name of the shareSubscription.
+     * 
+     */
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -52,6 +64,10 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="triggerName", required=true)
     private String triggerName;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public String triggerName() {
         return this.triggerName;
     }
@@ -83,21 +99,45 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param triggerName The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(String triggerName) {
             $.triggerName = triggerName;
             return this;

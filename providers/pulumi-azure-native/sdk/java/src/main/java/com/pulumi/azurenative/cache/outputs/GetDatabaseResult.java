@@ -16,57 +16,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDatabaseResult {
     /**
-     * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+     * @return Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
      * 
      */
     private final @Nullable String clientProtocol;
     /**
-     * Clustering policy - default is OSSCluster. Specified at create time.
+     * @return Clustering policy - default is OSSCluster. Specified at create time.
      * 
      */
     private final @Nullable String clusteringPolicy;
     /**
-     * Redis eviction policy - default is VolatileLRU
+     * @return Redis eviction policy - default is VolatileLRU
      * 
      */
     private final @Nullable String evictionPolicy;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Optional set of redis modules to enable in this database - modules can only be added at creation time.
+     * @return Optional set of redis modules to enable in this database - modules can only be added at creation time.
      * 
      */
     private final @Nullable List<ModuleResponse> modules;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Persistence settings
+     * @return Persistence settings
      * 
      */
     private final @Nullable PersistenceResponse persistence;
     /**
-     * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
+     * @return TCP port of the database endpoint. Specified at create time. Defaults to an available port.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * Current provisioning status of the database
+     * @return Current provisioning status of the database
      * 
      */
     private final String provisioningState;
     /**
-     * Current resource status of the database
+     * @return Current resource status of the database
      * 
      */
     private final String resourceState;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -98,79 +98,79 @@ public final class GetDatabaseResult {
     }
 
     /**
-     * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+     * @return Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
      * 
-    */
+     */
     public Optional<String> clientProtocol() {
         return Optional.ofNullable(this.clientProtocol);
     }
     /**
-     * Clustering policy - default is OSSCluster. Specified at create time.
+     * @return Clustering policy - default is OSSCluster. Specified at create time.
      * 
-    */
+     */
     public Optional<String> clusteringPolicy() {
         return Optional.ofNullable(this.clusteringPolicy);
     }
     /**
-     * Redis eviction policy - default is VolatileLRU
+     * @return Redis eviction policy - default is VolatileLRU
      * 
-    */
+     */
     public Optional<String> evictionPolicy() {
         return Optional.ofNullable(this.evictionPolicy);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Optional set of redis modules to enable in this database - modules can only be added at creation time.
+     * @return Optional set of redis modules to enable in this database - modules can only be added at creation time.
      * 
-    */
+     */
     public List<ModuleResponse> modules() {
         return this.modules == null ? List.of() : this.modules;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Persistence settings
+     * @return Persistence settings
      * 
-    */
+     */
     public Optional<PersistenceResponse> persistence() {
         return Optional.ofNullable(this.persistence);
     }
     /**
-     * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
+     * @return TCP port of the database endpoint. Specified at create time. Defaults to an available port.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Current provisioning status of the database
+     * @return Current provisioning status of the database
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Current resource status of the database
+     * @return Current resource status of the database
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

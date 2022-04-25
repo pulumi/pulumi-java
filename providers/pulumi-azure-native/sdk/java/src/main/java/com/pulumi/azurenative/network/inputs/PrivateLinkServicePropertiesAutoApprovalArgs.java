@@ -27,6 +27,10 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends com.pulu
     @Import(name="subscriptions")
     private @Nullable Output<List<String>> subscriptions;
 
+    /**
+     * @return The list of subscriptions.
+     * 
+     */
     public Optional<Output<List<String>>> subscriptions() {
         return Optional.ofNullable(this.subscriptions);
     }
@@ -55,15 +59,33 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends com.pulu
             $ = new PrivateLinkServicePropertiesAutoApprovalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscriptions The list of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
         }
 
+        /**
+         * @param subscriptions The list of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(List<String> subscriptions) {
             return subscriptions(Output.of(subscriptions));
         }
 
+        /**
+         * @param subscriptions The list of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }

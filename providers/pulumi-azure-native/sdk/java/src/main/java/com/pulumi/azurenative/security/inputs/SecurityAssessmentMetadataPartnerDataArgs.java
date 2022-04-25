@@ -26,6 +26,10 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
     @Import(name="partnerName", required=true)
     private Output<String> partnerName;
 
+    /**
+     * @return Name of the company of the partner
+     * 
+     */
     public Output<String> partnerName() {
         return this.partnerName;
     }
@@ -37,6 +41,10 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
     @Import(name="productName")
     private @Nullable Output<String> productName;
 
+    /**
+     * @return Name of the product of the partner that created the assessment
+     * 
+     */
     public Optional<Output<String>> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -48,6 +56,10 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return Secret to authenticate the partner and verify it created the assessment - write only
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -78,29 +90,65 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
             $ = new SecurityAssessmentMetadataPartnerDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerName Name of the company of the partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(Output<String> partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param partnerName Name of the company of the partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             return partnerName(Output.of(partnerName));
         }
 
+        /**
+         * @param productName Name of the product of the partner that created the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable Output<String> productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param productName Name of the product of the partner that created the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(String productName) {
             return productName(Output.of(productName));
         }
 
+        /**
+         * @param secret Secret to authenticate the partner and verify it created the assessment - write only
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret to authenticate the partner and verify it created the assessment - write only
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

@@ -26,6 +26,10 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="allow")
     private @Nullable Output<Boolean> allow;
 
+    /**
+     * @return Flag to control breakout of o365 allow category.
+     * 
+     */
     public Optional<Output<Boolean>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -37,6 +41,10 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="default")
     private @Nullable Output<Boolean> default_;
 
+    /**
+     * @return Flag to control breakout of o365 default category.
+     * 
+     */
     public Optional<Output<Boolean>> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -48,6 +56,10 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="optimize")
     private @Nullable Output<Boolean> optimize;
 
+    /**
+     * @return Flag to control breakout of o365 optimize category.
+     * 
+     */
     public Optional<Output<Boolean>> optimize() {
         return Optional.ofNullable(this.optimize);
     }
@@ -78,29 +90,65 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
             $ = new BreakOutCategoryPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Flag to control breakout of o365 allow category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<Boolean> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow Flag to control breakout of o365 allow category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(Boolean allow) {
             return allow(Output.of(allow));
         }
 
+        /**
+         * @param default_ Flag to control breakout of o365 default category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Output<Boolean> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ Flag to control breakout of o365 default category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(Boolean default_) {
             return default_(Output.of(default_));
         }
 
+        /**
+         * @param optimize Flag to control breakout of o365 optimize category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optimize(@Nullable Output<Boolean> optimize) {
             $.optimize = optimize;
             return this;
         }
 
+        /**
+         * @param optimize Flag to control breakout of o365 optimize category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optimize(Boolean optimize) {
             return optimize(Output.of(optimize));
         }

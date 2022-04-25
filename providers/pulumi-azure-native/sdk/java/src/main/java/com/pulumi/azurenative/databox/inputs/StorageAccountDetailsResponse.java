@@ -25,6 +25,11 @@ public final class StorageAccountDetailsResponse extends com.pulumi.resources.In
     @Import(name="dataAccountType", required=true)
     private String dataAccountType;
 
+    /**
+     * @return Account Type of the data to be transferred.
+     * Expected value is &#39;StorageAccount&#39;.
+     * 
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
@@ -36,6 +41,10 @@ public final class StorageAccountDetailsResponse extends com.pulumi.resources.In
     @Import(name="storageAccountId", required=true)
     private String storageAccountId;
 
+    /**
+     * @return Storage Account Resource Id.
+     * 
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }
@@ -65,11 +74,24 @@ public final class StorageAccountDetailsResponse extends com.pulumi.resources.In
             $ = new StorageAccountDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataAccountType Account Type of the data to be transferred.
+         * Expected value is &#39;StorageAccount&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param storageAccountId Storage Account Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;

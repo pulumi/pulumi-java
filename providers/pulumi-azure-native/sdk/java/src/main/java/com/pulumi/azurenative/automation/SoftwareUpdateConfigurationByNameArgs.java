@@ -26,6 +26,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -37,6 +41,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="error")
     private @Nullable Output<ErrorResponseArgs> error;
 
+    /**
+     * @return Details of provisioning error
+     * 
+     */
     public Optional<Output<ErrorResponseArgs>> error() {
         return Optional.ofNullable(this.error);
     }
@@ -48,6 +56,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,6 +71,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="scheduleInfo", required=true)
     private Output<SUCSchedulePropertiesArgs> scheduleInfo;
 
+    /**
+     * @return Schedule information for the Software update configuration
+     * 
+     */
     public Output<SUCSchedulePropertiesArgs> scheduleInfo() {
         return this.scheduleInfo;
     }
@@ -70,6 +86,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="softwareUpdateConfigurationName")
     private @Nullable Output<String> softwareUpdateConfigurationName;
 
+    /**
+     * @return The name of the software update configuration to be created.
+     * 
+     */
     public Optional<Output<String>> softwareUpdateConfigurationName() {
         return Optional.ofNullable(this.softwareUpdateConfigurationName);
     }
@@ -81,6 +101,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="tasks")
     private @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
 
+    /**
+     * @return Tasks information for the Software update configuration.
+     * 
+     */
     public Optional<Output<SoftwareUpdateConfigurationTasksArgs>> tasks() {
         return Optional.ofNullable(this.tasks);
     }
@@ -92,6 +116,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
     @Import(name="updateConfiguration", required=true)
     private Output<UpdateConfigurationArgs> updateConfiguration;
 
+    /**
+     * @return update specific properties for the Software update configuration
+     * 
+     */
     public Output<UpdateConfigurationArgs> updateConfiguration() {
         return this.updateConfiguration;
     }
@@ -126,65 +154,149 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
             $ = new SoftwareUpdateConfigurationByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param error Details of provisioning error
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable Output<ErrorResponseArgs> error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param error Details of provisioning error
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ErrorResponseArgs error) {
             return error(Output.of(error));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scheduleInfo Schedule information for the Software update configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleInfo(Output<SUCSchedulePropertiesArgs> scheduleInfo) {
             $.scheduleInfo = scheduleInfo;
             return this;
         }
 
+        /**
+         * @param scheduleInfo Schedule information for the Software update configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleInfo(SUCSchedulePropertiesArgs scheduleInfo) {
             return scheduleInfo(Output.of(scheduleInfo));
         }
 
+        /**
+         * @param softwareUpdateConfigurationName The name of the software update configuration to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareUpdateConfigurationName(@Nullable Output<String> softwareUpdateConfigurationName) {
             $.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
         }
 
+        /**
+         * @param softwareUpdateConfigurationName The name of the software update configuration to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareUpdateConfigurationName(String softwareUpdateConfigurationName) {
             return softwareUpdateConfigurationName(Output.of(softwareUpdateConfigurationName));
         }
 
+        /**
+         * @param tasks Tasks information for the Software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tasks(@Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks) {
             $.tasks = tasks;
             return this;
         }
 
+        /**
+         * @param tasks Tasks information for the Software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tasks(SoftwareUpdateConfigurationTasksArgs tasks) {
             return tasks(Output.of(tasks));
         }
 
+        /**
+         * @param updateConfiguration update specific properties for the Software update configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateConfiguration(Output<UpdateConfigurationArgs> updateConfiguration) {
             $.updateConfiguration = updateConfiguration;
             return this;
         }
 
+        /**
+         * @param updateConfiguration update specific properties for the Software update configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateConfiguration(UpdateConfigurationArgs updateConfiguration) {
             return updateConfiguration(Output.of(updateConfiguration));
         }

@@ -25,6 +25,10 @@ public final class AddressPrefixItemResponse extends com.pulumi.resources.Invoke
     @Import(name="addressPrefix")
     private @Nullable String addressPrefix;
 
+    /**
+     * @return Address prefix.
+     * 
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -36,6 +40,10 @@ public final class AddressPrefixItemResponse extends com.pulumi.resources.Invoke
     @Import(name="addressPrefixType")
     private @Nullable String addressPrefixType;
 
+    /**
+     * @return Address prefix type.
+     * 
+     */
     public Optional<String> addressPrefixType() {
         return Optional.ofNullable(this.addressPrefixType);
     }
@@ -65,11 +73,23 @@ public final class AddressPrefixItemResponse extends com.pulumi.resources.Invoke
             $ = new AddressPrefixItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix Address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable String addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param addressPrefixType Address prefix type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixType(@Nullable String addressPrefixType) {
             $.addressPrefixType = addressPrefixType;
             return this;

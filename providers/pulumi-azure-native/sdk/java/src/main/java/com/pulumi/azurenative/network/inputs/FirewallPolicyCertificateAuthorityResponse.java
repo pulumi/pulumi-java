@@ -25,6 +25,10 @@ public final class FirewallPolicyCertificateAuthorityResponse extends com.pulumi
     @Import(name="keyVaultSecretId")
     private @Nullable String keyVaultSecretId;
 
+    /**
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * 
+     */
     public Optional<String> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
@@ -36,6 +40,10 @@ public final class FirewallPolicyCertificateAuthorityResponse extends com.pulumi
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the CA certificate.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class FirewallPolicyCertificateAuthorityResponse extends com.pulumi
             $ = new FirewallPolicyCertificateAuthorityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
+        /**
+         * @param name Name of the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -30,6 +30,10 @@ public final class CollectorPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="discoverySiteId")
     private @Nullable Output<String> discoverySiteId;
 
+    /**
+     * @return The ARM id of the discovery service site.
+     * 
+     */
     public Optional<Output<String>> discoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
@@ -68,11 +72,23 @@ public final class CollectorPropertiesArgs extends com.pulumi.resources.Resource
             return agentProperties(Output.of(agentProperties));
         }
 
+        /**
+         * @param discoverySiteId The ARM id of the discovery service site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoverySiteId(@Nullable Output<String> discoverySiteId) {
             $.discoverySiteId = discoverySiteId;
             return this;
         }
 
+        /**
+         * @param discoverySiteId The ARM id of the discovery service site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoverySiteId(String discoverySiteId) {
             return discoverySiteId(Output.of(discoverySiteId));
         }

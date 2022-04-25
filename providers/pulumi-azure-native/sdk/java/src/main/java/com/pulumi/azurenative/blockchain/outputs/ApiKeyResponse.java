@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiKeyResponse {
     /**
-     * Gets or sets the API key name.
+     * @return Gets or sets the API key name.
      * 
      */
     private final @Nullable String keyName;
     /**
-     * Gets or sets the API key value.
+     * @return Gets or sets the API key value.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class ApiKeyResponse {
     }
 
     /**
-     * Gets or sets the API key name.
+     * @return Gets or sets the API key name.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * Gets or sets the API key value.
+     * @return Gets or sets the API key value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

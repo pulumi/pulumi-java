@@ -25,6 +25,10 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password to connect to the WebProxy Server
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -36,6 +40,10 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -47,6 +55,10 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Username to connect to the WebProxy server
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -77,16 +89,34 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
             $ = new BackendProxyContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password to connect to the WebProxy Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param url WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param username Username to connect to the WebProxy server
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

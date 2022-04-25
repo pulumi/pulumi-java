@@ -19,6 +19,10 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stepName", required=true)
     private String stepName;
 
+    /**
+     * @return The name of the deployment step.
+     * 
+     */
     public String stepName() {
         return this.stepName;
     }
@@ -59,11 +67,23 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param stepName The name of the deployment step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepName(String stepName) {
             $.stepName = stepName;
             return this;

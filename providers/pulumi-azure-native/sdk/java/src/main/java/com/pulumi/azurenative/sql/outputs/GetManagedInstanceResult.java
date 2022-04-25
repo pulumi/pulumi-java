@@ -20,128 +20,128 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagedInstanceResult {
     /**
-     * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
+     * @return Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
      * 
      */
     private final @Nullable String administratorLogin;
     /**
-     * The Azure Active Directory administrator of the server.
+     * @return The Azure Active Directory administrator of the server.
      * 
      */
     private final @Nullable ManagedInstanceExternalAdministratorResponse administrators;
     /**
-     * Collation of the managed instance.
+     * @return Collation of the managed instance.
      * 
      */
     private final @Nullable String collation;
     /**
-     * The Dns Zone that the managed instance is in.
+     * @return The Dns Zone that the managed instance is in.
      * 
      */
     private final String dnsZone;
     /**
-     * The fully qualified domain name of the managed instance.
+     * @return The fully qualified domain name of the managed instance.
      * 
      */
     private final String fullyQualifiedDomainName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The Azure Active Directory identity of the managed instance.
+     * @return The Azure Active Directory identity of the managed instance.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * The Id of the instance pool this managed server belongs to.
+     * @return The Id of the instance pool this managed server belongs to.
      * 
      */
     private final @Nullable String instancePoolId;
     /**
-     * A CMK URI of the key to use for encryption.
+     * @return A CMK URI of the key to use for encryption.
      * 
      */
     private final @Nullable String keyId;
     /**
-     * The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
+     * @return The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
      * 
      */
     private final @Nullable String licenseType;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Specifies maintenance configuration id to apply to this managed instance.
+     * @return Specifies maintenance configuration id to apply to this managed instance.
      * 
      */
     private final @Nullable String maintenanceConfigurationId;
     /**
-     * Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
+     * @return Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     private final @Nullable String minimalTlsVersion;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The resource id of a user assigned identity to be used by default.
+     * @return The resource id of a user assigned identity to be used by default.
      * 
      */
     private final @Nullable String primaryUserAssignedIdentityId;
     /**
-     * List of private endpoint connections on a managed instance.
+     * @return List of private endpoint connections on a managed instance.
      * 
      */
     private final List<ManagedInstancePecPropertyResponse> privateEndpointConnections;
     private final String provisioningState;
     /**
-     * Connection type used for connecting to the instance.
+     * @return Connection type used for connecting to the instance.
      * 
      */
     private final @Nullable String proxyOverride;
     /**
-     * Whether or not the public data endpoint is enabled.
+     * @return Whether or not the public data endpoint is enabled.
      * 
      */
     private final @Nullable Boolean publicDataEndpointEnabled;
     /**
-     * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
+     * @return Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The state of the managed instance.
+     * @return The state of the managed instance.
      * 
      */
     private final String state;
     /**
-     * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
+     * @return The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
      * 
      */
     private final @Nullable String storageAccountType;
     /**
-     * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
+     * @return Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
      * 
      */
     private final @Nullable Integer storageSizeInGB;
     /**
-     * Subnet resource ID for the managed instance.
+     * @return Subnet resource ID for the managed instance.
      * 
      */
     private final @Nullable String subnetId;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Id of the timezone. Allowed values are timezones supported by Windows.
+     * @return Id of the timezone. Allowed values are timezones supported by Windows.
      * Windows keeps details on supported timezones, including the id, in registry under
      * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
@@ -151,17 +151,17 @@ public final class GetManagedInstanceResult {
      */
     private final @Nullable String timezoneId;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
+     * @return The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
      * 
      */
     private final @Nullable Integer vCores;
     /**
-     * Whether or not the multi-az is enabled.
+     * @return Whether or not the multi-az is enabled.
      * 
      */
     private final @Nullable Boolean zoneRedundant;
@@ -229,114 +229,114 @@ public final class GetManagedInstanceResult {
     }
 
     /**
-     * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
+     * @return Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
      * 
-    */
+     */
     public Optional<String> administratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
-     * The Azure Active Directory administrator of the server.
+     * @return The Azure Active Directory administrator of the server.
      * 
-    */
+     */
     public Optional<ManagedInstanceExternalAdministratorResponse> administrators() {
         return Optional.ofNullable(this.administrators);
     }
     /**
-     * Collation of the managed instance.
+     * @return Collation of the managed instance.
      * 
-    */
+     */
     public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
-     * The Dns Zone that the managed instance is in.
+     * @return The Dns Zone that the managed instance is in.
      * 
-    */
+     */
     public String dnsZone() {
         return this.dnsZone;
     }
     /**
-     * The fully qualified domain name of the managed instance.
+     * @return The fully qualified domain name of the managed instance.
      * 
-    */
+     */
     public String fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Azure Active Directory identity of the managed instance.
+     * @return The Azure Active Directory identity of the managed instance.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The Id of the instance pool this managed server belongs to.
+     * @return The Id of the instance pool this managed server belongs to.
      * 
-    */
+     */
     public Optional<String> instancePoolId() {
         return Optional.ofNullable(this.instancePoolId);
     }
     /**
-     * A CMK URI of the key to use for encryption.
+     * @return A CMK URI of the key to use for encryption.
      * 
-    */
+     */
     public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
+     * @return The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Specifies maintenance configuration id to apply to this managed instance.
+     * @return Specifies maintenance configuration id to apply to this managed instance.
      * 
-    */
+     */
     public Optional<String> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
-     * Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
+     * @return Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
-    */
+     */
     public Optional<String> minimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource id of a user assigned identity to be used by default.
+     * @return The resource id of a user assigned identity to be used by default.
      * 
-    */
+     */
     public Optional<String> primaryUserAssignedIdentityId() {
         return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
     /**
-     * List of private endpoint connections on a managed instance.
+     * @return List of private endpoint connections on a managed instance.
      * 
-    */
+     */
     public List<ManagedInstancePecPropertyResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
@@ -344,91 +344,91 @@ public final class GetManagedInstanceResult {
         return this.provisioningState;
     }
     /**
-     * Connection type used for connecting to the instance.
+     * @return Connection type used for connecting to the instance.
      * 
-    */
+     */
     public Optional<String> proxyOverride() {
         return Optional.ofNullable(this.proxyOverride);
     }
     /**
-     * Whether or not the public data endpoint is enabled.
+     * @return Whether or not the public data endpoint is enabled.
      * 
-    */
+     */
     public Optional<Boolean> publicDataEndpointEnabled() {
         return Optional.ofNullable(this.publicDataEndpointEnabled);
     }
     /**
-     * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
+     * @return Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The state of the managed instance.
+     * @return The state of the managed instance.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
+     * @return The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
      * 
-    */
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
-     * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
+     * @return Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
      * 
-    */
+     */
     public Optional<Integer> storageSizeInGB() {
         return Optional.ofNullable(this.storageSizeInGB);
     }
     /**
-     * Subnet resource ID for the managed instance.
+     * @return Subnet resource ID for the managed instance.
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Id of the timezone. Allowed values are timezones supported by Windows.
+     * @return Id of the timezone. Allowed values are timezones supported by Windows.
      * Windows keeps details on supported timezones, including the id, in registry under
      * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
      * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
      * An example of valid timezone id is &#34;Pacific Standard Time&#34; or &#34;W. Europe Standard Time&#34;.
      * 
-    */
+     */
     public Optional<String> timezoneId() {
         return Optional.ofNullable(this.timezoneId);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
+     * @return The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
      * 
-    */
+     */
     public Optional<Integer> vCores() {
         return Optional.ofNullable(this.vCores);
     }
     /**
-     * Whether or not the multi-az is enabled.
+     * @return Whether or not the multi-az is enabled.
      * 
-    */
+     */
     public Optional<Boolean> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }

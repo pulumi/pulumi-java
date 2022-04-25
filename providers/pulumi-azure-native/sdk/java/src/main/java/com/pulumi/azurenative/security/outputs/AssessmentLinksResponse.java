@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AssessmentLinksResponse {
     /**
-     * Link to assessment in Azure Portal
+     * @return Link to assessment in Azure Portal
      * 
      */
     private final String azurePortalUri;
@@ -21,9 +21,9 @@ public final class AssessmentLinksResponse {
     }
 
     /**
-     * Link to assessment in Azure Portal
+     * @return Link to assessment in Azure Portal
      * 
-    */
+     */
     public String azurePortalUri() {
         return this.azurePortalUri;
     }

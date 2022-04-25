@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ActivityDependencyResponse {
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String activity;
     /**
-     * Match-Condition for the dependency.
+     * @return Match-Condition for the dependency.
      * 
      */
     private final List<String> dependencyConditions;
@@ -30,16 +30,16 @@ public final class ActivityDependencyResponse {
     }
 
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String activity() {
         return this.activity;
     }
     /**
-     * Match-Condition for the dependency.
+     * @return Match-Condition for the dependency.
      * 
-    */
+     */
     public List<String> dependencyConditions() {
         return this.dependencyConditions;
     }

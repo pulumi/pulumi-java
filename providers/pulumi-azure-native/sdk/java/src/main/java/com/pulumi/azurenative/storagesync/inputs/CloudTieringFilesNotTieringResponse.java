@@ -26,6 +26,10 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
     @Import(name="errors", required=true)
     private List<FilesNotTieringErrorResponse> errors;
 
+    /**
+     * @return Array of tiering errors
+     * 
+     */
     public List<FilesNotTieringErrorResponse> errors() {
         return this.errors;
     }
@@ -37,6 +41,10 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -48,6 +56,10 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
     @Import(name="totalFileCount", required=true)
     private Double totalFileCount;
 
+    /**
+     * @return Last cloud tiering result (HResult)
+     * 
+     */
     public Double totalFileCount() {
         return this.totalFileCount;
     }
@@ -78,20 +90,44 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
             $ = new CloudTieringFilesNotTieringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors Array of tiering errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<FilesNotTieringErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors Array of tiering errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(FilesNotTieringErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param totalFileCount Last cloud tiering result (HResult)
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalFileCount(Double totalFileCount) {
             $.totalFileCount = totalFileCount;
             return this;

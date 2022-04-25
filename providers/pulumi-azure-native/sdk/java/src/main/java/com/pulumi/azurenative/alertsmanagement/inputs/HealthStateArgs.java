@@ -27,6 +27,10 @@ public final class HealthStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthStateName", required=true)
     private Output<Either<String,HealthStateName>> healthStateName;
 
+    /**
+     * @return Health state name
+     * 
+     */
     public Output<Either<String,HealthStateName>> healthStateName() {
         return this.healthStateName;
     }
@@ -38,6 +42,10 @@ public final class HealthStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
     private Output<Double> severity;
 
+    /**
+     * @return Severity of alert fired
+     * 
+     */
     public Output<Double> severity() {
         return this.severity;
     }
@@ -67,28 +75,64 @@ public final class HealthStateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HealthStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthStateName Health state name
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStateName(Output<Either<String,HealthStateName>> healthStateName) {
             $.healthStateName = healthStateName;
             return this;
         }
 
+        /**
+         * @param healthStateName Health state name
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStateName(Either<String,HealthStateName> healthStateName) {
             return healthStateName(Output.of(healthStateName));
         }
 
+        /**
+         * @param healthStateName Health state name
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStateName(String healthStateName) {
             return healthStateName(Either.ofLeft(healthStateName));
         }
 
+        /**
+         * @param healthStateName Health state name
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStateName(HealthStateName healthStateName) {
             return healthStateName(Either.ofRight(healthStateName));
         }
 
+        /**
+         * @param severity Severity of alert fired
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Double> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity Severity of alert fired
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Double severity) {
             return severity(Output.of(severity));
         }

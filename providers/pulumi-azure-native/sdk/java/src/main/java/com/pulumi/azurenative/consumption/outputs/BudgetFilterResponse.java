@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetFilterResponse {
     /**
-     * The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
      */
     private final @Nullable List<BudgetFilterPropertiesResponse> and;
     /**
-     * Has comparison expression for a dimension
+     * @return Has comparison expression for a dimension
      * 
      */
     private final @Nullable BudgetComparisonExpressionResponse dimensions;
     /**
-     * The logical &#34;NOT&#34; expression.
+     * @return The logical &#34;NOT&#34; expression.
      * 
      */
     private final @Nullable BudgetFilterPropertiesResponse not;
     /**
-     * Has comparison expression for a tag
+     * @return Has comparison expression for a tag
      * 
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
@@ -47,30 +47,30 @@ public final class BudgetFilterResponse {
     }
 
     /**
-     * The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
-    */
+     */
     public List<BudgetFilterPropertiesResponse> and() {
         return this.and == null ? List.of() : this.and;
     }
     /**
-     * Has comparison expression for a dimension
+     * @return Has comparison expression for a dimension
      * 
-    */
+     */
     public Optional<BudgetComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
-     * The logical &#34;NOT&#34; expression.
+     * @return The logical &#34;NOT&#34; expression.
      * 
-    */
+     */
     public Optional<BudgetFilterPropertiesResponse> not() {
         return Optional.ofNullable(this.not);
     }
     /**
-     * Has comparison expression for a tag
+     * @return Has comparison expression for a tag
      * 
-    */
+     */
     public Optional<BudgetComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }

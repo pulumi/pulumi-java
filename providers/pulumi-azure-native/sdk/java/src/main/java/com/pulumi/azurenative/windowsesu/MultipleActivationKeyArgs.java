@@ -29,6 +29,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="agreementNumber")
     private @Nullable Output<String> agreementNumber;
 
+    /**
+     * @return Agreement number under which the key is requested.
+     * 
+     */
     public Optional<Output<String>> agreementNumber() {
         return Optional.ofNullable(this.agreementNumber);
     }
@@ -40,6 +44,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="installedServerNumber")
     private @Nullable Output<Integer> installedServerNumber;
 
+    /**
+     * @return Number of activations/servers using the MAK key.
+     * 
+     */
     public Optional<Output<Integer>> installedServerNumber() {
         return Optional.ofNullable(this.installedServerNumber);
     }
@@ -51,6 +59,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="isEligible")
     private @Nullable Output<Boolean> isEligible;
 
+    /**
+     * @return &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
+     * 
+     */
     public Optional<Output<Boolean>> isEligible() {
         return Optional.ofNullable(this.isEligible);
     }
@@ -62,6 +74,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -73,6 +89,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="multipleActivationKeyName")
     private @Nullable Output<String> multipleActivationKeyName;
 
+    /**
+     * @return The name of the MAK key.
+     * 
+     */
     public Optional<Output<String>> multipleActivationKeyName() {
         return Optional.ofNullable(this.multipleActivationKeyName);
     }
@@ -84,6 +104,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="osType")
     private @Nullable Output<Either<String,OsType>> osType;
 
+    /**
+     * @return Type of OS for which the key is requested.
+     * 
+     */
     public Optional<Output<Either<String,OsType>>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -95,6 +119,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -106,6 +134,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="supportType")
     private @Nullable Output<Either<String,SupportType>> supportType;
 
+    /**
+     * @return Type of support
+     * 
+     */
     public Optional<Output<Either<String,SupportType>>> supportType() {
         return Optional.ofNullable(this.supportType);
     }
@@ -117,6 +149,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -153,99 +189,231 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
             $ = new MultipleActivationKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agreementNumber Agreement number under which the key is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreementNumber(@Nullable Output<String> agreementNumber) {
             $.agreementNumber = agreementNumber;
             return this;
         }
 
+        /**
+         * @param agreementNumber Agreement number under which the key is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreementNumber(String agreementNumber) {
             return agreementNumber(Output.of(agreementNumber));
         }
 
+        /**
+         * @param installedServerNumber Number of activations/servers using the MAK key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installedServerNumber(@Nullable Output<Integer> installedServerNumber) {
             $.installedServerNumber = installedServerNumber;
             return this;
         }
 
+        /**
+         * @param installedServerNumber Number of activations/servers using the MAK key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installedServerNumber(Integer installedServerNumber) {
             return installedServerNumber(Output.of(installedServerNumber));
         }
 
+        /**
+         * @param isEligible &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEligible(@Nullable Output<Boolean> isEligible) {
             $.isEligible = isEligible;
             return this;
         }
 
+        /**
+         * @param isEligible &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEligible(Boolean isEligible) {
             return isEligible(Output.of(isEligible));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param multipleActivationKeyName The name of the MAK key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multipleActivationKeyName(@Nullable Output<String> multipleActivationKeyName) {
             $.multipleActivationKeyName = multipleActivationKeyName;
             return this;
         }
 
+        /**
+         * @param multipleActivationKeyName The name of the MAK key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multipleActivationKeyName(String multipleActivationKeyName) {
             return multipleActivationKeyName(Output.of(multipleActivationKeyName));
         }
 
+        /**
+         * @param osType Type of OS for which the key is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType Type of OS for which the key is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OsType> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType Type of OS for which the key is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType Type of OS for which the key is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OsType osType) {
             return osType(Either.ofRight(osType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param supportType Type of support
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportType(@Nullable Output<Either<String,SupportType>> supportType) {
             $.supportType = supportType;
             return this;
         }
 
+        /**
+         * @param supportType Type of support
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportType(Either<String,SupportType> supportType) {
             return supportType(Output.of(supportType));
         }
 
+        /**
+         * @param supportType Type of support
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportType(String supportType) {
             return supportType(Either.ofLeft(supportType));
         }
 
+        /**
+         * @param supportType Type of support
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportType(SupportType supportType) {
             return supportType(Either.ofRight(supportType));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -25,6 +25,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="associationAssignedCode")
     private @Nullable String associationAssignedCode;
 
+    /**
+     * @return The association assigned code.
+     * 
+     */
     public Optional<String> associationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
@@ -36,6 +40,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="messageId", required=true)
     private String messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public String messageId() {
         return this.messageId;
     }
@@ -47,6 +55,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="messageRelease", required=true)
     private String messageRelease;
 
+    /**
+     * @return The message release version.
+     * 
+     */
     public String messageRelease() {
         return this.messageRelease;
     }
@@ -58,6 +70,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="messageVersion", required=true)
     private String messageVersion;
 
+    /**
+     * @return The message version.
+     * 
+     */
     public String messageVersion() {
         return this.messageVersion;
     }
@@ -69,6 +85,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="schemaName", required=true)
     private String schemaName;
 
+    /**
+     * @return The schema name.
+     * 
+     */
     public String schemaName() {
         return this.schemaName;
     }
@@ -80,6 +100,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="senderApplicationId")
     private @Nullable String senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public Optional<String> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
@@ -91,6 +115,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="senderApplicationQualifier")
     private @Nullable String senderApplicationQualifier;
 
+    /**
+     * @return The sender application qualifier.
+     * 
+     */
     public Optional<String> senderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }
@@ -125,36 +153,78 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
             $ = new EdifactSchemaReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationAssignedCode The association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             $.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageRelease The message release version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(String messageRelease) {
             $.messageRelease = messageRelease;
             return this;
         }
 
+        /**
+         * @param messageVersion The message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(String messageVersion) {
             $.messageVersion = messageVersion;
             return this;
         }
 
+        /**
+         * @param schemaName The schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param senderApplicationQualifier The sender application qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             $.senderApplicationQualifier = senderApplicationQualifier;
             return this;

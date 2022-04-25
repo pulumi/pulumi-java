@@ -28,6 +28,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="amlWorkspaceId")
     private @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
 
+    /**
+     * @return The ID of a Azure Machine Learning workspace to link with Databricks workspace
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> amlWorkspaceId() {
         return Optional.ofNullable(this.amlWorkspaceId);
     }
@@ -39,6 +43,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="customPrivateSubnetName")
     private @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
 
+    /**
+     * @return The name of the Private Subnet within the Virtual Network
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> customPrivateSubnetName() {
         return Optional.ofNullable(this.customPrivateSubnetName);
     }
@@ -50,6 +58,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="customPublicSubnetName")
     private @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
 
+    /**
+     * @return The name of a Public Subnet within the Virtual Network
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> customPublicSubnetName() {
         return Optional.ofNullable(this.customPublicSubnetName);
     }
@@ -61,6 +73,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="customVirtualNetworkId")
     private @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
 
+    /**
+     * @return The ID of a Virtual Network where this Databricks Cluster should be created
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> customVirtualNetworkId() {
         return Optional.ofNullable(this.customVirtualNetworkId);
     }
@@ -72,6 +88,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="enableNoPublicIp")
     private @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
 
+    /**
+     * @return Should the Public IP be Disabled?
+     * 
+     */
     public Optional<WorkspaceCustomBooleanParameterResponse> enableNoPublicIp() {
         return Optional.ofNullable(this.enableNoPublicIp);
     }
@@ -83,6 +103,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="encryption")
     private @Nullable WorkspaceEncryptionParameterResponse encryption;
 
+    /**
+     * @return Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.
+     * 
+     */
     public Optional<WorkspaceEncryptionParameterResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -94,6 +118,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="loadBalancerBackendPoolName")
     private @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
 
+    /**
+     * @return Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> loadBalancerBackendPoolName() {
         return Optional.ofNullable(this.loadBalancerBackendPoolName);
     }
@@ -105,6 +133,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="loadBalancerId")
     private @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
 
+    /**
+     * @return Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> loadBalancerId() {
         return Optional.ofNullable(this.loadBalancerId);
     }
@@ -116,6 +148,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="natGatewayName")
     private @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
 
+    /**
+     * @return Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> natGatewayName() {
         return Optional.ofNullable(this.natGatewayName);
     }
@@ -127,6 +163,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="prepareEncryption")
     private @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
 
+    /**
+     * @return Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.
+     * 
+     */
     public Optional<WorkspaceCustomBooleanParameterResponse> prepareEncryption() {
         return Optional.ofNullable(this.prepareEncryption);
     }
@@ -138,6 +178,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="publicIpName")
     private @Nullable WorkspaceCustomStringParameterResponse publicIpName;
 
+    /**
+     * @return Name of the Public IP for No Public IP workspace with managed vNet.
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> publicIpName() {
         return Optional.ofNullable(this.publicIpName);
     }
@@ -149,6 +193,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="requireInfrastructureEncryption")
     private @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
 
+    /**
+     * @return A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.
+     * 
+     */
     public Optional<WorkspaceCustomBooleanParameterResponse> requireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
@@ -160,6 +208,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="resourceTags", required=true)
     private WorkspaceCustomObjectParameterResponse resourceTags;
 
+    /**
+     * @return Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.
+     * 
+     */
     public WorkspaceCustomObjectParameterResponse resourceTags() {
         return this.resourceTags;
     }
@@ -171,6 +223,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="storageAccountName")
     private @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
 
+    /**
+     * @return Default DBFS storage account name.
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -182,6 +238,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="storageAccountSkuName")
     private @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
 
+    /**
+     * @return Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> storageAccountSkuName() {
         return Optional.ofNullable(this.storageAccountSkuName);
     }
@@ -193,6 +253,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
     @Import(name="vnetAddressPrefix")
     private @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
 
+    /**
+     * @return Address prefix for Managed virtual network. Default value for this input is 10.139.
+     * 
+     */
     public Optional<WorkspaceCustomStringParameterResponse> vnetAddressPrefix() {
         return Optional.ofNullable(this.vnetAddressPrefix);
     }
@@ -236,81 +300,177 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
             $ = new WorkspaceCustomParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amlWorkspaceId The ID of a Azure Machine Learning workspace to link with Databricks workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder amlWorkspaceId(@Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId) {
             $.amlWorkspaceId = amlWorkspaceId;
             return this;
         }
 
+        /**
+         * @param customPrivateSubnetName The name of the Private Subnet within the Virtual Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPrivateSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName) {
             $.customPrivateSubnetName = customPrivateSubnetName;
             return this;
         }
 
+        /**
+         * @param customPublicSubnetName The name of a Public Subnet within the Virtual Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPublicSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName) {
             $.customPublicSubnetName = customPublicSubnetName;
             return this;
         }
 
+        /**
+         * @param customVirtualNetworkId The ID of a Virtual Network where this Databricks Cluster should be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder customVirtualNetworkId(@Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId) {
             $.customVirtualNetworkId = customVirtualNetworkId;
             return this;
         }
 
+        /**
+         * @param enableNoPublicIp Should the Public IP be Disabled?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp) {
             $.enableNoPublicIp = enableNoPublicIp;
             return this;
         }
 
+        /**
+         * @param encryption Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable WorkspaceEncryptionParameterResponse encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param loadBalancerBackendPoolName Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName) {
             $.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
             return this;
         }
 
+        /**
+         * @param loadBalancerId Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerId(@Nullable WorkspaceCustomStringParameterResponse loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
         }
 
+        /**
+         * @param natGatewayName Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGatewayName(@Nullable WorkspaceCustomStringParameterResponse natGatewayName) {
             $.natGatewayName = natGatewayName;
             return this;
         }
 
+        /**
+         * @param prepareEncryption Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prepareEncryption(@Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption) {
             $.prepareEncryption = prepareEncryption;
             return this;
         }
 
+        /**
+         * @param publicIpName Name of the Public IP for No Public IP workspace with managed vNet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpName(@Nullable WorkspaceCustomStringParameterResponse publicIpName) {
             $.publicIpName = publicIpName;
             return this;
         }
 
+        /**
+         * @param requireInfrastructureEncryption A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption) {
             $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
+        /**
+         * @param resourceTags Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(WorkspaceCustomObjectParameterResponse resourceTags) {
             $.resourceTags = resourceTags;
             return this;
         }
 
+        /**
+         * @param storageAccountName Default DBFS storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable WorkspaceCustomStringParameterResponse storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountSkuName Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountSkuName(@Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName) {
             $.storageAccountSkuName = storageAccountSkuName;
             return this;
         }
 
+        /**
+         * @param vnetAddressPrefix Address prefix for Managed virtual network. Default value for this input is 10.139.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetAddressPrefix(@Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
             $.vnetAddressPrefix = vnetAddressPrefix;
             return this;

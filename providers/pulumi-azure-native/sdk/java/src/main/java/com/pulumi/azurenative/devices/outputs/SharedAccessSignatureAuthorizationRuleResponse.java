@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SharedAccessSignatureAuthorizationRuleResponse {
     /**
-     * The name of the shared access policy.
+     * @return The name of the shared access policy.
      * 
      */
     private final String keyName;
     /**
-     * The primary key.
+     * @return The primary key.
      * 
      */
     private final @Nullable String primaryKey;
     /**
-     * The permissions assigned to the shared access policy.
+     * @return The permissions assigned to the shared access policy.
      * 
      */
     private final String rights;
     /**
-     * The secondary key.
+     * @return The secondary key.
      * 
      */
     private final @Nullable String secondaryKey;
@@ -45,30 +45,30 @@ public final class SharedAccessSignatureAuthorizationRuleResponse {
     }
 
     /**
-     * The name of the shared access policy.
+     * @return The name of the shared access policy.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The primary key.
+     * @return The primary key.
      * 
-    */
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
-     * The permissions assigned to the shared access policy.
+     * @return The permissions assigned to the shared access policy.
      * 
-    */
+     */
     public String rights() {
         return this.rights;
     }
     /**
-     * The secondary key.
+     * @return The secondary key.
      * 
-    */
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

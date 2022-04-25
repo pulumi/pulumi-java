@@ -19,6 +19,10 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return The name of the deployment.
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -30,6 +34,10 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return The management group ID.
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -59,11 +67,23 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
             $ = new GetDeploymentAtManagementGroupScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param groupId The management group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;

@@ -23,6 +23,10 @@ public final class ConsoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consoleName")
     private @Nullable Output<String> consoleName;
 
+    /**
+     * @return The name of the console
+     * 
+     */
     public Optional<Output<String>> consoleName() {
         return Optional.ofNullable(this.consoleName);
     }
@@ -34,6 +38,10 @@ public final class ConsoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<ConsoleCreatePropertiesArgs> properties;
 
+    /**
+     * @return Cloud shell properties for creating a console.
+     * 
+     */
     public Output<ConsoleCreatePropertiesArgs> properties() {
         return this.properties;
     }
@@ -63,20 +71,44 @@ public final class ConsoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConsoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleName(@Nullable Output<String> consoleName) {
             $.consoleName = consoleName;
             return this;
         }
 
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleName(String consoleName) {
             return consoleName(Output.of(consoleName));
         }
 
+        /**
+         * @param properties Cloud shell properties for creating a console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<ConsoleCreatePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Cloud shell properties for creating a console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ConsoleCreatePropertiesArgs properties) {
             return properties(Output.of(properties));
         }

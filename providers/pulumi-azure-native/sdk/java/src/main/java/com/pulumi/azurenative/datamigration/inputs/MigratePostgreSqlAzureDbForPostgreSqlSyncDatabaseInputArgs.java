@@ -27,6 +27,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="migrationSetting")
     private @Nullable Output<Map<String,String>> migrationSetting;
 
+    /**
+     * @return Migration settings which tune the migration behavior
+     * 
+     */
     public Optional<Output<Map<String,String>>> migrationSetting() {
         return Optional.ofNullable(this.migrationSetting);
     }
@@ -38,6 +42,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="sourceSetting")
     private @Nullable Output<Map<String,String>> sourceSetting;
 
+    /**
+     * @return Source settings to tune source endpoint migration behavior
+     * 
+     */
     public Optional<Output<Map<String,String>>> sourceSetting() {
         return Optional.ofNullable(this.sourceSetting);
     }
@@ -60,6 +72,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="targetDatabaseName")
     private @Nullable Output<String> targetDatabaseName;
 
+    /**
+     * @return Name of target database. Note: Target database will be truncated before starting migration.
+     * 
+     */
     public Optional<Output<String>> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
@@ -71,6 +87,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="targetSetting")
     private @Nullable Output<Map<String,String>> targetSetting;
 
+    /**
+     * @return Target settings to tune target endpoint migration behavior
+     * 
+     */
     public Optional<Output<Map<String,String>>> targetSetting() {
         return Optional.ofNullable(this.targetSetting);
     }
@@ -103,47 +123,107 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
             $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrationSetting Migration settings which tune the migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSetting(@Nullable Output<Map<String,String>> migrationSetting) {
             $.migrationSetting = migrationSetting;
             return this;
         }
 
+        /**
+         * @param migrationSetting Migration settings which tune the migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSetting(Map<String,String> migrationSetting) {
             return migrationSetting(Output.of(migrationSetting));
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sourceSetting Source settings to tune source endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSetting(@Nullable Output<Map<String,String>> sourceSetting) {
             $.sourceSetting = sourceSetting;
             return this;
         }
 
+        /**
+         * @param sourceSetting Source settings to tune source endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSetting(Map<String,String> sourceSetting) {
             return sourceSetting(Output.of(sourceSetting));
         }
 
+        /**
+         * @param targetDatabaseName Name of target database. Note: Target database will be truncated before starting migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             $.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
+        /**
+         * @param targetDatabaseName Name of target database. Note: Target database will be truncated before starting migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(String targetDatabaseName) {
             return targetDatabaseName(Output.of(targetDatabaseName));
         }
 
+        /**
+         * @param targetSetting Target settings to tune target endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSetting(@Nullable Output<Map<String,String>> targetSetting) {
             $.targetSetting = targetSetting;
             return this;
         }
 
+        /**
+         * @param targetSetting Target settings to tune target endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSetting(Map<String,String> targetSetting) {
             return targetSetting(Output.of(targetSetting));
         }

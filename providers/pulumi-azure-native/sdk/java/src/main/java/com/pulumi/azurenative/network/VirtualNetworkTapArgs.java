@@ -26,6 +26,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
     private @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
+    /**
+     * @return The reference to the private IP address on the internal Load Balancer that will receive the tap.
+     * 
+     */
     public Optional<Output<FrontendIPConfigurationArgs>> destinationLoadBalancerFrontEndIPConfiguration() {
         return Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationNetworkInterfaceIPConfiguration")
     private @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
+    /**
+     * @return The reference to the private IP Address of the collector nic that will receive the tap.
+     * 
+     */
     public Optional<Output<NetworkInterfaceIPConfigurationArgs>> destinationNetworkInterfaceIPConfiguration() {
         return Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
@@ -48,6 +56,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationPort")
     private @Nullable Output<Integer> destinationPort;
 
+    /**
+     * @return The VXLAN destination port that will receive the tapped traffic.
+     * 
+     */
     public Optional<Output<Integer>> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
@@ -59,6 +71,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -70,6 +86,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +131,10 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tapName")
     private @Nullable Output<String> tapName;
 
+    /**
+     * @return The name of the virtual network tap.
+     * 
+     */
     public Optional<Output<String>> tapName() {
         return Optional.ofNullable(this.tapName);
     }
@@ -138,74 +170,170 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
             $ = new VirtualNetworkTapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationLoadBalancerFrontEndIPConfiguration The reference to the private IP address on the internal Load Balancer that will receive the tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration) {
             $.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationLoadBalancerFrontEndIPConfiguration The reference to the private IP address on the internal Load Balancer that will receive the tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLoadBalancerFrontEndIPConfiguration(FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
             return destinationLoadBalancerFrontEndIPConfiguration(Output.of(destinationLoadBalancerFrontEndIPConfiguration));
         }
 
+        /**
+         * @param destinationNetworkInterfaceIPConfiguration The reference to the private IP Address of the collector nic that will receive the tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
             $.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationNetworkInterfaceIPConfiguration The reference to the private IP Address of the collector nic that will receive the tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationNetworkInterfaceIPConfiguration(NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
             return destinationNetworkInterfaceIPConfiguration(Output.of(destinationNetworkInterfaceIPConfiguration));
         }
 
+        /**
+         * @param destinationPort The VXLAN destination port that will receive the tapped traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param destinationPort The VXLAN destination port that will receive the tapped traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(Integer destinationPort) {
             return destinationPort(Output.of(destinationPort));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tapName The name of the virtual network tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapName(@Nullable Output<String> tapName) {
             $.tapName = tapName;
             return this;
         }
 
+        /**
+         * @param tapName The name of the virtual network tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapName(String tapName) {
             return tapName(Output.of(tapName));
         }

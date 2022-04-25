@@ -24,6 +24,10 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="connectionStatus", required=true)
     private String connectionStatus;
 
+    /**
+     * @return Virtual Network Gateway connection status.
+     * 
+     */
     public String connectionStatus() {
         return this.connectionStatus;
     }
@@ -35,6 +39,10 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="egressBytesTransferred", required=true)
     private Double egressBytesTransferred;
 
+    /**
+     * @return The Egress Bytes Transferred in this connection.
+     * 
+     */
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
@@ -46,6 +54,10 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="ingressBytesTransferred", required=true)
     private Double ingressBytesTransferred;
 
+    /**
+     * @return The Ingress Bytes Transferred in this connection.
+     * 
+     */
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
@@ -57,6 +69,10 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="lastConnectionEstablishedUtcTime", required=true)
     private String lastConnectionEstablishedUtcTime;
 
+    /**
+     * @return The time at which connection was established in Utc format.
+     * 
+     */
     public String lastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
     }
@@ -68,6 +84,10 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="tunnel", required=true)
     private String tunnel;
 
+    /**
+     * @return Tunnel name.
+     * 
+     */
     public String tunnel() {
         return this.tunnel;
     }
@@ -100,26 +120,56 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
             $ = new TunnelConnectionHealthResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionStatus Virtual Network Gateway connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStatus(String connectionStatus) {
             $.connectionStatus = connectionStatus;
             return this;
         }
 
+        /**
+         * @param egressBytesTransferred The Egress Bytes Transferred in this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
             $.egressBytesTransferred = egressBytesTransferred;
             return this;
         }
 
+        /**
+         * @param ingressBytesTransferred The Ingress Bytes Transferred in this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             $.ingressBytesTransferred = ingressBytesTransferred;
             return this;
         }
 
+        /**
+         * @param lastConnectionEstablishedUtcTime The time at which connection was established in Utc format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConnectionEstablishedUtcTime(String lastConnectionEstablishedUtcTime) {
             $.lastConnectionEstablishedUtcTime = lastConnectionEstablishedUtcTime;
             return this;
         }
 
+        /**
+         * @param tunnel Tunnel name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnel(String tunnel) {
             $.tunnel = tunnel;
             return this;

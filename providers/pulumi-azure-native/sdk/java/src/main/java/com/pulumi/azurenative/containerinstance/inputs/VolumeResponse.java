@@ -29,6 +29,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureFile")
     private @Nullable AzureFileVolumeResponse azureFile;
 
+    /**
+     * @return The Azure File volume.
+     * 
+     */
     public Optional<AzureFileVolumeResponse> azureFile() {
         return Optional.ofNullable(this.azureFile);
     }
@@ -40,6 +44,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="emptyDir")
     private @Nullable Object emptyDir;
 
+    /**
+     * @return The empty directory volume.
+     * 
+     */
     public Optional<Object> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
@@ -51,6 +59,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gitRepo")
     private @Nullable GitRepoVolumeResponse gitRepo;
 
+    /**
+     * @return The git repo volume.
+     * 
+     */
     public Optional<GitRepoVolumeResponse> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
@@ -62,6 +74,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the volume.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -73,6 +89,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secret")
     private @Nullable Map<String,String> secret;
 
+    /**
+     * @return The secret volume.
+     * 
+     */
     public Optional<Map<String,String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -105,26 +125,56 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureFile The Azure File volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFile(@Nullable AzureFileVolumeResponse azureFile) {
             $.azureFile = azureFile;
             return this;
         }
 
+        /**
+         * @param emptyDir The empty directory volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyDir(@Nullable Object emptyDir) {
             $.emptyDir = emptyDir;
             return this;
         }
 
+        /**
+         * @param gitRepo The git repo volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepo(@Nullable GitRepoVolumeResponse gitRepo) {
             $.gitRepo = gitRepo;
             return this;
         }
 
+        /**
+         * @param name The name of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param secret The secret volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Map<String,String> secret) {
             $.secret = secret;
             return this;

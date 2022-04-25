@@ -23,6 +23,10 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="blobInventoryPolicyName")
     private @Nullable Output<String> blobInventoryPolicyName;
 
+    /**
+     * @return The name of the storage account blob inventory policy. It should always be &#39;default&#39;
+     * 
+     */
     public Optional<Output<String>> blobInventoryPolicyName() {
         return Optional.ofNullable(this.blobInventoryPolicyName);
     }
@@ -45,6 +53,10 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="policy", required=true)
     private Output<BlobInventoryPolicySchemaArgs> policy;
 
+    /**
+     * @return The storage account blob inventory policy object. It is composed of policy rules.
+     * 
+     */
     public Output<BlobInventoryPolicySchemaArgs> policy() {
         return this.policy;
     }
@@ -56,6 +68,10 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
             $ = new BlobInventoryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param blobInventoryPolicyName The name of the storage account blob inventory policy. It should always be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobInventoryPolicyName(@Nullable Output<String> blobInventoryPolicyName) {
             $.blobInventoryPolicyName = blobInventoryPolicyName;
             return this;
         }
 
+        /**
+         * @param blobInventoryPolicyName The name of the storage account blob inventory policy. It should always be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobInventoryPolicyName(String blobInventoryPolicyName) {
             return blobInventoryPolicyName(Output.of(blobInventoryPolicyName));
         }
 
+        /**
+         * @param policy The storage account blob inventory policy object. It is composed of policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<BlobInventoryPolicySchemaArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The storage account blob inventory policy object. It is composed of policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(BlobInventoryPolicySchemaArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

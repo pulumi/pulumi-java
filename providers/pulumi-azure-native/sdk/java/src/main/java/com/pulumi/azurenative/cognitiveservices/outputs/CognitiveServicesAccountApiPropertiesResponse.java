@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CognitiveServicesAccountApiPropertiesResponse {
     /**
-     * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     * @return (Metrics Advisor Only) The Azure AD Client Id (Application Id).
      * 
      */
     private final @Nullable String aadClientId;
     /**
-     * (Metrics Advisor Only) The Azure AD Tenant Id.
+     * @return (Metrics Advisor Only) The Azure AD Tenant Id.
      * 
      */
     private final @Nullable String aadTenantId;
     /**
-     * (Personalization Only) The flag to enable statistics of Bing Search.
+     * @return (Personalization Only) The flag to enable statistics of Bing Search.
      * 
      */
     private final @Nullable String eventHubConnectionString;
     /**
-     * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     * @return (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
      * 
      */
     private final @Nullable String qnaAzureSearchEndpointId;
     /**
-     * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     * @return (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
      * 
      */
     private final @Nullable String qnaAzureSearchEndpointKey;
     /**
-     * (QnAMaker Only) The runtime endpoint of QnAMaker.
+     * @return (QnAMaker Only) The runtime endpoint of QnAMaker.
      * 
      */
     private final @Nullable String qnaRuntimeEndpoint;
     /**
-     * (Bing Search Only) The flag to enable statistics of Bing Search.
+     * @return (Bing Search Only) The flag to enable statistics of Bing Search.
      * 
      */
     private final @Nullable Boolean statisticsEnabled;
     /**
-     * (Personalization Only) The storage account connection string.
+     * @return (Personalization Only) The storage account connection string.
      * 
      */
     private final @Nullable String storageAccountConnectionString;
     /**
-     * (Metrics Advisor Only) The super user of Metrics Advisor.
+     * @return (Metrics Advisor Only) The super user of Metrics Advisor.
      * 
      */
     private final @Nullable String superUser;
     /**
-     * (Metrics Advisor Only) The website name of Metrics Advisor.
+     * @return (Metrics Advisor Only) The website name of Metrics Advisor.
      * 
      */
     private final @Nullable String websiteName;
@@ -88,72 +88,72 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
     }
 
     /**
-     * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     * @return (Metrics Advisor Only) The Azure AD Client Id (Application Id).
      * 
-    */
+     */
     public Optional<String> aadClientId() {
         return Optional.ofNullable(this.aadClientId);
     }
     /**
-     * (Metrics Advisor Only) The Azure AD Tenant Id.
+     * @return (Metrics Advisor Only) The Azure AD Tenant Id.
      * 
-    */
+     */
     public Optional<String> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
-     * (Personalization Only) The flag to enable statistics of Bing Search.
+     * @return (Personalization Only) The flag to enable statistics of Bing Search.
      * 
-    */
+     */
     public Optional<String> eventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
     /**
-     * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     * @return (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
      * 
-    */
+     */
     public Optional<String> qnaAzureSearchEndpointId() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
     /**
-     * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     * @return (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
      * 
-    */
+     */
     public Optional<String> qnaAzureSearchEndpointKey() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
     /**
-     * (QnAMaker Only) The runtime endpoint of QnAMaker.
+     * @return (QnAMaker Only) The runtime endpoint of QnAMaker.
      * 
-    */
+     */
     public Optional<String> qnaRuntimeEndpoint() {
         return Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
     /**
-     * (Bing Search Only) The flag to enable statistics of Bing Search.
+     * @return (Bing Search Only) The flag to enable statistics of Bing Search.
      * 
-    */
+     */
     public Optional<Boolean> statisticsEnabled() {
         return Optional.ofNullable(this.statisticsEnabled);
     }
     /**
-     * (Personalization Only) The storage account connection string.
+     * @return (Personalization Only) The storage account connection string.
      * 
-    */
+     */
     public Optional<String> storageAccountConnectionString() {
         return Optional.ofNullable(this.storageAccountConnectionString);
     }
     /**
-     * (Metrics Advisor Only) The super user of Metrics Advisor.
+     * @return (Metrics Advisor Only) The super user of Metrics Advisor.
      * 
-    */
+     */
     public Optional<String> superUser() {
         return Optional.ofNullable(this.superUser);
     }
     /**
-     * (Metrics Advisor Only) The website name of Metrics Advisor.
+     * @return (Metrics Advisor Only) The website name of Metrics Advisor.
      * 
-    */
+     */
     public Optional<String> websiteName() {
         return Optional.ofNullable(this.websiteName);
     }

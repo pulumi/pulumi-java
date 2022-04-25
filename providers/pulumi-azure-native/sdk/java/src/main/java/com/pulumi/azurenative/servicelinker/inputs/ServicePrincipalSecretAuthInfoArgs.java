@@ -26,6 +26,11 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
     @Import(name="authType", required=true)
     private Output<String> authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;servicePrincipalSecret&#39;.
+     * 
+     */
     public Output<String> authType() {
         return this.authType;
     }
@@ -37,6 +42,10 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return ServicePrincipal application clientId for servicePrincipal auth.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -48,6 +57,10 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return Principal Id for servicePrincipal auth.
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -59,6 +72,10 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return Secret for servicePrincipal auth.
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -90,38 +107,88 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
             $ = new ServicePrincipalSecretAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;servicePrincipalSecret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;servicePrincipalSecret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param clientId ServicePrincipal application clientId for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId ServicePrincipal application clientId for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param principalId Principal Id for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Principal Id for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param secret Secret for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

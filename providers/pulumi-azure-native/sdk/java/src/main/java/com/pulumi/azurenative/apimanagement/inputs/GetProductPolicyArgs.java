@@ -21,6 +21,10 @@ public final class GetProductPolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return Policy Export Format.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -32,6 +36,10 @@ public final class GetProductPolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="policyId", required=true)
     private String policyId;
 
+    /**
+     * @return The identifier of the Policy.
+     * 
+     */
     public String policyId() {
         return this.policyId;
     }
@@ -43,6 +51,10 @@ public final class GetProductPolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="productId", required=true)
     private String productId;
 
+    /**
+     * @return Product identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String productId() {
         return this.productId;
     }
@@ -54,6 +66,10 @@ public final class GetProductPolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -65,6 +81,10 @@ public final class GetProductPolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -97,26 +117,56 @@ public final class GetProductPolicyArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetProductPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format Policy Export Format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param policyId The identifier of the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

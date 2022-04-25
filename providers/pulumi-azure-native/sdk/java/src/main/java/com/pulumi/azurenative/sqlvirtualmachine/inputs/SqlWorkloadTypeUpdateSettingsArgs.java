@@ -28,6 +28,10 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="sqlWorkloadType")
     private @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
+    /**
+     * @return SQL Server workload type.
+     * 
+     */
     public Optional<Output<Either<String,SqlWorkloadType>>> sqlWorkloadType() {
         return Optional.ofNullable(this.sqlWorkloadType);
     }
@@ -56,19 +60,43 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends com.pulumi.resource
             $ = new SqlWorkloadTypeUpdateSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sqlWorkloadType SQL Server workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadType(@Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType) {
             $.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
 
+        /**
+         * @param sqlWorkloadType SQL Server workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadType(Either<String,SqlWorkloadType> sqlWorkloadType) {
             return sqlWorkloadType(Output.of(sqlWorkloadType));
         }
 
+        /**
+         * @param sqlWorkloadType SQL Server workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadType(String sqlWorkloadType) {
             return sqlWorkloadType(Either.ofLeft(sqlWorkloadType));
         }
 
+        /**
+         * @param sqlWorkloadType SQL Server workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadType(SqlWorkloadType sqlWorkloadType) {
             return sqlWorkloadType(Either.ofRight(sqlWorkloadType));
         }

@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProjectResult {
     /**
-     * For optimistic concurrency control.
+     * @return For optimistic concurrency control.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
+     * @return Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
      * 
      */
     private final String id;
     /**
-     * Azure location in which project is created.
+     * @return Azure location in which project is created.
      * 
      */
     private final @Nullable String location;
     /**
-     * Name of the project.
+     * @return Name of the project.
      * 
      */
     private final String name;
     /**
-     * Properties of the project.
+     * @return Properties of the project.
      * 
      */
     private final ProjectPropertiesResponse properties;
     /**
-     * Tags provided by Azure Tagging service.
+     * @return Tags provided by Azure Tagging service.
      * 
      */
     private final @Nullable Object tags;
     /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects].
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class GetProjectResult {
     }
 
     /**
-     * For optimistic concurrency control.
+     * @return For optimistic concurrency control.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
+     * @return Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure location in which project is created.
+     * @return Azure location in which project is created.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Name of the project.
+     * @return Name of the project.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the project.
+     * @return Properties of the project.
      * 
-    */
+     */
     public ProjectPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Tags provided by Azure Tagging service.
+     * @return Tags provided by Azure Tagging service.
      * 
-    */
+     */
     public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
     /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects].
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="city")
     private @Nullable Output<String> city;
 
+    /**
+     * @return The city or locality where the resource is located.
+     * 
+     */
     public Optional<Output<String>> city() {
         return Optional.ofNullable(this.city);
     }
@@ -37,6 +41,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryOrRegion")
     private @Nullable Output<String> countryOrRegion;
 
+    /**
+     * @return The country or region where the resource is located
+     * 
+     */
     public Optional<Output<String>> countryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
@@ -48,6 +56,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="district")
     private @Nullable Output<String> district;
 
+    /**
+     * @return The district, state, or province where the resource is located.
+     * 
+     */
     public Optional<Output<String>> district() {
         return Optional.ofNullable(this.district);
     }
@@ -59,6 +71,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A canonical name for the geographic or physical location.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -90,38 +106,86 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LocationDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param city The city or locality where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable Output<String> city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param city The city or locality where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(String city) {
             return city(Output.of(city));
         }
 
+        /**
+         * @param countryOrRegion The country or region where the resource is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
             $.countryOrRegion = countryOrRegion;
             return this;
         }
 
+        /**
+         * @param countryOrRegion The country or region where the resource is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryOrRegion(String countryOrRegion) {
             return countryOrRegion(Output.of(countryOrRegion));
         }
 
+        /**
+         * @param district The district, state, or province where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder district(@Nullable Output<String> district) {
             $.district = district;
             return this;
         }
 
+        /**
+         * @param district The district, state, or province where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder district(String district) {
             return district(Output.of(district));
         }
 
+        /**
+         * @param name A canonical name for the geographic or physical location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A canonical name for the geographic or physical location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

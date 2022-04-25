@@ -26,6 +26,10 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
     @Import(name="capacity")
     private @Nullable Double capacity;
 
+    /**
+     * @return Specifies the number of role instances in the cloud service.
+     * 
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -78,16 +90,34 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
             $ = new CloudServiceRoleSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Specifies the number of role instances in the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Double capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SourceControlAuthInfoResponse {
     /**
-     * Time in seconds that the token remains valid
+     * @return Time in seconds that the token remains valid
      * 
      */
     private final @Nullable Integer expiresIn;
     /**
-     * The refresh token used to refresh the access token.
+     * @return The refresh token used to refresh the access token.
      * 
      */
     private final @Nullable String refreshToken;
     /**
-     * The scope of the access token.
+     * @return The scope of the access token.
      * 
      */
     private final @Nullable String scope;
     /**
-     * The access token used to access the source control provider.
+     * @return The access token used to access the source control provider.
      * 
      */
     private final String token;
     /**
-     * The type of Auth token.
+     * @return The type of Auth token.
      * 
      */
     private final @Nullable String tokenType;
@@ -53,37 +53,37 @@ public final class SourceControlAuthInfoResponse {
     }
 
     /**
-     * Time in seconds that the token remains valid
+     * @return Time in seconds that the token remains valid
      * 
-    */
+     */
     public Optional<Integer> expiresIn() {
         return Optional.ofNullable(this.expiresIn);
     }
     /**
-     * The refresh token used to refresh the access token.
+     * @return The refresh token used to refresh the access token.
      * 
-    */
+     */
     public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
-     * The scope of the access token.
+     * @return The scope of the access token.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * The access token used to access the source control provider.
+     * @return The access token used to access the source control provider.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }
     /**
-     * The type of Auth token.
+     * @return The type of Auth token.
      * 
-    */
+     */
     public Optional<String> tokenType() {
         return Optional.ofNullable(this.tokenType);
     }

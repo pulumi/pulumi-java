@@ -27,6 +27,10 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
     @Import(name="transferAllDetails")
     private @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
 
+    /**
+     * @return Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+     * 
+     */
     public Optional<TransferConfigurationResponseTransferAllDetails> transferAllDetails() {
         return Optional.ofNullable(this.transferAllDetails);
     }
@@ -38,6 +42,10 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
     @Import(name="transferConfigurationType", required=true)
     private String transferConfigurationType;
 
+    /**
+     * @return Type of the configuration for transfer.
+     * 
+     */
     public String transferConfigurationType() {
         return this.transferConfigurationType;
     }
@@ -49,6 +57,10 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
     @Import(name="transferFilterDetails")
     private @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
+    /**
+     * @return Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+     * 
+     */
     public Optional<TransferConfigurationResponseTransferFilterDetails> transferFilterDetails() {
         return Optional.ofNullable(this.transferFilterDetails);
     }
@@ -79,16 +91,34 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
             $ = new TransferConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transferAllDetails Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllDetails(@Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails) {
             $.transferAllDetails = transferAllDetails;
             return this;
         }
 
+        /**
+         * @param transferConfigurationType Type of the configuration for transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfigurationType(String transferConfigurationType) {
             $.transferConfigurationType = transferConfigurationType;
             return this;
         }
 
+        /**
+         * @param transferFilterDetails Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferFilterDetails(@Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
             $.transferFilterDetails = transferFilterDetails;
             return this;

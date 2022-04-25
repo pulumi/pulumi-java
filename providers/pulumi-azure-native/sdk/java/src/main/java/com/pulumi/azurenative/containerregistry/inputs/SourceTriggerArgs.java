@@ -32,6 +32,10 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -43,6 +47,10 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRepository", required=true)
     private Output<SourcePropertiesArgs> sourceRepository;
 
+    /**
+     * @return The properties that describes the source(code) for the task.
+     * 
+     */
     public Output<SourcePropertiesArgs> sourceRepository() {
         return this.sourceRepository;
     }
@@ -54,6 +62,10 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceTriggerEvents", required=true)
     private Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
 
+    /**
+     * @return The source event corresponding to the trigger.
+     * 
+     */
     public Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
@@ -65,6 +77,10 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,TriggerStatus>> status;
 
+    /**
+     * @return The current status of trigger.
+     * 
+     */
     public Optional<Output<Either<String,TriggerStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -96,50 +112,116 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sourceRepository The properties that describes the source(code) for the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRepository(Output<SourcePropertiesArgs> sourceRepository) {
             $.sourceRepository = sourceRepository;
             return this;
         }
 
+        /**
+         * @param sourceRepository The properties that describes the source(code) for the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRepository(SourcePropertiesArgs sourceRepository) {
             return sourceRepository(Output.of(sourceRepository));
         }
 
+        /**
+         * @param sourceTriggerEvents The source event corresponding to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggerEvents(Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
             $.sourceTriggerEvents = sourceTriggerEvents;
             return this;
         }
 
+        /**
+         * @param sourceTriggerEvents The source event corresponding to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggerEvents(List<Either<String,SourceTriggerEvent>> sourceTriggerEvents) {
             return sourceTriggerEvents(Output.of(sourceTriggerEvents));
         }
 
+        /**
+         * @param sourceTriggerEvents The source event corresponding to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggerEvents(Either<String,SourceTriggerEvent>... sourceTriggerEvents) {
             return sourceTriggerEvents(List.of(sourceTriggerEvents));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,TriggerStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TriggerStatus status) {
             return status(Either.ofRight(status));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ManagementGroupLogSettingsResponse {
     /**
-     * Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+     * @return Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
      * 
      */
     private final String category;
     /**
-     * a value indicating whether this log is enabled.
+     * @return a value indicating whether this log is enabled.
      * 
      */
     private final Boolean enabled;
@@ -30,16 +30,16 @@ public final class ManagementGroupLogSettingsResponse {
     }
 
     /**
-     * Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+     * @return Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * a value indicating whether this log is enabled.
+     * @return a value indicating whether this log is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

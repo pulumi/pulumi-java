@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AzureResourceDetailsResponse {
     /**
-     * Azure resource Id of the assessed resource
+     * @return Azure resource Id of the assessed resource
      * 
      */
     private final String id;
     /**
-     * The platform where the assessed resource resides
+     * @return The platform where the assessed resource resides
      * Expected value is &#39;Azure&#39;.
      * 
      */
@@ -30,17 +30,17 @@ public final class AzureResourceDetailsResponse {
     }
 
     /**
-     * Azure resource Id of the assessed resource
+     * @return Azure resource Id of the assessed resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The platform where the assessed resource resides
+     * @return The platform where the assessed resource resides
      * Expected value is &#39;Azure&#39;.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

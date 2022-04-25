@@ -27,6 +27,10 @@ public final class JsonWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="filePattern")
     private @Nullable Object filePattern;
 
+    /**
+     * @return File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+     * 
+     */
     public Optional<Object> filePattern() {
         return Optional.ofNullable(this.filePattern);
     }
@@ -39,6 +43,11 @@ public final class JsonWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;JsonWriteSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -68,11 +77,24 @@ public final class JsonWriteSettingsResponse extends com.pulumi.resources.Invoke
             $ = new JsonWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePattern File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(@Nullable Object filePattern) {
             $.filePattern = filePattern;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;JsonWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

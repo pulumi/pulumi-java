@@ -24,6 +24,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -35,6 +39,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="continueOnErrors")
     private @Nullable Output<Boolean> continueOnErrors;
 
+    /**
+     * @return Flag that indicates whether to continue if one of the command fails.
+     * 
+     */
     public Optional<Output<Boolean>> continueOnErrors() {
         return Optional.ofNullable(this.continueOnErrors);
     }
@@ -46,6 +54,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database in the Kusto cluster.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -57,6 +69,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
     private @Nullable Output<String> forceUpdateTag;
 
+    /**
+     * @return A unique string. If changed the script will be applied again.
+     * 
+     */
     public Optional<Output<String>> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -68,6 +84,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptName")
     private @Nullable Output<String> scriptName;
 
+    /**
+     * @return The name of the Kusto database script.
+     * 
+     */
     public Optional<Output<String>> scriptName() {
         return Optional.ofNullable(this.scriptName);
     }
@@ -90,6 +114,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptUrl", required=true)
     private Output<String> scriptUrl;
 
+    /**
+     * @return The url to the KQL script blob file.
+     * 
+     */
     public Output<String> scriptUrl() {
         return this.scriptUrl;
     }
@@ -101,6 +129,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptUrlSasToken", required=true)
     private Output<String> scriptUrlSasToken;
 
+    /**
+     * @return The SaS token.
+     * 
+     */
     public Output<String> scriptUrlSasToken() {
         return this.scriptUrlSasToken;
     }
@@ -136,74 +168,170 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScriptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param continueOnErrors Flag that indicates whether to continue if one of the command fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnErrors(@Nullable Output<Boolean> continueOnErrors) {
             $.continueOnErrors = continueOnErrors;
             return this;
         }
 
+        /**
+         * @param continueOnErrors Flag that indicates whether to continue if one of the command fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnErrors(Boolean continueOnErrors) {
             return continueOnErrors(Output.of(continueOnErrors));
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param forceUpdateTag A unique string. If changed the script will be applied again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag A unique string. If changed the script will be applied again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(String forceUpdateTag) {
             return forceUpdateTag(Output.of(forceUpdateTag));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scriptName The name of the Kusto database script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(@Nullable Output<String> scriptName) {
             $.scriptName = scriptName;
             return this;
         }
 
+        /**
+         * @param scriptName The name of the Kusto database script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(String scriptName) {
             return scriptName(Output.of(scriptName));
         }
 
+        /**
+         * @param scriptUrl The url to the KQL script blob file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUrl(Output<String> scriptUrl) {
             $.scriptUrl = scriptUrl;
             return this;
         }
 
+        /**
+         * @param scriptUrl The url to the KQL script blob file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUrl(String scriptUrl) {
             return scriptUrl(Output.of(scriptUrl));
         }
 
+        /**
+         * @param scriptUrlSasToken The SaS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUrlSasToken(Output<String> scriptUrlSasToken) {
             $.scriptUrlSasToken = scriptUrlSasToken;
             return this;
         }
 
+        /**
+         * @param scriptUrlSasToken The SaS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUrlSasToken(String scriptUrlSasToken) {
             return scriptUrlSasToken(Output.of(scriptUrlSasToken));
         }

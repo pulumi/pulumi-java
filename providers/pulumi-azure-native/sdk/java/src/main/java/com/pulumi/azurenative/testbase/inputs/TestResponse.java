@@ -28,6 +28,10 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commands", required=true)
     private List<CommandResponse> commands;
 
+    /**
+     * @return The commands used in the test.
+     * 
+     */
     public List<CommandResponse> commands() {
         return this.commands;
     }
@@ -39,6 +43,10 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isActive")
     private @Nullable Boolean isActive;
 
+    /**
+     * @return Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+     * 
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
@@ -50,6 +58,10 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testType", required=true)
     private String testType;
 
+    /**
+     * @return The type of the test.
+     * 
+     */
     public String testType() {
         return this.testType;
     }
@@ -61,6 +73,10 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationRunStatus", required=true)
     private String validationRunStatus;
 
+    /**
+     * @return The status of the validation run of the package.
+     * 
+     */
     public String validationRunStatus() {
         return this.validationRunStatus;
     }
@@ -92,25 +108,55 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commands The commands used in the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(List<CommandResponse> commands) {
             $.commands = commands;
             return this;
         }
 
+        /**
+         * @param commands The commands used in the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(CommandResponse... commands) {
             return commands(List.of(commands));
         }
 
+        /**
+         * @param isActive Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             $.isActive = isActive;
             return this;
         }
 
+        /**
+         * @param testType The type of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testType(String testType) {
             $.testType = testType;
             return this;
         }
 
+        /**
+         * @param validationRunStatus The status of the validation run of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationRunStatus(String validationRunStatus) {
             $.validationRunStatus = validationRunStatus;
             return this;

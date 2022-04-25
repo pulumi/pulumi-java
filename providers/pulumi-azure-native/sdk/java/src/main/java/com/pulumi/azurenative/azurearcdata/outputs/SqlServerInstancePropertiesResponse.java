@@ -12,73 +12,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlServerInstancePropertiesResponse {
     /**
-     * SQL Server collation.
+     * @return SQL Server collation.
      * 
      */
     private final @Nullable String collation;
     /**
-     * ARM Resource id of the container resource (Azure Arc for Servers).
+     * @return ARM Resource id of the container resource (Azure Arc for Servers).
      * 
      */
     private final String containerResourceId;
     /**
-     * The time when the resource was created.
+     * @return The time when the resource was created.
      * 
      */
     private final String createTime;
     /**
-     * SQL Server current version.
+     * @return SQL Server current version.
      * 
      */
     private final @Nullable String currentVersion;
     /**
-     * SQL Server edition.
+     * @return SQL Server edition.
      * 
      */
     private final @Nullable String edition;
     /**
-     * SQL Server instance name.
+     * @return SQL Server instance name.
      * 
      */
     private final @Nullable String instanceName;
     /**
-     * SQL Server license type.
+     * @return SQL Server license type.
      * 
      */
     private final @Nullable String licenseType;
     /**
-     * SQL Server update level.
+     * @return SQL Server update level.
      * 
      */
     private final @Nullable String patchLevel;
     /**
-     * SQL Server product ID.
+     * @return SQL Server product ID.
      * 
      */
     private final @Nullable String productId;
     private final String provisioningState;
     /**
-     * The cloud connectivity status.
+     * @return The cloud connectivity status.
      * 
      */
     private final String status;
     /**
-     * Dynamic TCP ports used by SQL Server.
+     * @return Dynamic TCP ports used by SQL Server.
      * 
      */
     private final @Nullable String tcpDynamicPorts;
     /**
-     * Static TCP ports used by SQL Server.
+     * @return Static TCP ports used by SQL Server.
      * 
      */
     private final @Nullable String tcpStaticPorts;
     /**
-     * The number of logical processors used by the SQL Server instance.
+     * @return The number of logical processors used by the SQL Server instance.
      * 
      */
     private final @Nullable String vCore;
     /**
-     * SQL Server version.
+     * @return SQL Server version.
      * 
      */
     private final @Nullable String version;
@@ -118,65 +118,65 @@ public final class SqlServerInstancePropertiesResponse {
     }
 
     /**
-     * SQL Server collation.
+     * @return SQL Server collation.
      * 
-    */
+     */
     public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
-     * ARM Resource id of the container resource (Azure Arc for Servers).
+     * @return ARM Resource id of the container resource (Azure Arc for Servers).
      * 
-    */
+     */
     public String containerResourceId() {
         return this.containerResourceId;
     }
     /**
-     * The time when the resource was created.
+     * @return The time when the resource was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * SQL Server current version.
+     * @return SQL Server current version.
      * 
-    */
+     */
     public Optional<String> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
     /**
-     * SQL Server edition.
+     * @return SQL Server edition.
      * 
-    */
+     */
     public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
     /**
-     * SQL Server instance name.
+     * @return SQL Server instance name.
      * 
-    */
+     */
     public Optional<String> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
     /**
-     * SQL Server license type.
+     * @return SQL Server license type.
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * SQL Server update level.
+     * @return SQL Server update level.
      * 
-    */
+     */
     public Optional<String> patchLevel() {
         return Optional.ofNullable(this.patchLevel);
     }
     /**
-     * SQL Server product ID.
+     * @return SQL Server product ID.
      * 
-    */
+     */
     public Optional<String> productId() {
         return Optional.ofNullable(this.productId);
     }
@@ -184,37 +184,37 @@ public final class SqlServerInstancePropertiesResponse {
         return this.provisioningState;
     }
     /**
-     * The cloud connectivity status.
+     * @return The cloud connectivity status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Dynamic TCP ports used by SQL Server.
+     * @return Dynamic TCP ports used by SQL Server.
      * 
-    */
+     */
     public Optional<String> tcpDynamicPorts() {
         return Optional.ofNullable(this.tcpDynamicPorts);
     }
     /**
-     * Static TCP ports used by SQL Server.
+     * @return Static TCP ports used by SQL Server.
      * 
-    */
+     */
     public Optional<String> tcpStaticPorts() {
         return Optional.ofNullable(this.tcpStaticPorts);
     }
     /**
-     * The number of logical processors used by the SQL Server instance.
+     * @return The number of logical processors used by the SQL Server instance.
      * 
-    */
+     */
     public Optional<String> vCore() {
         return Optional.ofNullable(this.vCore);
     }
     /**
-     * SQL Server version.
+     * @return SQL Server version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

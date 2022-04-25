@@ -28,6 +28,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plan")
     private @Nullable Output<Either<String,TablePlanEnum>> plan;
 
+    /**
+     * @return The table plan.
+     * 
+     */
     public Optional<Output<Either<String,TablePlanEnum>>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -39,6 +43,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -50,6 +58,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restoredLogs")
     private @Nullable Output<RestoredLogsArgs> restoredLogs;
 
+    /**
+     * @return Parameters of the restore operation that initiated this table.
+     * 
+     */
     public Optional<Output<RestoredLogsArgs>> restoredLogs() {
         return Optional.ofNullable(this.restoredLogs);
     }
@@ -61,6 +73,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
+    /**
+     * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * 
+     */
     public Optional<Output<Integer>> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -72,6 +88,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
     private @Nullable Output<SchemaArgs> schema;
 
+    /**
+     * @return Table schema.
+     * 
+     */
     public Optional<Output<SchemaArgs>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -83,6 +103,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchResults")
     private @Nullable Output<SearchResultsArgs> searchResults;
 
+    /**
+     * @return Parameters of the search job that initiated this table.
+     * 
+     */
     public Optional<Output<SearchResultsArgs>> searchResults() {
         return Optional.ofNullable(this.searchResults);
     }
@@ -94,6 +118,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
     private @Nullable Output<String> tableName;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Optional<Output<String>> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -105,6 +133,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="totalRetentionInDays")
     private @Nullable Output<Integer> totalRetentionInDays;
 
+    /**
+     * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * 
+     */
     public Optional<Output<Integer>> totalRetentionInDays() {
         return Optional.ofNullable(this.totalRetentionInDays);
     }
@@ -116,6 +148,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -152,91 +188,211 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param plan The table plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<Either<String,TablePlanEnum>> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan The table plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(Either<String,TablePlanEnum> plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param plan The table plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(String plan) {
             return plan(Either.ofLeft(plan));
         }
 
+        /**
+         * @param plan The table plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(TablePlanEnum plan) {
             return plan(Either.ofRight(plan));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param restoredLogs Parameters of the restore operation that initiated this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoredLogs(@Nullable Output<RestoredLogsArgs> restoredLogs) {
             $.restoredLogs = restoredLogs;
             return this;
         }
 
+        /**
+         * @param restoredLogs Parameters of the restore operation that initiated this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoredLogs(RestoredLogsArgs restoredLogs) {
             return restoredLogs(Output.of(restoredLogs));
         }
 
+        /**
+         * @param retentionInDays The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInDays The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(Integer retentionInDays) {
             return retentionInDays(Output.of(retentionInDays));
         }
 
+        /**
+         * @param schema Table schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<SchemaArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema Table schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(SchemaArgs schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param searchResults Parameters of the search job that initiated this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchResults(@Nullable Output<SearchResultsArgs> searchResults) {
             $.searchResults = searchResults;
             return this;
         }
 
+        /**
+         * @param searchResults Parameters of the search job that initiated this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchResults(SearchResultsArgs searchResults) {
             return searchResults(Output.of(searchResults));
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }
 
+        /**
+         * @param totalRetentionInDays The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalRetentionInDays(@Nullable Output<Integer> totalRetentionInDays) {
             $.totalRetentionInDays = totalRetentionInDays;
             return this;
         }
 
+        /**
+         * @param totalRetentionInDays The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalRetentionInDays(Integer totalRetentionInDays) {
             return totalRetentionInDays(Output.of(totalRetentionInDays));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

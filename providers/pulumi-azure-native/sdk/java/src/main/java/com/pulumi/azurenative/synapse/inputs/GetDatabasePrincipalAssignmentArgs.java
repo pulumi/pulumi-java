@@ -19,6 +19,10 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database in the Kusto pool.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -30,6 +34,10 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
     @Import(name="kustoPoolName", required=true)
     private String kustoPoolName;
 
+    /**
+     * @return The name of the Kusto pool.
+     * 
+     */
     public String kustoPoolName() {
         return this.kustoPoolName;
     }
@@ -41,6 +49,10 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
     @Import(name="principalAssignmentName", required=true)
     private String principalAssignmentName;
 
+    /**
+     * @return The name of the Kusto principalAssignment.
+     * 
+     */
     public String principalAssignmentName() {
         return this.principalAssignmentName;
     }
@@ -52,6 +64,10 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -95,26 +115,56 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
             $ = new GetDatabasePrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(String kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;
         }
 
+        /**
+         * @param principalAssignmentName The name of the Kusto principalAssignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalAssignmentName(String principalAssignmentName) {
             $.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

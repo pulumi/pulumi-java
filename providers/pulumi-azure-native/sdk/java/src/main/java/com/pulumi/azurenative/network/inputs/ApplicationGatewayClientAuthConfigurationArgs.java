@@ -26,6 +26,10 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends com.pul
     @Import(name="verifyClientCertIssuerDN")
     private @Nullable Output<Boolean> verifyClientCertIssuerDN;
 
+    /**
+     * @return Verify client certificate issuer name on the application gateway.
+     * 
+     */
     public Optional<Output<Boolean>> verifyClientCertIssuerDN() {
         return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }
@@ -54,11 +58,23 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends com.pul
             $ = new ApplicationGatewayClientAuthConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param verifyClientCertIssuerDN Verify client certificate issuer name on the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyClientCertIssuerDN(@Nullable Output<Boolean> verifyClientCertIssuerDN) {
             $.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }
 
+        /**
+         * @param verifyClientCertIssuerDN Verify client certificate issuer name on the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyClientCertIssuerDN(Boolean verifyClientCertIssuerDN) {
             return verifyClientCertIssuerDN(Output.of(verifyClientCertIssuerDN));
         }

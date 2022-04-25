@@ -24,6 +24,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
     @Import(name="activityId", required=true)
     private String activityId;
 
+    /**
+     * @return The activity id for the operation request.
+     * 
+     */
     public String activityId() {
         return this.activityId;
     }
@@ -35,6 +39,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
     @Import(name="errorCode", required=true)
     private String errorCode;
 
+    /**
+     * @return The error code.
+     * 
+     */
     public String errorCode() {
         return this.errorCode;
     }
@@ -46,6 +54,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
     @Import(name="parameters", required=true)
     private List<String> parameters;
 
+    /**
+     * @return Managed integration runtime error parameters.
+     * 
+     */
     public List<String> parameters() {
         return this.parameters;
     }
@@ -57,6 +69,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
     @Import(name="result", required=true)
     private String result;
 
+    /**
+     * @return The operation result.
+     * 
+     */
     public String result() {
         return this.result;
     }
@@ -68,6 +84,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of the operation.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -79,6 +99,10 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The operation type. Could be start or stop.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -112,35 +136,77 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
             $ = new ManagedIntegrationRuntimeOperationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activityId The activity id for the operation request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityId(String activityId) {
             $.activityId = activityId;
             return this;
         }
 
+        /**
+         * @param errorCode The error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param parameters Managed integration runtime error parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Managed integration runtime error parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param result The operation result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(String result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param type The operation type. Could be start or stop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

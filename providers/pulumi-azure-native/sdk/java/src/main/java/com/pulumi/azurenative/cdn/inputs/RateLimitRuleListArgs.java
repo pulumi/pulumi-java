@@ -27,6 +27,10 @@ public final class RateLimitRuleListArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rules")
     private @Nullable Output<List<RateLimitRuleArgs>> rules;
 
+    /**
+     * @return List of rules
+     * 
+     */
     public Optional<Output<List<RateLimitRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -55,15 +59,33 @@ public final class RateLimitRuleListArgs extends com.pulumi.resources.ResourceAr
             $ = new RateLimitRuleListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<RateLimitRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RateLimitRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RateLimitRuleArgs... rules) {
             return rules(List.of(rules));
         }

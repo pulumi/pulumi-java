@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SshPublicKeyResponse {
     /**
-     * The certificate for SSH.
+     * @return The certificate for SSH.
      * 
      */
     private final @Nullable String certificateData;
@@ -23,9 +23,9 @@ public final class SshPublicKeyResponse {
     }
 
     /**
-     * The certificate for SSH.
+     * @return The certificate for SSH.
      * 
-    */
+     */
     public Optional<String> certificateData() {
         return Optional.ofNullable(this.certificateData);
     }

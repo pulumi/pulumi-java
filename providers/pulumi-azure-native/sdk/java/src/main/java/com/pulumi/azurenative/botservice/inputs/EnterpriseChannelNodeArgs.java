@@ -28,6 +28,10 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="azureLocation", required=true)
     private Output<String> azureLocation;
 
+    /**
+     * @return The location of the Enterprise Channel Node.
+     * 
+     */
     public Output<String> azureLocation() {
         return this.azureLocation;
     }
@@ -39,6 +43,10 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="azureSku", required=true)
     private Output<String> azureSku;
 
+    /**
+     * @return The sku of the Enterprise Channel Node.
+     * 
+     */
     public Output<String> azureSku() {
         return this.azureSku;
     }
@@ -50,6 +58,10 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Enterprise Channel Node.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="state")
     private @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
+    /**
+     * @return The current state of the Enterprise Channel Node.
+     * 
+     */
     public Optional<Output<Either<String,EnterpriseChannelNodeState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -92,46 +108,106 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
             $ = new EnterpriseChannelNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureLocation The location of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(Output<String> azureLocation) {
             $.azureLocation = azureLocation;
             return this;
         }
 
+        /**
+         * @param azureLocation The location of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(String azureLocation) {
             return azureLocation(Output.of(azureLocation));
         }
 
+        /**
+         * @param azureSku The sku of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureSku(Output<String> azureSku) {
             $.azureSku = azureSku;
             return this;
         }
 
+        /**
+         * @param azureSku The sku of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureSku(String azureSku) {
             return azureSku(Output.of(azureSku));
         }
 
+        /**
+         * @param name The name of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,EnterpriseChannelNodeState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,EnterpriseChannelNodeState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(EnterpriseChannelNodeState state) {
             return state(Either.ofRight(state));
         }

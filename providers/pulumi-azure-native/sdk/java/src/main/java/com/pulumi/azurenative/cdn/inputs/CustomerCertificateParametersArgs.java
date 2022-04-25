@@ -30,6 +30,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="certificateAuthority")
     private @Nullable Output<String> certificateAuthority;
 
+    /**
+     * @return Certificate issuing authority.
+     * 
+     */
     public Optional<Output<String>> certificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }
@@ -41,6 +45,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="secretSource", required=true)
     private Output<ResourceReferenceArgs> secretSource;
 
+    /**
+     * @return Resource reference to the KV secret
+     * 
+     */
     public Output<ResourceReferenceArgs> secretSource() {
         return this.secretSource;
     }
@@ -52,6 +60,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="secretVersion")
     private @Nullable Output<String> secretVersion;
 
+    /**
+     * @return Version of the secret to be used
+     * 
+     */
     public Optional<Output<String>> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -63,6 +75,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<List<String>> subjectAlternativeNames;
 
+    /**
+     * @return The list of SANs.
+     * 
+     */
     public Optional<Output<List<String>>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -75,6 +91,11 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the Secret to create.
+     * Expected value is &#39;CustomerCertificate&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -86,6 +107,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="useLatestVersion")
     private @Nullable Output<Boolean> useLatestVersion;
 
+    /**
+     * @return Whether to use the latest version for the certificate
+     * 
+     */
     public Optional<Output<Boolean>> useLatestVersion() {
         return Optional.ofNullable(this.useLatestVersion);
     }
@@ -119,60 +144,140 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
             $ = new CustomerCertificateParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthority Certificate issuing authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(@Nullable Output<String> certificateAuthority) {
             $.certificateAuthority = certificateAuthority;
             return this;
         }
 
+        /**
+         * @param certificateAuthority Certificate issuing authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(String certificateAuthority) {
             return certificateAuthority(Output.of(certificateAuthority));
         }
 
+        /**
+         * @param secretSource Resource reference to the KV secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
             $.secretSource = secretSource;
             return this;
         }
 
+        /**
+         * @param secretSource Resource reference to the KV secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretSource(ResourceReferenceArgs secretSource) {
             return secretSource(Output.of(secretSource));
         }
 
+        /**
+         * @param secretVersion Version of the secret to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param secretVersion Version of the secret to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             return secretVersion(Output.of(secretVersion));
         }
 
+        /**
+         * @param subjectAlternativeNames The list of SANs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames The list of SANs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param subjectAlternativeNames The list of SANs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param type The type of the Secret to create.
+         * Expected value is &#39;CustomerCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the Secret to create.
+         * Expected value is &#39;CustomerCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useLatestVersion Whether to use the latest version for the certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLatestVersion(@Nullable Output<Boolean> useLatestVersion) {
             $.useLatestVersion = useLatestVersion;
             return this;
         }
 
+        /**
+         * @param useLatestVersion Whether to use the latest version for the certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLatestVersion(Boolean useLatestVersion) {
             return useLatestVersion(Output.of(useLatestVersion));
         }

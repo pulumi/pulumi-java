@@ -26,6 +26,10 @@ public final class CloudServiceExtensionProfileResponse extends com.pulumi.resou
     @Import(name="extensions")
     private @Nullable List<ExtensionResponse> extensions;
 
+    /**
+     * @return List of extensions for the cloud service.
+     * 
+     */
     public Optional<List<ExtensionResponse>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -54,11 +58,23 @@ public final class CloudServiceExtensionProfileResponse extends com.pulumi.resou
             $ = new CloudServiceExtensionProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensions List of extensions for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable List<ExtensionResponse> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions List of extensions for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(ExtensionResponse... extensions) {
             return extensions(List.of(extensions));
         }

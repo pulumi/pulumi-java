@@ -19,6 +19,10 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the scoped resource object.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
     @Import(name="scopeName", required=true)
     private String scopeName;
 
+    /**
+     * @return The name of the Azure Arc PrivateLinkScope resource.
+     * 
+     */
     public String scopeName() {
         return this.scopeName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
             $ = new GetPrivateLinkScopedResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the scoped resource object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scopeName The name of the Azure Arc PrivateLinkScope resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(String scopeName) {
             $.scopeName = scopeName;
             return this;

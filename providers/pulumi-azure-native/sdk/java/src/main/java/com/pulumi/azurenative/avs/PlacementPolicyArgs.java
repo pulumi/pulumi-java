@@ -25,6 +25,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Name of the cluster in the private cloud
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -36,6 +40,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="placementPolicyName")
     private @Nullable Output<String> placementPolicyName;
 
+    /**
+     * @return Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+     * 
+     */
     public Optional<Output<String>> placementPolicyName() {
         return Optional.ofNullable(this.placementPolicyName);
     }
@@ -47,6 +55,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -58,6 +70,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="properties")
     private @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
+    /**
+     * @return placement policy properties
+     * 
+     */
     public Optional<Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -69,6 +85,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,55 +121,127 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new PlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Name of the cluster in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the cluster in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param placementPolicyName Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementPolicyName(@Nullable Output<String> placementPolicyName) {
             $.placementPolicyName = placementPolicyName;
             return this;
         }
 
+        /**
+         * @param placementPolicyName Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementPolicyName(String placementPolicyName) {
             return placementPolicyName(Output.of(placementPolicyName));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param properties placement policy properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties placement policy properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties placement policy properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(VmHostPlacementPolicyPropertiesArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties placement policy properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(VmVmPlacementPolicyPropertiesArgs properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

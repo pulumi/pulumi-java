@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VMwareCbtNicDetailsResponse {
     /**
-     * A value indicating whether this is the primary NIC.
+     * @return A value indicating whether this is the primary NIC.
      * 
      */
     private final @Nullable String isPrimaryNic;
     /**
-     * A value indicating whether this NIC is selected for migration.
+     * @return A value indicating whether this NIC is selected for migration.
      * 
      */
     private final @Nullable String isSelectedForMigration;
     /**
-     * The NIC Id.
+     * @return The NIC Id.
      * 
      */
     private final String nicId;
     /**
-     * The source IP address.
+     * @return The source IP address.
      * 
      */
     private final String sourceIPAddress;
     /**
-     * The source IP address type.
+     * @return The source IP address type.
      * 
      */
     private final String sourceIPAddressType;
     /**
-     * Source network Id.
+     * @return Source network Id.
      * 
      */
     private final String sourceNetworkId;
     /**
-     * The target IP address.
+     * @return The target IP address.
      * 
      */
     private final @Nullable String targetIPAddress;
     /**
-     * The target IP address type.
+     * @return The target IP address type.
      * 
      */
     private final @Nullable String targetIPAddressType;
     /**
-     * Target subnet name.
+     * @return Target subnet name.
      * 
      */
     private final @Nullable String targetSubnetName;
@@ -80,65 +80,65 @@ public final class VMwareCbtNicDetailsResponse {
     }
 
     /**
-     * A value indicating whether this is the primary NIC.
+     * @return A value indicating whether this is the primary NIC.
      * 
-    */
+     */
     public Optional<String> isPrimaryNic() {
         return Optional.ofNullable(this.isPrimaryNic);
     }
     /**
-     * A value indicating whether this NIC is selected for migration.
+     * @return A value indicating whether this NIC is selected for migration.
      * 
-    */
+     */
     public Optional<String> isSelectedForMigration() {
         return Optional.ofNullable(this.isSelectedForMigration);
     }
     /**
-     * The NIC Id.
+     * @return The NIC Id.
      * 
-    */
+     */
     public String nicId() {
         return this.nicId;
     }
     /**
-     * The source IP address.
+     * @return The source IP address.
      * 
-    */
+     */
     public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
     /**
-     * The source IP address type.
+     * @return The source IP address type.
      * 
-    */
+     */
     public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
     /**
-     * Source network Id.
+     * @return Source network Id.
      * 
-    */
+     */
     public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
     /**
-     * The target IP address.
+     * @return The target IP address.
      * 
-    */
+     */
     public Optional<String> targetIPAddress() {
         return Optional.ofNullable(this.targetIPAddress);
     }
     /**
-     * The target IP address type.
+     * @return The target IP address type.
      * 
-    */
+     */
     public Optional<String> targetIPAddressType() {
         return Optional.ofNullable(this.targetIPAddressType);
     }
     /**
-     * Target subnet name.
+     * @return Target subnet name.
      * 
-    */
+     */
     public Optional<String> targetSubnetName() {
         return Optional.ofNullable(this.targetSubnetName);
     }

@@ -28,6 +28,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkApiVersion")
     private @Nullable String networkApiVersion;
 
+    /**
+     * @return specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+     * 
+     */
     public Optional<String> networkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
@@ -39,6 +43,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkInterfaceConfigurations")
     private @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations;
 
+    /**
+     * @return Specifies the networking configurations that will be used to create the virtual machine networking resources.
+     * 
+     */
     public Optional<List<VirtualMachineNetworkInterfaceConfigurationResponse>> networkInterfaceConfigurations() {
         return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
@@ -50,6 +58,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkInterfaces")
     private @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
+    /**
+     * @return Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+     * 
+     */
     public Optional<List<NetworkInterfaceReferenceResponse>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -80,25 +92,55 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(@Nullable String networkApiVersion) {
             $.networkApiVersion = networkApiVersion;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations Specifies the networking configurations that will be used to create the virtual machine networking resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations Specifies the networking configurations that will be used to create the virtual machine networking resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(VirtualMachineNetworkInterfaceConfigurationResponse... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceReferenceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }

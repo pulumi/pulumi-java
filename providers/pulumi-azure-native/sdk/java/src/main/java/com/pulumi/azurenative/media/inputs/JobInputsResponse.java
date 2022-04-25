@@ -32,6 +32,10 @@ public final class JobInputsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputs")
     private @Nullable List<Object> inputs;
 
+    /**
+     * @return List of inputs to a Job.
+     * 
+     */
     public Optional<List<Object>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -44,6 +48,11 @@ public final class JobInputsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -73,15 +82,34 @@ public final class JobInputsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobInputsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs List of inputs to a Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable List<Object> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs List of inputs to a Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

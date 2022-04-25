@@ -33,6 +33,10 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
     @Import(name="action")
     private @Nullable FirewallPolicyFilterRuleActionResponse action;
 
+    /**
+     * @return The action type of a Filter rule.
+     * 
+     */
     public Optional<FirewallPolicyFilterRuleActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
@@ -44,6 +48,10 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +63,10 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority of the Firewall Policy Rule resource.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -66,6 +78,10 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
     @Import(name="ruleConditions")
     private @Nullable List<Object> ruleConditions;
 
+    /**
+     * @return Collection of rule conditions used by a rule.
+     * 
+     */
     public Optional<List<Object>> ruleConditions() {
         return Optional.ofNullable(this.ruleConditions);
     }
@@ -78,6 +94,11 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return The type of the rule.
+     * Expected value is &#39;FirewallPolicyFilterRule&#39;.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -110,30 +131,67 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
             $ = new FirewallPolicyFilterRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a Filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable FirewallPolicyFilterRuleActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param name The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Priority of the Firewall Policy Rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param ruleConditions Collection of rule conditions used by a rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
             $.ruleConditions = ruleConditions;
             return this;
         }
 
+        /**
+         * @param ruleConditions Collection of rule conditions used by a rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleConditions(Object... ruleConditions) {
             return ruleConditions(List.of(ruleConditions));
         }
 
+        /**
+         * @param ruleType The type of the rule.
+         * Expected value is &#39;FirewallPolicyFilterRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;

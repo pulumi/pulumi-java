@@ -29,6 +29,10 @@ public final class NotebookResourceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="notebookPreparationError")
     private @Nullable NotebookPreparationErrorResponse notebookPreparationError;
 
+    /**
+     * @return The error that occurs when preparing notebook.
+     * 
+     */
     public Optional<NotebookPreparationErrorResponse> notebookPreparationError() {
         return Optional.ofNullable(this.notebookPreparationError);
     }
@@ -40,6 +44,10 @@ public final class NotebookResourceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return the data plane resourceId that used to initialize notebook component
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -75,11 +83,23 @@ public final class NotebookResourceInfoResponse extends com.pulumi.resources.Inv
             return this;
         }
 
+        /**
+         * @param notebookPreparationError The error that occurs when preparing notebook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookPreparationError(@Nullable NotebookPreparationErrorResponse notebookPreparationError) {
             $.notebookPreparationError = notebookPreparationError;
             return this;
         }
 
+        /**
+         * @param resourceId the data plane resourceId that used to initialize notebook component
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

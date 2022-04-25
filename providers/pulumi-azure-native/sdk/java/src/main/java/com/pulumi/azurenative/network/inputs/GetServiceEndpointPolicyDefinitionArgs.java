@@ -19,6 +19,10 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
     @Import(name="serviceEndpointPolicyDefinitionName", required=true)
     private String serviceEndpointPolicyDefinitionName;
 
+    /**
+     * @return The name of the service endpoint policy definition name.
+     * 
+     */
     public String serviceEndpointPolicyDefinitionName() {
         return this.serviceEndpointPolicyDefinitionName;
     }
@@ -41,6 +49,10 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
     @Import(name="serviceEndpointPolicyName", required=true)
     private String serviceEndpointPolicyName;
 
+    /**
+     * @return The name of the service endpoint policy name.
+     * 
+     */
     public String serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
@@ -71,16 +83,34 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
             $ = new GetServiceEndpointPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicyDefinitionName The name of the service endpoint policy definition name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyDefinitionName(String serviceEndpointPolicyDefinitionName) {
             $.serviceEndpointPolicyDefinitionName = serviceEndpointPolicyDefinitionName;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicyName The name of the service endpoint policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
             $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;

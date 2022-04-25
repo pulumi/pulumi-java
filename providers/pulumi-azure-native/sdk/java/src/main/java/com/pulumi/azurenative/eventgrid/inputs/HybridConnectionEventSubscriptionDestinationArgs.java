@@ -28,6 +28,11 @@ public final class HybridConnectionEventSubscriptionDestinationArgs extends com.
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return Type of the endpoint for the event subscription destination.
+     * Expected value is &#39;HybridConnection&#39;.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -39,6 +44,10 @@ public final class HybridConnectionEventSubscriptionDestinationArgs extends com.
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -68,20 +77,46 @@ public final class HybridConnectionEventSubscriptionDestinationArgs extends com.
             $ = new HybridConnectionEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;HybridConnection&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;HybridConnection&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

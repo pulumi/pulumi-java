@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebTestGeolocationResponse {
     /**
-     * Location ID for the webtest to run from.
+     * @return Location ID for the webtest to run from.
      * 
      */
     private final @Nullable String location;
@@ -23,9 +23,9 @@ public final class WebTestGeolocationResponse {
     }
 
     /**
-     * Location ID for the webtest to run from.
+     * @return Location ID for the webtest to run from.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }

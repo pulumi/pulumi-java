@@ -29,6 +29,10 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
     @Import(name="day")
     private @Nullable Output<Either<String,ScheduleDay>> day;
 
+    /**
+     * @return Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * 
+     */
     public Optional<Output<Either<String,ScheduleDay>>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -40,6 +44,10 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
     @Import(name="occurrence")
     private @Nullable Output<Integer> occurrence;
 
+    /**
+     * @return Occurrence of the week within the month. Must be between 1 and 5
+     * 
+     */
     public Optional<Output<Integer>> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -69,28 +77,64 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
             $ = new AdvancedScheduleMonthlyOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<Either<String,ScheduleDay>> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Either<String,ScheduleDay> day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param day Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             return day(Either.ofLeft(day));
         }
 
+        /**
+         * @param day Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(ScheduleDay day) {
             return day(Either.ofRight(day));
         }
 
+        /**
+         * @param occurrence Occurrence of the week within the month. Must be between 1 and 5
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
             $.occurrence = occurrence;
             return this;
         }
 
+        /**
+         * @param occurrence Occurrence of the week within the month. Must be between 1 and 5
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(Integer occurrence) {
             return occurrence(Output.of(occurrence));
         }

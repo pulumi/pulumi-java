@@ -22,6 +22,10 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edgeModuleName")
     private @Nullable Output<String> edgeModuleName;
 
+    /**
+     * @return The name of the edge module to create or update.
+     * 
+     */
     public Optional<Output<String>> edgeModuleName() {
         return Optional.ofNullable(this.edgeModuleName);
     }
@@ -44,6 +52,10 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EdgeModuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param edgeModuleName The name of the edge module to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeModuleName(@Nullable Output<String> edgeModuleName) {
             $.edgeModuleName = edgeModuleName;
             return this;
         }
 
+        /**
+         * @param edgeModuleName The name of the edge module to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeModuleName(String edgeModuleName) {
             return edgeModuleName(Output.of(edgeModuleName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

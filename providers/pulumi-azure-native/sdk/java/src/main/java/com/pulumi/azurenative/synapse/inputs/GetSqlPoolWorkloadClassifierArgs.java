@@ -19,6 +19,10 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
     @Import(name="sqlPoolName", required=true)
     private String sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public String sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -41,6 +49,10 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
     @Import(name="workloadClassifierName", required=true)
     private String workloadClassifierName;
 
+    /**
+     * @return The name of the workload classifier.
+     * 
+     */
     public String workloadClassifierName() {
         return this.workloadClassifierName;
     }
@@ -52,6 +64,10 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
     @Import(name="workloadGroupName", required=true)
     private String workloadGroupName;
 
+    /**
+     * @return The name of the workload group.
+     * 
+     */
     public String workloadGroupName() {
         return this.workloadGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -95,26 +115,56 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
             $ = new GetSqlPoolWorkloadClassifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param workloadClassifierName The name of the workload classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadClassifierName(String workloadClassifierName) {
             $.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(String workloadGroupName) {
             $.workloadGroupName = workloadGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

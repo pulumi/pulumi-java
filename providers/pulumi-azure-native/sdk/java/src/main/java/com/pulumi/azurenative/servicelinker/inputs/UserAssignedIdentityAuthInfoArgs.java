@@ -26,6 +26,11 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
     @Import(name="authType", required=true)
     private Output<String> authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;userAssignedIdentity&#39;.
+     * 
+     */
     public Output<String> authType() {
         return this.authType;
     }
@@ -37,6 +42,10 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Client Id for userAssignedIdentity.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -48,6 +57,10 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Subscription id for userAssignedIdentity.
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -78,29 +91,67 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
             $ = new UserAssignedIdentityAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;userAssignedIdentity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;userAssignedIdentity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param clientId Client Id for userAssignedIdentity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client Id for userAssignedIdentity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param subscriptionId Subscription id for userAssignedIdentity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription id for userAssignedIdentity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

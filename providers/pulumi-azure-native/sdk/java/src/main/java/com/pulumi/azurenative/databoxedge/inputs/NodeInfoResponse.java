@@ -27,6 +27,10 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipConfiguration")
     private @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
 
+    /**
+     * @return IP Configuration of the Kubernetes node.
+     * 
+     */
     public Optional<List<KubernetesIPConfigurationResponse>> ipConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }
@@ -38,6 +42,10 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Node name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Node type - Master/Worker
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,20 +91,44 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodeInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipConfiguration IP Configuration of the Kubernetes node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(@Nullable List<KubernetesIPConfigurationResponse> ipConfiguration) {
             $.ipConfiguration = ipConfiguration;
             return this;
         }
 
+        /**
+         * @param ipConfiguration IP Configuration of the Kubernetes node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(KubernetesIPConfigurationResponse... ipConfiguration) {
             return ipConfiguration(List.of(ipConfiguration));
         }
 
+        /**
+         * @param name Node name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Node type - Master/Worker
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MHSMVirtualNetworkRuleResponse {
     /**
-     * Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+     * @return Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class MHSMVirtualNetworkRuleResponse {
     }
 
     /**
-     * Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+     * @return Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

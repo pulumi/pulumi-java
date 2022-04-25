@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerHttpGetResponse {
     /**
-     * The HTTP headers.
+     * @return The HTTP headers.
      * 
      */
     private final @Nullable HttpHeadersResponse httpHeaders;
     /**
-     * The path to probe.
+     * @return The path to probe.
      * 
      */
     private final @Nullable String path;
     /**
-     * The port number to probe.
+     * @return The port number to probe.
      * 
      */
     private final Integer port;
     /**
-     * The scheme.
+     * @return The scheme.
      * 
      */
     private final @Nullable String scheme;
@@ -47,30 +47,30 @@ public final class ContainerHttpGetResponse {
     }
 
     /**
-     * The HTTP headers.
+     * @return The HTTP headers.
      * 
-    */
+     */
     public Optional<HttpHeadersResponse> httpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
     /**
-     * The path to probe.
+     * @return The path to probe.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * The port number to probe.
+     * @return The port number to probe.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The scheme.
+     * @return The scheme.
      * 
-    */
+     */
     public Optional<String> scheme() {
         return Optional.ofNullable(this.scheme);
     }

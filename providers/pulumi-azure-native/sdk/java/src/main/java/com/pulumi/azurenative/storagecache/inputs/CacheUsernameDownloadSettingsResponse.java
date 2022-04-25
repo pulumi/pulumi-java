@@ -28,6 +28,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="autoDownloadCertificate")
     private @Nullable Boolean autoDownloadCertificate;
 
+    /**
+     * @return Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+     * 
+     */
     public Optional<Boolean> autoDownloadCertificate() {
         return Optional.ofNullable(this.autoDownloadCertificate);
     }
@@ -39,6 +43,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="caCertificateURI")
     private @Nullable String caCertificateURI;
 
+    /**
+     * @return The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+     * 
+     */
     public Optional<String> caCertificateURI() {
         return Optional.ofNullable(this.caCertificateURI);
     }
@@ -50,6 +58,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="credentials")
     private @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
 
+    /**
+     * @return When present, these are the credentials for the secure LDAP connection.
+     * 
+     */
     public Optional<CacheUsernameDownloadSettingsResponseCredentials> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -61,6 +73,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="encryptLdapConnection")
     private @Nullable Boolean encryptLdapConnection;
 
+    /**
+     * @return Whether or not the LDAP connection should be encrypted.
+     * 
+     */
     public Optional<Boolean> encryptLdapConnection() {
         return Optional.ofNullable(this.encryptLdapConnection);
     }
@@ -72,6 +88,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="extendedGroups")
     private @Nullable Boolean extendedGroups;
 
+    /**
+     * @return Whether or not Extended Groups is enabled.
+     * 
+     */
     public Optional<Boolean> extendedGroups() {
         return Optional.ofNullable(this.extendedGroups);
     }
@@ -83,6 +103,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="groupFileURI")
     private @Nullable String groupFileURI;
 
+    /**
+     * @return The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+     * 
+     */
     public Optional<String> groupFileURI() {
         return Optional.ofNullable(this.groupFileURI);
     }
@@ -94,6 +118,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="ldapBaseDN")
     private @Nullable String ldapBaseDN;
 
+    /**
+     * @return The base distinguished name for the LDAP domain.
+     * 
+     */
     public Optional<String> ldapBaseDN() {
         return Optional.ofNullable(this.ldapBaseDN);
     }
@@ -105,6 +133,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="ldapServer")
     private @Nullable String ldapServer;
 
+    /**
+     * @return The fully qualified domain name or IP address of the LDAP server to use.
+     * 
+     */
     public Optional<String> ldapServer() {
         return Optional.ofNullable(this.ldapServer);
     }
@@ -116,6 +148,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="requireValidCertificate")
     private @Nullable Boolean requireValidCertificate;
 
+    /**
+     * @return Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+     * 
+     */
     public Optional<Boolean> requireValidCertificate() {
         return Optional.ofNullable(this.requireValidCertificate);
     }
@@ -127,6 +163,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="userFileURI")
     private @Nullable String userFileURI;
 
+    /**
+     * @return The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+     * 
+     */
     public Optional<String> userFileURI() {
         return Optional.ofNullable(this.userFileURI);
     }
@@ -138,6 +178,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="usernameDownloaded", required=true)
     private String usernameDownloaded;
 
+    /**
+     * @return Indicates whether or not the HPC Cache has performed the username download successfully.
+     * 
+     */
     public String usernameDownloaded() {
         return this.usernameDownloaded;
     }
@@ -149,6 +193,10 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     @Import(name="usernameSource")
     private @Nullable String usernameSource;
 
+    /**
+     * @return This setting determines how the cache gets username and group names for clients.
+     * 
+     */
     public Optional<String> usernameSource() {
         return Optional.ofNullable(this.usernameSource);
     }
@@ -188,61 +236,133 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
             $ = new CacheUsernameDownloadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDownloadCertificate Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
             $.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
 
+        /**
+         * @param caCertificateURI The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificateURI(@Nullable String caCertificateURI) {
             $.caCertificateURI = caCertificateURI;
             return this;
         }
 
+        /**
+         * @param credentials When present, these are the credentials for the secure LDAP connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable CacheUsernameDownloadSettingsResponseCredentials credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param encryptLdapConnection Whether or not the LDAP connection should be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
             $.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
 
+        /**
+         * @param extendedGroups Whether or not Extended Groups is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedGroups(@Nullable Boolean extendedGroups) {
             $.extendedGroups = extendedGroups;
             return this;
         }
 
+        /**
+         * @param groupFileURI The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupFileURI(@Nullable String groupFileURI) {
             $.groupFileURI = groupFileURI;
             return this;
         }
 
+        /**
+         * @param ldapBaseDN The base distinguished name for the LDAP domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
             $.ldapBaseDN = ldapBaseDN;
             return this;
         }
 
+        /**
+         * @param ldapServer The fully qualified domain name or IP address of the LDAP server to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapServer(@Nullable String ldapServer) {
             $.ldapServer = ldapServer;
             return this;
         }
 
+        /**
+         * @param requireValidCertificate Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
             $.requireValidCertificate = requireValidCertificate;
             return this;
         }
 
+        /**
+         * @param userFileURI The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userFileURI(@Nullable String userFileURI) {
             $.userFileURI = userFileURI;
             return this;
         }
 
+        /**
+         * @param usernameDownloaded Indicates whether or not the HPC Cache has performed the username download successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameDownloaded(String usernameDownloaded) {
             $.usernameDownloaded = usernameDownloaded;
             return this;
         }
 
+        /**
+         * @param usernameSource This setting determines how the cache gets username and group names for clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameSource(@Nullable String usernameSource) {
             $.usernameSource = usernameSource;
             return this;

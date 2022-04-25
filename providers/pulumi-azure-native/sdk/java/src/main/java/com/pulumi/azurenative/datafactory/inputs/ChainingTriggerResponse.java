@@ -30,6 +30,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -41,6 +45,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dependsOn", required=true)
     private List<PipelineReferenceResponse> dependsOn;
 
+    /**
+     * @return Upstream Pipelines.
+     * 
+     */
     public List<PipelineReferenceResponse> dependsOn() {
         return this.dependsOn;
     }
@@ -52,6 +60,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,6 +75,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="pipeline", required=true)
     private TriggerPipelineReferenceResponse pipeline;
 
+    /**
+     * @return Pipeline for which runs are created when all upstream pipelines complete successfully.
+     * 
+     */
     public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
@@ -74,6 +90,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="runDimension", required=true)
     private String runDimension;
 
+    /**
+     * @return Run Dimension property that needs to be emitted by upstream pipelines.
+     * 
+     */
     public String runDimension() {
         return this.runDimension;
     }
@@ -85,6 +105,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="runtimeState", required=true)
     private String runtimeState;
 
+    /**
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
@@ -97,6 +121,11 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;ChainingTrigger&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -131,44 +160,99 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
             $ = new ChainingTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param dependsOn Upstream Pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<PipelineReferenceResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Upstream Pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(PipelineReferenceResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param pipeline Pipeline for which runs are created when all upstream pipelines complete successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
             $.pipeline = pipeline;
             return this;
         }
 
+        /**
+         * @param runDimension Run Dimension property that needs to be emitted by upstream pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDimension(String runDimension) {
             $.runDimension = runDimension;
             return this;
         }
 
+        /**
+         * @param runtimeState Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeState(String runtimeState) {
             $.runtimeState = runtimeState;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;ChainingTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

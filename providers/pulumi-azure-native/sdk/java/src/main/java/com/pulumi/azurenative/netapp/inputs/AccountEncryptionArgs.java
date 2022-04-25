@@ -26,6 +26,10 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keySource")
     private @Nullable Output<String> keySource;
 
+    /**
+     * @return Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+     * 
+     */
     public Optional<Output<String>> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -54,11 +58,23 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
             $ = new AccountEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keySource Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable Output<String> keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keySource Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(String keySource) {
             return keySource(Output.of(keySource));
         }

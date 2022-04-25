@@ -25,6 +25,10 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
     @Import(name="annotationType")
     private @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
 
+    /**
+     * @return Annotation type of image labeling tasks.
+     * 
+     */
     public Optional<Output<Either<String,ImageAnnotationType>>> annotationType() {
         return Optional.ofNullable(this.annotationType);
     }
@@ -36,6 +40,10 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
     @Import(name="mediaType", required=true)
     private Output<Either<String,MediaType>> mediaType;
 
+    /**
+     * @return Media type of data asset.
+     * 
+     */
     public Output<Either<String,MediaType>> mediaType() {
         return this.mediaType;
     }
@@ -65,36 +73,84 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
             $ = new LabelingJobImagePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationType Annotation type of image labeling tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationType(@Nullable Output<Either<String,ImageAnnotationType>> annotationType) {
             $.annotationType = annotationType;
             return this;
         }
 
+        /**
+         * @param annotationType Annotation type of image labeling tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationType(Either<String,ImageAnnotationType> annotationType) {
             return annotationType(Output.of(annotationType));
         }
 
+        /**
+         * @param annotationType Annotation type of image labeling tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationType(String annotationType) {
             return annotationType(Either.ofLeft(annotationType));
         }
 
+        /**
+         * @param annotationType Annotation type of image labeling tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationType(ImageAnnotationType annotationType) {
             return annotationType(Either.ofRight(annotationType));
         }
 
+        /**
+         * @param mediaType Media type of data asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(Output<Either<String,MediaType>> mediaType) {
             $.mediaType = mediaType;
             return this;
         }
 
+        /**
+         * @param mediaType Media type of data asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(Either<String,MediaType> mediaType) {
             return mediaType(Output.of(mediaType));
         }
 
+        /**
+         * @param mediaType Media type of data asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(String mediaType) {
             return mediaType(Either.ofLeft(mediaType));
         }
 
+        /**
+         * @param mediaType Media type of data asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(MediaType mediaType) {
             return mediaType(Either.ofRight(mediaType));
         }

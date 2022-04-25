@@ -22,6 +22,10 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return the region to create private link association.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -33,6 +37,10 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group the template will be deployed to. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
     @Import(name="rmplName")
     private @Nullable Output<String> rmplName;
 
+    /**
+     * @return The name of the resource management private link.
+     * 
+     */
     public Optional<Output<String>> rmplName() {
         return Optional.ofNullable(this.rmplName);
     }
@@ -74,29 +86,65 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
             $ = new ResourceManagementPrivateLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location the region to create private link association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location the region to create private link association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group the template will be deployed to. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group the template will be deployed to. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rmplName The name of the resource management private link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rmplName(@Nullable Output<String> rmplName) {
             $.rmplName = rmplName;
             return this;
         }
 
+        /**
+         * @param rmplName The name of the resource management private link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rmplName(String rmplName) {
             return rmplName(Output.of(rmplName));
         }

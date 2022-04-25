@@ -27,6 +27,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="actions")
     private @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
 
+    /**
+     * @return A list of actions that the custom resource provider implements.
+     * 
+     */
     public Optional<Output<List<CustomRPActionRouteDefinitionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -60,6 +72,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="resourceProviderName")
     private @Nullable Output<String> resourceProviderName;
 
+    /**
+     * @return The name of the resource provider.
+     * 
+     */
     public Optional<Output<String>> resourceProviderName() {
         return Optional.ofNullable(this.resourceProviderName);
     }
@@ -71,6 +87,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="resourceTypes")
     private @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
+    /**
+     * @return A list of resource types that the custom resource provider implements.
+     * 
+     */
     public Optional<Output<List<CustomRPResourceTypeRouteDefinitionArgs>>> resourceTypes() {
         return Optional.ofNullable(this.resourceTypes);
     }
@@ -82,6 +102,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,6 +117,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     @Import(name="validations")
     private @Nullable Output<List<CustomRPValidationsArgs>> validations;
 
+    /**
+     * @return A list of validations to run on the custom resource provider&#39;s requests.
+     * 
+     */
     public Optional<Output<List<CustomRPValidationsArgs>>> validations() {
         return Optional.ofNullable(this.validations);
     }
@@ -127,77 +155,179 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
             $ = new CustomResourceProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions A list of actions that the custom resource provider implements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions A list of actions that the custom resource provider implements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<CustomRPActionRouteDefinitionArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions A list of actions that the custom resource provider implements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(CustomRPActionRouteDefinitionArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceProviderName The name of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderName(@Nullable Output<String> resourceProviderName) {
             $.resourceProviderName = resourceProviderName;
             return this;
         }
 
+        /**
+         * @param resourceProviderName The name of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderName(String resourceProviderName) {
             return resourceProviderName(Output.of(resourceProviderName));
         }
 
+        /**
+         * @param resourceTypes A list of resource types that the custom resource provider implements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(@Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
+        /**
+         * @param resourceTypes A list of resource types that the custom resource provider implements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
             return resourceTypes(Output.of(resourceTypes));
         }
 
+        /**
+         * @param resourceTypes A list of resource types that the custom resource provider implements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(CustomRPResourceTypeRouteDefinitionArgs... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param validations A list of validations to run on the custom resource provider&#39;s requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validations(@Nullable Output<List<CustomRPValidationsArgs>> validations) {
             $.validations = validations;
             return this;
         }
 
+        /**
+         * @param validations A list of validations to run on the custom resource provider&#39;s requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validations(List<CustomRPValidationsArgs> validations) {
             return validations(Output.of(validations));
         }
 
+        /**
+         * @param validations A list of validations to run on the custom resource provider&#39;s requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validations(CustomRPValidationsArgs... validations) {
             return validations(List.of(validations));
         }

@@ -29,6 +29,10 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return show the KPI in the UI?
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -40,6 +44,10 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return ID of resource related to metric (budget).
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,KpiTypeType>> type;
 
+    /**
+     * @return KPI type (Forecast, Budget).
+     * 
+     */
     public Optional<Output<Either<String,KpiTypeType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -81,37 +93,85 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KpiPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled show the KPI in the UI?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled show the KPI in the UI?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param id ID of resource related to metric (budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id ID of resource related to metric (budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param type KPI type (Forecast, Budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,KpiTypeType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type KPI type (Forecast, Budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,KpiTypeType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type KPI type (Forecast, Budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type KPI type (Forecast, Budget).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(KpiTypeType type) {
             return type(Either.ofRight(type));
         }

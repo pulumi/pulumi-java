@@ -19,6 +19,10 @@ public final class GetCloudServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudServiceName", required=true)
     private String cloudServiceName;
 
+    /**
+     * @return Name of the cloud service.
+     * 
+     */
     public String cloudServiceName() {
         return this.cloudServiceName;
     }
@@ -30,6 +34,10 @@ public final class GetCloudServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetCloudServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCloudServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudServiceName Name of the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudServiceName(String cloudServiceName) {
             $.cloudServiceName = cloudServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

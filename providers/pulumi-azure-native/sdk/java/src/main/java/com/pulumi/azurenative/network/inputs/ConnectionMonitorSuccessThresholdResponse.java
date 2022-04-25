@@ -26,6 +26,10 @@ public final class ConnectionMonitorSuccessThresholdResponse extends com.pulumi.
     @Import(name="checksFailedPercent")
     private @Nullable Integer checksFailedPercent;
 
+    /**
+     * @return The maximum percentage of failed checks permitted for a test to evaluate as successful.
+     * 
+     */
     public Optional<Integer> checksFailedPercent() {
         return Optional.ofNullable(this.checksFailedPercent);
     }
@@ -37,6 +41,10 @@ public final class ConnectionMonitorSuccessThresholdResponse extends com.pulumi.
     @Import(name="roundTripTimeMs")
     private @Nullable Double roundTripTimeMs;
 
+    /**
+     * @return The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
+     * 
+     */
     public Optional<Double> roundTripTimeMs() {
         return Optional.ofNullable(this.roundTripTimeMs);
     }
@@ -66,11 +74,23 @@ public final class ConnectionMonitorSuccessThresholdResponse extends com.pulumi.
             $ = new ConnectionMonitorSuccessThresholdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksFailedPercent The maximum percentage of failed checks permitted for a test to evaluate as successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksFailedPercent(@Nullable Integer checksFailedPercent) {
             $.checksFailedPercent = checksFailedPercent;
             return this;
         }
 
+        /**
+         * @param roundTripTimeMs The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
             $.roundTripTimeMs = roundTripTimeMs;
             return this;

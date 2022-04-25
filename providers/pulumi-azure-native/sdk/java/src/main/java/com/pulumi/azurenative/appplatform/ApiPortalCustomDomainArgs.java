@@ -23,6 +23,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
     @Import(name="apiPortalName", required=true)
     private Output<String> apiPortalName;
 
+    /**
+     * @return The name of API portal.
+     * 
+     */
     public Output<String> apiPortalName() {
         return this.apiPortalName;
     }
@@ -34,6 +38,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The name of the API portal custom domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -45,6 +53,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
     @Import(name="properties")
     private @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
 
+    /**
+     * @return The properties of custom domain for API portal
+     * 
+     */
     public Optional<Output<ApiPortalCustomDomainPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
             $ = new ApiPortalCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiPortalName The name of API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPortalName(Output<String> apiPortalName) {
             $.apiPortalName = apiPortalName;
             return this;
         }
 
+        /**
+         * @param apiPortalName The name of API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPortalName(String apiPortalName) {
             return apiPortalName(Output.of(apiPortalName));
         }
 
+        /**
+         * @param domainName The name of the API portal custom domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The name of the API portal custom domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param properties The properties of custom domain for API portal
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of custom domain for API portal
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ApiPortalCustomDomainPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

@@ -23,6 +23,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="details")
     private @Nullable Output<CreateManagementGroupDetailsArgs> details;
 
+    /**
+     * @return The details of a management group used during creation.
+     * 
+     */
     public Optional<Output<CreateManagementGroupDetailsArgs>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -34,6 +38,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -45,6 +53,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return Management Group ID.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -56,6 +68,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,38 +103,86 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
             $ = new ManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details The details of a management group used during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable Output<CreateManagementGroupDetailsArgs> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details The details of a management group used during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(CreateManagementGroupDetailsArgs details) {
             return details(Output.of(details));
         }
 
+        /**
+         * @param displayName The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param name The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

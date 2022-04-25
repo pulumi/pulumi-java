@@ -29,6 +29,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Metadata description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="folderId")
     private @Nullable Double folderId;
 
+    /**
+     * @return Folder id which contains environment.
+     * 
+     */
     public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
@@ -51,6 +59,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Metadata id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -62,6 +74,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Metadata name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +90,11 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of SSIS object metadata.
+     * Expected value is &#39;Environment&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -85,6 +106,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="variables")
     private @Nullable List<SsisVariableResponse> variables;
 
+    /**
+     * @return Variable in environment
+     * 
+     */
     public Optional<List<SsisVariableResponse>> variables() {
         return Optional.ofNullable(this.variables);
     }
@@ -118,36 +143,79 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
             $ = new SsisEnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Metadata description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param folderId Folder id which contains environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(@Nullable Double folderId) {
             $.folderId = folderId;
             return this;
         }
 
+        /**
+         * @param id Metadata id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of SSIS object metadata.
+         * Expected value is &#39;Environment&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param variables Variable in environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(@Nullable List<SsisVariableResponse> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables Variable in environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(SsisVariableResponse... variables) {
             return variables(List.of(variables));
         }

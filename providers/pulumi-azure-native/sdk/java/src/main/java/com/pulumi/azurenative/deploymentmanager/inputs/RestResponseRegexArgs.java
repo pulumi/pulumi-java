@@ -28,6 +28,10 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
     @Import(name="matchQuantifier")
     private @Nullable Output<RestMatchQuantifier> matchQuantifier;
 
+    /**
+     * @return Indicates whether any or all of the expressions should match with the response content.
+     * 
+     */
     public Optional<Output<RestMatchQuantifier>> matchQuantifier() {
         return Optional.ofNullable(this.matchQuantifier);
     }
@@ -39,6 +43,10 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
     @Import(name="matches")
     private @Nullable Output<List<String>> matches;
 
+    /**
+     * @return The list of regular expressions.
+     * 
+     */
     public Optional<Output<List<String>>> matches() {
         return Optional.ofNullable(this.matches);
     }
@@ -68,24 +76,54 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
             $ = new RestResponseRegexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchQuantifier Indicates whether any or all of the expressions should match with the response content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchQuantifier(@Nullable Output<RestMatchQuantifier> matchQuantifier) {
             $.matchQuantifier = matchQuantifier;
             return this;
         }
 
+        /**
+         * @param matchQuantifier Indicates whether any or all of the expressions should match with the response content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchQuantifier(RestMatchQuantifier matchQuantifier) {
             return matchQuantifier(Output.of(matchQuantifier));
         }
 
+        /**
+         * @param matches The list of regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matches(@Nullable Output<List<String>> matches) {
             $.matches = matches;
             return this;
         }
 
+        /**
+         * @param matches The list of regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matches(List<String> matches) {
             return matches(Output.of(matches));
         }
 
+        /**
+         * @param matches The list of regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matches(String... matches) {
             return matches(List.of(matches));
         }

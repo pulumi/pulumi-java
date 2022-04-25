@@ -23,6 +23,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="userAssignedIdentity", required=true)
     private String userAssignedIdentity;
 
+    /**
+     * @return The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
+     * 
+     */
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
@@ -51,6 +55,12 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

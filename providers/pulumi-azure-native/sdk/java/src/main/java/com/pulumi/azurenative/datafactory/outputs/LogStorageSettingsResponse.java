@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogStorageSettingsResponse {
     /**
-     * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object enableReliableLogging;
     /**
-     * Log storage linked service reference.
+     * @return Log storage linked service reference.
      * 
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+     * @return Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object logLevel;
     /**
-     * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+     * @return The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object path;
@@ -46,30 +46,30 @@ public final class LogStorageSettingsResponse {
     }
 
     /**
-     * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
     /**
-     * Log storage linked service reference.
+     * @return Log storage linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+     * @return Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
-     * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+     * @return The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }

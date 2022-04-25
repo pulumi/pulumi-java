@@ -19,6 +19,10 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="environmentName", required=true)
     private String environmentName;
 
+    /**
+     * @return The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     public String environmentName() {
         return this.environmentName;
     }
@@ -30,6 +34,10 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="referenceDataSetName", required=true)
     private String referenceDataSetName;
 
+    /**
+     * @return The name of the Time Series Insights reference data set associated with the specified environment.
+     * 
+     */
     public String referenceDataSetName() {
         return this.referenceDataSetName;
     }
@@ -41,6 +49,10 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
             $ = new GetReferenceDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param referenceDataSetName The name of the Time Series Insights reference data set associated with the specified environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSetName(String referenceDataSetName) {
             $.referenceDataSetName = referenceDataSetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

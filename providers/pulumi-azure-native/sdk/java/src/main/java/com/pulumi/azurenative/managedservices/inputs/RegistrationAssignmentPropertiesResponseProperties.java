@@ -27,6 +27,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="authorizations")
     private @Nullable List<AuthorizationResponse> authorizations;
 
+    /**
+     * @return Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * 
+     */
     public Optional<List<AuthorizationResponse>> authorizations() {
         return Optional.ofNullable(this.authorizations);
     }
@@ -38,6 +42,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the registration definition.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="managedByTenantId")
     private @Nullable String managedByTenantId;
 
+    /**
+     * @return Id of the managedBy tenant.
+     * 
+     */
     public Optional<String> managedByTenantId() {
         return Optional.ofNullable(this.managedByTenantId);
     }
@@ -60,6 +72,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="managedByTenantName")
     private @Nullable String managedByTenantName;
 
+    /**
+     * @return Name of the managedBy tenant.
+     * 
+     */
     public Optional<String> managedByTenantName() {
         return Optional.ofNullable(this.managedByTenantName);
     }
@@ -71,6 +87,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="manageeTenantId")
     private @Nullable String manageeTenantId;
 
+    /**
+     * @return Id of the home tenant.
+     * 
+     */
     public Optional<String> manageeTenantId() {
         return Optional.ofNullable(this.manageeTenantId);
     }
@@ -82,6 +102,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="manageeTenantName")
     private @Nullable String manageeTenantName;
 
+    /**
+     * @return Name of the home tenant.
+     * 
+     */
     public Optional<String> manageeTenantName() {
         return Optional.ofNullable(this.manageeTenantName);
     }
@@ -93,6 +117,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Current state of the registration definition.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -104,6 +132,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="registrationDefinitionName")
     private @Nullable String registrationDefinitionName;
 
+    /**
+     * @return Name of the registration definition.
+     * 
+     */
     public Optional<String> registrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }
@@ -139,45 +171,99 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
             $ = new RegistrationAssignmentPropertiesResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(@Nullable List<AuthorizationResponse> authorizations) {
             $.authorizations = authorizations;
             return this;
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(AuthorizationResponse... authorizations) {
             return authorizations(List.of(authorizations));
         }
 
+        /**
+         * @param description Description of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param managedByTenantId Id of the managedBy tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
             $.managedByTenantId = managedByTenantId;
             return this;
         }
 
+        /**
+         * @param managedByTenantName Name of the managedBy tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedByTenantName(@Nullable String managedByTenantName) {
             $.managedByTenantName = managedByTenantName;
             return this;
         }
 
+        /**
+         * @param manageeTenantId Id of the home tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manageeTenantId(@Nullable String manageeTenantId) {
             $.manageeTenantId = manageeTenantId;
             return this;
         }
 
+        /**
+         * @param manageeTenantName Name of the home tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manageeTenantName(@Nullable String manageeTenantName) {
             $.manageeTenantName = manageeTenantName;
             return this;
         }
 
+        /**
+         * @param provisioningState Current state of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param registrationDefinitionName Name of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             $.registrationDefinitionName = registrationDefinitionName;
             return this;

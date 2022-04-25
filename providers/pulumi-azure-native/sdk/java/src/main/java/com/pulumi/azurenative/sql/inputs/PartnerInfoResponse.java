@@ -23,6 +23,10 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource identifier of the partner server.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Geo location of the partner server.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -45,6 +53,10 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="replicationRole", required=true)
     private String replicationRole;
 
+    /**
+     * @return Replication role of the partner server.
+     * 
+     */
     public String replicationRole() {
         return this.replicationRole;
     }
@@ -75,16 +87,34 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PartnerInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource identifier of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Geo location of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param replicationRole Replication role of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationRole(String replicationRole) {
             $.replicationRole = replicationRole;
             return this;

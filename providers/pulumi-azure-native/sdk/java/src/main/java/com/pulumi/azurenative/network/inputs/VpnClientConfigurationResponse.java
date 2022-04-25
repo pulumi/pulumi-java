@@ -31,6 +31,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="aadAudience")
     private @Nullable String aadAudience;
 
+    /**
+     * @return The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+     * 
+     */
     public Optional<String> aadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
@@ -42,6 +46,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="aadIssuer")
     private @Nullable String aadIssuer;
 
+    /**
+     * @return The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+     * 
+     */
     public Optional<String> aadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
@@ -53,6 +61,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="aadTenant")
     private @Nullable String aadTenant;
 
+    /**
+     * @return The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+     * 
+     */
     public Optional<String> aadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
@@ -64,6 +76,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="radiusServerAddress")
     private @Nullable String radiusServerAddress;
 
+    /**
+     * @return The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
+     * 
+     */
     public Optional<String> radiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
@@ -75,6 +91,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="radiusServerSecret")
     private @Nullable String radiusServerSecret;
 
+    /**
+     * @return The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
+     * 
+     */
     public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
@@ -86,6 +106,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="radiusServers")
     private @Nullable List<RadiusServerResponse> radiusServers;
 
+    /**
+     * @return The radiusServers property for multiple radius server configuration.
+     * 
+     */
     public Optional<List<RadiusServerResponse>> radiusServers() {
         return Optional.ofNullable(this.radiusServers);
     }
@@ -97,6 +121,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="vpnAuthenticationTypes")
     private @Nullable List<String> vpnAuthenticationTypes;
 
+    /**
+     * @return VPN authentication types for the virtual network gateway..
+     * 
+     */
     public Optional<List<String>> vpnAuthenticationTypes() {
         return Optional.ofNullable(this.vpnAuthenticationTypes);
     }
@@ -108,6 +136,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="vpnClientAddressPool")
     private @Nullable AddressSpaceResponse vpnClientAddressPool;
 
+    /**
+     * @return The reference to the address space resource which represents Address space for P2S VpnClient.
+     * 
+     */
     public Optional<AddressSpaceResponse> vpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
@@ -119,6 +151,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="vpnClientIpsecPolicies")
     private @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies;
 
+    /**
+     * @return VpnClientIpsecPolicies for virtual network gateway P2S client.
+     * 
+     */
     public Optional<List<IpsecPolicyResponse>> vpnClientIpsecPolicies() {
         return Optional.ofNullable(this.vpnClientIpsecPolicies);
     }
@@ -130,6 +166,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="vpnClientProtocols")
     private @Nullable List<String> vpnClientProtocols;
 
+    /**
+     * @return VpnClientProtocols for Virtual network gateway.
+     * 
+     */
     public Optional<List<String>> vpnClientProtocols() {
         return Optional.ofNullable(this.vpnClientProtocols);
     }
@@ -141,6 +181,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="vpnClientRevokedCertificates")
     private @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates;
 
+    /**
+     * @return VpnClientRevokedCertificate for Virtual network gateway.
+     * 
+     */
     public Optional<List<VpnClientRevokedCertificateResponse>> vpnClientRevokedCertificates() {
         return Optional.ofNullable(this.vpnClientRevokedCertificates);
     }
@@ -152,6 +196,10 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
     @Import(name="vpnClientRootCertificates")
     private @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates;
 
+    /**
+     * @return VpnClientRootCertificate for virtual network gateway.
+     * 
+     */
     public Optional<List<VpnClientRootCertificateResponse>> vpnClientRootCertificates() {
         return Optional.ofNullable(this.vpnClientRootCertificates);
     }
@@ -191,86 +239,194 @@ public final class VpnClientConfigurationResponse extends com.pulumi.resources.I
             $ = new VpnClientConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAudience The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAudience(@Nullable String aadAudience) {
             $.aadAudience = aadAudience;
             return this;
         }
 
+        /**
+         * @param aadIssuer The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadIssuer(@Nullable String aadIssuer) {
             $.aadIssuer = aadIssuer;
             return this;
         }
 
+        /**
+         * @param aadTenant The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenant(@Nullable String aadTenant) {
             $.aadTenant = aadTenant;
             return this;
         }
 
+        /**
+         * @param radiusServerAddress The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerAddress(@Nullable String radiusServerAddress) {
             $.radiusServerAddress = radiusServerAddress;
             return this;
         }
 
+        /**
+         * @param radiusServerSecret The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             $.radiusServerSecret = radiusServerSecret;
             return this;
         }
 
+        /**
+         * @param radiusServers The radiusServers property for multiple radius server configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServers(@Nullable List<RadiusServerResponse> radiusServers) {
             $.radiusServers = radiusServers;
             return this;
         }
 
+        /**
+         * @param radiusServers The radiusServers property for multiple radius server configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServers(RadiusServerResponse... radiusServers) {
             return radiusServers(List.of(radiusServers));
         }
 
+        /**
+         * @param vpnAuthenticationTypes VPN authentication types for the virtual network gateway..
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnAuthenticationTypes(@Nullable List<String> vpnAuthenticationTypes) {
             $.vpnAuthenticationTypes = vpnAuthenticationTypes;
             return this;
         }
 
+        /**
+         * @param vpnAuthenticationTypes VPN authentication types for the virtual network gateway..
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnAuthenticationTypes(String... vpnAuthenticationTypes) {
             return vpnAuthenticationTypes(List.of(vpnAuthenticationTypes));
         }
 
+        /**
+         * @param vpnClientAddressPool The reference to the address space resource which represents Address space for P2S VpnClient.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
             $.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
 
+        /**
+         * @param vpnClientIpsecPolicies VpnClientIpsecPolicies for virtual network gateway P2S client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientIpsecPolicies(@Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies) {
             $.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
             return this;
         }
 
+        /**
+         * @param vpnClientIpsecPolicies VpnClientIpsecPolicies for virtual network gateway P2S client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientIpsecPolicies(IpsecPolicyResponse... vpnClientIpsecPolicies) {
             return vpnClientIpsecPolicies(List.of(vpnClientIpsecPolicies));
         }
 
+        /**
+         * @param vpnClientProtocols VpnClientProtocols for Virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientProtocols(@Nullable List<String> vpnClientProtocols) {
             $.vpnClientProtocols = vpnClientProtocols;
             return this;
         }
 
+        /**
+         * @param vpnClientProtocols VpnClientProtocols for Virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientProtocols(String... vpnClientProtocols) {
             return vpnClientProtocols(List.of(vpnClientProtocols));
         }
 
+        /**
+         * @param vpnClientRevokedCertificates VpnClientRevokedCertificate for Virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientRevokedCertificates(@Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates) {
             $.vpnClientRevokedCertificates = vpnClientRevokedCertificates;
             return this;
         }
 
+        /**
+         * @param vpnClientRevokedCertificates VpnClientRevokedCertificate for Virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientRevokedCertificates(VpnClientRevokedCertificateResponse... vpnClientRevokedCertificates) {
             return vpnClientRevokedCertificates(List.of(vpnClientRevokedCertificates));
         }
 
+        /**
+         * @param vpnClientRootCertificates VpnClientRootCertificate for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientRootCertificates(@Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates) {
             $.vpnClientRootCertificates = vpnClientRootCertificates;
             return this;
         }
 
+        /**
+         * @param vpnClientRootCertificates VpnClientRootCertificate for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientRootCertificates(VpnClientRootCertificateResponse... vpnClientRootCertificates) {
             return vpnClientRootCertificates(List.of(vpnClientRootCertificates));
         }

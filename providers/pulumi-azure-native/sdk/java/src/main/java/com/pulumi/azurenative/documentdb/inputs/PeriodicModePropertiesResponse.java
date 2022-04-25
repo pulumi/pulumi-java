@@ -25,6 +25,10 @@ public final class PeriodicModePropertiesResponse extends com.pulumi.resources.I
     @Import(name="backupIntervalInMinutes")
     private @Nullable Integer backupIntervalInMinutes;
 
+    /**
+     * @return An integer representing the interval in minutes between two backups
+     * 
+     */
     public Optional<Integer> backupIntervalInMinutes() {
         return Optional.ofNullable(this.backupIntervalInMinutes);
     }
@@ -36,6 +40,10 @@ public final class PeriodicModePropertiesResponse extends com.pulumi.resources.I
     @Import(name="backupRetentionIntervalInHours")
     private @Nullable Integer backupRetentionIntervalInHours;
 
+    /**
+     * @return An integer representing the time (in hours) that each backup is retained
+     * 
+     */
     public Optional<Integer> backupRetentionIntervalInHours() {
         return Optional.ofNullable(this.backupRetentionIntervalInHours);
     }
@@ -65,11 +73,23 @@ public final class PeriodicModePropertiesResponse extends com.pulumi.resources.I
             $ = new PeriodicModePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupIntervalInMinutes An integer representing the interval in minutes between two backups
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupIntervalInMinutes(@Nullable Integer backupIntervalInMinutes) {
             $.backupIntervalInMinutes = backupIntervalInMinutes;
             return this;
         }
 
+        /**
+         * @param backupRetentionIntervalInHours An integer representing the time (in hours) that each backup is retained
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
             $.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;

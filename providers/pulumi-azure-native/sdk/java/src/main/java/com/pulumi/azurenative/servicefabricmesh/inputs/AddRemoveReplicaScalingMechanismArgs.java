@@ -27,6 +27,11 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Enumerates the mechanisms for auto scaling.
+     * Expected value is &#39;AddRemoveReplica&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -38,6 +43,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
     @Import(name="maxCount", required=true)
     private Output<Integer> maxCount;
 
+    /**
+     * @return Maximum number of containers (scale up won&#39;t be performed above this number).
+     * 
+     */
     public Output<Integer> maxCount() {
         return this.maxCount;
     }
@@ -49,6 +58,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
     @Import(name="minCount", required=true)
     private Output<Integer> minCount;
 
+    /**
+     * @return Minimum number of containers (scale down won&#39;t be performed below this number).
+     * 
+     */
     public Output<Integer> minCount() {
         return this.minCount;
     }
@@ -60,6 +73,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
     @Import(name="scaleIncrement", required=true)
     private Output<Integer> scaleIncrement;
 
+    /**
+     * @return Each time auto scaling is performed, this number of containers will be added or removed.
+     * 
+     */
     public Output<Integer> scaleIncrement() {
         return this.scaleIncrement;
     }
@@ -91,38 +108,88 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
             $ = new AddRemoveReplicaScalingMechanismArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Enumerates the mechanisms for auto scaling.
+         * Expected value is &#39;AddRemoveReplica&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Enumerates the mechanisms for auto scaling.
+         * Expected value is &#39;AddRemoveReplica&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param maxCount Maximum number of containers (scale up won&#39;t be performed above this number).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(Output<Integer> maxCount) {
             $.maxCount = maxCount;
             return this;
         }
 
+        /**
+         * @param maxCount Maximum number of containers (scale up won&#39;t be performed above this number).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(Integer maxCount) {
             return maxCount(Output.of(maxCount));
         }
 
+        /**
+         * @param minCount Minimum number of containers (scale down won&#39;t be performed below this number).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCount(Output<Integer> minCount) {
             $.minCount = minCount;
             return this;
         }
 
+        /**
+         * @param minCount Minimum number of containers (scale down won&#39;t be performed below this number).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCount(Integer minCount) {
             return minCount(Output.of(minCount));
         }
 
+        /**
+         * @param scaleIncrement Each time auto scaling is performed, this number of containers will be added or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIncrement(Output<Integer> scaleIncrement) {
             $.scaleIncrement = scaleIncrement;
             return this;
         }
 
+        /**
+         * @param scaleIncrement Each time auto scaling is performed, this number of containers will be added or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIncrement(Integer scaleIncrement) {
             return scaleIncrement(Output.of(scaleIncrement));
         }

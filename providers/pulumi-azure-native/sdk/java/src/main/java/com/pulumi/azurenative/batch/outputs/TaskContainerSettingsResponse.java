@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TaskContainerSettingsResponse {
     /**
-     * These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+     * @return These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
      * 
      */
     private final @Nullable String containerRunOptions;
     /**
-     * This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
      * 
      */
     private final String imageName;
     /**
-     * This setting can be omitted if was already provided at pool creation.
+     * @return This setting can be omitted if was already provided at pool creation.
      * 
      */
     private final @Nullable ContainerRegistryResponse registry;
@@ -42,23 +42,23 @@ public final class TaskContainerSettingsResponse {
     }
 
     /**
-     * These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+     * @return These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
      * 
-    */
+     */
     public Optional<String> containerRunOptions() {
         return Optional.ofNullable(this.containerRunOptions);
     }
     /**
-     * This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
      * 
-    */
+     */
     public String imageName() {
         return this.imageName;
     }
     /**
-     * This setting can be omitted if was already provided at pool creation.
+     * @return This setting can be omitted if was already provided at pool creation.
      * 
-    */
+     */
     public Optional<ContainerRegistryResponse> registry() {
         return Optional.ofNullable(this.registry);
     }

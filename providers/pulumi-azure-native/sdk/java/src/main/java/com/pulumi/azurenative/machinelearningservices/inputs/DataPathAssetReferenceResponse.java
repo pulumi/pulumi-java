@@ -26,6 +26,10 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
     @Import(name="datastoreId")
     private @Nullable String datastoreId;
 
+    /**
+     * @return ARM resource ID of the datastore where the asset is located.
+     * 
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -37,6 +41,10 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path of the file/directory in the datastore.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,11 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
     @Import(name="referenceType", required=true)
     private String referenceType;
 
+    /**
+     * @return Enum to determine which reference method to use for an asset.
+     * Expected value is &#39;DataPath&#39;.
+     * 
+     */
     public String referenceType() {
         return this.referenceType;
     }
@@ -79,16 +92,35 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
             $ = new DataPathAssetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the asset is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable String datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param path The path of the file/directory in the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;DataPath&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(String referenceType) {
             $.referenceType = referenceType;
             return this;

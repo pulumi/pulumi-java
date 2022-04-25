@@ -27,6 +27,10 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="attributes")
     private @Nullable Output<SecretAttributesArgs> attributes;
 
+    /**
+     * @return The attributes of the secret.
+     * 
+     */
     public Optional<Output<SecretAttributesArgs>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -38,6 +42,10 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The content type of the secret.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -49,6 +57,10 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -79,29 +91,65 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
             $ = new SecretPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<SecretAttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The attributes of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(SecretAttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param contentType The content type of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The content type of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param value The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

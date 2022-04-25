@@ -26,6 +26,10 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secureBootEnabled")
     private @Nullable Output<Boolean> secureBootEnabled;
 
+    /**
+     * @return Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * 
+     */
     public Optional<Output<Boolean>> secureBootEnabled() {
         return Optional.ofNullable(this.secureBootEnabled);
     }
@@ -37,6 +41,10 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vTpmEnabled")
     private @Nullable Output<Boolean> vTpmEnabled;
 
+    /**
+     * @return Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * 
+     */
     public Optional<Output<Boolean>> vTpmEnabled() {
         return Optional.ofNullable(this.vTpmEnabled);
     }
@@ -66,20 +74,44 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UefiSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secureBootEnabled Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureBootEnabled(@Nullable Output<Boolean> secureBootEnabled) {
             $.secureBootEnabled = secureBootEnabled;
             return this;
         }
 
+        /**
+         * @param secureBootEnabled Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureBootEnabled(Boolean secureBootEnabled) {
             return secureBootEnabled(Output.of(secureBootEnabled));
         }
 
+        /**
+         * @param vTpmEnabled Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder vTpmEnabled(@Nullable Output<Boolean> vTpmEnabled) {
             $.vTpmEnabled = vTpmEnabled;
             return this;
         }
 
+        /**
+         * @param vTpmEnabled Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder vTpmEnabled(Boolean vTpmEnabled) {
             return vTpmEnabled(Output.of(vTpmEnabled));
         }

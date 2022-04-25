@@ -27,6 +27,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blob", required=true)
     private String blob;
 
+    /**
+     * @return Gets the blob endpoint.
+     * 
+     */
     public String blob() {
         return this.blob;
     }
@@ -38,6 +42,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dfs", required=true)
     private String dfs;
 
+    /**
+     * @return Gets the dfs endpoint.
+     * 
+     */
     public String dfs() {
         return this.dfs;
     }
@@ -49,6 +57,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="file", required=true)
     private String file;
 
+    /**
+     * @return Gets the file endpoint.
+     * 
+     */
     public String file() {
         return this.file;
     }
@@ -60,6 +72,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="internetEndpoints")
     private @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
 
+    /**
+     * @return Gets the internet routing storage endpoints
+     * 
+     */
     public Optional<StorageAccountInternetEndpointsResponse> internetEndpoints() {
         return Optional.ofNullable(this.internetEndpoints);
     }
@@ -71,6 +87,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="microsoftEndpoints")
     private @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
 
+    /**
+     * @return Gets the microsoft routing storage endpoints.
+     * 
+     */
     public Optional<StorageAccountMicrosoftEndpointsResponse> microsoftEndpoints() {
         return Optional.ofNullable(this.microsoftEndpoints);
     }
@@ -82,6 +102,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queue", required=true)
     private String queue;
 
+    /**
+     * @return Gets the queue endpoint.
+     * 
+     */
     public String queue() {
         return this.queue;
     }
@@ -93,6 +117,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
     private String table;
 
+    /**
+     * @return Gets the table endpoint.
+     * 
+     */
     public String table() {
         return this.table;
     }
@@ -104,6 +132,10 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="web", required=true)
     private String web;
 
+    /**
+     * @return Gets the web endpoint.
+     * 
+     */
     public String web() {
         return this.web;
     }
@@ -139,41 +171,89 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blob Gets the blob endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blob(String blob) {
             $.blob = blob;
             return this;
         }
 
+        /**
+         * @param dfs Gets the dfs endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dfs(String dfs) {
             $.dfs = dfs;
             return this;
         }
 
+        /**
+         * @param file Gets the file endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(String file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param internetEndpoints Gets the internet routing storage endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder internetEndpoints(@Nullable StorageAccountInternetEndpointsResponse internetEndpoints) {
             $.internetEndpoints = internetEndpoints;
             return this;
         }
 
+        /**
+         * @param microsoftEndpoints Gets the microsoft routing storage endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftEndpoints(@Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints) {
             $.microsoftEndpoints = microsoftEndpoints;
             return this;
         }
 
+        /**
+         * @param queue Gets the queue endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(String queue) {
             $.queue = queue;
             return this;
         }
 
+        /**
+         * @param table Gets the table endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param web Gets the web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder web(String web) {
             $.web = web;
             return this;

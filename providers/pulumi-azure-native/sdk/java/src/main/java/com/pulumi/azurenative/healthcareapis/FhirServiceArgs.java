@@ -32,6 +32,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
     private @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
 
+    /**
+     * @return Fhir Service access policies.
+     * 
+     */
     public Optional<Output<List<FhirServiceAccessPolicyEntryArgs>>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -43,6 +47,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acrConfiguration")
     private @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
 
+    /**
+     * @return Fhir Service Azure container registry configuration.
+     * 
+     */
     public Optional<Output<FhirServiceAcrConfigurationArgs>> acrConfiguration() {
         return Optional.ofNullable(this.acrConfiguration);
     }
@@ -54,6 +62,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationConfiguration")
     private @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
+    /**
+     * @return Fhir Service authentication configuration.
+     * 
+     */
     public Optional<Output<FhirServiceAuthenticationConfigurationArgs>> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
@@ -65,6 +77,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="corsConfiguration")
     private @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
 
+    /**
+     * @return Fhir Service Cors configuration.
+     * 
+     */
     public Optional<Output<FhirServiceCorsConfigurationArgs>> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
@@ -76,6 +92,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exportConfiguration")
     private @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
 
+    /**
+     * @return Fhir Service export configuration.
+     * 
+     */
     public Optional<Output<FhirServiceExportConfigurationArgs>> exportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
@@ -87,6 +107,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fhirServiceName")
     private @Nullable Output<String> fhirServiceName;
 
+    /**
+     * @return The name of FHIR Service resource.
+     * 
+     */
     public Optional<Output<String>> fhirServiceName() {
         return Optional.ofNullable(this.fhirServiceName);
     }
@@ -98,6 +122,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
+    /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
     public Optional<Output<ServiceManagedIdentityIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -109,6 +137,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<Either<String,FhirServiceKind>> kind;
 
+    /**
+     * @return The kind of the service.
+     * 
+     */
     public Optional<Output<Either<String,FhirServiceKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -120,6 +152,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -131,6 +167,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the service instance.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -142,6 +182,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -153,6 +197,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of workspace resource.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -192,122 +240,284 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FhirServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies Fhir Service access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies Fhir Service access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(List<FhirServiceAccessPolicyEntryArgs> accessPolicies) {
             return accessPolicies(Output.of(accessPolicies));
         }
 
+        /**
+         * @param accessPolicies Fhir Service access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(FhirServiceAccessPolicyEntryArgs... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
 
+        /**
+         * @param acrConfiguration Fhir Service Azure container registry configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrConfiguration(@Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration) {
             $.acrConfiguration = acrConfiguration;
             return this;
         }
 
+        /**
+         * @param acrConfiguration Fhir Service Azure container registry configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrConfiguration(FhirServiceAcrConfigurationArgs acrConfiguration) {
             return acrConfiguration(Output.of(acrConfiguration));
         }
 
+        /**
+         * @param authenticationConfiguration Fhir Service authentication configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(@Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
             $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
+        /**
+         * @param authenticationConfiguration Fhir Service authentication configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(FhirServiceAuthenticationConfigurationArgs authenticationConfiguration) {
             return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
 
+        /**
+         * @param corsConfiguration Fhir Service Cors configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfiguration(@Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration) {
             $.corsConfiguration = corsConfiguration;
             return this;
         }
 
+        /**
+         * @param corsConfiguration Fhir Service Cors configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfiguration(FhirServiceCorsConfigurationArgs corsConfiguration) {
             return corsConfiguration(Output.of(corsConfiguration));
         }
 
+        /**
+         * @param exportConfiguration Fhir Service export configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfiguration(@Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration) {
             $.exportConfiguration = exportConfiguration;
             return this;
         }
 
+        /**
+         * @param exportConfiguration Fhir Service export configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfiguration(FhirServiceExportConfigurationArgs exportConfiguration) {
             return exportConfiguration(Output.of(exportConfiguration));
         }
 
+        /**
+         * @param fhirServiceName The name of FHIR Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirServiceName(@Nullable Output<String> fhirServiceName) {
             $.fhirServiceName = fhirServiceName;
             return this;
         }
 
+        /**
+         * @param fhirServiceName The name of FHIR Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirServiceName(String fhirServiceName) {
             return fhirServiceName(Output.of(fhirServiceName));
         }
 
+        /**
+         * @param identity Setting indicating whether the service has a managed identity associated with it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Setting indicating whether the service has a managed identity associated with it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ServiceManagedIdentityIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind The kind of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,FhirServiceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,FhirServiceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(FhirServiceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

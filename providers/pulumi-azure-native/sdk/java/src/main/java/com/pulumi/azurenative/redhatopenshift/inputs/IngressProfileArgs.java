@@ -26,6 +26,10 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
+    /**
+     * @return The IP of the ingress (immutable).
+     * 
+     */
     public Optional<Output<String>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -37,6 +41,10 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The ingress profile name.  Must be &#34;default&#34; (immutable).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="visibility")
     private @Nullable Output<String> visibility;
 
+    /**
+     * @return Ingress visibility (immutable).
+     * 
+     */
     public Optional<Output<String>> visibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -78,29 +90,65 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IngressProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip The IP of the ingress (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip The IP of the ingress (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param name The ingress profile name.  Must be &#34;default&#34; (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The ingress profile name.  Must be &#34;default&#34; (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param visibility Ingress visibility (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable Output<String> visibility) {
             $.visibility = visibility;
             return this;
         }
 
+        /**
+         * @param visibility Ingress visibility (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(String visibility) {
             return visibility(Output.of(visibility));
         }

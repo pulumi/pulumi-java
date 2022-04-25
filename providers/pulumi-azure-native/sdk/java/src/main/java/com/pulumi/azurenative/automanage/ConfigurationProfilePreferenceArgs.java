@@ -24,6 +24,10 @@ public final class ConfigurationProfilePreferenceArgs extends com.pulumi.resourc
     @Import(name="configurationProfilePreferenceName")
     private @Nullable Output<String> configurationProfilePreferenceName;
 
+    /**
+     * @return Name of the configuration profile preference.
+     * 
+     */
     public Optional<Output<String>> configurationProfilePreferenceName() {
         return Optional.ofNullable(this.configurationProfilePreferenceName);
     }
@@ -35,6 +39,10 @@ public final class ConfigurationProfilePreferenceArgs extends com.pulumi.resourc
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class ConfigurationProfilePreferenceArgs extends com.pulumi.resourc
     @Import(name="properties")
     private @Nullable Output<ConfigurationProfilePreferencePropertiesArgs> properties;
 
+    /**
+     * @return Properties of the configuration profile preference.
+     * 
+     */
     public Optional<Output<ConfigurationProfilePreferencePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class ConfigurationProfilePreferenceArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class ConfigurationProfilePreferenceArgs extends com.pulumi.resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class ConfigurationProfilePreferenceArgs extends com.pulumi.resourc
             $ = new ConfigurationProfilePreferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationProfilePreferenceName Name of the configuration profile preference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfilePreferenceName(@Nullable Output<String> configurationProfilePreferenceName) {
             $.configurationProfilePreferenceName = configurationProfilePreferenceName;
             return this;
         }
 
+        /**
+         * @param configurationProfilePreferenceName Name of the configuration profile preference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfilePreferenceName(String configurationProfilePreferenceName) {
             return configurationProfilePreferenceName(Output.of(configurationProfilePreferenceName));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Properties of the configuration profile preference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ConfigurationProfilePreferencePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the configuration profile preference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ConfigurationProfilePreferencePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

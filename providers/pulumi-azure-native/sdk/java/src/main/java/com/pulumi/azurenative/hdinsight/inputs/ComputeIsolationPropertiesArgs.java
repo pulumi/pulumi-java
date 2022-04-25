@@ -28,6 +28,10 @@ public final class ComputeIsolationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="enableComputeIsolation")
     private @Nullable Output<Boolean> enableComputeIsolation;
 
+    /**
+     * @return The flag indicates whether enable compute isolation or not.
+     * 
+     */
     public Optional<Output<Boolean>> enableComputeIsolation() {
         return Optional.ofNullable(this.enableComputeIsolation);
     }
@@ -39,6 +43,10 @@ public final class ComputeIsolationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="hostSku")
     private @Nullable Output<String> hostSku;
 
+    /**
+     * @return The host sku.
+     * 
+     */
     public Optional<Output<String>> hostSku() {
         return Optional.ofNullable(this.hostSku);
     }
@@ -68,20 +76,44 @@ public final class ComputeIsolationPropertiesArgs extends com.pulumi.resources.R
             $ = new ComputeIsolationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableComputeIsolation The flag indicates whether enable compute isolation or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComputeIsolation(@Nullable Output<Boolean> enableComputeIsolation) {
             $.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
 
+        /**
+         * @param enableComputeIsolation The flag indicates whether enable compute isolation or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComputeIsolation(Boolean enableComputeIsolation) {
             return enableComputeIsolation(Output.of(enableComputeIsolation));
         }
 
+        /**
+         * @param hostSku The host sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostSku(@Nullable Output<String> hostSku) {
             $.hostSku = hostSku;
             return this;
         }
 
+        /**
+         * @param hostSku The host sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostSku(String hostSku) {
             return hostSku(Output.of(hostSku));
         }

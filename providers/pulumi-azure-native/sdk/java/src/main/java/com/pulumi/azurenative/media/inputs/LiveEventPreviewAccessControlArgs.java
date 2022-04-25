@@ -26,6 +26,10 @@ public final class LiveEventPreviewAccessControlArgs extends com.pulumi.resource
     @Import(name="ip")
     private @Nullable Output<IPAccessControlArgs> ip;
 
+    /**
+     * @return The IP access control properties.
+     * 
+     */
     public Optional<Output<IPAccessControlArgs>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -54,11 +58,23 @@ public final class LiveEventPreviewAccessControlArgs extends com.pulumi.resource
             $ = new LiveEventPreviewAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip The IP access control properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip The IP access control properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(IPAccessControlArgs ip) {
             return ip(Output.of(ip));
         }

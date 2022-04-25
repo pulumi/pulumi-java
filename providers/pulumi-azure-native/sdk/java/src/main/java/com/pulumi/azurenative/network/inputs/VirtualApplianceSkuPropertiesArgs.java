@@ -26,6 +26,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
     @Import(name="bundledScaleUnit")
     private @Nullable Output<String> bundledScaleUnit;
 
+    /**
+     * @return Virtual Appliance Scale Unit.
+     * 
+     */
     public Optional<Output<String>> bundledScaleUnit() {
         return Optional.ofNullable(this.bundledScaleUnit);
     }
@@ -37,6 +41,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
     @Import(name="marketPlaceVersion")
     private @Nullable Output<String> marketPlaceVersion;
 
+    /**
+     * @return Virtual Appliance Version.
+     * 
+     */
     public Optional<Output<String>> marketPlaceVersion() {
         return Optional.ofNullable(this.marketPlaceVersion);
     }
@@ -48,6 +56,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
     @Import(name="vendor")
     private @Nullable Output<String> vendor;
 
+    /**
+     * @return Virtual Appliance Vendor.
+     * 
+     */
     public Optional<Output<String>> vendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -78,29 +90,65 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
             $ = new VirtualApplianceSkuPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundledScaleUnit Virtual Appliance Scale Unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundledScaleUnit(@Nullable Output<String> bundledScaleUnit) {
             $.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
 
+        /**
+         * @param bundledScaleUnit Virtual Appliance Scale Unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundledScaleUnit(String bundledScaleUnit) {
             return bundledScaleUnit(Output.of(bundledScaleUnit));
         }
 
+        /**
+         * @param marketPlaceVersion Virtual Appliance Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketPlaceVersion(@Nullable Output<String> marketPlaceVersion) {
             $.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
 
+        /**
+         * @param marketPlaceVersion Virtual Appliance Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketPlaceVersion(String marketPlaceVersion) {
             return marketPlaceVersion(Output.of(marketPlaceVersion));
         }
 
+        /**
+         * @param vendor Virtual Appliance Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(@Nullable Output<String> vendor) {
             $.vendor = vendor;
             return this;
         }
 
+        /**
+         * @param vendor Virtual Appliance Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(String vendor) {
             return vendor(Output.of(vendor));
         }

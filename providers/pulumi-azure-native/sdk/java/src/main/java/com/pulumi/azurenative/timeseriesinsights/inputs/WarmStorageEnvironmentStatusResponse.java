@@ -26,6 +26,10 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     @Import(name="currentCount")
     private @Nullable Integer currentCount;
 
+    /**
+     * @return A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
+     * 
+     */
     public Optional<Integer> currentCount() {
         return Optional.ofNullable(this.currentCount);
     }
@@ -37,6 +41,10 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     @Import(name="maxCount")
     private @Nullable Integer maxCount;
 
+    /**
+     * @return A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
+     * 
+     */
     public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
@@ -48,6 +56,10 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -78,16 +90,34 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
             $ = new WarmStorageEnvironmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentCount A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentCount(@Nullable Integer currentCount) {
             $.currentCount = currentCount;
             return this;
         }
 
+        /**
+         * @param maxCount A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(@Nullable Integer maxCount) {
             $.maxCount = maxCount;
             return this;
         }
 
+        /**
+         * @param state This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

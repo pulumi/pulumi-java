@@ -23,6 +23,10 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Load balancer type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -34,6 +38,10 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Load balancer version
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
             $ = new LoadBalancerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Load balancer type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Load balancer version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

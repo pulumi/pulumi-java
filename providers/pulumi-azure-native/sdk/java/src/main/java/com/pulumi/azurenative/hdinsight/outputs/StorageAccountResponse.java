@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageAccountResponse {
     /**
-     * The container in the storage account, only to be specified for WASB storage accounts.
+     * @return The container in the storage account, only to be specified for WASB storage accounts.
      * 
      */
     private final @Nullable String container;
     /**
-     * The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+     * @return The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
      * 
      */
     private final @Nullable String fileSystem;
     /**
-     * The file share name.
+     * @return The file share name.
      * 
      */
     private final @Nullable String fileshare;
     /**
-     * Whether or not the storage account is the default storage account.
+     * @return Whether or not the storage account is the default storage account.
      * 
      */
     private final @Nullable Boolean isDefault;
     /**
-     * The storage account access key.
+     * @return The storage account access key.
      * 
      */
     private final @Nullable String key;
     /**
-     * The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * @return The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
      * 
      */
     private final @Nullable String msiResourceId;
     /**
-     * The name of the storage account.
+     * @return The name of the storage account.
      * 
      */
     private final @Nullable String name;
     /**
-     * The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * @return The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * The shared access signature key.
+     * @return The shared access signature key.
      * 
      */
     private final @Nullable String saskey;
@@ -81,65 +81,65 @@ public final class StorageAccountResponse {
     }
 
     /**
-     * The container in the storage account, only to be specified for WASB storage accounts.
+     * @return The container in the storage account, only to be specified for WASB storage accounts.
      * 
-    */
+     */
     public Optional<String> container() {
         return Optional.ofNullable(this.container);
     }
     /**
-     * The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+     * @return The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
      * 
-    */
+     */
     public Optional<String> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
-     * The file share name.
+     * @return The file share name.
      * 
-    */
+     */
     public Optional<String> fileshare() {
         return Optional.ofNullable(this.fileshare);
     }
     /**
-     * Whether or not the storage account is the default storage account.
+     * @return Whether or not the storage account is the default storage account.
      * 
-    */
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
-     * The storage account access key.
+     * @return The storage account access key.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * @return The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
      * 
-    */
+     */
     public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
     /**
-     * The name of the storage account.
+     * @return The name of the storage account.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * @return The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * The shared access signature key.
+     * @return The shared access signature key.
      * 
-    */
+     */
     public Optional<String> saskey() {
         return Optional.ofNullable(this.saskey);
     }

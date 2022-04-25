@@ -27,6 +27,10 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="swapFileSizeMB")
     private @Nullable Integer swapFileSizeMB;
 
+    /**
+     * @return SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+     * 
+     */
     public Optional<Integer> swapFileSizeMB() {
         return Optional.ofNullable(this.swapFileSizeMB);
     }
@@ -38,6 +42,10 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sysctls")
     private @Nullable SysctlConfigResponse sysctls;
 
+    /**
+     * @return Sysctl settings for Linux agent nodes.
+     * 
+     */
     public Optional<SysctlConfigResponse> sysctls() {
         return Optional.ofNullable(this.sysctls);
     }
@@ -49,6 +57,10 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="transparentHugePageDefrag")
     private @Nullable String transparentHugePageDefrag;
 
+    /**
+     * @return Transparent Huge Page defrag configuration.
+     * 
+     */
     public Optional<String> transparentHugePageDefrag() {
         return Optional.ofNullable(this.transparentHugePageDefrag);
     }
@@ -60,6 +72,10 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="transparentHugePageEnabled")
     private @Nullable String transparentHugePageEnabled;
 
+    /**
+     * @return Transparent Huge Page enabled configuration.
+     * 
+     */
     public Optional<String> transparentHugePageEnabled() {
         return Optional.ofNullable(this.transparentHugePageEnabled);
     }
@@ -91,21 +107,45 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new LinuxOSConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param swapFileSizeMB SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swapFileSizeMB(@Nullable Integer swapFileSizeMB) {
             $.swapFileSizeMB = swapFileSizeMB;
             return this;
         }
 
+        /**
+         * @param sysctls Sysctl settings for Linux agent nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(@Nullable SysctlConfigResponse sysctls) {
             $.sysctls = sysctls;
             return this;
         }
 
+        /**
+         * @param transparentHugePageDefrag Transparent Huge Page defrag configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentHugePageDefrag(@Nullable String transparentHugePageDefrag) {
             $.transparentHugePageDefrag = transparentHugePageDefrag;
             return this;
         }
 
+        /**
+         * @param transparentHugePageEnabled Transparent Huge Page enabled configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentHugePageEnabled(@Nullable String transparentHugePageEnabled) {
             $.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;

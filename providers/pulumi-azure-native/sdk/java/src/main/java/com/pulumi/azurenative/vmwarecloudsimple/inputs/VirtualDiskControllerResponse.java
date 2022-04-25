@@ -23,6 +23,10 @@ public final class VirtualDiskControllerResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Controller&#39;s id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class VirtualDiskControllerResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The display name of Controller
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class VirtualDiskControllerResponse extends com.pulumi.resources.In
     @Import(name="subType", required=true)
     private String subType;
 
+    /**
+     * @return dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
+     * 
+     */
     public String subType() {
         return this.subType;
     }
@@ -56,6 +68,10 @@ public final class VirtualDiskControllerResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return disk controller type (SCSI)
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -87,21 +103,45 @@ public final class VirtualDiskControllerResponse extends com.pulumi.resources.In
             $ = new VirtualDiskControllerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Controller&#39;s id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The display name of Controller
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param subType dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
+         * 
+         * @return builder
+         * 
+         */
         public Builder subType(String subType) {
             $.subType = subType;
             return this;
         }
 
+        /**
+         * @param type disk controller type (SCSI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

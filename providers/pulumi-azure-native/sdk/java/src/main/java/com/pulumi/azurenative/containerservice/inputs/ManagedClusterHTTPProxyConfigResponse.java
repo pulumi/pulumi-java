@@ -26,6 +26,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="httpProxy")
     private @Nullable String httpProxy;
 
+    /**
+     * @return HTTP proxy server endpoint to use.
+     * 
+     */
     public Optional<String> httpProxy() {
         return Optional.ofNullable(this.httpProxy);
     }
@@ -37,6 +41,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="httpsProxy")
     private @Nullable String httpsProxy;
 
+    /**
+     * @return HTTPS proxy server endpoint to use.
+     * 
+     */
     public Optional<String> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
@@ -48,6 +56,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="noProxy")
     private @Nullable List<String> noProxy;
 
+    /**
+     * @return Endpoints that should not go through proxy.
+     * 
+     */
     public Optional<List<String>> noProxy() {
         return Optional.ofNullable(this.noProxy);
     }
@@ -59,6 +71,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="trustedCa")
     private @Nullable String trustedCa;
 
+    /**
+     * @return Alternative CA cert to use for connecting to proxy servers.
+     * 
+     */
     public Optional<String> trustedCa() {
         return Optional.ofNullable(this.trustedCa);
     }
@@ -90,25 +106,55 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
             $ = new ManagedClusterHTTPProxyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpProxy HTTP proxy server endpoint to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxy(@Nullable String httpProxy) {
             $.httpProxy = httpProxy;
             return this;
         }
 
+        /**
+         * @param httpsProxy HTTPS proxy server endpoint to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsProxy(@Nullable String httpsProxy) {
             $.httpsProxy = httpsProxy;
             return this;
         }
 
+        /**
+         * @param noProxy Endpoints that should not go through proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxy(@Nullable List<String> noProxy) {
             $.noProxy = noProxy;
             return this;
         }
 
+        /**
+         * @param noProxy Endpoints that should not go through proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxy(String... noProxy) {
             return noProxy(List.of(noProxy));
         }
 
+        /**
+         * @param trustedCa Alternative CA cert to use for connecting to proxy servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCa(@Nullable String trustedCa) {
             $.trustedCa = trustedCa;
             return this;

@@ -26,6 +26,10 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="destination")
     private @Nullable String destination;
 
+    /**
+     * @return The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
+     * 
+     */
     public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -37,6 +41,10 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Friendly Name to provide context on what this customization step does
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="sha256Checksum")
     private @Nullable String sha256Checksum;
 
+    /**
+     * @return SHA256 checksum of the file provided in the sourceUri field above
+     * 
+     */
     public Optional<String> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
@@ -59,6 +71,10 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="sourceUri")
     private @Nullable String sourceUri;
 
+    /**
+     * @return The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
+     * 
+     */
     public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -71,6 +87,11 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;File&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,26 +124,57 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
             $ = new ImageTemplateFileCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable String destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the file provided in the sourceUri field above
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             $.sha256Checksum = sha256Checksum;
             return this;
         }
 
+        /**
+         * @param sourceUri The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(@Nullable String sourceUri) {
             $.sourceUri = sourceUri;
             return this;
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

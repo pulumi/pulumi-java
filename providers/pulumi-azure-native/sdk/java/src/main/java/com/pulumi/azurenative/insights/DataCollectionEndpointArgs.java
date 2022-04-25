@@ -26,6 +26,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="dataCollectionEndpointName")
     private @Nullable Output<String> dataCollectionEndpointName;
 
+    /**
+     * @return The name of the data collection endpoint. The name is case insensitive.
+     * 
+     */
     public Optional<Output<String>> dataCollectionEndpointName() {
         return Optional.ofNullable(this.dataCollectionEndpointName);
     }
@@ -37,6 +41,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the data collection endpoint.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="immutableId")
     private @Nullable Output<String> immutableId;
 
+    /**
+     * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+     * 
+     */
     public Optional<Output<String>> immutableId() {
         return Optional.ofNullable(this.immutableId);
     }
@@ -59,6 +71,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
     private @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
 
+    /**
+     * @return The kind of the resource.
+     * 
+     */
     public Optional<Output<Either<String,KnownDataCollectionEndpointResourceKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -70,6 +86,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="networkAcls")
     private @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls;
 
+    /**
+     * @return Network access control rules for the endpoints.
+     * 
+     */
     public Optional<Output<DataCollectionEndpointNetworkAclsArgs>> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
@@ -92,6 +116,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -103,6 +131,10 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,82 +170,190 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
             $ = new DataCollectionEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCollectionEndpointName The name of the data collection endpoint. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionEndpointName(@Nullable Output<String> dataCollectionEndpointName) {
             $.dataCollectionEndpointName = dataCollectionEndpointName;
             return this;
         }
 
+        /**
+         * @param dataCollectionEndpointName The name of the data collection endpoint. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionEndpointName(String dataCollectionEndpointName) {
             return dataCollectionEndpointName(Output.of(dataCollectionEndpointName));
         }
 
+        /**
+         * @param description Description of the data collection endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the data collection endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param immutableId The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutableId(@Nullable Output<String> immutableId) {
             $.immutableId = immutableId;
             return this;
         }
 
+        /**
+         * @param immutableId The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutableId(String immutableId) {
             return immutableId(Output.of(immutableId));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,KnownDataCollectionEndpointResourceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(KnownDataCollectionEndpointResourceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location The geo-location where the resource lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkAcls Network access control rules for the endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAcls(@Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls) {
             $.networkAcls = networkAcls;
             return this;
         }
 
+        /**
+         * @param networkAcls Network access control rules for the endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAcls(DataCollectionEndpointNetworkAclsArgs networkAcls) {
             return networkAcls(Output.of(networkAcls));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

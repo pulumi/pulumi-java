@@ -19,6 +19,10 @@ public final class GetRemediationAtSubscriptionArgs extends com.pulumi.resources
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -47,6 +51,12 @@ public final class GetRemediationAtSubscriptionArgs extends com.pulumi.resources
             $ = new GetRemediationAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;

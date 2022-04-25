@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ManagedRuleExclusionResponse {
     /**
-     * The variable type to be excluded.
+     * @return The variable type to be excluded.
      * 
      */
     private final String matchVariable;
     /**
-     * Selector value for which elements in the collection this exclusion applies to.
+     * @return Selector value for which elements in the collection this exclusion applies to.
      * 
      */
     private final String selector;
     /**
-     * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+     * @return Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
      * 
      */
     private final String selectorMatchOperator;
@@ -36,23 +36,23 @@ public final class ManagedRuleExclusionResponse {
     }
 
     /**
-     * The variable type to be excluded.
+     * @return The variable type to be excluded.
      * 
-    */
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
     /**
-     * Selector value for which elements in the collection this exclusion applies to.
+     * @return Selector value for which elements in the collection this exclusion applies to.
      * 
-    */
+     */
     public String selector() {
         return this.selector;
     }
     /**
-     * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+     * @return Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
      * 
-    */
+     */
     public String selectorMatchOperator() {
         return this.selectorMatchOperator;
     }

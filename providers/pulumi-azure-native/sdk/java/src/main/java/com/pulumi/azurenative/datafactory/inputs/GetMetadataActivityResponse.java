@@ -50,6 +50,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="dataset", required=true)
     private DatasetReferenceResponse dataset;
 
+    /**
+     * @return GetMetadata activity dataset reference.
+     * 
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
@@ -61,6 +65,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -72,6 +80,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -83,6 +95,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="fieldList")
     private @Nullable List<Object> fieldList;
 
+    /**
+     * @return Fields of metadata to get from dataset.
+     * 
+     */
     public Optional<List<Object>> fieldList() {
         return Optional.ofNullable(this.fieldList);
     }
@@ -94,6 +110,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="formatSettings")
     private @Nullable Object formatSettings;
 
+    /**
+     * @return GetMetadata activity format settings.
+     * 
+     */
     public Optional<Object> formatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
@@ -105,6 +125,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -116,6 +140,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -127,6 +155,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -138,6 +170,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="storeSettings")
     private @Nullable Object storeSettings;
 
+    /**
+     * @return GetMetadata activity store settings.
+     * 
+     */
     public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -150,6 +186,11 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;GetMetadata&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -161,6 +202,10 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -199,69 +244,154 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
             $ = new GetMetadataActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset GetMetadata activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceResponse dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param fieldList Fields of metadata to get from dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldList(@Nullable List<Object> fieldList) {
             $.fieldList = fieldList;
             return this;
         }
 
+        /**
+         * @param fieldList Fields of metadata to get from dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldList(Object... fieldList) {
             return fieldList(List.of(fieldList));
         }
 
+        /**
+         * @param formatSettings GetMetadata activity format settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatSettings(@Nullable Object formatSettings) {
             $.formatSettings = formatSettings;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param storeSettings GetMetadata activity store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(@Nullable Object storeSettings) {
             $.storeSettings = storeSettings;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;GetMetadata&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

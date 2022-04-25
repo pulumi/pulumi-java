@@ -24,6 +24,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return virtual network id (privateCloudId:vsphereId)
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
             $ = new VirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id virtual network id (privateCloudId:vsphereId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id virtual network id (privateCloudId:vsphereId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

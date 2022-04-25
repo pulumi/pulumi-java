@@ -22,6 +22,10 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="hcxEnterpriseSiteName")
     private @Nullable Output<String> hcxEnterpriseSiteName;
 
+    /**
+     * @return Name of the HCX Enterprise Site in the private cloud
+     * 
+     */
     public Optional<Output<String>> hcxEnterpriseSiteName() {
         return Optional.ofNullable(this.hcxEnterpriseSiteName);
     }
@@ -33,6 +37,10 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return The name of the private cloud.
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -44,6 +52,10 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
             $ = new HcxEnterpriseSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hcxEnterpriseSiteName Name of the HCX Enterprise Site in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcxEnterpriseSiteName(@Nullable Output<String> hcxEnterpriseSiteName) {
             $.hcxEnterpriseSiteName = hcxEnterpriseSiteName;
             return this;
         }
 
+        /**
+         * @param hcxEnterpriseSiteName Name of the HCX Enterprise Site in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcxEnterpriseSiteName(String hcxEnterpriseSiteName) {
             return hcxEnterpriseSiteName(Output.of(hcxEnterpriseSiteName));
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

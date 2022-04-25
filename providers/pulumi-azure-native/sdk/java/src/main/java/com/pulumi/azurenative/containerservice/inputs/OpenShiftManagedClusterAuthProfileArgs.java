@@ -27,6 +27,10 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends com.pulumi.res
     @Import(name="identityProviders")
     private @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
 
+    /**
+     * @return Type of authentication profile to use.
+     * 
+     */
     public Optional<Output<List<OpenShiftManagedClusterIdentityProviderArgs>>> identityProviders() {
         return Optional.ofNullable(this.identityProviders);
     }
@@ -55,15 +59,33 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends com.pulumi.res
             $ = new OpenShiftManagedClusterAuthProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityProviders Type of authentication profile to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviders(@Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders) {
             $.identityProviders = identityProviders;
             return this;
         }
 
+        /**
+         * @param identityProviders Type of authentication profile to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviders(List<OpenShiftManagedClusterIdentityProviderArgs> identityProviders) {
             return identityProviders(Output.of(identityProviders));
         }
 
+        /**
+         * @param identityProviders Type of authentication profile to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviders(OpenShiftManagedClusterIdentityProviderArgs... identityProviders) {
             return identityProviders(List.of(identityProviders));
         }

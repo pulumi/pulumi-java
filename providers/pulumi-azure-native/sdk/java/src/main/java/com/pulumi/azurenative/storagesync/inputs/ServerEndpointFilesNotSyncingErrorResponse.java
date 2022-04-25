@@ -24,6 +24,10 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
     @Import(name="errorCode", required=true)
     private Integer errorCode;
 
+    /**
+     * @return Error code (HResult)
+     * 
+     */
     public Integer errorCode() {
         return this.errorCode;
     }
@@ -35,6 +39,10 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
     @Import(name="persistentCount", required=true)
     private Double persistentCount;
 
+    /**
+     * @return Count of persistent files not syncing with the specified error code
+     * 
+     */
     public Double persistentCount() {
         return this.persistentCount;
     }
@@ -46,6 +54,10 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
     @Import(name="transientCount", required=true)
     private Double transientCount;
 
+    /**
+     * @return Count of transient files not syncing with the specified error code
+     * 
+     */
     public Double transientCount() {
         return this.transientCount;
     }
@@ -76,16 +88,34 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
             $ = new ServerEndpointFilesNotSyncingErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Error code (HResult)
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(Integer errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param persistentCount Count of persistent files not syncing with the specified error code
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentCount(Double persistentCount) {
             $.persistentCount = persistentCount;
             return this;
         }
 
+        /**
+         * @param transientCount Count of transient files not syncing with the specified error code
+         * 
+         * @return builder
+         * 
+         */
         public Builder transientCount(Double transientCount) {
             $.transientCount = transientCount;
             return this;

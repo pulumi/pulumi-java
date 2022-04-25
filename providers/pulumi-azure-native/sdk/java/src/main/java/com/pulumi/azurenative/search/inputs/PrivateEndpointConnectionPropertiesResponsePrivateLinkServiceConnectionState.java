@@ -26,6 +26,10 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
     @Import(name="actionsRequired")
     private @Nullable String actionsRequired;
 
+    /**
+     * @return A description of any extra actions that may be required.
+     * 
+     */
     public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -37,6 +41,10 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description for the private link service connection state.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,16 +90,34 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
             $ = new PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired A description of any extra actions that may be required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description The description for the private link service connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

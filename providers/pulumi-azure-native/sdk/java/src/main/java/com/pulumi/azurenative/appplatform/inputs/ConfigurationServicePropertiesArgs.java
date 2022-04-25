@@ -26,6 +26,10 @@ public final class ConfigurationServicePropertiesArgs extends com.pulumi.resourc
     @Import(name="settings")
     private @Nullable Output<ConfigurationServiceSettingsArgs> settings;
 
+    /**
+     * @return The settings of Application Configuration Service.
+     * 
+     */
     public Optional<Output<ConfigurationServiceSettingsArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -54,11 +58,23 @@ public final class ConfigurationServicePropertiesArgs extends com.pulumi.resourc
             $ = new ConfigurationServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param settings The settings of Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<ConfigurationServiceSettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings The settings of Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(ConfigurationServiceSettingsArgs settings) {
             return settings(Output.of(settings));
         }

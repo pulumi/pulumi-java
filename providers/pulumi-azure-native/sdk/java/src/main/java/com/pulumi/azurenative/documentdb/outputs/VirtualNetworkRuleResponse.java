@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNetworkRuleResponse {
     /**
-     * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
      * 
      */
     private final @Nullable String id;
     /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
     private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
@@ -32,16 +32,16 @@ public final class VirtualNetworkRuleResponse {
     }
 
     /**
-     * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
-    */
+     */
     public Optional<Boolean> ignoreMissingVNetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }

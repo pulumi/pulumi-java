@@ -25,6 +25,10 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The Id of the remote virtual network.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
             $ = new VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The Id of the remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

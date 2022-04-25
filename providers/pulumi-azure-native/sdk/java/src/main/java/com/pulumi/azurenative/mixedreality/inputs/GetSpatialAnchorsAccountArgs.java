@@ -19,6 +19,10 @@ public final class GetSpatialAnchorsAccountArgs extends com.pulumi.resources.Inv
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Name of an Mixed Reality Account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetSpatialAnchorsAccountArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetSpatialAnchorsAccountArgs extends com.pulumi.resources.Inv
             $ = new GetSpatialAnchorsAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Name of an Mixed Reality Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

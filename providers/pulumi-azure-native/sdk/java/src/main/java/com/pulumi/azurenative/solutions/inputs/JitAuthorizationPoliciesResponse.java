@@ -23,6 +23,10 @@ public final class JitAuthorizationPoliciesResponse extends com.pulumi.resources
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The the principal id that will be granted JIT access.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class JitAuthorizationPoliciesResponse extends com.pulumi.resources
     @Import(name="roleDefinitionId", required=true)
     private String roleDefinitionId;
 
+    /**
+     * @return The role definition id that will be granted to the Principal.
+     * 
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -63,11 +71,23 @@ public final class JitAuthorizationPoliciesResponse extends com.pulumi.resources
             $ = new JitAuthorizationPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The the principal id that will be granted JIT access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The role definition id that will be granted to the Principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;

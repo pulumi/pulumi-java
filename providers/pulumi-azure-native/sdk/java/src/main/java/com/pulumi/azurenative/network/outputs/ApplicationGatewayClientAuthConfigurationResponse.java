@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayClientAuthConfigurationResponse {
     /**
-     * Verify client certificate issuer name on the application gateway.
+     * @return Verify client certificate issuer name on the application gateway.
      * 
      */
     private final @Nullable Boolean verifyClientCertIssuerDN;
@@ -23,9 +23,9 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
     }
 
     /**
-     * Verify client certificate issuer name on the application gateway.
+     * @return Verify client certificate issuer name on the application gateway.
      * 
-    */
+     */
     public Optional<Boolean> verifyClientCertIssuerDN() {
         return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }

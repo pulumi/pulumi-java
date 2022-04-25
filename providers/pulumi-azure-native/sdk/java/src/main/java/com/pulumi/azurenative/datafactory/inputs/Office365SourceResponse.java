@@ -27,6 +27,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="allowedGroups")
     private @Nullable Object allowedGroups;
 
+    /**
+     * @return The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Object> allowedGroups() {
         return Optional.ofNullable(this.allowedGroups);
     }
@@ -38,6 +42,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dateFilterColumn")
     private @Nullable Object dateFilterColumn;
 
+    /**
+     * @return The Column to apply the &lt;paramref name=&#34;StartTime&#34;/&gt; and &lt;paramref name=&#34;EndTime&#34;/&gt;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> dateFilterColumn() {
         return Optional.ofNullable(this.dateFilterColumn);
     }
@@ -49,6 +57,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -60,6 +72,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="endTime")
     private @Nullable Object endTime;
 
+    /**
+     * @return End time of the requested range for this dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -71,6 +87,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -82,6 +102,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="outputColumns")
     private @Nullable Object outputColumns;
 
+    /**
+     * @return The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { &#34;name&#34;: &#34;Id&#34; }, { &#34;name&#34;: &#34;CreatedDateTime&#34; } ]
+     * 
+     */
     public Optional<Object> outputColumns() {
         return Optional.ofNullable(this.outputColumns);
     }
@@ -93,6 +117,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceRetryCount")
     private @Nullable Object sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -104,6 +132,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceRetryWait")
     private @Nullable Object sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -115,6 +147,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="startTime")
     private @Nullable Object startTime;
 
+    /**
+     * @return Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -127,6 +163,11 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;Office365Source&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -138,6 +179,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="userScopeFilterUri")
     private @Nullable Object userScopeFilterUri;
 
+    /**
+     * @return The user scope uri. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userScopeFilterUri() {
         return Optional.ofNullable(this.userScopeFilterUri);
     }
@@ -176,56 +221,123 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
             $ = new Office365SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedGroups The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedGroups(@Nullable Object allowedGroups) {
             $.allowedGroups = allowedGroups;
             return this;
         }
 
+        /**
+         * @param dateFilterColumn The Column to apply the &lt;paramref name=&#34;StartTime&#34;/&gt; and &lt;paramref name=&#34;EndTime&#34;/&gt;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFilterColumn(@Nullable Object dateFilterColumn) {
             $.dateFilterColumn = dateFilterColumn;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param endTime End time of the requested range for this dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Object endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param outputColumns The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { &#34;name&#34;: &#34;Id&#34; }, { &#34;name&#34;: &#34;CreatedDateTime&#34; } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputColumns(@Nullable Object outputColumns) {
             $.outputColumns = outputColumns;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Object startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;Office365Source&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userScopeFilterUri The user scope uri. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userScopeFilterUri(@Nullable Object userScopeFilterUri) {
             $.userScopeFilterUri = userScopeFilterUri;
             return this;

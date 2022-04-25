@@ -26,6 +26,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The private link service connection description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The private link service connection status.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -66,20 +74,44 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
             $ = new PrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

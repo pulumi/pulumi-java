@@ -24,6 +24,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="archiveWindowLength", required=true)
     private Output<String> archiveWindowLength;
 
+    /**
+     * @return ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
+     * 
+     */
     public Output<String> archiveWindowLength() {
         return this.archiveWindowLength;
     }
@@ -46,6 +54,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetName", required=true)
     private Output<String> assetName;
 
+    /**
+     * @return The asset that the live output will write to.
+     * 
+     */
     public Output<String> assetName() {
         return this.assetName;
     }
@@ -57,6 +69,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the live output.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +84,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hls")
     private @Nullable Output<HlsArgs> hls;
 
+    /**
+     * @return HTTP Live Streaming (HLS) packing setting for the live output.
+     * 
+     */
     public Optional<Output<HlsArgs>> hls() {
         return Optional.ofNullable(this.hls);
     }
@@ -79,6 +99,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="liveEventName", required=true)
     private Output<String> liveEventName;
 
+    /**
+     * @return The name of the live event, maximum length is 32.
+     * 
+     */
     public Output<String> liveEventName() {
         return this.liveEventName;
     }
@@ -90,6 +114,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="liveOutputName")
     private @Nullable Output<String> liveOutputName;
 
+    /**
+     * @return The name of the live output.
+     * 
+     */
     public Optional<Output<String>> liveOutputName() {
         return Optional.ofNullable(this.liveOutputName);
     }
@@ -101,6 +129,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestName")
     private @Nullable Output<String> manifestName;
 
+    /**
+     * @return The manifest file name. If not provided, the service will generate one automatically.
+     * 
+     */
     public Optional<Output<String>> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
@@ -112,6 +144,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputSnapTime")
     private @Nullable Output<Double> outputSnapTime;
 
+    /**
+     * @return The initial timestamp that the live output will start at, any content before this value will not be archived.
+     * 
+     */
     public Optional<Output<Double>> outputSnapTime() {
         return Optional.ofNullable(this.outputSnapTime);
     }
@@ -123,6 +159,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -160,92 +200,212 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LiveOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param archiveWindowLength ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveWindowLength(Output<String> archiveWindowLength) {
             $.archiveWindowLength = archiveWindowLength;
             return this;
         }
 
+        /**
+         * @param archiveWindowLength ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveWindowLength(String archiveWindowLength) {
             return archiveWindowLength(Output.of(archiveWindowLength));
         }
 
+        /**
+         * @param assetName The asset that the live output will write to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(Output<String> assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param assetName The asset that the live output will write to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             return assetName(Output.of(assetName));
         }
 
+        /**
+         * @param description The description of the live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hls HTTP Live Streaming (HLS) packing setting for the live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hls(@Nullable Output<HlsArgs> hls) {
             $.hls = hls;
             return this;
         }
 
+        /**
+         * @param hls HTTP Live Streaming (HLS) packing setting for the live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hls(HlsArgs hls) {
             return hls(Output.of(hls));
         }
 
+        /**
+         * @param liveEventName The name of the live event, maximum length is 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveEventName(Output<String> liveEventName) {
             $.liveEventName = liveEventName;
             return this;
         }
 
+        /**
+         * @param liveEventName The name of the live event, maximum length is 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveEventName(String liveEventName) {
             return liveEventName(Output.of(liveEventName));
         }
 
+        /**
+         * @param liveOutputName The name of the live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveOutputName(@Nullable Output<String> liveOutputName) {
             $.liveOutputName = liveOutputName;
             return this;
         }
 
+        /**
+         * @param liveOutputName The name of the live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveOutputName(String liveOutputName) {
             return liveOutputName(Output.of(liveOutputName));
         }
 
+        /**
+         * @param manifestName The manifest file name. If not provided, the service will generate one automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestName(@Nullable Output<String> manifestName) {
             $.manifestName = manifestName;
             return this;
         }
 
+        /**
+         * @param manifestName The manifest file name. If not provided, the service will generate one automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestName(String manifestName) {
             return manifestName(Output.of(manifestName));
         }
 
+        /**
+         * @param outputSnapTime The initial timestamp that the live output will start at, any content before this value will not be archived.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSnapTime(@Nullable Output<Double> outputSnapTime) {
             $.outputSnapTime = outputSnapTime;
             return this;
         }
 
+        /**
+         * @param outputSnapTime The initial timestamp that the live output will start at, any content before this value will not be archived.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSnapTime(Double outputSnapTime) {
             return outputSnapTime(Output.of(outputSnapTime));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

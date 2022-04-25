@@ -19,6 +19,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return Hostname in the hostname binding.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API the named binding for the production slot.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -83,21 +99,45 @@ public final class GetWebAppHostNameBindingSlotArgs extends com.pulumi.resources
             $ = new GetWebAppHostNameBindingSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName Hostname in the hostname binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API the named binding for the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

@@ -27,6 +27,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
     @Import(name="bucketName")
     private @Nullable Object bucketName;
 
+    /**
+     * @return Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -38,6 +42,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
     @Import(name="fileName")
     private @Nullable Object fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -49,6 +57,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
     @Import(name="folderPath")
     private @Nullable Object folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -61,6 +73,11 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;OracleCloudStorageLocation&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -72,6 +89,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
     @Import(name="version")
     private @Nullable Object version;
 
+    /**
+     * @return Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> version() {
         return Optional.ofNullable(this.version);
     }
@@ -104,26 +125,57 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
             $ = new OracleCloudStorageLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Object bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Object fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Object folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;OracleCloudStorageLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Object version) {
             $.version = version;
             return this;

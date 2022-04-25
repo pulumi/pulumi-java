@@ -24,6 +24,10 @@ public final class KeyVaultAndKeyReferenceResponse extends com.pulumi.resources.
     @Import(name="keyUrl", required=true)
     private String keyUrl;
 
+    /**
+     * @return Url pointing to a key or secret in KeyVault
+     * 
+     */
     public String keyUrl() {
         return this.keyUrl;
     }
@@ -35,6 +39,10 @@ public final class KeyVaultAndKeyReferenceResponse extends com.pulumi.resources.
     @Import(name="sourceVault", required=true)
     private SourceVaultResponse sourceVault;
 
+    /**
+     * @return Resource id of the KeyVault containing the key or secret
+     * 
+     */
     public SourceVaultResponse sourceVault() {
         return this.sourceVault;
     }
@@ -64,11 +72,23 @@ public final class KeyVaultAndKeyReferenceResponse extends com.pulumi.resources.
             $ = new KeyVaultAndKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUrl Url pointing to a key or secret in KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(String keyUrl) {
             $.keyUrl = keyUrl;
             return this;
         }
 
+        /**
+         * @param sourceVault Resource id of the KeyVault containing the key or secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SourceVaultResponse sourceVault) {
             $.sourceVault = sourceVault;
             return this;

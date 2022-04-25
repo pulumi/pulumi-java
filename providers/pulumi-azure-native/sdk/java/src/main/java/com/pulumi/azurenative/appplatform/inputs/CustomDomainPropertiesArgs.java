@@ -26,6 +26,10 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="certName")
     private @Nullable Output<String> certName;
 
+    /**
+     * @return The bound certificate name of domain.
+     * 
+     */
     public Optional<Output<String>> certName() {
         return Optional.ofNullable(this.certName);
     }
@@ -37,6 +41,10 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The thumbprint of bound certificate.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -66,20 +74,44 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
             $ = new CustomDomainPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certName The bound certificate name of domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certName(@Nullable Output<String> certName) {
             $.certName = certName;
             return this;
         }
 
+        /**
+         * @param certName The bound certificate name of domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certName(String certName) {
             return certName(Output.of(certName));
         }
 
+        /**
+         * @param thumbprint The thumbprint of bound certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint of bound certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

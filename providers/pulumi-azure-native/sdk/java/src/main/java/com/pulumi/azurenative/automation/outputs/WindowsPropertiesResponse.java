@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WindowsPropertiesResponse {
     /**
-     * KB numbers excluded from the software update configuration.
+     * @return KB numbers excluded from the software update configuration.
      * 
      */
     private final @Nullable List<String> excludedKbNumbers;
     /**
-     * KB numbers included from the software update configuration.
+     * @return KB numbers included from the software update configuration.
      * 
      */
     private final @Nullable List<String> includedKbNumbers;
     /**
-     * Update classification included in the software update configuration. A comma separated string with required values
+     * @return Update classification included in the software update configuration. A comma separated string with required values
      * 
      */
     private final @Nullable String includedUpdateClassifications;
     /**
-     * Reboot setting for the software update configuration.
+     * @return Reboot setting for the software update configuration.
      * 
      */
     private final @Nullable String rebootSetting;
@@ -46,30 +46,30 @@ public final class WindowsPropertiesResponse {
     }
 
     /**
-     * KB numbers excluded from the software update configuration.
+     * @return KB numbers excluded from the software update configuration.
      * 
-    */
+     */
     public List<String> excludedKbNumbers() {
         return this.excludedKbNumbers == null ? List.of() : this.excludedKbNumbers;
     }
     /**
-     * KB numbers included from the software update configuration.
+     * @return KB numbers included from the software update configuration.
      * 
-    */
+     */
     public List<String> includedKbNumbers() {
         return this.includedKbNumbers == null ? List.of() : this.includedKbNumbers;
     }
     /**
-     * Update classification included in the software update configuration. A comma separated string with required values
+     * @return Update classification included in the software update configuration. A comma separated string with required values
      * 
-    */
+     */
     public Optional<String> includedUpdateClassifications() {
         return Optional.ofNullable(this.includedUpdateClassifications);
     }
     /**
-     * Reboot setting for the software update configuration.
+     * @return Reboot setting for the software update configuration.
      * 
-    */
+     */
     public Optional<String> rebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }

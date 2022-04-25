@@ -26,6 +26,10 @@ public final class DynamicExecutorAllocationArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether Dynamic Executor Allocation is enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class DynamicExecutorAllocationArgs extends com.pulumi.resources.Re
             $ = new DynamicExecutorAllocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether Dynamic Executor Allocation is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether Dynamic Executor Allocation is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

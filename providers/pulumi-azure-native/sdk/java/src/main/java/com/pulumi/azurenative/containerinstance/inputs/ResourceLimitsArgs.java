@@ -27,6 +27,10 @@ public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return The CPU limit of this container instance.
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -38,6 +42,10 @@ public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="gpu")
     private @Nullable Output<GpuResourceArgs> gpu;
 
+    /**
+     * @return The GPU limit of this container instance.
+     * 
+     */
     public Optional<Output<GpuResourceArgs>> gpu() {
         return Optional.ofNullable(this.gpu);
     }
@@ -49,6 +57,10 @@ public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="memoryInGB")
     private @Nullable Output<Double> memoryInGB;
 
+    /**
+     * @return The memory limit in GB of this container instance.
+     * 
+     */
     public Optional<Output<Double>> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -79,29 +91,65 @@ public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ResourceLimitsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu The CPU limit of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu The CPU limit of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param gpu The GPU limit of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(@Nullable Output<GpuResourceArgs> gpu) {
             $.gpu = gpu;
             return this;
         }
 
+        /**
+         * @param gpu The GPU limit of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(GpuResourceArgs gpu) {
             return gpu(Output.of(gpu));
         }
 
+        /**
+         * @param memoryInGB The memory limit in GB of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory limit in GB of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             return memoryInGB(Output.of(memoryInGB));
         }

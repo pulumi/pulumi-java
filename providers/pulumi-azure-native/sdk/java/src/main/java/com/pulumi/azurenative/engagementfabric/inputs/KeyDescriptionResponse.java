@@ -23,6 +23,10 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the key
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rank", required=true)
     private String rank;
 
+    /**
+     * @return The rank of the key
+     * 
+     */
     public String rank() {
         return this.rank;
     }
@@ -45,6 +53,10 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the key
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -75,16 +87,34 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
             $ = new KeyDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param rank The rank of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(String rank) {
             $.rank = rank;
             return this;
         }
 
+        /**
+         * @param value The value of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

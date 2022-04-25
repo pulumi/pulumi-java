@@ -26,6 +26,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exe")
     private @Nullable Output<String> exe;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<Output<String>> exe() {
         return Optional.ofNullable(this.exe);
     }
@@ -37,6 +41,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="executable")
     private @Nullable Output<String> executable;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<Output<String>> executable() {
         return Optional.ofNullable(this.executable);
     }
@@ -48,6 +56,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="msi")
     private @Nullable Output<String> msi;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<Output<String>> msi() {
         return Optional.ofNullable(this.msi);
     }
@@ -59,6 +71,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -90,38 +106,86 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ProtectionModeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exe The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder exe(@Nullable Output<String> exe) {
             $.exe = exe;
             return this;
         }
 
+        /**
+         * @param exe The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder exe(String exe) {
             return exe(Output.of(exe));
         }
 
+        /**
+         * @param executable The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder executable(@Nullable Output<String> executable) {
             $.executable = executable;
             return this;
         }
 
+        /**
+         * @param executable The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder executable(String executable) {
             return executable(Output.of(executable));
         }
 
+        /**
+         * @param msi The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(@Nullable Output<String> msi) {
             $.msi = msi;
             return this;
         }
 
+        /**
+         * @param msi The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(String msi) {
             return msi(Output.of(msi));
         }
 
+        /**
+         * @param script The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }

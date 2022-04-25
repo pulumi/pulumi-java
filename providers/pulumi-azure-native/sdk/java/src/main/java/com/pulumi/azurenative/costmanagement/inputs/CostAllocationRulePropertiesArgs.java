@@ -29,6 +29,10 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of a cost allocation rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
     @Import(name="details", required=true)
     private Output<CostAllocationRuleDetailsArgs> details;
 
+    /**
+     * @return Resource information for the cost allocation rule
+     * 
+     */
     public Output<CostAllocationRuleDetailsArgs> details() {
         return this.details;
     }
@@ -51,6 +59,10 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
     @Import(name="status", required=true)
     private Output<Either<String,RuleStatus>> status;
 
+    /**
+     * @return Status of the rule
+     * 
+     */
     public Output<Either<String,RuleStatus>> status() {
         return this.status;
     }
@@ -81,37 +93,85 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
             $ = new CostAllocationRulePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of a cost allocation rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of a cost allocation rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param details Resource information for the cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Output<CostAllocationRuleDetailsArgs> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Resource information for the cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(CostAllocationRuleDetailsArgs details) {
             return details(Output.of(details));
         }
 
+        /**
+         * @param status Status of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,RuleStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,RuleStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Status of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Status of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(RuleStatus status) {
             return status(Either.ofRight(status));
         }

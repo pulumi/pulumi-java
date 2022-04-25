@@ -34,6 +34,10 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -56,6 +64,10 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -67,6 +79,10 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -79,6 +95,11 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Web&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -90,6 +111,10 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="typeProperties", required=true)
     private Object typeProperties;
 
+    /**
+     * @return Web linked service properties.
+     * 
+     */
     public Object typeProperties() {
         return this.typeProperties;
     }
@@ -123,35 +148,78 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
             $ = new WebLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Web&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeProperties Web linked service properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeProperties(Object typeProperties) {
             $.typeProperties = typeProperties;
             return this;

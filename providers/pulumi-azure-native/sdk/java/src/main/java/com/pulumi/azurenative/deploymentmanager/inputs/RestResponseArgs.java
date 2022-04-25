@@ -28,6 +28,10 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regex")
     private @Nullable Output<RestResponseRegexArgs> regex;
 
+    /**
+     * @return The regular expressions to match the response content with.
+     * 
+     */
     public Optional<Output<RestResponseRegexArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -39,6 +43,10 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successStatusCodes")
     private @Nullable Output<List<String>> successStatusCodes;
 
+    /**
+     * @return The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
+     * 
+     */
     public Optional<Output<List<String>>> successStatusCodes() {
         return Optional.ofNullable(this.successStatusCodes);
     }
@@ -68,24 +76,54 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RestResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regex The regular expressions to match the response content with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<RestResponseRegexArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex The regular expressions to match the response content with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(RestResponseRegexArgs regex) {
             return regex(Output.of(regex));
         }
 
+        /**
+         * @param successStatusCodes The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successStatusCodes(@Nullable Output<List<String>> successStatusCodes) {
             $.successStatusCodes = successStatusCodes;
             return this;
         }
 
+        /**
+         * @param successStatusCodes The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successStatusCodes(List<String> successStatusCodes) {
             return successStatusCodes(Output.of(successStatusCodes));
         }
 
+        /**
+         * @param successStatusCodes The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successStatusCodes(String... successStatusCodes) {
             return successStatusCodes(List.of(successStatusCodes));
         }

@@ -28,6 +28,10 @@ public final class BranchResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions", required=true)
     private List<Object> actions;
 
+    /**
+     * @return List of actions.
+     * 
+     */
     public List<Object> actions() {
         return this.actions;
     }
@@ -39,6 +43,10 @@ public final class BranchResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return String of the branch name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -68,15 +76,33 @@ public final class BranchResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BranchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions List of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Object> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions List of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param name String of the branch name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

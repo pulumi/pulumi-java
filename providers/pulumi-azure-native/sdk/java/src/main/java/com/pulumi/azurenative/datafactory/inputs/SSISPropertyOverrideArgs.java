@@ -27,6 +27,10 @@ public final class SSISPropertyOverrideArgs extends com.pulumi.resources.Resourc
     @Import(name="isSensitive")
     private @Nullable Output<Boolean> isSensitive;
 
+    /**
+     * @return Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+     * 
+     */
     public Optional<Output<Boolean>> isSensitive() {
         return Optional.ofNullable(this.isSensitive);
     }
@@ -38,6 +42,10 @@ public final class SSISPropertyOverrideArgs extends com.pulumi.resources.Resourc
     @Import(name="value", required=true)
     private Output<Object> value;
 
+    /**
+     * @return SSIS package property override value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> value() {
         return this.value;
     }
@@ -67,20 +75,44 @@ public final class SSISPropertyOverrideArgs extends com.pulumi.resources.Resourc
             $ = new SSISPropertyOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isSensitive Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSensitive(@Nullable Output<Boolean> isSensitive) {
             $.isSensitive = isSensitive;
             return this;
         }
 
+        /**
+         * @param isSensitive Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSensitive(Boolean isSensitive) {
             return isSensitive(Output.of(isSensitive));
         }
 
+        /**
+         * @param value SSIS package property override value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value SSIS package property override value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

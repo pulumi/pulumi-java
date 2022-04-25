@@ -27,6 +27,10 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
     @Import(name="delayEvaluation")
     private @Nullable Integer delayEvaluation;
 
+    /**
+     * @return Number of intervals by which to delay the first evaluation.
+     * 
+     */
     public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
@@ -38,6 +42,10 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
     @Import(name="evaluationInterval")
     private @Nullable Integer evaluationInterval;
 
+    /**
+     * @return Interval (number of runs) between policy evaluations.
+     * 
+     */
     public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
@@ -49,6 +57,11 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
     @Import(name="policyType", required=true)
     private String policyType;
 
+    /**
+     * @return
+     * Expected value is &#39;TruncationSelection&#39;.
+     * 
+     */
     public String policyType() {
         return this.policyType;
     }
@@ -60,6 +73,10 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
     @Import(name="truncationPercentage")
     private @Nullable Integer truncationPercentage;
 
+    /**
+     * @return The percentage of runs to cancel at each evaluation interval.
+     * 
+     */
     public Optional<Integer> truncationPercentage() {
         return Optional.ofNullable(this.truncationPercentage);
     }
@@ -91,21 +108,46 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
             $ = new TruncationSelectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delayEvaluation Number of intervals by which to delay the first evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             $.delayEvaluation = delayEvaluation;
             return this;
         }
 
+        /**
+         * @param evaluationInterval Interval (number of runs) between policy evaluations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             $.evaluationInterval = evaluationInterval;
             return this;
         }
 
+        /**
+         * @param policyType
+         * Expected value is &#39;TruncationSelection&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param truncationPercentage The percentage of runs to cancel at each evaluation interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder truncationPercentage(@Nullable Integer truncationPercentage) {
             $.truncationPercentage = truncationPercentage;
             return this;

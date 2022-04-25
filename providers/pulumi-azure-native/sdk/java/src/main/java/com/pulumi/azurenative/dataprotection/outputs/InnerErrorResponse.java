@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InnerErrorResponse {
     /**
-     * Any Key value pairs that can be provided to the client for additional  verbose information.
+     * @return Any Key value pairs that can be provided to the client for additional  verbose information.
      * 
      */
     private final @Nullable Map<String,String> additionalInfo;
     /**
-     * Unique code for this error
+     * @return Unique code for this error
      * 
      */
     private final @Nullable String code;
     /**
-     * Child Inner Error, to allow Nesting.
+     * @return Child Inner Error, to allow Nesting.
      * 
      */
     private final @Nullable InnerErrorResponse embeddedInnerError;
@@ -39,23 +39,23 @@ public final class InnerErrorResponse {
     }
 
     /**
-     * Any Key value pairs that can be provided to the client for additional  verbose information.
+     * @return Any Key value pairs that can be provided to the client for additional  verbose information.
      * 
-    */
+     */
     public Map<String,String> additionalInfo() {
         return this.additionalInfo == null ? Map.of() : this.additionalInfo;
     }
     /**
-     * Unique code for this error
+     * @return Unique code for this error
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Child Inner Error, to allow Nesting.
+     * @return Child Inner Error, to allow Nesting.
      * 
-    */
+     */
     public Optional<InnerErrorResponse> embeddedInnerError() {
         return Optional.ofNullable(this.embeddedInnerError);
     }

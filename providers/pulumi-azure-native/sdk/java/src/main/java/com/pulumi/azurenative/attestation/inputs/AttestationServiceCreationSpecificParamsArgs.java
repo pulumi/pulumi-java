@@ -26,6 +26,10 @@ public final class AttestationServiceCreationSpecificParamsArgs extends com.pulu
     @Import(name="policySigningCertificates")
     private @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
+    /**
+     * @return JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations
+     * 
+     */
     public Optional<Output<JSONWebKeySetArgs>> policySigningCertificates() {
         return Optional.ofNullable(this.policySigningCertificates);
     }
@@ -54,11 +58,23 @@ public final class AttestationServiceCreationSpecificParamsArgs extends com.pulu
             $ = new AttestationServiceCreationSpecificParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policySigningCertificates JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySigningCertificates(@Nullable Output<JSONWebKeySetArgs> policySigningCertificates) {
             $.policySigningCertificates = policySigningCertificates;
             return this;
         }
 
+        /**
+         * @param policySigningCertificates JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySigningCertificates(JSONWebKeySetArgs policySigningCertificates) {
             return policySigningCertificates(Output.of(policySigningCertificates));
         }

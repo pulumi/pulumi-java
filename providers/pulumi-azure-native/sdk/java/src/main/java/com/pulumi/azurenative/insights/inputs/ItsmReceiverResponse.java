@@ -23,6 +23,10 @@ public final class ItsmReceiverResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectionId", required=true)
     private String connectionId;
 
+    /**
+     * @return Unique identification of ITSM connection among multiple defined in above workspace.
+     * 
+     */
     public String connectionId() {
         return this.connectionId;
     }
@@ -34,6 +38,10 @@ public final class ItsmReceiverResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Itsm receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class ItsmReceiverResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -56,6 +68,10 @@ public final class ItsmReceiverResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="ticketConfiguration", required=true)
     private String ticketConfiguration;
 
+    /**
+     * @return JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
+     * 
+     */
     public String ticketConfiguration() {
         return this.ticketConfiguration;
     }
@@ -67,6 +83,10 @@ public final class ItsmReceiverResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceId", required=true)
     private String workspaceId;
 
+    /**
+     * @return OMS LA instance identifier.
+     * 
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
@@ -99,26 +119,56 @@ public final class ItsmReceiverResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ItsmReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionId Unique identification of ITSM connection among multiple defined in above workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param name The name of the Itsm receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param region Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param ticketConfiguration JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ticketConfiguration(String ticketConfiguration) {
             $.ticketConfiguration = ticketConfiguration;
             return this;
         }
 
+        /**
+         * @param workspaceId OMS LA instance identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             $.workspaceId = workspaceId;
             return this;

@@ -26,6 +26,10 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
     @Import(name="connectVia")
     private @Nullable EntityReferenceResponse connectVia;
 
+    /**
+     * @return The self-hosted integration runtime reference.
+     * 
+     */
     public Optional<EntityReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -37,6 +41,10 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path to contain the staged data in the Blob storage.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -48,6 +56,10 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
     @Import(name="stagingLinkedService")
     private @Nullable EntityReferenceResponse stagingLinkedService;
 
+    /**
+     * @return The staging linked service reference.
+     * 
+     */
     public Optional<EntityReferenceResponse> stagingLinkedService() {
         return Optional.ofNullable(this.stagingLinkedService);
     }
@@ -78,16 +90,34 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
             $ = new IntegrationRuntimeDataProxyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectVia The self-hosted integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable EntityReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param path The path to contain the staged data in the Blob storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param stagingLinkedService The staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
             $.stagingLinkedService = stagingLinkedService;
             return this;

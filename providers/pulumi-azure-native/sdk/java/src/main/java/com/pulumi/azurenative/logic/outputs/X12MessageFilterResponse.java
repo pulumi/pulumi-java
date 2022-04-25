@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class X12MessageFilterResponse {
     /**
-     * The message filter type.
+     * @return The message filter type.
      * 
      */
     private final String messageFilterType;
@@ -21,9 +21,9 @@ public final class X12MessageFilterResponse {
     }
 
     /**
-     * The message filter type.
+     * @return The message filter type.
      * 
-    */
+     */
     public String messageFilterType() {
         return this.messageFilterType;
     }

@@ -26,6 +26,10 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
     @Import(name="deleteOption")
     private @Nullable String deleteOption;
 
+    /**
+     * @return Specify what happens to the network interface when the VM is deleted
+     * 
+     */
     public Optional<String> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
@@ -37,6 +41,10 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
     @Import(name="primary")
     private @Nullable Boolean primary;
 
+    /**
+     * @return Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -78,16 +90,34 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
             $ = new NetworkInterfaceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOption Specify what happens to the network interface when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(@Nullable String deleteOption) {
             $.deleteOption = deleteOption;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param primary Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Boolean primary) {
             $.primary = primary;
             return this;

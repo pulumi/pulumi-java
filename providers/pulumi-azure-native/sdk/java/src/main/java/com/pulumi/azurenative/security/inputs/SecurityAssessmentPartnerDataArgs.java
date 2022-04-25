@@ -24,6 +24,10 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
     @Import(name="partnerName", required=true)
     private Output<String> partnerName;
 
+    /**
+     * @return Name of the company of the partner
+     * 
+     */
     public Output<String> partnerName() {
         return this.partnerName;
     }
@@ -35,6 +39,10 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return secret to authenticate the partner - write only
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -64,20 +72,44 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
             $ = new SecurityAssessmentPartnerDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerName Name of the company of the partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(Output<String> partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param partnerName Name of the company of the partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             return partnerName(Output.of(partnerName));
         }
 
+        /**
+         * @param secret secret to authenticate the partner - write only
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret secret to authenticate the partner - write only
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

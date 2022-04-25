@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class JobStatusResponse {
     /**
-     * Gets the number of times this job has executed.
+     * @return Gets the number of times this job has executed.
      * 
      */
     private final Integer executionCount;
     /**
-     * Gets the number of times this job has failed.
+     * @return Gets the number of times this job has failed.
      * 
      */
     private final Integer failureCount;
     /**
-     * Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
+     * @return Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
      * 
      */
     private final Integer faultedCount;
     /**
-     * Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
+     * @return Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
      * 
      */
     private final String lastExecutionTime;
     /**
-     * Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
+     * @return Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
      * 
      */
     private final String nextExecutionTime;
@@ -51,37 +51,37 @@ public final class JobStatusResponse {
     }
 
     /**
-     * Gets the number of times this job has executed.
+     * @return Gets the number of times this job has executed.
      * 
-    */
+     */
     public Integer executionCount() {
         return this.executionCount;
     }
     /**
-     * Gets the number of times this job has failed.
+     * @return Gets the number of times this job has failed.
      * 
-    */
+     */
     public Integer failureCount() {
         return this.failureCount;
     }
     /**
-     * Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
+     * @return Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
      * 
-    */
+     */
     public Integer faultedCount() {
         return this.faultedCount;
     }
     /**
-     * Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
+     * @return Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
      * 
-    */
+     */
     public String lastExecutionTime() {
         return this.lastExecutionTime;
     }
     /**
-     * Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
+     * @return Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
      * 
-    */
+     */
     public String nextExecutionTime() {
         return this.nextExecutionTime;
     }

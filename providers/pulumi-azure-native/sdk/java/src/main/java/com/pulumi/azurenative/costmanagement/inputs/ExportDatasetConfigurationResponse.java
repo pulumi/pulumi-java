@@ -26,6 +26,10 @@ public final class ExportDatasetConfigurationResponse extends com.pulumi.resourc
     @Import(name="columns")
     private @Nullable List<String> columns;
 
+    /**
+     * @return Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
+     * 
+     */
     public Optional<List<String>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -54,11 +58,23 @@ public final class ExportDatasetConfigurationResponse extends com.pulumi.resourc
             $ = new ExportDatasetConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable List<String> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(String... columns) {
             return columns(List.of(columns));
         }

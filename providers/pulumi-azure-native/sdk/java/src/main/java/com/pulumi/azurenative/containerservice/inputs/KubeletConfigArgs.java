@@ -29,6 +29,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedUnsafeSysctls")
     private @Nullable Output<List<String>> allowedUnsafeSysctls;
 
+    /**
+     * @return Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+     * 
+     */
     public Optional<Output<List<String>>> allowedUnsafeSysctls() {
         return Optional.ofNullable(this.allowedUnsafeSysctls);
     }
@@ -40,6 +44,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerLogMaxFiles")
     private @Nullable Output<Integer> containerLogMaxFiles;
 
+    /**
+     * @return The maximum number of container log files that can be present for a container. The number must be ≥ 2.
+     * 
+     */
     public Optional<Output<Integer>> containerLogMaxFiles() {
         return Optional.ofNullable(this.containerLogMaxFiles);
     }
@@ -51,6 +59,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerLogMaxSizeMB")
     private @Nullable Output<Integer> containerLogMaxSizeMB;
 
+    /**
+     * @return The maximum size (e.g. 10Mi) of container log file before it is rotated.
+     * 
+     */
     public Optional<Output<Integer>> containerLogMaxSizeMB() {
         return Optional.ofNullable(this.containerLogMaxSizeMB);
     }
@@ -62,6 +74,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuCfsQuota")
     private @Nullable Output<Boolean> cpuCfsQuota;
 
+    /**
+     * @return Enable CPU CFS quota enforcement for containers that specify CPU limits.
+     * 
+     */
     public Optional<Output<Boolean>> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
@@ -73,6 +89,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuCfsQuotaPeriod")
     private @Nullable Output<String> cpuCfsQuotaPeriod;
 
+    /**
+     * @return Sets CPU CFS quota period value.
+     * 
+     */
     public Optional<Output<String>> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
@@ -84,6 +104,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuManagerPolicy")
     private @Nullable Output<String> cpuManagerPolicy;
 
+    /**
+     * @return CPU Manager policy to use.
+     * 
+     */
     public Optional<Output<String>> cpuManagerPolicy() {
         return Optional.ofNullable(this.cpuManagerPolicy);
     }
@@ -95,6 +119,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failSwapOn")
     private @Nullable Output<Boolean> failSwapOn;
 
+    /**
+     * @return If set to true it will make the Kubelet fail to start if swap is enabled on the node.
+     * 
+     */
     public Optional<Output<Boolean>> failSwapOn() {
         return Optional.ofNullable(this.failSwapOn);
     }
@@ -106,6 +134,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageGcHighThreshold")
     private @Nullable Output<Integer> imageGcHighThreshold;
 
+    /**
+     * @return The percent of disk usage after which image garbage collection is always run.
+     * 
+     */
     public Optional<Output<Integer>> imageGcHighThreshold() {
         return Optional.ofNullable(this.imageGcHighThreshold);
     }
@@ -117,6 +149,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageGcLowThreshold")
     private @Nullable Output<Integer> imageGcLowThreshold;
 
+    /**
+     * @return The percent of disk usage before which image garbage collection is never run.
+     * 
+     */
     public Optional<Output<Integer>> imageGcLowThreshold() {
         return Optional.ofNullable(this.imageGcLowThreshold);
     }
@@ -128,6 +164,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podMaxPids")
     private @Nullable Output<Integer> podMaxPids;
 
+    /**
+     * @return The maximum number of processes per pod.
+     * 
+     */
     public Optional<Output<Integer>> podMaxPids() {
         return Optional.ofNullable(this.podMaxPids);
     }
@@ -139,6 +179,10 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topologyManagerPolicy")
     private @Nullable Output<String> topologyManagerPolicy;
 
+    /**
+     * @return Topology Manager policy to use.
+     * 
+     */
     public Optional<Output<String>> topologyManagerPolicy() {
         return Optional.ofNullable(this.topologyManagerPolicy);
     }
@@ -177,105 +221,243 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KubeletConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedUnsafeSysctls Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUnsafeSysctls(@Nullable Output<List<String>> allowedUnsafeSysctls) {
             $.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
 
+        /**
+         * @param allowedUnsafeSysctls Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUnsafeSysctls(List<String> allowedUnsafeSysctls) {
             return allowedUnsafeSysctls(Output.of(allowedUnsafeSysctls));
         }
 
+        /**
+         * @param allowedUnsafeSysctls Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
             return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
         }
 
+        /**
+         * @param containerLogMaxFiles The maximum number of container log files that can be present for a container. The number must be ≥ 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerLogMaxFiles(@Nullable Output<Integer> containerLogMaxFiles) {
             $.containerLogMaxFiles = containerLogMaxFiles;
             return this;
         }
 
+        /**
+         * @param containerLogMaxFiles The maximum number of container log files that can be present for a container. The number must be ≥ 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerLogMaxFiles(Integer containerLogMaxFiles) {
             return containerLogMaxFiles(Output.of(containerLogMaxFiles));
         }
 
+        /**
+         * @param containerLogMaxSizeMB The maximum size (e.g. 10Mi) of container log file before it is rotated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerLogMaxSizeMB(@Nullable Output<Integer> containerLogMaxSizeMB) {
             $.containerLogMaxSizeMB = containerLogMaxSizeMB;
             return this;
         }
 
+        /**
+         * @param containerLogMaxSizeMB The maximum size (e.g. 10Mi) of container log file before it is rotated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerLogMaxSizeMB(Integer containerLogMaxSizeMB) {
             return containerLogMaxSizeMB(Output.of(containerLogMaxSizeMB));
         }
 
+        /**
+         * @param cpuCfsQuota Enable CPU CFS quota enforcement for containers that specify CPU limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
             $.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
+        /**
+         * @param cpuCfsQuota Enable CPU CFS quota enforcement for containers that specify CPU limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
             return cpuCfsQuota(Output.of(cpuCfsQuota));
         }
 
+        /**
+         * @param cpuCfsQuotaPeriod Sets CPU CFS quota period value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             $.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
+        /**
+         * @param cpuCfsQuotaPeriod Sets CPU CFS quota period value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
             return cpuCfsQuotaPeriod(Output.of(cpuCfsQuotaPeriod));
         }
 
+        /**
+         * @param cpuManagerPolicy CPU Manager policy to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuManagerPolicy(@Nullable Output<String> cpuManagerPolicy) {
             $.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
 
+        /**
+         * @param cpuManagerPolicy CPU Manager policy to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             return cpuManagerPolicy(Output.of(cpuManagerPolicy));
         }
 
+        /**
+         * @param failSwapOn If set to true it will make the Kubelet fail to start if swap is enabled on the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failSwapOn(@Nullable Output<Boolean> failSwapOn) {
             $.failSwapOn = failSwapOn;
             return this;
         }
 
+        /**
+         * @param failSwapOn If set to true it will make the Kubelet fail to start if swap is enabled on the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failSwapOn(Boolean failSwapOn) {
             return failSwapOn(Output.of(failSwapOn));
         }
 
+        /**
+         * @param imageGcHighThreshold The percent of disk usage after which image garbage collection is always run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageGcHighThreshold(@Nullable Output<Integer> imageGcHighThreshold) {
             $.imageGcHighThreshold = imageGcHighThreshold;
             return this;
         }
 
+        /**
+         * @param imageGcHighThreshold The percent of disk usage after which image garbage collection is always run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageGcHighThreshold(Integer imageGcHighThreshold) {
             return imageGcHighThreshold(Output.of(imageGcHighThreshold));
         }
 
+        /**
+         * @param imageGcLowThreshold The percent of disk usage before which image garbage collection is never run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageGcLowThreshold(@Nullable Output<Integer> imageGcLowThreshold) {
             $.imageGcLowThreshold = imageGcLowThreshold;
             return this;
         }
 
+        /**
+         * @param imageGcLowThreshold The percent of disk usage before which image garbage collection is never run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageGcLowThreshold(Integer imageGcLowThreshold) {
             return imageGcLowThreshold(Output.of(imageGcLowThreshold));
         }
 
+        /**
+         * @param podMaxPids The maximum number of processes per pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podMaxPids(@Nullable Output<Integer> podMaxPids) {
             $.podMaxPids = podMaxPids;
             return this;
         }
 
+        /**
+         * @param podMaxPids The maximum number of processes per pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podMaxPids(Integer podMaxPids) {
             return podMaxPids(Output.of(podMaxPids));
         }
 
+        /**
+         * @param topologyManagerPolicy Topology Manager policy to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyManagerPolicy(@Nullable Output<String> topologyManagerPolicy) {
             $.topologyManagerPolicy = topologyManagerPolicy;
             return this;
         }
 
+        /**
+         * @param topologyManagerPolicy Topology Manager policy to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyManagerPolicy(String topologyManagerPolicy) {
             return topologyManagerPolicy(Output.of(topologyManagerPolicy));
         }

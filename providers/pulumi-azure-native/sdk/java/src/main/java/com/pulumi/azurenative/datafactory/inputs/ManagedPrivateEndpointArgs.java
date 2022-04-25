@@ -27,6 +27,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="fqdns")
     private @Nullable Output<List<String>> fqdns;
 
+    /**
+     * @return Fully qualified domain names
+     * 
+     */
     public Optional<Output<List<String>>> fqdns() {
         return Optional.ofNullable(this.fqdns);
     }
@@ -38,6 +42,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The groupId to which the managed private endpoint is created
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -49,6 +57,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="privateLinkResourceId")
     private @Nullable Output<String> privateLinkResourceId;
 
+    /**
+     * @return The ARM resource ID of the resource to which the managed private endpoint is created
+     * 
+     */
     public Optional<Output<String>> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -79,33 +91,75 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
             $ = new ManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdns Fully qualified domain names
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
             $.fqdns = fqdns;
             return this;
         }
 
+        /**
+         * @param fqdns Fully qualified domain names
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(List<String> fqdns) {
             return fqdns(Output.of(fqdns));
         }
 
+        /**
+         * @param fqdns Fully qualified domain names
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
 
+        /**
+         * @param groupId The groupId to which the managed private endpoint is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The groupId to which the managed private endpoint is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param privateLinkResourceId The ARM resource ID of the resource to which the managed private endpoint is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The ARM resource ID of the resource to which the managed private endpoint is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             return privateLinkResourceId(Output.of(privateLinkResourceId));
         }

@@ -23,6 +23,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
     @Import(name="domainNameLabel", required=true)
     private String domainNameLabel;
 
+    /**
+     * @return The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
+     * 
+     */
     public String domainNameLabel() {
         return this.domainNameLabel;
     }
@@ -51,6 +55,12 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
             $ = new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainNameLabel The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(String domainNameLabel) {
             $.domainNameLabel = domainNameLabel;
             return this;

@@ -13,63 +13,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagedDatabaseSensitivityLabelResult {
     /**
-     * The column name.
+     * @return The column name.
      * 
      */
     private final String columnName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The information type.
+     * @return The information type.
      * 
      */
     private final @Nullable String informationType;
     /**
-     * The information type ID.
+     * @return The information type ID.
      * 
      */
     private final @Nullable String informationTypeId;
     /**
-     * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
+     * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
      */
     private final Boolean isDisabled;
     /**
-     * The label ID.
+     * @return The label ID.
      * 
      */
     private final @Nullable String labelId;
     /**
-     * The label name.
+     * @return The label name.
      * 
      */
     private final @Nullable String labelName;
     /**
-     * Resource that manages the sensitivity label.
+     * @return Resource that manages the sensitivity label.
      * 
      */
     private final String managedBy;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     private final @Nullable String rank;
     /**
-     * The schema name.
+     * @return The schema name.
      * 
      */
     private final String schemaName;
     /**
-     * The table name.
+     * @return The table name.
      * 
      */
     private final String tableName;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -105,65 +105,65 @@ public final class GetManagedDatabaseSensitivityLabelResult {
     }
 
     /**
-     * The column name.
+     * @return The column name.
      * 
-    */
+     */
     public String columnName() {
         return this.columnName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The information type.
+     * @return The information type.
      * 
-    */
+     */
     public Optional<String> informationType() {
         return Optional.ofNullable(this.informationType);
     }
     /**
-     * The information type ID.
+     * @return The information type ID.
      * 
-    */
+     */
     public Optional<String> informationTypeId() {
         return Optional.ofNullable(this.informationTypeId);
     }
     /**
-     * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
+     * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
-    */
+     */
     public Boolean isDisabled() {
         return this.isDisabled;
     }
     /**
-     * The label ID.
+     * @return The label ID.
      * 
-    */
+     */
     public Optional<String> labelId() {
         return Optional.ofNullable(this.labelId);
     }
     /**
-     * The label name.
+     * @return The label name.
      * 
-    */
+     */
     public Optional<String> labelName() {
         return Optional.ofNullable(this.labelName);
     }
     /**
-     * Resource that manages the sensitivity label.
+     * @return Resource that manages the sensitivity label.
      * 
-    */
+     */
     public String managedBy() {
         return this.managedBy;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -171,23 +171,23 @@ public final class GetManagedDatabaseSensitivityLabelResult {
         return Optional.ofNullable(this.rank);
     }
     /**
-     * The schema name.
+     * @return The schema name.
      * 
-    */
+     */
     public String schemaName() {
         return this.schemaName;
     }
     /**
-     * The table name.
+     * @return The table name.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class SapHanaPartitionSettingsArgs extends com.pulumi.resources.Res
     @Import(name="partitionColumnName")
     private @Nullable Output<Object> partitionColumnName;
 
+    /**
+     * @return The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
@@ -54,11 +58,23 @@ public final class SapHanaPartitionSettingsArgs extends com.pulumi.resources.Res
             $ = new SapHanaPartitionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionColumnName The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
             $.partitionColumnName = partitionColumnName;
             return this;
         }
 
+        /**
+         * @param partitionColumnName The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(Object partitionColumnName) {
             return partitionColumnName(Output.of(partitionColumnName));
         }

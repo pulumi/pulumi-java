@@ -26,6 +26,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
     @Import(name="administratorType")
     private @Nullable String administratorType;
 
+    /**
+     * @return Type of the sever administrator.
+     * 
+     */
     public Optional<String> administratorType() {
         return Optional.ofNullable(this.administratorType);
     }
@@ -37,6 +41,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
     @Import(name="azureADOnlyAuthentication")
     private @Nullable Boolean azureADOnlyAuthentication;
 
+    /**
+     * @return Azure Active Directory only Authentication enabled.
+     * 
+     */
     public Optional<Boolean> azureADOnlyAuthentication() {
         return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
@@ -48,6 +56,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
     @Import(name="login")
     private @Nullable String login;
 
+    /**
+     * @return Login name of the server administrator.
+     * 
+     */
     public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
@@ -59,6 +71,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
     @Import(name="principalType")
     private @Nullable String principalType;
 
+    /**
+     * @return Principal Type of the sever administrator.
+     * 
+     */
     public Optional<String> principalType() {
         return Optional.ofNullable(this.principalType);
     }
@@ -70,6 +86,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
     @Import(name="sid")
     private @Nullable String sid;
 
+    /**
+     * @return SID (object ID) of the server administrator.
+     * 
+     */
     public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
@@ -81,6 +101,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant ID of the administrator.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -114,31 +138,67 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
             $ = new ManagedInstanceExternalAdministratorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorType Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(@Nullable String administratorType) {
             $.administratorType = administratorType;
             return this;
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
             $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
 
+        /**
+         * @param login Login name of the server administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable String login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param principalType Principal Type of the sever administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(@Nullable String principalType) {
             $.principalType = principalType;
             return this;
         }
 
+        /**
+         * @param sid SID (object ID) of the server administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(@Nullable String sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID of the administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

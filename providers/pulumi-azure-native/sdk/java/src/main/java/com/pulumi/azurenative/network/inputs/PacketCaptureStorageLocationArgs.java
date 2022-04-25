@@ -26,6 +26,10 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
     @Import(name="filePath")
     private @Nullable Output<String> filePath;
 
+    /**
+     * @return A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
+     * 
+     */
     public Optional<Output<String>> filePath() {
         return Optional.ofNullable(this.filePath);
     }
@@ -37,6 +41,10 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
     @Import(name="storageId")
     private @Nullable Output<String> storageId;
 
+    /**
+     * @return The ID of the storage account to save the packet capture session. Required if no local file path is provided.
+     * 
+     */
     public Optional<Output<String>> storageId() {
         return Optional.ofNullable(this.storageId);
     }
@@ -48,6 +56,10 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
     @Import(name="storagePath")
     private @Nullable Output<String> storagePath;
 
+    /**
+     * @return The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
+     * 
+     */
     public Optional<Output<String>> storagePath() {
         return Optional.ofNullable(this.storagePath);
     }
@@ -78,29 +90,65 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
             $ = new PacketCaptureStorageLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePath A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(@Nullable Output<String> filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param filePath A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(String filePath) {
             return filePath(Output.of(filePath));
         }
 
+        /**
+         * @param storageId The ID of the storage account to save the packet capture session. Required if no local file path is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageId(@Nullable Output<String> storageId) {
             $.storageId = storageId;
             return this;
         }
 
+        /**
+         * @param storageId The ID of the storage account to save the packet capture session. Required if no local file path is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageId(String storageId) {
             return storageId(Output.of(storageId));
         }
 
+        /**
+         * @param storagePath The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePath(@Nullable Output<String> storagePath) {
             $.storagePath = storagePath;
             return this;
         }
 
+        /**
+         * @param storagePath The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePath(String storagePath) {
             return storagePath(Output.of(storagePath));
         }

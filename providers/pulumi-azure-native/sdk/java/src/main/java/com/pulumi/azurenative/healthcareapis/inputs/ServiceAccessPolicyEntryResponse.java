@@ -23,6 +23,10 @@ public final class ServiceAccessPolicyEntryResponse extends com.pulumi.resources
     @Import(name="objectId", required=true)
     private String objectId;
 
+    /**
+     * @return An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+     * 
+     */
     public String objectId() {
         return this.objectId;
     }
@@ -51,6 +55,12 @@ public final class ServiceAccessPolicyEntryResponse extends com.pulumi.resources
             $ = new ServiceAccessPolicyEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             $.objectId = objectId;
             return this;

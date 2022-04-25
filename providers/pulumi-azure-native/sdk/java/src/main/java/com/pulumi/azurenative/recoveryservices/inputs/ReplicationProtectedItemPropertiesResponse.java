@@ -37,6 +37,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="activeLocation")
     private @Nullable String activeLocation;
 
+    /**
+     * @return The Current active location of the PE.
+     * 
+     */
     public Optional<String> activeLocation() {
         return Optional.ofNullable(this.activeLocation);
     }
@@ -48,6 +52,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="allowedOperations")
     private @Nullable List<String> allowedOperations;
 
+    /**
+     * @return The allowed operations on the Replication protected item.
+     * 
+     */
     public Optional<List<String>> allowedOperations() {
         return Optional.ofNullable(this.allowedOperations);
     }
@@ -59,6 +67,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="currentScenario")
     private @Nullable CurrentScenarioDetailsResponse currentScenario;
 
+    /**
+     * @return The current scenario.
+     * 
+     */
     public Optional<CurrentScenarioDetailsResponse> currentScenario() {
         return Optional.ofNullable(this.currentScenario);
     }
@@ -70,6 +82,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="failoverHealth")
     private @Nullable String failoverHealth;
 
+    /**
+     * @return The consolidated failover health for the VM.
+     * 
+     */
     public Optional<String> failoverHealth() {
         return Optional.ofNullable(this.failoverHealth);
     }
@@ -81,6 +97,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="failoverRecoveryPointId")
     private @Nullable String failoverRecoveryPointId;
 
+    /**
+     * @return The recovery point ARM Id to which the Vm was failed over.
+     * 
+     */
     public Optional<String> failoverRecoveryPointId() {
         return Optional.ofNullable(this.failoverRecoveryPointId);
     }
@@ -92,6 +112,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return The name.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -103,6 +127,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="healthErrors")
     private @Nullable List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return List of health errors.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> healthErrors() {
         return Optional.ofNullable(this.healthErrors);
     }
@@ -114,6 +142,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="lastSuccessfulFailoverTime")
     private @Nullable String lastSuccessfulFailoverTime;
 
+    /**
+     * @return The Last successful failover time.
+     * 
+     */
     public Optional<String> lastSuccessfulFailoverTime() {
         return Optional.ofNullable(this.lastSuccessfulFailoverTime);
     }
@@ -125,6 +157,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="lastSuccessfulTestFailoverTime")
     private @Nullable String lastSuccessfulTestFailoverTime;
 
+    /**
+     * @return The Last successful test failover time.
+     * 
+     */
     public Optional<String> lastSuccessfulTestFailoverTime() {
         return Optional.ofNullable(this.lastSuccessfulTestFailoverTime);
     }
@@ -136,6 +172,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="policyFriendlyName")
     private @Nullable String policyFriendlyName;
 
+    /**
+     * @return The name of Policy governing this PE.
+     * 
+     */
     public Optional<String> policyFriendlyName() {
         return Optional.ofNullable(this.policyFriendlyName);
     }
@@ -147,6 +187,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="policyId")
     private @Nullable String policyId;
 
+    /**
+     * @return The ID of Policy governing this PE.
+     * 
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -158,6 +202,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="primaryFabricFriendlyName")
     private @Nullable String primaryFabricFriendlyName;
 
+    /**
+     * @return The friendly name of the primary fabric.
+     * 
+     */
     public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
@@ -169,6 +217,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="primaryFabricProvider")
     private @Nullable String primaryFabricProvider;
 
+    /**
+     * @return The fabric provider of the primary fabric.
+     * 
+     */
     public Optional<String> primaryFabricProvider() {
         return Optional.ofNullable(this.primaryFabricProvider);
     }
@@ -180,6 +232,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="primaryProtectionContainerFriendlyName")
     private @Nullable String primaryProtectionContainerFriendlyName;
 
+    /**
+     * @return The name of primary protection container friendly name.
+     * 
+     */
     public Optional<String> primaryProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.primaryProtectionContainerFriendlyName);
     }
@@ -191,6 +247,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="protectableItemId")
     private @Nullable String protectableItemId;
 
+    /**
+     * @return The protected item ARM Id.
+     * 
+     */
     public Optional<String> protectableItemId() {
         return Optional.ofNullable(this.protectableItemId);
     }
@@ -202,6 +262,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="protectedItemType")
     private @Nullable String protectedItemType;
 
+    /**
+     * @return The type of protected item type.
+     * 
+     */
     public Optional<String> protectedItemType() {
         return Optional.ofNullable(this.protectedItemType);
     }
@@ -213,6 +277,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="protectionState")
     private @Nullable String protectionState;
 
+    /**
+     * @return The protection status.
+     * 
+     */
     public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
@@ -224,6 +292,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="protectionStateDescription")
     private @Nullable String protectionStateDescription;
 
+    /**
+     * @return The protection state description.
+     * 
+     */
     public Optional<String> protectionStateDescription() {
         return Optional.ofNullable(this.protectionStateDescription);
     }
@@ -235,6 +307,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="providerSpecificDetails")
     private @Nullable Object providerSpecificDetails;
 
+    /**
+     * @return The Replication provider custom settings.
+     * 
+     */
     public Optional<Object> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
@@ -246,6 +322,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="recoveryContainerId")
     private @Nullable String recoveryContainerId;
 
+    /**
+     * @return The recovery container Id.
+     * 
+     */
     public Optional<String> recoveryContainerId() {
         return Optional.ofNullable(this.recoveryContainerId);
     }
@@ -257,6 +337,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="recoveryFabricFriendlyName")
     private @Nullable String recoveryFabricFriendlyName;
 
+    /**
+     * @return The friendly name of recovery fabric.
+     * 
+     */
     public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
@@ -268,6 +352,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="recoveryFabricId")
     private @Nullable String recoveryFabricId;
 
+    /**
+     * @return The Arm Id of recovery fabric.
+     * 
+     */
     public Optional<String> recoveryFabricId() {
         return Optional.ofNullable(this.recoveryFabricId);
     }
@@ -279,6 +367,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="recoveryProtectionContainerFriendlyName")
     private @Nullable String recoveryProtectionContainerFriendlyName;
 
+    /**
+     * @return The name of recovery container friendly name.
+     * 
+     */
     public Optional<String> recoveryProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.recoveryProtectionContainerFriendlyName);
     }
@@ -290,6 +382,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="recoveryServicesProviderId")
     private @Nullable String recoveryServicesProviderId;
 
+    /**
+     * @return The recovery provider ARM Id.
+     * 
+     */
     public Optional<String> recoveryServicesProviderId() {
         return Optional.ofNullable(this.recoveryServicesProviderId);
     }
@@ -301,6 +397,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="replicationHealth")
     private @Nullable String replicationHealth;
 
+    /**
+     * @return The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM&#39;s replication group into account. This is a string representation of the ProtectionHealth enumeration.
+     * 
+     */
     public Optional<String> replicationHealth() {
         return Optional.ofNullable(this.replicationHealth);
     }
@@ -312,6 +412,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="testFailoverState")
     private @Nullable String testFailoverState;
 
+    /**
+     * @return The Test failover state.
+     * 
+     */
     public Optional<String> testFailoverState() {
         return Optional.ofNullable(this.testFailoverState);
     }
@@ -323,6 +427,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
     @Import(name="testFailoverStateDescription")
     private @Nullable String testFailoverStateDescription;
 
+    /**
+     * @return The Test failover state description.
+     * 
+     */
     public Optional<String> testFailoverStateDescription() {
         return Optional.ofNullable(this.testFailoverStateDescription);
     }
@@ -377,144 +485,318 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
             $ = new ReplicationProtectedItemPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeLocation The Current active location of the PE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeLocation(@Nullable String activeLocation) {
             $.activeLocation = activeLocation;
             return this;
         }
 
+        /**
+         * @param allowedOperations The allowed operations on the Replication protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
             $.allowedOperations = allowedOperations;
             return this;
         }
 
+        /**
+         * @param allowedOperations The allowed operations on the Replication protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
 
+        /**
+         * @param currentScenario The current scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
             $.currentScenario = currentScenario;
             return this;
         }
 
+        /**
+         * @param failoverHealth The consolidated failover health for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverHealth(@Nullable String failoverHealth) {
             $.failoverHealth = failoverHealth;
             return this;
         }
 
+        /**
+         * @param failoverRecoveryPointId The recovery point ARM Id to which the Vm was failed over.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRecoveryPointId(@Nullable String failoverRecoveryPointId) {
             $.failoverRecoveryPointId = failoverRecoveryPointId;
             return this;
         }
 
+        /**
+         * @param friendlyName The name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthErrors List of health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors List of health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param lastSuccessfulFailoverTime The Last successful failover time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessfulFailoverTime(@Nullable String lastSuccessfulFailoverTime) {
             $.lastSuccessfulFailoverTime = lastSuccessfulFailoverTime;
             return this;
         }
 
+        /**
+         * @param lastSuccessfulTestFailoverTime The Last successful test failover time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessfulTestFailoverTime(@Nullable String lastSuccessfulTestFailoverTime) {
             $.lastSuccessfulTestFailoverTime = lastSuccessfulTestFailoverTime;
             return this;
         }
 
+        /**
+         * @param policyFriendlyName The name of Policy governing this PE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyFriendlyName(@Nullable String policyFriendlyName) {
             $.policyFriendlyName = policyFriendlyName;
             return this;
         }
 
+        /**
+         * @param policyId The ID of Policy governing this PE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param primaryFabricFriendlyName The friendly name of the primary fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             $.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param primaryFabricProvider The fabric provider of the primary fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricProvider(@Nullable String primaryFabricProvider) {
             $.primaryFabricProvider = primaryFabricProvider;
             return this;
         }
 
+        /**
+         * @param primaryProtectionContainerFriendlyName The name of primary protection container friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryProtectionContainerFriendlyName(@Nullable String primaryProtectionContainerFriendlyName) {
             $.primaryProtectionContainerFriendlyName = primaryProtectionContainerFriendlyName;
             return this;
         }
 
+        /**
+         * @param protectableItemId The protected item ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectableItemId(@Nullable String protectableItemId) {
             $.protectableItemId = protectableItemId;
             return this;
         }
 
+        /**
+         * @param protectedItemType The type of protected item type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemType(@Nullable String protectedItemType) {
             $.protectedItemType = protectedItemType;
             return this;
         }
 
+        /**
+         * @param protectionState The protection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(@Nullable String protectionState) {
             $.protectionState = protectionState;
             return this;
         }
 
+        /**
+         * @param protectionStateDescription The protection state description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionStateDescription(@Nullable String protectionStateDescription) {
             $.protectionStateDescription = protectionStateDescription;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The Replication provider custom settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
+        /**
+         * @param recoveryContainerId The recovery container Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryContainerId(@Nullable String recoveryContainerId) {
             $.recoveryContainerId = recoveryContainerId;
             return this;
         }
 
+        /**
+         * @param recoveryFabricFriendlyName The friendly name of recovery fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             $.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param recoveryFabricId The Arm Id of recovery fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
             $.recoveryFabricId = recoveryFabricId;
             return this;
         }
 
+        /**
+         * @param recoveryProtectionContainerFriendlyName The name of recovery container friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryProtectionContainerFriendlyName(@Nullable String recoveryProtectionContainerFriendlyName) {
             $.recoveryProtectionContainerFriendlyName = recoveryProtectionContainerFriendlyName;
             return this;
         }
 
+        /**
+         * @param recoveryServicesProviderId The recovery provider ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryServicesProviderId(@Nullable String recoveryServicesProviderId) {
             $.recoveryServicesProviderId = recoveryServicesProviderId;
             return this;
         }
 
+        /**
+         * @param replicationHealth The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM&#39;s replication group into account. This is a string representation of the ProtectionHealth enumeration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationHealth(@Nullable String replicationHealth) {
             $.replicationHealth = replicationHealth;
             return this;
         }
 
+        /**
+         * @param testFailoverState The Test failover state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testFailoverState(@Nullable String testFailoverState) {
             $.testFailoverState = testFailoverState;
             return this;
         }
 
+        /**
+         * @param testFailoverStateDescription The Test failover state description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testFailoverStateDescription(@Nullable String testFailoverStateDescription) {
             $.testFailoverStateDescription = testFailoverStateDescription;
             return this;

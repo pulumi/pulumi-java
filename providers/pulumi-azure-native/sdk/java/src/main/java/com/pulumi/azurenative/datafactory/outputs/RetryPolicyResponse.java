@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RetryPolicyResponse {
     /**
-     * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
     private final @Nullable Object count;
     /**
-     * Interval between retries in seconds. Default is 30.
+     * @return Interval between retries in seconds. Default is 30.
      * 
      */
     private final @Nullable Integer intervalInSeconds;
@@ -32,16 +32,16 @@ public final class RetryPolicyResponse {
     }
 
     /**
-     * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Interval between retries in seconds. Default is 30.
+     * @return Interval between retries in seconds. Default is 30.
      * 
-    */
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }

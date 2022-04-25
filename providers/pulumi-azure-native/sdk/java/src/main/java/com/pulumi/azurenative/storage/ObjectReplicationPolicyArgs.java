@@ -24,6 +24,10 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="destinationAccount", required=true)
     private Output<String> destinationAccount;
 
+    /**
+     * @return Required. Destination account name.
+     * 
+     */
     public Output<String> destinationAccount() {
         return this.destinationAccount;
     }
@@ -46,6 +54,10 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="objectReplicationPolicyId")
     private @Nullable Output<String> objectReplicationPolicyId;
 
+    /**
+     * @return The ID of object replication policy or &#39;default&#39; if the policy ID is unknown.
+     * 
+     */
     public Optional<Output<String>> objectReplicationPolicyId() {
         return Optional.ofNullable(this.objectReplicationPolicyId);
     }
@@ -57,6 +69,10 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="rules")
     private @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
 
+    /**
+     * @return The storage account object replication rules.
+     * 
+     */
     public Optional<Output<List<ObjectReplicationPolicyRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -79,6 +99,10 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="sourceAccount", required=true)
     private Output<String> sourceAccount;
 
+    /**
+     * @return Required. Source account name.
+     * 
+     */
     public Output<String> sourceAccount() {
         return this.sourceAccount;
     }
@@ -112,60 +136,138 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
             $ = new ObjectReplicationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param destinationAccount Required. Destination account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAccount(Output<String> destinationAccount) {
             $.destinationAccount = destinationAccount;
             return this;
         }
 
+        /**
+         * @param destinationAccount Required. Destination account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAccount(String destinationAccount) {
             return destinationAccount(Output.of(destinationAccount));
         }
 
+        /**
+         * @param objectReplicationPolicyId The ID of object replication policy or &#39;default&#39; if the policy ID is unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectReplicationPolicyId(@Nullable Output<String> objectReplicationPolicyId) {
             $.objectReplicationPolicyId = objectReplicationPolicyId;
             return this;
         }
 
+        /**
+         * @param objectReplicationPolicyId The ID of object replication policy or &#39;default&#39; if the policy ID is unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectReplicationPolicyId(String objectReplicationPolicyId) {
             return objectReplicationPolicyId(Output.of(objectReplicationPolicyId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rules The storage account object replication rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The storage account object replication rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ObjectReplicationPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The storage account object replication rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ObjectReplicationPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param sourceAccount Required. Source account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAccount(Output<String> sourceAccount) {
             $.sourceAccount = sourceAccount;
             return this;
         }
 
+        /**
+         * @param sourceAccount Required. Source account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAccount(String sourceAccount) {
             return sourceAccount(Output.of(sourceAccount));
         }

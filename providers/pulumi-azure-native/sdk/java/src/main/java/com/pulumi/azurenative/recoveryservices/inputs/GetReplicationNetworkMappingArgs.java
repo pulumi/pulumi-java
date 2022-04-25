@@ -19,6 +19,10 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Primary fabric name.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -30,6 +34,10 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
     @Import(name="networkMappingName", required=true)
     private String networkMappingName;
 
+    /**
+     * @return Network mapping name.
+     * 
+     */
     public String networkMappingName() {
         return this.networkMappingName;
     }
@@ -41,6 +49,10 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
     @Import(name="networkName", required=true)
     private String networkName;
 
+    /**
+     * @return Primary network name.
+     * 
+     */
     public String networkName() {
         return this.networkName;
     }
@@ -52,6 +64,10 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -95,26 +115,56 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
             $ = new GetReplicationNetworkMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Primary fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param networkMappingName Network mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMappingName(String networkMappingName) {
             $.networkMappingName = networkMappingName;
             return this;
         }
 
+        /**
+         * @param networkName Primary network name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkName(String networkName) {
             $.networkName = networkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

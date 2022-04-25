@@ -25,6 +25,10 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
     @Import(name="authorizationServerId")
     private @Nullable String authorizationServerId;
 
+    /**
+     * @return OAuth authorization server identifier.
+     * 
+     */
     public Optional<String> authorizationServerId() {
         return Optional.ofNullable(this.authorizationServerId);
     }
@@ -36,6 +40,10 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
     @Import(name="scope")
     private @Nullable String scope;
 
+    /**
+     * @return operations scope.
+     * 
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -65,11 +73,23 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
             $ = new OAuth2AuthenticationSettingsContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationServerId OAuth authorization server identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationServerId(@Nullable String authorizationServerId) {
             $.authorizationServerId = authorizationServerId;
             return this;
         }
 
+        /**
+         * @param scope operations scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable String scope) {
             $.scope = scope;
             return this;

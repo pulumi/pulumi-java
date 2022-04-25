@@ -25,6 +25,10 @@ public final class RunbookAssociationPropertyResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name of the runbook.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class RunbookAssociationPropertyResponse extends com.pulumi.resourc
             $ = new RunbookAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the name of the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -24,6 +24,10 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="allowance", required=true)
     private Double allowance;
 
+    /**
+     * @return The quantity added to the commitment plan at an interval specified by its allowance frequency.
+     * 
+     */
     public Double allowance() {
         return this.allowance;
     }
@@ -35,6 +39,10 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="amount", required=true)
     private Double amount;
 
+    /**
+     * @return The quantity available to the plan the last time usage was calculated.
+     * 
+     */
     public Double amount() {
         return this.amount;
     }
@@ -46,6 +54,10 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="includedQuantityMeter", required=true)
     private String includedQuantityMeter;
 
+    /**
+     * @return The Azure meter for usage against included quantities.
+     * 
+     */
     public String includedQuantityMeter() {
         return this.includedQuantityMeter;
     }
@@ -57,6 +69,10 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="overageMeter", required=true)
     private String overageMeter;
 
+    /**
+     * @return The Azure meter for usage which exceeds included quantities.
+     * 
+     */
     public String overageMeter() {
         return this.overageMeter;
     }
@@ -88,21 +104,45 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PlanQuantityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowance The quantity added to the commitment plan at an interval specified by its allowance frequency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowance(Double allowance) {
             $.allowance = allowance;
             return this;
         }
 
+        /**
+         * @param amount The quantity available to the plan the last time usage was calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(Double amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param includedQuantityMeter The Azure meter for usage against included quantities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedQuantityMeter(String includedQuantityMeter) {
             $.includedQuantityMeter = includedQuantityMeter;
             return this;
         }
 
+        /**
+         * @param overageMeter The Azure meter for usage which exceeds included quantities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overageMeter(String overageMeter) {
             $.overageMeter = overageMeter;
             return this;

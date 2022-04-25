@@ -19,6 +19,10 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
     @Import(name="identityProviderName", required=true)
     private String identityProviderName;
 
+    /**
+     * @return Identity Provider Type identifier.
+     * 
+     */
     public String identityProviderName() {
         return this.identityProviderName;
     }
@@ -30,6 +34,10 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -71,16 +83,34 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
             $ = new ListIdentityProviderSecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityProviderName Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviderName(String identityProviderName) {
             $.identityProviderName = identityProviderName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

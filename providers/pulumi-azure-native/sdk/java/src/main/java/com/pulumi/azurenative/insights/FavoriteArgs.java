@@ -25,6 +25,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return Favorite category, as defined by the user at creation time.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -36,6 +40,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<String> config;
 
+    /**
+     * @return Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
+     * 
+     */
     public Optional<Output<String>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -47,6 +55,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="favoriteId")
     private @Nullable Output<String> favoriteId;
 
+    /**
+     * @return The Id of a specific favorite defined in the Application Insights component
+     * 
+     */
     public Optional<Output<String>> favoriteId() {
         return Optional.ofNullable(this.favoriteId);
     }
@@ -58,6 +70,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="favoriteType")
     private @Nullable Output<FavoriteType> favoriteType;
 
+    /**
+     * @return Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * 
+     */
     public Optional<Output<FavoriteType>> favoriteType() {
         return Optional.ofNullable(this.favoriteType);
     }
@@ -69,6 +85,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isGeneratedFromTemplate")
     private @Nullable Output<Boolean> isGeneratedFromTemplate;
 
+    /**
+     * @return Flag denoting wether or not this favorite was generated from a template.
+     * 
+     */
     public Optional<Output<Boolean>> isGeneratedFromTemplate() {
         return Optional.ofNullable(this.isGeneratedFromTemplate);
     }
@@ -80,6 +100,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The user-defined name of the favorite.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +115,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -113,6 +145,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
     private @Nullable Output<String> sourceType;
 
+    /**
+     * @return The source of the favorite definition.
+     * 
+     */
     public Optional<Output<String>> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -124,6 +160,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return A list of 0 or more tags that are associated with this favorite definition
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,6 +175,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -173,105 +217,243 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FavoriteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Favorite category, as defined by the user at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Favorite category, as defined by the user at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param config Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<String> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(String config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param favoriteId The Id of a specific favorite defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteId(@Nullable Output<String> favoriteId) {
             $.favoriteId = favoriteId;
             return this;
         }
 
+        /**
+         * @param favoriteId The Id of a specific favorite defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteId(String favoriteId) {
             return favoriteId(Output.of(favoriteId));
         }
 
+        /**
+         * @param favoriteType Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteType(@Nullable Output<FavoriteType> favoriteType) {
             $.favoriteType = favoriteType;
             return this;
         }
 
+        /**
+         * @param favoriteType Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteType(FavoriteType favoriteType) {
             return favoriteType(Output.of(favoriteType));
         }
 
+        /**
+         * @param isGeneratedFromTemplate Flag denoting wether or not this favorite was generated from a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGeneratedFromTemplate(@Nullable Output<Boolean> isGeneratedFromTemplate) {
             $.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
 
+        /**
+         * @param isGeneratedFromTemplate Flag denoting wether or not this favorite was generated from a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGeneratedFromTemplate(Boolean isGeneratedFromTemplate) {
             return isGeneratedFromTemplate(Output.of(isGeneratedFromTemplate));
         }
 
+        /**
+         * @param name The user-defined name of the favorite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The user-defined name of the favorite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sourceType The source of the favorite definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable Output<String> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType The source of the favorite definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Output.of(sourceType));
         }
 
+        /**
+         * @param tags A list of 0 or more tags that are associated with this favorite definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of 0 or more tags that are associated with this favorite definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of 0 or more tags that are associated with this favorite definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param version This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

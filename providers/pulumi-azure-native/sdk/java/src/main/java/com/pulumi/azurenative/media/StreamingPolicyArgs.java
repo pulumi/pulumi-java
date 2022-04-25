@@ -26,6 +26,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -37,6 +41,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="commonEncryptionCbcs")
     private @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
 
+    /**
+     * @return Configuration of CommonEncryptionCbcs
+     * 
+     */
     public Optional<Output<CommonEncryptionCbcsArgs>> commonEncryptionCbcs() {
         return Optional.ofNullable(this.commonEncryptionCbcs);
     }
@@ -48,6 +56,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="commonEncryptionCenc")
     private @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
 
+    /**
+     * @return Configuration of CommonEncryptionCenc
+     * 
+     */
     public Optional<Output<CommonEncryptionCencArgs>> commonEncryptionCenc() {
         return Optional.ofNullable(this.commonEncryptionCenc);
     }
@@ -59,6 +71,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultContentKeyPolicyName")
     private @Nullable Output<String> defaultContentKeyPolicyName;
 
+    /**
+     * @return Default ContentKey used by current Streaming Policy
+     * 
+     */
     public Optional<Output<String>> defaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
@@ -70,6 +86,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="envelopeEncryption")
     private @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
 
+    /**
+     * @return Configuration of EnvelopeEncryption
+     * 
+     */
     public Optional<Output<EnvelopeEncryptionArgs>> envelopeEncryption() {
         return Optional.ofNullable(this.envelopeEncryption);
     }
@@ -81,6 +101,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="noEncryption")
     private @Nullable Output<NoEncryptionArgs> noEncryption;
 
+    /**
+     * @return Configurations of NoEncryption
+     * 
+     */
     public Optional<Output<NoEncryptionArgs>> noEncryption() {
         return Optional.ofNullable(this.noEncryption);
     }
@@ -92,6 +116,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -103,6 +131,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="streamingPolicyName")
     private @Nullable Output<String> streamingPolicyName;
 
+    /**
+     * @return The Streaming Policy name.
+     * 
+     */
     public Optional<Output<String>> streamingPolicyName() {
         return Optional.ofNullable(this.streamingPolicyName);
     }
@@ -138,74 +170,170 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new StreamingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param commonEncryptionCbcs Configuration of CommonEncryptionCbcs
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonEncryptionCbcs(@Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs) {
             $.commonEncryptionCbcs = commonEncryptionCbcs;
             return this;
         }
 
+        /**
+         * @param commonEncryptionCbcs Configuration of CommonEncryptionCbcs
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonEncryptionCbcs(CommonEncryptionCbcsArgs commonEncryptionCbcs) {
             return commonEncryptionCbcs(Output.of(commonEncryptionCbcs));
         }
 
+        /**
+         * @param commonEncryptionCenc Configuration of CommonEncryptionCenc
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonEncryptionCenc(@Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc) {
             $.commonEncryptionCenc = commonEncryptionCenc;
             return this;
         }
 
+        /**
+         * @param commonEncryptionCenc Configuration of CommonEncryptionCenc
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonEncryptionCenc(CommonEncryptionCencArgs commonEncryptionCenc) {
             return commonEncryptionCenc(Output.of(commonEncryptionCenc));
         }
 
+        /**
+         * @param defaultContentKeyPolicyName Default ContentKey used by current Streaming Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
             $.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
+        /**
+         * @param defaultContentKeyPolicyName Default ContentKey used by current Streaming Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
             return defaultContentKeyPolicyName(Output.of(defaultContentKeyPolicyName));
         }
 
+        /**
+         * @param envelopeEncryption Configuration of EnvelopeEncryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeEncryption(@Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption) {
             $.envelopeEncryption = envelopeEncryption;
             return this;
         }
 
+        /**
+         * @param envelopeEncryption Configuration of EnvelopeEncryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeEncryption(EnvelopeEncryptionArgs envelopeEncryption) {
             return envelopeEncryption(Output.of(envelopeEncryption));
         }
 
+        /**
+         * @param noEncryption Configurations of NoEncryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder noEncryption(@Nullable Output<NoEncryptionArgs> noEncryption) {
             $.noEncryption = noEncryption;
             return this;
         }
 
+        /**
+         * @param noEncryption Configurations of NoEncryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder noEncryption(NoEncryptionArgs noEncryption) {
             return noEncryption(Output.of(noEncryption));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param streamingPolicyName The Streaming Policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingPolicyName(@Nullable Output<String> streamingPolicyName) {
             $.streamingPolicyName = streamingPolicyName;
             return this;
         }
 
+        /**
+         * @param streamingPolicyName The Streaming Policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingPolicyName(String streamingPolicyName) {
             return streamingPolicyName(Output.of(streamingPolicyName));
         }

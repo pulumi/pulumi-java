@@ -19,6 +19,10 @@ public final class GetVirtualNetworkTapArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkTapArgs extends com.pulumi.resources.InvokeA
     @Import(name="tapName", required=true)
     private String tapName;
 
+    /**
+     * @return The name of virtual network tap.
+     * 
+     */
     public String tapName() {
         return this.tapName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualNetworkTapArgs extends com.pulumi.resources.InvokeA
             $ = new GetVirtualNetworkTapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param tapName The name of virtual network tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapName(String tapName) {
             $.tapName = tapName;
             return this;

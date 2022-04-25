@@ -29,6 +29,10 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
     @Import(name="family")
     private @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
 
+    /**
+     * @return The family of the SKU.
+     * 
+     */
     public Optional<Output<Either<String,ExpressRouteCircuitSkuFamily>>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -40,6 +44,10 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
     @Import(name="tier")
     private @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;
 
+    /**
+     * @return The tier of the SKU.
+     * 
+     */
     public Optional<Output<Either<String,ExpressRouteCircuitSkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -81,45 +93,105 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
             $ = new ExpressRouteCircuitSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family The family of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The family of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Either<String,ExpressRouteCircuitSkuFamily> family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param family The family of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Either.ofLeft(family));
         }
 
+        /**
+         * @param family The family of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(ExpressRouteCircuitSkuFamily family) {
             return family(Either.ofRight(family));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier The tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,ExpressRouteCircuitSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(ExpressRouteCircuitSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

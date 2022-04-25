@@ -31,6 +31,14 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
     @Import(name="maximumCapacity")
     private @Nullable Output<Double> maximumCapacity;
 
+    /**
+     * @return The maximum node capacity for Service Fabric application.
+     * This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
+     * If set to zero, capacity for this metric is unlimited on each node.
+     * When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
+     * When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
+     * 
+     */
     public Optional<Output<Double>> maximumCapacity() {
         return Optional.ofNullable(this.maximumCapacity);
     }
@@ -42,6 +50,10 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the metric.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,14 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
     @Import(name="reservationCapacity")
     private @Nullable Output<Double> reservationCapacity;
 
+    /**
+     * @return The node reservation capacity for Service Fabric application.
+     * This is the amount of load which is reserved on nodes which have instances of this application.
+     * If MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.
+     * If set to zero, no capacity is reserved for this metric.
+     * When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
+     * 
+     */
     public Optional<Output<Double>> reservationCapacity() {
         return Optional.ofNullable(this.reservationCapacity);
     }
@@ -70,6 +90,12 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
     @Import(name="totalApplicationCapacity")
     private @Nullable Output<Double> totalApplicationCapacity;
 
+    /**
+     * @return The total metric capacity for Service Fabric application.
+     * This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
+     * When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
+     * 
+     */
     public Optional<Output<Double>> totalApplicationCapacity() {
         return Optional.ofNullable(this.totalApplicationCapacity);
     }
@@ -101,38 +127,106 @@ public final class ApplicationMetricDescriptionArgs extends com.pulumi.resources
             $ = new ApplicationMetricDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximumCapacity The maximum node capacity for Service Fabric application.
+         * This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
+         * If set to zero, capacity for this metric is unlimited on each node.
+         * When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
+         * When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumCapacity(@Nullable Output<Double> maximumCapacity) {
             $.maximumCapacity = maximumCapacity;
             return this;
         }
 
+        /**
+         * @param maximumCapacity The maximum node capacity for Service Fabric application.
+         * This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
+         * If set to zero, capacity for this metric is unlimited on each node.
+         * When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
+         * When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumCapacity(Double maximumCapacity) {
             return maximumCapacity(Output.of(maximumCapacity));
         }
 
+        /**
+         * @param name The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param reservationCapacity The node reservation capacity for Service Fabric application.
+         * This is the amount of load which is reserved on nodes which have instances of this application.
+         * If MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.
+         * If set to zero, no capacity is reserved for this metric.
+         * When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationCapacity(@Nullable Output<Double> reservationCapacity) {
             $.reservationCapacity = reservationCapacity;
             return this;
         }
 
+        /**
+         * @param reservationCapacity The node reservation capacity for Service Fabric application.
+         * This is the amount of load which is reserved on nodes which have instances of this application.
+         * If MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.
+         * If set to zero, no capacity is reserved for this metric.
+         * When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationCapacity(Double reservationCapacity) {
             return reservationCapacity(Output.of(reservationCapacity));
         }
 
+        /**
+         * @param totalApplicationCapacity The total metric capacity for Service Fabric application.
+         * This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
+         * When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalApplicationCapacity(@Nullable Output<Double> totalApplicationCapacity) {
             $.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
 
+        /**
+         * @param totalApplicationCapacity The total metric capacity for Service Fabric application.
+         * This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
+         * When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalApplicationCapacity(Double totalApplicationCapacity) {
             return totalApplicationCapacity(Output.of(totalApplicationCapacity));
         }

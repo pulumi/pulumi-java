@@ -31,6 +31,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="crop")
     private @Nullable RectangleResponse crop;
 
+    /**
+     * @return The parameters for the rectangular window with which to crop the input video.
+     * 
+     */
     public Optional<RectangleResponse> crop() {
         return Optional.ofNullable(this.crop);
     }
@@ -42,6 +46,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deinterlace")
     private @Nullable DeinterlaceResponse deinterlace;
 
+    /**
+     * @return The de-interlacing settings.
+     * 
+     */
     public Optional<DeinterlaceResponse> deinterlace() {
         return Optional.ofNullable(this.deinterlace);
     }
@@ -53,6 +61,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="overlays")
     private @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
 
+    /**
+     * @return The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+     * 
+     */
     public Optional<List<Either<AudioOverlayResponse,VideoOverlayResponse>>> overlays() {
         return Optional.ofNullable(this.overlays);
     }
@@ -64,6 +76,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rotation")
     private @Nullable String rotation;
 
+    /**
+     * @return The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+     * 
+     */
     public Optional<String> rotation() {
         return Optional.ofNullable(this.rotation);
     }
@@ -95,25 +111,55 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FiltersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crop The parameters for the rectangular window with which to crop the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crop(@Nullable RectangleResponse crop) {
             $.crop = crop;
             return this;
         }
 
+        /**
+         * @param deinterlace The de-interlacing settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deinterlace(@Nullable DeinterlaceResponse deinterlace) {
             $.deinterlace = deinterlace;
             return this;
         }
 
+        /**
+         * @param overlays The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
             $.overlays = overlays;
             return this;
         }
 
+        /**
+         * @param overlays The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(Either<AudioOverlayResponse,VideoOverlayResponse>... overlays) {
             return overlays(List.of(overlays));
         }
 
+        /**
+         * @param rotation The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotation(@Nullable String rotation) {
             $.rotation = rotation;
             return this;

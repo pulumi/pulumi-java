@@ -27,6 +27,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the schedule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyList")
     private @Nullable Output<List<String>> policyList;
 
+    /**
+     * @return A list of repetition intervals in ISO 8601 format.
+     * 
+     */
     public Optional<Output<List<String>>> policyList() {
         return Optional.ofNullable(this.policyList);
     }
@@ -67,24 +75,54 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policyList A list of repetition intervals in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyList(@Nullable Output<List<String>> policyList) {
             $.policyList = policyList;
             return this;
         }
 
+        /**
+         * @param policyList A list of repetition intervals in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyList(List<String> policyList) {
             return policyList(Output.of(policyList));
         }
 
+        /**
+         * @param policyList A list of repetition intervals in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyList(String... policyList) {
             return policyList(List.of(policyList));
         }

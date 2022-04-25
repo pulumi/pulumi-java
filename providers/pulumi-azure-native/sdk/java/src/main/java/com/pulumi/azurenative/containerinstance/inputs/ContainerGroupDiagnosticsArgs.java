@@ -26,6 +26,10 @@ public final class ContainerGroupDiagnosticsArgs extends com.pulumi.resources.Re
     @Import(name="logAnalytics")
     private @Nullable Output<LogAnalyticsArgs> logAnalytics;
 
+    /**
+     * @return Container group log analytics information.
+     * 
+     */
     public Optional<Output<LogAnalyticsArgs>> logAnalytics() {
         return Optional.ofNullable(this.logAnalytics);
     }
@@ -54,11 +58,23 @@ public final class ContainerGroupDiagnosticsArgs extends com.pulumi.resources.Re
             $ = new ContainerGroupDiagnosticsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logAnalytics Container group log analytics information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(@Nullable Output<LogAnalyticsArgs> logAnalytics) {
             $.logAnalytics = logAnalytics;
             return this;
         }
 
+        /**
+         * @param logAnalytics Container group log analytics information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(LogAnalyticsArgs logAnalytics) {
             return logAnalytics(Output.of(logAnalytics));
         }

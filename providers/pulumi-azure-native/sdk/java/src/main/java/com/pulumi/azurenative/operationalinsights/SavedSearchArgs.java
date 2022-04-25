@@ -25,6 +25,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category", required=true)
     private Output<String> category;
 
+    /**
+     * @return The category of the saved search. This helps the user to find a saved search faster.
+     * 
+     */
     public Output<String> category() {
         return this.category;
     }
@@ -36,6 +40,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Saved search display name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -47,6 +55,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionAlias")
     private @Nullable Output<String> functionAlias;
 
+    /**
+     * @return The function alias if query serves as a function.
+     * 
+     */
     public Optional<Output<String>> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
@@ -58,6 +70,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionParameters")
     private @Nullable Output<String> functionParameters;
 
+    /**
+     * @return The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * 
+     */
     public Optional<Output<String>> functionParameters() {
         return Optional.ofNullable(this.functionParameters);
     }
@@ -69,6 +85,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return The query expression for the saved search.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -80,6 +100,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="savedSearchId")
     private @Nullable Output<String> savedSearchId;
 
+    /**
+     * @return The id of the saved search.
+     * 
+     */
     public Optional<Output<String>> savedSearchId() {
         return Optional.ofNullable(this.savedSearchId);
     }
@@ -102,6 +130,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<TagArgs>> tags;
 
+    /**
+     * @return The tags attached to the saved search.
+     * 
+     */
     public Optional<Output<List<TagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,6 +145,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<Double> version;
 
+    /**
+     * @return The version number of the query language. The current version is 2 and is the default.
+     * 
+     */
     public Optional<Output<Double>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -124,6 +160,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -161,96 +201,222 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SavedSearchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category The category of the saved search. This helps the user to find a saved search faster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category The category of the saved search. This helps the user to find a saved search faster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param displayName Saved search display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Saved search display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param functionAlias The function alias if query serves as a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
             $.functionAlias = functionAlias;
             return this;
         }
 
+        /**
+         * @param functionAlias The function alias if query serves as a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(String functionAlias) {
             return functionAlias(Output.of(functionAlias));
         }
 
+        /**
+         * @param functionParameters The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionParameters(@Nullable Output<String> functionParameters) {
             $.functionParameters = functionParameters;
             return this;
         }
 
+        /**
+         * @param functionParameters The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionParameters(String functionParameters) {
             return functionParameters(Output.of(functionParameters));
         }
 
+        /**
+         * @param query The query expression for the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The query expression for the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param savedSearchId The id of the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedSearchId(@Nullable Output<String> savedSearchId) {
             $.savedSearchId = savedSearchId;
             return this;
         }
 
+        /**
+         * @param savedSearchId The id of the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedSearchId(String savedSearchId) {
             return savedSearchId(Output.of(savedSearchId));
         }
 
+        /**
+         * @param tags The tags attached to the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags attached to the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags attached to the saved search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param version The version number of the query language. The current version is 2 and is the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Double> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version number of the query language. The current version is 2 and is the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Double version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

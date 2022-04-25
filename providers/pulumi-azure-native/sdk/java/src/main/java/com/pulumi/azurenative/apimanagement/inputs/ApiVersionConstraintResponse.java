@@ -25,6 +25,10 @@ public final class ApiVersionConstraintResponse extends com.pulumi.resources.Inv
     @Import(name="minApiVersion")
     private @Nullable String minApiVersion;
 
+    /**
+     * @return Limit control plane API calls to API Management service with version equal to or newer than this value.
+     * 
+     */
     public Optional<String> minApiVersion() {
         return Optional.ofNullable(this.minApiVersion);
     }
@@ -53,6 +57,12 @@ public final class ApiVersionConstraintResponse extends com.pulumi.resources.Inv
             $ = new ApiVersionConstraintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minApiVersion Limit control plane API calls to API Management service with version equal to or newer than this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minApiVersion(@Nullable String minApiVersion) {
             $.minApiVersion = minApiVersion;
             return this;

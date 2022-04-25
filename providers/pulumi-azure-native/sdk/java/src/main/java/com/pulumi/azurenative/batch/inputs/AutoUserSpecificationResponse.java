@@ -21,6 +21,10 @@ public final class AutoUserSpecificationResponse extends com.pulumi.resources.In
     @Import(name="elevationLevel")
     private @Nullable String elevationLevel;
 
+    /**
+     * @return The default value is nonAdmin.
+     * 
+     */
     public Optional<String> elevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
@@ -32,6 +36,10 @@ public final class AutoUserSpecificationResponse extends com.pulumi.resources.In
     @Import(name="scope")
     private @Nullable String scope;
 
+    /**
+     * @return The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+     * 
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -61,11 +69,23 @@ public final class AutoUserSpecificationResponse extends com.pulumi.resources.In
             $ = new AutoUserSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elevationLevel The default value is nonAdmin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elevationLevel(@Nullable String elevationLevel) {
             $.elevationLevel = elevationLevel;
             return this;
         }
 
+        /**
+         * @param scope The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable String scope) {
             $.scope = scope;
             return this;

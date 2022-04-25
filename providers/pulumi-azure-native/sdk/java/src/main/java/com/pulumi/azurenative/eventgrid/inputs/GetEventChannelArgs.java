@@ -19,6 +19,10 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventChannelName", required=true)
     private String eventChannelName;
 
+    /**
+     * @return Name of the event channel.
+     * 
+     */
     public String eventChannelName() {
         return this.eventChannelName;
     }
@@ -30,6 +34,10 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="partnerNamespaceName", required=true)
     private String partnerNamespaceName;
 
+    /**
+     * @return Name of the partner namespace.
+     * 
+     */
     public String partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
@@ -41,6 +49,10 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEventChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventChannelName Name of the event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventChannelName(String eventChannelName) {
             $.eventChannelName = eventChannelName;
             return this;
         }
 
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespaceName(String partnerNamespaceName) {
             $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

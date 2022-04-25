@@ -30,6 +30,10 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -41,6 +45,10 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -52,6 +60,10 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return The SKU.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -92,29 +104,65 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }

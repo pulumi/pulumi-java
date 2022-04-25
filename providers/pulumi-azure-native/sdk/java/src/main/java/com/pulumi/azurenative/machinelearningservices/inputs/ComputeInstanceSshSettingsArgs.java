@@ -29,6 +29,10 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
     @Import(name="adminPublicKey")
     private @Nullable Output<String> adminPublicKey;
 
+    /**
+     * @return Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+     * 
+     */
     public Optional<Output<String>> adminPublicKey() {
         return Optional.ofNullable(this.adminPublicKey);
     }
@@ -40,6 +44,10 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
     @Import(name="sshPublicAccess")
     private @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
+    /**
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+     * 
+     */
     public Optional<Output<Either<String,SshPublicAccess>>> sshPublicAccess() {
         return Optional.ofNullable(this.sshPublicAccess);
     }
@@ -69,28 +77,64 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
             $ = new ComputeInstanceSshSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminPublicKey Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminPublicKey(@Nullable Output<String> adminPublicKey) {
             $.adminPublicKey = adminPublicKey;
             return this;
         }
 
+        /**
+         * @param adminPublicKey Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminPublicKey(String adminPublicKey) {
             return adminPublicKey(Output.of(adminPublicKey));
         }
 
+        /**
+         * @param sshPublicAccess State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicAccess(@Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
             $.sshPublicAccess = sshPublicAccess;
             return this;
         }
 
+        /**
+         * @param sshPublicAccess State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicAccess(Either<String,SshPublicAccess> sshPublicAccess) {
             return sshPublicAccess(Output.of(sshPublicAccess));
         }
 
+        /**
+         * @param sshPublicAccess State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicAccess(String sshPublicAccess) {
             return sshPublicAccess(Either.ofLeft(sshPublicAccess));
         }
 
+        /**
+         * @param sshPublicAccess State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicAccess(SshPublicAccess sshPublicAccess) {
             return sshPublicAccess(Either.ofRight(sshPublicAccess));
         }

@@ -28,6 +28,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The domain&#39;s NetBIOS name
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -39,6 +43,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="baseGroupDN")
     private @Nullable Output<String> baseGroupDN;
 
+    /**
+     * @return The base distinguished name for groups
+     * 
+     */
     public Optional<Output<String>> baseGroupDN() {
         return Optional.ofNullable(this.baseGroupDN);
     }
@@ -50,6 +58,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="baseUserDN")
     private @Nullable Output<String> baseUserDN;
 
+    /**
+     * @return The base distinguished name for users
+     * 
+     */
     public Optional<Output<String>> baseUserDN() {
         return Optional.ofNullable(this.baseUserDN);
     }
@@ -61,6 +73,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The domain&#39;s dns name
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -72,6 +88,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the identity source
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -94,6 +118,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="primaryServer")
     private @Nullable Output<String> primaryServer;
 
+    /**
+     * @return Primary server URL
+     * 
+     */
     public Optional<Output<String>> primaryServer() {
         return Optional.ofNullable(this.primaryServer);
     }
@@ -105,6 +133,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secondaryServer")
     private @Nullable Output<String> secondaryServer;
 
+    /**
+     * @return Secondary server URL
+     * 
+     */
     public Optional<Output<String>> secondaryServer() {
         return Optional.ofNullable(this.secondaryServer);
     }
@@ -116,6 +148,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ssl")
     private @Nullable Output<Either<String,SslEnum>> ssl;
 
+    /**
+     * @return Protect LDAP communication using SSL certificate (LDAPS)
+     * 
+     */
     public Optional<Output<Either<String,SslEnum>>> ssl() {
         return Optional.ofNullable(this.ssl);
     }
@@ -127,6 +163,10 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -164,100 +204,232 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IdentitySourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The domain&#39;s NetBIOS name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The domain&#39;s NetBIOS name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param baseGroupDN The base distinguished name for groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseGroupDN(@Nullable Output<String> baseGroupDN) {
             $.baseGroupDN = baseGroupDN;
             return this;
         }
 
+        /**
+         * @param baseGroupDN The base distinguished name for groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseGroupDN(String baseGroupDN) {
             return baseGroupDN(Output.of(baseGroupDN));
         }
 
+        /**
+         * @param baseUserDN The base distinguished name for users
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUserDN(@Nullable Output<String> baseUserDN) {
             $.baseUserDN = baseUserDN;
             return this;
         }
 
+        /**
+         * @param baseUserDN The base distinguished name for users
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUserDN(String baseUserDN) {
             return baseUserDN(Output.of(baseUserDN));
         }
 
+        /**
+         * @param domain The domain&#39;s dns name
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The domain&#39;s dns name
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param name The name of the identity source
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the identity source
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param password The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param primaryServer Primary server URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryServer(@Nullable Output<String> primaryServer) {
             $.primaryServer = primaryServer;
             return this;
         }
 
+        /**
+         * @param primaryServer Primary server URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryServer(String primaryServer) {
             return primaryServer(Output.of(primaryServer));
         }
 
+        /**
+         * @param secondaryServer Secondary server URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryServer(@Nullable Output<String> secondaryServer) {
             $.secondaryServer = secondaryServer;
             return this;
         }
 
+        /**
+         * @param secondaryServer Secondary server URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryServer(String secondaryServer) {
             return secondaryServer(Output.of(secondaryServer));
         }
 
+        /**
+         * @param ssl Protect LDAP communication using SSL certificate (LDAPS)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(@Nullable Output<Either<String,SslEnum>> ssl) {
             $.ssl = ssl;
             return this;
         }
 
+        /**
+         * @param ssl Protect LDAP communication using SSL certificate (LDAPS)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(Either<String,SslEnum> ssl) {
             return ssl(Output.of(ssl));
         }
 
+        /**
+         * @param ssl Protect LDAP communication using SSL certificate (LDAPS)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(String ssl) {
             return ssl(Either.ofLeft(ssl));
         }
 
+        /**
+         * @param ssl Protect LDAP communication using SSL certificate (LDAPS)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(SslEnum ssl) {
             return ssl(Either.ofRight(ssl));
         }
 
+        /**
+         * @param username The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

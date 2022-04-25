@@ -29,6 +29,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
     @Import(name="expectedValue")
     private @Nullable Output<String> expectedValue;
 
+    /**
+     * @return The expected value.
+     * 
+     */
     public Optional<Output<String>> expectedValue() {
         return Optional.ofNullable(this.expectedValue);
     }
@@ -40,6 +44,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
     @Import(name="operator")
     private @Nullable Output<Either<String,Operator>> operator;
 
+    /**
+     * @return A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+     * 
+     */
     public Optional<Output<Either<String,Operator>>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -51,6 +59,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
     @Import(name="propertyJPath")
     private @Nullable Output<String> propertyJPath;
 
+    /**
+     * @return The JPath of the entity model property that should be checked.
+     * 
+     */
     public Optional<Output<String>> propertyJPath() {
         return Optional.ofNullable(this.propertyJPath);
     }
@@ -62,6 +74,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
     @Import(name="propertyType")
     private @Nullable Output<Either<String,PropertyType>> propertyType;
 
+    /**
+     * @return The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+     * 
+     */
     public Optional<Output<Either<String,PropertyType>>> propertyType() {
         return Optional.ofNullable(this.propertyType);
     }
@@ -93,54 +109,126 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
             $ = new AutomationTriggeringRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expectedValue The expected value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedValue(@Nullable Output<String> expectedValue) {
             $.expectedValue = expectedValue;
             return this;
         }
 
+        /**
+         * @param expectedValue The expected value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedValue(String expectedValue) {
             return expectedValue(Output.of(expectedValue));
         }
 
+        /**
+         * @param operator A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,Operator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Operator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param propertyJPath The JPath of the entity model property that should be checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyJPath(@Nullable Output<String> propertyJPath) {
             $.propertyJPath = propertyJPath;
             return this;
         }
 
+        /**
+         * @param propertyJPath The JPath of the entity model property that should be checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyJPath(String propertyJPath) {
             return propertyJPath(Output.of(propertyJPath));
         }
 
+        /**
+         * @param propertyType The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyType(@Nullable Output<Either<String,PropertyType>> propertyType) {
             $.propertyType = propertyType;
             return this;
         }
 
+        /**
+         * @param propertyType The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyType(Either<String,PropertyType> propertyType) {
             return propertyType(Output.of(propertyType));
         }
 
+        /**
+         * @param propertyType The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyType(String propertyType) {
             return propertyType(Either.ofLeft(propertyType));
         }
 
+        /**
+         * @param propertyType The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyType(PropertyType propertyType) {
             return propertyType(Either.ofRight(propertyType));
         }

@@ -25,6 +25,10 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
     @Import(name="role")
     private @Nullable String role;
 
+    /**
+     * @return The role of the notification receiver.
+     * 
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
@@ -36,6 +40,10 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return The subscription id of the notification receiver.
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -47,6 +55,10 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
     @Import(name="subscriptionName")
     private @Nullable String subscriptionName;
 
+    /**
+     * @return The subscription name of the notification receiver.
+     * 
+     */
     public Optional<String> subscriptionName() {
         return Optional.ofNullable(this.subscriptionName);
     }
@@ -77,16 +89,34 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
             $ = new SubscriptionReceiverValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param role The role of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable String role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription id of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionName The subscription name of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(@Nullable String subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;

@@ -25,6 +25,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="data")
     private @Nullable String data;
 
+    /**
+     * @return Certificate public data.
+     * 
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -47,6 +55,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="keyVaultSecretId")
     private @Nullable String keyVaultSecretId;
 
+    /**
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * 
+     */
     public Optional<String> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
@@ -69,6 +85,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the trusted root certificate that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the trusted root certificate resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -91,6 +115,10 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -125,36 +153,78 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends com.
             $ = new ApplicationGatewayTrustedRootCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable String data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
+        /**
+         * @param name Name of the trusted root certificate that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the trusted root certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

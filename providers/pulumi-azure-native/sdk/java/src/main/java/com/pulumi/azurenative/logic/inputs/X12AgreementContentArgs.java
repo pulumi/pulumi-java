@@ -24,6 +24,10 @@ public final class X12AgreementContentArgs extends com.pulumi.resources.Resource
     @Import(name="receiveAgreement", required=true)
     private Output<X12OneWayAgreementArgs> receiveAgreement;
 
+    /**
+     * @return The X12 one-way receive agreement.
+     * 
+     */
     public Output<X12OneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
@@ -35,6 +39,10 @@ public final class X12AgreementContentArgs extends com.pulumi.resources.Resource
     @Import(name="sendAgreement", required=true)
     private Output<X12OneWayAgreementArgs> sendAgreement;
 
+    /**
+     * @return The X12 one-way send agreement.
+     * 
+     */
     public Output<X12OneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
@@ -64,20 +72,44 @@ public final class X12AgreementContentArgs extends com.pulumi.resources.Resource
             $ = new X12AgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiveAgreement The X12 one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(Output<X12OneWayAgreementArgs> receiveAgreement) {
             $.receiveAgreement = receiveAgreement;
             return this;
         }
 
+        /**
+         * @param receiveAgreement The X12 one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(X12OneWayAgreementArgs receiveAgreement) {
             return receiveAgreement(Output.of(receiveAgreement));
         }
 
+        /**
+         * @param sendAgreement The X12 one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(Output<X12OneWayAgreementArgs> sendAgreement) {
             $.sendAgreement = sendAgreement;
             return this;
         }
 
+        /**
+         * @param sendAgreement The X12 one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(X12OneWayAgreementArgs sendAgreement) {
             return sendAgreement(Output.of(sendAgreement));
         }

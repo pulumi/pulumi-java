@@ -22,6 +22,10 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends com.pulumi
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource id of the private endpoint.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,11 +54,23 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends com.pulumi
             $ = new ManagedInstancePrivateEndpointPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource id of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource id of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

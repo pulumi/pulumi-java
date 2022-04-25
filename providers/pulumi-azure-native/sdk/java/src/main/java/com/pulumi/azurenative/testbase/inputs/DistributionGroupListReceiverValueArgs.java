@@ -27,6 +27,10 @@ public final class DistributionGroupListReceiverValueArgs extends com.pulumi.res
     @Import(name="distributionGroups")
     private @Nullable Output<List<String>> distributionGroups;
 
+    /**
+     * @return The list of distribution groups.
+     * 
+     */
     public Optional<Output<List<String>>> distributionGroups() {
         return Optional.ofNullable(this.distributionGroups);
     }
@@ -55,15 +59,33 @@ public final class DistributionGroupListReceiverValueArgs extends com.pulumi.res
             $ = new DistributionGroupListReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionGroups The list of distribution groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionGroups(@Nullable Output<List<String>> distributionGroups) {
             $.distributionGroups = distributionGroups;
             return this;
         }
 
+        /**
+         * @param distributionGroups The list of distribution groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionGroups(List<String> distributionGroups) {
             return distributionGroups(Output.of(distributionGroups));
         }
 
+        /**
+         * @param distributionGroups The list of distribution groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionGroups(String... distributionGroups) {
             return distributionGroups(List.of(distributionGroups));
         }

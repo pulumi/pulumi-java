@@ -28,6 +28,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Service Principal Id backing the Msi
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -39,6 +43,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Home Tenant Id
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -50,6 +58,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Identity type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -61,6 +73,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
+    /**
+     * @return User Assigned Identities
+     * 
+     */
     public Optional<Map<String,UserAssignedIdentityResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -92,21 +108,45 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Service Principal Id backing the Msi
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId Home Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Identity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities User Assigned Identities
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

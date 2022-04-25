@@ -26,6 +26,10 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
     @Import(name="filePathList")
     private @Nullable List<String> filePathList;
 
+    /**
+     * @return List of full path of the files to be transferred.
+     * 
+     */
     public Optional<List<String>> filePathList() {
         return Optional.ofNullable(this.filePathList);
     }
@@ -37,6 +41,10 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
     @Import(name="filePrefixList")
     private @Nullable List<String> filePrefixList;
 
+    /**
+     * @return Prefix list of the Azure files to be transferred.
+     * 
+     */
     public Optional<List<String>> filePrefixList() {
         return Optional.ofNullable(this.filePrefixList);
     }
@@ -48,6 +56,10 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
     @Import(name="fileShareList")
     private @Nullable List<String> fileShareList;
 
+    /**
+     * @return List of file shares to be transferred.
+     * 
+     */
     public Optional<List<String>> fileShareList() {
         return Optional.ofNullable(this.fileShareList);
     }
@@ -78,29 +90,65 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
             $ = new AzureFileFilterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePathList List of full path of the files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathList(@Nullable List<String> filePathList) {
             $.filePathList = filePathList;
             return this;
         }
 
+        /**
+         * @param filePathList List of full path of the files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathList(String... filePathList) {
             return filePathList(List.of(filePathList));
         }
 
+        /**
+         * @param filePrefixList Prefix list of the Azure files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePrefixList(@Nullable List<String> filePrefixList) {
             $.filePrefixList = filePrefixList;
             return this;
         }
 
+        /**
+         * @param filePrefixList Prefix list of the Azure files to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePrefixList(String... filePrefixList) {
             return filePrefixList(List.of(filePrefixList));
         }
 
+        /**
+         * @param fileShareList List of file shares to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareList(@Nullable List<String> fileShareList) {
             $.fileShareList = fileShareList;
             return this;
         }
 
+        /**
+         * @param fileShareList List of file shares to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareList(String... fileShareList) {
             return fileShareList(List.of(fileShareList));
         }

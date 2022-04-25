@@ -23,6 +23,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return For optimistic concurrency control.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -34,6 +38,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName")
     private @Nullable Output<String> groupName;
 
+    /**
+     * @return Unique name of a group within a project.
+     * 
+     */
     public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -45,6 +53,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
     private Output<String> projectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public Output<String> projectName() {
         return this.projectName;
     }
@@ -56,6 +68,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<GroupPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the group.
+     * 
+     */
     public Output<GroupPropertiesArgs> properties() {
         return this.properties;
     }
@@ -67,6 +83,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that project is part of.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param groupName Unique name of a group within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName Unique name of a group within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param properties Properties of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<GroupPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GroupPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

@@ -28,6 +28,10 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleGroupOverrides")
     private @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
+    /**
+     * @return Defines the rule group overrides to apply to the rule set.
+     * 
+     */
     public Optional<Output<List<ManagedRuleGroupOverrideArgs>>> ruleGroupOverrides() {
         return Optional.ofNullable(this.ruleGroupOverrides);
     }
@@ -39,6 +43,10 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleSetType", required=true)
     private Output<String> ruleSetType;
 
+    /**
+     * @return Defines the rule set type to use.
+     * 
+     */
     public Output<String> ruleSetType() {
         return this.ruleSetType;
     }
@@ -50,6 +58,10 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleSetVersion", required=true)
     private Output<String> ruleSetVersion;
 
+    /**
+     * @return Defines the version of the rule set to use.
+     * 
+     */
     public Output<String> ruleSetVersion() {
         return this.ruleSetVersion;
     }
@@ -80,33 +92,75 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ManagedRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule group overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(@Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
             $.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule group overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
             return ruleGroupOverrides(Output.of(ruleGroupOverrides));
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule group overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(ManagedRuleGroupOverrideArgs... ruleGroupOverrides) {
             return ruleGroupOverrides(List.of(ruleGroupOverrides));
         }
 
+        /**
+         * @param ruleSetType Defines the rule set type to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetType(Output<String> ruleSetType) {
             $.ruleSetType = ruleSetType;
             return this;
         }
 
+        /**
+         * @param ruleSetType Defines the rule set type to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetType(String ruleSetType) {
             return ruleSetType(Output.of(ruleSetType));
         }
 
+        /**
+         * @param ruleSetVersion Defines the version of the rule set to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetVersion(Output<String> ruleSetVersion) {
             $.ruleSetVersion = ruleSetVersion;
             return this;
         }
 
+        /**
+         * @param ruleSetVersion Defines the version of the rule set to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetVersion(String ruleSetVersion) {
             return ruleSetVersion(Output.of(ruleSetVersion));
         }

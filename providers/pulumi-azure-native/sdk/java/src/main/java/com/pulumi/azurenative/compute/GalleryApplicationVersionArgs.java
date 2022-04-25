@@ -24,6 +24,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="galleryApplicationName", required=true)
     private Output<String> galleryApplicationName;
 
+    /**
+     * @return The name of the gallery Application Definition in which the Application Version is to be created.
+     * 
+     */
     public Output<String> galleryApplicationName() {
         return this.galleryApplicationName;
     }
@@ -35,6 +39,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="galleryApplicationVersionName")
     private @Nullable Output<String> galleryApplicationVersionName;
 
+    /**
+     * @return The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;
+     * 
+     */
     public Optional<Output<String>> galleryApplicationVersionName() {
         return Optional.ofNullable(this.galleryApplicationVersionName);
     }
@@ -46,6 +54,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="galleryName", required=true)
     private Output<String> galleryName;
 
+    /**
+     * @return The name of the Shared Application Gallery in which the Application Definition resides.
+     * 
+     */
     public Output<String> galleryName() {
         return this.galleryName;
     }
@@ -57,6 +69,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -68,6 +84,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="publishingProfile", required=true)
     private Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile;
 
+    /**
+     * @return The publishing profile of a gallery image version.
+     * 
+     */
     public Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile() {
         return this.publishingProfile;
     }
@@ -79,6 +99,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +114,10 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,65 +152,149 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
             $ = new GalleryApplicationVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition in which the Application Version is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationName(Output<String> galleryApplicationName) {
             $.galleryApplicationName = galleryApplicationName;
             return this;
         }
 
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition in which the Application Version is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationName(String galleryApplicationName) {
             return galleryApplicationName(Output.of(galleryApplicationName));
         }
 
+        /**
+         * @param galleryApplicationVersionName The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationVersionName(@Nullable Output<String> galleryApplicationVersionName) {
             $.galleryApplicationVersionName = galleryApplicationVersionName;
             return this;
         }
 
+        /**
+         * @param galleryApplicationVersionName The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationVersionName(String galleryApplicationVersionName) {
             return galleryApplicationVersionName(Output.of(galleryApplicationVersionName));
         }
 
+        /**
+         * @param galleryName The name of the Shared Application Gallery in which the Application Definition resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(Output<String> galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param galleryName The name of the Shared Application Gallery in which the Application Definition resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             return galleryName(Output.of(galleryName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publishingProfile The publishing profile of a gallery image version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingProfile(Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile) {
             $.publishingProfile = publishingProfile;
             return this;
         }
 
+        /**
+         * @param publishingProfile The publishing profile of a gallery image version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingProfile(GalleryApplicationVersionPublishingProfileArgs publishingProfile) {
             return publishingProfile(Output.of(publishingProfile));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

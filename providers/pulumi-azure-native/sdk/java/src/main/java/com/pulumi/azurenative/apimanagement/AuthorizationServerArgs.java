@@ -30,6 +30,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationEndpoint", required=true)
     private Output<String> authorizationEndpoint;
 
+    /**
+     * @return OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
+     * 
+     */
     public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
@@ -41,6 +45,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationMethods")
     private @Nullable Output<List<AuthorizationMethod>> authorizationMethods;
 
+    /**
+     * @return HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+     * 
+     */
     public Optional<Output<List<AuthorizationMethod>>> authorizationMethods() {
         return Optional.ofNullable(this.authorizationMethods);
     }
@@ -52,6 +60,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="authsid")
     private @Nullable Output<String> authsid;
 
+    /**
+     * @return Identifier of the authorization server.
+     * 
+     */
     public Optional<Output<String>> authsid() {
         return Optional.ofNullable(this.authsid);
     }
@@ -63,6 +75,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="bearerTokenSendingMethods")
     private @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
+    /**
+     * @return Specifies the mechanism by which access token is passed to the API.
+     * 
+     */
     public Optional<Output<List<Either<String,BearerTokenSendingMethod>>>> bearerTokenSendingMethods() {
         return Optional.ofNullable(this.bearerTokenSendingMethods);
     }
@@ -74,6 +90,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientAuthenticationMethod")
     private @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
+    /**
+     * @return Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+     * 
+     */
     public Optional<Output<List<Either<String,ClientAuthenticationMethod>>>> clientAuthenticationMethod() {
         return Optional.ofNullable(this.clientAuthenticationMethod);
     }
@@ -85,6 +105,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Client or app id registered with this authorization server.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -96,6 +120,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientRegistrationEndpoint", required=true)
     private Output<String> clientRegistrationEndpoint;
 
+    /**
+     * @return Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
+     * 
+     */
     public Output<String> clientRegistrationEndpoint() {
         return this.clientRegistrationEndpoint;
     }
@@ -107,6 +135,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -118,6 +150,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="defaultScope")
     private @Nullable Output<String> defaultScope;
 
+    /**
+     * @return Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
+     * 
+     */
     public Optional<Output<String>> defaultScope() {
         return Optional.ofNullable(this.defaultScope);
     }
@@ -129,6 +165,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the authorization server. Can contain HTML formatting tags.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -140,6 +180,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return User-friendly authorization server name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -151,6 +195,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="grantTypes", required=true)
     private Output<List<Either<String,GrantType>>> grantTypes;
 
+    /**
+     * @return Form of an authorization grant, which the client uses to request the access token.
+     * 
+     */
     public Output<List<Either<String,GrantType>>> grantTypes() {
         return this.grantTypes;
     }
@@ -162,6 +210,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -173,6 +225,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceOwnerPassword")
     private @Nullable Output<String> resourceOwnerPassword;
 
+    /**
+     * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+     * 
+     */
     public Optional<Output<String>> resourceOwnerPassword() {
         return Optional.ofNullable(this.resourceOwnerPassword);
     }
@@ -184,6 +240,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceOwnerUsername")
     private @Nullable Output<String> resourceOwnerUsername;
 
+    /**
+     * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+     * 
+     */
     public Optional<Output<String>> resourceOwnerUsername() {
         return Optional.ofNullable(this.resourceOwnerUsername);
     }
@@ -195,6 +255,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -206,6 +270,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="supportState")
     private @Nullable Output<Boolean> supportState;
 
+    /**
+     * @return If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
+     * 
+     */
     public Optional<Output<Boolean>> supportState() {
         return Optional.ofNullable(this.supportState);
     }
@@ -217,6 +285,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="tokenBodyParameters")
     private @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
+    /**
+     * @return Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
+     * 
+     */
     public Optional<Output<List<TokenBodyParameterContractArgs>>> tokenBodyParameters() {
         return Optional.ofNullable(this.tokenBodyParameters);
     }
@@ -228,6 +300,10 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="tokenEndpoint")
     private @Nullable Output<String> tokenEndpoint;
 
+    /**
+     * @return OAuth token endpoint. Contains absolute URI to entity being referenced.
+     * 
+     */
     public Optional<Output<String>> tokenEndpoint() {
         return Optional.ofNullable(this.tokenEndpoint);
     }
@@ -274,193 +350,451 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
             $ = new AuthorizationServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationEndpoint OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
+        /**
+         * @param authorizationEndpoint OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             return authorizationEndpoint(Output.of(authorizationEndpoint));
         }
 
+        /**
+         * @param authorizationMethods HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationMethods(@Nullable Output<List<AuthorizationMethod>> authorizationMethods) {
             $.authorizationMethods = authorizationMethods;
             return this;
         }
 
+        /**
+         * @param authorizationMethods HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationMethods(List<AuthorizationMethod> authorizationMethods) {
             return authorizationMethods(Output.of(authorizationMethods));
         }
 
+        /**
+         * @param authorizationMethods HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationMethods(AuthorizationMethod... authorizationMethods) {
             return authorizationMethods(List.of(authorizationMethods));
         }
 
+        /**
+         * @param authsid Identifier of the authorization server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authsid(@Nullable Output<String> authsid) {
             $.authsid = authsid;
             return this;
         }
 
+        /**
+         * @param authsid Identifier of the authorization server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authsid(String authsid) {
             return authsid(Output.of(authsid));
         }
 
+        /**
+         * @param bearerTokenSendingMethods Specifies the mechanism by which access token is passed to the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
             $.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
+        /**
+         * @param bearerTokenSendingMethods Specifies the mechanism by which access token is passed to the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(List<Either<String,BearerTokenSendingMethod>> bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(Output.of(bearerTokenSendingMethods));
         }
 
+        /**
+         * @param bearerTokenSendingMethods Specifies the mechanism by which access token is passed to the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethod>... bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
         }
 
+        /**
+         * @param clientAuthenticationMethod Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthenticationMethod(@Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod) {
             $.clientAuthenticationMethod = clientAuthenticationMethod;
             return this;
         }
 
+        /**
+         * @param clientAuthenticationMethod Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthenticationMethod(List<Either<String,ClientAuthenticationMethod>> clientAuthenticationMethod) {
             return clientAuthenticationMethod(Output.of(clientAuthenticationMethod));
         }
 
+        /**
+         * @param clientAuthenticationMethod Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthenticationMethod(Either<String,ClientAuthenticationMethod>... clientAuthenticationMethod) {
             return clientAuthenticationMethod(List.of(clientAuthenticationMethod));
         }
 
+        /**
+         * @param clientId Client or app id registered with this authorization server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client or app id registered with this authorization server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientRegistrationEndpoint Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientRegistrationEndpoint(Output<String> clientRegistrationEndpoint) {
             $.clientRegistrationEndpoint = clientRegistrationEndpoint;
             return this;
         }
 
+        /**
+         * @param clientRegistrationEndpoint Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientRegistrationEndpoint(String clientRegistrationEndpoint) {
             return clientRegistrationEndpoint(Output.of(clientRegistrationEndpoint));
         }
 
+        /**
+         * @param clientSecret Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param defaultScope Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultScope(@Nullable Output<String> defaultScope) {
             $.defaultScope = defaultScope;
             return this;
         }
 
+        /**
+         * @param defaultScope Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultScope(String defaultScope) {
             return defaultScope(Output.of(defaultScope));
         }
 
+        /**
+         * @param description Description of the authorization server. Can contain HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the authorization server. Can contain HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User-friendly authorization server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User-friendly authorization server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param grantTypes Form of an authorization grant, which the client uses to request the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantTypes(Output<List<Either<String,GrantType>>> grantTypes) {
             $.grantTypes = grantTypes;
             return this;
         }
 
+        /**
+         * @param grantTypes Form of an authorization grant, which the client uses to request the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantTypes(List<Either<String,GrantType>> grantTypes) {
             return grantTypes(Output.of(grantTypes));
         }
 
+        /**
+         * @param grantTypes Form of an authorization grant, which the client uses to request the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantTypes(Either<String,GrantType>... grantTypes) {
             return grantTypes(List.of(grantTypes));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceOwnerPassword Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwnerPassword(@Nullable Output<String> resourceOwnerPassword) {
             $.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
 
+        /**
+         * @param resourceOwnerPassword Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwnerPassword(String resourceOwnerPassword) {
             return resourceOwnerPassword(Output.of(resourceOwnerPassword));
         }
 
+        /**
+         * @param resourceOwnerUsername Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwnerUsername(@Nullable Output<String> resourceOwnerUsername) {
             $.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
 
+        /**
+         * @param resourceOwnerUsername Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwnerUsername(String resourceOwnerUsername) {
             return resourceOwnerUsername(Output.of(resourceOwnerUsername));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param supportState If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportState(@Nullable Output<Boolean> supportState) {
             $.supportState = supportState;
             return this;
         }
 
+        /**
+         * @param supportState If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportState(Boolean supportState) {
             return supportState(Output.of(supportState));
         }
 
+        /**
+         * @param tokenBodyParameters Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenBodyParameters(@Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
             $.tokenBodyParameters = tokenBodyParameters;
             return this;
         }
 
+        /**
+         * @param tokenBodyParameters Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenBodyParameters(List<TokenBodyParameterContractArgs> tokenBodyParameters) {
             return tokenBodyParameters(Output.of(tokenBodyParameters));
         }
 
+        /**
+         * @param tokenBodyParameters Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenBodyParameters(TokenBodyParameterContractArgs... tokenBodyParameters) {
             return tokenBodyParameters(List.of(tokenBodyParameters));
         }
 
+        /**
+         * @param tokenEndpoint OAuth token endpoint. Contains absolute URI to entity being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenEndpoint(@Nullable Output<String> tokenEndpoint) {
             $.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
+        /**
+         * @param tokenEndpoint OAuth token endpoint. Contains absolute URI to entity being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenEndpoint(String tokenEndpoint) {
             return tokenEndpoint(Output.of(tokenEndpoint));
         }

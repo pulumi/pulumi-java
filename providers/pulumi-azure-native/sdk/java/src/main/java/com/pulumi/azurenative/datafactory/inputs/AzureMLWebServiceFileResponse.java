@@ -24,6 +24,10 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
     @Import(name="filePath", required=true)
     private Object filePath;
 
+    /**
+     * @return The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object filePath() {
         return this.filePath;
     }
@@ -35,6 +39,10 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -64,11 +72,23 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
             $ = new AzureMLWebServiceFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePath The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(Object filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;

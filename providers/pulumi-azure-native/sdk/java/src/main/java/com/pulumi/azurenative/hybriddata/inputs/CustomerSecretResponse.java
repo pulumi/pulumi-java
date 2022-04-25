@@ -23,6 +23,10 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The encryption algorithm used to encrypt data.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -34,6 +38,10 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keyIdentifier", required=true)
     private String keyIdentifier;
 
+    /**
+     * @return The identifier to the data service input object which this secret corresponds to.
+     * 
+     */
     public String keyIdentifier() {
         return this.keyIdentifier;
     }
@@ -45,6 +53,10 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keyValue", required=true)
     private String keyValue;
 
+    /**
+     * @return It contains the encrypted customer secret.
+     * 
+     */
     public String keyValue() {
         return this.keyValue;
     }
@@ -75,16 +87,34 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
             $ = new CustomerSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The encryption algorithm used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The identifier to the data service input object which this secret corresponds to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyValue It contains the encrypted customer secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(String keyValue) {
             $.keyValue = keyValue;
             return this;

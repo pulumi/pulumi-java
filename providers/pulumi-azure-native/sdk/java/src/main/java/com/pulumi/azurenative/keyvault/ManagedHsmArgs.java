@@ -25,6 +25,10 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The supported Azure location where the managed HSM Pool should be created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the managed HSM Pool
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ManagedHsmPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the managed HSM
+     * 
+     */
     public Optional<Output<ManagedHsmPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -58,6 +70,10 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the managed HSM pool.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ManagedHsmSkuArgs> sku;
 
+    /**
+     * @return SKU details
+     * 
+     */
     public Optional<Output<ManagedHsmSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -80,6 +100,10 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class ManagedHsmArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManagedHsmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The supported Azure location where the managed HSM Pool should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The supported Azure location where the managed HSM Pool should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Properties of the managed HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ManagedHsmPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the managed HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagedHsmPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ManagedHsmSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ManagedHsmSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

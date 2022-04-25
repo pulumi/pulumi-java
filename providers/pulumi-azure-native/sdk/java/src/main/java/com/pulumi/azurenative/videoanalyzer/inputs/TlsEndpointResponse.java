@@ -30,6 +30,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="credentials", required=true)
     private UsernamePasswordCredentialsResponse credentials;
 
+    /**
+     * @return Credentials to be presented to the endpoint.
+     * 
+     */
     public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
@@ -41,6 +45,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustedCertificates")
     private @Nullable PemCertificateListResponse trustedCertificates;
 
+    /**
+     * @return List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer&#39;s list of trusted authorities should be used.
+     * 
+     */
     public Optional<PemCertificateListResponse> trustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
@@ -52,6 +60,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tunnel")
     private @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
+    /**
+     * @return Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+     * 
+     */
     public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return Optional.ofNullable(this.tunnel);
     }
@@ -64,6 +76,11 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.TlsEndpoint&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,6 +92,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The endpoint URL for Video Analyzer to connect to.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -86,6 +107,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationOptions")
     private @Nullable TlsValidationOptionsResponse validationOptions;
 
+    /**
+     * @return Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+     * 
+     */
     public Optional<TlsValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
@@ -119,31 +144,68 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TlsEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Credentials to be presented to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param trustedCertificates List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer&#39;s list of trusted authorities should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertificates(@Nullable PemCertificateListResponse trustedCertificates) {
             $.trustedCertificates = trustedCertificates;
             return this;
         }
 
+        /**
+         * @param tunnel Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
             $.tunnel = tunnel;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.TlsEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param url The endpoint URL for Video Analyzer to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param validationOptions Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(@Nullable TlsValidationOptionsResponse validationOptions) {
             $.validationOptions = validationOptions;
             return this;

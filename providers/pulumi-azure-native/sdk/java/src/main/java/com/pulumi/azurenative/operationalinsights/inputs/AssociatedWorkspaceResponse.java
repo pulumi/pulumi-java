@@ -23,6 +23,10 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="associateDate", required=true)
     private String associateDate;
 
+    /**
+     * @return The time of workspace association.
+     * 
+     */
     public String associateDate() {
         return this.associateDate;
     }
@@ -34,6 +38,10 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The ResourceId id the assigned workspace.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -45,6 +53,10 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="workspaceId", required=true)
     private String workspaceId;
 
+    /**
+     * @return The id of the assigned workspace.
+     * 
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
@@ -56,6 +68,10 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name id the assigned workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -87,21 +103,45 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
             $ = new AssociatedWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associateDate The time of workspace association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associateDate(String associateDate) {
             $.associateDate = associateDate;
             return this;
         }
 
+        /**
+         * @param resourceId The ResourceId id the assigned workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The id of the assigned workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceName The name id the assigned workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

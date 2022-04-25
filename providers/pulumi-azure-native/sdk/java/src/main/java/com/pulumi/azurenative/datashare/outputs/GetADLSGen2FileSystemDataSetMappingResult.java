@@ -11,63 +11,63 @@ import java.util.Objects;
 @CustomType
 public final class GetADLSGen2FileSystemDataSetMappingResult {
     /**
-     * The id of the source data set.
+     * @return The id of the source data set.
      * 
      */
     private final String dataSetId;
     /**
-     * Gets the status of the data set mapping.
+     * @return Gets the status of the data set mapping.
      * 
      */
     private final String dataSetMappingStatus;
     /**
-     * The file system name.
+     * @return The file system name.
      * 
      */
     private final String fileSystem;
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
      */
     private final String id;
     /**
-     * Kind of data set mapping.
+     * @return Kind of data set mapping.
      * Expected value is &#39;AdlsGen2FileSystem&#39;.
      * 
      */
     private final String kind;
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the data set mapping.
+     * @return Provisioning state of the data set mapping.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource group of storage account.
+     * @return Resource group of storage account.
      * 
      */
     private final String resourceGroup;
     /**
-     * Storage account name of the source data set.
+     * @return Storage account name of the source data set.
      * 
      */
     private final String storageAccountName;
     /**
-     * Subscription id of storage account.
+     * @return Subscription id of storage account.
      * 
      */
     private final String subscriptionId;
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
      */
     private final String type;
@@ -101,87 +101,87 @@ public final class GetADLSGen2FileSystemDataSetMappingResult {
     }
 
     /**
-     * The id of the source data set.
+     * @return The id of the source data set.
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * Gets the status of the data set mapping.
+     * @return Gets the status of the data set mapping.
      * 
-    */
+     */
     public String dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
-     * The file system name.
+     * @return The file system name.
      * 
-    */
+     */
     public String fileSystem() {
         return this.fileSystem;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of data set mapping.
+     * @return Kind of data set mapping.
      * Expected value is &#39;AdlsGen2FileSystem&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the data set mapping.
+     * @return Provisioning state of the data set mapping.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource group of storage account.
+     * @return Resource group of storage account.
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * Storage account name of the source data set.
+     * @return Storage account name of the source data set.
      * 
-    */
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
-     * Subscription id of storage account.
+     * @return Subscription id of storage account.
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

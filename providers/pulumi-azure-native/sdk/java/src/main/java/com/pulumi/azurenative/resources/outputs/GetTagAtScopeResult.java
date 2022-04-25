@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetTagAtScopeResult {
     /**
-     * The ID of the tags wrapper resource.
+     * @return The ID of the tags wrapper resource.
      * 
      */
     private final String id;
     /**
-     * The name of the tags wrapper resource.
+     * @return The name of the tags wrapper resource.
      * 
      */
     private final String name;
     /**
-     * The set of tags.
+     * @return The set of tags.
      * 
      */
     private final TagsResponse properties;
     /**
-     * The type of the tags wrapper resource.
+     * @return The type of the tags wrapper resource.
      * 
      */
     private final String type;
@@ -44,30 +44,30 @@ public final class GetTagAtScopeResult {
     }
 
     /**
-     * The ID of the tags wrapper resource.
+     * @return The ID of the tags wrapper resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the tags wrapper resource.
+     * @return The name of the tags wrapper resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The set of tags.
+     * @return The set of tags.
      * 
-    */
+     */
     public TagsResponse properties() {
         return this.properties;
     }
     /**
-     * The type of the tags wrapper resource.
+     * @return The type of the tags wrapper resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class BlueprintStatusResponse {
     /**
-     * Last modified time of this blueprint definition.
+     * @return Last modified time of this blueprint definition.
      * 
      */
     private final String lastModified;
     /**
-     * Creation time of this blueprint definition.
+     * @return Creation time of this blueprint definition.
      * 
      */
     private final String timeCreated;
@@ -29,16 +29,16 @@ public final class BlueprintStatusResponse {
     }
 
     /**
-     * Last modified time of this blueprint definition.
+     * @return Last modified time of this blueprint definition.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * Creation time of this blueprint definition.
+     * @return Creation time of this blueprint definition.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }

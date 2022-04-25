@@ -19,6 +19,10 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends com.pulu
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends com.pulu
     @Import(name="contentKeyPolicyName", required=true)
     private String contentKeyPolicyName;
 
+    /**
+     * @return The Content Key Policy name.
+     * 
+     */
     public String contentKeyPolicyName() {
         return this.contentKeyPolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends com.pulu
             $ = new GetContentKeyPolicyPropertiesWithSecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param contentKeyPolicyName The Content Key Policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyPolicyName(String contentKeyPolicyName) {
             $.contentKeyPolicyName = contentKeyPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

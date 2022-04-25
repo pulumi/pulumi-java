@@ -25,6 +25,10 @@ public final class UserDefinedResourcesPropertiesArgs extends com.pulumi.resourc
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -36,6 +40,10 @@ public final class UserDefinedResourcesPropertiesArgs extends com.pulumi.resourc
     @Import(name="querySubscriptions", required=true)
     private Output<List<String>> querySubscriptions;
 
+    /**
+     * @return List of Azure subscription ids on which the user defined resources query should be executed.
+     * 
+     */
     public Output<List<String>> querySubscriptions() {
         return this.querySubscriptions;
     }
@@ -65,24 +73,54 @@ public final class UserDefinedResourcesPropertiesArgs extends com.pulumi.resourc
             $ = new UserDefinedResourcesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param query Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param querySubscriptions List of Azure subscription ids on which the user defined resources query should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder querySubscriptions(Output<List<String>> querySubscriptions) {
             $.querySubscriptions = querySubscriptions;
             return this;
         }
 
+        /**
+         * @param querySubscriptions List of Azure subscription ids on which the user defined resources query should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder querySubscriptions(List<String> querySubscriptions) {
             return querySubscriptions(Output.of(querySubscriptions));
         }
 
+        /**
+         * @param querySubscriptions List of Azure subscription ids on which the user defined resources query should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder querySubscriptions(String... querySubscriptions) {
             return querySubscriptions(List.of(querySubscriptions));
         }

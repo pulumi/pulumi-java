@@ -19,6 +19,10 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="serviceTopologyName", required=true)
     private String serviceTopologyName;
 
+    /**
+     * @return The name of the service topology .
+     * 
+     */
     public String serviceTopologyName() {
         return this.serviceTopologyName;
     }
@@ -59,11 +67,23 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetServiceTopologyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(String serviceTopologyName) {
             $.serviceTopologyName = serviceTopologyName;
             return this;

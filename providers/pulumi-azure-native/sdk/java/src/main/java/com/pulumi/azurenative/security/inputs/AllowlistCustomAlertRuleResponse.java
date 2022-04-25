@@ -26,6 +26,10 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="allowlistValues", required=true)
     private List<String> allowlistValues;
 
+    /**
+     * @return The values to allow. The format of the values depends on the rule type.
+     * 
+     */
     public List<String> allowlistValues() {
         return this.allowlistValues;
     }
@@ -37,6 +41,10 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The description of the custom alert.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the custom alert.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Status of the custom alert.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -71,6 +87,11 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return The type of the custom alert rule.
+     * Expected value is &#39;AllowlistCustomAlertRule&#39;.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -82,6 +103,10 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="valueType", required=true)
     private String valueType;
 
+    /**
+     * @return The value type of the items in the list.
+     * 
+     */
     public String valueType() {
         return this.valueType;
     }
@@ -115,35 +140,78 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
             $ = new AllowlistCustomAlertRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlistValues The values to allow. The format of the values depends on the rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistValues(List<String> allowlistValues) {
             $.allowlistValues = allowlistValues;
             return this;
         }
 
+        /**
+         * @param allowlistValues The values to allow. The format of the values depends on the rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistValues(String... allowlistValues) {
             return allowlistValues(List.of(allowlistValues));
         }
 
+        /**
+         * @param description The description of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param isEnabled Status of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param ruleType The type of the custom alert rule.
+         * Expected value is &#39;AllowlistCustomAlertRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param valueType The value type of the items in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(String valueType) {
             $.valueType = valueType;
             return this;

@@ -25,6 +25,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="appId")
     private @Nullable String appId;
 
+    /**
+     * @return Application id - relevant only for application principal type.
+     * 
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -36,6 +40,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return Database principal email if exists.
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -47,6 +55,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="fqn")
     private @Nullable String fqn;
 
+    /**
+     * @return Database principal fully qualified name.
+     * 
+     */
     public Optional<String> fqn() {
         return Optional.ofNullable(this.fqn);
     }
@@ -58,6 +70,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Database principal name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="role", required=true)
     private String role;
 
+    /**
+     * @return Database principal role.
+     * 
+     */
     public String role() {
         return this.role;
     }
@@ -80,6 +100,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="tenantName", required=true)
     private String tenantName;
 
+    /**
+     * @return The tenant name of the principal
+     * 
+     */
     public String tenantName() {
         return this.tenantName;
     }
@@ -91,6 +115,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Database principal type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -125,36 +153,78 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
             $ = new DatabasePrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Application id - relevant only for application principal type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param email Database principal email if exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param fqn Database principal fully qualified name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqn(@Nullable String fqn) {
             $.fqn = fqn;
             return this;
         }
 
+        /**
+         * @param name Database principal name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param role Database principal role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param tenantName The tenant name of the principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantName(String tenantName) {
             $.tenantName = tenantName;
             return this;
         }
 
+        /**
+         * @param type Database principal type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -27,6 +27,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ID of Content Key
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="labelReferenceInStreamingPolicy")
     private @Nullable String labelReferenceInStreamingPolicy;
 
+    /**
+     * @return Label of Content Key as specified in the Streaming Policy
+     * 
+     */
     public Optional<String> labelReferenceInStreamingPolicy() {
         return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
@@ -49,6 +57,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return ContentKeyPolicy used by Content Key
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -60,6 +72,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="tracks", required=true)
     private List<TrackSelectionResponse> tracks;
 
+    /**
+     * @return Tracks which use this Content Key
+     * 
+     */
     public List<TrackSelectionResponse> tracks() {
         return this.tracks;
     }
@@ -71,6 +87,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Encryption type of Content Key
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -82,6 +102,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of Content Key
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -115,35 +139,77 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
             $ = new StreamingLocatorContentKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id ID of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param labelReferenceInStreamingPolicy Label of Content Key as specified in the Streaming Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
             $.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
 
+        /**
+         * @param policyName ContentKeyPolicy used by Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param tracks Tracks which use this Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(List<TrackSelectionResponse> tracks) {
             $.tracks = tracks;
             return this;
         }
 
+        /**
+         * @param tracks Tracks which use this Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(TrackSelectionResponse... tracks) {
             return tracks(List.of(tracks));
         }
 
+        /**
+         * @param type Encryption type of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Value of Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

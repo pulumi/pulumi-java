@@ -37,6 +37,11 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="backupManagementType", required=true)
     private Output<String> backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;AzureStorage&#39;.
+     * 
+     */
     public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
@@ -48,6 +53,10 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="protectedItemsCount")
     private @Nullable Output<Integer> protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Output<Integer>> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -59,6 +68,10 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="retentionPolicy")
     private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
+    /**
+     * @return Retention policy with the details on backup copy retention ranges.
+     * 
+     */
     public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -70,6 +83,10 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="schedulePolicy")
     private @Nullable Output<Object> schedulePolicy;
 
+    /**
+     * @return Backup schedule specified as part of backup policy.
+     * 
+     */
     public Optional<Output<Object>> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -81,6 +98,10 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -92,6 +113,10 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="workLoadType")
     private @Nullable Output<Either<String,WorkloadType>> workLoadType;
 
+    /**
+     * @return Type of workload for the backup management
+     * 
+     */
     public Optional<Output<Either<String,WorkloadType>>> workLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }
@@ -125,72 +150,170 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
             $ = new AzureFileShareProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureStorage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Output<String> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureStorage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(Integer protectedItemsCount) {
             return protectedItemsCount(Output.of(protectedItemsCount));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(Object schedulePolicy) {
             return schedulePolicy(Output.of(schedulePolicy));
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }
 
+        /**
+         * @param workLoadType Type of workload for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder workLoadType(@Nullable Output<Either<String,WorkloadType>> workLoadType) {
             $.workLoadType = workLoadType;
             return this;
         }
 
+        /**
+         * @param workLoadType Type of workload for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder workLoadType(Either<String,WorkloadType> workLoadType) {
             return workLoadType(Output.of(workLoadType));
         }
 
+        /**
+         * @param workLoadType Type of workload for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder workLoadType(String workLoadType) {
             return workLoadType(Either.ofLeft(workLoadType));
         }
 
+        /**
+         * @param workLoadType Type of workload for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder workLoadType(WorkloadType workLoadType) {
             return workLoadType(Either.ofRight(workLoadType));
         }

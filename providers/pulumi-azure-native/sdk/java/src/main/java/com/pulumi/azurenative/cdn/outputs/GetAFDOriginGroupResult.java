@@ -18,52 +18,52 @@ import javax.annotation.Nullable;
 public final class GetAFDOriginGroupResult {
     private final String deploymentStatus;
     /**
-     * Health probe settings to the origin that is used to determine the health of the origin.
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
     private final @Nullable HealthProbeParametersResponse healthProbeSettings;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Load balancing settings for a backend pool
+     * @return Load balancing settings for a backend pool
      * 
      */
     private final @Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
      */
     private final String provisioningState;
     /**
-     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
     private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings;
     /**
-     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String sessionAffinityState;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
     private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -98,72 +98,72 @@ public final class GetAFDOriginGroupResult {
         return this.deploymentStatus;
     }
     /**
-     * Health probe settings to the origin that is used to determine the health of the origin.
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
-    */
+     */
     public Optional<HealthProbeParametersResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Load balancing settings for a backend pool
+     * @return Load balancing settings for a backend pool
      * 
-    */
+     */
     public Optional<LoadBalancingSettingsParametersResponse> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
-    */
+     */
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedAfdOriginErrorDetectionSettings);
     }
     /**
-     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> sessionAffinityState() {
         return Optional.ofNullable(this.sessionAffinityState);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
-    */
+     */
     public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

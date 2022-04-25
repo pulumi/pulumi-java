@@ -31,6 +31,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionGroupId", required=true)
     private Output<String> actionGroupId;
 
+    /**
+     * @return Action group to trigger if action rule matches
+     * 
+     */
     public Output<String> actionGroupId() {
         return this.actionGroupId;
     }
@@ -42,6 +46,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<ConditionsArgs> conditions;
 
+    /**
+     * @return conditions on which alerts will be filtered
+     * 
+     */
     public Optional<Output<ConditionsArgs>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -53,6 +61,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of action rule
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<ScopeArgs> scope;
 
+    /**
+     * @return scope on which action rule will apply
+     * 
+     */
     public Optional<Output<ScopeArgs>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -75,6 +91,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,ActionRuleStatus>> status;
 
+    /**
+     * @return Indicates if the given action rule is enabled or disabled
+     * 
+     */
     public Optional<Output<Either<String,ActionRuleStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -87,6 +107,11 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates type of action rule
+     * Expected value is &#39;ActionGroup&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -120,64 +145,150 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroupId Action group to trigger if action rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(Output<String> actionGroupId) {
             $.actionGroupId = actionGroupId;
             return this;
         }
 
+        /**
+         * @param actionGroupId Action group to trigger if action rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(String actionGroupId) {
             return actionGroupId(Output.of(actionGroupId));
         }
 
+        /**
+         * @param conditions conditions on which alerts will be filtered
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<ConditionsArgs> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions conditions on which alerts will be filtered
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionsArgs conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param description Description of action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param scope scope on which action rule will apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope scope on which action rule will apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ScopeArgs scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,ActionRuleStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(ActionRuleStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param type Indicates type of action rule
+         * Expected value is &#39;ActionGroup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates type of action rule
+         * Expected value is &#39;ActionGroup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

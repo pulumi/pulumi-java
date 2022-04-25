@@ -22,6 +22,10 @@ public final class SubResourceWithColocationStatusResponse extends com.pulumi.re
     @Import(name="colocationStatus")
     private @Nullable InstanceViewStatusResponse colocationStatus;
 
+    /**
+     * @return Describes colocation status of a resource in the Proximity Placement Group.
+     * 
+     */
     public Optional<InstanceViewStatusResponse> colocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
@@ -33,6 +37,10 @@ public final class SubResourceWithColocationStatusResponse extends com.pulumi.re
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -62,11 +70,23 @@ public final class SubResourceWithColocationStatusResponse extends com.pulumi.re
             $ = new SubResourceWithColocationStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colocationStatus Describes colocation status of a resource in the Proximity Placement Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
             $.colocationStatus = colocationStatus;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

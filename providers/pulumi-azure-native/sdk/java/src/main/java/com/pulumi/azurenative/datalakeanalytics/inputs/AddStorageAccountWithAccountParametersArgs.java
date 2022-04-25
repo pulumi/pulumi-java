@@ -27,6 +27,10 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
     @Import(name="accessKey", required=true)
     private Output<String> accessKey;
 
+    /**
+     * @return The access key associated with this Azure Storage account that will be used to connect to it.
+     * 
+     */
     public Output<String> accessKey() {
         return this.accessKey;
     }
@@ -38,6 +42,10 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name of the Azure Storage account to add.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
     @Import(name="suffix")
     private @Nullable Output<String> suffix;
 
+    /**
+     * @return The optional suffix for the storage account.
+     * 
+     */
     public Optional<Output<String>> suffix() {
         return Optional.ofNullable(this.suffix);
     }
@@ -79,29 +91,65 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
             $ = new AddStorageAccountWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey The access key associated with this Azure Storage account that will be used to connect to it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(Output<String> accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param accessKey The access key associated with this Azure Storage account that will be used to connect to it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(String accessKey) {
             return accessKey(Output.of(accessKey));
         }
 
+        /**
+         * @param name The unique name of the Azure Storage account to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the Azure Storage account to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param suffix The optional suffix for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(@Nullable Output<String> suffix) {
             $.suffix = suffix;
             return this;
         }
 
+        /**
+         * @param suffix The optional suffix for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(String suffix) {
             return suffix(Output.of(suffix));
         }

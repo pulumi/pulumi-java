@@ -26,6 +26,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTimeToLiveInMinutes")
     private @Nullable Output<Integer> eventTimeToLiveInMinutes;
 
+    /**
+     * @return Time To Live (in minutes) for events.
+     * 
+     */
     public Optional<Output<Integer>> eventTimeToLiveInMinutes() {
         return Optional.ofNullable(this.eventTimeToLiveInMinutes);
     }
@@ -37,6 +41,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDeliveryAttempts")
     private @Nullable Output<Integer> maxDeliveryAttempts;
 
+    /**
+     * @return Maximum number of delivery retry attempts for events.
+     * 
+     */
     public Optional<Output<Integer>> maxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }
@@ -66,20 +74,44 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventTimeToLiveInMinutes Time To Live (in minutes) for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTimeToLiveInMinutes(@Nullable Output<Integer> eventTimeToLiveInMinutes) {
             $.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
 
+        /**
+         * @param eventTimeToLiveInMinutes Time To Live (in minutes) for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTimeToLiveInMinutes(Integer eventTimeToLiveInMinutes) {
             return eventTimeToLiveInMinutes(Output.of(eventTimeToLiveInMinutes));
         }
 
+        /**
+         * @param maxDeliveryAttempts Maximum number of delivery retry attempts for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
             $.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
 
+        /**
+         * @param maxDeliveryAttempts Maximum number of delivery retry attempts for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
             return maxDeliveryAttempts(Output.of(maxDeliveryAttempts));
         }

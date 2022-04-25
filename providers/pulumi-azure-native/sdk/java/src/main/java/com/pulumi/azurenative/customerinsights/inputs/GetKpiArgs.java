@@ -19,6 +19,10 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -30,6 +34,10 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="kpiName", required=true)
     private String kpiName;
 
+    /**
+     * @return The name of the KPI.
+     * 
+     */
     public String kpiName() {
         return this.kpiName;
     }
@@ -41,6 +49,10 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKpiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param kpiName The name of the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpiName(String kpiName) {
             $.kpiName = kpiName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

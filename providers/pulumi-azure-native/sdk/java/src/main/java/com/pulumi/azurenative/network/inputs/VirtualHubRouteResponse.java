@@ -26,6 +26,10 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="addressPrefixes")
     private @Nullable List<String> addressPrefixes;
 
+    /**
+     * @return List of all addressPrefixes.
+     * 
+     */
     public Optional<List<String>> addressPrefixes() {
         return Optional.ofNullable(this.addressPrefixes);
     }
@@ -37,6 +41,10 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="nextHopIpAddress")
     private @Nullable String nextHopIpAddress;
 
+    /**
+     * @return NextHop ip address.
+     * 
+     */
     public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -66,15 +74,33 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
             $ = new VirtualHubRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefixes List of all addressPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             $.addressPrefixes = addressPrefixes;
             return this;
         }
 
+        /**
+         * @param addressPrefixes List of all addressPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
 
+        /**
+         * @param nextHopIpAddress NextHop ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             $.nextHopIpAddress = nextHopIpAddress;
             return this;

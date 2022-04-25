@@ -15,72 +15,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DPMProtectedItemExtendedInfoResponse {
     /**
-     * Used Disk storage in bytes.
+     * @return Used Disk storage in bytes.
      * 
      */
     private final @Nullable String diskStorageUsedInBytes;
     /**
-     * To check if backup item is collocated.
+     * @return To check if backup item is collocated.
      * 
      */
     private final @Nullable Boolean isCollocated;
     /**
-     * To check if backup item is cloud protected.
+     * @return To check if backup item is cloud protected.
      * 
      */
     private final @Nullable Boolean isPresentOnCloud;
     /**
-     * Last backup status information on backup item.
+     * @return Last backup status information on backup item.
      * 
      */
     private final @Nullable String lastBackupStatus;
     /**
-     * Last refresh time on backup item.
+     * @return Last refresh time on backup item.
      * 
      */
     private final @Nullable String lastRefreshedAt;
     /**
-     * Oldest cloud recovery point time.
+     * @return Oldest cloud recovery point time.
      * 
      */
     private final @Nullable String oldestRecoveryPoint;
     /**
-     * latest disk recovery point time.
+     * @return latest disk recovery point time.
      * 
      */
     private final @Nullable String onPremiseLatestRecoveryPoint;
     /**
-     * Oldest disk recovery point time.
+     * @return Oldest disk recovery point time.
      * 
      */
     private final @Nullable String onPremiseOldestRecoveryPoint;
     /**
-     * disk recovery point count.
+     * @return disk recovery point count.
      * 
      */
     private final @Nullable Integer onPremiseRecoveryPointCount;
     /**
-     * Attribute to provide information on various DBs.
+     * @return Attribute to provide information on various DBs.
      * 
      */
     private final @Nullable Map<String,String> protectableObjectLoadPath;
     /**
-     * To check if backup item is disk protected.
+     * @return To check if backup item is disk protected.
      * 
      */
     private final @Nullable Boolean protected_;
     /**
-     * Protection group name of the backup item.
+     * @return Protection group name of the backup item.
      * 
      */
     private final @Nullable String protectionGroupName;
     /**
-     * cloud recovery point count.
+     * @return cloud recovery point count.
      * 
      */
     private final @Nullable Integer recoveryPointCount;
     /**
-     * total Disk storage in bytes.
+     * @return total Disk storage in bytes.
      * 
      */
     private final @Nullable String totalDiskStorageSizeInBytes;
@@ -118,100 +118,100 @@ public final class DPMProtectedItemExtendedInfoResponse {
     }
 
     /**
-     * Used Disk storage in bytes.
+     * @return Used Disk storage in bytes.
      * 
-    */
+     */
     public Optional<String> diskStorageUsedInBytes() {
         return Optional.ofNullable(this.diskStorageUsedInBytes);
     }
     /**
-     * To check if backup item is collocated.
+     * @return To check if backup item is collocated.
      * 
-    */
+     */
     public Optional<Boolean> isCollocated() {
         return Optional.ofNullable(this.isCollocated);
     }
     /**
-     * To check if backup item is cloud protected.
+     * @return To check if backup item is cloud protected.
      * 
-    */
+     */
     public Optional<Boolean> isPresentOnCloud() {
         return Optional.ofNullable(this.isPresentOnCloud);
     }
     /**
-     * Last backup status information on backup item.
+     * @return Last backup status information on backup item.
      * 
-    */
+     */
     public Optional<String> lastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
     /**
-     * Last refresh time on backup item.
+     * @return Last refresh time on backup item.
      * 
-    */
+     */
     public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
     /**
-     * Oldest cloud recovery point time.
+     * @return Oldest cloud recovery point time.
      * 
-    */
+     */
     public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
-     * latest disk recovery point time.
+     * @return latest disk recovery point time.
      * 
-    */
+     */
     public Optional<String> onPremiseLatestRecoveryPoint() {
         return Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
     }
     /**
-     * Oldest disk recovery point time.
+     * @return Oldest disk recovery point time.
      * 
-    */
+     */
     public Optional<String> onPremiseOldestRecoveryPoint() {
         return Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
     }
     /**
-     * disk recovery point count.
+     * @return disk recovery point count.
      * 
-    */
+     */
     public Optional<Integer> onPremiseRecoveryPointCount() {
         return Optional.ofNullable(this.onPremiseRecoveryPointCount);
     }
     /**
-     * Attribute to provide information on various DBs.
+     * @return Attribute to provide information on various DBs.
      * 
-    */
+     */
     public Map<String,String> protectableObjectLoadPath() {
         return this.protectableObjectLoadPath == null ? Map.of() : this.protectableObjectLoadPath;
     }
     /**
-     * To check if backup item is disk protected.
+     * @return To check if backup item is disk protected.
      * 
-    */
+     */
     public Optional<Boolean> protected_() {
         return Optional.ofNullable(this.protected_);
     }
     /**
-     * Protection group name of the backup item.
+     * @return Protection group name of the backup item.
      * 
-    */
+     */
     public Optional<String> protectionGroupName() {
         return Optional.ofNullable(this.protectionGroupName);
     }
     /**
-     * cloud recovery point count.
+     * @return cloud recovery point count.
      * 
-    */
+     */
     public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
     /**
-     * total Disk storage in bytes.
+     * @return total Disk storage in bytes.
      * 
-    */
+     */
     public Optional<String> totalDiskStorageSizeInBytes() {
         return Optional.ofNullable(this.totalDiskStorageSizeInBytes);
     }

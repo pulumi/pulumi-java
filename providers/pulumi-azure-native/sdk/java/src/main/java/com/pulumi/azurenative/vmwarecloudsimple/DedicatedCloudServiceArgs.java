@@ -23,6 +23,10 @@ public final class DedicatedCloudServiceArgs extends com.pulumi.resources.Resour
     @Import(name="dedicatedCloudServiceName")
     private @Nullable Output<String> dedicatedCloudServiceName;
 
+    /**
+     * @return dedicated cloud Service name
+     * 
+     */
     public Optional<Output<String>> dedicatedCloudServiceName() {
         return Optional.ofNullable(this.dedicatedCloudServiceName);
     }
@@ -34,6 +38,10 @@ public final class DedicatedCloudServiceArgs extends com.pulumi.resources.Resour
     @Import(name="gatewaySubnet", required=true)
     private Output<String> gatewaySubnet;
 
+    /**
+     * @return gateway Subnet for the account. It will collect the subnet address and always treat it as /28
+     * 
+     */
     public Output<String> gatewaySubnet() {
         return this.gatewaySubnet;
     }
@@ -45,6 +53,10 @@ public final class DedicatedCloudServiceArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Azure region
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -56,6 +68,10 @@ public final class DedicatedCloudServiceArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class DedicatedCloudServiceArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The list of tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class DedicatedCloudServiceArgs extends com.pulumi.resources.Resour
             $ = new DedicatedCloudServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dedicatedCloudServiceName dedicated cloud Service name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedCloudServiceName(@Nullable Output<String> dedicatedCloudServiceName) {
             $.dedicatedCloudServiceName = dedicatedCloudServiceName;
             return this;
         }
 
+        /**
+         * @param dedicatedCloudServiceName dedicated cloud Service name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedCloudServiceName(String dedicatedCloudServiceName) {
             return dedicatedCloudServiceName(Output.of(dedicatedCloudServiceName));
         }
 
+        /**
+         * @param gatewaySubnet gateway Subnet for the account. It will collect the subnet address and always treat it as /28
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewaySubnet(Output<String> gatewaySubnet) {
             $.gatewaySubnet = gatewaySubnet;
             return this;
         }
 
+        /**
+         * @param gatewaySubnet gateway Subnet for the account. It will collect the subnet address and always treat it as /28
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewaySubnet(String gatewaySubnet) {
             return gatewaySubnet(Output.of(gatewaySubnet));
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The list of tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

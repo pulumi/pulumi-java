@@ -32,6 +32,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="backupManagementType")
     private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -47,6 +51,14 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="containerType", required=true)
     private Output<String> containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;SQLAGWorkLoadContainer&#39;.
+     * 
+     */
     public Output<String> containerType() {
         return this.containerType;
     }
@@ -58,6 +70,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="extendedInfo")
     private @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
+    /**
+     * @return Additional details of a workload container.
+     * 
+     */
     public Optional<Output<AzureWorkloadContainerExtendedInfoArgs>> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
@@ -69,6 +85,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -80,6 +100,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="healthStatus")
     private @Nullable Output<String> healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<Output<String>> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -91,6 +115,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="lastUpdatedTime")
     private @Nullable Output<String> lastUpdatedTime;
 
+    /**
+     * @return Time stamp when this container was updated.
+     * 
+     */
     public Optional<Output<String>> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -102,6 +130,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="operationType")
     private @Nullable Output<Either<String,OperationType>> operationType;
 
+    /**
+     * @return Re-Do Operation
+     * 
+     */
     public Optional<Output<Either<String,OperationType>>> operationType() {
         return Optional.ofNullable(this.operationType);
     }
@@ -113,6 +145,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="registrationStatus")
     private @Nullable Output<String> registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<Output<String>> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -124,6 +160,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="sourceResourceId")
     private @Nullable Output<String> sourceResourceId;
 
+    /**
+     * @return ARM ID of the virtual machine represented by this Azure Workload Container
+     * 
+     */
     public Optional<Output<String>> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -135,6 +175,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
     @Import(name="workloadType")
     private @Nullable Output<Either<String,WorkloadType>> workloadType;
 
+    /**
+     * @return Workload type for which registration was sent.
+     * 
+     */
     public Optional<Output<Either<String,WorkloadType>>> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -172,116 +216,280 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
             $ = new AzureSQLAGWorkloadContainerProtectionContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Either.ofLeft(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(BackupManagementType backupManagementType) {
             return backupManagementType(Either.ofRight(backupManagementType));
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;SQLAGWorkLoadContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(Output<String> containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;SQLAGWorkLoadContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             return containerType(Output.of(containerType));
         }
 
+        /**
+         * @param extendedInfo Additional details of a workload container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(@Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo) {
             $.extendedInfo = extendedInfo;
             return this;
         }
 
+        /**
+         * @param extendedInfo Additional details of a workload container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(AzureWorkloadContainerExtendedInfoArgs extendedInfo) {
             return extendedInfo(Output.of(extendedInfo));
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(String healthStatus) {
             return healthStatus(Output.of(healthStatus));
         }
 
+        /**
+         * @param lastUpdatedTime Time stamp when this container was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime Time stamp when this container was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
 
+        /**
+         * @param operationType Re-Do Operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(@Nullable Output<Either<String,OperationType>> operationType) {
             $.operationType = operationType;
             return this;
         }
 
+        /**
+         * @param operationType Re-Do Operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(Either<String,OperationType> operationType) {
             return operationType(Output.of(operationType));
         }
 
+        /**
+         * @param operationType Re-Do Operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(String operationType) {
             return operationType(Either.ofLeft(operationType));
         }
 
+        /**
+         * @param operationType Re-Do Operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(OperationType operationType) {
             return operationType(Either.ofRight(operationType));
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(String registrationStatus) {
             return registrationStatus(Output.of(registrationStatus));
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the virtual machine represented by this Azure Workload Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the virtual machine represented by this Azure Workload Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(String sourceResourceId) {
             return sourceResourceId(Output.of(sourceResourceId));
         }
 
+        /**
+         * @param workloadType Workload type for which registration was sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(@Nullable Output<Either<String,WorkloadType>> workloadType) {
             $.workloadType = workloadType;
             return this;
         }
 
+        /**
+         * @param workloadType Workload type for which registration was sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(Either<String,WorkloadType> workloadType) {
             return workloadType(Output.of(workloadType));
         }
 
+        /**
+         * @param workloadType Workload type for which registration was sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(String workloadType) {
             return workloadType(Either.ofLeft(workloadType));
         }
 
+        /**
+         * @param workloadType Workload type for which registration was sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(WorkloadType workloadType) {
             return workloadType(Either.ofRight(workloadType));
         }

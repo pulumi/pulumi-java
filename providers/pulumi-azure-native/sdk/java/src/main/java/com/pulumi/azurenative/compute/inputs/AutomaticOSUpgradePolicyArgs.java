@@ -26,6 +26,10 @@ public final class AutomaticOSUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="disableAutomaticRollback")
     private @Nullable Output<Boolean> disableAutomaticRollback;
 
+    /**
+     * @return Whether OS image rollback feature should be disabled. Default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> disableAutomaticRollback() {
         return Optional.ofNullable(this.disableAutomaticRollback);
     }
@@ -37,6 +41,10 @@ public final class AutomaticOSUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="enableAutomaticOSUpgrade")
     private @Nullable Output<Boolean> enableAutomaticOSUpgrade;
 
+    /**
+     * @return Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. &lt;br&gt;&lt;br&gt; If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutomaticOSUpgrade() {
         return Optional.ofNullable(this.enableAutomaticOSUpgrade);
     }
@@ -66,20 +74,44 @@ public final class AutomaticOSUpgradePolicyArgs extends com.pulumi.resources.Res
             $ = new AutomaticOSUpgradePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableAutomaticRollback Whether OS image rollback feature should be disabled. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableAutomaticRollback(@Nullable Output<Boolean> disableAutomaticRollback) {
             $.disableAutomaticRollback = disableAutomaticRollback;
             return this;
         }
 
+        /**
+         * @param disableAutomaticRollback Whether OS image rollback feature should be disabled. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableAutomaticRollback(Boolean disableAutomaticRollback) {
             return disableAutomaticRollback(Output.of(disableAutomaticRollback));
         }
 
+        /**
+         * @param enableAutomaticOSUpgrade Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. &lt;br&gt;&lt;br&gt; If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticOSUpgrade(@Nullable Output<Boolean> enableAutomaticOSUpgrade) {
             $.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;
         }
 
+        /**
+         * @param enableAutomaticOSUpgrade Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. &lt;br&gt;&lt;br&gt; If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticOSUpgrade(Boolean enableAutomaticOSUpgrade) {
             return enableAutomaticOSUpgrade(Output.of(enableAutomaticOSUpgrade));
         }

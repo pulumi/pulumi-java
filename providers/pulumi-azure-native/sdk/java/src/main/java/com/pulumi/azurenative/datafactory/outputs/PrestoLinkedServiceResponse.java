@@ -20,98 +20,98 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrestoLinkedServiceResponse {
     /**
-     * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+     * @return Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
      * 
      */
     private final @Nullable Object allowHostNameCNMismatch;
     /**
-     * Specifies whether to allow self-signed certificates from the server. The default value is false.
+     * @return Specifies whether to allow self-signed certificates from the server. The default value is false.
      * 
      */
     private final @Nullable Object allowSelfSignedServerCert;
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The authentication mechanism used to connect to the Presto server.
+     * @return The authentication mechanism used to connect to the Presto server.
      * 
      */
     private final String authenticationType;
     /**
-     * The catalog context for all request against the server.
+     * @return The catalog context for all request against the server.
      * 
      */
     private final Object catalog;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+     * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false.
      * 
      */
     private final @Nullable Object enableSsl;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * The IP address or host name of the Presto server. (i.e. 192.168.222.160)
+     * @return The IP address or host name of the Presto server. (i.e. 192.168.222.160)
      * 
      */
     private final Object host;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * The password corresponding to the user name.
+     * @return The password corresponding to the user name.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
+     * @return The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
      * 
      */
     private final @Nullable Object port;
     /**
-     * The version of the Presto server. (i.e. 0.148-t)
+     * @return The version of the Presto server. (i.e. 0.148-t)
      * 
      */
     private final Object serverVersion;
     /**
-     * The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
+     * @return The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
      * 
      */
     private final @Nullable Object timeZoneID;
     /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
      */
     private final @Nullable Object trustedCertPath;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Presto&#39;.
      * 
      */
     private final String type;
     /**
-     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
      */
     private final @Nullable Object useSystemTrustStore;
     /**
-     * The user name used to connect to the Presto server.
+     * @return The user name used to connect to the Presto server.
      * 
      */
     private final @Nullable Object username;
@@ -159,136 +159,136 @@ public final class PrestoLinkedServiceResponse {
     }
 
     /**
-     * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+     * @return Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
      * 
-    */
+     */
     public Optional<Object> allowHostNameCNMismatch() {
         return Optional.ofNullable(this.allowHostNameCNMismatch);
     }
     /**
-     * Specifies whether to allow self-signed certificates from the server. The default value is false.
+     * @return Specifies whether to allow self-signed certificates from the server. The default value is false.
      * 
-    */
+     */
     public Optional<Object> allowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The authentication mechanism used to connect to the Presto server.
+     * @return The authentication mechanism used to connect to the Presto server.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * The catalog context for all request against the server.
+     * @return The catalog context for all request against the server.
      * 
-    */
+     */
     public Object catalog() {
         return this.catalog;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+     * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false.
      * 
-    */
+     */
     public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The IP address or host name of the Presto server. (i.e. 192.168.222.160)
+     * @return The IP address or host name of the Presto server. (i.e. 192.168.222.160)
      * 
-    */
+     */
     public Object host() {
         return this.host;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password corresponding to the user name.
+     * @return The password corresponding to the user name.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
+     * @return The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
      * 
-    */
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The version of the Presto server. (i.e. 0.148-t)
+     * @return The version of the Presto server. (i.e. 0.148-t)
      * 
-    */
+     */
     public Object serverVersion() {
         return this.serverVersion;
     }
     /**
-     * The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
+     * @return The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
      * 
-    */
+     */
     public Optional<Object> timeZoneID() {
         return Optional.ofNullable(this.timeZoneID);
     }
     /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
-    */
+     */
     public Optional<Object> trustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Presto&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
-    */
+     */
     public Optional<Object> useSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }
     /**
-     * The user name used to connect to the Presto server.
+     * @return The user name used to connect to the Presto server.
      * 
-    */
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }

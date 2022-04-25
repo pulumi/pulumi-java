@@ -29,6 +29,10 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="privateLink")
     private @Nullable Output<Either<String,PrivateLink>> privateLink;
 
+    /**
+     * @return Indicates whether or not private link is enabled.
+     * 
+     */
     public Optional<Output<Either<String,PrivateLink>>> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
@@ -40,6 +44,10 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceProviderConnection")
     private @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
+    /**
+     * @return The direction for the resource provider connection.
+     * 
+     */
     public Optional<Output<Either<String,ResourceProviderConnection>>> resourceProviderConnection() {
         return Optional.ofNullable(this.resourceProviderConnection);
     }
@@ -69,36 +77,84 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new NetworkPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateLink Indicates whether or not private link is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(@Nullable Output<Either<String,PrivateLink>> privateLink) {
             $.privateLink = privateLink;
             return this;
         }
 
+        /**
+         * @param privateLink Indicates whether or not private link is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(Either<String,PrivateLink> privateLink) {
             return privateLink(Output.of(privateLink));
         }
 
+        /**
+         * @param privateLink Indicates whether or not private link is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(String privateLink) {
             return privateLink(Either.ofLeft(privateLink));
         }
 
+        /**
+         * @param privateLink Indicates whether or not private link is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(PrivateLink privateLink) {
             return privateLink(Either.ofRight(privateLink));
         }
 
+        /**
+         * @param resourceProviderConnection The direction for the resource provider connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderConnection(@Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
             $.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
 
+        /**
+         * @param resourceProviderConnection The direction for the resource provider connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderConnection(Either<String,ResourceProviderConnection> resourceProviderConnection) {
             return resourceProviderConnection(Output.of(resourceProviderConnection));
         }
 
+        /**
+         * @param resourceProviderConnection The direction for the resource provider connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderConnection(String resourceProviderConnection) {
             return resourceProviderConnection(Either.ofLeft(resourceProviderConnection));
         }
 
+        /**
+         * @param resourceProviderConnection The direction for the resource provider connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderConnection(ResourceProviderConnection resourceProviderConnection) {
             return resourceProviderConnection(Either.ofRight(resourceProviderConnection));
         }

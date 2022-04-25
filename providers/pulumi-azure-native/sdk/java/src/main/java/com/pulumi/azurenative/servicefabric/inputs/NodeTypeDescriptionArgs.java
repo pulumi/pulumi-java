@@ -30,6 +30,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="applicationPorts")
     private @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
+    /**
+     * @return The range of ports from which cluster assigned port to Service Fabric applications.
+     * 
+     */
     public Optional<Output<EndpointRangeDescriptionArgs>> applicationPorts() {
         return Optional.ofNullable(this.applicationPorts);
     }
@@ -41,6 +45,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="capacities")
     private @Nullable Output<Map<String,String>> capacities;
 
+    /**
+     * @return The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+     * 
+     */
     public Optional<Output<Map<String,String>>> capacities() {
         return Optional.ofNullable(this.capacities);
     }
@@ -52,6 +60,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="clientConnectionEndpointPort", required=true)
     private Output<Integer> clientConnectionEndpointPort;
 
+    /**
+     * @return The TCP cluster management endpoint port.
+     * 
+     */
     public Output<Integer> clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
     }
@@ -67,6 +79,14 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="durabilityLevel")
     private @Nullable Output<String> durabilityLevel;
 
+    /**
+     * @return The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+     * 
+     *   - Bronze - No privileges. This is the default.
+     *   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
+     *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
+     * 
+     */
     public Optional<Output<String>> durabilityLevel() {
         return Optional.ofNullable(this.durabilityLevel);
     }
@@ -78,6 +98,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="ephemeralPorts")
     private @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
+    /**
+     * @return The range of ephemeral ports that nodes in this node type should be configured with.
+     * 
+     */
     public Optional<Output<EndpointRangeDescriptionArgs>> ephemeralPorts() {
         return Optional.ofNullable(this.ephemeralPorts);
     }
@@ -89,6 +113,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="httpGatewayEndpointPort", required=true)
     private Output<Integer> httpGatewayEndpointPort;
 
+    /**
+     * @return The HTTP cluster management endpoint port.
+     * 
+     */
     public Output<Integer> httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
@@ -100,6 +128,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="isPrimary", required=true)
     private Output<Boolean> isPrimary;
 
+    /**
+     * @return The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
+     * 
+     */
     public Output<Boolean> isPrimary() {
         return this.isPrimary;
     }
@@ -111,6 +143,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the node type.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -122,6 +158,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="placementProperties")
     private @Nullable Output<Map<String,String>> placementProperties;
 
+    /**
+     * @return The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+     * 
+     */
     public Optional<Output<Map<String,String>>> placementProperties() {
         return Optional.ofNullable(this.placementProperties);
     }
@@ -133,6 +173,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="reverseProxyEndpointPort")
     private @Nullable Output<Integer> reverseProxyEndpointPort;
 
+    /**
+     * @return The endpoint used by reverse proxy.
+     * 
+     */
     public Optional<Output<Integer>> reverseProxyEndpointPort() {
         return Optional.ofNullable(this.reverseProxyEndpointPort);
     }
@@ -144,6 +188,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
     @Import(name="vmInstanceCount", required=true)
     private Output<Integer> vmInstanceCount;
 
+    /**
+     * @return The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+     * 
+     */
     public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
     }
@@ -182,101 +230,241 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
             $ = new NodeTypeDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationPorts The range of ports from which cluster assigned port to Service Fabric applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationPorts(@Nullable Output<EndpointRangeDescriptionArgs> applicationPorts) {
             $.applicationPorts = applicationPorts;
             return this;
         }
 
+        /**
+         * @param applicationPorts The range of ports from which cluster assigned port to Service Fabric applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationPorts(EndpointRangeDescriptionArgs applicationPorts) {
             return applicationPorts(Output.of(applicationPorts));
         }
 
+        /**
+         * @param capacities The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
             $.capacities = capacities;
             return this;
         }
 
+        /**
+         * @param capacities The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacities(Map<String,String> capacities) {
             return capacities(Output.of(capacities));
         }
 
+        /**
+         * @param clientConnectionEndpointPort The TCP cluster management endpoint port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConnectionEndpointPort(Output<Integer> clientConnectionEndpointPort) {
             $.clientConnectionEndpointPort = clientConnectionEndpointPort;
             return this;
         }
 
+        /**
+         * @param clientConnectionEndpointPort The TCP cluster management endpoint port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
             return clientConnectionEndpointPort(Output.of(clientConnectionEndpointPort));
         }
 
+        /**
+         * @param durabilityLevel The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+         * 
+         *   - Bronze - No privileges. This is the default.
+         *   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
+         *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durabilityLevel(@Nullable Output<String> durabilityLevel) {
             $.durabilityLevel = durabilityLevel;
             return this;
         }
 
+        /**
+         * @param durabilityLevel The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+         * 
+         *   - Bronze - No privileges. This is the default.
+         *   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
+         *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durabilityLevel(String durabilityLevel) {
             return durabilityLevel(Output.of(durabilityLevel));
         }
 
+        /**
+         * @param ephemeralPorts The range of ephemeral ports that nodes in this node type should be configured with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
             $.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
+        /**
+         * @param ephemeralPorts The range of ephemeral ports that nodes in this node type should be configured with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralPorts(EndpointRangeDescriptionArgs ephemeralPorts) {
             return ephemeralPorts(Output.of(ephemeralPorts));
         }
 
+        /**
+         * @param httpGatewayEndpointPort The HTTP cluster management endpoint port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGatewayEndpointPort(Output<Integer> httpGatewayEndpointPort) {
             $.httpGatewayEndpointPort = httpGatewayEndpointPort;
             return this;
         }
 
+        /**
+         * @param httpGatewayEndpointPort The HTTP cluster management endpoint port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
             return httpGatewayEndpointPort(Output.of(httpGatewayEndpointPort));
         }
 
+        /**
+         * @param isPrimary The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrimary(Output<Boolean> isPrimary) {
             $.isPrimary = isPrimary;
             return this;
         }
 
+        /**
+         * @param isPrimary The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrimary(Boolean isPrimary) {
             return isPrimary(Output.of(isPrimary));
         }
 
+        /**
+         * @param name The name of the node type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the node type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param placementProperties The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
             $.placementProperties = placementProperties;
             return this;
         }
 
+        /**
+         * @param placementProperties The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementProperties(Map<String,String> placementProperties) {
             return placementProperties(Output.of(placementProperties));
         }
 
+        /**
+         * @param reverseProxyEndpointPort The endpoint used by reverse proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseProxyEndpointPort(@Nullable Output<Integer> reverseProxyEndpointPort) {
             $.reverseProxyEndpointPort = reverseProxyEndpointPort;
             return this;
         }
 
+        /**
+         * @param reverseProxyEndpointPort The endpoint used by reverse proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseProxyEndpointPort(Integer reverseProxyEndpointPort) {
             return reverseProxyEndpointPort(Output.of(reverseProxyEndpointPort));
         }
 
+        /**
+         * @param vmInstanceCount The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
             $.vmInstanceCount = vmInstanceCount;
             return this;
         }
 
+        /**
+         * @param vmInstanceCount The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmInstanceCount(Integer vmInstanceCount) {
             return vmInstanceCount(Output.of(vmInstanceCount));
         }

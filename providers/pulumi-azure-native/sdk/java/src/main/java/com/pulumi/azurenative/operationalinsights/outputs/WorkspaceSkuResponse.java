@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkspaceSkuResponse {
     /**
-     * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * @return The capacity reservation level for this workspace, when CapacityReservation sku is selected.
      * 
      */
     private final @Nullable Integer capacityReservationLevel;
     /**
-     * The last time when the sku was updated.
+     * @return The last time when the sku was updated.
      * 
      */
     private final String lastSkuUpdate;
     /**
-     * The name of the SKU.
+     * @return The name of the SKU.
      * 
      */
     private final String name;
@@ -39,23 +39,23 @@ public final class WorkspaceSkuResponse {
     }
 
     /**
-     * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * @return The capacity reservation level for this workspace, when CapacityReservation sku is selected.
      * 
-    */
+     */
     public Optional<Integer> capacityReservationLevel() {
         return Optional.ofNullable(this.capacityReservationLevel);
     }
     /**
-     * The last time when the sku was updated.
+     * @return The last time when the sku was updated.
      * 
-    */
+     */
     public String lastSkuUpdate() {
         return this.lastSkuUpdate;
     }
     /**
-     * The name of the SKU.
+     * @return The name of the SKU.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

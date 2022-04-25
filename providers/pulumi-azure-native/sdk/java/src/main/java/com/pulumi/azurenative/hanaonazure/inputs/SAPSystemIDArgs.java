@@ -26,6 +26,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gid")
     private @Nullable Output<String> gid;
 
+    /**
+     * @return Group ID of the HANA database user.
+     * 
+     */
     public Optional<Output<String>> gid() {
         return Optional.ofNullable(this.gid);
     }
@@ -37,6 +41,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sid")
     private @Nullable Output<String> sid;
 
+    /**
+     * @return SAP system ID as database identifier.
+     * 
+     */
     public Optional<Output<String>> sid() {
         return Optional.ofNullable(this.sid);
     }
@@ -48,6 +56,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return User ID of the HANA database user.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -59,6 +71,10 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Name of the HANA database user.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -90,38 +106,86 @@ public final class SAPSystemIDArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SAPSystemIDArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gid Group ID of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(@Nullable Output<String> gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param gid Group ID of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(String gid) {
             return gid(Output.of(gid));
         }
 
+        /**
+         * @param sid SAP system ID as database identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(@Nullable Output<String> sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param sid SAP system ID as database identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(String sid) {
             return sid(Output.of(sid));
         }
 
+        /**
+         * @param uid User ID of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid User ID of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }
 
+        /**
+         * @param username Name of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Name of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

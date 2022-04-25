@@ -23,6 +23,10 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Localized string of the description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="parametersSchema", required=true)
     private String parametersSchema;
 
+    /**
+     * @return URL to retrieve JSON schema of the Capability parameters.
+     * 
+     */
     public String parametersSchema() {
         return this.parametersSchema;
     }
@@ -45,6 +53,10 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="publisher", required=true)
     private String publisher;
 
+    /**
+     * @return String of the Publisher that this Capability extends.
+     * 
+     */
     public String publisher() {
         return this.publisher;
     }
@@ -56,6 +68,10 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="targetType", required=true)
     private String targetType;
 
+    /**
+     * @return String of the Target Type that this Capability extends.
+     * 
+     */
     public String targetType() {
         return this.targetType;
     }
@@ -67,6 +83,10 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="urn", required=true)
     private String urn;
 
+    /**
+     * @return String of the URN for this Capability Type.
+     * 
+     */
     public String urn() {
         return this.urn;
     }
@@ -99,26 +119,56 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
             $ = new CapabilityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Localized string of the description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param parametersSchema URL to retrieve JSON schema of the Capability parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersSchema(String parametersSchema) {
             $.parametersSchema = parametersSchema;
             return this;
         }
 
+        /**
+         * @param publisher String of the Publisher that this Capability extends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param targetType String of the Target Type that this Capability extends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param urn String of the URN for this Capability Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urn(String urn) {
             $.urn = urn;
             return this;

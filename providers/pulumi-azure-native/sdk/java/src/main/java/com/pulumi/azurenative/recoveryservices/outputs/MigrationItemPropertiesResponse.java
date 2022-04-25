@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrationItemPropertiesResponse {
     /**
-     * The allowed operations on the migration item, based on the current migration state of the item.
+     * @return The allowed operations on the migration item, based on the current migration state of the item.
      * 
      */
     private final List<String> allowedOperations;
     /**
-     * The current job details.
+     * @return The current job details.
      * 
      */
     private final CurrentJobDetailsResponse currentJob;
     /**
-     * The consolidated health.
+     * @return The consolidated health.
      * 
      */
     private final String health;
     /**
-     * The list of health errors.
+     * @return The list of health errors.
      * 
      */
     private final List<HealthErrorResponse> healthErrors;
     /**
-     * The on-premise virtual machine name.
+     * @return The on-premise virtual machine name.
      * 
      */
     private final String machineName;
     /**
-     * The migration status.
+     * @return The migration status.
      * 
      */
     private final String migrationState;
     /**
-     * The migration state description.
+     * @return The migration state description.
      * 
      */
     private final String migrationStateDescription;
     /**
-     * The name of policy governing this item.
+     * @return The name of policy governing this item.
      * 
      */
     private final String policyFriendlyName;
     /**
-     * The ARM Id of policy governing this item.
+     * @return The ARM Id of policy governing this item.
      * 
      */
     private final String policyId;
     /**
-     * The migration provider custom settings.
+     * @return The migration provider custom settings.
      * 
      */
     private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
     /**
-     * The recovery services provider ARM Id.
+     * @return The recovery services provider ARM Id.
      * 
      */
     private final String recoveryServicesProviderId;
     /**
-     * The test migrate state.
+     * @return The test migrate state.
      * 
      */
     private final String testMigrateState;
     /**
-     * The test migrate state description.
+     * @return The test migrate state description.
      * 
      */
     private final String testMigrateStateDescription;
@@ -112,93 +112,93 @@ public final class MigrationItemPropertiesResponse {
     }
 
     /**
-     * The allowed operations on the migration item, based on the current migration state of the item.
+     * @return The allowed operations on the migration item, based on the current migration state of the item.
      * 
-    */
+     */
     public List<String> allowedOperations() {
         return this.allowedOperations;
     }
     /**
-     * The current job details.
+     * @return The current job details.
      * 
-    */
+     */
     public CurrentJobDetailsResponse currentJob() {
         return this.currentJob;
     }
     /**
-     * The consolidated health.
+     * @return The consolidated health.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The list of health errors.
+     * @return The list of health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The on-premise virtual machine name.
+     * @return The on-premise virtual machine name.
      * 
-    */
+     */
     public String machineName() {
         return this.machineName;
     }
     /**
-     * The migration status.
+     * @return The migration status.
      * 
-    */
+     */
     public String migrationState() {
         return this.migrationState;
     }
     /**
-     * The migration state description.
+     * @return The migration state description.
      * 
-    */
+     */
     public String migrationStateDescription() {
         return this.migrationStateDescription;
     }
     /**
-     * The name of policy governing this item.
+     * @return The name of policy governing this item.
      * 
-    */
+     */
     public String policyFriendlyName() {
         return this.policyFriendlyName;
     }
     /**
-     * The ARM Id of policy governing this item.
+     * @return The ARM Id of policy governing this item.
      * 
-    */
+     */
     public String policyId() {
         return this.policyId;
     }
     /**
-     * The migration provider custom settings.
+     * @return The migration provider custom settings.
      * 
-    */
+     */
     public Optional<VMwareCbtMigrationDetailsResponse> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
-     * The recovery services provider ARM Id.
+     * @return The recovery services provider ARM Id.
      * 
-    */
+     */
     public String recoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
     }
     /**
-     * The test migrate state.
+     * @return The test migrate state.
      * 
-    */
+     */
     public String testMigrateState() {
         return this.testMigrateState;
     }
     /**
-     * The test migrate state description.
+     * @return The test migrate state description.
      * 
-    */
+     */
     public String testMigrateStateDescription() {
         return this.testMigrateStateDescription;
     }

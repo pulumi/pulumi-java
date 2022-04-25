@@ -31,6 +31,13 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
     @Import(name="artifacts")
     private @Nullable List<String> artifacts;
 
+    /**
+     * @return List of source artifacts to be transferred by the pipeline.
+     * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
+     * Specify an image by tag (&#39;hello-world:latest&#39;).
+     * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
+     * 
+     */
     public Optional<List<String>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -42,6 +49,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
     @Import(name="catalogDigest")
     private @Nullable String catalogDigest;
 
+    /**
+     * @return The digest of the tar used to transfer the artifacts.
+     * 
+     */
     public Optional<String> catalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
@@ -53,6 +64,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
     @Import(name="pipelineResourceId")
     private @Nullable String pipelineResourceId;
 
+    /**
+     * @return The resource ID of the pipeline to run.
+     * 
+     */
     public Optional<String> pipelineResourceId() {
         return Optional.ofNullable(this.pipelineResourceId);
     }
@@ -64,6 +79,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
     @Import(name="source")
     private @Nullable PipelineRunSourcePropertiesResponse source;
 
+    /**
+     * @return The source properties of the pipeline run.
+     * 
+     */
     public Optional<PipelineRunSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
@@ -75,6 +94,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
     @Import(name="target")
     private @Nullable PipelineRunTargetPropertiesResponse target;
 
+    /**
+     * @return The target properties of the pipeline run.
+     * 
+     */
     public Optional<PipelineRunTargetPropertiesResponse> target() {
         return Optional.ofNullable(this.target);
     }
@@ -107,30 +130,72 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
             $ = new PipelineRunRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts List of source artifacts to be transferred by the pipeline.
+         * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
+         * Specify an image by tag (&#39;hello-world:latest&#39;).
+         * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable List<String> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts List of source artifacts to be transferred by the pipeline.
+         * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
+         * Specify an image by tag (&#39;hello-world:latest&#39;).
+         * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(String... artifacts) {
             return artifacts(List.of(artifacts));
         }
 
+        /**
+         * @param catalogDigest The digest of the tar used to transfer the artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogDigest(@Nullable String catalogDigest) {
             $.catalogDigest = catalogDigest;
             return this;
         }
 
+        /**
+         * @param pipelineResourceId The resource ID of the pipeline to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
             $.pipelineResourceId = pipelineResourceId;
             return this;
         }
 
+        /**
+         * @param source The source properties of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable PipelineRunSourcePropertiesResponse source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param target The target properties of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable PipelineRunTargetPropertiesResponse target) {
             $.target = target;
             return this;

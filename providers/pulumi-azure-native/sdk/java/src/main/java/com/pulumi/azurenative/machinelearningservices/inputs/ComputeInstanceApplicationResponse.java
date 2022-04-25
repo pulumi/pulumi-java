@@ -25,6 +25,10 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Name of the ComputeInstance application.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
     @Import(name="endpointUri")
     private @Nullable String endpointUri;
 
+    /**
+     * @return Application&#39; endpoint URI.
+     * 
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -65,11 +73,23 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
             $ = new ComputeInstanceApplicationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of the ComputeInstance application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param endpointUri Application&#39; endpoint URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(@Nullable String endpointUri) {
             $.endpointUri = endpointUri;
             return this;

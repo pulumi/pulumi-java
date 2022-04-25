@@ -12,33 +12,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureRecoveryServiceVaultProtectionIntentResponse {
     /**
-     * Type of backup management for the backed up item.
+     * @return Type of backup management for the backed up item.
      * 
      */
     private final @Nullable String backupManagementType;
     /**
-     * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+     * @return ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
      * 
      */
     private final @Nullable String itemId;
     /**
-     * ID of the backup policy with which this item is backed up.
+     * @return ID of the backup policy with which this item is backed up.
      * 
      */
     private final @Nullable String policyId;
     /**
-     * backup protectionIntent type.
+     * @return backup protectionIntent type.
      * Expected value is &#39;RecoveryServiceVaultItem&#39;.
      * 
      */
     private final String protectionIntentItemType;
     /**
-     * Backup state of this backup item.
+     * @return Backup state of this backup item.
      * 
      */
     private final @Nullable String protectionState;
     /**
-     * ARM ID of the resource to be backed up.
+     * @return ARM ID of the resource to be backed up.
      * 
      */
     private final @Nullable String sourceResourceId;
@@ -60,45 +60,45 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
     }
 
     /**
-     * Type of backup management for the backed up item.
+     * @return Type of backup management for the backed up item.
      * 
-    */
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
-     * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+     * @return ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
      * 
-    */
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
     /**
-     * ID of the backup policy with which this item is backed up.
+     * @return ID of the backup policy with which this item is backed up.
      * 
-    */
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
-     * backup protectionIntent type.
+     * @return backup protectionIntent type.
      * Expected value is &#39;RecoveryServiceVaultItem&#39;.
      * 
-    */
+     */
     public String protectionIntentItemType() {
         return this.protectionIntentItemType;
     }
     /**
-     * Backup state of this backup item.
+     * @return Backup state of this backup item.
      * 
-    */
+     */
     public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
-     * ARM ID of the resource to be backed up.
+     * @return ARM ID of the resource to be backed up.
      * 
-    */
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }

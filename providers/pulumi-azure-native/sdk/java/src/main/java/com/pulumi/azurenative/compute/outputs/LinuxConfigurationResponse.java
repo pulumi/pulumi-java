@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LinuxConfigurationResponse {
     /**
-     * Specifies whether password authentication should be disabled.
+     * @return Specifies whether password authentication should be disabled.
      * 
      */
     private final @Nullable Boolean disablePasswordAuthentication;
     /**
-     * [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+     * @return [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
      * 
      */
     private final @Nullable LinuxPatchSettingsResponse patchSettings;
     /**
-     * Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+     * @return Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
      * 
      */
     private final @Nullable Boolean provisionVMAgent;
     /**
-     * Specifies the ssh key configuration for a Linux OS.
+     * @return Specifies the ssh key configuration for a Linux OS.
      * 
      */
     private final @Nullable SshConfigurationResponse ssh;
@@ -47,30 +47,30 @@ public final class LinuxConfigurationResponse {
     }
 
     /**
-     * Specifies whether password authentication should be disabled.
+     * @return Specifies whether password authentication should be disabled.
      * 
-    */
+     */
     public Optional<Boolean> disablePasswordAuthentication() {
         return Optional.ofNullable(this.disablePasswordAuthentication);
     }
     /**
-     * [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+     * @return [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
      * 
-    */
+     */
     public Optional<LinuxPatchSettingsResponse> patchSettings() {
         return Optional.ofNullable(this.patchSettings);
     }
     /**
-     * Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+     * @return Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
      * 
-    */
+     */
     public Optional<Boolean> provisionVMAgent() {
         return Optional.ofNullable(this.provisionVMAgent);
     }
     /**
-     * Specifies the ssh key configuration for a Linux OS.
+     * @return Specifies the ssh key configuration for a Linux OS.
      * 
-    */
+     */
     public Optional<SshConfigurationResponse> ssh() {
         return Optional.ofNullable(this.ssh);
     }

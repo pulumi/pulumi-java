@@ -26,6 +26,10 @@ public final class NetworkManagerSecurityGroupItemArgs extends com.pulumi.resour
     @Import(name="networkGroupId")
     private @Nullable Output<String> networkGroupId;
 
+    /**
+     * @return Network manager group Id.
+     * 
+     */
     public Optional<Output<String>> networkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
@@ -54,11 +58,23 @@ public final class NetworkManagerSecurityGroupItemArgs extends com.pulumi.resour
             $ = new NetworkManagerSecurityGroupItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkGroupId Network manager group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
             $.networkGroupId = networkGroupId;
             return this;
         }
 
+        /**
+         * @param networkGroupId Network manager group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupId(String networkGroupId) {
             return networkGroupId(Output.of(networkGroupId));
         }

@@ -33,6 +33,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="agentConfiguration")
     private @Nullable AgentPropertiesResponse agentConfiguration;
 
+    /**
+     * @return The machine configuration of the run agent.
+     * 
+     */
     public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
@@ -44,6 +48,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="agentPoolName")
     private @Nullable String agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -55,6 +63,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="credentials")
     private @Nullable CredentialsResponse credentials;
 
+    /**
+     * @return The properties that describes a set of credentials that will be used when this run is invoked.
+     * 
+     */
     public Optional<CredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -66,6 +78,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="encodedTaskContent", required=true)
     private String encodedTaskContent;
 
+    /**
+     * @return Base64 encoded value of the template/definition file content.
+     * 
+     */
     public String encodedTaskContent() {
         return this.encodedTaskContent;
     }
@@ -77,6 +93,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="encodedValuesContent")
     private @Nullable String encodedValuesContent;
 
+    /**
+     * @return Base64 encoded value of the parameters/values file content.
+     * 
+     */
     public Optional<String> encodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
@@ -88,6 +108,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="isArchiveEnabled")
     private @Nullable Boolean isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -99,6 +123,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="logTemplate")
     private @Nullable String logTemplate;
 
+    /**
+     * @return The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
@@ -110,6 +138,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="platform", required=true)
     private PlatformPropertiesResponse platform;
 
+    /**
+     * @return The platform properties against which the run has to happen.
+     * 
+     */
     public PlatformPropertiesResponse platform() {
         return this.platform;
     }
@@ -122,6 +154,11 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="sourceLocation")
     private @Nullable String sourceLocation;
 
+    /**
+     * @return The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+     * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+     * 
+     */
     public Optional<String> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
@@ -133,6 +170,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="timeout")
     private @Nullable Integer timeout;
 
+    /**
+     * @return Run timeout in seconds.
+     * 
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -145,6 +186,11 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the run request.
+     * Expected value is &#39;EncodedTaskRunRequest&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -156,6 +202,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
     @Import(name="values")
     private @Nullable List<SetValueResponse> values;
 
+    /**
+     * @return The collection of overridable values that can be passed when running a task.
+     * 
+     */
     public Optional<List<SetValueResponse>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -195,66 +245,146 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
             $ = new EncodedTaskRunRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             $.agentConfiguration = agentConfiguration;
             return this;
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable String agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param credentials The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable CredentialsResponse credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param encodedTaskContent Base64 encoded value of the template/definition file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedTaskContent(String encodedTaskContent) {
             $.encodedTaskContent = encodedTaskContent;
             return this;
         }
 
+        /**
+         * @param encodedValuesContent Base64 encoded value of the parameters/values file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             $.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(@Nullable String logTemplate) {
             $.logTemplate = logTemplate;
             return this;
         }
 
+        /**
+         * @param platform The platform properties against which the run has to happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(PlatformPropertiesResponse platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param sourceLocation The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocation(@Nullable String sourceLocation) {
             $.sourceLocation = sourceLocation;
             return this;
         }
 
+        /**
+         * @param timeout Run timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Integer timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;EncodedTaskRunRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<SetValueResponse> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
         }

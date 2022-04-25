@@ -25,6 +25,10 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
     @Import(name="chartValues")
     private @Nullable String chartValues;
 
+    /**
+     * @return Values override for the operator Helm chart.
+     * 
+     */
     public Optional<String> chartValues() {
         return Optional.ofNullable(this.chartValues);
     }
@@ -36,6 +40,10 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
     @Import(name="chartVersion")
     private @Nullable String chartVersion;
 
+    /**
+     * @return Version of the operator Helm chart.
+     * 
+     */
     public Optional<String> chartVersion() {
         return Optional.ofNullable(this.chartVersion);
     }
@@ -65,11 +73,23 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
             $ = new HelmOperatorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chartValues Values override for the operator Helm chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartValues(@Nullable String chartValues) {
             $.chartValues = chartValues;
             return this;
         }
 
+        /**
+         * @param chartVersion Version of the operator Helm chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartVersion(@Nullable String chartVersion) {
             $.chartVersion = chartVersion;
             return this;

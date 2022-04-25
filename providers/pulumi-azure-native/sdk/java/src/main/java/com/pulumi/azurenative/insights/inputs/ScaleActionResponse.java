@@ -26,6 +26,10 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cooldown", required=true)
     private String cooldown;
 
+    /**
+     * @return the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+     * 
+     */
     public String cooldown() {
         return this.cooldown;
     }
@@ -37,6 +41,10 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return the scale direction. Whether the scaling action increases or decreases the number of instances.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -48,6 +56,10 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return the type of action that should occur when the scale rule fires.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,6 +71,10 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -90,21 +106,45 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScaleActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cooldown the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(String cooldown) {
             $.cooldown = cooldown;
             return this;
         }
 
+        /**
+         * @param direction the scale direction. Whether the scaling action increases or decreases the number of instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param type the type of action that should occur when the scale rule fires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

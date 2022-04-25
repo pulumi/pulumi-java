@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
     /**
-     * The authorization type for integration runtime sharing.
+     * @return The authorization type for integration runtime sharing.
      * Expected value is &#39;RBAC&#39;.
      * 
      */
     private final String authorizationType;
     /**
-     * The resource identifier of the integration runtime to be shared.
+     * @return The resource identifier of the integration runtime to be shared.
      * 
      */
     private final String resourceId;
@@ -30,17 +30,17 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
     }
 
     /**
-     * The authorization type for integration runtime sharing.
+     * @return The authorization type for integration runtime sharing.
      * Expected value is &#39;RBAC&#39;.
      * 
-    */
+     */
     public String authorizationType() {
         return this.authorizationType;
     }
     /**
-     * The resource identifier of the integration runtime to be shared.
+     * @return The resource identifier of the integration runtime to be shared.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }

@@ -19,6 +19,10 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
     @Import(name="configurationProfileAssignmentName", required=true)
     private String configurationProfileAssignmentName;
 
+    /**
+     * @return The configuration profile assignment name.
+     * 
+     */
     public String configurationProfileAssignmentName() {
         return this.configurationProfileAssignmentName;
     }
@@ -30,6 +34,10 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
     @Import(name="vmName", required=true)
     private String vmName;
 
+    /**
+     * @return The name of the virtual machine.
+     * 
+     */
     public String vmName() {
         return this.vmName;
     }
@@ -71,16 +83,34 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
             $ = new GetConfigurationProfileAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationProfileAssignmentName The configuration profile assignment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfileAssignmentName(String configurationProfileAssignmentName) {
             $.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vmName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(String vmName) {
             $.vmName = vmName;
             return this;

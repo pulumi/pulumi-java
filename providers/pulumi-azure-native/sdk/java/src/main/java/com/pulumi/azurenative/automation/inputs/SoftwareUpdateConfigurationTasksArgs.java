@@ -26,6 +26,10 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
     @Import(name="postTask")
     private @Nullable Output<TaskPropertiesArgs> postTask;
 
+    /**
+     * @return Post task properties.
+     * 
+     */
     public Optional<Output<TaskPropertiesArgs>> postTask() {
         return Optional.ofNullable(this.postTask);
     }
@@ -37,6 +41,10 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
     @Import(name="preTask")
     private @Nullable Output<TaskPropertiesArgs> preTask;
 
+    /**
+     * @return Pre task properties.
+     * 
+     */
     public Optional<Output<TaskPropertiesArgs>> preTask() {
         return Optional.ofNullable(this.preTask);
     }
@@ -66,20 +74,44 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
             $ = new SoftwareUpdateConfigurationTasksArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param postTask Post task properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postTask(@Nullable Output<TaskPropertiesArgs> postTask) {
             $.postTask = postTask;
             return this;
         }
 
+        /**
+         * @param postTask Post task properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postTask(TaskPropertiesArgs postTask) {
             return postTask(Output.of(postTask));
         }
 
+        /**
+         * @param preTask Pre task properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preTask(@Nullable Output<TaskPropertiesArgs> preTask) {
             $.preTask = preTask;
             return this;
         }
 
+        /**
+         * @param preTask Pre task properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preTask(TaskPropertiesArgs preTask) {
             return preTask(Output.of(preTask));
         }

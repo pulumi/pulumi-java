@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRegistrationResult {
     /**
-     * Specifies the billing mode for the Azure Stack registration.
+     * @return Specifies the billing mode for the Azure Stack registration.
      * 
      */
     private final @Nullable String billingModel;
     /**
-     * The identifier of the registered Azure Stack.
+     * @return The identifier of the registered Azure Stack.
      * 
      */
     private final @Nullable String cloudId;
     /**
-     * The entity tag used for optimistic concurrency when modifying the resource.
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
     private final @Nullable String etag;
     /**
-     * ID of the resource.
+     * @return ID of the resource.
      * 
      */
     private final String id;
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
      */
     private final String location;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * The object identifier associated with the Azure Stack connecting to Azure.
+     * @return The object identifier associated with the Azure Stack connecting to Azure.
      * 
      */
     private final @Nullable String objectId;
     /**
-     * Custom tags for the resource.
+     * @return Custom tags for the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Type of Resource.
+     * @return Type of Resource.
      * 
      */
     private final String type;
@@ -81,65 +81,65 @@ public final class GetRegistrationResult {
     }
 
     /**
-     * Specifies the billing mode for the Azure Stack registration.
+     * @return Specifies the billing mode for the Azure Stack registration.
      * 
-    */
+     */
     public Optional<String> billingModel() {
         return Optional.ofNullable(this.billingModel);
     }
     /**
-     * The identifier of the registered Azure Stack.
+     * @return The identifier of the registered Azure Stack.
      * 
-    */
+     */
     public Optional<String> cloudId() {
         return Optional.ofNullable(this.cloudId);
     }
     /**
-     * The entity tag used for optimistic concurrency when modifying the resource.
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * ID of the resource.
+     * @return ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The object identifier associated with the Azure Stack connecting to Azure.
+     * @return The object identifier associated with the Azure Stack connecting to Azure.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * Custom tags for the resource.
+     * @return Custom tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of Resource.
+     * @return Type of Resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

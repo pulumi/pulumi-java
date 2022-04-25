@@ -23,6 +23,10 @@ public final class GatewayDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="applicationName", required=true)
     private String applicationName;
 
+    /**
+     * @return Name of the service fabric Mesh application.
+     * 
+     */
     public String applicationName() {
         return this.applicationName;
     }
@@ -34,6 +38,10 @@ public final class GatewayDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return name of the endpoint in the service.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -45,6 +53,10 @@ public final class GatewayDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return service that contains the endpoint.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -75,16 +87,34 @@ public final class GatewayDestinationResponse extends com.pulumi.resources.Invok
             $ = new GatewayDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName Name of the service fabric Mesh application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param endpointName name of the endpoint in the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param serviceName service that contains the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

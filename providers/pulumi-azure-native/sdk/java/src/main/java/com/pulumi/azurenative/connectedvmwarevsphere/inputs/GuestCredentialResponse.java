@@ -25,6 +25,10 @@ public final class GuestCredentialResponse extends com.pulumi.resources.InvokeAr
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Gets or sets username to connect with the guest.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -53,6 +57,12 @@ public final class GuestCredentialResponse extends com.pulumi.resources.InvokeAr
             $ = new GuestCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param username Gets or sets username to connect with the guest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

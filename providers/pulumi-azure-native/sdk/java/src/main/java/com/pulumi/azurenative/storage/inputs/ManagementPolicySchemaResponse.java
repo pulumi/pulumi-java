@@ -24,6 +24,10 @@ public final class ManagementPolicySchemaResponse extends com.pulumi.resources.I
     @Import(name="rules", required=true)
     private List<ManagementPolicyRuleResponse> rules;
 
+    /**
+     * @return The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+     * 
+     */
     public List<ManagementPolicyRuleResponse> rules() {
         return this.rules;
     }
@@ -52,11 +56,23 @@ public final class ManagementPolicySchemaResponse extends com.pulumi.resources.I
             $ = new ManagementPolicySchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ManagementPolicyRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ManagementPolicyRuleResponse... rules) {
             return rules(List.of(rules));
         }

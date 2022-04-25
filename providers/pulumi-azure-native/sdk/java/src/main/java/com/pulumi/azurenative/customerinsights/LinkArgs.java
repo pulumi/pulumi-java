@@ -29,6 +29,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Localized descriptions for the Link.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Localized display name for the Link.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -51,6 +59,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -62,6 +74,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkName")
     private @Nullable Output<String> linkName;
 
+    /**
+     * @return The name of the link.
+     * 
+     */
     public Optional<Output<String>> linkName() {
         return Optional.ofNullable(this.linkName);
     }
@@ -73,6 +89,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mappings")
     private @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
 
+    /**
+     * @return The set of properties mappings between the source and target Types.
+     * 
+     */
     public Optional<Output<List<TypePropertiesMappingArgs>>> mappings() {
         return Optional.ofNullable(this.mappings);
     }
@@ -84,6 +104,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationType")
     private @Nullable Output<InstanceOperationType> operationType;
 
+    /**
+     * @return Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
+     * 
+     */
     public Optional<Output<InstanceOperationType>> operationType() {
         return Optional.ofNullable(this.operationType);
     }
@@ -95,6 +119,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="participantPropertyReferences", required=true)
     private Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
 
+    /**
+     * @return The properties that represent the participating profile.
+     * 
+     */
     public Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences() {
         return this.participantPropertyReferences;
     }
@@ -106,6 +134,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="referenceOnly")
     private @Nullable Output<Boolean> referenceOnly;
 
+    /**
+     * @return Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
+     * 
+     */
     public Optional<Output<Boolean>> referenceOnly() {
         return Optional.ofNullable(this.referenceOnly);
     }
@@ -117,6 +149,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -128,6 +164,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceEntityType", required=true)
     private Output<EntityType> sourceEntityType;
 
+    /**
+     * @return Type of source entity.
+     * 
+     */
     public Output<EntityType> sourceEntityType() {
         return this.sourceEntityType;
     }
@@ -139,6 +179,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceEntityTypeName", required=true)
     private Output<String> sourceEntityTypeName;
 
+    /**
+     * @return Name of the source Entity Type.
+     * 
+     */
     public Output<String> sourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
@@ -150,6 +194,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetEntityType", required=true)
     private Output<EntityType> targetEntityType;
 
+    /**
+     * @return Type of target entity.
+     * 
+     */
     public Output<EntityType> targetEntityType() {
         return this.targetEntityType;
     }
@@ -161,6 +209,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetEntityTypeName", required=true)
     private Output<String> targetEntityTypeName;
 
+    /**
+     * @return Name of the target Entity Type.
+     * 
+     */
     public Output<String> targetEntityTypeName() {
         return this.targetEntityTypeName;
     }
@@ -201,127 +253,295 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Localized descriptions for the Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Localized descriptions for the Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Localized display name for the Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Localized display name for the Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param linkName The name of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkName(@Nullable Output<String> linkName) {
             $.linkName = linkName;
             return this;
         }
 
+        /**
+         * @param linkName The name of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkName(String linkName) {
             return linkName(Output.of(linkName));
         }
 
+        /**
+         * @param mappings The set of properties mappings between the source and target Types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(@Nullable Output<List<TypePropertiesMappingArgs>> mappings) {
             $.mappings = mappings;
             return this;
         }
 
+        /**
+         * @param mappings The set of properties mappings between the source and target Types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(List<TypePropertiesMappingArgs> mappings) {
             return mappings(Output.of(mappings));
         }
 
+        /**
+         * @param mappings The set of properties mappings between the source and target Types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(TypePropertiesMappingArgs... mappings) {
             return mappings(List.of(mappings));
         }
 
+        /**
+         * @param operationType Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(@Nullable Output<InstanceOperationType> operationType) {
             $.operationType = operationType;
             return this;
         }
 
+        /**
+         * @param operationType Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(InstanceOperationType operationType) {
             return operationType(Output.of(operationType));
         }
 
+        /**
+         * @param participantPropertyReferences The properties that represent the participating profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder participantPropertyReferences(Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences) {
             $.participantPropertyReferences = participantPropertyReferences;
             return this;
         }
 
+        /**
+         * @param participantPropertyReferences The properties that represent the participating profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder participantPropertyReferences(List<ParticipantPropertyReferenceArgs> participantPropertyReferences) {
             return participantPropertyReferences(Output.of(participantPropertyReferences));
         }
 
+        /**
+         * @param participantPropertyReferences The properties that represent the participating profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder participantPropertyReferences(ParticipantPropertyReferenceArgs... participantPropertyReferences) {
             return participantPropertyReferences(List.of(participantPropertyReferences));
         }
 
+        /**
+         * @param referenceOnly Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceOnly(@Nullable Output<Boolean> referenceOnly) {
             $.referenceOnly = referenceOnly;
             return this;
         }
 
+        /**
+         * @param referenceOnly Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceOnly(Boolean referenceOnly) {
             return referenceOnly(Output.of(referenceOnly));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sourceEntityType Type of source entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceEntityType(Output<EntityType> sourceEntityType) {
             $.sourceEntityType = sourceEntityType;
             return this;
         }
 
+        /**
+         * @param sourceEntityType Type of source entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceEntityType(EntityType sourceEntityType) {
             return sourceEntityType(Output.of(sourceEntityType));
         }
 
+        /**
+         * @param sourceEntityTypeName Name of the source Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceEntityTypeName(Output<String> sourceEntityTypeName) {
             $.sourceEntityTypeName = sourceEntityTypeName;
             return this;
         }
 
+        /**
+         * @param sourceEntityTypeName Name of the source Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceEntityTypeName(String sourceEntityTypeName) {
             return sourceEntityTypeName(Output.of(sourceEntityTypeName));
         }
 
+        /**
+         * @param targetEntityType Type of target entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetEntityType(Output<EntityType> targetEntityType) {
             $.targetEntityType = targetEntityType;
             return this;
         }
 
+        /**
+         * @param targetEntityType Type of target entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetEntityType(EntityType targetEntityType) {
             return targetEntityType(Output.of(targetEntityType));
         }
 
+        /**
+         * @param targetEntityTypeName Name of the target Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetEntityTypeName(Output<String> targetEntityTypeName) {
             $.targetEntityTypeName = targetEntityTypeName;
             return this;
         }
 
+        /**
+         * @param targetEntityTypeName Name of the target Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetEntityTypeName(String targetEntityTypeName) {
             return targetEntityTypeName(Output.of(targetEntityTypeName));
         }

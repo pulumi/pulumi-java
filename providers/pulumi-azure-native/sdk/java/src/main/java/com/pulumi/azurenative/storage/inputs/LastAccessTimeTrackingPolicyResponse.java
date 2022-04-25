@@ -28,6 +28,10 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
     @Import(name="blobType")
     private @Nullable List<String> blobType;
 
+    /**
+     * @return An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
+     * 
+     */
     public Optional<List<String>> blobType() {
         return Optional.ofNullable(this.blobType);
     }
@@ -39,6 +43,10 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
     @Import(name="enable", required=true)
     private Boolean enable;
 
+    /**
+     * @return When set to true last access time based tracking is enabled.
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
@@ -50,6 +58,10 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
     @Import(name="trackingGranularityInDays")
     private @Nullable Integer trackingGranularityInDays;
 
+    /**
+     * @return The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
+     * 
+     */
     public Optional<Integer> trackingGranularityInDays() {
         return Optional.ofNullable(this.trackingGranularityInDays);
     }
@@ -92,25 +108,55 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
             $ = new LastAccessTimeTrackingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobType An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobType(@Nullable List<String> blobType) {
             $.blobType = blobType;
             return this;
         }
 
+        /**
+         * @param blobType An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobType(String... blobType) {
             return blobType(List.of(blobType));
         }
 
+        /**
+         * @param enable When set to true last access time based tracking is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param name Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param trackingGranularityInDays The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
             $.trackingGranularityInDays = trackingGranularityInDays;
             return this;

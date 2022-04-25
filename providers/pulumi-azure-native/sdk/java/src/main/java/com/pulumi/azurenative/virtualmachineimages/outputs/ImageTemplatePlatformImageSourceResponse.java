@@ -13,33 +13,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTemplatePlatformImageSourceResponse {
     /**
-     * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * @return Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
      */
     private final @Nullable String offer;
     /**
-     * Optional configuration of purchase plan for platform image.
+     * @return Optional configuration of purchase plan for platform image.
      * 
      */
     private final @Nullable PlatformImagePurchasePlanResponse planInfo;
     /**
-     * Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * @return Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
      */
     private final @Nullable String publisher;
     /**
-     * Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * @return Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
      */
     private final @Nullable String sku;
     /**
-     * Specifies the type of source image you want to start with.
+     * @return Specifies the type of source image you want to start with.
      * Expected value is &#39;PlatformImage&#39;.
      * 
      */
     private final String type;
     /**
-     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * @return Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
      */
     private final @Nullable String version;
@@ -61,45 +61,45 @@ public final class ImageTemplatePlatformImageSourceResponse {
     }
 
     /**
-     * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * @return Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
-    */
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
-     * Optional configuration of purchase plan for platform image.
+     * @return Optional configuration of purchase plan for platform image.
      * 
-    */
+     */
     public Optional<PlatformImagePurchasePlanResponse> planInfo() {
         return Optional.ofNullable(this.planInfo);
     }
     /**
-     * Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * @return Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * @return Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Specifies the type of source image you want to start with.
+     * @return Specifies the type of source image you want to start with.
      * Expected value is &#39;PlatformImage&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * @return Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

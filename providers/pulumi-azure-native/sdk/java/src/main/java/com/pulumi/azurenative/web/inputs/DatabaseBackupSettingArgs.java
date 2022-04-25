@@ -28,6 +28,10 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
     @Import(name="connectionString")
     private @Nullable Output<String> connectionString;
 
+    /**
+     * @return Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+     * 
+     */
     public Optional<Output<String>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -40,6 +44,11 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
     @Import(name="connectionStringName")
     private @Nullable Output<String> connectionStringName;
 
+    /**
+     * @return Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+     * This is used during restore with overwrite connection strings options.
+     * 
+     */
     public Optional<Output<String>> connectionStringName() {
         return Optional.ofNullable(this.connectionStringName);
     }
@@ -51,6 +60,10 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
     @Import(name="databaseType", required=true)
     private Output<Either<String,DatabaseType>> databaseType;
 
+    /**
+     * @return Database type (e.g. SqlAzure / MySql).
+     * 
+     */
     public Output<Either<String,DatabaseType>> databaseType() {
         return this.databaseType;
     }
@@ -89,37 +102,87 @@ public final class DatabaseBackupSettingArgs extends com.pulumi.resources.Resour
             $ = new DatabaseBackupSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param connectionStringName Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+         * This is used during restore with overwrite connection strings options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringName(@Nullable Output<String> connectionStringName) {
             $.connectionStringName = connectionStringName;
             return this;
         }
 
+        /**
+         * @param connectionStringName Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+         * This is used during restore with overwrite connection strings options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringName(String connectionStringName) {
             return connectionStringName(Output.of(connectionStringName));
         }
 
+        /**
+         * @param databaseType Database type (e.g. SqlAzure / MySql).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(Output<Either<String,DatabaseType>> databaseType) {
             $.databaseType = databaseType;
             return this;
         }
 
+        /**
+         * @param databaseType Database type (e.g. SqlAzure / MySql).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(Either<String,DatabaseType> databaseType) {
             return databaseType(Output.of(databaseType));
         }
 
+        /**
+         * @param databaseType Database type (e.g. SqlAzure / MySql).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(String databaseType) {
             return databaseType(Either.ofLeft(databaseType));
         }
 
+        /**
+         * @param databaseType Database type (e.g. SqlAzure / MySql).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(DatabaseType databaseType) {
             return databaseType(Either.ofRight(databaseType));
         }

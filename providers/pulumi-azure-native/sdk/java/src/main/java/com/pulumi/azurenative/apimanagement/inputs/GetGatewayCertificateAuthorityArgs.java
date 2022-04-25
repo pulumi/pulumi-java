@@ -19,6 +19,10 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
     @Import(name="certificateId", required=true)
     private String certificateId;
 
+    /**
+     * @return Identifier of the certificate entity. Must be unique in the current API Management service instance.
+     * 
+     */
     public String certificateId() {
         return this.certificateId;
     }
@@ -30,6 +34,10 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
     @Import(name="gatewayId", required=true)
     private String gatewayId;
 
+    /**
+     * @return Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+     * 
+     */
     public String gatewayId() {
         return this.gatewayId;
     }
@@ -41,6 +49,10 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
             $ = new GetGatewayCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId Identifier of the certificate entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

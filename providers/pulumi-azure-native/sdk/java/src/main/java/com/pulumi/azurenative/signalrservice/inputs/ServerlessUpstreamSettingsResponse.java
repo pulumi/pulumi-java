@@ -26,6 +26,10 @@ public final class ServerlessUpstreamSettingsResponse extends com.pulumi.resourc
     @Import(name="templates")
     private @Nullable List<UpstreamTemplateResponse> templates;
 
+    /**
+     * @return Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
+     * 
+     */
     public Optional<List<UpstreamTemplateResponse>> templates() {
         return Optional.ofNullable(this.templates);
     }
@@ -54,11 +58,23 @@ public final class ServerlessUpstreamSettingsResponse extends com.pulumi.resourc
             $ = new ServerlessUpstreamSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param templates Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templates(@Nullable List<UpstreamTemplateResponse> templates) {
             $.templates = templates;
             return this;
         }
 
+        /**
+         * @param templates Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templates(UpstreamTemplateResponse... templates) {
             return templates(List.of(templates));
         }

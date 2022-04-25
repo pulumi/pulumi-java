@@ -27,6 +27,10 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="imageName", required=true)
     private Output<String> imageName;
 
+    /**
+     * @return Name of the IoT edge agent image.
+     * 
+     */
     public Output<String> imageName() {
         return this.imageName;
     }
@@ -38,6 +42,10 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="imageRepository")
     private @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
 
+    /**
+     * @return Image repository details.
+     * 
+     */
     public Optional<Output<ImageRepositoryCredentialArgs>> imageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }
@@ -49,6 +57,10 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tag", required=true)
     private Output<String> tag;
 
+    /**
+     * @return Image Tag.
+     * 
+     */
     public Output<String> tag() {
         return this.tag;
     }
@@ -79,29 +91,65 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
             $ = new IoTEdgeAgentInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageName Name of the IoT edge agent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName Name of the IoT edge agent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }
 
+        /**
+         * @param imageRepository Image repository details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepository(@Nullable Output<ImageRepositoryCredentialArgs> imageRepository) {
             $.imageRepository = imageRepository;
             return this;
         }
 
+        /**
+         * @param imageRepository Image repository details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepository(ImageRepositoryCredentialArgs imageRepository) {
             return imageRepository(Output.of(imageRepository));
         }
 
+        /**
+         * @param tag Image Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Image Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }

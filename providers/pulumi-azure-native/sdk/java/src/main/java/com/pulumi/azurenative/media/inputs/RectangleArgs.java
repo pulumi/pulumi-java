@@ -26,6 +26,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
     private @Nullable Output<String> height;
 
+    /**
+     * @return The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+     * 
+     */
     public Optional<Output<String>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -37,6 +41,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="left")
     private @Nullable Output<String> left;
 
+    /**
+     * @return The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+     * 
+     */
     public Optional<Output<String>> left() {
         return Optional.ofNullable(this.left);
     }
@@ -48,6 +56,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="top")
     private @Nullable Output<String> top;
 
+    /**
+     * @return The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+     * 
+     */
     public Optional<Output<String>> top() {
         return Optional.ofNullable(this.top);
     }
@@ -59,6 +71,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
     private @Nullable Output<String> width;
 
+    /**
+     * @return The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+     * 
+     */
     public Optional<Output<String>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -90,38 +106,86 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RectangleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<String> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(String height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param left The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder left(@Nullable Output<String> left) {
             $.left = left;
             return this;
         }
 
+        /**
+         * @param left The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder left(String left) {
             return left(Output.of(left));
         }
 
+        /**
+         * @param top The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder top(@Nullable Output<String> top) {
             $.top = top;
             return this;
         }
 
+        /**
+         * @param top The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder top(String top) {
             return top(Output.of(top));
         }
 
+        /**
+         * @param width The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<String> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(String width) {
             return width(Output.of(width));
         }

@@ -26,6 +26,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureFileParameters")
     private @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters;
 
+    /**
+     * @return This type describes a volume provided by an Azure Files file share.
+     * 
+     */
     public Optional<Output<VolumeProviderParametersAzureFileArgs>> azureFileParameters() {
         return Optional.ofNullable(this.azureFileParameters);
     }
@@ -37,6 +41,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User readable description of the volume.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -59,6 +71,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provider", required=true)
     private Output<Either<String,VolumeProvider>> provider;
 
+    /**
+     * @return Provider of the volume.
+     * 
+     */
     public Output<Either<String,VolumeProvider>> provider() {
         return this.provider;
     }
@@ -70,6 +86,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeResourceName")
     private @Nullable Output<String> volumeResourceName;
 
+    /**
+     * @return The identity of the volume.
+     * 
+     */
     public Optional<Output<String>> volumeResourceName() {
         return Optional.ofNullable(this.volumeResourceName);
     }
@@ -126,73 +154,169 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureFileParameters This type describes a volume provided by an Azure Files file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileParameters(@Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters) {
             $.azureFileParameters = azureFileParameters;
             return this;
         }
 
+        /**
+         * @param azureFileParameters This type describes a volume provided by an Azure Files file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileParameters(VolumeProviderParametersAzureFileArgs azureFileParameters) {
             return azureFileParameters(Output.of(azureFileParameters));
         }
 
+        /**
+         * @param description User readable description of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User readable description of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param provider Provider of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(Output<Either<String,VolumeProvider>> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider Provider of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(Either<String,VolumeProvider> provider) {
             return provider(Output.of(provider));
         }
 
+        /**
+         * @param provider Provider of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             return provider(Either.ofLeft(provider));
         }
 
+        /**
+         * @param provider Provider of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(VolumeProvider provider) {
             return provider(Either.ofRight(provider));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param volumeResourceName The identity of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeResourceName(@Nullable Output<String> volumeResourceName) {
             $.volumeResourceName = volumeResourceName;
             return this;
         }
 
+        /**
+         * @param volumeResourceName The identity of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeResourceName(String volumeResourceName) {
             return volumeResourceName(Output.of(volumeResourceName));
         }

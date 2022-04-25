@@ -26,6 +26,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Status code provided by the Extension
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="displayStatus")
     private @Nullable String displayStatus;
 
+    /**
+     * @return Short description of status of this instance of the extension.
+     * 
+     */
     public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
@@ -48,6 +56,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="level")
     private @Nullable String level;
 
+    /**
+     * @return Level of the status.
+     * 
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
@@ -59,6 +71,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Detailed message of the status from the Extension instance.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -70,6 +86,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="time")
     private @Nullable String time;
 
+    /**
+     * @return DateLiteral (per ISO8601) noting the time of installation status.
+     * 
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
@@ -102,26 +122,56 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
             $ = new ExtensionStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Status code provided by the Extension
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param displayStatus Short description of status of this instance of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(@Nullable String displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param level Level of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param message Detailed message of the status from the Extension instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param time DateLiteral (per ISO8601) noting the time of installation status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable String time) {
             $.time = time;
             return this;

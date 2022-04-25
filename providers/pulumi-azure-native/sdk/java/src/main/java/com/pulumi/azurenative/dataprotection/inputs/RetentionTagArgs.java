@@ -24,6 +24,10 @@ public final class RetentionTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagName", required=true)
     private Output<String> tagName;
 
+    /**
+     * @return Retention Tag Name to relate it to retention rule.
+     * 
+     */
     public Output<String> tagName() {
         return this.tagName;
     }
@@ -52,11 +56,23 @@ public final class RetentionTagArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RetentionTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tagName Retention Tag Name to relate it to retention rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(Output<String> tagName) {
             $.tagName = tagName;
             return this;
         }
 
+        /**
+         * @param tagName Retention Tag Name to relate it to retention rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(String tagName) {
             return tagName(Output.of(tagName));
         }

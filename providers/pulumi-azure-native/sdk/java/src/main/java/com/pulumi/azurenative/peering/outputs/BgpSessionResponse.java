@@ -13,57 +13,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpSessionResponse {
     /**
-     * The maximum number of prefixes advertised over the IPv4 session.
+     * @return The maximum number of prefixes advertised over the IPv4 session.
      * 
      */
     private final @Nullable Integer maxPrefixesAdvertisedV4;
     /**
-     * The maximum number of prefixes advertised over the IPv6 session.
+     * @return The maximum number of prefixes advertised over the IPv6 session.
      * 
      */
     private final @Nullable Integer maxPrefixesAdvertisedV6;
     /**
-     * The MD5 authentication key of the session.
+     * @return The MD5 authentication key of the session.
      * 
      */
     private final @Nullable String md5AuthenticationKey;
     /**
-     * The IPv4 session address on Microsoft&#39;s end.
+     * @return The IPv4 session address on Microsoft&#39;s end.
      * 
      */
     private final @Nullable String microsoftSessionIPv4Address;
     /**
-     * The IPv6 session address on Microsoft&#39;s end.
+     * @return The IPv6 session address on Microsoft&#39;s end.
      * 
      */
     private final @Nullable String microsoftSessionIPv6Address;
     /**
-     * The IPv4 session address on peer&#39;s end.
+     * @return The IPv4 session address on peer&#39;s end.
      * 
      */
     private final @Nullable String peerSessionIPv4Address;
     /**
-     * The IPv6 session address on peer&#39;s end.
+     * @return The IPv6 session address on peer&#39;s end.
      * 
      */
     private final @Nullable String peerSessionIPv6Address;
     /**
-     * The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+     * @return The IPv4 prefix that contains both ends&#39; IPv4 addresses.
      * 
      */
     private final @Nullable String sessionPrefixV4;
     /**
-     * The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+     * @return The IPv6 prefix that contains both ends&#39; IPv6 addresses.
      * 
      */
     private final @Nullable String sessionPrefixV6;
     /**
-     * The state of the IPv4 session.
+     * @return The state of the IPv4 session.
      * 
      */
     private final String sessionStateV4;
     /**
-     * The state of the IPv6 session.
+     * @return The state of the IPv6 session.
      * 
      */
     private final String sessionStateV6;
@@ -95,79 +95,79 @@ public final class BgpSessionResponse {
     }
 
     /**
-     * The maximum number of prefixes advertised over the IPv4 session.
+     * @return The maximum number of prefixes advertised over the IPv4 session.
      * 
-    */
+     */
     public Optional<Integer> maxPrefixesAdvertisedV4() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV4);
     }
     /**
-     * The maximum number of prefixes advertised over the IPv6 session.
+     * @return The maximum number of prefixes advertised over the IPv6 session.
      * 
-    */
+     */
     public Optional<Integer> maxPrefixesAdvertisedV6() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV6);
     }
     /**
-     * The MD5 authentication key of the session.
+     * @return The MD5 authentication key of the session.
      * 
-    */
+     */
     public Optional<String> md5AuthenticationKey() {
         return Optional.ofNullable(this.md5AuthenticationKey);
     }
     /**
-     * The IPv4 session address on Microsoft&#39;s end.
+     * @return The IPv4 session address on Microsoft&#39;s end.
      * 
-    */
+     */
     public Optional<String> microsoftSessionIPv4Address() {
         return Optional.ofNullable(this.microsoftSessionIPv4Address);
     }
     /**
-     * The IPv6 session address on Microsoft&#39;s end.
+     * @return The IPv6 session address on Microsoft&#39;s end.
      * 
-    */
+     */
     public Optional<String> microsoftSessionIPv6Address() {
         return Optional.ofNullable(this.microsoftSessionIPv6Address);
     }
     /**
-     * The IPv4 session address on peer&#39;s end.
+     * @return The IPv4 session address on peer&#39;s end.
      * 
-    */
+     */
     public Optional<String> peerSessionIPv4Address() {
         return Optional.ofNullable(this.peerSessionIPv4Address);
     }
     /**
-     * The IPv6 session address on peer&#39;s end.
+     * @return The IPv6 session address on peer&#39;s end.
      * 
-    */
+     */
     public Optional<String> peerSessionIPv6Address() {
         return Optional.ofNullable(this.peerSessionIPv6Address);
     }
     /**
-     * The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+     * @return The IPv4 prefix that contains both ends&#39; IPv4 addresses.
      * 
-    */
+     */
     public Optional<String> sessionPrefixV4() {
         return Optional.ofNullable(this.sessionPrefixV4);
     }
     /**
-     * The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+     * @return The IPv6 prefix that contains both ends&#39; IPv6 addresses.
      * 
-    */
+     */
     public Optional<String> sessionPrefixV6() {
         return Optional.ofNullable(this.sessionPrefixV6);
     }
     /**
-     * The state of the IPv4 session.
+     * @return The state of the IPv4 session.
      * 
-    */
+     */
     public String sessionStateV4() {
         return this.sessionStateV4;
     }
     /**
-     * The state of the IPv6 session.
+     * @return The state of the IPv6 session.
      * 
-    */
+     */
     public String sessionStateV6() {
         return this.sessionStateV6;
     }

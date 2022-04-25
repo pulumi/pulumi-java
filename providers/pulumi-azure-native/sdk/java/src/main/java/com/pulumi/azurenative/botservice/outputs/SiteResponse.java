@@ -14,67 +14,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SiteResponse {
     /**
-     * Entity Tag
+     * @return Entity Tag
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Whether this site is enabled for block user upload.
+     * @return Whether this site is enabled for block user upload.
      * 
      */
     private final @Nullable Boolean isBlockUserUploadEnabled;
     /**
-     * Whether this site is enabled for DirectLine channel.
+     * @return Whether this site is enabled for DirectLine channel.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Whether this site is enabled for authentication with Bot Framework.
+     * @return Whether this site is enabled for authentication with Bot Framework.
      * 
      */
     private final @Nullable Boolean isSecureSiteEnabled;
     /**
-     * Whether this site is token enabled for channel
+     * @return Whether this site is token enabled for channel
      * 
      */
     private final @Nullable Boolean isTokenEnabled;
     /**
-     * Whether this site is enabled for Bot Framework V1 protocol.
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
      * 
      */
     private final Boolean isV1Enabled;
     /**
-     * Whether this site is enabled for Bot Framework V1 protocol.
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
      * 
      */
     private final Boolean isV3Enabled;
     /**
-     * Whether this site is enabled for preview versions of Webchat
+     * @return Whether this site is enabled for preview versions of Webchat
      * 
      */
     private final Boolean isWebchatPreviewEnabled;
     /**
-     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final String key;
     /**
-     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final String key2;
     /**
-     * Site Id
+     * @return Site Id
      * 
      */
     private final String siteId;
     /**
-     * Site name
+     * @return Site name
      * 
      */
     private final String siteName;
     /**
-     * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+     * @return List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
      * 
      */
     private final @Nullable List<String> trustedOrigins;
@@ -110,93 +110,93 @@ public final class SiteResponse {
     }
 
     /**
-     * Entity Tag
+     * @return Entity Tag
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Whether this site is enabled for block user upload.
+     * @return Whether this site is enabled for block user upload.
      * 
-    */
+     */
     public Optional<Boolean> isBlockUserUploadEnabled() {
         return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
     /**
-     * Whether this site is enabled for DirectLine channel.
+     * @return Whether this site is enabled for DirectLine channel.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Whether this site is enabled for authentication with Bot Framework.
+     * @return Whether this site is enabled for authentication with Bot Framework.
      * 
-    */
+     */
     public Optional<Boolean> isSecureSiteEnabled() {
         return Optional.ofNullable(this.isSecureSiteEnabled);
     }
     /**
-     * Whether this site is token enabled for channel
+     * @return Whether this site is token enabled for channel
      * 
-    */
+     */
     public Optional<Boolean> isTokenEnabled() {
         return Optional.ofNullable(this.isTokenEnabled);
     }
     /**
-     * Whether this site is enabled for Bot Framework V1 protocol.
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
      * 
-    */
+     */
     public Boolean isV1Enabled() {
         return this.isV1Enabled;
     }
     /**
-     * Whether this site is enabled for Bot Framework V1 protocol.
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
      * 
-    */
+     */
     public Boolean isV3Enabled() {
         return this.isV3Enabled;
     }
     /**
-     * Whether this site is enabled for preview versions of Webchat
+     * @return Whether this site is enabled for preview versions of Webchat
      * 
-    */
+     */
     public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
     /**
-     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public String key2() {
         return this.key2;
     }
     /**
-     * Site Id
+     * @return Site Id
      * 
-    */
+     */
     public String siteId() {
         return this.siteId;
     }
     /**
-     * Site name
+     * @return Site name
      * 
-    */
+     */
     public String siteName() {
         return this.siteName;
     }
     /**
-     * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+     * @return List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
      * 
-    */
+     */
     public List<String> trustedOrigins() {
         return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
     }

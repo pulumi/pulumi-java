@@ -25,6 +25,10 @@ public final class ApplicationGatewayBackendAddressResponse extends com.pulumi.r
     @Import(name="fqdn")
     private @Nullable String fqdn;
 
+    /**
+     * @return Fully qualified domain name (FQDN).
+     * 
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewayBackendAddressResponse extends com.pulumi.r
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return IP address.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -65,11 +73,23 @@ public final class ApplicationGatewayBackendAddressResponse extends com.pulumi.r
             $ = new ApplicationGatewayBackendAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdn Fully qualified domain name (FQDN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;

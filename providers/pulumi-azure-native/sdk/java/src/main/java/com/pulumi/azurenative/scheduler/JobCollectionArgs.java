@@ -24,6 +24,10 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobCollectionName")
     private @Nullable Output<String> jobCollectionName;
 
+    /**
+     * @return The job collection name.
+     * 
+     */
     public Optional<Output<String>> jobCollectionName() {
         return Optional.ofNullable(this.jobCollectionName);
     }
@@ -35,6 +39,10 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets the storage account location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the job collection resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<JobCollectionPropertiesArgs> properties;
 
+    /**
+     * @return Gets or sets the job collection properties.
+     * 
+     */
     public Optional<Output<JobCollectionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -68,6 +84,10 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class JobCollectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobCollectionName The job collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCollectionName(@Nullable Output<String> jobCollectionName) {
             $.jobCollectionName = jobCollectionName;
             return this;
         }
 
+        /**
+         * @param jobCollectionName The job collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCollectionName(String jobCollectionName) {
             return jobCollectionName(Output.of(jobCollectionName));
         }
 
+        /**
+         * @param location Gets or sets the storage account location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets the storage account location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Gets or sets the job collection resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the job collection resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Gets or sets the job collection properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<JobCollectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Gets or sets the job collection properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(JobCollectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Gets or sets the tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

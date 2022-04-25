@@ -24,6 +24,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends com.pulumi
     @Import(name="sourceConnectionInfo", required=true)
     private Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source PostgreSQL server
+     * 
+     */
     public Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -52,11 +56,23 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends com.pulumi
             $ = new ConnectToSourcePostgreSqlSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }

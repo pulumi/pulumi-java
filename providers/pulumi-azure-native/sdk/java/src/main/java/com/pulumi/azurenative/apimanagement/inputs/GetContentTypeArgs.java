@@ -19,6 +19,10 @@ public final class GetContentTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentTypeId", required=true)
     private String contentTypeId;
 
+    /**
+     * @return Content type identifier.
+     * 
+     */
     public String contentTypeId() {
         return this.contentTypeId;
     }
@@ -30,6 +34,10 @@ public final class GetContentTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetContentTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -71,16 +83,34 @@ public final class GetContentTypeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContentTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentTypeId Content type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypeId(String contentTypeId) {
             $.contentTypeId = contentTypeId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

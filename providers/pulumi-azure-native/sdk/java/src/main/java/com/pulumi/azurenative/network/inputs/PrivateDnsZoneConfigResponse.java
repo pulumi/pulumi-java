@@ -27,6 +27,10 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
     @Import(name="privateDnsZoneId")
     private @Nullable String privateDnsZoneId;
 
+    /**
+     * @return The resource id of the private dns zone.
+     * 
+     */
     public Optional<String> privateDnsZoneId() {
         return Optional.ofNullable(this.privateDnsZoneId);
     }
@@ -49,6 +57,10 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
     @Import(name="recordSets", required=true)
     private List<RecordSetResponse> recordSets;
 
+    /**
+     * @return A collection of information regarding a recordSet, holding information to identify private resources.
+     * 
+     */
     public List<RecordSetResponse> recordSets() {
         return this.recordSets;
     }
@@ -79,21 +91,45 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
             $ = new PrivateDnsZoneConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateDnsZoneId The resource id of the private dns zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
             $.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
 
+        /**
+         * @param recordSets A collection of information regarding a recordSet, holding information to identify private resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSets(List<RecordSetResponse> recordSets) {
             $.recordSets = recordSets;
             return this;
         }
 
+        /**
+         * @param recordSets A collection of information regarding a recordSet, holding information to identify private resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSets(RecordSetResponse... recordSets) {
             return recordSets(List.of(recordSets));
         }

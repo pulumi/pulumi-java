@@ -13,21 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManualScaleSettingsResponse {
     /**
-     * Fixed number of instances for this deployment.
+     * @return Fixed number of instances for this deployment.
      * 
      */
     private final @Nullable Integer instanceCount;
     /**
-     * Maximum number of instances for this deployment.
+     * @return Maximum number of instances for this deployment.
      * 
      */
     private final @Nullable Integer maxInstances;
     /**
-     * Minimum number of instances for this deployment.
+     * @return Minimum number of instances for this deployment.
      * 
      */
     private final @Nullable Integer minInstances;
     /**
+     * @return
      * Expected value is &#39;Manual&#39;.
      * 
      */
@@ -46,30 +47,31 @@ public final class ManualScaleSettingsResponse {
     }
 
     /**
-     * Fixed number of instances for this deployment.
+     * @return Fixed number of instances for this deployment.
      * 
-    */
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
-     * Maximum number of instances for this deployment.
+     * @return Maximum number of instances for this deployment.
      * 
-    */
+     */
     public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
-     * Minimum number of instances for this deployment.
+     * @return Minimum number of instances for this deployment.
      * 
-    */
+     */
     public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
+     * @return
      * Expected value is &#39;Manual&#39;.
      * 
-    */
+     */
     public String scaleType() {
         return this.scaleType;
     }

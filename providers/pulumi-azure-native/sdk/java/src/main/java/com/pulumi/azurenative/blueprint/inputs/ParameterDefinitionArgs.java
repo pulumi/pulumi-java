@@ -30,6 +30,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="allowedValues")
     private @Nullable Output<List<Object>> allowedValues;
 
+    /**
+     * @return Array of allowed values for this parameter.
+     * 
+     */
     public Optional<Output<List<Object>>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -41,6 +45,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="defaultValue")
     private @Nullable Output<Object> defaultValue;
 
+    /**
+     * @return Default Value for this parameter.
+     * 
+     */
     public Optional<Output<Object>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -52,6 +60,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this parameter/resourceGroup.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,6 +75,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return DisplayName of this parameter/resourceGroup.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -74,6 +90,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="strongType")
     private @Nullable Output<String> strongType;
 
+    /**
+     * @return StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+     * 
+     */
     public Optional<Output<String>> strongType() {
         return Optional.ofNullable(this.strongType);
     }
@@ -85,6 +105,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<Either<String,TemplateParameterType>> type;
 
+    /**
+     * @return Allowed data types for Resource Manager template parameters.
+     * 
+     */
     public Output<Either<String,TemplateParameterType>> type() {
         return this.type;
     }
@@ -118,68 +142,158 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
             $ = new ParameterDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues Array of allowed values for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable Output<List<Object>> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues Array of allowed values for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<Object> allowedValues) {
             return allowedValues(Output.of(allowedValues));
         }
 
+        /**
+         * @param allowedValues Array of allowed values for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param defaultValue Default Value for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue Default Value for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Object defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param description Description of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName DisplayName of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName DisplayName of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param strongType StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(@Nullable Output<String> strongType) {
             $.strongType = strongType;
             return this;
         }
 
+        /**
+         * @param strongType StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(String strongType) {
             return strongType(Output.of(strongType));
         }
 
+        /**
+         * @param type Allowed data types for Resource Manager template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,TemplateParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Allowed data types for Resource Manager template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,TemplateParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Allowed data types for Resource Manager template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Allowed data types for Resource Manager template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(TemplateParameterType type) {
             return type(Either.ofRight(type));
         }

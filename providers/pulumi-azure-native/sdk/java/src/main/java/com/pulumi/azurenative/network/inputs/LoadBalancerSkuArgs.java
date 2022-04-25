@@ -29,6 +29,10 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<Either<String,LoadBalancerSkuName>> name;
 
+    /**
+     * @return Name of a load balancer SKU.
+     * 
+     */
     public Optional<Output<Either<String,LoadBalancerSkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tier")
     private @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
 
+    /**
+     * @return Tier of a load balancer SKU.
+     * 
+     */
     public Optional<Output<Either<String,LoadBalancerSkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -69,36 +77,84 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
             $ = new LoadBalancerSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,LoadBalancerSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,LoadBalancerSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(LoadBalancerSkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Tier of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,LoadBalancerSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Tier of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Tier of a load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(LoadBalancerSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

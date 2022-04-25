@@ -26,6 +26,10 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Stored procedure parameter type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -37,6 +41,10 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
     @Import(name="value")
     private @Nullable Object value;
 
+    /**
+     * @return Stored procedure parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,11 +74,23 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
             $ = new StoredProcedureParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Stored procedure parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Stored procedure parameter value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Object value) {
             $.value = value;
             return this;

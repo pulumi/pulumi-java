@@ -29,6 +29,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     @Import(name="associations")
     private @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
 
+    /**
+     * @return Waf associations
+     * 
+     */
     public Optional<List<SecurityPolicyWebApplicationFirewallAssociationResponse>> associations() {
         return Optional.ofNullable(this.associations);
     }
@@ -41,6 +45,11 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the Security policy to create.
+     * Expected value is &#39;WebApplicationFirewall&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -52,6 +61,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     @Import(name="wafPolicy")
     private @Nullable ResourceReferenceResponse wafPolicy;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<ResourceReferenceResponse> wafPolicy() {
         return Optional.ofNullable(this.wafPolicy);
     }
@@ -82,20 +95,45 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
             $ = new SecurityPolicyWebApplicationFirewallParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associations Waf associations
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations) {
             $.associations = associations;
             return this;
         }
 
+        /**
+         * @param associations Waf associations
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(SecurityPolicyWebApplicationFirewallAssociationResponse... associations) {
             return associations(List.of(associations));
         }
 
+        /**
+         * @param type The type of the Security policy to create.
+         * Expected value is &#39;WebApplicationFirewall&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param wafPolicy Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
             $.wafPolicy = wafPolicy;
             return this;

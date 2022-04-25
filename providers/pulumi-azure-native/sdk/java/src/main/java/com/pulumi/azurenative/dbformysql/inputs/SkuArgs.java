@@ -29,6 +29,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The scale up/out capacity, representing server&#39;s compute units.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family")
     private @Nullable Output<String> family;
 
+    /**
+     * @return The family of hardware.
+     * 
+     */
     public Optional<Output<String>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -51,6 +59,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -62,6 +74,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<String> size;
 
+    /**
+     * @return The size code, to be interpreted by resource as appropriate.
+     * 
+     */
     public Optional<Output<String>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -73,6 +89,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<Either<String,SkuTier>> tier;
 
+    /**
+     * @return The tier of the particular SKU, e.g. Basic.
+     * 
+     */
     public Optional<Output<Either<String,SkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -105,55 +125,127 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The scale up/out capacity, representing server&#39;s compute units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The scale up/out capacity, representing server&#39;s compute units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param family The family of hardware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The family of hardware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param name The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param size The size code, to be interpreted by resource as appropriate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<String> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The size code, to be interpreted by resource as appropriate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param tier The tier of the particular SKU, e.g. Basic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,SkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier of the particular SKU, e.g. Basic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,SkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The tier of the particular SKU, e.g. Basic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The tier of the particular SKU, e.g. Basic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(SkuTier tier) {
             return tier(Either.ofRight(tier));
         }

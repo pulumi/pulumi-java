@@ -27,6 +27,10 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     @Import(name="networkInterfaceConfigurations")
     private @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
+    /**
+     * @return The list of network configurations.
+     * 
+     */
     public Optional<Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>>> networkInterfaceConfigurations() {
         return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
@@ -55,15 +59,33 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
             $ = new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(Output.of(networkInterfaceConfigurations));
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationArgs... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
         }

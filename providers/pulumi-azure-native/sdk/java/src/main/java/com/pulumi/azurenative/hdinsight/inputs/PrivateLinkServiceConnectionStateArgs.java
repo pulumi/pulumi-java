@@ -28,6 +28,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="actionsRequired")
     private @Nullable Output<String> actionsRequired;
 
+    /**
+     * @return Whether there is further actions.
+     * 
+     */
     public Optional<Output<String>> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -39,6 +43,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The optional description of the status.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="status", required=true)
     private Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
+    /**
+     * @return The concrete private link service connection.
+     * 
+     */
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> status() {
         return this.status;
     }
@@ -80,37 +92,85 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
             $ = new PrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired Whether there is further actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param actionsRequired Whether there is further actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        /**
+         * @param description The optional description of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The optional description of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status The concrete private link service connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The concrete private link service connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateLinkServiceConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The concrete private link service connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The concrete private link service connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateLinkServiceConnectionStatus status) {
             return status(Either.ofRight(status));
         }

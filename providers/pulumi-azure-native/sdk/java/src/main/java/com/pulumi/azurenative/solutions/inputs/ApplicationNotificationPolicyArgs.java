@@ -25,6 +25,10 @@ public final class ApplicationNotificationPolicyArgs extends com.pulumi.resource
     @Import(name="notificationEndpoints", required=true)
     private Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
+    /**
+     * @return The managed application notification endpoint.
+     * 
+     */
     public Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints() {
         return this.notificationEndpoints;
     }
@@ -53,15 +57,33 @@ public final class ApplicationNotificationPolicyArgs extends com.pulumi.resource
             $ = new ApplicationNotificationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationEndpoints The managed application notification endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEndpoints(Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
             $.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
+        /**
+         * @param notificationEndpoints The managed application notification endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEndpoints(List<ApplicationNotificationEndpointArgs> notificationEndpoints) {
             return notificationEndpoints(Output.of(notificationEndpoints));
         }
 
+        /**
+         * @param notificationEndpoints The managed application notification endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEndpoints(ApplicationNotificationEndpointArgs... notificationEndpoints) {
             return notificationEndpoints(List.of(notificationEndpoints));
         }

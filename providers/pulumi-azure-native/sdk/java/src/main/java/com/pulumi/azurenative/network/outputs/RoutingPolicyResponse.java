@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class RoutingPolicyResponse {
     /**
-     * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+     * @return List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
      * 
      */
     private final List<String> destinations;
     /**
-     * The unique name for the routing policy.
+     * @return The unique name for the routing policy.
      * 
      */
     private final String name;
     /**
-     * The next hop resource id on which this routing policy is applicable to.
+     * @return The next hop resource id on which this routing policy is applicable to.
      * 
      */
     private final String nextHop;
@@ -37,23 +37,23 @@ public final class RoutingPolicyResponse {
     }
 
     /**
-     * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+     * @return List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
      * 
-    */
+     */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * The unique name for the routing policy.
+     * @return The unique name for the routing policy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The next hop resource id on which this routing policy is applicable to.
+     * @return The next hop resource id on which this routing policy is applicable to.
      * 
-    */
+     */
     public String nextHop() {
         return this.nextHop;
     }

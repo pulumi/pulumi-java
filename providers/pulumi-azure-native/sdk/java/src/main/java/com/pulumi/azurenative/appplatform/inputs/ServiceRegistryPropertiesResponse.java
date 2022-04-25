@@ -26,6 +26,10 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
     @Import(name="instances", required=true)
     private List<ServiceRegistryInstanceResponse> instances;
 
+    /**
+     * @return Collection of instances belong to Service Registry.
+     * 
+     */
     public List<ServiceRegistryInstanceResponse> instances() {
         return this.instances;
     }
@@ -37,6 +41,10 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the Service Registry.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -48,6 +56,10 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
     @Import(name="resourceRequests", required=true)
     private ServiceRegistryResourceRequestsResponse resourceRequests;
 
+    /**
+     * @return The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public ServiceRegistryResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
@@ -78,20 +90,44 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
             $ = new ServiceRegistryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances Collection of instances belong to Service Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<ServiceRegistryInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to Service Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(ServiceRegistryInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param provisioningState State of the Service Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
             $.resourceRequests = resourceRequests;
             return this;

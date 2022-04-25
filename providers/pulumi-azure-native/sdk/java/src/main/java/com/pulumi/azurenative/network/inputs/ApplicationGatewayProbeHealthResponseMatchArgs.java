@@ -27,6 +27,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return Body that must be contained in the health response. Default value is empty.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
     @Import(name="statusCodes")
     private @Nullable Output<List<String>> statusCodes;
 
+    /**
+     * @return Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+     * 
+     */
     public Optional<Output<List<String>>> statusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
@@ -67,24 +75,54 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
             $ = new ApplicationGatewayProbeHealthResponseMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body that must be contained in the health response. Default value is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Body that must be contained in the health response. Default value is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param statusCodes Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(@Nullable Output<List<String>> statusCodes) {
             $.statusCodes = statusCodes;
             return this;
         }
 
+        /**
+         * @param statusCodes Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(List<String> statusCodes) {
             return statusCodes(Output.of(statusCodes));
         }
 
+        /**
+         * @param statusCodes Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(String... statusCodes) {
             return statusCodes(List.of(statusCodes));
         }

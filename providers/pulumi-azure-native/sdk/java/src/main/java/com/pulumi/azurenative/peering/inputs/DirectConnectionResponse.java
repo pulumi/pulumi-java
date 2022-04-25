@@ -28,6 +28,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="bandwidthInMbps")
     private @Nullable Integer bandwidthInMbps;
 
+    /**
+     * @return The bandwidth of the connection.
+     * 
+     */
     public Optional<Integer> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
@@ -39,6 +43,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="bgpSession")
     private @Nullable BgpSessionResponse bgpSession;
 
+    /**
+     * @return The BGP session associated with the connection.
+     * 
+     */
     public Optional<BgpSessionResponse> bgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
@@ -50,6 +58,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectionIdentifier")
     private @Nullable String connectionIdentifier;
 
+    /**
+     * @return The unique identifier (GUID) for the connection.
+     * 
+     */
     public Optional<String> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
@@ -61,6 +73,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectionState", required=true)
     private String connectionState;
 
+    /**
+     * @return The state of the connection.
+     * 
+     */
     public String connectionState() {
         return this.connectionState;
     }
@@ -72,6 +88,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return The error message related to the connection state, if any.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -83,6 +103,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="microsoftTrackingId", required=true)
     private String microsoftTrackingId;
 
+    /**
+     * @return The ID used within Microsoft&#39;s peering provisioning system to track the connection
+     * 
+     */
     public String microsoftTrackingId() {
         return this.microsoftTrackingId;
     }
@@ -94,6 +118,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="peeringDBFacilityId")
     private @Nullable Integer peeringDBFacilityId;
 
+    /**
+     * @return The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     public Optional<Integer> peeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
@@ -105,6 +133,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisionedBandwidthInMbps", required=true)
     private Integer provisionedBandwidthInMbps;
 
+    /**
+     * @return The bandwidth that is actually provisioned.
+     * 
+     */
     public Integer provisionedBandwidthInMbps() {
         return this.provisionedBandwidthInMbps;
     }
@@ -116,6 +148,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="sessionAddressProvider")
     private @Nullable String sessionAddressProvider;
 
+    /**
+     * @return The field indicating if Microsoft provides session ip addresses.
+     * 
+     */
     public Optional<String> sessionAddressProvider() {
         return Optional.ofNullable(this.sessionAddressProvider);
     }
@@ -127,6 +163,10 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="useForPeeringService")
     private @Nullable Boolean useForPeeringService;
 
+    /**
+     * @return The flag that indicates whether or not the connection is used for peering service.
+     * 
+     */
     public Optional<Boolean> useForPeeringService() {
         return Optional.ofNullable(this.useForPeeringService);
     }
@@ -164,51 +204,111 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
             $ = new DirectConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthInMbps The bandwidth of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
             $.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
+        /**
+         * @param bgpSession The BGP session associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSession(@Nullable BgpSessionResponse bgpSession) {
             $.bgpSession = bgpSession;
             return this;
         }
 
+        /**
+         * @param connectionIdentifier The unique identifier (GUID) for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             $.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
+        /**
+         * @param connectionState The state of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionState(String connectionState) {
             $.connectionState = connectionState;
             return this;
         }
 
+        /**
+         * @param errorMessage The error message related to the connection state, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param microsoftTrackingId The ID used within Microsoft&#39;s peering provisioning system to track the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftTrackingId(String microsoftTrackingId) {
             $.microsoftTrackingId = microsoftTrackingId;
             return this;
         }
 
+        /**
+         * @param peeringDBFacilityId The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
+        /**
+         * @param provisionedBandwidthInMbps The bandwidth that is actually provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedBandwidthInMbps(Integer provisionedBandwidthInMbps) {
             $.provisionedBandwidthInMbps = provisionedBandwidthInMbps;
             return this;
         }
 
+        /**
+         * @param sessionAddressProvider The field indicating if Microsoft provides session ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAddressProvider(@Nullable String sessionAddressProvider) {
             $.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
 
+        /**
+         * @param useForPeeringService The flag that indicates whether or not the connection is used for peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useForPeeringService(@Nullable Boolean useForPeeringService) {
             $.useForPeeringService = useForPeeringService;
             return this;

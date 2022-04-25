@@ -26,6 +26,10 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="messageTtl", required=true)
     private Output<String> messageTtl;
 
+    /**
+     * @return The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+     * 
+     */
     public Output<String> messageTtl() {
         return this.messageTtl;
     }
@@ -37,6 +41,10 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return The cron expression indicating the schedule that the connected registry will sync with its parent.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -48,6 +56,10 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="syncWindow")
     private @Nullable Output<String> syncWindow;
 
+    /**
+     * @return The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+     * 
+     */
     public Optional<Output<String>> syncWindow() {
         return Optional.ofNullable(this.syncWindow);
     }
@@ -59,6 +71,10 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tokenId", required=true)
     private Output<String> tokenId;
 
+    /**
+     * @return The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+     * 
+     */
     public Output<String> tokenId() {
         return this.tokenId;
     }
@@ -90,38 +106,86 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SyncPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageTtl The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTtl(Output<String> messageTtl) {
             $.messageTtl = messageTtl;
             return this;
         }
 
+        /**
+         * @param messageTtl The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTtl(String messageTtl) {
             return messageTtl(Output.of(messageTtl));
         }
 
+        /**
+         * @param schedule The cron expression indicating the schedule that the connected registry will sync with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The cron expression indicating the schedule that the connected registry will sync with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param syncWindow The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncWindow(@Nullable Output<String> syncWindow) {
             $.syncWindow = syncWindow;
             return this;
         }
 
+        /**
+         * @param syncWindow The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncWindow(String syncWindow) {
             return syncWindow(Output.of(syncWindow));
         }
 
+        /**
+         * @param tokenId The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenId(Output<String> tokenId) {
             $.tokenId = tokenId;
             return this;
         }
 
+        /**
+         * @param tokenId The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenId(String tokenId) {
             return tokenId(Output.of(tokenId));
         }

@@ -22,6 +22,10 @@ public final class SeedNodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IP address of this seed node.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -50,11 +54,23 @@ public final class SeedNodeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SeedNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress IP address of this seed node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address of this seed node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }

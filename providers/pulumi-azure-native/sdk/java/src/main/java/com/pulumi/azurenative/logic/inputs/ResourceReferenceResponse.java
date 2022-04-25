@@ -25,6 +25,10 @@ public final class ResourceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The resource id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class ResourceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Gets the resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class ResourceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Gets the resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,16 +89,34 @@ public final class ResourceReferenceResponse extends com.pulumi.resources.Invoke
             $ = new ResourceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Gets the resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Gets the resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

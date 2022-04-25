@@ -26,6 +26,10 @@ public final class FileSystemApplicationLogsConfigResponse extends com.pulumi.re
     @Import(name="level")
     private @Nullable String level;
 
+    /**
+     * @return Log level.
+     * 
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
@@ -54,6 +58,12 @@ public final class FileSystemApplicationLogsConfigResponse extends com.pulumi.re
             $ = new FileSystemApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable String level) {
             $.level = level;
             return this;

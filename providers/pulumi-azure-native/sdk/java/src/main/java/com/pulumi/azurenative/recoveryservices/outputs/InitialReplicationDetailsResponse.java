@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InitialReplicationDetailsResponse {
     /**
-     * The initial replication progress percentage.
+     * @return The initial replication progress percentage.
      * 
      */
     private final @Nullable String initialReplicationProgressPercentage;
     /**
-     * Initial replication type.
+     * @return Initial replication type.
      * 
      */
     private final @Nullable String initialReplicationType;
@@ -31,16 +31,16 @@ public final class InitialReplicationDetailsResponse {
     }
 
     /**
-     * The initial replication progress percentage.
+     * @return The initial replication progress percentage.
      * 
-    */
+     */
     public Optional<String> initialReplicationProgressPercentage() {
         return Optional.ofNullable(this.initialReplicationProgressPercentage);
     }
     /**
-     * Initial replication type.
+     * @return Initial replication type.
      * 
-    */
+     */
     public Optional<String> initialReplicationType() {
         return Optional.ofNullable(this.initialReplicationType);
     }

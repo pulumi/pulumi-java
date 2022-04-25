@@ -26,6 +26,10 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -37,6 +41,10 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="error", required=true)
     private CloudErrorBodyResponse error;
 
+    /**
+     * @return The detailed error information for any failure.
+     * 
+     */
     public CloudErrorBodyResponse error() {
         return this.error;
     }
@@ -48,6 +56,10 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="retryAttempt", required=true)
     private Integer retryAttempt;
 
+    /**
+     * @return The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
+     * 
+     */
     public Integer retryAttempt() {
         return this.retryAttempt;
     }
@@ -59,6 +71,10 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="skipSucceededOnRetry", required=true)
     private Boolean skipSucceededOnRetry;
 
+    /**
+     * @return True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
+     * 
+     */
     public Boolean skipSucceededOnRetry() {
         return this.skipSucceededOnRetry;
     }
@@ -70,6 +86,10 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of the rollout in UTC.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -102,26 +122,56 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
             $ = new RolloutOperationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param error The detailed error information for any failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(CloudErrorBodyResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param retryAttempt The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttempt(Integer retryAttempt) {
             $.retryAttempt = retryAttempt;
             return this;
         }
 
+        /**
+         * @param skipSucceededOnRetry True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipSucceededOnRetry(Boolean skipSucceededOnRetry) {
             $.skipSucceededOnRetry = skipSucceededOnRetry;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the rollout in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

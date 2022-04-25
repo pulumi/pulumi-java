@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DelimitedTextWriteSettingsResponse {
     /**
-     * The file extension used to create the files. Type: string (or Expression with resultType string).
+     * @return The file extension used to create the files. Type: string (or Expression with resultType string).
      * 
      */
     private final Object fileExtension;
     /**
-     * Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object fileNamePrefix;
     /**
-     * Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxRowsPerFile;
     /**
-     * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object quoteAllText;
     /**
-     * The write setting type.
+     * @return The write setting type.
      * Expected value is &#39;DelimitedTextWriteSettings&#39;.
      * 
      */
@@ -54,38 +54,38 @@ public final class DelimitedTextWriteSettingsResponse {
     }
 
     /**
-     * The file extension used to create the files. Type: string (or Expression with resultType string).
+     * @return The file extension used to create the files. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object fileExtension() {
         return this.fileExtension;
     }
     /**
-     * Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
     /**
-     * Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
     /**
-     * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> quoteAllText() {
         return Optional.ofNullable(this.quoteAllText);
     }
     /**
-     * The write setting type.
+     * @return The write setting type.
      * Expected value is &#39;DelimitedTextWriteSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

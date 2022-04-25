@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutomationRuleTriggeringLogicResponse {
     /**
-     * The conditions to evaluate to determine if the automation rule should be triggered on a given object
+     * @return The conditions to evaluate to determine if the automation rule should be triggered on a given object
      * 
      */
     private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
     /**
-     * Determines when the automation rule should automatically expire and be disabled.
+     * @return Determines when the automation rule should automatically expire and be disabled.
      * 
      */
     private final @Nullable String expirationTimeUtc;
     /**
-     * Determines whether the automation rule is enabled or disabled.
+     * @return Determines whether the automation rule is enabled or disabled.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The type of object the automation rule triggers on
+     * @return The type of object the automation rule triggers on
      * 
      */
     private final String triggersOn;
     /**
-     * The type of event the automation rule triggers on
+     * @return The type of event the automation rule triggers on
      * 
      */
     private final String triggersWhen;
@@ -55,37 +55,37 @@ public final class AutomationRuleTriggeringLogicResponse {
     }
 
     /**
-     * The conditions to evaluate to determine if the automation rule should be triggered on a given object
+     * @return The conditions to evaluate to determine if the automation rule should be triggered on a given object
      * 
-    */
+     */
     public List<AutomationRulePropertyValuesConditionResponse> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
-     * Determines when the automation rule should automatically expire and be disabled.
+     * @return Determines when the automation rule should automatically expire and be disabled.
      * 
-    */
+     */
     public Optional<String> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
     /**
-     * Determines whether the automation rule is enabled or disabled.
+     * @return Determines whether the automation rule is enabled or disabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The type of object the automation rule triggers on
+     * @return The type of object the automation rule triggers on
      * 
-    */
+     */
     public String triggersOn() {
         return this.triggersOn;
     }
     /**
-     * The type of event the automation rule triggers on
+     * @return The type of event the automation rule triggers on
      * 
-    */
+     */
     public String triggersWhen() {
         return this.triggersWhen;
     }

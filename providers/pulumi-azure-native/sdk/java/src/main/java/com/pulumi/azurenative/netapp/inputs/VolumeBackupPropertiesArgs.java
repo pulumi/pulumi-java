@@ -27,6 +27,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="backupEnabled")
     private @Nullable Output<Boolean> backupEnabled;
 
+    /**
+     * @return Backup Enabled
+     * 
+     */
     public Optional<Output<Boolean>> backupEnabled() {
         return Optional.ofNullable(this.backupEnabled);
     }
@@ -38,6 +42,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="backupPolicyId")
     private @Nullable Output<String> backupPolicyId;
 
+    /**
+     * @return Backup Policy Resource ID
+     * 
+     */
     public Optional<Output<String>> backupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
@@ -49,6 +57,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="policyEnforced")
     private @Nullable Output<Boolean> policyEnforced;
 
+    /**
+     * @return Policy Enforced
+     * 
+     */
     public Optional<Output<Boolean>> policyEnforced() {
         return Optional.ofNullable(this.policyEnforced);
     }
@@ -60,6 +72,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="vaultId")
     private @Nullable Output<String> vaultId;
 
+    /**
+     * @return Vault Resource ID
+     * 
+     */
     public Optional<Output<String>> vaultId() {
         return Optional.ofNullable(this.vaultId);
     }
@@ -91,38 +107,86 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
             $ = new VolumeBackupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupEnabled Backup Enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupEnabled(@Nullable Output<Boolean> backupEnabled) {
             $.backupEnabled = backupEnabled;
             return this;
         }
 
+        /**
+         * @param backupEnabled Backup Enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupEnabled(Boolean backupEnabled) {
             return backupEnabled(Output.of(backupEnabled));
         }
 
+        /**
+         * @param backupPolicyId Backup Policy Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyId(@Nullable Output<String> backupPolicyId) {
             $.backupPolicyId = backupPolicyId;
             return this;
         }
 
+        /**
+         * @param backupPolicyId Backup Policy Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyId(String backupPolicyId) {
             return backupPolicyId(Output.of(backupPolicyId));
         }
 
+        /**
+         * @param policyEnforced Policy Enforced
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyEnforced(@Nullable Output<Boolean> policyEnforced) {
             $.policyEnforced = policyEnforced;
             return this;
         }
 
+        /**
+         * @param policyEnforced Policy Enforced
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyEnforced(Boolean policyEnforced) {
             return policyEnforced(Output.of(policyEnforced));
         }
 
+        /**
+         * @param vaultId Vault Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultId(@Nullable Output<String> vaultId) {
             $.vaultId = vaultId;
             return this;
         }
 
+        /**
+         * @param vaultId Vault Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultId(String vaultId) {
             return vaultId(Output.of(vaultId));
         }

@@ -25,6 +25,10 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return Unique Dataset identifier.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -36,6 +40,10 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
     @Import(name="definitionVersion")
     private @Nullable String definitionVersion;
 
+    /**
+     * @return Definition Version
+     * 
+     */
     public Optional<String> definitionVersion() {
         return Optional.ofNullable(this.definitionVersion);
     }
@@ -65,11 +73,23 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
             $ = new DatasetStateResponseDeprecatedBy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId Unique Dataset identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param definitionVersion Definition Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionVersion(@Nullable String definitionVersion) {
             $.definitionVersion = definitionVersion;
             return this;

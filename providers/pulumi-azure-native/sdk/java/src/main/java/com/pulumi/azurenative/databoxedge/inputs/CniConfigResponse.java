@@ -23,6 +23,10 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="podSubnet", required=true)
     private String podSubnet;
 
+    /**
+     * @return Pod Subnet
+     * 
+     */
     public String podSubnet() {
         return this.podSubnet;
     }
@@ -34,6 +38,10 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceSubnet", required=true)
     private String serviceSubnet;
 
+    /**
+     * @return Service subnet
+     * 
+     */
     public String serviceSubnet() {
         return this.serviceSubnet;
     }
@@ -45,6 +53,10 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Cni type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -56,6 +68,10 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Cni version
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -87,21 +103,45 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CniConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podSubnet Pod Subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSubnet(String podSubnet) {
             $.podSubnet = podSubnet;
             return this;
         }
 
+        /**
+         * @param serviceSubnet Service subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceSubnet(String serviceSubnet) {
             $.serviceSubnet = serviceSubnet;
             return this;
         }
 
+        /**
+         * @param type Cni type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Cni version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

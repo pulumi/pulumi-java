@@ -27,6 +27,10 @@ public final class CloudServiceRoleProfilePropertiesArgs extends com.pulumi.reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class CloudServiceRoleProfilePropertiesArgs extends com.pulumi.reso
     @Import(name="sku")
     private @Nullable Output<CloudServiceRoleSkuArgs> sku;
 
+    /**
+     * @return Describes the cloud service role sku.
+     * 
+     */
     public Optional<Output<CloudServiceRoleSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -67,20 +75,44 @@ public final class CloudServiceRoleProfilePropertiesArgs extends com.pulumi.reso
             $ = new CloudServiceRoleProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sku Describes the cloud service role sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<CloudServiceRoleSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Describes the cloud service role sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(CloudServiceRoleSkuArgs sku) {
             return sku(Output.of(sku));
         }

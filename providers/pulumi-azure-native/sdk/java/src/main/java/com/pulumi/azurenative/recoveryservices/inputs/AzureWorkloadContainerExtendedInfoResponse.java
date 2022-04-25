@@ -28,6 +28,10 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
     @Import(name="hostServerName")
     private @Nullable String hostServerName;
 
+    /**
+     * @return Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+     * 
+     */
     public Optional<String> hostServerName() {
         return Optional.ofNullable(this.hostServerName);
     }
@@ -39,6 +43,10 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
     @Import(name="inquiryInfo")
     private @Nullable InquiryInfoResponse inquiryInfo;
 
+    /**
+     * @return Inquiry Status for the container.
+     * 
+     */
     public Optional<InquiryInfoResponse> inquiryInfo() {
         return Optional.ofNullable(this.inquiryInfo);
     }
@@ -50,6 +58,10 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
     @Import(name="nodesList")
     private @Nullable List<DistributedNodesInfoResponse> nodesList;
 
+    /**
+     * @return List of the nodes in case of distributed container.
+     * 
+     */
     public Optional<List<DistributedNodesInfoResponse>> nodesList() {
         return Optional.ofNullable(this.nodesList);
     }
@@ -80,21 +92,45 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
             $ = new AzureWorkloadContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostServerName Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostServerName(@Nullable String hostServerName) {
             $.hostServerName = hostServerName;
             return this;
         }
 
+        /**
+         * @param inquiryInfo Inquiry Status for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryInfo(@Nullable InquiryInfoResponse inquiryInfo) {
             $.inquiryInfo = inquiryInfo;
             return this;
         }
 
+        /**
+         * @param nodesList List of the nodes in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesList(@Nullable List<DistributedNodesInfoResponse> nodesList) {
             $.nodesList = nodesList;
             return this;
         }
 
+        /**
+         * @param nodesList List of the nodes in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesList(DistributedNodesInfoResponse... nodesList) {
             return nodesList(List.of(nodesList));
         }

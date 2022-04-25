@@ -31,6 +31,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessControl")
     private @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
 
+    /**
+     * @return The access control configuration.
+     * 
+     */
     public Optional<Output<FlowAccessControlConfigurationArgs>> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
@@ -42,6 +46,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition")
     private @Nullable Output<Object> definition;
 
+    /**
+     * @return The definition.
+     * 
+     */
     public Optional<Output<Object>> definition() {
         return Optional.ofNullable(this.definition);
     }
@@ -53,6 +61,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointsConfiguration")
     private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
+    /**
+     * @return The endpoints configuration.
+     * 
+     */
     public Optional<Output<FlowEndpointsConfigurationArgs>> endpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
@@ -64,6 +76,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Managed service identity properties.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -75,6 +91,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="integrationAccount")
     private @Nullable Output<ResourceReferenceArgs> integrationAccount;
 
+    /**
+     * @return The integration account.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> integrationAccount() {
         return Optional.ofNullable(this.integrationAccount);
     }
@@ -86,6 +106,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="integrationServiceEnvironment")
     private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
+    /**
+     * @return The integration service environment.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
@@ -97,6 +121,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -108,6 +136,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
 
+    /**
+     * @return The parameters.
+     * 
+     */
     public Optional<Output<Map<String,WorkflowParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -119,6 +151,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -130,6 +166,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<Either<String,WorkflowState>> state;
 
+    /**
+     * @return The state.
+     * 
+     */
     public Optional<Output<Either<String,WorkflowState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -141,6 +181,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +196,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workflowName")
     private @Nullable Output<String> workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public Optional<Output<String>> workflowName() {
         return Optional.ofNullable(this.workflowName);
     }
@@ -191,118 +239,274 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkflowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControl The access control configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControl(@Nullable Output<FlowAccessControlConfigurationArgs> accessControl) {
             $.accessControl = accessControl;
             return this;
         }
 
+        /**
+         * @param accessControl The access control configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControl(FlowAccessControlConfigurationArgs accessControl) {
             return accessControl(Output.of(accessControl));
         }
 
+        /**
+         * @param definition The definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(@Nullable Output<Object> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition The definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Object definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param endpointsConfiguration The endpoints configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             $.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
+        /**
+         * @param endpointsConfiguration The endpoints configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsConfiguration(FlowEndpointsConfigurationArgs endpointsConfiguration) {
             return endpointsConfiguration(Output.of(endpointsConfiguration));
         }
 
+        /**
+         * @param identity Managed service identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Managed service identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param integrationAccount The integration account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccount(@Nullable Output<ResourceReferenceArgs> integrationAccount) {
             $.integrationAccount = integrationAccount;
             return this;
         }
 
+        /**
+         * @param integrationAccount The integration account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccount(ResourceReferenceArgs integrationAccount) {
             return integrationAccount(Output.of(integrationAccount));
         }
 
+        /**
+         * @param integrationServiceEnvironment The integration service environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             $.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironment The integration service environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironment(ResourceReferenceArgs integrationServiceEnvironment) {
             return integrationServiceEnvironment(Output.of(integrationServiceEnvironment));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param parameters The parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,WorkflowParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,WorkflowParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,WorkflowState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(WorkflowState state) {
             return state(Either.ofRight(state));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(@Nullable Output<String> workflowName) {
             $.workflowName = workflowName;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             return workflowName(Output.of(workflowName));
         }

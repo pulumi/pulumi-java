@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PutAliasResponsePropertiesResponse {
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Newly created subscription Id.
+     * @return Newly created subscription Id.
      * 
      */
     private final String subscriptionId;
@@ -31,16 +31,16 @@ public final class PutAliasResponsePropertiesResponse {
     }
 
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Newly created subscription Id.
+     * @return Newly created subscription Id.
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }

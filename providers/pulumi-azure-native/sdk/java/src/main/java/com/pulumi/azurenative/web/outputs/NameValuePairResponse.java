@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NameValuePairResponse {
     /**
-     * Pair name.
+     * @return Pair name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Pair value.
+     * @return Pair value.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class NameValuePairResponse {
     }
 
     /**
-     * Pair name.
+     * @return Pair name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Pair value.
+     * @return Pair value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

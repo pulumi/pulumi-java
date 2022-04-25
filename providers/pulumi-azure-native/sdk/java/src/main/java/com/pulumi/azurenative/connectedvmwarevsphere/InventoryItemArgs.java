@@ -24,6 +24,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inventoryItemName")
     private @Nullable Output<String> inventoryItemName;
 
+    /**
+     * @return Name of the inventoryItem.
+     * 
+     */
     public Optional<Output<String>> inventoryItemName() {
         return Optional.ofNullable(this.inventoryItemName);
     }
@@ -35,6 +39,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inventoryType", required=true)
     private Output<Either<String,InventoryType>> inventoryType;
 
+    /**
+     * @return They inventory type.
+     * 
+     */
     public Output<Either<String,InventoryType>> inventoryType() {
         return this.inventoryType;
     }
@@ -46,6 +54,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -57,6 +69,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceId")
     private @Nullable Output<String> managedResourceId;
 
+    /**
+     * @return Gets or sets the tracked resource id corresponding to the inventory resource.
+     * 
+     */
     public Optional<Output<String>> managedResourceId() {
         return Optional.ofNullable(this.managedResourceId);
     }
@@ -68,6 +84,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moName")
     private @Nullable Output<String> moName;
 
+    /**
+     * @return Gets or sets the vCenter Managed Object name for the inventory item.
+     * 
+     */
     public Optional<Output<String>> moName() {
         return Optional.ofNullable(this.moName);
     }
@@ -79,6 +99,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moRefId")
     private @Nullable Output<String> moRefId;
 
+    /**
+     * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
+     * 
+     */
     public Optional<Output<String>> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
@@ -90,6 +114,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vcenterName", required=true)
     private Output<String> vcenterName;
 
+    /**
+     * @return Name of the vCenter.
+     * 
+     */
     public Output<String> vcenterName() {
         return this.vcenterName;
     }
@@ -136,82 +168,190 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InventoryItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inventoryItemName Name of the inventoryItem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryItemName(@Nullable Output<String> inventoryItemName) {
             $.inventoryItemName = inventoryItemName;
             return this;
         }
 
+        /**
+         * @param inventoryItemName Name of the inventoryItem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryItemName(String inventoryItemName) {
             return inventoryItemName(Output.of(inventoryItemName));
         }
 
+        /**
+         * @param inventoryType They inventory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryType(Output<Either<String,InventoryType>> inventoryType) {
             $.inventoryType = inventoryType;
             return this;
         }
 
+        /**
+         * @param inventoryType They inventory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryType(Either<String,InventoryType> inventoryType) {
             return inventoryType(Output.of(inventoryType));
         }
 
+        /**
+         * @param inventoryType They inventory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryType(String inventoryType) {
             return inventoryType(Either.ofLeft(inventoryType));
         }
 
+        /**
+         * @param inventoryType They inventory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryType(InventoryType inventoryType) {
             return inventoryType(Either.ofRight(inventoryType));
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managedResourceId Gets or sets the tracked resource id corresponding to the inventory resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResourceId(@Nullable Output<String> managedResourceId) {
             $.managedResourceId = managedResourceId;
             return this;
         }
 
+        /**
+         * @param managedResourceId Gets or sets the tracked resource id corresponding to the inventory resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResourceId(String managedResourceId) {
             return managedResourceId(Output.of(managedResourceId));
         }
 
+        /**
+         * @param moName Gets or sets the vCenter Managed Object name for the inventory item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moName(@Nullable Output<String> moName) {
             $.moName = moName;
             return this;
         }
 
+        /**
+         * @param moName Gets or sets the vCenter Managed Object name for the inventory item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moName(String moName) {
             return moName(Output.of(moName));
         }
 
+        /**
+         * @param moRefId Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moRefId(@Nullable Output<String> moRefId) {
             $.moRefId = moRefId;
             return this;
         }
 
+        /**
+         * @param moRefId Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moRefId(String moRefId) {
             return moRefId(Output.of(moRefId));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterName(Output<String> vcenterName) {
             $.vcenterName = vcenterName;
             return this;
         }
 
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterName(String vcenterName) {
             return vcenterName(Output.of(vcenterName));
         }

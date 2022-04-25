@@ -22,6 +22,10 @@ public final class ConsoleWithLocationArgs extends com.pulumi.resources.Resource
     @Import(name="consoleName")
     private @Nullable Output<String> consoleName;
 
+    /**
+     * @return The name of the console
+     * 
+     */
     public Optional<Output<String>> consoleName() {
         return Optional.ofNullable(this.consoleName);
     }
@@ -33,6 +37,10 @@ public final class ConsoleWithLocationArgs extends com.pulumi.resources.Resource
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The provider location
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -62,20 +70,44 @@ public final class ConsoleWithLocationArgs extends com.pulumi.resources.Resource
             $ = new ConsoleWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleName(@Nullable Output<String> consoleName) {
             $.consoleName = consoleName;
             return this;
         }
 
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleName(String consoleName) {
             return consoleName(Output.of(consoleName));
         }
 
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

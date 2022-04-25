@@ -27,6 +27,10 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mountPath")
     private @Nullable String mountPath;
 
+    /**
+     * @return Mount path of the temporary disk
+     * 
+     */
     public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
@@ -38,6 +42,10 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sizeInGB")
     private @Nullable Integer sizeInGB;
 
+    /**
+     * @return Size of the temporary disk in GB
+     * 
+     */
     public Optional<Integer> sizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
@@ -67,11 +75,23 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
             $ = new TemporaryDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Mount path of the temporary disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(@Nullable String mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param sizeInGB Size of the temporary disk in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
             $.sizeInGB = sizeInGB;
             return this;

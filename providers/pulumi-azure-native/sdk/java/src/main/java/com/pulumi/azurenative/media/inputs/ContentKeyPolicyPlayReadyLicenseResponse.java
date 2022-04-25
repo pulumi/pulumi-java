@@ -30,6 +30,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="allowTestDevices", required=true)
     private Boolean allowTestDevices;
 
+    /**
+     * @return A flag indicating whether test devices can use the license.
+     * 
+     */
     public Boolean allowTestDevices() {
         return this.allowTestDevices;
     }
@@ -41,6 +45,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="beginDate")
     private @Nullable String beginDate;
 
+    /**
+     * @return The begin date of license
+     * 
+     */
     public Optional<String> beginDate() {
         return Optional.ofNullable(this.beginDate);
     }
@@ -52,6 +60,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="contentKeyLocation", required=true)
     private Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
 
+    /**
+     * @return The content key location.
+     * 
+     */
     public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation() {
         return this.contentKeyLocation;
     }
@@ -63,6 +75,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="contentType", required=true)
     private String contentType;
 
+    /**
+     * @return The PlayReady content type.
+     * 
+     */
     public String contentType() {
         return this.contentType;
     }
@@ -74,6 +90,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="expirationDate")
     private @Nullable String expirationDate;
 
+    /**
+     * @return The expiration date of license.
+     * 
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -85,6 +105,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="gracePeriod")
     private @Nullable String gracePeriod;
 
+    /**
+     * @return The grace period of license.
+     * 
+     */
     public Optional<String> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
@@ -96,6 +120,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="licenseType", required=true)
     private String licenseType;
 
+    /**
+     * @return The license type.
+     * 
+     */
     public String licenseType() {
         return this.licenseType;
     }
@@ -107,6 +135,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="playRight")
     private @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
 
+    /**
+     * @return The license PlayRight
+     * 
+     */
     public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> playRight() {
         return Optional.ofNullable(this.playRight);
     }
@@ -118,6 +150,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="relativeBeginDate")
     private @Nullable String relativeBeginDate;
 
+    /**
+     * @return The relative begin date of license.
+     * 
+     */
     public Optional<String> relativeBeginDate() {
         return Optional.ofNullable(this.relativeBeginDate);
     }
@@ -129,6 +165,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
     @Import(name="relativeExpirationDate")
     private @Nullable String relativeExpirationDate;
 
+    /**
+     * @return The relative expiration date of license.
+     * 
+     */
     public Optional<String> relativeExpirationDate() {
         return Optional.ofNullable(this.relativeExpirationDate);
     }
@@ -166,59 +206,131 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
             $ = new ContentKeyPolicyPlayReadyLicenseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowTestDevices A flag indicating whether test devices can use the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTestDevices(Boolean allowTestDevices) {
             $.allowTestDevices = allowTestDevices;
             return this;
         }
 
+        /**
+         * @param beginDate The begin date of license
+         * 
+         * @return builder
+         * 
+         */
         public Builder beginDate(@Nullable String beginDate) {
             $.beginDate = beginDate;
             return this;
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation) {
             $.contentKeyLocation = contentKeyLocation;
             return this;
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse contentKeyLocation) {
             return contentKeyLocation(Either.ofLeft(contentKeyLocation));
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse contentKeyLocation) {
             return contentKeyLocation(Either.ofRight(contentKeyLocation));
         }
 
+        /**
+         * @param contentType The PlayReady content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param expirationDate The expiration date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param gracePeriod The grace period of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracePeriod(@Nullable String gracePeriod) {
             $.gracePeriod = gracePeriod;
             return this;
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param playRight The license PlayRight
+         * 
+         * @return builder
+         * 
+         */
         public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight) {
             $.playRight = playRight;
             return this;
         }
 
+        /**
+         * @param relativeBeginDate The relative begin date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
             $.relativeBeginDate = relativeBeginDate;
             return this;
         }
 
+        /**
+         * @param relativeExpirationDate The relative expiration date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
             $.relativeExpirationDate = relativeExpirationDate;
             return this;

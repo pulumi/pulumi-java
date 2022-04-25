@@ -19,6 +19,10 @@ public final class GetDefaultRolloutArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -30,6 +34,10 @@ public final class GetDefaultRolloutArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="rolloutName", required=true)
     private String rolloutName;
 
+    /**
+     * @return The rollout name.
+     * 
+     */
     public String rolloutName() {
         return this.rolloutName;
     }
@@ -59,11 +67,23 @@ public final class GetDefaultRolloutArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetDefaultRolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutName(String rolloutName) {
             $.rolloutName = rolloutName;
             return this;

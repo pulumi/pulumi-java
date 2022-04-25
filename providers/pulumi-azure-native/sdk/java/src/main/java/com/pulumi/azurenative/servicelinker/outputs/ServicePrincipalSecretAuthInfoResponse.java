@@ -10,23 +10,23 @@ import java.util.Objects;
 @CustomType
 public final class ServicePrincipalSecretAuthInfoResponse {
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;servicePrincipalSecret&#39;.
      * 
      */
     private final String authType;
     /**
-     * ServicePrincipal application clientId for servicePrincipal auth.
+     * @return ServicePrincipal application clientId for servicePrincipal auth.
      * 
      */
     private final String clientId;
     /**
-     * Principal Id for servicePrincipal auth.
+     * @return Principal Id for servicePrincipal auth.
      * 
      */
     private final String principalId;
     /**
-     * Secret for servicePrincipal auth.
+     * @return Secret for servicePrincipal auth.
      * 
      */
     private final String secret;
@@ -44,31 +44,31 @@ public final class ServicePrincipalSecretAuthInfoResponse {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;servicePrincipalSecret&#39;.
      * 
-    */
+     */
     public String authType() {
         return this.authType;
     }
     /**
-     * ServicePrincipal application clientId for servicePrincipal auth.
+     * @return ServicePrincipal application clientId for servicePrincipal auth.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Principal Id for servicePrincipal auth.
+     * @return Principal Id for servicePrincipal auth.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * Secret for servicePrincipal auth.
+     * @return Secret for servicePrincipal auth.
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }

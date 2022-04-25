@@ -26,6 +26,10 @@ public final class PortResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backendPort")
     private @Nullable Integer backendPort;
 
+    /**
+     * @return Backend port of the target virtual machine.
+     * 
+     */
     public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
@@ -37,6 +41,10 @@ public final class PortResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transportProtocol")
     private @Nullable String transportProtocol;
 
+    /**
+     * @return Protocol type of the port.
+     * 
+     */
     public Optional<String> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
@@ -66,11 +74,23 @@ public final class PortResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort Backend port of the target virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(@Nullable Integer backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param transportProtocol Protocol type of the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(@Nullable String transportProtocol) {
             $.transportProtocol = transportProtocol;
             return this;

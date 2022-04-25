@@ -32,6 +32,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
     @Import(name="encryptionConfiguration")
     private @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
+    /**
+     * @return The encryption configuration.
+     * 
+     */
     public Optional<Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -43,6 +47,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
     @Import(name="endpointsConfiguration")
     private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
+    /**
+     * @return The endpoints configuration.
+     * 
+     */
     public Optional<Output<FlowEndpointsConfigurationArgs>> endpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
@@ -54,6 +62,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
     @Import(name="integrationServiceEnvironmentId")
     private @Nullable Output<String> integrationServiceEnvironmentId;
 
+    /**
+     * @return Gets the tracking id.
+     * 
+     */
     public Optional<Output<String>> integrationServiceEnvironmentId() {
         return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
@@ -65,6 +77,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
     @Import(name="networkConfiguration")
     private @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
+    /**
+     * @return The network configuration.
+     * 
+     */
     public Optional<Output<NetworkConfigurationArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
@@ -76,6 +92,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public Optional<Output<Either<String,WorkflowProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -87,6 +107,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
     @Import(name="state")
     private @Nullable Output<Either<String,WorkflowState>> state;
 
+    /**
+     * @return The integration service environment state.
+     * 
+     */
     public Optional<Output<Either<String,WorkflowState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -120,72 +144,168 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends com.pulum
             $ = new IntegrationServiceEnvironmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionConfiguration The encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param encryptionConfiguration The encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
+        /**
+         * @param endpointsConfiguration The endpoints configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             $.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
+        /**
+         * @param endpointsConfiguration The endpoints configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsConfiguration(FlowEndpointsConfigurationArgs endpointsConfiguration) {
             return endpointsConfiguration(Output.of(endpointsConfiguration));
         }
 
+        /**
+         * @param integrationServiceEnvironmentId Gets the tracking id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentId(@Nullable Output<String> integrationServiceEnvironmentId) {
             $.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironmentId Gets the tracking id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentId(String integrationServiceEnvironmentId) {
             return integrationServiceEnvironmentId(Output.of(integrationServiceEnvironmentId));
         }
 
+        /**
+         * @param networkConfiguration The network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
 
+        /**
+         * @param networkConfiguration The network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(NetworkConfigurationArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,WorkflowProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(WorkflowProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param state The integration service environment state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The integration service environment state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,WorkflowState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The integration service environment state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The integration service environment state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(WorkflowState state) {
             return state(Either.ofRight(state));
         }

@@ -28,6 +28,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableProxy")
     private @Nullable Output<Boolean> enableProxy;
 
+    /**
+     * @return Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+     * 
+     */
     public Optional<Output<Boolean>> enableProxy() {
         return Optional.ofNullable(this.enableProxy);
     }
@@ -39,6 +43,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireProxyForNetworkRules")
     private @Nullable Output<Boolean> requireProxyForNetworkRules;
 
+    /**
+     * @return FQDNs in Network Rules are supported when set to true.
+     * 
+     */
     public Optional<Output<Boolean>> requireProxyForNetworkRules() {
         return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
@@ -50,6 +58,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="servers")
     private @Nullable Output<List<String>> servers;
 
+    /**
+     * @return List of Custom DNS Servers.
+     * 
+     */
     public Optional<Output<List<String>>> servers() {
         return Optional.ofNullable(this.servers);
     }
@@ -80,33 +92,75 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableProxy Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableProxy(@Nullable Output<Boolean> enableProxy) {
             $.enableProxy = enableProxy;
             return this;
         }
 
+        /**
+         * @param enableProxy Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableProxy(Boolean enableProxy) {
             return enableProxy(Output.of(enableProxy));
         }
 
+        /**
+         * @param requireProxyForNetworkRules FQDNs in Network Rules are supported when set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireProxyForNetworkRules(@Nullable Output<Boolean> requireProxyForNetworkRules) {
             $.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
 
+        /**
+         * @param requireProxyForNetworkRules FQDNs in Network Rules are supported when set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireProxyForNetworkRules(Boolean requireProxyForNetworkRules) {
             return requireProxyForNetworkRules(Output.of(requireProxyForNetworkRules));
         }
 
+        /**
+         * @param servers List of Custom DNS Servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(@Nullable Output<List<String>> servers) {
             $.servers = servers;
             return this;
         }
 
+        /**
+         * @param servers List of Custom DNS Servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(List<String> servers) {
             return servers(Output.of(servers));
         }
 
+        /**
+         * @param servers List of Custom DNS Servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(String... servers) {
             return servers(List.of(servers));
         }

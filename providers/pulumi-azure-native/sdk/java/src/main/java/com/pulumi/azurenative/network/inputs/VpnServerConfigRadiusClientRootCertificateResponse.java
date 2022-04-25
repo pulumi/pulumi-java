@@ -25,6 +25,10 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends co
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The certificate name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends co
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return The Radius client root certificate thumbprint.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -65,11 +73,23 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends co
             $ = new VpnServerConfigRadiusClientRootCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param thumbprint The Radius client root certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

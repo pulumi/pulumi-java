@@ -28,6 +28,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="bandwidthMHz", required=true)
     private Output<Double> bandwidthMHz;
 
+    /**
+     * @return Bandwidth in MHz
+     * 
+     */
     public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
     }
@@ -39,6 +43,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="centerFrequencyMHz", required=true)
     private Output<Double> centerFrequencyMHz;
 
+    /**
+     * @return Center Frequency in MHz
+     * 
+     */
     public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
@@ -50,6 +58,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="decodingConfiguration")
     private @Nullable Output<String> decodingConfiguration;
 
+    /**
+     * @return Configuration for decoding
+     * 
+     */
     public Optional<Output<String>> decodingConfiguration() {
         return Optional.ofNullable(this.decodingConfiguration);
     }
@@ -61,6 +73,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="demodulationConfiguration")
     private @Nullable Output<String> demodulationConfiguration;
 
+    /**
+     * @return Configuration for demodulation
+     * 
+     */
     public Optional<Output<String>> demodulationConfiguration() {
         return Optional.ofNullable(this.demodulationConfiguration);
     }
@@ -72,6 +88,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="encodingConfiguration")
     private @Nullable Output<String> encodingConfiguration;
 
+    /**
+     * @return Configuration for encoding
+     * 
+     */
     public Optional<Output<String>> encodingConfiguration() {
         return Optional.ofNullable(this.encodingConfiguration);
     }
@@ -83,6 +103,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="endPoint", required=true)
     private Output<EndPointArgs> endPoint;
 
+    /**
+     * @return Customer End point to store/retrieve data during a contact.
+     * 
+     */
     public Output<EndPointArgs> endPoint() {
         return this.endPoint;
     }
@@ -94,6 +118,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="modulationConfiguration")
     private @Nullable Output<String> modulationConfiguration;
 
+    /**
+     * @return Configuration for modulation
+     * 
+     */
     public Optional<Output<String>> modulationConfiguration() {
         return Optional.ofNullable(this.modulationConfiguration);
     }
@@ -128,65 +156,149 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
             $ = new ContactProfileLinkChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthMHz Bandwidth in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthMHz(Output<Double> bandwidthMHz) {
             $.bandwidthMHz = bandwidthMHz;
             return this;
         }
 
+        /**
+         * @param bandwidthMHz Bandwidth in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthMHz(Double bandwidthMHz) {
             return bandwidthMHz(Output.of(bandwidthMHz));
         }
 
+        /**
+         * @param centerFrequencyMHz Center Frequency in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
             $.centerFrequencyMHz = centerFrequencyMHz;
             return this;
         }
 
+        /**
+         * @param centerFrequencyMHz Center Frequency in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             return centerFrequencyMHz(Output.of(centerFrequencyMHz));
         }
 
+        /**
+         * @param decodingConfiguration Configuration for decoding
+         * 
+         * @return builder
+         * 
+         */
         public Builder decodingConfiguration(@Nullable Output<String> decodingConfiguration) {
             $.decodingConfiguration = decodingConfiguration;
             return this;
         }
 
+        /**
+         * @param decodingConfiguration Configuration for decoding
+         * 
+         * @return builder
+         * 
+         */
         public Builder decodingConfiguration(String decodingConfiguration) {
             return decodingConfiguration(Output.of(decodingConfiguration));
         }
 
+        /**
+         * @param demodulationConfiguration Configuration for demodulation
+         * 
+         * @return builder
+         * 
+         */
         public Builder demodulationConfiguration(@Nullable Output<String> demodulationConfiguration) {
             $.demodulationConfiguration = demodulationConfiguration;
             return this;
         }
 
+        /**
+         * @param demodulationConfiguration Configuration for demodulation
+         * 
+         * @return builder
+         * 
+         */
         public Builder demodulationConfiguration(String demodulationConfiguration) {
             return demodulationConfiguration(Output.of(demodulationConfiguration));
         }
 
+        /**
+         * @param encodingConfiguration Configuration for encoding
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingConfiguration(@Nullable Output<String> encodingConfiguration) {
             $.encodingConfiguration = encodingConfiguration;
             return this;
         }
 
+        /**
+         * @param encodingConfiguration Configuration for encoding
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingConfiguration(String encodingConfiguration) {
             return encodingConfiguration(Output.of(encodingConfiguration));
         }
 
+        /**
+         * @param endPoint Customer End point to store/retrieve data during a contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPoint(Output<EndPointArgs> endPoint) {
             $.endPoint = endPoint;
             return this;
         }
 
+        /**
+         * @param endPoint Customer End point to store/retrieve data during a contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPoint(EndPointArgs endPoint) {
             return endPoint(Output.of(endPoint));
         }
 
+        /**
+         * @param modulationConfiguration Configuration for modulation
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulationConfiguration(@Nullable Output<String> modulationConfiguration) {
             $.modulationConfiguration = modulationConfiguration;
             return this;
         }
 
+        /**
+         * @param modulationConfiguration Configuration for modulation
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulationConfiguration(String modulationConfiguration) {
             return modulationConfiguration(Output.of(modulationConfiguration));
         }

@@ -22,32 +22,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     /**
-     * Array of command properties.
+     * @return Array of command properties.
      * 
      */
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
     /**
-     * Array of errors. This is ignored if submitted.
+     * @return Array of errors. This is ignored if submitted.
      * 
      */
     private final List<ODataErrorResponse> errors;
     /**
-     * Task input
+     * @return Task input
      * 
      */
     private final @Nullable MigrateSqlServerSqlMISyncTaskInputResponse input;
     /**
-     * Task output. This is ignored if submitted.
+     * @return Task output. This is ignored if submitted.
      * 
      */
     private final List<Object> output;
     /**
-     * The state of the task. This is ignored if submitted.
+     * @return The state of the task. This is ignored if submitted.
      * 
      */
     private final String state;
     /**
-     * Task type.
+     * @return Task type.
      * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
      * 
      */
@@ -70,45 +70,45 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     }
 
     /**
-     * Array of command properties.
+     * @return Array of command properties.
      * 
-    */
+     */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
     /**
-     * Array of errors. This is ignored if submitted.
+     * @return Array of errors. This is ignored if submitted.
      * 
-    */
+     */
     public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Task input
+     * @return Task input
      * 
-    */
+     */
     public Optional<MigrateSqlServerSqlMISyncTaskInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
-     * Task output. This is ignored if submitted.
+     * @return Task output. This is ignored if submitted.
      * 
-    */
+     */
     public List<Object> output() {
         return this.output;
     }
     /**
-     * The state of the task. This is ignored if submitted.
+     * @return The state of the task. This is ignored if submitted.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Task type.
+     * @return Task type.
      * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
      * 
-    */
+     */
     public String taskType() {
         return this.taskType;
     }

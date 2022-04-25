@@ -25,6 +25,10 @@ public final class ProductPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -53,6 +57,12 @@ public final class ProductPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new ProductPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param version The version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetTestBaseAccountFileUploadUrlResult {
     /**
-     * The blob path of the uploaded package. It will be used as the &#39;blobPath&#39; property of PackageResource.
+     * @return The blob path of the uploaded package. It will be used as the &#39;blobPath&#39; property of PackageResource.
      * 
      */
     private final String blobPath;
     /**
-     * The URL used for uploading the package.
+     * @return The URL used for uploading the package.
      * 
      */
     private final String uploadUrl;
@@ -29,16 +29,16 @@ public final class GetTestBaseAccountFileUploadUrlResult {
     }
 
     /**
-     * The blob path of the uploaded package. It will be used as the &#39;blobPath&#39; property of PackageResource.
+     * @return The blob path of the uploaded package. It will be used as the &#39;blobPath&#39; property of PackageResource.
      * 
-    */
+     */
     public String blobPath() {
         return this.blobPath;
     }
     /**
-     * The URL used for uploading the package.
+     * @return The URL used for uploading the package.
      * 
-    */
+     */
     public String uploadUrl() {
         return this.uploadUrl;
     }

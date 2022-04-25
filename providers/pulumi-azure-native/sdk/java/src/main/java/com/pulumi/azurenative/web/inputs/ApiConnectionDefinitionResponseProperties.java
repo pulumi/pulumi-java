@@ -33,6 +33,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="changedTime")
     private @Nullable String changedTime;
 
+    /**
+     * @return Timestamp of last connection change
+     * 
+     */
     public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
@@ -44,6 +48,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return Timestamp of the connection creation
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -55,6 +63,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="customParameterValues")
     private @Nullable Map<String,String> customParameterValues;
 
+    /**
+     * @return Dictionary of custom parameter values
+     * 
+     */
     public Optional<Map<String,String>> customParameterValues() {
         return Optional.ofNullable(this.customParameterValues);
     }
@@ -66,6 +78,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Display name
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -77,6 +93,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="nonSecretParameterValues")
     private @Nullable Map<String,String> nonSecretParameterValues;
 
+    /**
+     * @return Dictionary of nonsecret parameter values
+     * 
+     */
     public Optional<Map<String,String>> nonSecretParameterValues() {
         return Optional.ofNullable(this.nonSecretParameterValues);
     }
@@ -88,6 +108,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="parameterValues")
     private @Nullable Map<String,String> parameterValues;
 
+    /**
+     * @return Dictionary of parameter values
+     * 
+     */
     public Optional<Map<String,String>> parameterValues() {
         return Optional.ofNullable(this.parameterValues);
     }
@@ -99,6 +123,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="statuses")
     private @Nullable List<ConnectionStatusDefinitionResponse> statuses;
 
+    /**
+     * @return Status of the connection
+     * 
+     */
     public Optional<List<ConnectionStatusDefinitionResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -110,6 +138,10 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="testLinks")
     private @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
+    /**
+     * @return Links to test the API connection
+     * 
+     */
     public Optional<List<ApiConnectionTestLinkResponse>> testLinks() {
         return Optional.ofNullable(this.testLinks);
     }
@@ -151,50 +183,110 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param changedTime Timestamp of last connection change
+         * 
+         * @return builder
+         * 
+         */
         public Builder changedTime(@Nullable String changedTime) {
             $.changedTime = changedTime;
             return this;
         }
 
+        /**
+         * @param createdTime Timestamp of the connection creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param customParameterValues Dictionary of custom parameter values
+         * 
+         * @return builder
+         * 
+         */
         public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
             $.customParameterValues = customParameterValues;
             return this;
         }
 
+        /**
+         * @param displayName Display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param nonSecretParameterValues Dictionary of nonsecret parameter values
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
             $.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
 
+        /**
+         * @param parameterValues Dictionary of parameter values
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
             $.parameterValues = parameterValues;
             return this;
         }
 
+        /**
+         * @param statuses Status of the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<ConnectionStatusDefinitionResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses Status of the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(ConnectionStatusDefinitionResponse... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param testLinks Links to test the API connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder testLinks(@Nullable List<ApiConnectionTestLinkResponse> testLinks) {
             $.testLinks = testLinks;
             return this;
         }
 
+        /**
+         * @param testLinks Links to test the API connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder testLinks(ApiConnectionTestLinkResponse... testLinks) {
             return testLinks(List.of(testLinks));
         }

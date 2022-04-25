@@ -29,6 +29,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="clearTracks")
     private @Nullable List<TrackSelectionResponse> clearTracks;
 
+    /**
+     * @return Representing which tracks should not be encrypted
+     * 
+     */
     public Optional<List<TrackSelectionResponse>> clearTracks() {
         return Optional.ofNullable(this.clearTracks);
     }
@@ -40,6 +44,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="contentKeys")
     private @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
+    /**
+     * @return Representing default content key for each encryption scheme and separate content keys for specific tracks
+     * 
+     */
     public Optional<StreamingPolicyContentKeysResponse> contentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
@@ -51,6 +59,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="customKeyAcquisitionUrlTemplate")
     private @Nullable String customKeyAcquisitionUrlTemplate;
 
+    /**
+     * @return Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+     * 
+     */
     public Optional<String> customKeyAcquisitionUrlTemplate() {
         return Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
     }
@@ -62,6 +74,10 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="enabledProtocols")
     private @Nullable EnabledProtocolsResponse enabledProtocols;
 
+    /**
+     * @return Representing supported protocols
+     * 
+     */
     public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -93,25 +109,55 @@ public final class EnvelopeEncryptionResponse extends com.pulumi.resources.Invok
             $ = new EnvelopeEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
             $.clearTracks = clearTracks;
             return this;
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(TrackSelectionResponse... clearTracks) {
             return clearTracks(List.of(clearTracks));
         }
 
+        /**
+         * @param contentKeys Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             $.contentKeys = contentKeys;
             return this;
         }
 
+        /**
+         * @param customKeyAcquisitionUrlTemplate Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
             $.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             $.enabledProtocols = enabledProtocols;
             return this;

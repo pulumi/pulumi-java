@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MappingDataFlowResponse {
     /**
-     * List of tags that can be used for describing the data flow.
+     * @return List of tags that can be used for describing the data flow.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The description of the data flow.
+     * @return The description of the data flow.
      * 
      */
     private final @Nullable String description;
     /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
      */
     private final @Nullable DataFlowResponseFolder folder;
     /**
-     * DataFlow script.
+     * @return DataFlow script.
      * 
      */
     private final @Nullable String script;
     /**
-     * Data flow script lines.
+     * @return Data flow script lines.
      * 
      */
     private final @Nullable List<String> scriptLines;
     /**
-     * List of sinks in data flow.
+     * @return List of sinks in data flow.
      * 
      */
     private final @Nullable List<DataFlowSinkResponse> sinks;
     /**
-     * List of sources in data flow.
+     * @return List of sources in data flow.
      * 
      */
     private final @Nullable List<DataFlowSourceResponse> sources;
     /**
-     * List of transformations in data flow.
+     * @return List of transformations in data flow.
      * 
      */
     private final @Nullable List<TransformationResponse> transformations;
     /**
-     * Type of data flow.
+     * @return Type of data flow.
      * Expected value is &#39;MappingDataFlow&#39;.
      * 
      */
@@ -87,66 +87,66 @@ public final class MappingDataFlowResponse {
     }
 
     /**
-     * List of tags that can be used for describing the data flow.
+     * @return List of tags that can be used for describing the data flow.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The description of the data flow.
+     * @return The description of the data flow.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
-    */
+     */
     public Optional<DataFlowResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * DataFlow script.
+     * @return DataFlow script.
      * 
-    */
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
-     * Data flow script lines.
+     * @return Data flow script lines.
      * 
-    */
+     */
     public List<String> scriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
     }
     /**
-     * List of sinks in data flow.
+     * @return List of sinks in data flow.
      * 
-    */
+     */
     public List<DataFlowSinkResponse> sinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
     /**
-     * List of sources in data flow.
+     * @return List of sources in data flow.
      * 
-    */
+     */
     public List<DataFlowSourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
-     * List of transformations in data flow.
+     * @return List of transformations in data flow.
      * 
-    */
+     */
     public List<TransformationResponse> transformations() {
         return this.transformations == null ? List.of() : this.transformations;
     }
     /**
-     * Type of data flow.
+     * @return Type of data flow.
      * Expected value is &#39;MappingDataFlow&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

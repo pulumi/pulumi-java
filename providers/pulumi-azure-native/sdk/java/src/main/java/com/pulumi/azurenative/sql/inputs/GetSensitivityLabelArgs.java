@@ -19,6 +19,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="columnName", required=true)
     private String columnName;
 
+    /**
+     * @return The name of the column.
+     * 
+     */
     public String columnName() {
         return this.columnName;
     }
@@ -30,6 +34,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -41,6 +49,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="schemaName", required=true)
     private String schemaName;
 
+    /**
+     * @return The name of the schema.
+     * 
+     */
     public String schemaName() {
         return this.schemaName;
     }
@@ -63,6 +79,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="sensitivityLabelSource", required=true)
     private String sensitivityLabelSource;
 
+    /**
+     * @return The source of the sensitivity label.
+     * 
+     */
     public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
@@ -74,6 +94,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -85,6 +109,10 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -119,36 +147,78 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
             $ = new GetSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;

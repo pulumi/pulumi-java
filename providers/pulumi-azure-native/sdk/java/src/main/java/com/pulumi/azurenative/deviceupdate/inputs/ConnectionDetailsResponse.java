@@ -23,6 +23,10 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return Group ID.
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -34,6 +38,10 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Connection details ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="linkIdentifier", required=true)
     private String linkIdentifier;
 
+    /**
+     * @return Link ID.
+     * 
+     */
     public String linkIdentifier() {
         return this.linkIdentifier;
     }
@@ -56,6 +68,10 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="memberName", required=true)
     private String memberName;
 
+    /**
+     * @return Member name.
+     * 
+     */
     public String memberName() {
         return this.memberName;
     }
@@ -67,6 +83,10 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="privateIpAddress", required=true)
     private String privateIpAddress;
 
+    /**
+     * @return Private IP address.
+     * 
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
@@ -99,26 +119,56 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
             $ = new ConnectionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param id Connection details ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param linkIdentifier Link ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkIdentifier(String linkIdentifier) {
             $.linkIdentifier = linkIdentifier;
             return this;
         }
 
+        /**
+         * @param memberName Member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberName(String memberName) {
             $.memberName = memberName;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;

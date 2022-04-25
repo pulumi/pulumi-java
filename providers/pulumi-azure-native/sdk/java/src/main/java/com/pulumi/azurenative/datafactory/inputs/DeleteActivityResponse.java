@@ -48,6 +48,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataset", required=true)
     private DatasetReferenceResponse dataset;
 
+    /**
+     * @return Delete activity dataset reference.
+     * 
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
@@ -59,6 +63,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -70,6 +78,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -81,6 +93,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enableLogging")
     private @Nullable Object enableLogging;
 
+    /**
+     * @return Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
     }
@@ -92,6 +108,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -103,6 +123,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="logStorageSettings")
     private @Nullable LogStorageSettingsResponse logStorageSettings;
 
+    /**
+     * @return Log storage settings customer need to provide when enableLogging is true.
+     * 
+     */
     public Optional<LogStorageSettingsResponse> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
@@ -114,6 +138,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="maxConcurrentConnections")
     private @Nullable Integer maxConcurrentConnections;
 
+    /**
+     * @return The max concurrent connections to connect data source at the same time.
+     * 
+     */
     public Optional<Integer> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -125,6 +153,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -136,6 +168,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -147,6 +183,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recursive")
     private @Nullable Object recursive;
 
+    /**
+     * @return If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
@@ -158,6 +198,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storeSettings")
     private @Nullable Object storeSettings;
 
+    /**
+     * @return Delete activity store settings.
+     * 
+     */
     public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -170,6 +214,11 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Delete&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -181,6 +230,10 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -221,75 +274,166 @@ public final class DeleteActivityResponse extends com.pulumi.resources.InvokeArg
             $ = new DeleteActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Delete activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceResponse dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param enableLogging Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(@Nullable Object enableLogging) {
             $.enableLogging = enableLogging;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param logStorageSettings Log storage settings customer need to provide when enableLogging is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
             $.logStorageSettings = logStorageSettings;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The max concurrent connections to connect data source at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param recursive If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(@Nullable Object recursive) {
             $.recursive = recursive;
             return this;
         }
 
+        /**
+         * @param storeSettings Delete activity store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(@Nullable Object storeSettings) {
             $.storeSettings = storeSettings;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Delete&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

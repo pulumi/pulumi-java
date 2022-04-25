@@ -27,6 +27,10 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxReplicas")
     private @Nullable Integer maxReplicas;
 
+    /**
+     * @return Optional. Maximum number of container replicas. Defaults to 10 if not set.
+     * 
+     */
     public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
@@ -38,6 +42,10 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minReplicas")
     private @Nullable Integer minReplicas;
 
+    /**
+     * @return Optional. Minimum number of container replicas.
+     * 
+     */
     public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -49,6 +57,10 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules")
     private @Nullable List<ScaleRuleResponse> rules;
 
+    /**
+     * @return Scaling rules.
+     * 
+     */
     public Optional<List<ScaleRuleResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -79,21 +91,45 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScaleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxReplicas Optional. Maximum number of container replicas. Defaults to 10 if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas Optional. Minimum number of container replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Integer minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param rules Scaling rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<ScaleRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Scaling rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ScaleRuleResponse... rules) {
             return rules(List.of(rules));
         }

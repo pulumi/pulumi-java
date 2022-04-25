@@ -28,6 +28,10 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorDetail")
     private @Nullable ErrorDetailResponse errorDetail;
 
+    /**
+     * @return Error Details if the Status is non-success.
+     * 
+     */
     public Optional<ErrorDetailResponse> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
@@ -40,6 +44,11 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inquiryDetails")
     private @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
 
+    /**
+     * @return Inquiry Details which will have workload specific details.
+     * For e.g. - For SQL and oracle this will contain different details.
+     * 
+     */
     public Optional<List<WorkloadInquiryDetailsResponse>> inquiryDetails() {
         return Optional.ofNullable(this.inquiryDetails);
     }
@@ -52,6 +61,11 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Inquiry Status for this container such as
+     * InProgress | Failed | Succeeded
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -82,20 +96,47 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new InquiryInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorDetail Error Details if the Status is non-success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             $.errorDetail = errorDetail;
             return this;
         }
 
+        /**
+         * @param inquiryDetails Inquiry Details which will have workload specific details.
+         * For e.g. - For SQL and oracle this will contain different details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
             $.inquiryDetails = inquiryDetails;
             return this;
         }
 
+        /**
+         * @param inquiryDetails Inquiry Details which will have workload specific details.
+         * For e.g. - For SQL and oracle this will contain different details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryDetails(WorkloadInquiryDetailsResponse... inquiryDetails) {
             return inquiryDetails(List.of(inquiryDetails));
         }
 
+        /**
+         * @param status Inquiry Status for this container such as
+         * InProgress | Failed | Succeeded
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

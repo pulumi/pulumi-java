@@ -26,6 +26,10 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password to connect to the WebProxy Server
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -48,6 +56,10 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Username to connect to the WebProxy server
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -78,29 +90,65 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
             $ = new BackendProxyContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password to connect to the WebProxy Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to connect to the WebProxy Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param url WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param username Username to connect to the WebProxy server
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username to connect to the WebProxy server
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

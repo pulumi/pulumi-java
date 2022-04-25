@@ -25,6 +25,10 @@ public final class DWCopyCommandDefaultValueResponse extends com.pulumi.resource
     @Import(name="columnName")
     private @Nullable Object columnName;
 
+    /**
+     * @return Column name. Type: object (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> columnName() {
         return Optional.ofNullable(this.columnName);
     }
@@ -36,6 +40,10 @@ public final class DWCopyCommandDefaultValueResponse extends com.pulumi.resource
     @Import(name="defaultValue")
     private @Nullable Object defaultValue;
 
+    /**
+     * @return The default value of the column. Type: object (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -65,11 +73,23 @@ public final class DWCopyCommandDefaultValueResponse extends com.pulumi.resource
             $ = new DWCopyCommandDefaultValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName Column name. Type: object (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(@Nullable Object columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value of the column. Type: object (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Object defaultValue) {
             $.defaultValue = defaultValue;
             return this;

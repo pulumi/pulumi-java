@@ -30,6 +30,10 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="transferAllDetails")
     private @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
 
+    /**
+     * @return Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+     * 
+     */
     public Optional<Output<TransferConfigurationTransferAllDetailsArgs>> transferAllDetails() {
         return Optional.ofNullable(this.transferAllDetails);
     }
@@ -41,6 +45,10 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="transferConfigurationType", required=true)
     private Output<Either<String,TransferConfigurationType>> transferConfigurationType;
 
+    /**
+     * @return Type of the configuration for transfer.
+     * 
+     */
     public Output<Either<String,TransferConfigurationType>> transferConfigurationType() {
         return this.transferConfigurationType;
     }
@@ -52,6 +60,10 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="transferFilterDetails")
     private @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
+    /**
+     * @return Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+     * 
+     */
     public Optional<Output<TransferConfigurationTransferFilterDetailsArgs>> transferFilterDetails() {
         return Optional.ofNullable(this.transferFilterDetails);
     }
@@ -82,37 +94,85 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
             $ = new TransferConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transferAllDetails Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllDetails(@Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails) {
             $.transferAllDetails = transferAllDetails;
             return this;
         }
 
+        /**
+         * @param transferAllDetails Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllDetails(TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
             return transferAllDetails(Output.of(transferAllDetails));
         }
 
+        /**
+         * @param transferConfigurationType Type of the configuration for transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfigurationType(Output<Either<String,TransferConfigurationType>> transferConfigurationType) {
             $.transferConfigurationType = transferConfigurationType;
             return this;
         }
 
+        /**
+         * @param transferConfigurationType Type of the configuration for transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfigurationType(Either<String,TransferConfigurationType> transferConfigurationType) {
             return transferConfigurationType(Output.of(transferConfigurationType));
         }
 
+        /**
+         * @param transferConfigurationType Type of the configuration for transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfigurationType(String transferConfigurationType) {
             return transferConfigurationType(Either.ofLeft(transferConfigurationType));
         }
 
+        /**
+         * @param transferConfigurationType Type of the configuration for transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfigurationType(TransferConfigurationType transferConfigurationType) {
             return transferConfigurationType(Either.ofRight(transferConfigurationType));
         }
 
+        /**
+         * @param transferFilterDetails Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferFilterDetails(@Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
             $.transferFilterDetails = transferFilterDetails;
             return this;
         }
 
+        /**
+         * @param transferFilterDetails Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferFilterDetails(TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
             return transferFilterDetails(Output.of(transferFilterDetails));
         }

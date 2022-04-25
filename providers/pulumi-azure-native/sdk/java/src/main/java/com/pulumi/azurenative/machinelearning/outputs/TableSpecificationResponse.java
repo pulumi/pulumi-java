@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableSpecificationResponse {
     /**
-     * Swagger schema description.
+     * @return Swagger schema description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The format, if &#39;type&#39; is not &#39;object&#39;
+     * @return The format, if &#39;type&#39; is not &#39;object&#39;
      * 
      */
     private final @Nullable String format;
     /**
-     * The set of columns within the data table.
+     * @return The set of columns within the data table.
      * 
      */
     private final @Nullable Map<String,ColumnSpecificationResponse> properties;
     /**
-     * Swagger schema title.
+     * @return Swagger schema title.
      * 
      */
     private final @Nullable String title;
     /**
-     * The type of the entity described in swagger.
+     * @return The type of the entity described in swagger.
      * 
      */
     private final String type;
@@ -54,37 +54,37 @@ public final class TableSpecificationResponse {
     }
 
     /**
-     * Swagger schema description.
+     * @return Swagger schema description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The format, if &#39;type&#39; is not &#39;object&#39;
+     * @return The format, if &#39;type&#39; is not &#39;object&#39;
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * The set of columns within the data table.
+     * @return The set of columns within the data table.
      * 
-    */
+     */
     public Map<String,ColumnSpecificationResponse> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Swagger schema title.
+     * @return Swagger schema title.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * The type of the entity described in swagger.
+     * @return The type of the entity described in swagger.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

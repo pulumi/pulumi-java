@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MarkdownPartMetadataResponseSettings {
     /**
-     * The content of markdown part.
+     * @return The content of markdown part.
      * 
      */
     private final @Nullable MarkdownPartMetadataResponseContent content;
@@ -23,9 +23,9 @@ public final class MarkdownPartMetadataResponseSettings {
     }
 
     /**
-     * The content of markdown part.
+     * @return The content of markdown part.
      * 
-    */
+     */
     public Optional<MarkdownPartMetadataResponseContent> content() {
         return Optional.ofNullable(this.content);
     }

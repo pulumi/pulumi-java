@@ -21,6 +21,10 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID of the virtual machine that is linked to this policy
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -32,6 +36,10 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
     @Import(name="ports", required=true)
     private List<JitNetworkAccessRequestPortResponse> ports;
 
+    /**
+     * @return The ports that were opened for the virtual machine
+     * 
+     */
     public List<JitNetworkAccessRequestPortResponse> ports() {
         return this.ports;
     }
@@ -61,16 +69,34 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
             $ = new JitNetworkAccessRequestVirtualMachineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the virtual machine that is linked to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ports The ports that were opened for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<JitNetworkAccessRequestPortResponse> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The ports that were opened for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(JitNetworkAccessRequestPortResponse... ports) {
             return ports(List.of(ports));
         }

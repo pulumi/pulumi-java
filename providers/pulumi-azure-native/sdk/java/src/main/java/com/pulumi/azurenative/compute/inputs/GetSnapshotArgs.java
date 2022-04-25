@@ -19,6 +19,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="snapshotName", required=true)
     private String snapshotName;
 
+    /**
+     * @return The name of the snapshot that is being created. The name can&#39;t be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+     * 
+     */
     public String snapshotName() {
         return this.snapshotName;
     }
@@ -59,11 +67,23 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param snapshotName The name of the snapshot that is being created. The name can&#39;t be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(String snapshotName) {
             $.snapshotName = snapshotName;
             return this;

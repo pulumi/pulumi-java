@@ -24,6 +24,10 @@ public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resou
     @Import(name="dataRetention", required=true)
     private Output<String> dataRetention;
 
+    /**
+     * @return ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
+     * 
+     */
     public Output<String> dataRetention() {
         return this.dataRetention;
     }
@@ -52,11 +56,23 @@ public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resou
             $ = new WarmStoreConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataRetention ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRetention(Output<String> dataRetention) {
             $.dataRetention = dataRetention;
             return this;
         }
 
+        /**
+         * @param dataRetention ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRetention(String dataRetention) {
             return dataRetention(Output.of(dataRetention));
         }

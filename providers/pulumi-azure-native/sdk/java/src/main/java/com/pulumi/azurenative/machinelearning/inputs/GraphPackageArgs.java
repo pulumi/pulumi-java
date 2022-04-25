@@ -31,6 +31,10 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edges")
     private @Nullable Output<List<GraphEdgeArgs>> edges;
 
+    /**
+     * @return The list of edges making up the graph.
+     * 
+     */
     public Optional<Output<List<GraphEdgeArgs>>> edges() {
         return Optional.ofNullable(this.edges);
     }
@@ -42,6 +46,10 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="graphParameters")
     private @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
 
+    /**
+     * @return The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+     * 
+     */
     public Optional<Output<Map<String,GraphParameterArgs>>> graphParameters() {
         return Optional.ofNullable(this.graphParameters);
     }
@@ -53,6 +61,10 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodes")
     private @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
+    /**
+     * @return The set of nodes making up the graph, provided as a nodeId to GraphNode map
+     * 
+     */
     public Optional<Output<Map<String,GraphNodeArgs>>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
@@ -83,33 +95,75 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GraphPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param edges The list of edges making up the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edges(@Nullable Output<List<GraphEdgeArgs>> edges) {
             $.edges = edges;
             return this;
         }
 
+        /**
+         * @param edges The list of edges making up the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edges(List<GraphEdgeArgs> edges) {
             return edges(Output.of(edges));
         }
 
+        /**
+         * @param edges The list of edges making up the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edges(GraphEdgeArgs... edges) {
             return edges(List.of(edges));
         }
 
+        /**
+         * @param graphParameters The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphParameters(@Nullable Output<Map<String,GraphParameterArgs>> graphParameters) {
             $.graphParameters = graphParameters;
             return this;
         }
 
+        /**
+         * @param graphParameters The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphParameters(Map<String,GraphParameterArgs> graphParameters) {
             return graphParameters(Output.of(graphParameters));
         }
 
+        /**
+         * @param nodes The set of nodes making up the graph, provided as a nodeId to GraphNode map
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(@Nullable Output<Map<String,GraphNodeArgs>> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes The set of nodes making up the graph, provided as a nodeId to GraphNode map
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(Map<String,GraphNodeArgs> nodes) {
             return nodes(Output.of(nodes));
         }

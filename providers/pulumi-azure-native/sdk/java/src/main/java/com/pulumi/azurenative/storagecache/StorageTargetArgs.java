@@ -31,6 +31,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobNfs")
     private @Nullable Output<BlobNfsTargetArgs> blobNfs;
 
+    /**
+     * @return Properties when targetType is blobNfs.
+     * 
+     */
     public Optional<Output<BlobNfsTargetArgs>> blobNfs() {
         return Optional.ofNullable(this.blobNfs);
     }
@@ -42,6 +46,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheName", required=true)
     private Output<String> cacheName;
 
+    /**
+     * @return Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+     * 
+     */
     public Output<String> cacheName() {
         return this.cacheName;
     }
@@ -53,6 +61,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clfs")
     private @Nullable Output<ClfsTargetArgs> clfs;
 
+    /**
+     * @return Properties when targetType is clfs.
+     * 
+     */
     public Optional<Output<ClfsTargetArgs>> clfs() {
         return Optional.ofNullable(this.clfs);
     }
@@ -64,6 +76,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="junctions")
     private @Nullable Output<List<NamespaceJunctionArgs>> junctions;
 
+    /**
+     * @return List of Cache namespace junctions to target for namespace associations.
+     * 
+     */
     public Optional<Output<List<NamespaceJunctionArgs>>> junctions() {
         return Optional.ofNullable(this.junctions);
     }
@@ -75,6 +91,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nfs3")
     private @Nullable Output<Nfs3TargetArgs> nfs3;
 
+    /**
+     * @return Properties when targetType is nfs3.
+     * 
+     */
     public Optional<Output<Nfs3TargetArgs>> nfs3() {
         return Optional.ofNullable(this.nfs3);
     }
@@ -86,6 +106,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
+    /**
+     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningStateType>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -97,6 +121,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Target resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +136,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageTargetName")
     private @Nullable Output<String> storageTargetName;
 
+    /**
+     * @return Name of Storage Target.
+     * 
+     */
     public Optional<Output<String>> storageTargetName() {
         return Optional.ofNullable(this.storageTargetName);
     }
@@ -119,6 +151,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType", required=true)
     private Output<Either<String,StorageTargetType>> targetType;
 
+    /**
+     * @return Type of the Storage Target.
+     * 
+     */
     public Output<Either<String,StorageTargetType>> targetType() {
         return this.targetType;
     }
@@ -130,6 +166,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unknown")
     private @Nullable Output<UnknownTargetArgs> unknown;
 
+    /**
+     * @return Properties when targetType is unknown.
+     * 
+     */
     public Optional<Output<UnknownTargetArgs>> unknown() {
         return Optional.ofNullable(this.unknown);
     }
@@ -167,112 +207,262 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StorageTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobNfs Properties when targetType is blobNfs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobNfs(@Nullable Output<BlobNfsTargetArgs> blobNfs) {
             $.blobNfs = blobNfs;
             return this;
         }
 
+        /**
+         * @param blobNfs Properties when targetType is blobNfs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobNfs(BlobNfsTargetArgs blobNfs) {
             return blobNfs(Output.of(blobNfs));
         }
 
+        /**
+         * @param cacheName Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(Output<String> cacheName) {
             $.cacheName = cacheName;
             return this;
         }
 
+        /**
+         * @param cacheName Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(String cacheName) {
             return cacheName(Output.of(cacheName));
         }
 
+        /**
+         * @param clfs Properties when targetType is clfs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clfs(@Nullable Output<ClfsTargetArgs> clfs) {
             $.clfs = clfs;
             return this;
         }
 
+        /**
+         * @param clfs Properties when targetType is clfs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clfs(ClfsTargetArgs clfs) {
             return clfs(Output.of(clfs));
         }
 
+        /**
+         * @param junctions List of Cache namespace junctions to target for namespace associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder junctions(@Nullable Output<List<NamespaceJunctionArgs>> junctions) {
             $.junctions = junctions;
             return this;
         }
 
+        /**
+         * @param junctions List of Cache namespace junctions to target for namespace associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder junctions(List<NamespaceJunctionArgs> junctions) {
             return junctions(Output.of(junctions));
         }
 
+        /**
+         * @param junctions List of Cache namespace junctions to target for namespace associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder junctions(NamespaceJunctionArgs... junctions) {
             return junctions(List.of(junctions));
         }
 
+        /**
+         * @param nfs3 Properties when targetType is nfs3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfs3(@Nullable Output<Nfs3TargetArgs> nfs3) {
             $.nfs3 = nfs3;
             return this;
         }
 
+        /**
+         * @param nfs3 Properties when targetType is nfs3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfs3(Nfs3TargetArgs nfs3) {
             return nfs3(Output.of(nfs3));
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ProvisioningStateType> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ProvisioningStateType provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName Target resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Target resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageTargetName Name of Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageTargetName(@Nullable Output<String> storageTargetName) {
             $.storageTargetName = storageTargetName;
             return this;
         }
 
+        /**
+         * @param storageTargetName Name of Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageTargetName(String storageTargetName) {
             return storageTargetName(Output.of(storageTargetName));
         }
 
+        /**
+         * @param targetType Type of the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(Output<Either<String,StorageTargetType>> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType Type of the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(Either<String,StorageTargetType> targetType) {
             return targetType(Output.of(targetType));
         }
 
+        /**
+         * @param targetType Type of the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             return targetType(Either.ofLeft(targetType));
         }
 
+        /**
+         * @param targetType Type of the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(StorageTargetType targetType) {
             return targetType(Either.ofRight(targetType));
         }
 
+        /**
+         * @param unknown Properties when targetType is unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknown(@Nullable Output<UnknownTargetArgs> unknown) {
             $.unknown = unknown;
             return this;
         }
 
+        /**
+         * @param unknown Properties when targetType is unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknown(UnknownTargetArgs unknown) {
             return unknown(Output.of(unknown));
         }

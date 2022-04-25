@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseStatisticsResponse {
     /**
-     * The database size - the total size of compressed data and index in bytes.
+     * @return The database size - the total size of compressed data and index in bytes.
      * 
      */
     private final @Nullable Double size;
@@ -23,9 +23,9 @@ public final class DatabaseStatisticsResponse {
     }
 
     /**
-     * The database size - the total size of compressed data and index in bytes.
+     * @return The database size - the total size of compressed data and index in bytes.
      * 
-    */
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }

@@ -16,58 +16,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DynamicMetricCriteriaResponse {
     /**
-     * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+     * @return The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
      * 
      */
     private final String alertSensitivity;
     /**
-     * Specifies the type of threshold criteria
+     * @return Specifies the type of threshold criteria
      * Expected value is &#39;DynamicThresholdCriterion&#39;.
      * 
      */
     private final String criterionType;
     /**
-     * List of dimension conditions.
+     * @return List of dimension conditions.
      * 
      */
     private final @Nullable List<MetricDimensionResponse> dimensions;
     /**
-     * The minimum number of violations required within the selected lookback time window required to raise an alert.
+     * @return The minimum number of violations required within the selected lookback time window required to raise an alert.
      * 
      */
     private final DynamicThresholdFailingPeriodsResponse failingPeriods;
     /**
-     * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+     * @return Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
      * 
      */
     private final @Nullable String ignoreDataBefore;
     /**
-     * Name of the metric.
+     * @return Name of the metric.
      * 
      */
     private final String metricName;
     /**
-     * Namespace of the metric.
+     * @return Namespace of the metric.
      * 
      */
     private final @Nullable String metricNamespace;
     /**
-     * Name of the criteria.
+     * @return Name of the criteria.
      * 
      */
     private final String name;
     /**
-     * The operator used to compare the metric value against the threshold.
+     * @return The operator used to compare the metric value against the threshold.
      * 
      */
     private final String operator;
     /**
-     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
      */
     private final @Nullable Boolean skipMetricValidation;
     /**
-     * the criteria time aggregation types.
+     * @return the criteria time aggregation types.
      * 
      */
     private final String timeAggregation;
@@ -99,80 +99,80 @@ public final class DynamicMetricCriteriaResponse {
     }
 
     /**
-     * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+     * @return The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
      * 
-    */
+     */
     public String alertSensitivity() {
         return this.alertSensitivity;
     }
     /**
-     * Specifies the type of threshold criteria
+     * @return Specifies the type of threshold criteria
      * Expected value is &#39;DynamicThresholdCriterion&#39;.
      * 
-    */
+     */
     public String criterionType() {
         return this.criterionType;
     }
     /**
-     * List of dimension conditions.
+     * @return List of dimension conditions.
      * 
-    */
+     */
     public List<MetricDimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
-     * The minimum number of violations required within the selected lookback time window required to raise an alert.
+     * @return The minimum number of violations required within the selected lookback time window required to raise an alert.
      * 
-    */
+     */
     public DynamicThresholdFailingPeriodsResponse failingPeriods() {
         return this.failingPeriods;
     }
     /**
-     * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+     * @return Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
      * 
-    */
+     */
     public Optional<String> ignoreDataBefore() {
         return Optional.ofNullable(this.ignoreDataBefore);
     }
     /**
-     * Name of the metric.
+     * @return Name of the metric.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * Namespace of the metric.
+     * @return Namespace of the metric.
      * 
-    */
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
-     * Name of the criteria.
+     * @return Name of the criteria.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The operator used to compare the metric value against the threshold.
+     * @return The operator used to compare the metric value against the threshold.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
-    */
+     */
     public Optional<Boolean> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
     /**
-     * the criteria time aggregation types.
+     * @return the criteria time aggregation types.
      * 
-    */
+     */
     public String timeAggregation() {
         return this.timeAggregation;
     }

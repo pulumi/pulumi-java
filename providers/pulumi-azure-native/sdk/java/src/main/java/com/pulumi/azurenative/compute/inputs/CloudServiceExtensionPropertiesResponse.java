@@ -28,6 +28,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="autoUpgradeMinorVersion")
     private @Nullable Boolean autoUpgradeMinorVersion;
 
+    /**
+     * @return Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
+     * 
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -43,6 +47,14 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="forceUpdateTag")
     private @Nullable String forceUpdateTag;
 
+    /**
+     * @return Tag to force apply the provided public and protected settings.
+     * Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
+     * If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
+     * If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
+     * it is up to handler implementation whether to re-run it or not
+     * 
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -54,6 +66,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="protectedSettings")
     private @Nullable String protectedSettings;
 
+    /**
+     * @return Protected settings for the extension which are encrypted before sent to the role instance.
+     * 
+     */
     public Optional<String> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -72,6 +88,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -83,6 +103,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return The name of the extension handler publisher.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -94,6 +118,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="rolesAppliedTo")
     private @Nullable List<String> rolesAppliedTo;
 
+    /**
+     * @return Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
+     * 
+     */
     public Optional<List<String>> rolesAppliedTo() {
         return Optional.ofNullable(this.rolesAppliedTo);
     }
@@ -105,6 +133,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="settings")
     private @Nullable String settings;
 
+    /**
+     * @return Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
+     * 
+     */
     public Optional<String> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -116,6 +148,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Specifies the type of the extension.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -127,6 +163,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
     @Import(name="typeHandlerVersion")
     private @Nullable String typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
+     * 
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -164,16 +204,38 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
             $ = new CloudServiceExtensionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag Tag to force apply the provided public and protected settings.
+         * Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
+         * If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
+         * If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
+         * it is up to handler implementation whether to re-run it or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param protectedSettings Protected settings for the extension which are encrypted before sent to the role instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(@Nullable String protectedSettings) {
             $.protectedSettings = protectedSettings;
             return this;
@@ -184,35 +246,77 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publisher The name of the extension handler publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param rolesAppliedTo Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
             $.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
 
+        /**
+         * @param rolesAppliedTo Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolesAppliedTo(String... rolesAppliedTo) {
             return rolesAppliedTo(List.of(rolesAppliedTo));
         }
 
+        /**
+         * @param settings Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable String settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;

@@ -24,6 +24,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="peeringServiceLocation")
     private @Nullable Output<String> peeringServiceLocation;
 
+    /**
+     * @return The location (state/province) of the customer.
+     * 
+     */
     public Optional<Output<String>> peeringServiceLocation() {
         return Optional.ofNullable(this.peeringServiceLocation);
     }
@@ -46,6 +54,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="peeringServiceName")
     private @Nullable Output<String> peeringServiceName;
 
+    /**
+     * @return The name of the peering service.
+     * 
+     */
     public Optional<Output<String>> peeringServiceName() {
         return Optional.ofNullable(this.peeringServiceName);
     }
@@ -57,6 +69,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="peeringServiceProvider")
     private @Nullable Output<String> peeringServiceProvider;
 
+    /**
+     * @return The name of the service provider.
+     * 
+     */
     public Optional<Output<String>> peeringServiceProvider() {
         return Optional.ofNullable(this.peeringServiceProvider);
     }
@@ -68,6 +84,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="providerBackupPeeringLocation")
     private @Nullable Output<String> providerBackupPeeringLocation;
 
+    /**
+     * @return The backup peering (Microsoft/service provider) location to be used for customer traffic.
+     * 
+     */
     public Optional<Output<String>> providerBackupPeeringLocation() {
         return Optional.ofNullable(this.providerBackupPeeringLocation);
     }
@@ -79,6 +99,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="providerPrimaryPeeringLocation")
     private @Nullable Output<String> providerPrimaryPeeringLocation;
 
+    /**
+     * @return The primary peering (Microsoft/service provider) location to be used for customer traffic.
+     * 
+     */
     public Optional<Output<String>> providerPrimaryPeeringLocation() {
         return Optional.ofNullable(this.providerPrimaryPeeringLocation);
     }
@@ -90,6 +114,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<PeeringServiceSkuArgs> sku;
 
+    /**
+     * @return The SKU that defines the type of the peering service.
+     * 
+     */
     public Optional<Output<PeeringServiceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -112,6 +144,10 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,83 +184,191 @@ public final class PeeringServiceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PeeringServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param peeringServiceLocation The location (state/province) of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceLocation(@Nullable Output<String> peeringServiceLocation) {
             $.peeringServiceLocation = peeringServiceLocation;
             return this;
         }
 
+        /**
+         * @param peeringServiceLocation The location (state/province) of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceLocation(String peeringServiceLocation) {
             return peeringServiceLocation(Output.of(peeringServiceLocation));
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(@Nullable Output<String> peeringServiceName) {
             $.peeringServiceName = peeringServiceName;
             return this;
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(String peeringServiceName) {
             return peeringServiceName(Output.of(peeringServiceName));
         }
 
+        /**
+         * @param peeringServiceProvider The name of the service provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceProvider(@Nullable Output<String> peeringServiceProvider) {
             $.peeringServiceProvider = peeringServiceProvider;
             return this;
         }
 
+        /**
+         * @param peeringServiceProvider The name of the service provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceProvider(String peeringServiceProvider) {
             return peeringServiceProvider(Output.of(peeringServiceProvider));
         }
 
+        /**
+         * @param providerBackupPeeringLocation The backup peering (Microsoft/service provider) location to be used for customer traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerBackupPeeringLocation(@Nullable Output<String> providerBackupPeeringLocation) {
             $.providerBackupPeeringLocation = providerBackupPeeringLocation;
             return this;
         }
 
+        /**
+         * @param providerBackupPeeringLocation The backup peering (Microsoft/service provider) location to be used for customer traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerBackupPeeringLocation(String providerBackupPeeringLocation) {
             return providerBackupPeeringLocation(Output.of(providerBackupPeeringLocation));
         }
 
+        /**
+         * @param providerPrimaryPeeringLocation The primary peering (Microsoft/service provider) location to be used for customer traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerPrimaryPeeringLocation(@Nullable Output<String> providerPrimaryPeeringLocation) {
             $.providerPrimaryPeeringLocation = providerPrimaryPeeringLocation;
             return this;
         }
 
+        /**
+         * @param providerPrimaryPeeringLocation The primary peering (Microsoft/service provider) location to be used for customer traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerPrimaryPeeringLocation(String providerPrimaryPeeringLocation) {
             return providerPrimaryPeeringLocation(Output.of(providerPrimaryPeeringLocation));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU that defines the type of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<PeeringServiceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU that defines the type of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(PeeringServiceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

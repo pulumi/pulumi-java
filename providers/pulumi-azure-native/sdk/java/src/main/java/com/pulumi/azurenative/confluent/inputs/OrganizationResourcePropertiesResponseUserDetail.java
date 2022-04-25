@@ -25,6 +25,10 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends com.
     @Import(name="emailAddress")
     private @Nullable String emailAddress;
 
+    /**
+     * @return Email address
+     * 
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -36,6 +40,10 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends com.
     @Import(name="firstName")
     private @Nullable String firstName;
 
+    /**
+     * @return First name
+     * 
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -47,6 +55,10 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends com.
     @Import(name="lastName")
     private @Nullable String lastName;
 
+    /**
+     * @return Last name
+     * 
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -77,16 +89,34 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends com.
             $ = new OrganizationResourcePropertiesResponseUserDetail(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email address
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param firstName First name
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable String firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param lastName Last name
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable String lastName) {
             $.lastName = lastName;
             return this;

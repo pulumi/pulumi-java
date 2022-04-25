@@ -21,6 +21,10 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="roleAssignmentName", required=true)
     private String roleAssignmentName;
 
+    /**
+     * @return The name of the role assignment. It can be any valid GUID.
+     * 
+     */
     public String roleAssignmentName() {
         return this.roleAssignmentName;
     }
@@ -32,6 +36,10 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope of the operation or resource. Valid scopes are: subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -43,6 +51,10 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant ID for cross-tenant request
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -73,16 +85,34 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleAssignmentName The name of the role assignment. It can be any valid GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleAssignmentName(String roleAssignmentName) {
             $.roleAssignmentName = roleAssignmentName;
             return this;
         }
 
+        /**
+         * @param scope The scope of the operation or resource. Valid scopes are: subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID for cross-tenant request
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

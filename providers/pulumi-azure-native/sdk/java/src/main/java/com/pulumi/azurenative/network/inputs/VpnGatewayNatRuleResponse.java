@@ -28,6 +28,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="egressVpnSiteLinkConnections", required=true)
     private List<SubResourceResponse> egressVpnSiteLinkConnections;
 
+    /**
+     * @return List of egress VpnSiteLinkConnections.
+     * 
+     */
     public List<SubResourceResponse> egressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
@@ -39,6 +43,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -50,6 +58,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="externalMappings")
     private @Nullable List<VpnNatRuleMappingResponse> externalMappings;
 
+    /**
+     * @return The private IP address external mapping for NAT.
+     * 
+     */
     public Optional<List<VpnNatRuleMappingResponse>> externalMappings() {
         return Optional.ofNullable(this.externalMappings);
     }
@@ -61,6 +73,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -72,6 +88,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="ingressVpnSiteLinkConnections", required=true)
     private List<SubResourceResponse> ingressVpnSiteLinkConnections;
 
+    /**
+     * @return List of ingress VpnSiteLinkConnections.
+     * 
+     */
     public List<SubResourceResponse> ingressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
@@ -83,6 +103,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="internalMappings")
     private @Nullable List<VpnNatRuleMappingResponse> internalMappings;
 
+    /**
+     * @return The private IP address internal mapping for NAT.
+     * 
+     */
     public Optional<List<VpnNatRuleMappingResponse>> internalMappings() {
         return Optional.ofNullable(this.internalMappings);
     }
@@ -94,6 +118,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="ipConfigurationId")
     private @Nullable String ipConfigurationId;
 
+    /**
+     * @return The IP Configuration ID this NAT rule applies to.
+     * 
+     */
     public Optional<String> ipConfigurationId() {
         return Optional.ofNullable(this.ipConfigurationId);
     }
@@ -105,6 +133,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return The Source NAT direction of a VPN NAT.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -116,6 +148,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -127,6 +163,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the NAT Rule resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -138,6 +178,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -176,72 +220,162 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
             $ = new VpnGatewayNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressVpnSiteLinkConnections List of egress VpnSiteLinkConnections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressVpnSiteLinkConnections(List<SubResourceResponse> egressVpnSiteLinkConnections) {
             $.egressVpnSiteLinkConnections = egressVpnSiteLinkConnections;
             return this;
         }
 
+        /**
+         * @param egressVpnSiteLinkConnections List of egress VpnSiteLinkConnections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressVpnSiteLinkConnections(SubResourceResponse... egressVpnSiteLinkConnections) {
             return egressVpnSiteLinkConnections(List.of(egressVpnSiteLinkConnections));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param externalMappings The private IP address external mapping for NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
             $.externalMappings = externalMappings;
             return this;
         }
 
+        /**
+         * @param externalMappings The private IP address external mapping for NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalMappings(VpnNatRuleMappingResponse... externalMappings) {
             return externalMappings(List.of(externalMappings));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ingressVpnSiteLinkConnections List of ingress VpnSiteLinkConnections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressVpnSiteLinkConnections(List<SubResourceResponse> ingressVpnSiteLinkConnections) {
             $.ingressVpnSiteLinkConnections = ingressVpnSiteLinkConnections;
             return this;
         }
 
+        /**
+         * @param ingressVpnSiteLinkConnections List of ingress VpnSiteLinkConnections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressVpnSiteLinkConnections(SubResourceResponse... ingressVpnSiteLinkConnections) {
             return ingressVpnSiteLinkConnections(List.of(ingressVpnSiteLinkConnections));
         }
 
+        /**
+         * @param internalMappings The private IP address internal mapping for NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
             $.internalMappings = internalMappings;
             return this;
         }
 
+        /**
+         * @param internalMappings The private IP address internal mapping for NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalMappings(VpnNatRuleMappingResponse... internalMappings) {
             return internalMappings(List.of(internalMappings));
         }
 
+        /**
+         * @param ipConfigurationId The IP Configuration ID this NAT rule applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             $.ipConfigurationId = ipConfigurationId;
             return this;
         }
 
+        /**
+         * @param mode The Source NAT direction of a VPN NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the NAT Rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

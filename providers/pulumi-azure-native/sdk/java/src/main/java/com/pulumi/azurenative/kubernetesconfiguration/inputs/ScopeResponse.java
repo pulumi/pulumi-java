@@ -26,6 +26,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cluster")
     private @Nullable ScopeClusterResponse cluster;
 
+    /**
+     * @return Specifies that the scope of the extensionInstance is Cluster
+     * 
+     */
     public Optional<ScopeClusterResponse> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -37,6 +41,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace")
     private @Nullable ScopeNamespaceResponse namespace;
 
+    /**
+     * @return Specifies that the scope of the extensionInstance is Namespace
+     * 
+     */
     public Optional<ScopeNamespaceResponse> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -66,11 +74,23 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster Specifies that the scope of the extensionInstance is Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable ScopeClusterResponse cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param namespace Specifies that the scope of the extensionInstance is Namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable ScopeNamespaceResponse namespace) {
             $.namespace = namespace;
             return this;

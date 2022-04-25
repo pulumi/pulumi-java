@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogAnalyticsWorkspaceConfigResponse {
     /**
-     * Azure Log Analytics workspace ID
+     * @return Azure Log Analytics workspace ID
      * 
      */
     private final @Nullable String workspaceId;
@@ -23,9 +23,9 @@ public final class LogAnalyticsWorkspaceConfigResponse {
     }
 
     /**
-     * Azure Log Analytics workspace ID
+     * @return Azure Log Analytics workspace ID
      * 
-    */
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
     /**
-     * Region to configure the Workspace.
+     * @return Region to configure the Workspace.
      * 
      */
     private final @Nullable String region;
     /**
-     * The workspace Id for Firewall Policy Insights.
+     * @return The workspace Id for Firewall Policy Insights.
      * 
      */
     private final @Nullable SubResourceResponse workspaceId;
@@ -32,16 +32,16 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
     }
 
     /**
-     * Region to configure the Workspace.
+     * @return Region to configure the Workspace.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The workspace Id for Firewall Policy Insights.
+     * @return The workspace Id for Firewall Policy Insights.
      * 
-    */
+     */
     public Optional<SubResourceResponse> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

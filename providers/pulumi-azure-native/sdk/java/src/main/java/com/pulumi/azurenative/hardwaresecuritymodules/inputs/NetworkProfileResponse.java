@@ -23,6 +23,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkInterfaces")
     private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+     * 
+     */
     public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -34,6 +38,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="subnet")
     private @Nullable ApiEntityReferenceResponse subnet;
 
+    /**
+     * @return Specifies the identifier of the subnet.
+     * 
+     */
     public Optional<ApiEntityReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -63,15 +71,33 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param subnet Specifies the identifier of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable ApiEntityReferenceResponse subnet) {
             $.subnet = subnet;
             return this;

@@ -25,6 +25,10 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
     @Import(name="accountConnectionString", required=true)
     private String accountConnectionString;
 
+    /**
+     * @return Connection string of the account endpoint to use the account as a storage endpoint on the device.
+     * 
+     */
     public String accountConnectionString() {
         return this.accountConnectionString;
     }
@@ -36,6 +40,10 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Name of the account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -47,6 +55,10 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
     @Import(name="dataAccountType", required=true)
     private String dataAccountType;
 
+    /**
+     * @return Type of the account.
+     * 
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
@@ -58,6 +70,10 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
     @Import(name="shareCredentialDetails", required=true)
     private List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
+    /**
+     * @return Per share level unencrypted access credentials.
+     * 
+     */
     public List<ShareCredentialDetailsResponse> shareCredentialDetails() {
         return this.shareCredentialDetails;
     }
@@ -89,26 +105,56 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
             $ = new AccountCredentialDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountConnectionString Connection string of the account endpoint to use the account as a storage endpoint on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountConnectionString(String accountConnectionString) {
             $.accountConnectionString = accountConnectionString;
             return this;
         }
 
+        /**
+         * @param accountName Name of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param dataAccountType Type of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param shareCredentialDetails Per share level unencrypted access credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
             $.shareCredentialDetails = shareCredentialDetails;
             return this;
         }
 
+        /**
+         * @param shareCredentialDetails Per share level unencrypted access credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareCredentialDetails(ShareCredentialDetailsResponse... shareCredentialDetails) {
             return shareCredentialDetails(List.of(shareCredentialDetails));
         }

@@ -23,6 +23,10 @@ public final class BlueprintStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastModified", required=true)
     private String lastModified;
 
+    /**
+     * @return Last modified time of this blueprint definition.
+     * 
+     */
     public String lastModified() {
         return this.lastModified;
     }
@@ -34,6 +38,10 @@ public final class BlueprintStatusResponse extends com.pulumi.resources.InvokeAr
     @Import(name="timeCreated", required=true)
     private String timeCreated;
 
+    /**
+     * @return Creation time of this blueprint definition.
+     * 
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
@@ -63,11 +71,23 @@ public final class BlueprintStatusResponse extends com.pulumi.resources.InvokeAr
             $ = new BlueprintStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastModified Last modified time of this blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(String lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param timeCreated Creation time of this blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             $.timeCreated = timeCreated;
             return this;

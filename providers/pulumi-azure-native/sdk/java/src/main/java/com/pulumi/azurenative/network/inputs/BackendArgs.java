@@ -29,6 +29,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return Location of the backend (IP address or FQDN)
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -40,6 +44,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendHostHeader")
     private @Nullable Output<String> backendHostHeader;
 
+    /**
+     * @return The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+     * 
+     */
     public Optional<Output<String>> backendHostHeader() {
         return Optional.ofNullable(this.backendHostHeader);
     }
@@ -51,6 +59,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,BackendEnabledState>> enabledState;
 
+    /**
+     * @return Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<Output<Either<String,BackendEnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -62,6 +74,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpPort")
     private @Nullable Output<Integer> httpPort;
 
+    /**
+     * @return The HTTP TCP port number. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Output<Integer>> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
@@ -73,6 +89,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpsPort")
     private @Nullable Output<Integer> httpsPort;
 
+    /**
+     * @return The HTTPS TCP port number. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Output<Integer>> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
@@ -84,6 +104,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -95,6 +119,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkAlias")
     private @Nullable Output<String> privateLinkAlias;
 
+    /**
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * 
+     */
     public Optional<Output<String>> privateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
@@ -106,6 +134,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkApprovalMessage")
     private @Nullable Output<String> privateLinkApprovalMessage;
 
+    /**
+     * @return A custom message to be included in the approval request to connect to the Private Link
+     * 
+     */
     public Optional<Output<String>> privateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
@@ -117,6 +149,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkLocation")
     private @Nullable Output<String> privateLinkLocation;
 
+    /**
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+     * 
+     */
     public Optional<Output<String>> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
@@ -128,6 +164,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkResourceId")
     private @Nullable Output<String> privateLinkResourceId;
 
+    /**
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * 
+     */
     public Optional<Output<String>> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -139,6 +179,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
+    /**
+     * @return Weight of this endpoint for load balancing purposes.
+     * 
+     */
     public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -177,109 +221,253 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackendArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Location of the backend (IP address or FQDN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address Location of the backend (IP address or FQDN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param backendHostHeader The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHostHeader(@Nullable Output<String> backendHostHeader) {
             $.backendHostHeader = backendHostHeader;
             return this;
         }
 
+        /**
+         * @param backendHostHeader The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHostHeader(String backendHostHeader) {
             return backendHostHeader(Output.of(backendHostHeader));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,BackendEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,BackendEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(BackendEnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param httpPort The HTTP TCP port number. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
             $.httpPort = httpPort;
             return this;
         }
 
+        /**
+         * @param httpPort The HTTP TCP port number. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPort(Integer httpPort) {
             return httpPort(Output.of(httpPort));
         }
 
+        /**
+         * @param httpsPort The HTTPS TCP port number. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             $.httpsPort = httpsPort;
             return this;
         }
 
+        /**
+         * @param httpsPort The HTTPS TCP port number. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsPort(Integer httpsPort) {
             return httpsPort(Output.of(httpsPort));
         }
 
+        /**
+         * @param priority Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param privateLinkAlias The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
             $.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
+        /**
+         * @param privateLinkAlias The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkAlias(String privateLinkAlias) {
             return privateLinkAlias(Output.of(privateLinkAlias));
         }
 
+        /**
+         * @param privateLinkApprovalMessage A custom message to be included in the approval request to connect to the Private Link
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
             $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
+        /**
+         * @param privateLinkApprovalMessage A custom message to be included in the approval request to connect to the Private Link
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkApprovalMessage(String privateLinkApprovalMessage) {
             return privateLinkApprovalMessage(Output.of(privateLinkApprovalMessage));
         }
 
+        /**
+         * @param privateLinkLocation The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             $.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
+        /**
+         * @param privateLinkLocation The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(String privateLinkLocation) {
             return privateLinkLocation(Output.of(privateLinkLocation));
         }
 
+        /**
+         * @param privateLinkResourceId The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
 
+        /**
+         * @param weight Weight of this endpoint for load balancing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight Weight of this endpoint for load balancing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

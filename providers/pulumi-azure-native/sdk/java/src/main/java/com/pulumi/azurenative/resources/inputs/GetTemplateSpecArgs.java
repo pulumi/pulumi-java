@@ -21,6 +21,10 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Allows for expansion of additional Template Spec details in the response. Optional.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="templateSpecName", required=true)
     private String templateSpecName;
 
+    /**
+     * @return Name of the Template Spec.
+     * 
+     */
     public String templateSpecName() {
         return this.templateSpecName;
     }
@@ -73,16 +85,34 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Allows for expansion of additional Template Spec details in the response. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param templateSpecName Name of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateSpecName(String templateSpecName) {
             $.templateSpecName = templateSpecName;
             return this;

@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse {
     /**
-     * Description of the bypass traffic rule.
+     * @return Description of the bypass traffic rule.
      * 
      */
     private final @Nullable String description;
     /**
-     * List of destination IP addresses or ranges for this rule.
+     * @return List of destination IP addresses or ranges for this rule.
      * 
      */
     private final @Nullable List<String> destinationAddresses;
     /**
-     * List of destination IpGroups for this rule.
+     * @return List of destination IpGroups for this rule.
      * 
      */
     private final @Nullable List<String> destinationIpGroups;
     /**
-     * List of destination ports or ranges.
+     * @return List of destination ports or ranges.
      * 
      */
     private final @Nullable List<String> destinationPorts;
     /**
-     * Name of the bypass traffic rule.
+     * @return Name of the bypass traffic rule.
      * 
      */
     private final @Nullable String name;
     /**
-     * The rule bypass protocol.
+     * @return The rule bypass protocol.
      * 
      */
     private final @Nullable String protocol;
     /**
-     * List of source IP addresses or ranges for this rule.
+     * @return List of source IP addresses or ranges for this rule.
      * 
      */
     private final @Nullable List<String> sourceAddresses;
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
      */
     private final @Nullable List<String> sourceIpGroups;
@@ -74,58 +74,58 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     }
 
     /**
-     * Description of the bypass traffic rule.
+     * @return Description of the bypass traffic rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of destination IP addresses or ranges for this rule.
+     * @return List of destination IP addresses or ranges for this rule.
      * 
-    */
+     */
     public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
-     * List of destination IpGroups for this rule.
+     * @return List of destination IpGroups for this rule.
      * 
-    */
+     */
     public List<String> destinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
     /**
-     * List of destination ports or ranges.
+     * @return List of destination ports or ranges.
      * 
-    */
+     */
     public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
-     * Name of the bypass traffic rule.
+     * @return Name of the bypass traffic rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The rule bypass protocol.
+     * @return The rule bypass protocol.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * List of source IP addresses or ranges for this rule.
+     * @return List of source IP addresses or ranges for this rule.
      * 
-    */
+     */
     public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
-    */
+     */
     public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }

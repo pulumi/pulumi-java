@@ -25,6 +25,10 @@ public final class OrphanedUserInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="databaseName")
     private @Nullable String databaseName;
 
+    /**
+     * @return Parent database of the user
+     * 
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -36,6 +40,10 @@ public final class OrphanedUserInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the orphaned user
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class OrphanedUserInfoResponse extends com.pulumi.resources.InvokeA
             $ = new OrphanedUserInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Parent database of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param name Name of the orphaned user
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -11,58 +11,58 @@ import java.util.Objects;
 @CustomType
 public final class GetADLSGen1FileDataSetResult {
     /**
-     * The ADLS account name.
+     * @return The ADLS account name.
      * 
      */
     private final String accountName;
     /**
-     * Unique id for identifying a data set resource
+     * @return Unique id for identifying a data set resource
      * 
      */
     private final String dataSetId;
     /**
-     * The file name in the ADLS account.
+     * @return The file name in the ADLS account.
      * 
      */
     private final String fileName;
     /**
-     * The folder path within the ADLS account.
+     * @return The folder path within the ADLS account.
      * 
      */
     private final String folderPath;
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
      */
     private final String id;
     /**
-     * Kind of data set.
+     * @return Kind of data set.
      * Expected value is &#39;AdlsGen1File&#39;.
      * 
      */
     private final String kind;
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
      */
     private final String name;
     /**
-     * Resource group of ADLS account.
+     * @return Resource group of ADLS account.
      * 
      */
     private final String resourceGroup;
     /**
-     * Subscription id of ADLS account.
+     * @return Subscription id of ADLS account.
      * 
      */
     private final String subscriptionId;
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
      */
     private final String type;
@@ -94,80 +94,80 @@ public final class GetADLSGen1FileDataSetResult {
     }
 
     /**
-     * The ADLS account name.
+     * @return The ADLS account name.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * Unique id for identifying a data set resource
+     * @return Unique id for identifying a data set resource
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * The file name in the ADLS account.
+     * @return The file name in the ADLS account.
      * 
-    */
+     */
     public String fileName() {
         return this.fileName;
     }
     /**
-     * The folder path within the ADLS account.
+     * @return The folder path within the ADLS account.
      * 
-    */
+     */
     public String folderPath() {
         return this.folderPath;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of data set.
+     * @return Kind of data set.
      * Expected value is &#39;AdlsGen1File&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource group of ADLS account.
+     * @return Resource group of ADLS account.
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * Subscription id of ADLS account.
+     * @return Subscription id of ADLS account.
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

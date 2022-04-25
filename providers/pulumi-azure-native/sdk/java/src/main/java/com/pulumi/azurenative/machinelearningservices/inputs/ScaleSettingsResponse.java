@@ -27,6 +27,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maxNodeCount", required=true)
     private Integer maxNodeCount;
 
+    /**
+     * @return Max number of nodes to use
+     * 
+     */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
@@ -38,6 +42,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="minNodeCount")
     private @Nullable Integer minNodeCount;
 
+    /**
+     * @return Min number of nodes to use
+     * 
+     */
     public Optional<Integer> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
@@ -49,6 +57,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="nodeIdleTimeBeforeScaleDown")
     private @Nullable String nodeIdleTimeBeforeScaleDown;
 
+    /**
+     * @return Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * 
+     */
     public Optional<String> nodeIdleTimeBeforeScaleDown() {
         return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }
@@ -79,16 +91,34 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
             $ = new ScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodeCount Max number of nodes to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Integer maxNodeCount) {
             $.maxNodeCount = maxNodeCount;
             return this;
         }
 
+        /**
+         * @param minNodeCount Min number of nodes to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
             $.minNodeCount = minNodeCount;
             return this;
         }
 
+        /**
+         * @param nodeIdleTimeBeforeScaleDown Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
             $.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;

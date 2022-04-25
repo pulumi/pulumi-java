@@ -19,6 +19,10 @@ public final class GetUserSettingsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userSettingsName", required=true)
     private String userSettingsName;
 
+    /**
+     * @return The name of the user settings
+     * 
+     */
     public String userSettingsName() {
         return this.userSettingsName;
     }
@@ -47,6 +51,12 @@ public final class GetUserSettingsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userSettingsName The name of the user settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettingsName(String userSettingsName) {
             $.userSettingsName = userSettingsName;
             return this;

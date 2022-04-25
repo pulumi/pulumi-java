@@ -20,6 +20,10 @@ public final class PoolEndpointConfigurationResponse extends com.pulumi.resource
     @Import(name="inboundNatPools", required=true)
     private List<InboundNatPoolResponse> inboundNatPools;
 
+    /**
+     * @return The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+     * 
+     */
     public List<InboundNatPoolResponse> inboundNatPools() {
         return this.inboundNatPools;
     }
@@ -48,11 +52,23 @@ public final class PoolEndpointConfigurationResponse extends com.pulumi.resource
             $ = new PoolEndpointConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inboundNatPools The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(List<InboundNatPoolResponse> inboundNatPools) {
             $.inboundNatPools = inboundNatPools;
             return this;
         }
 
+        /**
+         * @param inboundNatPools The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(InboundNatPoolResponse... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
         }

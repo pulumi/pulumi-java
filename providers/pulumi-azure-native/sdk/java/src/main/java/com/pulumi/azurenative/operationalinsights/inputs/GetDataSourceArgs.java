@@ -19,6 +19,10 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataSourceName", required=true)
     private String dataSourceName;
 
+    /**
+     * @return Name of the datasource
+     * 
+     */
     public String dataSourceName() {
         return this.dataSourceName;
     }
@@ -30,6 +34,10 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceName Name of the datasource
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceName(String dataSourceName) {
             $.dataSourceName = dataSourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

@@ -25,6 +25,10 @@ public final class ResourceAccessRuleResponse extends com.pulumi.resources.Invok
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -36,6 +40,10 @@ public final class ResourceAccessRuleResponse extends com.pulumi.resources.Invok
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant Id
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -65,11 +73,23 @@ public final class ResourceAccessRuleResponse extends com.pulumi.resources.Invok
             $ = new ResourceAccessRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

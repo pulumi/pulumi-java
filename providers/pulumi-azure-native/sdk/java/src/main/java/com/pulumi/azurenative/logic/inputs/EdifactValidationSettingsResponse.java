@@ -25,6 +25,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
     private Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
+     * 
+     */
     public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
@@ -36,6 +40,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="checkDuplicateGroupControlNumber", required=true)
     private Boolean checkDuplicateGroupControlNumber;
 
+    /**
+     * @return The value indicating whether to check for duplicate group control number.
+     * 
+     */
     public Boolean checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
@@ -47,6 +55,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="checkDuplicateInterchangeControlNumber", required=true)
     private Boolean checkDuplicateInterchangeControlNumber;
 
+    /**
+     * @return The value indicating whether to check for duplicate interchange control number.
+     * 
+     */
     public Boolean checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
@@ -58,6 +70,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
     private Boolean checkDuplicateTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to check for duplicate transaction set control number.
+     * 
+     */
     public Boolean checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
@@ -69,6 +85,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="interchangeControlNumberValidityDays", required=true)
     private Integer interchangeControlNumberValidityDays;
 
+    /**
+     * @return The validity period of interchange control number.
+     * 
+     */
     public Integer interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
@@ -80,6 +100,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="trailingSeparatorPolicy", required=true)
     private String trailingSeparatorPolicy;
 
+    /**
+     * @return The trailing separator policy.
+     * 
+     */
     public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
@@ -91,6 +115,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
     private Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
+     * 
+     */
     public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
@@ -102,6 +130,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="validateCharacterSet", required=true)
     private Boolean validateCharacterSet;
 
+    /**
+     * @return The value indicating whether to validate character set in the message.
+     * 
+     */
     public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
     }
@@ -113,6 +145,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="validateEDITypes", required=true)
     private Boolean validateEDITypes;
 
+    /**
+     * @return The value indicating whether to Whether to validate EDI types.
+     * 
+     */
     public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
@@ -124,6 +160,10 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="validateXSDTypes", required=true)
     private Boolean validateXSDTypes;
 
+    /**
+     * @return The value indicating whether to Whether to validate XSD types.
+     * 
+     */
     public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }
@@ -161,51 +201,111 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
             $ = new EdifactValidationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowLeadingAndTrailingSpacesAndZeroes The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param checkDuplicateGroupControlNumber The value indicating whether to check for duplicate group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
             $.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
             return this;
         }
 
+        /**
+         * @param checkDuplicateInterchangeControlNumber The value indicating whether to check for duplicate interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
             $.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;
             return this;
         }
 
+        /**
+         * @param checkDuplicateTransactionSetControlNumber The value indicating whether to check for duplicate transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
             $.checkDuplicateTransactionSetControlNumber = checkDuplicateTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberValidityDays The validity period of interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
             $.interchangeControlNumberValidityDays = interchangeControlNumberValidityDays;
             return this;
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
 
+        /**
+         * @param trimLeadingAndTrailingSpacesAndZeroes The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param validateCharacterSet The value indicating whether to validate character set in the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
             $.validateCharacterSet = validateCharacterSet;
             return this;
         }
 
+        /**
+         * @param validateEDITypes The value indicating whether to Whether to validate EDI types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateEDITypes(Boolean validateEDITypes) {
             $.validateEDITypes = validateEDITypes;
             return this;
         }
 
+        /**
+         * @param validateXSDTypes The value indicating whether to Whether to validate XSD types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             $.validateXSDTypes = validateXSDTypes;
             return this;

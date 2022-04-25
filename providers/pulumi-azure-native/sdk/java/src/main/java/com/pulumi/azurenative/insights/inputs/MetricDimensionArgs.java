@@ -25,6 +25,10 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the dimension.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="operator", required=true)
     private Output<String> operator;
 
+    /**
+     * @return the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -47,6 +55,10 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return list of dimension values.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -77,33 +89,75 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
             $ = new MetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param values list of dimension values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of dimension values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values list of dimension values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

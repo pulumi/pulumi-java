@@ -25,6 +25,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="clientSecretUrl")
     private @Nullable String clientSecretUrl;
 
+    /**
+     * @return The client secret URL of the identity.
+     * 
+     */
     public Optional<String> clientSecretUrl() {
         return Optional.ofNullable(this.clientSecretUrl);
     }
@@ -36,6 +40,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return The principal id of resource identity.
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -47,6 +55,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The tenant identifier of resource.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -58,6 +70,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Managed identity.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -89,21 +105,45 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
             $ = new IdentityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientSecretUrl The client secret URL of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecretUrl(@Nullable String clientSecretUrl) {
             $.clientSecretUrl = clientSecretUrl;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant identifier of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

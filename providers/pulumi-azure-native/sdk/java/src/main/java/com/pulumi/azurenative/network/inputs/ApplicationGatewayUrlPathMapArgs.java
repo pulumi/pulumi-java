@@ -29,6 +29,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="defaultBackendAddressPool")
     private @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
 
+    /**
+     * @return Default backend address pool resource of URL path map.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> defaultBackendAddressPool() {
         return Optional.ofNullable(this.defaultBackendAddressPool);
     }
@@ -40,6 +44,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="defaultBackendHttpSettings")
     private @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
 
+    /**
+     * @return Default backend http settings resource of URL path map.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> defaultBackendHttpSettings() {
         return Optional.ofNullable(this.defaultBackendHttpSettings);
     }
@@ -51,6 +59,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="defaultRedirectConfiguration")
     private @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
 
+    /**
+     * @return Default redirect configuration resource of URL path map.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> defaultRedirectConfiguration() {
         return Optional.ofNullable(this.defaultRedirectConfiguration);
     }
@@ -62,6 +74,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="defaultRewriteRuleSet")
     private @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
 
+    /**
+     * @return Default Rewrite rule set resource of URL path map.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> defaultRewriteRuleSet() {
         return Optional.ofNullable(this.defaultRewriteRuleSet);
     }
@@ -73,6 +89,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -84,6 +104,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the URL path map that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
     @Import(name="pathRules")
     private @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
+    /**
+     * @return Path rule of URL path map resource.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayPathRuleArgs>>> pathRules() {
         return Optional.ofNullable(this.pathRules);
     }
@@ -129,69 +157,159 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
             $ = new ApplicationGatewayUrlPathMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultBackendAddressPool Default backend address pool resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBackendAddressPool(@Nullable Output<SubResourceArgs> defaultBackendAddressPool) {
             $.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
 
+        /**
+         * @param defaultBackendAddressPool Default backend address pool resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBackendAddressPool(SubResourceArgs defaultBackendAddressPool) {
             return defaultBackendAddressPool(Output.of(defaultBackendAddressPool));
         }
 
+        /**
+         * @param defaultBackendHttpSettings Default backend http settings resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBackendHttpSettings(@Nullable Output<SubResourceArgs> defaultBackendHttpSettings) {
             $.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
 
+        /**
+         * @param defaultBackendHttpSettings Default backend http settings resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBackendHttpSettings(SubResourceArgs defaultBackendHttpSettings) {
             return defaultBackendHttpSettings(Output.of(defaultBackendHttpSettings));
         }
 
+        /**
+         * @param defaultRedirectConfiguration Default redirect configuration resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRedirectConfiguration(@Nullable Output<SubResourceArgs> defaultRedirectConfiguration) {
             $.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
 
+        /**
+         * @param defaultRedirectConfiguration Default redirect configuration resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRedirectConfiguration(SubResourceArgs defaultRedirectConfiguration) {
             return defaultRedirectConfiguration(Output.of(defaultRedirectConfiguration));
         }
 
+        /**
+         * @param defaultRewriteRuleSet Default Rewrite rule set resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRewriteRuleSet(@Nullable Output<SubResourceArgs> defaultRewriteRuleSet) {
             $.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
 
+        /**
+         * @param defaultRewriteRuleSet Default Rewrite rule set resource of URL path map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRewriteRuleSet(SubResourceArgs defaultRewriteRuleSet) {
             return defaultRewriteRuleSet(Output.of(defaultRewriteRuleSet));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the URL path map that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the URL path map that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pathRules Path rule of URL path map resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathRules(@Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules) {
             $.pathRules = pathRules;
             return this;
         }
 
+        /**
+         * @param pathRules Path rule of URL path map resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathRules(List<ApplicationGatewayPathRuleArgs> pathRules) {
             return pathRules(Output.of(pathRules));
         }
 
+        /**
+         * @param pathRules Path rule of URL path map resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathRules(ApplicationGatewayPathRuleArgs... pathRules) {
             return pathRules(List.of(pathRules));
         }

@@ -25,6 +25,10 @@ public final class PublicIPAddressSkuResponse extends com.pulumi.resources.Invok
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Specify public IP sku name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class PublicIPAddressSkuResponse extends com.pulumi.resources.Invok
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Specify public IP sku tier
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -65,11 +73,23 @@ public final class PublicIPAddressSkuResponse extends com.pulumi.resources.Invok
             $ = new PublicIPAddressSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Specify public IP sku name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Specify public IP sku tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

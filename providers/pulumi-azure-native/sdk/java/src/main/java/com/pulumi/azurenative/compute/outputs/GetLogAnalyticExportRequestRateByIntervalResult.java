@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetLogAnalyticExportRequestRateByIntervalResult {
     /**
-     * LogAnalyticsOutput
+     * @return LogAnalyticsOutput
      * 
      */
     private final LogAnalyticsOutputResponse properties;
@@ -21,9 +21,9 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
     }
 
     /**
-     * LogAnalyticsOutput
+     * @return LogAnalyticsOutput
      * 
-    */
+     */
     public LogAnalyticsOutputResponse properties() {
         return this.properties;
     }

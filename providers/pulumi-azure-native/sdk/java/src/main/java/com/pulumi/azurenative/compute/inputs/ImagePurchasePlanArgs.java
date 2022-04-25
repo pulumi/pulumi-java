@@ -26,6 +26,10 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The plan ID.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
     @Import(name="product")
     private @Nullable Output<String> product;
 
+    /**
+     * @return The product ID.
+     * 
+     */
     public Optional<Output<String>> product() {
         return Optional.ofNullable(this.product);
     }
@@ -48,6 +56,10 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The publisher ID.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -78,29 +90,65 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
             $ = new ImagePurchasePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param product The product ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product The product ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }

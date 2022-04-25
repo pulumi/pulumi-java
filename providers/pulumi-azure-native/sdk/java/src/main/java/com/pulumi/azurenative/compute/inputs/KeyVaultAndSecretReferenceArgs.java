@@ -25,6 +25,10 @@ public final class KeyVaultAndSecretReferenceArgs extends com.pulumi.resources.R
     @Import(name="secretUrl", required=true)
     private Output<String> secretUrl;
 
+    /**
+     * @return Url pointing to a key or secret in KeyVault
+     * 
+     */
     public Output<String> secretUrl() {
         return this.secretUrl;
     }
@@ -36,6 +40,10 @@ public final class KeyVaultAndSecretReferenceArgs extends com.pulumi.resources.R
     @Import(name="sourceVault", required=true)
     private Output<SourceVaultArgs> sourceVault;
 
+    /**
+     * @return Resource id of the KeyVault containing the key or secret
+     * 
+     */
     public Output<SourceVaultArgs> sourceVault() {
         return this.sourceVault;
     }
@@ -65,20 +73,44 @@ public final class KeyVaultAndSecretReferenceArgs extends com.pulumi.resources.R
             $ = new KeyVaultAndSecretReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretUrl Url pointing to a key or secret in KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretUrl(Output<String> secretUrl) {
             $.secretUrl = secretUrl;
             return this;
         }
 
+        /**
+         * @param secretUrl Url pointing to a key or secret in KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretUrl(String secretUrl) {
             return secretUrl(Output.of(secretUrl));
         }
 
+        /**
+         * @param sourceVault Resource id of the KeyVault containing the key or secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(Output<SourceVaultArgs> sourceVault) {
             $.sourceVault = sourceVault;
             return this;
         }
 
+        /**
+         * @param sourceVault Resource id of the KeyVault containing the key or secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SourceVaultArgs sourceVault) {
             return sourceVault(Output.of(sourceVault));
         }

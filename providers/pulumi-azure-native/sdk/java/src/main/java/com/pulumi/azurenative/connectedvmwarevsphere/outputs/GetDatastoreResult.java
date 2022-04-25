@@ -17,82 +17,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDatastoreResult {
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
     private final String customResourceName;
     /**
-     * Gets or sets the extended location.
+     * @return Gets or sets the extended location.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Gets or sets the Id.
+     * @return Gets or sets the Id.
      * 
      */
     private final String id;
     /**
-     * Gets or sets the inventory Item ID for the datastore.
+     * @return Gets or sets the inventory Item ID for the datastore.
      * 
      */
     private final @Nullable String inventoryItemId;
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
      */
     private final String location;
     /**
-     * Gets or sets the vCenter Managed Object name for the datastore.
+     * @return Gets or sets the vCenter Managed Object name for the datastore.
      * 
      */
     private final String moName;
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
      * 
      */
     private final @Nullable String moRefId;
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final List<ResourceStatusResponse> statuses;
     /**
-     * The system data.
+     * @return The system data.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Gets or sets the Resource tags.
+     * @return Gets or sets the Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets or sets the type of the resource.
+     * @return Gets or sets the type of the resource.
      * 
      */
     private final String type;
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
      */
     private final String uuid;
     /**
-     * Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
+     * @return Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
      * 
      */
     private final @Nullable String vCenterId;
@@ -134,114 +134,114 @@ public final class GetDatastoreResult {
     }
 
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
-    */
+     */
     public String customResourceName() {
         return this.customResourceName;
     }
     /**
-     * Gets or sets the extended location.
+     * @return Gets or sets the extended location.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Gets or sets the Id.
+     * @return Gets or sets the Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the inventory Item ID for the datastore.
+     * @return Gets or sets the inventory Item ID for the datastore.
      * 
-    */
+     */
     public Optional<String> inventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Gets or sets the vCenter Managed Object name for the datastore.
+     * @return Gets or sets the vCenter Managed Object name for the datastore.
      * 
-    */
+     */
     public String moName() {
         return this.moName;
     }
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
      * 
-    */
+     */
     public Optional<String> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
-     * The system data.
+     * @return The system data.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Gets or sets the Resource tags.
+     * @return Gets or sets the Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets or sets the type of the resource.
+     * @return Gets or sets the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
-    */
+     */
     public String uuid() {
         return this.uuid;
     }
     /**
-     * Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
+     * @return Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
      * 
-    */
+     */
     public Optional<String> vCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }

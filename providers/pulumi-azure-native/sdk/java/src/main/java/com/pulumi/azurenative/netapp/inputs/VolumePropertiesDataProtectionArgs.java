@@ -28,6 +28,10 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
     @Import(name="backup")
     private @Nullable Output<VolumeBackupPropertiesArgs> backup;
 
+    /**
+     * @return Backup Properties
+     * 
+     */
     public Optional<Output<VolumeBackupPropertiesArgs>> backup() {
         return Optional.ofNullable(this.backup);
     }
@@ -39,6 +43,10 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
     @Import(name="replication")
     private @Nullable Output<ReplicationObjectArgs> replication;
 
+    /**
+     * @return Replication properties
+     * 
+     */
     public Optional<Output<ReplicationObjectArgs>> replication() {
         return Optional.ofNullable(this.replication);
     }
@@ -50,6 +58,10 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
     @Import(name="snapshot")
     private @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
+    /**
+     * @return Snapshot properties.
+     * 
+     */
     public Optional<Output<VolumeSnapshotPropertiesArgs>> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -80,29 +92,65 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
             $ = new VolumePropertiesDataProtectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backup Backup Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder backup(@Nullable Output<VolumeBackupPropertiesArgs> backup) {
             $.backup = backup;
             return this;
         }
 
+        /**
+         * @param backup Backup Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder backup(VolumeBackupPropertiesArgs backup) {
             return backup(Output.of(backup));
         }
 
+        /**
+         * @param replication Replication properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder replication(@Nullable Output<ReplicationObjectArgs> replication) {
             $.replication = replication;
             return this;
         }
 
+        /**
+         * @param replication Replication properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder replication(ReplicationObjectArgs replication) {
             return replication(Output.of(replication));
         }
 
+        /**
+         * @param snapshot Snapshot properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param snapshot Snapshot properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(VolumeSnapshotPropertiesArgs snapshot) {
             return snapshot(Output.of(snapshot));
         }

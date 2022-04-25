@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EntityInsightItemResponse {
     /**
-     * Query results for table insights query.
+     * @return Query results for table insights query.
      * 
      */
     private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
     /**
-     * The query id of the insight
+     * @return The query id of the insight
      * 
      */
     private final @Nullable String queryId;
     /**
-     * The Time interval that the query actually executed on.
+     * @return The Time interval that the query actually executed on.
      * 
      */
     private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
     /**
-     * Query results for table insights query.
+     * @return Query results for table insights query.
      * 
      */
     private final @Nullable InsightsTableResultResponse tableQueryResults;
@@ -48,30 +48,30 @@ public final class EntityInsightItemResponse {
     }
 
     /**
-     * Query results for table insights query.
+     * @return Query results for table insights query.
      * 
-    */
+     */
     public List<InsightsTableResultResponse> chartQueryResults() {
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
     }
     /**
-     * The query id of the insight
+     * @return The query id of the insight
      * 
-    */
+     */
     public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }
     /**
-     * The Time interval that the query actually executed on.
+     * @return The Time interval that the query actually executed on.
      * 
-    */
+     */
     public Optional<EntityInsightItemResponseQueryTimeInterval> queryTimeInterval() {
         return Optional.ofNullable(this.queryTimeInterval);
     }
     /**
-     * Query results for table insights query.
+     * @return Query results for table insights query.
      * 
-    */
+     */
     public Optional<InsightsTableResultResponse> tableQueryResults() {
         return Optional.ofNullable(this.tableQueryResults);
     }

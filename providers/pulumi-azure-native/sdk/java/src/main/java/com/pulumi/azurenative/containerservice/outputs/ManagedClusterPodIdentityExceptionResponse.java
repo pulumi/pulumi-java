@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ManagedClusterPodIdentityExceptionResponse {
     /**
-     * Name of the pod identity exception.
+     * @return Name of the pod identity exception.
      * 
      */
     private final String name;
     /**
-     * Namespace of the pod identity exception.
+     * @return Namespace of the pod identity exception.
      * 
      */
     private final String namespace;
     /**
-     * Pod labels to match.
+     * @return Pod labels to match.
      * 
      */
     private final Map<String,String> podLabels;
@@ -37,23 +37,23 @@ public final class ManagedClusterPodIdentityExceptionResponse {
     }
 
     /**
-     * Name of the pod identity exception.
+     * @return Name of the pod identity exception.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Namespace of the pod identity exception.
+     * @return Namespace of the pod identity exception.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * Pod labels to match.
+     * @return Pod labels to match.
      * 
-    */
+     */
     public Map<String,String> podLabels() {
         return this.podLabels;
     }

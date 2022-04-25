@@ -29,6 +29,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="code")
     private @Nullable Output<String> code;
 
+    /**
+     * @return Status code provided by the Extension
+     * 
+     */
     public Optional<Output<String>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -40,6 +44,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayStatus")
     private @Nullable Output<String> displayStatus;
 
+    /**
+     * @return Short description of status of this instance of the extension.
+     * 
+     */
     public Optional<Output<String>> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
@@ -51,6 +59,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="level")
     private @Nullable Output<Either<String,LevelType>> level;
 
+    /**
+     * @return Level of the status.
+     * 
+     */
     public Optional<Output<Either<String,LevelType>>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -62,6 +74,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Detailed message of the status from the Extension instance.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -73,6 +89,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return DateLiteral (per ISO8601) noting the time of installation status.
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -105,55 +125,127 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
             $ = new ExtensionStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Status code provided by the Extension
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<String> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Status code provided by the Extension
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param displayStatus Short description of status of this instance of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(@Nullable Output<String> displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param displayStatus Short description of status of this instance of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(String displayStatus) {
             return displayStatus(Output.of(displayStatus));
         }
 
+        /**
+         * @param level Level of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<Either<String,LevelType>> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Level of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Either<String,LevelType> level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param level Level of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Either.ofLeft(level));
         }
 
+        /**
+         * @param level Level of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(LevelType level) {
             return level(Either.ofRight(level));
         }
 
+        /**
+         * @param message Detailed message of the status from the Extension instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Detailed message of the status from the Extension instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param time DateLiteral (per ISO8601) noting the time of installation status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time DateLiteral (per ISO8601) noting the time of installation status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

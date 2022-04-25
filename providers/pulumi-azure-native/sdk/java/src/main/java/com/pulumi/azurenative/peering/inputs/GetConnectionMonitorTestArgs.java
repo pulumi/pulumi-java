@@ -19,6 +19,10 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
     @Import(name="connectionMonitorTestName", required=true)
     private String connectionMonitorTestName;
 
+    /**
+     * @return The name of the connection monitor test
+     * 
+     */
     public String connectionMonitorTestName() {
         return this.connectionMonitorTestName;
     }
@@ -30,6 +34,10 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
     @Import(name="peeringServiceName", required=true)
     private String peeringServiceName;
 
+    /**
+     * @return The name of the peering service.
+     * 
+     */
     public String peeringServiceName() {
         return this.peeringServiceName;
     }
@@ -41,6 +49,10 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
             $ = new GetConnectionMonitorTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionMonitorTestName The name of the connection monitor test
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMonitorTestName(String connectionMonitorTestName) {
             $.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(String peeringServiceName) {
             $.peeringServiceName = peeringServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

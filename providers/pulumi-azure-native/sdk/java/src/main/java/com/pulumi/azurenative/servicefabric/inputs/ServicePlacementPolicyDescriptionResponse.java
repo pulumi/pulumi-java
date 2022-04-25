@@ -23,6 +23,10 @@ public final class ServicePlacementPolicyDescriptionResponse extends com.pulumi.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of placement policy for a service fabric service. Following are the possible values.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class ServicePlacementPolicyDescriptionResponse extends com.pulumi.
             $ = new ServicePlacementPolicyDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of placement policy for a service fabric service. Following are the possible values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

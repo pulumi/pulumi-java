@@ -26,6 +26,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
     @Import(name="selectedDatabases", required=true)
     private Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -37,6 +41,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
     @Import(name="sourceConnectionInfo", required=true)
     private Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source MySQL
+     * 
+     */
     public Output<MySqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -48,6 +56,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
     @Import(name="targetConnectionInfo", required=true)
     private Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for MySQL
+     * 
+     */
     public Output<MySqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -78,33 +90,75 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
             $ = new MigrateMySqlAzureDbForMySqlSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source MySQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<MySqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source MySQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for MySQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<MySqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for MySQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

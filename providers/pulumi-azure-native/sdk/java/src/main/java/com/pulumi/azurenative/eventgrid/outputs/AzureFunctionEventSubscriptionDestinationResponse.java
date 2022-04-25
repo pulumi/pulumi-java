@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFunctionEventSubscriptionDestinationResponse {
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;AzureFunction&#39;.
      * 
      */
     private final String endpointType;
     /**
-     * Maximum number of events per batch.
+     * @return Maximum number of events per batch.
      * 
      */
     private final @Nullable Integer maxEventsPerBatch;
     /**
-     * Preferred batch size in Kilobytes.
+     * @return Preferred batch size in Kilobytes.
      * 
      */
     private final @Nullable Integer preferredBatchSizeInKilobytes;
     /**
-     * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+     * @return The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
      * 
      */
     private final @Nullable String resourceId;
@@ -47,31 +47,31 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
     }
 
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;AzureFunction&#39;.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * Maximum number of events per batch.
+     * @return Maximum number of events per batch.
      * 
-    */
+     */
     public Optional<Integer> maxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
     /**
-     * Preferred batch size in Kilobytes.
+     * @return Preferred batch size in Kilobytes.
      * 
-    */
+     */
     public Optional<Integer> preferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
     /**
-     * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+     * @return The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

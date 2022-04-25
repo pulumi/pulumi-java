@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class PrivateEndpointResponse {
     /**
-     * The ARM identifier for Private Endpoint
+     * @return The ARM identifier for Private Endpoint
      * 
      */
     private final String id;
     /**
-     * The ARM identifier for Subnet resource that private endpoint links to
+     * @return The ARM identifier for Subnet resource that private endpoint links to
      * 
      */
     private final String subnetArmId;
@@ -29,16 +29,16 @@ public final class PrivateEndpointResponse {
     }
 
     /**
-     * The ARM identifier for Private Endpoint
+     * @return The ARM identifier for Private Endpoint
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ARM identifier for Subnet resource that private endpoint links to
+     * @return The ARM identifier for Subnet resource that private endpoint links to
      * 
-    */
+     */
     public String subnetArmId() {
         return this.subnetArmId;
     }

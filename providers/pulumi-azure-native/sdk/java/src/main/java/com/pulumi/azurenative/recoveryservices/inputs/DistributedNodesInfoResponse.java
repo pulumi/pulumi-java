@@ -26,6 +26,10 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
     @Import(name="errorDetail")
     private @Nullable ErrorDetailResponse errorDetail;
 
+    /**
+     * @return Error Details if the Status is non-success.
+     * 
+     */
     public Optional<ErrorDetailResponse> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
@@ -37,6 +41,10 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
     @Import(name="nodeName")
     private @Nullable String nodeName;
 
+    /**
+     * @return Name of the node under a distributed container.
+     * 
+     */
     public Optional<String> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
@@ -49,6 +57,11 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of this Node.
+     * Failed | Succeeded
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -79,16 +92,35 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
             $ = new DistributedNodesInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorDetail Error Details if the Status is non-success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             $.errorDetail = errorDetail;
             return this;
         }
 
+        /**
+         * @param nodeName Name of the node under a distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(@Nullable String nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param status Status of this Node.
+         * Failed | Succeeded
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

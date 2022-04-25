@@ -28,6 +28,10 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
     private @Nullable Output<Either<String,EnableStatus>> enabled;
 
+    /**
+     * @return Is the lab support banner active/enabled at this time?
+     * 
+     */
     public Optional<Output<Either<String,EnableStatus>>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -39,6 +43,10 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="markdown")
     private @Nullable Output<String> markdown;
 
+    /**
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * 
+     */
     public Optional<Output<String>> markdown() {
         return Optional.ofNullable(this.markdown);
     }
@@ -68,28 +76,64 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new LabSupportPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Is the lab support banner active/enabled at this time?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Either<String,EnableStatus>> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Is the lab support banner active/enabled at this time?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Either<String,EnableStatus> enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param enabled Is the lab support banner active/enabled at this time?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(String enabled) {
             return enabled(Either.ofLeft(enabled));
         }
 
+        /**
+         * @param enabled Is the lab support banner active/enabled at this time?
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(EnableStatus enabled) {
             return enabled(Either.ofRight(enabled));
         }
 
+        /**
+         * @param markdown The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder markdown(@Nullable Output<String> markdown) {
             $.markdown = markdown;
             return this;
         }
 
+        /**
+         * @param markdown The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder markdown(String markdown) {
             return markdown(Output.of(markdown));
         }

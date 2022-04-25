@@ -29,6 +29,10 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentPoolName")
     private @Nullable Output<String> agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<Output<String>> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -40,6 +44,10 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isArchiveEnabled")
     private @Nullable Output<Boolean> isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     public Optional<Output<Boolean>> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -51,6 +59,10 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logTemplate")
     private @Nullable Output<String> logTemplate;
 
+    /**
+     * @return The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     public Optional<Output<String>> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
@@ -62,6 +74,10 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="overrideTaskStepProperties")
     private @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
 
+    /**
+     * @return Set of overridable parameters that can be passed when running a Task.
+     * 
+     */
     public Optional<Output<OverrideTaskStepPropertiesArgs>> overrideTaskStepProperties() {
         return Optional.ofNullable(this.overrideTaskStepProperties);
     }
@@ -73,6 +89,10 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="taskId", required=true)
     private Output<String> taskId;
 
+    /**
+     * @return The resource ID of task against which run has to be queued.
+     * 
+     */
     public Output<String> taskId() {
         return this.taskId;
     }
@@ -85,6 +105,11 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the run request.
+     * Expected value is &#39;TaskRunRequest&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -118,56 +143,130 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TaskRunRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(String agentPoolName) {
             return agentPoolName(Output.of(agentPoolName));
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(Boolean isArchiveEnabled) {
             return isArchiveEnabled(Output.of(isArchiveEnabled));
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             $.logTemplate = logTemplate;
             return this;
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(String logTemplate) {
             return logTemplate(Output.of(logTemplate));
         }
 
+        /**
+         * @param overrideTaskStepProperties Set of overridable parameters that can be passed when running a Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideTaskStepProperties(@Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
             $.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
 
+        /**
+         * @param overrideTaskStepProperties Set of overridable parameters that can be passed when running a Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideTaskStepProperties(OverrideTaskStepPropertiesArgs overrideTaskStepProperties) {
             return overrideTaskStepProperties(Output.of(overrideTaskStepProperties));
         }
 
+        /**
+         * @param taskId The resource ID of task against which run has to be queued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskId(Output<String> taskId) {
             $.taskId = taskId;
             return this;
         }
 
+        /**
+         * @param taskId The resource ID of task against which run has to be queued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskId(String taskId) {
             return taskId(Output.of(taskId));
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;TaskRunRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;TaskRunRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

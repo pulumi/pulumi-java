@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SourceConfigurationResponse {
     /**
-     * The name of setting.
+     * @return The name of setting.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of setting
+     * @return The value of setting
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class SourceConfigurationResponse {
     }
 
     /**
-     * The name of setting.
+     * @return The name of setting.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of setting
+     * @return The value of setting
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -26,6 +26,11 @@ public final class AutomaticResolutionPropertiesResponse extends com.pulumi.reso
     @Import(name="moveResourceId")
     private @Nullable String moveResourceId;
 
+    /**
+     * @return Gets the MoveResource ARM ID of
+     * the dependent resource if the resolution type is Automatic.
+     * 
+     */
     public Optional<String> moveResourceId() {
         return Optional.ofNullable(this.moveResourceId);
     }
@@ -54,6 +59,13 @@ public final class AutomaticResolutionPropertiesResponse extends com.pulumi.reso
             $ = new AutomaticResolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moveResourceId Gets the MoveResource ARM ID of
+         * the dependent resource if the resolution type is Automatic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveResourceId(@Nullable String moveResourceId) {
             $.moveResourceId = moveResourceId;
             return this;

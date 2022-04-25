@@ -25,6 +25,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exe")
     private @Nullable String exe;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<String> exe() {
         return Optional.ofNullable(this.exe);
     }
@@ -36,6 +40,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="executable")
     private @Nullable String executable;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<String> executable() {
         return Optional.ofNullable(this.executable);
     }
@@ -47,6 +55,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="msi")
     private @Nullable String msi;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<String> msi() {
         return Optional.ofNullable(this.msi);
     }
@@ -58,6 +70,10 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="script")
     private @Nullable String script;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
@@ -89,21 +105,45 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
             $ = new ProtectionModeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exe The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder exe(@Nullable String exe) {
             $.exe = exe;
             return this;
         }
 
+        /**
+         * @param executable The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder executable(@Nullable String executable) {
             $.executable = executable;
             return this;
         }
 
+        /**
+         * @param msi The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(@Nullable String msi) {
             $.msi = msi;
             return this;
         }
 
+        /**
+         * @param script The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable String script) {
             $.script = script;
             return this;

@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMigrateProjectResult {
     /**
-     * Gets or sets the eTag for concurrency control.
+     * @return Gets or sets the eTag for concurrency control.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Gets the relative URL to get this migrate project.
+     * @return Gets the relative URL to get this migrate project.
      * 
      */
     private final String id;
     /**
-     * Gets or sets the Azure location in which migrate project is created.
+     * @return Gets or sets the Azure location in which migrate project is created.
      * 
      */
     private final @Nullable String location;
     /**
-     * Gets the name of the migrate project.
+     * @return Gets the name of the migrate project.
      * 
      */
     private final String name;
     /**
-     * Gets or sets the nested properties.
+     * @return Gets or sets the nested properties.
      * 
      */
     private final MigrateProjectPropertiesResponse properties;
     /**
-     * Gets or sets the tags.
+     * @return Gets or sets the tags.
      * 
      */
     private final @Nullable MigrateProjectResponseTags tags;
     /**
-     * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
+     * @return Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class GetMigrateProjectResult {
     }
 
     /**
-     * Gets or sets the eTag for concurrency control.
+     * @return Gets or sets the eTag for concurrency control.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Gets the relative URL to get this migrate project.
+     * @return Gets the relative URL to get this migrate project.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the Azure location in which migrate project is created.
+     * @return Gets or sets the Azure location in which migrate project is created.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets the name of the migrate project.
+     * @return Gets the name of the migrate project.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the nested properties.
+     * @return Gets or sets the nested properties.
      * 
-    */
+     */
     public MigrateProjectPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Gets or sets the tags.
+     * @return Gets or sets the tags.
      * 
-    */
+     */
     public Optional<MigrateProjectResponseTags> tags() {
         return Optional.ofNullable(this.tags);
     }
     /**
-     * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
+     * @return Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

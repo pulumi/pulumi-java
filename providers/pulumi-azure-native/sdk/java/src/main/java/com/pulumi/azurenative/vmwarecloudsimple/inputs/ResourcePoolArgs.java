@@ -24,6 +24,10 @@ public final class ResourcePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return resource pool id (privateCloudId:vsphereId)
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class ResourcePoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourcePoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id resource pool id (privateCloudId:vsphereId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id resource pool id (privateCloudId:vsphereId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

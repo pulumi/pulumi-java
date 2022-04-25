@@ -34,6 +34,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="agentConfiguration")
     private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
+    /**
+     * @return The machine configuration of the run agent.
+     * 
+     */
     public Optional<Output<AgentPropertiesArgs>> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
@@ -45,6 +49,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="agentPoolName")
     private @Nullable Output<String> agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<Output<String>> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -56,6 +64,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="credentials")
     private @Nullable Output<CredentialsArgs> credentials;
 
+    /**
+     * @return The properties that describes a set of credentials that will be used when this run is invoked.
+     * 
+     */
     public Optional<Output<CredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -67,6 +79,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="encodedTaskContent", required=true)
     private Output<String> encodedTaskContent;
 
+    /**
+     * @return Base64 encoded value of the template/definition file content.
+     * 
+     */
     public Output<String> encodedTaskContent() {
         return this.encodedTaskContent;
     }
@@ -78,6 +94,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="encodedValuesContent")
     private @Nullable Output<String> encodedValuesContent;
 
+    /**
+     * @return Base64 encoded value of the parameters/values file content.
+     * 
+     */
     public Optional<Output<String>> encodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
@@ -89,6 +109,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="isArchiveEnabled")
     private @Nullable Output<Boolean> isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     public Optional<Output<Boolean>> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -100,6 +124,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="logTemplate")
     private @Nullable Output<String> logTemplate;
 
+    /**
+     * @return The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     public Optional<Output<String>> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
@@ -111,6 +139,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="platform", required=true)
     private Output<PlatformPropertiesArgs> platform;
 
+    /**
+     * @return The platform properties against which the run has to happen.
+     * 
+     */
     public Output<PlatformPropertiesArgs> platform() {
         return this.platform;
     }
@@ -123,6 +155,11 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="sourceLocation")
     private @Nullable Output<String> sourceLocation;
 
+    /**
+     * @return The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+     * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+     * 
+     */
     public Optional<Output<String>> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
@@ -134,6 +171,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return Run timeout in seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -146,6 +187,11 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the run request.
+     * Expected value is &#39;EncodedTaskRunRequest&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -157,6 +203,10 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="values")
     private @Nullable Output<List<SetValueArgs>> values;
 
+    /**
+     * @return The collection of overridable values that can be passed when running a task.
+     * 
+     */
     public Optional<Output<List<SetValueArgs>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -196,114 +246,268 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
             $ = new EncodedTaskRunRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
             $.agentConfiguration = agentConfiguration;
             return this;
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(AgentPropertiesArgs agentConfiguration) {
             return agentConfiguration(Output.of(agentConfiguration));
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(String agentPoolName) {
             return agentPoolName(Output.of(agentPoolName));
         }
 
+        /**
+         * @param credentials The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(CredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param encodedTaskContent Base64 encoded value of the template/definition file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedTaskContent(Output<String> encodedTaskContent) {
             $.encodedTaskContent = encodedTaskContent;
             return this;
         }
 
+        /**
+         * @param encodedTaskContent Base64 encoded value of the template/definition file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedTaskContent(String encodedTaskContent) {
             return encodedTaskContent(Output.of(encodedTaskContent));
         }
 
+        /**
+         * @param encodedValuesContent Base64 encoded value of the parameters/values file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValuesContent(@Nullable Output<String> encodedValuesContent) {
             $.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
+        /**
+         * @param encodedValuesContent Base64 encoded value of the parameters/values file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValuesContent(String encodedValuesContent) {
             return encodedValuesContent(Output.of(encodedValuesContent));
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(Boolean isArchiveEnabled) {
             return isArchiveEnabled(Output.of(isArchiveEnabled));
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             $.logTemplate = logTemplate;
             return this;
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(String logTemplate) {
             return logTemplate(Output.of(logTemplate));
         }
 
+        /**
+         * @param platform The platform properties against which the run has to happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(Output<PlatformPropertiesArgs> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform The platform properties against which the run has to happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(PlatformPropertiesArgs platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param sourceLocation The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
             $.sourceLocation = sourceLocation;
             return this;
         }
 
+        /**
+         * @param sourceLocation The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocation(String sourceLocation) {
             return sourceLocation(Output.of(sourceLocation));
         }
 
+        /**
+         * @param timeout Run timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Run timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;EncodedTaskRunRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;EncodedTaskRunRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<SetValueArgs> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(SetValueArgs... values) {
             return values(List.of(values));
         }

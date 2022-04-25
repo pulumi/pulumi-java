@@ -22,6 +22,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="configurationAssignmentName")
     private @Nullable Output<String> configurationAssignmentName;
 
+    /**
+     * @return Configuration assignment name
+     * 
+     */
     public Optional<Output<String>> configurationAssignmentName() {
         return Optional.ofNullable(this.configurationAssignmentName);
     }
@@ -33,6 +37,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -44,6 +52,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="maintenanceConfigurationId")
     private @Nullable Output<String> maintenanceConfigurationId;
 
+    /**
+     * @return The maintenance configuration Id
+     * 
+     */
     public Optional<Output<String>> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
@@ -55,6 +67,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="providerName", required=true)
     private Output<String> providerName;
 
+    /**
+     * @return Resource provider name
+     * 
+     */
     public Output<String> providerName() {
         return this.providerName;
     }
@@ -66,6 +82,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The unique resourceId
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -88,6 +112,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return Resource identifier
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -99,6 +127,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -134,74 +166,170 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
             $ = new ConfigurationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationAssignmentName Configuration assignment name
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAssignmentName(@Nullable Output<String> configurationAssignmentName) {
             $.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
 
+        /**
+         * @param configurationAssignmentName Configuration assignment name
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAssignmentName(String configurationAssignmentName) {
             return configurationAssignmentName(Output.of(configurationAssignmentName));
         }
 
+        /**
+         * @param location Location of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maintenanceConfigurationId The maintenance configuration Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             $.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
+        /**
+         * @param maintenanceConfigurationId The maintenance configuration Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceConfigurationId(String maintenanceConfigurationId) {
             return maintenanceConfigurationId(Output.of(maintenanceConfigurationId));
         }
 
+        /**
+         * @param providerName Resource provider name
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName Resource provider name
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param resourceGroupName Resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId The unique resourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The unique resourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param resourceName Resource identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName Resource identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param resourceType Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

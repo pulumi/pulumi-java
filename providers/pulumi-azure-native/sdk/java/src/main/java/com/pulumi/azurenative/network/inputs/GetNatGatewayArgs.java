@@ -21,6 +21,10 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="natGatewayName", required=true)
     private String natGatewayName;
 
+    /**
+     * @return The name of the nat gateway.
+     * 
+     */
     public String natGatewayName() {
         return this.natGatewayName;
     }
@@ -43,6 +51,10 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNatGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param natGatewayName The name of the nat gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGatewayName(String natGatewayName) {
             $.natGatewayName = natGatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

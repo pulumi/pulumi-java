@@ -26,6 +26,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<ResourceIdentityType> type;
 
+    /**
+     * @return The identity type. This is the only required field when adding a system assigned identity to a resource.
+     * 
+     */
     public Optional<Output<ResourceIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type. This is the only required field when adding a system assigned identity to a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type. This is the only required field when adding a system assigned identity to a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

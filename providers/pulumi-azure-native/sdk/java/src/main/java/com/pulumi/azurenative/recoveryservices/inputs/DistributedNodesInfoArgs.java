@@ -26,6 +26,10 @@ public final class DistributedNodesInfoArgs extends com.pulumi.resources.Resourc
     @Import(name="nodeName")
     private @Nullable Output<String> nodeName;
 
+    /**
+     * @return Name of the node under a distributed container.
+     * 
+     */
     public Optional<Output<String>> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
@@ -38,6 +42,11 @@ public final class DistributedNodesInfoArgs extends com.pulumi.resources.Resourc
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of this Node.
+     * Failed | Succeeded
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -67,20 +76,46 @@ public final class DistributedNodesInfoArgs extends com.pulumi.resources.Resourc
             $ = new DistributedNodesInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeName Name of the node under a distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(@Nullable Output<String> nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param nodeName Name of the node under a distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(String nodeName) {
             return nodeName(Output.of(nodeName));
         }
 
+        /**
+         * @param status Status of this Node.
+         * Failed | Succeeded
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of this Node.
+         * Failed | Succeeded
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

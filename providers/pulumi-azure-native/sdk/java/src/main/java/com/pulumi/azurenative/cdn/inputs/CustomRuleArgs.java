@@ -32,6 +32,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
     private Output<Either<String,ActionType>> action;
 
+    /**
+     * @return Describes what action to be applied when rule matches
+     * 
+     */
     public Output<Either<String,ActionType>> action() {
         return this.action;
     }
@@ -43,6 +47,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
+    /**
+     * @return Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     public Optional<Output<Either<String,CustomRuleEnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -54,6 +62,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchConditions", required=true)
     private Output<List<MatchConditionArgs>> matchConditions;
 
+    /**
+     * @return List of match conditions.
+     * 
+     */
     public Output<List<MatchConditionArgs>> matchConditions() {
         return this.matchConditions;
     }
@@ -65,6 +77,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Defines the name of the custom rule
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -76,6 +92,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return Defines in what order this rule be evaluated in the overall list of custom rules
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -108,67 +128,157 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<Either<String,ActionType>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,ActionType> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(ActionType action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,CustomRuleEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(CustomRuleEnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
             return matchConditions(Output.of(matchConditions));
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(MatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param name Defines the name of the custom rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Defines the name of the custom rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Defines in what order this rule be evaluated in the overall list of custom rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Defines in what order this rule be evaluated in the overall list of custom rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }

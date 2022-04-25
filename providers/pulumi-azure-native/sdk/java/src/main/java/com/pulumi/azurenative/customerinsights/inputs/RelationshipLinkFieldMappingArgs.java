@@ -27,6 +27,10 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
     @Import(name="interactionFieldName", required=true)
     private Output<String> interactionFieldName;
 
+    /**
+     * @return The field name on the Interaction Type.
+     * 
+     */
     public Output<String> interactionFieldName() {
         return this.interactionFieldName;
     }
@@ -38,6 +42,10 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
     @Import(name="linkType")
     private @Nullable Output<LinkTypes> linkType;
 
+    /**
+     * @return Link type.
+     * 
+     */
     public Optional<Output<LinkTypes>> linkType() {
         return Optional.ofNullable(this.linkType);
     }
@@ -49,6 +57,10 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
     @Import(name="relationshipFieldName", required=true)
     private Output<String> relationshipFieldName;
 
+    /**
+     * @return The field name on the Relationship metadata.
+     * 
+     */
     public Output<String> relationshipFieldName() {
         return this.relationshipFieldName;
     }
@@ -79,29 +91,65 @@ public final class RelationshipLinkFieldMappingArgs extends com.pulumi.resources
             $ = new RelationshipLinkFieldMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interactionFieldName The field name on the Interaction Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionFieldName(Output<String> interactionFieldName) {
             $.interactionFieldName = interactionFieldName;
             return this;
         }
 
+        /**
+         * @param interactionFieldName The field name on the Interaction Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionFieldName(String interactionFieldName) {
             return interactionFieldName(Output.of(interactionFieldName));
         }
 
+        /**
+         * @param linkType Link type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(@Nullable Output<LinkTypes> linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param linkType Link type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(LinkTypes linkType) {
             return linkType(Output.of(linkType));
         }
 
+        /**
+         * @param relationshipFieldName The field name on the Relationship metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipFieldName(Output<String> relationshipFieldName) {
             $.relationshipFieldName = relationshipFieldName;
             return this;
         }
 
+        /**
+         * @param relationshipFieldName The field name on the Relationship metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipFieldName(String relationshipFieldName) {
             return relationshipFieldName(Output.of(relationshipFieldName));
         }

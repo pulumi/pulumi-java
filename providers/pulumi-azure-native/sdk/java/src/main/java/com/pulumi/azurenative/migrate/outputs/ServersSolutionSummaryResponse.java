@@ -13,33 +13,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServersSolutionSummaryResponse {
     /**
-     * Gets or sets the count of servers assessed.
+     * @return Gets or sets the count of servers assessed.
      * 
      */
     private final @Nullable Integer assessedCount;
     /**
-     * Gets or sets the count of servers discovered.
+     * @return Gets or sets the count of servers discovered.
      * 
      */
     private final @Nullable Integer discoveredCount;
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Servers&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * Gets or sets the count of servers migrated.
+     * @return Gets or sets the count of servers migrated.
      * 
      */
     private final @Nullable Integer migratedCount;
     /**
-     * Gets or sets the count of servers being replicated.
+     * @return Gets or sets the count of servers being replicated.
      * 
      */
     private final @Nullable Integer replicatingCount;
     /**
-     * Gets or sets the count of servers test migrated.
+     * @return Gets or sets the count of servers test migrated.
      * 
      */
     private final @Nullable Integer testMigratedCount;
@@ -61,45 +61,45 @@ public final class ServersSolutionSummaryResponse {
     }
 
     /**
-     * Gets or sets the count of servers assessed.
+     * @return Gets or sets the count of servers assessed.
      * 
-    */
+     */
     public Optional<Integer> assessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
     /**
-     * Gets or sets the count of servers discovered.
+     * @return Gets or sets the count of servers discovered.
      * 
-    */
+     */
     public Optional<Integer> discoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Servers&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * Gets or sets the count of servers migrated.
+     * @return Gets or sets the count of servers migrated.
      * 
-    */
+     */
     public Optional<Integer> migratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
     /**
-     * Gets or sets the count of servers being replicated.
+     * @return Gets or sets the count of servers being replicated.
      * 
-    */
+     */
     public Optional<Integer> replicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
     /**
-     * Gets or sets the count of servers test migrated.
+     * @return Gets or sets the count of servers test migrated.
      * 
-    */
+     */
     public Optional<Integer> testMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }

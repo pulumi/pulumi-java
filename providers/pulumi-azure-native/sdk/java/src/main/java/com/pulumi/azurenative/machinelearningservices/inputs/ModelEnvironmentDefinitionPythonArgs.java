@@ -35,6 +35,10 @@ public final class ModelEnvironmentDefinitionPythonArgs extends com.pulumi.resou
     @Import(name="condaDependencies")
     private @Nullable Output<Object> condaDependencies;
 
+    /**
+     * @return A JObject containing Conda dependencies.
+     * 
+     */
     public Optional<Output<Object>> condaDependencies() {
         return Optional.ofNullable(this.condaDependencies);
     }
@@ -46,6 +50,10 @@ public final class ModelEnvironmentDefinitionPythonArgs extends com.pulumi.resou
     @Import(name="interpreterPath")
     private @Nullable Output<String> interpreterPath;
 
+    /**
+     * @return The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+     * 
+     */
     public Optional<Output<String>> interpreterPath() {
         return Optional.ofNullable(this.interpreterPath);
     }
@@ -57,6 +65,10 @@ public final class ModelEnvironmentDefinitionPythonArgs extends com.pulumi.resou
     @Import(name="userManagedDependencies")
     private @Nullable Output<Boolean> userManagedDependencies;
 
+    /**
+     * @return True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+     * 
+     */
     public Optional<Output<Boolean>> userManagedDependencies() {
         return Optional.ofNullable(this.userManagedDependencies);
     }
@@ -97,29 +109,65 @@ public final class ModelEnvironmentDefinitionPythonArgs extends com.pulumi.resou
             return baseCondaEnvironment(Output.of(baseCondaEnvironment));
         }
 
+        /**
+         * @param condaDependencies A JObject containing Conda dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condaDependencies(@Nullable Output<Object> condaDependencies) {
             $.condaDependencies = condaDependencies;
             return this;
         }
 
+        /**
+         * @param condaDependencies A JObject containing Conda dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condaDependencies(Object condaDependencies) {
             return condaDependencies(Output.of(condaDependencies));
         }
 
+        /**
+         * @param interpreterPath The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreterPath(@Nullable Output<String> interpreterPath) {
             $.interpreterPath = interpreterPath;
             return this;
         }
 
+        /**
+         * @param interpreterPath The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreterPath(String interpreterPath) {
             return interpreterPath(Output.of(interpreterPath));
         }
 
+        /**
+         * @param userManagedDependencies True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManagedDependencies(@Nullable Output<Boolean> userManagedDependencies) {
             $.userManagedDependencies = userManagedDependencies;
             return this;
         }
 
+        /**
+         * @param userManagedDependencies True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManagedDependencies(Boolean userManagedDependencies) {
             return userManagedDependencies(Output.of(userManagedDependencies));
         }

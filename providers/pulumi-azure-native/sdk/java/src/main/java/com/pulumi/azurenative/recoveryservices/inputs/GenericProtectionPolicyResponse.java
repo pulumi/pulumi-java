@@ -30,6 +30,11 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="backupManagementType", required=true)
     private String backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;GenericProtectionPolicy&#39;.
+     * 
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
@@ -41,6 +46,10 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="fabricName")
     private @Nullable String fabricName;
 
+    /**
+     * @return Name of this policy&#39;s fabric.
+     * 
+     */
     public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
@@ -52,6 +61,10 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="protectedItemsCount")
     private @Nullable Integer protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -63,6 +76,10 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="subProtectionPolicy")
     private @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
+    /**
+     * @return List of sub-protection policies which includes schedule and retention
+     * 
+     */
     public Optional<List<SubProtectionPolicyResponse>> subProtectionPolicy() {
         return Optional.ofNullable(this.subProtectionPolicy);
     }
@@ -74,6 +91,10 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -106,30 +127,67 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
             $ = new GenericProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;GenericProtectionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param fabricName Name of this policy&#39;s fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(@Nullable String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param subProtectionPolicy List of sub-protection policies which includes schedule and retention
+         * 
+         * @return builder
+         * 
+         */
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             $.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
+        /**
+         * @param subProtectionPolicy List of sub-protection policies which includes schedule and retention
+         * 
+         * @return builder
+         * 
+         */
         public Builder subProtectionPolicy(SubProtectionPolicyResponse... subProtectionPolicy) {
             return subProtectionPolicy(List.of(subProtectionPolicy));
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

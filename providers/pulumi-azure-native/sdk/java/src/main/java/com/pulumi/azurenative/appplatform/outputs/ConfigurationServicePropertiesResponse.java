@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConfigurationServicePropertiesResponse {
     /**
-     * Collection of instances belong to Application Configuration Service.
+     * @return Collection of instances belong to Application Configuration Service.
      * 
      */
     private final List<ConfigurationServiceInstanceResponse> instances;
     /**
-     * State of the Application Configuration Service.
+     * @return State of the Application Configuration Service.
      * 
      */
     private final String provisioningState;
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
      */
     private final ConfigurationServiceResourceRequestsResponse resourceRequests;
     /**
-     * The settings of Application Configuration Service.
+     * @return The settings of Application Configuration Service.
      * 
      */
     private final @Nullable ConfigurationServiceSettingsResponse settings;
@@ -49,30 +49,30 @@ public final class ConfigurationServicePropertiesResponse {
     }
 
     /**
-     * Collection of instances belong to Application Configuration Service.
+     * @return Collection of instances belong to Application Configuration Service.
      * 
-    */
+     */
     public List<ConfigurationServiceInstanceResponse> instances() {
         return this.instances;
     }
     /**
-     * State of the Application Configuration Service.
+     * @return State of the Application Configuration Service.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
-    */
+     */
     public ConfigurationServiceResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
     /**
-     * The settings of Application Configuration Service.
+     * @return The settings of Application Configuration Service.
      * 
-    */
+     */
     public Optional<ConfigurationServiceSettingsResponse> settings() {
         return Optional.ofNullable(this.settings);
     }

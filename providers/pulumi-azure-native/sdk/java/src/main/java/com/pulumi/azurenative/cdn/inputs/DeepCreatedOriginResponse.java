@@ -27,6 +27,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Origin is enabled for load balancing or not. By default, origin is always enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -49,6 +57,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="httpPort")
     private @Nullable Integer httpPort;
 
+    /**
+     * @return The value of the HTTP port. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
@@ -60,6 +72,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="httpsPort")
     private @Nullable Integer httpsPort;
 
+    /**
+     * @return The value of the HTTPS port. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
@@ -71,6 +87,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Origin name which must be unique within the endpoint.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -82,6 +102,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="originHostHeader")
     private @Nullable String originHostHeader;
 
+    /**
+     * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
+     * 
+     */
     public Optional<String> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
@@ -93,6 +117,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -104,6 +132,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="privateLinkAlias")
     private @Nullable String privateLinkAlias;
 
+    /**
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
+     * 
+     */
     public Optional<String> privateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
@@ -115,6 +147,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="privateLinkApprovalMessage")
     private @Nullable String privateLinkApprovalMessage;
 
+    /**
+     * @return A custom message to be included in the approval request to connect to the Private Link.
+     * 
+     */
     public Optional<String> privateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
@@ -126,6 +162,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="privateLinkLocation")
     private @Nullable String privateLinkLocation;
 
+    /**
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+     * 
+     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
@@ -137,6 +177,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="privateLinkResourceId")
     private @Nullable String privateLinkResourceId;
 
+    /**
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * 
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -148,6 +192,10 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
     @Import(name="weight")
     private @Nullable Integer weight;
 
+    /**
+     * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+     * 
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -187,61 +235,133 @@ public final class DeepCreatedOriginResponse extends com.pulumi.resources.Invoke
             $ = new DeepCreatedOriginResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Origin is enabled for load balancing or not. By default, origin is always enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param hostName The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param httpPort The value of the HTTP port. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPort(@Nullable Integer httpPort) {
             $.httpPort = httpPort;
             return this;
         }
 
+        /**
+         * @param httpsPort The value of the HTTPS port. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsPort(@Nullable Integer httpsPort) {
             $.httpsPort = httpsPort;
             return this;
         }
 
+        /**
+         * @param name Origin name which must be unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param originHostHeader The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originHostHeader(@Nullable String originHostHeader) {
             $.originHostHeader = originHostHeader;
             return this;
         }
 
+        /**
+         * @param priority Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param privateLinkAlias The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             $.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
+        /**
+         * @param privateLinkApprovalMessage A custom message to be included in the approval request to connect to the Private Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
+        /**
+         * @param privateLinkLocation The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             $.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param weight Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Integer weight) {
             $.weight = weight;
             return this;

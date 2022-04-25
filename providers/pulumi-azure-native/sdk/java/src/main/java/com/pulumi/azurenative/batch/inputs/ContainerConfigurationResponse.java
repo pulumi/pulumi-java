@@ -23,6 +23,10 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     @Import(name="containerImageNames")
     private @Nullable List<String> containerImageNames;
 
+    /**
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+     * 
+     */
     public Optional<List<String>> containerImageNames() {
         return Optional.ofNullable(this.containerImageNames);
     }
@@ -34,6 +38,10 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     @Import(name="containerRegistries")
     private @Nullable List<ContainerRegistryResponse> containerRegistries;
 
+    /**
+     * @return If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+     * 
+     */
     public Optional<List<ContainerRegistryResponse>> containerRegistries() {
         return Optional.ofNullable(this.containerRegistries);
     }
@@ -71,20 +79,44 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
             $ = new ContainerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImageNames This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageNames(@Nullable List<String> containerImageNames) {
             $.containerImageNames = containerImageNames;
             return this;
         }
 
+        /**
+         * @param containerImageNames This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageNames(String... containerImageNames) {
             return containerImageNames(List.of(containerImageNames));
         }
 
+        /**
+         * @param containerRegistries If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
             $.containerRegistries = containerRegistries;
             return this;
         }
 
+        /**
+         * @param containerRegistries If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistries(ContainerRegistryResponse... containerRegistries) {
             return containerRegistries(List.of(containerRegistries));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CookieExpirationResponse {
     /**
-     * The convention used when determining the session cookie&#39;s expiration.
+     * @return The convention used when determining the session cookie&#39;s expiration.
      * 
      */
     private final @Nullable String convention;
     /**
-     * The time after the request is made when the session cookie should expire.
+     * @return The time after the request is made when the session cookie should expire.
      * 
      */
     private final @Nullable String timeToExpiration;
@@ -31,16 +31,16 @@ public final class CookieExpirationResponse {
     }
 
     /**
-     * The convention used when determining the session cookie&#39;s expiration.
+     * @return The convention used when determining the session cookie&#39;s expiration.
      * 
-    */
+     */
     public Optional<String> convention() {
         return Optional.ofNullable(this.convention);
     }
     /**
-     * The time after the request is made when the session cookie should expire.
+     * @return The time after the request is made when the session cookie should expire.
      * 
-    */
+     */
     public Optional<String> timeToExpiration() {
         return Optional.ofNullable(this.timeToExpiration);
     }

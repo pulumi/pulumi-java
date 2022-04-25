@@ -24,6 +24,10 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="keyId", required=true)
     private String keyId;
 
+    /**
+     * @return Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * 
+     */
     public String keyId() {
         return this.keyId;
     }
@@ -35,6 +39,10 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="keySourceParameters", required=true)
     private KeyVaultSigningKeyParametersResponse keySourceParameters;
 
+    /**
+     * @return Defines the parameters for using customer key vault for Url Signing Key.
+     * 
+     */
     public KeyVaultSigningKeyParametersResponse keySourceParameters() {
         return this.keySourceParameters;
     }
@@ -64,11 +72,23 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
             $ = new UrlSigningKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keySourceParameters Defines the parameters for using customer key vault for Url Signing Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
             $.keySourceParameters = keySourceParameters;
             return this;

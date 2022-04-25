@@ -25,6 +25,11 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;VMwareV2&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -36,6 +41,10 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="migrationSolutionId", required=true)
     private String migrationSolutionId;
 
+    /**
+     * @return The Migration solution ARM Id.
+     * 
+     */
     public String migrationSolutionId() {
         return this.migrationSolutionId;
     }
@@ -47,6 +56,10 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="serviceEndpoint", required=true)
     private String serviceEndpoint;
 
+    /**
+     * @return The service endpoint.
+     * 
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
@@ -58,6 +71,10 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="serviceResourceId", required=true)
     private String serviceResourceId;
 
+    /**
+     * @return The service resource Id.
+     * 
+     */
     public String serviceResourceId() {
         return this.serviceResourceId;
     }
@@ -69,6 +86,10 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="vmwareSiteId", required=true)
     private String vmwareSiteId;
 
+    /**
+     * @return The ARM Id of the VMware site.
+     * 
+     */
     public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
@@ -101,26 +122,57 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
             $ = new VMwareV2FabricSpecificDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMwareV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param migrationSolutionId The Migration solution ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSolutionId(String migrationSolutionId) {
             $.migrationSolutionId = migrationSolutionId;
             return this;
         }
 
+        /**
+         * @param serviceEndpoint The service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoint(String serviceEndpoint) {
             $.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
+        /**
+         * @param serviceResourceId The service resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResourceId(String serviceResourceId) {
             $.serviceResourceId = serviceResourceId;
             return this;
         }
 
+        /**
+         * @param vmwareSiteId The ARM Id of the VMware site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareSiteId(String vmwareSiteId) {
             $.vmwareSiteId = vmwareSiteId;
             return this;

@@ -25,127 +25,127 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * The fully qualified path of managed application definition Id.
+     * @return The fully qualified path of managed application definition Id.
      * 
      */
     private final @Nullable String applicationDefinitionId;
     /**
-     * The collection of managed application artifacts.
+     * @return The collection of managed application artifacts.
      * 
      */
     private final List<ApplicationArtifactResponse> artifacts;
     /**
-     * The  read-only authorizations property that is retrieved from the application package.
+     * @return The  read-only authorizations property that is retrieved from the application package.
      * 
      */
     private final List<ApplicationAuthorizationResponse> authorizations;
     /**
-     * The managed application billing details.
+     * @return The managed application billing details.
      * 
      */
     private final ApplicationBillingDetailsDefinitionResponse billingDetails;
     /**
-     * The client entity that created the JIT request.
+     * @return The client entity that created the JIT request.
      * 
      */
     private final ApplicationClientDetailsResponse createdBy;
     /**
-     * The read-only customer support property that is retrieved from the application package.
+     * @return The read-only customer support property that is retrieved from the application package.
      * 
      */
     private final ApplicationPackageContactResponse customerSupport;
     /**
-     * Resource ID
+     * @return Resource ID
      * 
      */
     private final String id;
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * The managed application Jit access policy.
+     * @return The managed application Jit access policy.
      * 
      */
     private final @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy;
     /**
-     * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+     * @return The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
      * 
      */
     private final String kind;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * ID of the resource that manages this resource.
+     * @return ID of the resource that manages this resource.
      * 
      */
     private final @Nullable String managedBy;
     /**
-     * The managed resource group Id.
+     * @return The managed resource group Id.
      * 
      */
     private final @Nullable String managedResourceGroupId;
     /**
-     * The managed application management mode.
+     * @return The managed application management mode.
      * 
      */
     private final String managementMode;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Name and value pairs that define the managed application outputs.
+     * @return Name and value pairs that define the managed application outputs.
      * 
      */
     private final Object outputs;
     /**
-     * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+     * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
      */
     private final @Nullable Object parameters;
     /**
-     * The plan information.
+     * @return The plan information.
      * 
      */
     private final @Nullable PlanResponse plan;
     /**
-     * The managed application provisioning state.
+     * @return The managed application provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The publisher tenant Id.
+     * @return The publisher tenant Id.
      * 
      */
     private final String publisherTenantId;
     /**
-     * The SKU of the resource.
+     * @return The SKU of the resource.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The read-only support URLs property that is retrieved from the application package.
+     * @return The read-only support URLs property that is retrieved from the application package.
      * 
      */
     private final ApplicationPackageSupportUrlsResponse supportUrls;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * The client entity that last updated the JIT request.
+     * @return The client entity that last updated the JIT request.
      * 
      */
     private final ApplicationClientDetailsResponse updatedBy;
@@ -205,177 +205,177 @@ public final class GetApplicationResult {
     }
 
     /**
-     * The fully qualified path of managed application definition Id.
+     * @return The fully qualified path of managed application definition Id.
      * 
-    */
+     */
     public Optional<String> applicationDefinitionId() {
         return Optional.ofNullable(this.applicationDefinitionId);
     }
     /**
-     * The collection of managed application artifacts.
+     * @return The collection of managed application artifacts.
      * 
-    */
+     */
     public List<ApplicationArtifactResponse> artifacts() {
         return this.artifacts;
     }
     /**
-     * The  read-only authorizations property that is retrieved from the application package.
+     * @return The  read-only authorizations property that is retrieved from the application package.
      * 
-    */
+     */
     public List<ApplicationAuthorizationResponse> authorizations() {
         return this.authorizations;
     }
     /**
-     * The managed application billing details.
+     * @return The managed application billing details.
      * 
-    */
+     */
     public ApplicationBillingDetailsDefinitionResponse billingDetails() {
         return this.billingDetails;
     }
     /**
-     * The client entity that created the JIT request.
+     * @return The client entity that created the JIT request.
      * 
-    */
+     */
     public ApplicationClientDetailsResponse createdBy() {
         return this.createdBy;
     }
     /**
-     * The read-only customer support property that is retrieved from the application package.
+     * @return The read-only customer support property that is retrieved from the application package.
      * 
-    */
+     */
     public ApplicationPackageContactResponse customerSupport() {
         return this.customerSupport;
     }
     /**
-     * Resource ID
+     * @return Resource ID
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The managed application Jit access policy.
+     * @return The managed application Jit access policy.
      * 
-    */
+     */
     public Optional<ApplicationJitAccessPolicyResponse> jitAccessPolicy() {
         return Optional.ofNullable(this.jitAccessPolicy);
     }
     /**
-     * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+     * @return The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * ID of the resource that manages this resource.
+     * @return ID of the resource that manages this resource.
      * 
-    */
+     */
     public Optional<String> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
-     * The managed resource group Id.
+     * @return The managed resource group Id.
      * 
-    */
+     */
     public Optional<String> managedResourceGroupId() {
         return Optional.ofNullable(this.managedResourceGroupId);
     }
     /**
-     * The managed application management mode.
+     * @return The managed application management mode.
      * 
-    */
+     */
     public String managementMode() {
         return this.managementMode;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Name and value pairs that define the managed application outputs.
+     * @return Name and value pairs that define the managed application outputs.
      * 
-    */
+     */
     public Object outputs() {
         return this.outputs;
     }
     /**
-     * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+     * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
-    */
+     */
     public Optional<Object> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * The plan information.
+     * @return The plan information.
      * 
-    */
+     */
     public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * The managed application provisioning state.
+     * @return The managed application provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The publisher tenant Id.
+     * @return The publisher tenant Id.
      * 
-    */
+     */
     public String publisherTenantId() {
         return this.publisherTenantId;
     }
     /**
-     * The SKU of the resource.
+     * @return The SKU of the resource.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The read-only support URLs property that is retrieved from the application package.
+     * @return The read-only support URLs property that is retrieved from the application package.
      * 
-    */
+     */
     public ApplicationPackageSupportUrlsResponse supportUrls() {
         return this.supportUrls;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The client entity that last updated the JIT request.
+     * @return The client entity that last updated the JIT request.
      * 
-    */
+     */
     public ApplicationClientDetailsResponse updatedBy() {
         return this.updatedBy;
     }

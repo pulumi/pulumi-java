@@ -26,6 +26,11 @@ public final class AzPowerShellSetupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;AzPowerShellSetup&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -37,6 +42,10 @@ public final class AzPowerShellSetupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return The required version of Azure PowerShell to install.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -66,20 +75,46 @@ public final class AzPowerShellSetupArgs extends com.pulumi.resources.ResourceAr
             $ = new AzPowerShellSetupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;AzPowerShellSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;AzPowerShellSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version The required version of Azure PowerShell to install.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The required version of Azure PowerShell to install.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

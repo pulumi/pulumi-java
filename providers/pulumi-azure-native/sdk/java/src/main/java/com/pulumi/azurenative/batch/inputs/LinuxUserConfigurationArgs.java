@@ -23,6 +23,10 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="gid")
     private @Nullable Output<Integer> gid;
 
+    /**
+     * @return The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
+     * 
+     */
     public Optional<Output<Integer>> gid() {
         return Optional.ofNullable(this.gid);
     }
@@ -34,6 +38,10 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="sshPrivateKey")
     private @Nullable Output<String> sshPrivateKey;
 
+    /**
+     * @return The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool&#39;s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user&#39;s .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user&#39;s .ssh directory is done).
+     * 
+     */
     public Optional<Output<String>> sshPrivateKey() {
         return Optional.ofNullable(this.sshPrivateKey);
     }
@@ -45,6 +53,10 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="uid")
     private @Nullable Output<Integer> uid;
 
+    /**
+     * @return The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+     * 
+     */
     public Optional<Output<Integer>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -75,29 +87,65 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
             $ = new LinuxUserConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gid The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(@Nullable Output<Integer> gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param gid The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(Integer gid) {
             return gid(Output.of(gid));
         }
 
+        /**
+         * @param sshPrivateKey The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool&#39;s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user&#39;s .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user&#39;s .ssh directory is done).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPrivateKey(@Nullable Output<String> sshPrivateKey) {
             $.sshPrivateKey = sshPrivateKey;
             return this;
         }
 
+        /**
+         * @param sshPrivateKey The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool&#39;s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user&#39;s .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user&#39;s .ssh directory is done).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPrivateKey(String sshPrivateKey) {
             return sshPrivateKey(Output.of(sshPrivateKey));
         }
 
+        /**
+         * @param uid The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<Integer> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(Integer uid) {
             return uid(Output.of(uid));
         }

@@ -25,6 +25,10 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of the shared access policy.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -36,6 +40,10 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="primaryKey")
     private @Nullable String primaryKey;
 
+    /**
+     * @return The primary key.
+     * 
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -47,6 +55,10 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="rights", required=true)
     private String rights;
 
+    /**
+     * @return The permissions assigned to the shared access policy.
+     * 
+     */
     public String rights() {
         return this.rights;
     }
@@ -58,6 +70,10 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="secondaryKey")
     private @Nullable String secondaryKey;
 
+    /**
+     * @return The secondary key.
+     * 
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -89,21 +105,45 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
             $ = new SharedAccessSignatureAuthorizationRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param primaryKey The primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable String primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param rights The permissions assigned to the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(String rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param secondaryKey The secondary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(@Nullable String secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;

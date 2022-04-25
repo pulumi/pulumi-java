@@ -25,6 +25,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="apnsCertificate")
     private @Nullable String apnsCertificate;
 
+    /**
+     * @return The APNS certificate. Specify if using Certificate Authentication Mode.
+     * 
+     */
     public Optional<String> apnsCertificate() {
         return Optional.ofNullable(this.apnsCertificate);
     }
@@ -36,6 +40,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="appId")
     private @Nullable String appId;
 
+    /**
+     * @return The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
+     * 
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -47,6 +55,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="appName")
     private @Nullable String appName;
 
+    /**
+     * @return The name of the application or BundleId. Specify if using Token Authentication Mode.
+     * 
+     */
     public Optional<String> appName() {
         return Optional.ofNullable(this.appName);
     }
@@ -58,6 +70,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="certificateKey")
     private @Nullable String certificateKey;
 
+    /**
+     * @return The APNS certificate password if it exists.
+     * 
+     */
     public Optional<String> certificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
@@ -69,6 +85,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -80,6 +100,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keyId")
     private @Nullable String keyId;
 
+    /**
+     * @return A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
+     * 
+     */
     public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
@@ -91,6 +115,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -102,6 +130,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="token")
     private @Nullable String token;
 
+    /**
+     * @return Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
+     * 
+     */
     public Optional<String> token() {
         return Optional.ofNullable(this.token);
     }
@@ -137,41 +169,89 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
             $ = new ApnsCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apnsCertificate The APNS certificate. Specify if using Certificate Authentication Mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apnsCertificate(@Nullable String apnsCertificate) {
             $.apnsCertificate = apnsCertificate;
             return this;
         }
 
+        /**
+         * @param appId The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appName The name of the application or BundleId. Specify if using Token Authentication Mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(@Nullable String appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param certificateKey The APNS certificate password if it exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateKey(@Nullable String certificateKey) {
             $.certificateKey = certificateKey;
             return this;
         }
 
+        /**
+         * @param endpoint The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param keyId A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable String keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param thumbprint The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param token Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(@Nullable String token) {
             $.token = token;
             return this;

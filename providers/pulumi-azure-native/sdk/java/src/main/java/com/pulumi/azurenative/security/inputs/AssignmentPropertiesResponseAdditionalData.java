@@ -25,6 +25,10 @@ public final class AssignmentPropertiesResponseAdditionalData extends com.pulumi
     @Import(name="exemptionCategory")
     private @Nullable String exemptionCategory;
 
+    /**
+     * @return Exemption category of this assignment
+     * 
+     */
     public Optional<String> exemptionCategory() {
         return Optional.ofNullable(this.exemptionCategory);
     }
@@ -53,6 +57,12 @@ public final class AssignmentPropertiesResponseAdditionalData extends com.pulumi
             $ = new AssignmentPropertiesResponseAdditionalData(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exemptionCategory Exemption category of this assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptionCategory(@Nullable String exemptionCategory) {
             $.exemptionCategory = exemptionCategory;
             return this;

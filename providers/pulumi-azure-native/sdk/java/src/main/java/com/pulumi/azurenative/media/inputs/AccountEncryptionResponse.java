@@ -22,6 +22,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="keyVaultProperties")
     private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return The properties of the key used to encrypt the account.
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -33,6 +37,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of key used to encrypt the Account Key.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -62,11 +70,23 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
             $ = new AccountEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultProperties The properties of the key used to encrypt the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param type The type of key used to encrypt the Account Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

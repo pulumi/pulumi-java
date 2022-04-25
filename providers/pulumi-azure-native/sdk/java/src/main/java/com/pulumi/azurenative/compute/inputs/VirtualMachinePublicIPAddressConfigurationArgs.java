@@ -36,6 +36,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="deleteOption")
     private @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
+    /**
+     * @return Specify what happens to the public IP address when the VM is deleted
+     * 
+     */
     public Optional<Output<Either<String,DeleteOptions>>> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
@@ -47,6 +51,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="dnsSettings")
     private @Nullable Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings;
 
+    /**
+     * @return The dns settings to be applied on the publicIP addresses .
+     * 
+     */
     public Optional<Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs>> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -58,6 +66,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Output<Integer> idleTimeoutInMinutes;
 
+    /**
+     * @return The idle timeout of the public IP address.
+     * 
+     */
     public Optional<Output<Integer>> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -69,6 +81,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="ipTags")
     private @Nullable Output<List<VirtualMachineIpTagArgs>> ipTags;
 
+    /**
+     * @return The list of IP tags associated with the public IP address.
+     * 
+     */
     public Optional<Output<List<VirtualMachineIpTagArgs>>> ipTags() {
         return Optional.ofNullable(this.ipTags);
     }
@@ -80,6 +96,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The publicIP address configuration name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -91,6 +111,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="publicIPAddressVersion")
     private @Nullable Output<Either<String,IPVersions>> publicIPAddressVersion;
 
+    /**
+     * @return Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+     * 
+     */
     public Optional<Output<Either<String,IPVersions>>> publicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
@@ -102,6 +126,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="publicIPAllocationMethod")
     private @Nullable Output<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod;
 
+    /**
+     * @return Specify the public IP allocation type
+     * 
+     */
     public Optional<Output<Either<String,PublicIPAllocationMethod>>> publicIPAllocationMethod() {
         return Optional.ofNullable(this.publicIPAllocationMethod);
     }
@@ -113,6 +141,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="publicIPPrefix")
     private @Nullable Output<SubResourceArgs> publicIPPrefix;
 
+    /**
+     * @return The PublicIPPrefix from which to allocate publicIP addresses.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
@@ -124,6 +156,10 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
     @Import(name="sku")
     private @Nullable Output<PublicIPAddressSkuArgs> sku;
 
+    /**
+     * @return Describes the public IP Sku
+     * 
+     */
     public Optional<Output<PublicIPAddressSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -160,111 +196,261 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends com.pu
             $ = new VirtualMachinePublicIPAddressConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOption Specify what happens to the public IP address when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(@Nullable Output<Either<String,DeleteOptions>> deleteOption) {
             $.deleteOption = deleteOption;
             return this;
         }
 
+        /**
+         * @param deleteOption Specify what happens to the public IP address when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(Either<String,DeleteOptions> deleteOption) {
             return deleteOption(Output.of(deleteOption));
         }
 
+        /**
+         * @param deleteOption Specify what happens to the public IP address when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(String deleteOption) {
             return deleteOption(Either.ofLeft(deleteOption));
         }
 
+        /**
+         * @param deleteOption Specify what happens to the public IP address when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(DeleteOptions deleteOption) {
             return deleteOption(Either.ofRight(deleteOption));
         }
 
+        /**
+         * @param dnsSettings The dns settings to be applied on the publicIP addresses .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param dnsSettings The dns settings to be applied on the publicIP addresses .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs dnsSettings) {
             return dnsSettings(Output.of(dnsSettings));
         }
 
+        /**
+         * @param idleTimeoutInMinutes The idle timeout of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param idleTimeoutInMinutes The idle timeout of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(Integer idleTimeoutInMinutes) {
             return idleTimeoutInMinutes(Output.of(idleTimeoutInMinutes));
         }
 
+        /**
+         * @param ipTags The list of IP tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(@Nullable Output<List<VirtualMachineIpTagArgs>> ipTags) {
             $.ipTags = ipTags;
             return this;
         }
 
+        /**
+         * @param ipTags The list of IP tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(List<VirtualMachineIpTagArgs> ipTags) {
             return ipTags(Output.of(ipTags));
         }
 
+        /**
+         * @param ipTags The list of IP tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(VirtualMachineIpTagArgs... ipTags) {
             return ipTags(List.of(ipTags));
         }
 
+        /**
+         * @param name The publicIP address configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The publicIP address configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param publicIPAddressVersion Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(@Nullable Output<Either<String,IPVersions>> publicIPAddressVersion) {
             $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param publicIPAddressVersion Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(Either<String,IPVersions> publicIPAddressVersion) {
             return publicIPAddressVersion(Output.of(publicIPAddressVersion));
         }
 
+        /**
+         * @param publicIPAddressVersion Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(String publicIPAddressVersion) {
             return publicIPAddressVersion(Either.ofLeft(publicIPAddressVersion));
         }
 
+        /**
+         * @param publicIPAddressVersion Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(IPVersions publicIPAddressVersion) {
             return publicIPAddressVersion(Either.ofRight(publicIPAddressVersion));
         }
 
+        /**
+         * @param publicIPAllocationMethod Specify the public IP allocation type
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(@Nullable Output<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod) {
             $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param publicIPAllocationMethod Specify the public IP allocation type
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(Either<String,PublicIPAllocationMethod> publicIPAllocationMethod) {
             return publicIPAllocationMethod(Output.of(publicIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAllocationMethod Specify the public IP allocation type
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(String publicIPAllocationMethod) {
             return publicIPAllocationMethod(Either.ofLeft(publicIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAllocationMethod Specify the public IP allocation type
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(PublicIPAllocationMethod publicIPAllocationMethod) {
             return publicIPAllocationMethod(Either.ofRight(publicIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPPrefix The PublicIPPrefix from which to allocate publicIP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
             $.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
+        /**
+         * @param publicIPPrefix The PublicIPPrefix from which to allocate publicIP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(SubResourceArgs publicIPPrefix) {
             return publicIPPrefix(Output.of(publicIPPrefix));
         }
 
+        /**
+         * @param sku Describes the public IP Sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<PublicIPAddressSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Describes the public IP Sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(PublicIPAddressSkuArgs sku) {
             return sku(Output.of(sku));
         }

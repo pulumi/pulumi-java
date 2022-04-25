@@ -21,6 +21,10 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
     @Import(name="blobName")
     private @Nullable String blobName;
 
+    /**
+     * @return The custom file name of the uploaded blob.
+     * 
+     */
     public Optional<String> blobName() {
         return Optional.ofNullable(this.blobName);
     }
@@ -32,6 +36,10 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
     @Import(name="testBaseAccountName", required=true)
     private String testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -73,16 +85,34 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
             $ = new GetTestBaseAccountFileUploadUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobName The custom file name of the uploaded blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobName(@Nullable String blobName) {
             $.blobName = blobName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;

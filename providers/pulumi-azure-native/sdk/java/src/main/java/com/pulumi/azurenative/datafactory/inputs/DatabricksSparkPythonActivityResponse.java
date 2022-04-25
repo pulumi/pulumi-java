@@ -33,6 +33,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -44,6 +48,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="libraries")
     private @Nullable List<Map<String,Object>> libraries;
 
+    /**
+     * @return A list of libraries to be installed on the cluster that will execute the job.
+     * 
+     */
     public Optional<List<Map<String,Object>>> libraries() {
         return Optional.ofNullable(this.libraries);
     }
@@ -66,6 +78,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -77,6 +93,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -88,6 +108,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="parameters")
     private @Nullable List<Object> parameters;
 
+    /**
+     * @return Command line parameters that will be passed to the Python file.
+     * 
+     */
     public Optional<List<Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -99,6 +123,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -110,6 +138,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="pythonFile", required=true)
     private Object pythonFile;
 
+    /**
+     * @return The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object pythonFile() {
         return this.pythonFile;
     }
@@ -122,6 +154,11 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;DatabricksSparkPython&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -133,6 +170,10 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -170,68 +211,153 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
             $ = new DatabricksSparkPythonActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
             $.libraries = libraries;
             return this;
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(Map<String,Object>... libraries) {
             return libraries(List.of(libraries));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Command line parameters that will be passed to the Python file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Command line parameters that will be passed to the Python file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param pythonFile The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFile(Object pythonFile) {
             $.pythonFile = pythonFile;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;DatabricksSparkPython&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

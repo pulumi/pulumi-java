@@ -29,6 +29,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="encryption")
     private @Nullable VaultPropertiesResponseEncryption encryption;
 
+    /**
+     * @return Customer Managed Key details of the resource.
+     * 
+     */
     public Optional<VaultPropertiesResponseEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -40,6 +44,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="privateEndpointConnections", required=true)
     private List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
 
+    /**
+     * @return List of private endpoint connection.
+     * 
+     */
     public List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
@@ -51,6 +59,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="privateEndpointStateForBackup", required=true)
     private String privateEndpointStateForBackup;
 
+    /**
+     * @return Private endpoint state for backup.
+     * 
+     */
     public String privateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
     }
@@ -62,6 +74,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="privateEndpointStateForSiteRecovery", required=true)
     private String privateEndpointStateForSiteRecovery;
 
+    /**
+     * @return Private endpoint state for site recovery.
+     * 
+     */
     public String privateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
     }
@@ -73,6 +89,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning State.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -84,6 +104,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="upgradeDetails")
     private @Nullable UpgradeDetailsResponse upgradeDetails;
 
+    /**
+     * @return Details for upgrading vault.
+     * 
+     */
     public Optional<UpgradeDetailsResponse> upgradeDetails() {
         return Optional.ofNullable(this.upgradeDetails);
     }
@@ -117,35 +141,77 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new VaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Customer Managed Key details of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable VaultPropertiesResponseEncryption encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections List of private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections List of private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionVaultPropertiesResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param privateEndpointStateForBackup Private endpoint state for backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointStateForBackup(String privateEndpointStateForBackup) {
             $.privateEndpointStateForBackup = privateEndpointStateForBackup;
             return this;
         }
 
+        /**
+         * @param privateEndpointStateForSiteRecovery Private endpoint state for site recovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointStateForSiteRecovery(String privateEndpointStateForSiteRecovery) {
             $.privateEndpointStateForSiteRecovery = privateEndpointStateForSiteRecovery;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning State.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param upgradeDetails Details for upgrading vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeDetails(@Nullable UpgradeDetailsResponse upgradeDetails) {
             $.upgradeDetails = upgradeDetails;
             return this;

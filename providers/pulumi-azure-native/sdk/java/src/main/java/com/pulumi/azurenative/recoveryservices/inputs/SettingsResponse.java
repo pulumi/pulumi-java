@@ -27,6 +27,11 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isCompression")
     private @Nullable Boolean isCompression;
 
+    /**
+     * @return Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+     * will be deprecated once clients upgrade to consider this flag.
+     * 
+     */
     public Optional<Boolean> isCompression() {
         return Optional.ofNullable(this.isCompression);
     }
@@ -38,6 +43,10 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="issqlcompression")
     private @Nullable Boolean issqlcompression;
 
+    /**
+     * @return SQL compression flag
+     * 
+     */
     public Optional<Boolean> issqlcompression() {
         return Optional.ofNullable(this.issqlcompression);
     }
@@ -49,6 +58,10 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -79,16 +92,35 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isCompression Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+         * will be deprecated once clients upgrade to consider this flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompression(@Nullable Boolean isCompression) {
             $.isCompression = isCompression;
             return this;
         }
 
+        /**
+         * @param issqlcompression SQL compression flag
+         * 
+         * @return builder
+         * 
+         */
         public Builder issqlcompression(@Nullable Boolean issqlcompression) {
             $.issqlcompression = issqlcompression;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

@@ -30,6 +30,10 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
     @Import(name="compressionProperties")
     private @Nullable Object compressionProperties;
 
+    /**
+     * @return Compression settings.
+     * 
+     */
     public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -41,6 +45,10 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
     @Import(name="skipLineCount")
     private @Nullable Object skipLineCount;
 
+    /**
+     * @return Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> skipLineCount() {
         return Optional.ofNullable(this.skipLineCount);
     }
@@ -53,6 +61,11 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;DelimitedTextReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -83,16 +96,35 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
             $ = new DelimitedTextReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(@Nullable Object compressionProperties) {
             $.compressionProperties = compressionProperties;
             return this;
         }
 
+        /**
+         * @param skipLineCount Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLineCount(@Nullable Object skipLineCount) {
             $.skipLineCount = skipLineCount;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;DelimitedTextReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

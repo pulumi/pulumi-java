@@ -25,6 +25,10 @@ public final class MultichannelResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Indicates whether multichannel is enabled
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -53,6 +57,12 @@ public final class MultichannelResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MultichannelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether multichannel is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

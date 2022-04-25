@@ -29,6 +29,10 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
     @Import(name="hostServerName")
     private @Nullable Output<String> hostServerName;
 
+    /**
+     * @return Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+     * 
+     */
     public Optional<Output<String>> hostServerName() {
         return Optional.ofNullable(this.hostServerName);
     }
@@ -40,6 +44,10 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
     @Import(name="inquiryInfo")
     private @Nullable Output<InquiryInfoArgs> inquiryInfo;
 
+    /**
+     * @return Inquiry Status for the container.
+     * 
+     */
     public Optional<Output<InquiryInfoArgs>> inquiryInfo() {
         return Optional.ofNullable(this.inquiryInfo);
     }
@@ -51,6 +59,10 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
     @Import(name="nodesList")
     private @Nullable Output<List<DistributedNodesInfoArgs>> nodesList;
 
+    /**
+     * @return List of the nodes in case of distributed container.
+     * 
+     */
     public Optional<Output<List<DistributedNodesInfoArgs>>> nodesList() {
         return Optional.ofNullable(this.nodesList);
     }
@@ -81,33 +93,75 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
             $ = new AzureWorkloadContainerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostServerName Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostServerName(@Nullable Output<String> hostServerName) {
             $.hostServerName = hostServerName;
             return this;
         }
 
+        /**
+         * @param hostServerName Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostServerName(String hostServerName) {
             return hostServerName(Output.of(hostServerName));
         }
 
+        /**
+         * @param inquiryInfo Inquiry Status for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryInfo(@Nullable Output<InquiryInfoArgs> inquiryInfo) {
             $.inquiryInfo = inquiryInfo;
             return this;
         }
 
+        /**
+         * @param inquiryInfo Inquiry Status for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryInfo(InquiryInfoArgs inquiryInfo) {
             return inquiryInfo(Output.of(inquiryInfo));
         }
 
+        /**
+         * @param nodesList List of the nodes in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesList(@Nullable Output<List<DistributedNodesInfoArgs>> nodesList) {
             $.nodesList = nodesList;
             return this;
         }
 
+        /**
+         * @param nodesList List of the nodes in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesList(List<DistributedNodesInfoArgs> nodesList) {
             return nodesList(Output.of(nodesList));
         }
 
+        /**
+         * @param nodesList List of the nodes in case of distributed container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesList(DistributedNodesInfoArgs... nodesList) {
             return nodesList(List.of(nodesList));
         }

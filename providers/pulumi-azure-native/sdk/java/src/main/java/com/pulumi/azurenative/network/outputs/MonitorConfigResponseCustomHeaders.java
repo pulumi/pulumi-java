@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitorConfigResponseCustomHeaders {
     /**
-     * Header name.
+     * @return Header name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Header value.
+     * @return Header value.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class MonitorConfigResponseCustomHeaders {
     }
 
     /**
-     * Header name.
+     * @return Header name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Header value.
+     * @return Header value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -26,6 +26,10 @@ public final class GitHubClientSecretArgs extends com.pulumi.resources.ResourceA
     @Import(name="byoaSecretAkvUrl")
     private @Nullable Output<String> byoaSecretAkvUrl;
 
+    /**
+     * @return Bring your own app client secret AKV URL.
+     * 
+     */
     public Optional<Output<String>> byoaSecretAkvUrl() {
         return Optional.ofNullable(this.byoaSecretAkvUrl);
     }
@@ -37,6 +41,10 @@ public final class GitHubClientSecretArgs extends com.pulumi.resources.ResourceA
     @Import(name="byoaSecretName")
     private @Nullable Output<String> byoaSecretName;
 
+    /**
+     * @return Bring your own app client secret name in AKV.
+     * 
+     */
     public Optional<Output<String>> byoaSecretName() {
         return Optional.ofNullable(this.byoaSecretName);
     }
@@ -66,20 +74,44 @@ public final class GitHubClientSecretArgs extends com.pulumi.resources.ResourceA
             $ = new GitHubClientSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param byoaSecretAkvUrl Bring your own app client secret AKV URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byoaSecretAkvUrl(@Nullable Output<String> byoaSecretAkvUrl) {
             $.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
 
+        /**
+         * @param byoaSecretAkvUrl Bring your own app client secret AKV URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byoaSecretAkvUrl(String byoaSecretAkvUrl) {
             return byoaSecretAkvUrl(Output.of(byoaSecretAkvUrl));
         }
 
+        /**
+         * @param byoaSecretName Bring your own app client secret name in AKV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byoaSecretName(@Nullable Output<String> byoaSecretName) {
             $.byoaSecretName = byoaSecretName;
             return this;
         }
 
+        /**
+         * @param byoaSecretName Bring your own app client secret name in AKV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byoaSecretName(String byoaSecretName) {
             return byoaSecretName(Output.of(byoaSecretName));
         }

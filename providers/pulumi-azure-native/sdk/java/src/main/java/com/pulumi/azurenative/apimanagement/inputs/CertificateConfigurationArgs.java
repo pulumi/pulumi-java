@@ -27,6 +27,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="certificate")
     private @Nullable Output<CertificateInformationArgs> certificate;
 
+    /**
+     * @return Certificate information.
+     * 
+     */
     public Optional<Output<CertificateInformationArgs>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -38,6 +42,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="certificatePassword")
     private @Nullable Output<String> certificatePassword;
 
+    /**
+     * @return Certificate Password.
+     * 
+     */
     public Optional<Output<String>> certificatePassword() {
         return Optional.ofNullable(this.certificatePassword);
     }
@@ -49,6 +57,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="encodedCertificate")
     private @Nullable Output<String> encodedCertificate;
 
+    /**
+     * @return Base64 Encoded certificate.
+     * 
+     */
     public Optional<Output<String>> encodedCertificate() {
         return Optional.ofNullable(this.encodedCertificate);
     }
@@ -60,6 +72,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="storeName", required=true)
     private Output<String> storeName;
 
+    /**
+     * @return The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
+     * 
+     */
     public Output<String> storeName() {
         return this.storeName;
     }
@@ -91,38 +107,86 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
             $ = new CertificateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate Certificate information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<CertificateInformationArgs> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate Certificate information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(CertificateInformationArgs certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param certificatePassword Certificate Password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
             $.certificatePassword = certificatePassword;
             return this;
         }
 
+        /**
+         * @param certificatePassword Certificate Password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePassword(String certificatePassword) {
             return certificatePassword(Output.of(certificatePassword));
         }
 
+        /**
+         * @param encodedCertificate Base64 Encoded certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
             $.encodedCertificate = encodedCertificate;
             return this;
         }
 
+        /**
+         * @param encodedCertificate Base64 Encoded certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedCertificate(String encodedCertificate) {
             return encodedCertificate(Output.of(encodedCertificate));
         }
 
+        /**
+         * @param storeName The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeName(Output<String> storeName) {
             $.storeName = storeName;
             return this;
         }
 
+        /**
+         * @param storeName The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeName(String storeName) {
             return storeName(Output.of(storeName));
         }

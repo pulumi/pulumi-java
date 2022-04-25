@@ -26,6 +26,10 @@ public final class ManagementResourcePreferencesArgs extends com.pulumi.resource
     @Import(name="preferredManagementResourceId")
     private @Nullable Output<String> preferredManagementResourceId;
 
+    /**
+     * @return Customer preferred Management resource ARM ID
+     * 
+     */
     public Optional<Output<String>> preferredManagementResourceId() {
         return Optional.ofNullable(this.preferredManagementResourceId);
     }
@@ -54,11 +58,23 @@ public final class ManagementResourcePreferencesArgs extends com.pulumi.resource
             $ = new ManagementResourcePreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preferredManagementResourceId Customer preferred Management resource ARM ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredManagementResourceId(@Nullable Output<String> preferredManagementResourceId) {
             $.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }
 
+        /**
+         * @param preferredManagementResourceId Customer preferred Management resource ARM ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredManagementResourceId(String preferredManagementResourceId) {
             return preferredManagementResourceId(Output.of(preferredManagementResourceId));
         }

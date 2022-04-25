@@ -22,73 +22,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExecuteDataFlowActivityResponse {
     /**
-     * Compute properties for data flow activity.
+     * @return Compute properties for data flow activity.
      * 
      */
     private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
     /**
-     * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     * @return Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
      */
     private final @Nullable Object continueOnError;
     /**
-     * Data flow reference.
+     * @return Data flow reference.
      * 
      */
     private final DataFlowReferenceResponse dataFlow;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     * @return Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
      */
     private final @Nullable Object runConcurrently;
     /**
-     * Staging info for execute data flow activity.
+     * @return Staging info for execute data flow activity.
      * 
      */
     private final @Nullable DataFlowStagingInfoResponse staging;
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
+     * @return Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
      */
     private final @Nullable Object traceLevel;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecuteDataFlow&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -126,101 +126,101 @@ public final class ExecuteDataFlowActivityResponse {
     }
 
     /**
-     * Compute properties for data flow activity.
+     * @return Compute properties for data flow activity.
      * 
-    */
+     */
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
         return Optional.ofNullable(this.compute);
     }
     /**
-     * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     * @return Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
-    */
+     */
     public Optional<Object> continueOnError() {
         return Optional.ofNullable(this.continueOnError);
     }
     /**
-     * Data flow reference.
+     * @return Data flow reference.
      * 
-    */
+     */
     public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
         return Optional.ofNullable(this.integrationRuntime);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     * @return Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
-    */
+     */
     public Optional<Object> runConcurrently() {
         return Optional.ofNullable(this.runConcurrently);
     }
     /**
-     * Staging info for execute data flow activity.
+     * @return Staging info for execute data flow activity.
      * 
-    */
+     */
     public Optional<DataFlowStagingInfoResponse> staging() {
         return Optional.ofNullable(this.staging);
     }
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
+     * @return Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> traceLevel() {
         return Optional.ofNullable(this.traceLevel);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecuteDataFlow&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

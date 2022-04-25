@@ -31,6 +31,10 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
     @Import(name="kind")
     private @Nullable Output<Either<String,PartitionKind>> kind;
 
+    /**
+     * @return Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+     * 
+     */
     public Optional<Output<Either<String,PartitionKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -42,6 +46,10 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
     @Import(name="paths")
     private @Nullable Output<List<String>> paths;
 
+    /**
+     * @return List of paths using which data within the container can be partitioned
+     * 
+     */
     public Optional<Output<List<String>>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -53,6 +61,10 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return Indicates the version of the partition key definition
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -83,41 +95,95 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
             $ = new ContainerPartitionKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,PartitionKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,PartitionKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(PartitionKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param paths List of paths using which data within the container can be partitioned
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable Output<List<String>> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths List of paths using which data within the container can be partitioned
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             return paths(Output.of(paths));
         }
 
+        /**
+         * @param paths List of paths using which data within the container can be partitioned
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param version Indicates the version of the partition key definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Indicates the version of the partition key definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

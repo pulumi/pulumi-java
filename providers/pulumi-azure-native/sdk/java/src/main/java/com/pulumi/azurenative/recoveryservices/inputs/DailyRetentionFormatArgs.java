@@ -27,6 +27,10 @@ public final class DailyRetentionFormatArgs extends com.pulumi.resources.Resourc
     @Import(name="daysOfTheMonth")
     private @Nullable Output<List<DayArgs>> daysOfTheMonth;
 
+    /**
+     * @return List of days of the month.
+     * 
+     */
     public Optional<Output<List<DayArgs>>> daysOfTheMonth() {
         return Optional.ofNullable(this.daysOfTheMonth);
     }
@@ -55,15 +59,33 @@ public final class DailyRetentionFormatArgs extends com.pulumi.resources.Resourc
             $ = new DailyRetentionFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfTheMonth List of days of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheMonth(@Nullable Output<List<DayArgs>> daysOfTheMonth) {
             $.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
 
+        /**
+         * @param daysOfTheMonth List of days of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheMonth(List<DayArgs> daysOfTheMonth) {
             return daysOfTheMonth(Output.of(daysOfTheMonth));
         }
 
+        /**
+         * @param daysOfTheMonth List of days of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheMonth(DayArgs... daysOfTheMonth) {
             return daysOfTheMonth(List.of(daysOfTheMonth));
         }

@@ -25,6 +25,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="additionalInfo", required=true)
     private List<TypedErrorInfoResponse> additionalInfo;
 
+    /**
+     * @return Additional scenario specific error details.
+     * 
+     */
     public List<TypedErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
@@ -36,6 +40,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Service specific error code which serves as the substatus for the HTTP error code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -47,6 +55,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="details", required=true)
     private List<ErrorDefinitionResponse> details;
 
+    /**
+     * @return Internal error details.
+     * 
+     */
     public List<ErrorDefinitionResponse> details() {
         return this.details;
     }
@@ -58,6 +70,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Description of the error.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -69,6 +85,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return The target of the error.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -101,34 +121,76 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
             $ = new ErrorDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalInfo Additional scenario specific error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(List<TypedErrorInfoResponse> additionalInfo) {
             $.additionalInfo = additionalInfo;
             return this;
         }
 
+        /**
+         * @param additionalInfo Additional scenario specific error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(TypedErrorInfoResponse... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
 
+        /**
+         * @param code Service specific error code which serves as the substatus for the HTTP error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details Internal error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<ErrorDefinitionResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Internal error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(ErrorDefinitionResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message Description of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target The target of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ServerPrivateEndpointConnectionResponse {
     /**
-     * Resource Id of the private endpoint connection.
+     * @return Resource Id of the private endpoint connection.
      * 
      */
     private final String id;
     /**
-     * Private endpoint connection properties
+     * @return Private endpoint connection properties
      * 
      */
     private final ServerPrivateEndpointConnectionPropertiesResponse properties;
@@ -30,16 +30,16 @@ public final class ServerPrivateEndpointConnectionResponse {
     }
 
     /**
-     * Resource Id of the private endpoint connection.
+     * @return Resource Id of the private endpoint connection.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Private endpoint connection properties
+     * @return Private endpoint connection properties
      * 
-    */
+     */
     public ServerPrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }

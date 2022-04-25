@@ -25,6 +25,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends co
     @Import(name="etag")
     private @Nullable String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -36,6 +40,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends co
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -47,6 +55,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends co
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends co
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the VPN client root certificate resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -69,6 +85,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends co
     @Import(name="publicCertData", required=true)
     private String publicCertData;
 
+    /**
+     * @return The certificate public data.
+     * 
+     */
     public String publicCertData() {
         return this.publicCertData;
     }
@@ -101,26 +121,56 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends co
             $ = new P2SVpnServerConfigVpnClientRootCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the VPN client root certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicCertData The certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertData(String publicCertData) {
             $.publicCertData = publicCertData;
             return this;

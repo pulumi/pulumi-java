@@ -25,6 +25,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="parametersArtifactSourceRelativePath")
     private @Nullable String parametersArtifactSourceRelativePath;
 
+    /**
+     * @return The path to the ARM parameters file relative to the artifact source.
+     * 
+     */
     public Optional<String> parametersArtifactSourceRelativePath() {
         return Optional.ofNullable(this.parametersArtifactSourceRelativePath);
     }
@@ -36,6 +40,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="parametersUri")
     private @Nullable String parametersUri;
 
+    /**
+     * @return The full URI of the ARM parameters file with the SAS token.
+     * 
+     */
     public Optional<String> parametersUri() {
         return Optional.ofNullable(this.parametersUri);
     }
@@ -47,6 +55,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="templateArtifactSourceRelativePath")
     private @Nullable String templateArtifactSourceRelativePath;
 
+    /**
+     * @return The path to the ARM template file relative to the artifact source.
+     * 
+     */
     public Optional<String> templateArtifactSourceRelativePath() {
         return Optional.ofNullable(this.templateArtifactSourceRelativePath);
     }
@@ -58,6 +70,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="templateUri")
     private @Nullable String templateUri;
 
+    /**
+     * @return The full URI of the ARM template file with the SAS token.
+     * 
+     */
     public Optional<String> templateUri() {
         return Optional.ofNullable(this.templateUri);
     }
@@ -89,21 +105,45 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
             $ = new ServiceUnitArtifactsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parametersArtifactSourceRelativePath The path to the ARM parameters file relative to the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
             $.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
 
+        /**
+         * @param parametersUri The full URI of the ARM parameters file with the SAS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersUri(@Nullable String parametersUri) {
             $.parametersUri = parametersUri;
             return this;
         }
 
+        /**
+         * @param templateArtifactSourceRelativePath The path to the ARM template file relative to the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
             $.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
 
+        /**
+         * @param templateUri The full URI of the ARM template file with the SAS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUri(@Nullable String templateUri) {
             $.templateUri = templateUri;
             return this;

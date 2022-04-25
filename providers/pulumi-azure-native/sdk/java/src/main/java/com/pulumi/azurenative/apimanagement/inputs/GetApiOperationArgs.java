@@ -19,6 +19,10 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiId", required=true)
     private String apiId;
 
+    /**
+     * @return API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     public String apiId() {
         return this.apiId;
     }
@@ -30,6 +34,10 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="operationId", required=true)
     private String operationId;
 
+    /**
+     * @return Operation identifier within an API. Must be unique in the current API Management service instance.
+     * 
+     */
     public String operationId() {
         return this.operationId;
     }
@@ -41,6 +49,10 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApiOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param operationId Operation identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationId(String operationId) {
             $.operationId = operationId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

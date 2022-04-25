@@ -26,6 +26,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="capacityInBytes", required=true)
     private Double capacityInBytes;
 
+    /**
+     * @return The disk capacity in bytes.
+     * 
+     */
     public Double capacityInBytes() {
         return this.capacityInBytes;
     }
@@ -37,6 +41,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskId", required=true)
     private String diskId;
 
+    /**
+     * @return The disk id.
+     * 
+     */
     public String diskId() {
         return this.diskId;
     }
@@ -48,6 +56,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -59,6 +71,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskPath", required=true)
     private String diskPath;
 
+    /**
+     * @return The disk path.
+     * 
+     */
     public String diskPath() {
         return this.diskPath;
     }
@@ -70,6 +86,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskType")
     private @Nullable String diskType;
 
+    /**
+     * @return The disk type.
+     * 
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -81,6 +101,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="isOSDisk", required=true)
     private String isOSDisk;
 
+    /**
+     * @return A value indicating whether the disk is the OS disk.
+     * 
+     */
     public String isOSDisk() {
         return this.isOSDisk;
     }
@@ -92,6 +116,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="logStorageAccountId", required=true)
     private String logStorageAccountId;
 
+    /**
+     * @return The log storage account ARM Id.
+     * 
+     */
     public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
@@ -103,6 +131,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="logStorageAccountSasSecretName", required=true)
     private String logStorageAccountSasSecretName;
 
+    /**
+     * @return The key vault secret name of the log storage account.
+     * 
+     */
     public String logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
@@ -114,6 +146,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="seedManagedDiskId", required=true)
     private String seedManagedDiskId;
 
+    /**
+     * @return The ARM Id of the seed managed disk.
+     * 
+     */
     public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
@@ -125,6 +161,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="targetManagedDiskId", required=true)
     private String targetManagedDiskId;
 
+    /**
+     * @return The ARM Id of the target managed disk.
+     * 
+     */
     public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
@@ -162,51 +202,111 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
             $ = new VMwareCbtProtectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityInBytes The disk capacity in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityInBytes(Double capacityInBytes) {
             $.capacityInBytes = capacityInBytes;
             return this;
         }
 
+        /**
+         * @param diskId The disk id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(String diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskName The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskPath The disk path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPath(String diskPath) {
             $.diskPath = diskPath;
             return this;
         }
 
+        /**
+         * @param diskType The disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param isOSDisk A value indicating whether the disk is the OS disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOSDisk(String isOSDisk) {
             $.isOSDisk = isOSDisk;
             return this;
         }
 
+        /**
+         * @param logStorageAccountId The log storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(String logStorageAccountId) {
             $.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
+        /**
+         * @param logStorageAccountSasSecretName The key vault secret name of the log storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
             $.logStorageAccountSasSecretName = logStorageAccountSasSecretName;
             return this;
         }
 
+        /**
+         * @param seedManagedDiskId The ARM Id of the seed managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedManagedDiskId(String seedManagedDiskId) {
             $.seedManagedDiskId = seedManagedDiskId;
             return this;
         }
 
+        /**
+         * @param targetManagedDiskId The ARM Id of the target managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetManagedDiskId(String targetManagedDiskId) {
             $.targetManagedDiskId = targetManagedDiskId;
             return this;

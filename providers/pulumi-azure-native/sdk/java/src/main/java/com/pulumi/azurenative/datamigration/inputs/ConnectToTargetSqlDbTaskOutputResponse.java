@@ -24,6 +24,10 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
     @Import(name="databases", required=true)
     private Map<String,String> databases;
 
+    /**
+     * @return Source databases as a map from database name to database id
+     * 
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
@@ -35,6 +39,10 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -46,6 +54,10 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
     @Import(name="targetServerBrandVersion", required=true)
     private String targetServerBrandVersion;
 
+    /**
+     * @return Target server brand version
+     * 
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
@@ -57,6 +69,10 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
     @Import(name="targetServerVersion", required=true)
     private String targetServerVersion;
 
+    /**
+     * @return Version of the target server
+     * 
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
@@ -88,21 +104,45 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
             $ = new ConnectToTargetSqlDbTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databases Source databases as a map from database name to database id
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(Map<String,String> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param targetServerBrandVersion Target server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param targetServerVersion Version of the target server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerVersion(String targetServerVersion) {
             $.targetServerVersion = targetServerVersion;
             return this;

@@ -35,6 +35,10 @@ public final class CacheKeyQueryStringActionParametersArgs extends com.pulumi.re
     @Import(name="queryParameters")
     private @Nullable Output<String> queryParameters;
 
+    /**
+     * @return query parameters to include or exclude (comma separated).
+     * 
+     */
     public Optional<Output<String>> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
@@ -46,6 +50,10 @@ public final class CacheKeyQueryStringActionParametersArgs extends com.pulumi.re
     @Import(name="queryStringBehavior", required=true)
     private Output<Either<String,QueryStringBehavior>> queryStringBehavior;
 
+    /**
+     * @return Caching behavior for the requests
+     * 
+     */
     public Output<Either<String,QueryStringBehavior>> queryStringBehavior() {
         return this.queryStringBehavior;
     }
@@ -85,28 +93,64 @@ public final class CacheKeyQueryStringActionParametersArgs extends com.pulumi.re
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param queryParameters query parameters to include or exclude (comma separated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(@Nullable Output<String> queryParameters) {
             $.queryParameters = queryParameters;
             return this;
         }
 
+        /**
+         * @param queryParameters query parameters to include or exclude (comma separated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(String queryParameters) {
             return queryParameters(Output.of(queryParameters));
         }
 
+        /**
+         * @param queryStringBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBehavior(Output<Either<String,QueryStringBehavior>> queryStringBehavior) {
             $.queryStringBehavior = queryStringBehavior;
             return this;
         }
 
+        /**
+         * @param queryStringBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBehavior(Either<String,QueryStringBehavior> queryStringBehavior) {
             return queryStringBehavior(Output.of(queryStringBehavior));
         }
 
+        /**
+         * @param queryStringBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBehavior(String queryStringBehavior) {
             return queryStringBehavior(Either.ofLeft(queryStringBehavior));
         }
 
+        /**
+         * @param queryStringBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBehavior(QueryStringBehavior queryStringBehavior) {
             return queryStringBehavior(Either.ofRight(queryStringBehavior));
         }

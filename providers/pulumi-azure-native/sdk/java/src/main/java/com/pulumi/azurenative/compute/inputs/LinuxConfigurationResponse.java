@@ -27,6 +27,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="disablePasswordAuthentication")
     private @Nullable Boolean disablePasswordAuthentication;
 
+    /**
+     * @return Specifies whether password authentication should be disabled.
+     * 
+     */
     public Optional<Boolean> disablePasswordAuthentication() {
         return Optional.ofNullable(this.disablePasswordAuthentication);
     }
@@ -38,6 +42,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="patchSettings")
     private @Nullable LinuxPatchSettingsResponse patchSettings;
 
+    /**
+     * @return [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+     * 
+     */
     public Optional<LinuxPatchSettingsResponse> patchSettings() {
         return Optional.ofNullable(this.patchSettings);
     }
@@ -49,6 +57,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="provisionVMAgent")
     private @Nullable Boolean provisionVMAgent;
 
+    /**
+     * @return Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+     * 
+     */
     public Optional<Boolean> provisionVMAgent() {
         return Optional.ofNullable(this.provisionVMAgent);
     }
@@ -60,6 +72,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="ssh")
     private @Nullable SshConfigurationResponse ssh;
 
+    /**
+     * @return Specifies the ssh key configuration for a Linux OS.
+     * 
+     */
     public Optional<SshConfigurationResponse> ssh() {
         return Optional.ofNullable(this.ssh);
     }
@@ -91,21 +107,45 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
             $ = new LinuxConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disablePasswordAuthentication Specifies whether password authentication should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
             $.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
 
+        /**
+         * @param patchSettings [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchSettings(@Nullable LinuxPatchSettingsResponse patchSettings) {
             $.patchSettings = patchSettings;
             return this;
         }
 
+        /**
+         * @param provisionVMAgent Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             $.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
+        /**
+         * @param ssh Specifies the ssh key configuration for a Linux OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             $.ssh = ssh;
             return this;

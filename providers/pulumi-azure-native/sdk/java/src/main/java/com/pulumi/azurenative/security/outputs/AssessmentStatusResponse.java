@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AssessmentStatusResponse {
     /**
-     * Programmatic code for the cause of the assessment status
+     * @return Programmatic code for the cause of the assessment status
      * 
      */
     private final @Nullable String cause;
     /**
-     * Programmatic code for the status of the assessment
+     * @return Programmatic code for the status of the assessment
      * 
      */
     private final String code;
     /**
-     * Human readable description of the assessment status
+     * @return Human readable description of the assessment status
      * 
      */
     private final @Nullable String description;
@@ -38,23 +38,23 @@ public final class AssessmentStatusResponse {
     }
 
     /**
-     * Programmatic code for the cause of the assessment status
+     * @return Programmatic code for the cause of the assessment status
      * 
-    */
+     */
     public Optional<String> cause() {
         return Optional.ofNullable(this.cause);
     }
     /**
-     * Programmatic code for the status of the assessment
+     * @return Programmatic code for the status of the assessment
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Human readable description of the assessment status
+     * @return Human readable description of the assessment status
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

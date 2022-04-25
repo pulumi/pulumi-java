@@ -26,6 +26,10 @@ public final class ProtectionStatusDetailsResponse extends com.pulumi.resources.
     @Import(name="errorDetails")
     private @Nullable UserFacingErrorResponse errorDetails;
 
+    /**
+     * @return Specifies the protection status error of the resource
+     * 
+     */
     public Optional<UserFacingErrorResponse> errorDetails() {
         return Optional.ofNullable(this.errorDetails);
     }
@@ -37,6 +41,10 @@ public final class ProtectionStatusDetailsResponse extends com.pulumi.resources.
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Specifies the protection status of the resource
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -66,11 +74,23 @@ public final class ProtectionStatusDetailsResponse extends com.pulumi.resources.
             $ = new ProtectionStatusDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorDetails Specifies the protection status error of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetails(@Nullable UserFacingErrorResponse errorDetails) {
             $.errorDetails = errorDetails;
             return this;
         }
 
+        /**
+         * @param status Specifies the protection status of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

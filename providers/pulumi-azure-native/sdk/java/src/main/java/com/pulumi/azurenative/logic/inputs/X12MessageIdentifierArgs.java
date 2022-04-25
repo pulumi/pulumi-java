@@ -24,6 +24,10 @@ public final class X12MessageIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="messageId", required=true)
     private Output<String> messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public Output<String> messageId() {
         return this.messageId;
     }
@@ -52,11 +56,23 @@ public final class X12MessageIdentifierArgs extends com.pulumi.resources.Resourc
             $ = new X12MessageIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }

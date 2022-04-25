@@ -29,6 +29,10 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteAfter", required=true)
     private Output<AbsoluteDeleteOptionArgs> deleteAfter;
 
+    /**
+     * @return Delete Option
+     * 
+     */
     public Output<AbsoluteDeleteOptionArgs> deleteAfter() {
         return this.deleteAfter;
     }
@@ -40,6 +44,10 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceDataStore", required=true)
     private Output<DataStoreInfoBaseArgs> sourceDataStore;
 
+    /**
+     * @return DataStoreInfo base
+     * 
+     */
     public Output<DataStoreInfoBaseArgs> sourceDataStore() {
         return this.sourceDataStore;
     }
@@ -77,20 +85,44 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
             $ = new SourceLifeCycleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteAfter Delete Option
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteAfter(Output<AbsoluteDeleteOptionArgs> deleteAfter) {
             $.deleteAfter = deleteAfter;
             return this;
         }
 
+        /**
+         * @param deleteAfter Delete Option
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteAfter(AbsoluteDeleteOptionArgs deleteAfter) {
             return deleteAfter(Output.of(deleteAfter));
         }
 
+        /**
+         * @param sourceDataStore DataStoreInfo base
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDataStore(Output<DataStoreInfoBaseArgs> sourceDataStore) {
             $.sourceDataStore = sourceDataStore;
             return this;
         }
 
+        /**
+         * @param sourceDataStore DataStoreInfo base
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDataStore(DataStoreInfoBaseArgs sourceDataStore) {
             return sourceDataStore(Output.of(sourceDataStore));
         }

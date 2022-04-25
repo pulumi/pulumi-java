@@ -28,6 +28,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainControllerIpAddress", required=true)
     private List<String> domainControllerIpAddress;
 
+    /**
+     * @return List of Domain Controller IP Address
+     * 
+     */
     public List<String> domainControllerIpAddress() {
         return this.domainControllerIpAddress;
     }
@@ -39,6 +43,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="externalAccessIpAddress", required=true)
     private String externalAccessIpAddress;
 
+    /**
+     * @return External access ip address.
+     * 
+     */
     public String externalAccessIpAddress() {
         return this.externalAccessIpAddress;
     }
@@ -50,6 +58,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthAlerts", required=true)
     private List<HealthAlertResponse> healthAlerts;
 
+    /**
+     * @return List of Domain Health Alerts
+     * 
+     */
     public List<HealthAlertResponse> healthAlerts() {
         return this.healthAlerts;
     }
@@ -61,6 +73,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthLastEvaluated", required=true)
     private String healthLastEvaluated;
 
+    /**
+     * @return Last domain evaluation run DateTime
+     * 
+     */
     public String healthLastEvaluated() {
         return this.healthLastEvaluated;
     }
@@ -72,6 +88,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthMonitors", required=true)
     private List<HealthMonitorResponse> healthMonitors;
 
+    /**
+     * @return List of Domain Health Monitors
+     * 
+     */
     public List<HealthMonitorResponse> healthMonitors() {
         return this.healthMonitors;
     }
@@ -83,6 +103,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Virtual network location
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -94,6 +118,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="replicaSetId", required=true)
     private String replicaSetId;
 
+    /**
+     * @return ReplicaSet Id
+     * 
+     */
     public String replicaSetId() {
         return this.replicaSetId;
     }
@@ -105,6 +133,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceStatus", required=true)
     private String serviceStatus;
 
+    /**
+     * @return Status of Domain Service instance
+     * 
+     */
     public String serviceStatus() {
         return this.serviceStatus;
     }
@@ -116,6 +148,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -127,6 +163,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vnetSiteId", required=true)
     private String vnetSiteId;
 
+    /**
+     * @return Virtual network site id
+     * 
+     */
     public String vnetSiteId() {
         return this.vnetSiteId;
     }
@@ -164,63 +204,141 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReplicaSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainControllerIpAddress List of Domain Controller IP Address
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainControllerIpAddress(List<String> domainControllerIpAddress) {
             $.domainControllerIpAddress = domainControllerIpAddress;
             return this;
         }
 
+        /**
+         * @param domainControllerIpAddress List of Domain Controller IP Address
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainControllerIpAddress(String... domainControllerIpAddress) {
             return domainControllerIpAddress(List.of(domainControllerIpAddress));
         }
 
+        /**
+         * @param externalAccessIpAddress External access ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalAccessIpAddress(String externalAccessIpAddress) {
             $.externalAccessIpAddress = externalAccessIpAddress;
             return this;
         }
 
+        /**
+         * @param healthAlerts List of Domain Health Alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthAlerts(List<HealthAlertResponse> healthAlerts) {
             $.healthAlerts = healthAlerts;
             return this;
         }
 
+        /**
+         * @param healthAlerts List of Domain Health Alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthAlerts(HealthAlertResponse... healthAlerts) {
             return healthAlerts(List.of(healthAlerts));
         }
 
+        /**
+         * @param healthLastEvaluated Last domain evaluation run DateTime
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthLastEvaluated(String healthLastEvaluated) {
             $.healthLastEvaluated = healthLastEvaluated;
             return this;
         }
 
+        /**
+         * @param healthMonitors List of Domain Health Monitors
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthMonitors(List<HealthMonitorResponse> healthMonitors) {
             $.healthMonitors = healthMonitors;
             return this;
         }
 
+        /**
+         * @param healthMonitors List of Domain Health Monitors
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthMonitors(HealthMonitorResponse... healthMonitors) {
             return healthMonitors(List.of(healthMonitors));
         }
 
+        /**
+         * @param location Virtual network location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param replicaSetId ReplicaSet Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaSetId(String replicaSetId) {
             $.replicaSetId = replicaSetId;
             return this;
         }
 
+        /**
+         * @param serviceStatus Status of Domain Service instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceStatus(String serviceStatus) {
             $.serviceStatus = serviceStatus;
             return this;
         }
 
+        /**
+         * @param subnetId The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param vnetSiteId Virtual network site id
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetSiteId(String vnetSiteId) {
             $.vnetSiteId = vnetSiteId;
             return this;

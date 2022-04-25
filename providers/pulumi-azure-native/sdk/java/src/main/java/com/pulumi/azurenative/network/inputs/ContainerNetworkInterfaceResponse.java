@@ -29,6 +29,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="container")
     private @Nullable ContainerResponse container;
 
+    /**
+     * @return Reference to the container to which this container network interface is attached.
+     * 
+     */
     public Optional<ContainerResponse> container() {
         return Optional.ofNullable(this.container);
     }
@@ -40,6 +44,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="containerNetworkInterfaceConfiguration", required=true)
     private ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
 
+    /**
+     * @return Container network interface configuration from which this container network interface is created.
+     * 
+     */
     public ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration() {
         return this.containerNetworkInterfaceConfiguration;
     }
@@ -51,6 +59,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -62,6 +74,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -73,6 +89,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="ipConfigurations", required=true)
     private List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
 
+    /**
+     * @return Reference to the ip configuration on this container nic.
+     * 
+     */
     public List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
@@ -84,6 +104,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the container network interface resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -106,6 +134,10 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Sub Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -141,45 +173,99 @@ public final class ContainerNetworkInterfaceResponse extends com.pulumi.resource
             $ = new ContainerNetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container Reference to the container to which this container network interface is attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable ContainerResponse container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param containerNetworkInterfaceConfiguration Container network interface configuration from which this container network interface is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerNetworkInterfaceConfiguration(ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration) {
             $.containerNetworkInterfaceConfiguration = containerNetworkInterfaceConfiguration;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipConfigurations Reference to the ip configuration on this container nic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations Reference to the ip configuration on this container nic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(ContainerNetworkInterfaceIpConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the container network interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Sub Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

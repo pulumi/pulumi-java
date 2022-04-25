@@ -25,6 +25,10 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
     @Import(name="ledgerRoleName")
     private @Nullable String ledgerRoleName;
 
+    /**
+     * @return LedgerRole associated with the Security Principal of Ledger
+     * 
+     */
     public Optional<String> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
@@ -36,6 +40,10 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return UUID/GUID based Principal Id of the Security Principal
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -47,6 +55,10 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return UUID/GUID based Tenant Id of the Security Principal
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -77,16 +89,34 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
             $ = new AADBasedSecurityPrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
             $.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
+        /**
+         * @param principalId UUID/GUID based Principal Id of the Security Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId UUID/GUID based Tenant Id of the Security Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

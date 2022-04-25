@@ -25,6 +25,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="allowedTenants")
     private @Nullable Output<List<String>> allowedTenants;
 
+    /**
+     * @return List of Allowed Tenants when configuring Azure Active Directory login.
+     * 
+     */
     public Optional<Output<List<String>>> allowedTenants() {
         return Optional.ofNullable(this.allowedTenants);
     }
@@ -36,6 +40,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="authority")
     private @Nullable Output<String> authority;
 
+    /**
+     * @return OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+     * 
+     */
     public Optional<Output<String>> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -47,6 +55,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -58,6 +70,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clientSecret", required=true)
     private Output<String> clientSecret;
 
+    /**
+     * @return Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+     * 
+     */
     public Output<String> clientSecret() {
         return this.clientSecret;
     }
@@ -69,6 +85,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identityProviderName")
     private @Nullable Output<String> identityProviderName;
 
+    /**
+     * @return Identity Provider Type identifier.
+     * 
+     */
     public Optional<Output<String>> identityProviderName() {
         return Optional.ofNullable(this.identityProviderName);
     }
@@ -80,6 +100,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="passwordResetPolicyName")
     private @Nullable Output<String> passwordResetPolicyName;
 
+    /**
+     * @return Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+     * 
+     */
     public Optional<Output<String>> passwordResetPolicyName() {
         return Optional.ofNullable(this.passwordResetPolicyName);
     }
@@ -91,6 +115,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="profileEditingPolicyName")
     private @Nullable Output<String> profileEditingPolicyName;
 
+    /**
+     * @return Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+     * 
+     */
     public Optional<Output<String>> profileEditingPolicyName() {
         return Optional.ofNullable(this.profileEditingPolicyName);
     }
@@ -102,6 +130,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,6 +145,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -124,6 +160,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="signinPolicyName")
     private @Nullable Output<String> signinPolicyName;
 
+    /**
+     * @return Signin Policy Name. Only applies to AAD B2C Identity Provider.
+     * 
+     */
     public Optional<Output<String>> signinPolicyName() {
         return Optional.ofNullable(this.signinPolicyName);
     }
@@ -135,6 +175,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="signinTenant")
     private @Nullable Output<String> signinTenant;
 
+    /**
+     * @return The TenantId to use instead of Common when logging into Active Directory
+     * 
+     */
     public Optional<Output<String>> signinTenant() {
         return Optional.ofNullable(this.signinTenant);
     }
@@ -146,6 +190,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="signupPolicyName")
     private @Nullable Output<String> signupPolicyName;
 
+    /**
+     * @return Signup Policy Name. Only applies to AAD B2C Identity Provider.
+     * 
+     */
     public Optional<Output<String>> signupPolicyName() {
         return Optional.ofNullable(this.signupPolicyName);
     }
@@ -157,6 +205,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<Either<String,IdentityProviderType>> type;
 
+    /**
+     * @return Identity Provider Type identifier.
+     * 
+     */
     public Optional<Output<Either<String,IdentityProviderType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -197,131 +249,305 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
             $ = new IdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedTenants List of Allowed Tenants when configuring Azure Active Directory login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedTenants(@Nullable Output<List<String>> allowedTenants) {
             $.allowedTenants = allowedTenants;
             return this;
         }
 
+        /**
+         * @param allowedTenants List of Allowed Tenants when configuring Azure Active Directory login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedTenants(List<String> allowedTenants) {
             return allowedTenants(Output.of(allowedTenants));
         }
 
+        /**
+         * @param allowedTenants List of Allowed Tenants when configuring Azure Active Directory login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedTenants(String... allowedTenants) {
             return allowedTenants(List.of(allowedTenants));
         }
 
+        /**
+         * @param authority OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable Output<String> authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param authority OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(String authority) {
             return authority(Output.of(authority));
         }
 
+        /**
+         * @param clientId Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param identityProviderName Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviderName(@Nullable Output<String> identityProviderName) {
             $.identityProviderName = identityProviderName;
             return this;
         }
 
+        /**
+         * @param identityProviderName Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviderName(String identityProviderName) {
             return identityProviderName(Output.of(identityProviderName));
         }
 
+        /**
+         * @param passwordResetPolicyName Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordResetPolicyName(@Nullable Output<String> passwordResetPolicyName) {
             $.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
 
+        /**
+         * @param passwordResetPolicyName Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordResetPolicyName(String passwordResetPolicyName) {
             return passwordResetPolicyName(Output.of(passwordResetPolicyName));
         }
 
+        /**
+         * @param profileEditingPolicyName Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileEditingPolicyName(@Nullable Output<String> profileEditingPolicyName) {
             $.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
 
+        /**
+         * @param profileEditingPolicyName Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileEditingPolicyName(String profileEditingPolicyName) {
             return profileEditingPolicyName(Output.of(profileEditingPolicyName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param signinPolicyName Signin Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signinPolicyName(@Nullable Output<String> signinPolicyName) {
             $.signinPolicyName = signinPolicyName;
             return this;
         }
 
+        /**
+         * @param signinPolicyName Signin Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signinPolicyName(String signinPolicyName) {
             return signinPolicyName(Output.of(signinPolicyName));
         }
 
+        /**
+         * @param signinTenant The TenantId to use instead of Common when logging into Active Directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder signinTenant(@Nullable Output<String> signinTenant) {
             $.signinTenant = signinTenant;
             return this;
         }
 
+        /**
+         * @param signinTenant The TenantId to use instead of Common when logging into Active Directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder signinTenant(String signinTenant) {
             return signinTenant(Output.of(signinTenant));
         }
 
+        /**
+         * @param signupPolicyName Signup Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signupPolicyName(@Nullable Output<String> signupPolicyName) {
             $.signupPolicyName = signupPolicyName;
             return this;
         }
 
+        /**
+         * @param signupPolicyName Signup Policy Name. Only applies to AAD B2C Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signupPolicyName(String signupPolicyName) {
             return signupPolicyName(Output.of(signupPolicyName));
         }
 
+        /**
+         * @param type Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,IdentityProviderType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IdentityProviderType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Identity Provider Type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IdentityProviderType type) {
             return type(Either.ofRight(type));
         }

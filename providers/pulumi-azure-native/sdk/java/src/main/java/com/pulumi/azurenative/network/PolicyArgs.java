@@ -27,6 +27,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customRules")
     private @Nullable Output<CustomRuleListArgs> customRules;
 
+    /**
+     * @return Describes custom rules inside the policy.
+     * 
+     */
     public Optional<Output<CustomRuleListArgs>> customRules() {
         return Optional.ofNullable(this.customRules);
     }
@@ -38,6 +42,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedRules")
     private @Nullable Output<ManagedRuleSetListArgs> managedRules;
 
+    /**
+     * @return Describes managed rules inside the policy.
+     * 
+     */
     public Optional<Output<ManagedRuleSetListArgs>> managedRules() {
         return Optional.ofNullable(this.managedRules);
     }
@@ -60,6 +72,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return The name of the Web Application Firewall Policy.
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -71,6 +87,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policySettings")
     private @Nullable Output<FrontDoorPolicySettingsArgs> policySettings;
 
+    /**
+     * @return Describes settings for the policy.
+     * 
+     */
     public Optional<Output<FrontDoorPolicySettingsArgs>> policySettings() {
         return Optional.ofNullable(this.policySettings);
     }
@@ -82,6 +102,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -104,6 +132,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,74 +171,170 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRules Describes custom rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(@Nullable Output<CustomRuleListArgs> customRules) {
             $.customRules = customRules;
             return this;
         }
 
+        /**
+         * @param customRules Describes custom rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(CustomRuleListArgs customRules) {
             return customRules(Output.of(customRules));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedRules Describes managed rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRules(@Nullable Output<ManagedRuleSetListArgs> managedRules) {
             $.managedRules = managedRules;
             return this;
         }
 
+        /**
+         * @param managedRules Describes managed rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRules(ManagedRuleSetListArgs managedRules) {
             return managedRules(Output.of(managedRules));
         }
 
+        /**
+         * @param policyName The name of the Web Application Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName The name of the Web Application Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param policySettings Describes settings for the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySettings(@Nullable Output<FrontDoorPolicySettingsArgs> policySettings) {
             $.policySettings = policySettings;
             return this;
         }
 
+        /**
+         * @param policySettings Describes settings for the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySettings(FrontDoorPolicySettingsArgs policySettings) {
             return policySettings(Output.of(policySettings));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

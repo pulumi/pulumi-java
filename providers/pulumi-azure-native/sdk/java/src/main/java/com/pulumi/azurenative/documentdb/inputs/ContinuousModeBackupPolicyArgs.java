@@ -26,6 +26,11 @@ public final class ContinuousModeBackupPolicyArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Describes the mode of backups.
+     * Expected value is &#39;Continuous&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -54,11 +59,25 @@ public final class ContinuousModeBackupPolicyArgs extends com.pulumi.resources.R
             $ = new ContinuousModeBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Describes the mode of backups.
+         * Expected value is &#39;Continuous&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Describes the mode of backups.
+         * Expected value is &#39;Continuous&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

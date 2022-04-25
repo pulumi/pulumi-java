@@ -26,6 +26,10 @@ public final class AppServiceCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="keyVaultId")
     private @Nullable Output<String> keyVaultId;
 
+    /**
+     * @return Key Vault resource Id.
+     * 
+     */
     public Optional<Output<String>> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -37,6 +41,10 @@ public final class AppServiceCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="keyVaultSecretName")
     private @Nullable Output<String> keyVaultSecretName;
 
+    /**
+     * @return Key Vault secret name.
+     * 
+     */
     public Optional<Output<String>> keyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
@@ -66,20 +74,44 @@ public final class AppServiceCertificateArgs extends com.pulumi.resources.Resour
             $ = new AppServiceCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultId Key Vault resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultId Key Vault resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(String keyVaultId) {
             return keyVaultId(Output.of(keyVaultId));
         }
 
+        /**
+         * @param keyVaultSecretName Key Vault secret name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
             $.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretName Key Vault secret name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretName(String keyVaultSecretName) {
             return keyVaultSecretName(Output.of(keyVaultSecretName));
         }

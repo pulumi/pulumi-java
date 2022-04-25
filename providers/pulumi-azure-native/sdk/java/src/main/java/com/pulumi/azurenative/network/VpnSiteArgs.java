@@ -31,6 +31,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressSpace")
     private @Nullable Output<AddressSpaceArgs> addressSpace;
 
+    /**
+     * @return The AddressSpace that contains an array of IP address ranges.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
@@ -42,6 +46,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgpProperties")
     private @Nullable Output<BgpSettingsArgs> bgpProperties;
 
+    /**
+     * @return The set of bgp properties.
+     * 
+     */
     public Optional<Output<BgpSettingsArgs>> bgpProperties() {
         return Optional.ofNullable(this.bgpProperties);
     }
@@ -53,6 +61,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceProperties")
     private @Nullable Output<DevicePropertiesArgs> deviceProperties;
 
+    /**
+     * @return The device properties.
+     * 
+     */
     public Optional<Output<DevicePropertiesArgs>> deviceProperties() {
         return Optional.ofNullable(this.deviceProperties);
     }
@@ -64,6 +76,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -75,6 +91,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The ip-address for the vpn-site.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -86,6 +106,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isSecuritySite")
     private @Nullable Output<Boolean> isSecuritySite;
 
+    /**
+     * @return IsSecuritySite flag.
+     * 
+     */
     public Optional<Output<Boolean>> isSecuritySite() {
         return Optional.ofNullable(this.isSecuritySite);
     }
@@ -97,6 +121,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -108,6 +136,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="o365Policy")
     private @Nullable Output<O365PolicyPropertiesArgs> o365Policy;
 
+    /**
+     * @return Office365 Policy.
+     * 
+     */
     public Optional<Output<O365PolicyPropertiesArgs>> o365Policy() {
         return Optional.ofNullable(this.o365Policy);
     }
@@ -119,6 +151,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the VpnSite.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -130,6 +166,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteKey")
     private @Nullable Output<String> siteKey;
 
+    /**
+     * @return The key for vpn-site that can be used for connections.
+     * 
+     */
     public Optional<Output<String>> siteKey() {
         return Optional.ofNullable(this.siteKey);
     }
@@ -141,6 +181,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +196,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualWan")
     private @Nullable Output<SubResourceArgs> virtualWan;
 
+    /**
+     * @return The VirtualWAN to which the vpnSite belongs.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> virtualWan() {
         return Optional.ofNullable(this.virtualWan);
     }
@@ -163,6 +211,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnSiteLinks")
     private @Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks;
 
+    /**
+     * @return List of all vpn site links.
+     * 
+     */
     public Optional<Output<List<VpnSiteLinkArgs>>> vpnSiteLinks() {
         return Optional.ofNullable(this.vpnSiteLinks);
     }
@@ -174,6 +226,10 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnSiteName")
     private @Nullable Output<String> vpnSiteName;
 
+    /**
+     * @return The name of the VpnSite being created or updated.
+     * 
+     */
     public Optional<Output<String>> vpnSiteName() {
         return Optional.ofNullable(this.vpnSiteName);
     }
@@ -215,132 +271,306 @@ public final class VpnSiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VpnSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressSpace The AddressSpace that contains an array of IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(@Nullable Output<AddressSpaceArgs> addressSpace) {
             $.addressSpace = addressSpace;
             return this;
         }
 
+        /**
+         * @param addressSpace The AddressSpace that contains an array of IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(AddressSpaceArgs addressSpace) {
             return addressSpace(Output.of(addressSpace));
         }
 
+        /**
+         * @param bgpProperties The set of bgp properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpProperties(@Nullable Output<BgpSettingsArgs> bgpProperties) {
             $.bgpProperties = bgpProperties;
             return this;
         }
 
+        /**
+         * @param bgpProperties The set of bgp properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpProperties(BgpSettingsArgs bgpProperties) {
             return bgpProperties(Output.of(bgpProperties));
         }
 
+        /**
+         * @param deviceProperties The device properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceProperties(@Nullable Output<DevicePropertiesArgs> deviceProperties) {
             $.deviceProperties = deviceProperties;
             return this;
         }
 
+        /**
+         * @param deviceProperties The device properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceProperties(DevicePropertiesArgs deviceProperties) {
             return deviceProperties(Output.of(deviceProperties));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipAddress The ip-address for the vpn-site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The ip-address for the vpn-site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param isSecuritySite IsSecuritySite flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecuritySite(@Nullable Output<Boolean> isSecuritySite) {
             $.isSecuritySite = isSecuritySite;
             return this;
         }
 
+        /**
+         * @param isSecuritySite IsSecuritySite flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecuritySite(Boolean isSecuritySite) {
             return isSecuritySite(Output.of(isSecuritySite));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param o365Policy Office365 Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder o365Policy(@Nullable Output<O365PolicyPropertiesArgs> o365Policy) {
             $.o365Policy = o365Policy;
             return this;
         }
 
+        /**
+         * @param o365Policy Office365 Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder o365Policy(O365PolicyPropertiesArgs o365Policy) {
             return o365Policy(Output.of(o365Policy));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnSite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnSite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param siteKey The key for vpn-site that can be used for connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteKey(@Nullable Output<String> siteKey) {
             $.siteKey = siteKey;
             return this;
         }
 
+        /**
+         * @param siteKey The key for vpn-site that can be used for connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteKey(String siteKey) {
             return siteKey(Output.of(siteKey));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualWan The VirtualWAN to which the vpnSite belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWan(@Nullable Output<SubResourceArgs> virtualWan) {
             $.virtualWan = virtualWan;
             return this;
         }
 
+        /**
+         * @param virtualWan The VirtualWAN to which the vpnSite belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWan(SubResourceArgs virtualWan) {
             return virtualWan(Output.of(virtualWan));
         }
 
+        /**
+         * @param vpnSiteLinks List of all vpn site links.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteLinks(@Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks) {
             $.vpnSiteLinks = vpnSiteLinks;
             return this;
         }
 
+        /**
+         * @param vpnSiteLinks List of all vpn site links.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteLinks(List<VpnSiteLinkArgs> vpnSiteLinks) {
             return vpnSiteLinks(Output.of(vpnSiteLinks));
         }
 
+        /**
+         * @param vpnSiteLinks List of all vpn site links.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteLinks(VpnSiteLinkArgs... vpnSiteLinks) {
             return vpnSiteLinks(List.of(vpnSiteLinks));
         }
 
+        /**
+         * @param vpnSiteName The name of the VpnSite being created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteName(@Nullable Output<String> vpnSiteName) {
             $.vpnSiteName = vpnSiteName;
             return this;
         }
 
+        /**
+         * @param vpnSiteName The name of the VpnSite being created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteName(String vpnSiteName) {
             return vpnSiteName(Output.of(vpnSiteName));
         }

@@ -25,6 +25,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
     @Import(name="apiVersion")
     private @Nullable String apiVersion;
 
+    /**
+     * @return The api version.
+     * 
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -36,6 +40,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
     @Import(name="se")
     private @Nullable String se;
 
+    /**
+     * @return The SAS timestamp.
+     * 
+     */
     public Optional<String> se() {
         return Optional.ofNullable(this.se);
     }
@@ -47,6 +55,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
     @Import(name="sig")
     private @Nullable String sig;
 
+    /**
+     * @return The SAS signature.
+     * 
+     */
     public Optional<String> sig() {
         return Optional.ofNullable(this.sig);
     }
@@ -58,6 +70,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
     @Import(name="sp")
     private @Nullable String sp;
 
+    /**
+     * @return The SAS permissions.
+     * 
+     */
     public Optional<String> sp() {
         return Optional.ofNullable(this.sp);
     }
@@ -69,6 +85,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
     @Import(name="sv")
     private @Nullable String sv;
 
+    /**
+     * @return The SAS version.
+     * 
+     */
     public Optional<String> sv() {
         return Optional.ofNullable(this.sv);
     }
@@ -101,26 +121,56 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
             $ = new WorkflowTriggerListCallbackUrlQueriesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion The api version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable String apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param se The SAS timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder se(@Nullable String se) {
             $.se = se;
             return this;
         }
 
+        /**
+         * @param sig The SAS signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sig(@Nullable String sig) {
             $.sig = sig;
             return this;
         }
 
+        /**
+         * @param sp The SAS permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sp(@Nullable String sp) {
             $.sp = sp;
             return this;
         }
 
+        /**
+         * @param sv The SAS version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sv(@Nullable String sv) {
             $.sv = sv;
             return this;

@@ -29,6 +29,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="physicalPath")
     private @Nullable Output<String> physicalPath;
 
+    /**
+     * @return Physical path.
+     * 
+     */
     public Optional<Output<String>> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
@@ -40,6 +44,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="preloadEnabled")
     private @Nullable Output<Boolean> preloadEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> preloadEnabled() {
         return Optional.ofNullable(this.preloadEnabled);
     }
@@ -51,6 +59,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualDirectories")
     private @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
 
+    /**
+     * @return Virtual directories for virtual application.
+     * 
+     */
     public Optional<Output<List<VirtualDirectoryArgs>>> virtualDirectories() {
         return Optional.ofNullable(this.virtualDirectories);
     }
@@ -62,6 +74,10 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualPath")
     private @Nullable Output<String> virtualPath;
 
+    /**
+     * @return Virtual path.
+     * 
+     */
     public Optional<Output<String>> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
@@ -93,42 +109,96 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param physicalPath Physical path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalPath(@Nullable Output<String> physicalPath) {
             $.physicalPath = physicalPath;
             return this;
         }
 
+        /**
+         * @param physicalPath Physical path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalPath(String physicalPath) {
             return physicalPath(Output.of(physicalPath));
         }
 
+        /**
+         * @param preloadEnabled &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preloadEnabled(@Nullable Output<Boolean> preloadEnabled) {
             $.preloadEnabled = preloadEnabled;
             return this;
         }
 
+        /**
+         * @param preloadEnabled &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preloadEnabled(Boolean preloadEnabled) {
             return preloadEnabled(Output.of(preloadEnabled));
         }
 
+        /**
+         * @param virtualDirectories Virtual directories for virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDirectories(@Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories) {
             $.virtualDirectories = virtualDirectories;
             return this;
         }
 
+        /**
+         * @param virtualDirectories Virtual directories for virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDirectories(List<VirtualDirectoryArgs> virtualDirectories) {
             return virtualDirectories(Output.of(virtualDirectories));
         }
 
+        /**
+         * @param virtualDirectories Virtual directories for virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDirectories(VirtualDirectoryArgs... virtualDirectories) {
             return virtualDirectories(List.of(virtualDirectories));
         }
 
+        /**
+         * @param virtualPath Virtual path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualPath(@Nullable Output<String> virtualPath) {
             $.virtualPath = virtualPath;
             return this;
         }
 
+        /**
+         * @param virtualPath Virtual path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualPath(String virtualPath) {
             return virtualPath(Output.of(virtualPath));
         }

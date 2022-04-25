@@ -29,6 +29,10 @@ public final class ContainerRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="registryServer")
     private @Nullable Output<String> registryServer;
 
+    /**
+     * @return If omitted, the default is &#34;docker.io&#34;.
+     * 
+     */
     public Optional<Output<String>> registryServer() {
         return Optional.ofNullable(this.registryServer);
     }
@@ -75,11 +79,23 @@ public final class ContainerRegistryArgs extends com.pulumi.resources.ResourceAr
             return password(Output.of(password));
         }
 
+        /**
+         * @param registryServer If omitted, the default is &#34;docker.io&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryServer(@Nullable Output<String> registryServer) {
             $.registryServer = registryServer;
             return this;
         }
 
+        /**
+         * @param registryServer If omitted, the default is &#34;docker.io&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryServer(String registryServer) {
             return registryServer(Output.of(registryServer));
         }

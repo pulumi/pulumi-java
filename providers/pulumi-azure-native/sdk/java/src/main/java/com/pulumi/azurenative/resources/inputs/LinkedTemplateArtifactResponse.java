@@ -24,6 +24,10 @@ public final class LinkedTemplateArtifactResponse extends com.pulumi.resources.I
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return A filesystem safe relative path of the artifact.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -35,6 +39,10 @@ public final class LinkedTemplateArtifactResponse extends com.pulumi.resources.I
     @Import(name="template", required=true)
     private Object template;
 
+    /**
+     * @return The Azure Resource Manager template.
+     * 
+     */
     public Object template() {
         return this.template;
     }
@@ -64,11 +72,23 @@ public final class LinkedTemplateArtifactResponse extends com.pulumi.resources.I
             $ = new LinkedTemplateArtifactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path A filesystem safe relative path of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param template The Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Object template) {
             $.template = template;
             return this;

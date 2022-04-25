@@ -26,6 +26,10 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bitrateKbps")
     private @Nullable String bitrateKbps;
 
+    /**
+     * @return Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+     * 
+     */
     public Optional<String> bitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
@@ -38,6 +42,11 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -67,11 +76,24 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
             $ = new AudioEncoderAacResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrateKbps Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
             $.bitrateKbps = bitrateKbps;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

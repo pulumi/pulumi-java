@@ -26,6 +26,10 @@ public final class AkamaiAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
     private @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 
+    /**
+     * @return authentication key list
+     * 
+     */
     public Optional<List<AkamaiSignatureHeaderAuthenticationKeyResponse>> akamaiSignatureHeaderAuthenticationKeyList() {
         return Optional.ofNullable(this.akamaiSignatureHeaderAuthenticationKeyList);
     }
@@ -54,11 +58,23 @@ public final class AkamaiAccessControlResponse extends com.pulumi.resources.Invo
             $ = new AkamaiAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param akamaiSignatureHeaderAuthenticationKeyList authentication key list
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
             $.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
 
+        /**
+         * @param akamaiSignatureHeaderAuthenticationKeyList authentication key list
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamaiSignatureHeaderAuthenticationKeyList(AkamaiSignatureHeaderAuthenticationKeyResponse... akamaiSignatureHeaderAuthenticationKeyList) {
             return akamaiSignatureHeaderAuthenticationKeyList(List.of(akamaiSignatureHeaderAuthenticationKeyList));
         }

@@ -24,6 +24,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequencyInMinutes", required=true)
     private Output<Integer> frequencyInMinutes;
 
+    /**
+     * @return frequency (in minutes) at which rule condition should be evaluated.
+     * 
+     */
     public Output<Integer> frequencyInMinutes() {
         return this.frequencyInMinutes;
     }
@@ -35,6 +39,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeWindowInMinutes", required=true)
     private Output<Integer> timeWindowInMinutes;
 
+    /**
+     * @return Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+     * 
+     */
     public Output<Integer> timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
@@ -64,20 +72,44 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequencyInMinutes frequency (in minutes) at which rule condition should be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInMinutes(Output<Integer> frequencyInMinutes) {
             $.frequencyInMinutes = frequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param frequencyInMinutes frequency (in minutes) at which rule condition should be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInMinutes(Integer frequencyInMinutes) {
             return frequencyInMinutes(Output.of(frequencyInMinutes));
         }
 
+        /**
+         * @param timeWindowInMinutes Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowInMinutes(Output<Integer> timeWindowInMinutes) {
             $.timeWindowInMinutes = timeWindowInMinutes;
             return this;
         }
 
+        /**
+         * @param timeWindowInMinutes Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
             return timeWindowInMinutes(Output.of(timeWindowInMinutes));
         }

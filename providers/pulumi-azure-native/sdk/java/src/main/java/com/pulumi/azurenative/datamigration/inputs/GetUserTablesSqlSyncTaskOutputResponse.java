@@ -27,6 +27,10 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
     @Import(name="databasesToSourceTables", required=true)
     private Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
 
+    /**
+     * @return Mapping from database name to list of source tables
+     * 
+     */
     public Map<String,List<DatabaseTableResponse>> databasesToSourceTables() {
         return this.databasesToSourceTables;
     }
@@ -38,6 +42,10 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
     @Import(name="databasesToTargetTables", required=true)
     private Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
 
+    /**
+     * @return Mapping from database name to list of target tables
+     * 
+     */
     public Map<String,List<DatabaseTableResponse>> databasesToTargetTables() {
         return this.databasesToTargetTables;
     }
@@ -49,6 +57,10 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
     @Import(name="tableValidationErrors", required=true)
     private Map<String,List<String>> tableValidationErrors;
 
+    /**
+     * @return Mapping from database name to list of validation errors
+     * 
+     */
     public Map<String,List<String>> tableValidationErrors() {
         return this.tableValidationErrors;
     }
@@ -60,6 +72,10 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -91,26 +107,56 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends com.pulumi.res
             $ = new GetUserTablesSqlSyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databasesToSourceTables Mapping from database name to list of source tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesToSourceTables(Map<String,List<DatabaseTableResponse>> databasesToSourceTables) {
             $.databasesToSourceTables = databasesToSourceTables;
             return this;
         }
 
+        /**
+         * @param databasesToTargetTables Mapping from database name to list of target tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesToTargetTables(Map<String,List<DatabaseTableResponse>> databasesToTargetTables) {
             $.databasesToTargetTables = databasesToTargetTables;
             return this;
         }
 
+        /**
+         * @param tableValidationErrors Mapping from database name to list of validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableValidationErrors(Map<String,List<String>> tableValidationErrors) {
             $.tableValidationErrors = tableValidationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

@@ -19,6 +19,10 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
     @Import(name="applicationSecurityGroupName", required=true)
     private String applicationSecurityGroupName;
 
+    /**
+     * @return The name of the application security group.
+     * 
+     */
     public String applicationSecurityGroupName() {
         return this.applicationSecurityGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
             $ = new GetApplicationSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationSecurityGroupName The name of the application security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSecurityGroupName(String applicationSecurityGroupName) {
             $.applicationSecurityGroupName = applicationSecurityGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

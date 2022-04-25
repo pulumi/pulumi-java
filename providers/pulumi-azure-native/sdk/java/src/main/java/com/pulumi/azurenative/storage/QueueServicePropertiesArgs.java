@@ -23,6 +23,10 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="cors")
     private @Nullable Output<CorsRulesArgs> cors;
 
+    /**
+     * @return Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
+     * 
+     */
     public Optional<Output<CorsRulesArgs>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -45,6 +53,10 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="queueServiceName")
     private @Nullable Output<String> queueServiceName;
 
+    /**
+     * @return The name of the Queue Service within the specified storage account. Queue Service Name must be &#39;default&#39;
+     * 
+     */
     public Optional<Output<String>> queueServiceName() {
         return Optional.ofNullable(this.queueServiceName);
     }
@@ -56,6 +68,10 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
             $ = new QueueServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param cors Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(CorsRulesArgs cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param queueServiceName The name of the Queue Service within the specified storage account. Queue Service Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueServiceName(@Nullable Output<String> queueServiceName) {
             $.queueServiceName = queueServiceName;
             return this;
         }
 
+        /**
+         * @param queueServiceName The name of the Queue Service within the specified storage account. Queue Service Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueServiceName(String queueServiceName) {
             return queueServiceName(Output.of(queueServiceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

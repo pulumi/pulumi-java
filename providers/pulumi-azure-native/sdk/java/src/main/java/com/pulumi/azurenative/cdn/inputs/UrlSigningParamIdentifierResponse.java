@@ -23,6 +23,10 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
     @Import(name="paramIndicator", required=true)
     private String paramIndicator;
 
+    /**
+     * @return Indicates the purpose of the parameter
+     * 
+     */
     public String paramIndicator() {
         return this.paramIndicator;
     }
@@ -34,6 +38,10 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
     @Import(name="paramName", required=true)
     private String paramName;
 
+    /**
+     * @return Parameter name
+     * 
+     */
     public String paramName() {
         return this.paramName;
     }
@@ -63,11 +71,23 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
             $ = new UrlSigningParamIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param paramIndicator Indicates the purpose of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramIndicator(String paramIndicator) {
             $.paramIndicator = paramIndicator;
             return this;
         }
 
+        /**
+         * @param paramName Parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramName(String paramName) {
             $.paramName = paramName;
             return this;

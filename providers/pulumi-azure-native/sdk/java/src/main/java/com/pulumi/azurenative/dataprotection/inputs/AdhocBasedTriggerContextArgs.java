@@ -27,6 +27,11 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AdhocBasedTriggerContext&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -38,6 +43,10 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
     @Import(name="taggingCriteria", required=true)
     private Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
+    /**
+     * @return Tagging Criteria containing retention tag for adhoc backup.
+     * 
+     */
     public Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria() {
         return this.taggingCriteria;
     }
@@ -67,20 +76,46 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
             $ = new AdhocBasedTriggerContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AdhocBasedTriggerContext&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AdhocBasedTriggerContext&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param taggingCriteria Tagging Criteria containing retention tag for adhoc backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
             $.taggingCriteria = taggingCriteria;
             return this;
         }
 
+        /**
+         * @param taggingCriteria Tagging Criteria containing retention tag for adhoc backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(AdhocBasedTaggingCriteriaArgs taggingCriteria) {
             return taggingCriteria(Output.of(taggingCriteria));
         }

@@ -21,6 +21,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The client id of the user assigned identity.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -32,6 +36,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return The object id of the user assigned identity.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -43,6 +51,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The resource id of the user assigned identity.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -73,16 +85,34 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
             $ = new UserAssignedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

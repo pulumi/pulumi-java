@@ -24,6 +24,10 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="algorithm", required=true)
     private Output<String> algorithm;
 
+    /**
+     * @return Gets or sets the content hash algorithm used to hash the content.
+     * 
+     */
     public Output<String> algorithm() {
         return this.algorithm;
     }
@@ -35,6 +39,10 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Gets or sets expected hash value of the content.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContentHashArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Gets or sets the content hash algorithm used to hash the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<String> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm Gets or sets the content hash algorithm used to hash the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param value Gets or sets expected hash value of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Gets or sets expected hash value of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

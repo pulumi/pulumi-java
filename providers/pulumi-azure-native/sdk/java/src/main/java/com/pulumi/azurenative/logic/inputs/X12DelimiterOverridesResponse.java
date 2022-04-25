@@ -27,6 +27,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="componentSeparator", required=true)
     private Integer componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
@@ -38,6 +42,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="dataElementSeparator", required=true)
     private Integer dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -49,6 +57,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="messageId")
     private @Nullable String messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
@@ -60,6 +72,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="protocolVersion")
     private @Nullable String protocolVersion;
 
+    /**
+     * @return The protocol version.
+     * 
+     */
     public Optional<String> protocolVersion() {
         return Optional.ofNullable(this.protocolVersion);
     }
@@ -71,6 +87,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="replaceCharacter", required=true)
     private Integer replaceCharacter;
 
+    /**
+     * @return The replacement character.
+     * 
+     */
     public Integer replaceCharacter() {
         return this.replaceCharacter;
     }
@@ -82,6 +102,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="replaceSeparatorsInPayload", required=true)
     private Boolean replaceSeparatorsInPayload;
 
+    /**
+     * @return The value indicating whether to replace separators in payload.
+     * 
+     */
     public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
@@ -93,6 +117,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="segmentTerminator", required=true)
     private Integer segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -104,6 +132,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="segmentTerminatorSuffix", required=true)
     private String segmentTerminatorSuffix;
 
+    /**
+     * @return The segment terminator suffix.
+     * 
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -115,6 +147,10 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
     @Import(name="targetNamespace")
     private @Nullable String targetNamespace;
 
+    /**
+     * @return The target namespace on which this delimiter settings has to be applied.
+     * 
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -151,46 +187,100 @@ public final class X12DelimiterOverridesResponse extends com.pulumi.resources.In
             $ = new X12DelimiterOverridesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(@Nullable String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param protocolVersion The protocol version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(@Nullable String protocolVersion) {
             $.protocolVersion = protocolVersion;
             return this;
         }
 
+        /**
+         * @param replaceCharacter The replacement character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceCharacter(Integer replaceCharacter) {
             $.replaceCharacter = replaceCharacter;
             return this;
         }
 
+        /**
+         * @param replaceSeparatorsInPayload The value indicating whether to replace separators in payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             $.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this delimiter settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(@Nullable String targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;

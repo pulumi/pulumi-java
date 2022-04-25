@@ -33,6 +33,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databasesInfo")
     private @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
 
+    /**
+     * @return List of DatabaseInfo
+     * 
+     */
     public Optional<Output<List<DatabaseInfoArgs>>> databasesInfo() {
         return Optional.ofNullable(this.databasesInfo);
     }
@@ -44,6 +48,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
     private Output<String> groupName;
 
+    /**
+     * @return Name of the resource group
+     * 
+     */
     public Output<String> groupName() {
         return this.groupName;
     }
@@ -55,6 +63,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -66,6 +78,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
     private @Nullable Output<String> projectName;
 
+    /**
+     * @return Name of the project
+     * 
+     */
     public Optional<Output<String>> projectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -77,6 +93,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return Name of the service
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -88,6 +108,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceConnectionInfo")
     private @Nullable Output<Object> sourceConnectionInfo;
 
+    /**
+     * @return Information for connecting to source
+     * 
+     */
     public Optional<Output<Object>> sourceConnectionInfo() {
         return Optional.ofNullable(this.sourceConnectionInfo);
     }
@@ -99,6 +123,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourcePlatform", required=true)
     private Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
 
+    /**
+     * @return Source platform for the project
+     * 
+     */
     public Output<Either<String,ProjectSourcePlatform>> sourcePlatform() {
         return this.sourcePlatform;
     }
@@ -110,6 +138,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -121,6 +153,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetConnectionInfo")
     private @Nullable Output<Object> targetConnectionInfo;
 
+    /**
+     * @return Information for connecting to target
+     * 
+     */
     public Optional<Output<Object>> targetConnectionInfo() {
         return Optional.ofNullable(this.targetConnectionInfo);
     }
@@ -132,6 +168,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPlatform", required=true)
     private Output<Either<String,ProjectTargetPlatform>> targetPlatform;
 
+    /**
+     * @return Target platform for the project
+     * 
+     */
     public Output<Either<String,ProjectTargetPlatform>> targetPlatform() {
         return this.targetPlatform;
     }
@@ -169,112 +209,262 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databasesInfo List of DatabaseInfo
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesInfo(@Nullable Output<List<DatabaseInfoArgs>> databasesInfo) {
             $.databasesInfo = databasesInfo;
             return this;
         }
 
+        /**
+         * @param databasesInfo List of DatabaseInfo
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesInfo(List<DatabaseInfoArgs> databasesInfo) {
             return databasesInfo(Output.of(databasesInfo));
         }
 
+        /**
+         * @param databasesInfo List of DatabaseInfo
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesInfo(DatabaseInfoArgs... databasesInfo) {
             return databasesInfo(List.of(databasesInfo));
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(@Nullable Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(@Nullable Output<Object> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Object sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param sourcePlatform Source platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePlatform(Output<Either<String,ProjectSourcePlatform>> sourcePlatform) {
             $.sourcePlatform = sourcePlatform;
             return this;
         }
 
+        /**
+         * @param sourcePlatform Source platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePlatform(Either<String,ProjectSourcePlatform> sourcePlatform) {
             return sourcePlatform(Output.of(sourcePlatform));
         }
 
+        /**
+         * @param sourcePlatform Source platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePlatform(String sourcePlatform) {
             return sourcePlatform(Either.ofLeft(sourcePlatform));
         }
 
+        /**
+         * @param sourcePlatform Source platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePlatform(ProjectSourcePlatform sourcePlatform) {
             return sourcePlatform(Either.ofRight(sourcePlatform));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(@Nullable Output<Object> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Object targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }
 
+        /**
+         * @param targetPlatform Target platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPlatform(Output<Either<String,ProjectTargetPlatform>> targetPlatform) {
             $.targetPlatform = targetPlatform;
             return this;
         }
 
+        /**
+         * @param targetPlatform Target platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPlatform(Either<String,ProjectTargetPlatform> targetPlatform) {
             return targetPlatform(Output.of(targetPlatform));
         }
 
+        /**
+         * @param targetPlatform Target platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPlatform(String targetPlatform) {
             return targetPlatform(Either.ofLeft(targetPlatform));
         }
 
+        /**
+         * @param targetPlatform Target platform for the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPlatform(ProjectTargetPlatform targetPlatform) {
             return targetPlatform(Either.ofRight(targetPlatform));
         }

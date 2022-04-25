@@ -27,6 +27,10 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="apiKey")
     private @Nullable Output<String> apiKey;
 
+    /**
+     * @return Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
@@ -38,6 +42,10 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -49,6 +57,10 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isValidated")
     private @Nullable Output<Boolean> isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Optional<Output<Boolean>> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -60,6 +72,10 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return The Kik user name
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -91,38 +107,86 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new KikChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiKey Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(@Nullable Output<String> apiKey) {
             $.apiKey = apiKey;
             return this;
         }
 
+        /**
+         * @param apiKey Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(String apiKey) {
             return apiKey(Output.of(apiKey));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(Boolean isValidated) {
             return isValidated(Output.of(isValidated));
         }
 
+        /**
+         * @param userName The Kik user name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The Kik user name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

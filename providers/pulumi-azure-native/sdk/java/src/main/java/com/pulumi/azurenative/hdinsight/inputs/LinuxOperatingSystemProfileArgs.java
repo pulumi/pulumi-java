@@ -27,6 +27,10 @@ public final class LinuxOperatingSystemProfileArgs extends com.pulumi.resources.
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -38,6 +42,10 @@ public final class LinuxOperatingSystemProfileArgs extends com.pulumi.resources.
     @Import(name="sshProfile")
     private @Nullable Output<SshProfileArgs> sshProfile;
 
+    /**
+     * @return The SSH profile.
+     * 
+     */
     public Optional<Output<SshProfileArgs>> sshProfile() {
         return Optional.ofNullable(this.sshProfile);
     }
@@ -49,6 +57,10 @@ public final class LinuxOperatingSystemProfileArgs extends com.pulumi.resources.
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The username.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -79,29 +91,65 @@ public final class LinuxOperatingSystemProfileArgs extends com.pulumi.resources.
             $ = new LinuxOperatingSystemProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param sshProfile The SSH profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshProfile(@Nullable Output<SshProfileArgs> sshProfile) {
             $.sshProfile = sshProfile;
             return this;
         }
 
+        /**
+         * @param sshProfile The SSH profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshProfile(SshProfileArgs sshProfile) {
             return sshProfile(Output.of(sshProfile));
         }
 
+        /**
+         * @param username The username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

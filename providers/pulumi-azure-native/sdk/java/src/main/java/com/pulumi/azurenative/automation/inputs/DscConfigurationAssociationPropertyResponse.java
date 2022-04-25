@@ -25,6 +25,10 @@ public final class DscConfigurationAssociationPropertyResponse extends com.pulum
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name of the Dsc configuration.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class DscConfigurationAssociationPropertyResponse extends com.pulum
             $ = new DscConfigurationAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the name of the Dsc configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

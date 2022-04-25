@@ -31,6 +31,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowPublicAccessWhenBehindVnet")
     private @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
 
+    /**
+     * @return The flag to indicate whether to allow public access when behind VNet.
+     * 
+     */
     public Optional<Output<Boolean>> allowPublicAccessWhenBehindVnet() {
         return Optional.ofNullable(this.allowPublicAccessWhenBehindVnet);
     }
@@ -42,6 +46,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationInsights")
     private @Nullable Output<String> applicationInsights;
 
+    /**
+     * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Optional<Output<String>> applicationInsights() {
         return Optional.ofNullable(this.applicationInsights);
     }
@@ -53,6 +61,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerRegistry")
     private @Nullable Output<String> containerRegistry;
 
+    /**
+     * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Optional<Output<String>> containerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
@@ -64,6 +76,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of this workspace.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -75,6 +91,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="discoveryUrl")
     private @Nullable Output<String> discoveryUrl;
 
+    /**
+     * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
+     * 
+     */
     public Optional<Output<String>> discoveryUrl() {
         return Optional.ofNullable(this.discoveryUrl);
     }
@@ -86,6 +106,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<EncryptionPropertyArgs> encryption;
 
+    /**
+     * @return The encryption settings of Azure ML workspace.
+     * 
+     */
     public Optional<Output<EncryptionPropertyArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -97,6 +121,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return The friendly name for this workspace. This name in mutable
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -108,6 +136,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hbiWorkspace")
     private @Nullable Output<Boolean> hbiWorkspace;
 
+    /**
+     * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+     * 
+     */
     public Optional<Output<Boolean>> hbiWorkspace() {
         return Optional.ofNullable(this.hbiWorkspace);
     }
@@ -119,6 +151,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -130,6 +166,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageBuildCompute")
     private @Nullable Output<String> imageBuildCompute;
 
+    /**
+     * @return The compute name for image build
+     * 
+     */
     public Optional<Output<String>> imageBuildCompute() {
         return Optional.ofNullable(this.imageBuildCompute);
     }
@@ -141,6 +181,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVault")
     private @Nullable Output<String> keyVault;
 
+    /**
+     * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Optional<Output<String>> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
@@ -152,6 +196,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -163,6 +211,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryUserAssignedIdentity")
     private @Nullable Output<String> primaryUserAssignedIdentity;
 
+    /**
+     * @return The user assigned identity resource id that represents the workspace identity.
+     * 
+     */
     public Optional<Output<String>> primaryUserAssignedIdentity() {
         return Optional.ofNullable(this.primaryUserAssignedIdentity);
     }
@@ -174,6 +226,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -185,6 +241,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceManagedResourcesSettings")
     private @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
 
+    /**
+     * @return The service managed resource settings.
+     * 
+     */
     public Optional<Output<ServiceManagedResourcesSettingsArgs>> serviceManagedResourcesSettings() {
         return Optional.ofNullable(this.serviceManagedResourcesSettings);
     }
@@ -196,6 +256,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharedPrivateLinkResources")
     private @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
 
+    /**
+     * @return The list of shared private link resources in this workspace.
+     * 
+     */
     public Optional<Output<List<SharedPrivateLinkResourceArgs>>> sharedPrivateLinkResources() {
         return Optional.ofNullable(this.sharedPrivateLinkResources);
     }
@@ -207,6 +271,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The sku of the workspace.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -218,6 +286,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount")
     private @Nullable Output<String> storageAccount;
 
+    /**
+     * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+     * 
+     */
     public Optional<Output<String>> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
@@ -229,6 +301,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -240,6 +316,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
     private @Nullable Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceName() {
         return Optional.ofNullable(this.workspaceName);
     }
@@ -287,186 +367,432 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPublicAccessWhenBehindVnet The flag to indicate whether to allow public access when behind VNet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPublicAccessWhenBehindVnet(@Nullable Output<Boolean> allowPublicAccessWhenBehindVnet) {
             $.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
 
+        /**
+         * @param allowPublicAccessWhenBehindVnet The flag to indicate whether to allow public access when behind VNet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPublicAccessWhenBehindVnet(Boolean allowPublicAccessWhenBehindVnet) {
             return allowPublicAccessWhenBehindVnet(Output.of(allowPublicAccessWhenBehindVnet));
         }
 
+        /**
+         * @param applicationInsights ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationInsights(@Nullable Output<String> applicationInsights) {
             $.applicationInsights = applicationInsights;
             return this;
         }
 
+        /**
+         * @param applicationInsights ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationInsights(String applicationInsights) {
             return applicationInsights(Output.of(applicationInsights));
         }
 
+        /**
+         * @param containerRegistry ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistry(@Nullable Output<String> containerRegistry) {
             $.containerRegistry = containerRegistry;
             return this;
         }
 
+        /**
+         * @param containerRegistry ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistry(String containerRegistry) {
             return containerRegistry(Output.of(containerRegistry));
         }
 
+        /**
+         * @param description The description of this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param discoveryUrl Url for the discovery service to identify regional endpoints for machine learning experimentation services
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryUrl(@Nullable Output<String> discoveryUrl) {
             $.discoveryUrl = discoveryUrl;
             return this;
         }
 
+        /**
+         * @param discoveryUrl Url for the discovery service to identify regional endpoints for machine learning experimentation services
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryUrl(String discoveryUrl) {
             return discoveryUrl(Output.of(discoveryUrl));
         }
 
+        /**
+         * @param encryption The encryption settings of Azure ML workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionPropertyArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The encryption settings of Azure ML workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionPropertyArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param friendlyName The friendly name for this workspace. This name in mutable
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName The friendly name for this workspace. This name in mutable
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param hbiWorkspace The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder hbiWorkspace(@Nullable Output<Boolean> hbiWorkspace) {
             $.hbiWorkspace = hbiWorkspace;
             return this;
         }
 
+        /**
+         * @param hbiWorkspace The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder hbiWorkspace(Boolean hbiWorkspace) {
             return hbiWorkspace(Output.of(hbiWorkspace));
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param imageBuildCompute The compute name for image build
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageBuildCompute(@Nullable Output<String> imageBuildCompute) {
             $.imageBuildCompute = imageBuildCompute;
             return this;
         }
 
+        /**
+         * @param imageBuildCompute The compute name for image build
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageBuildCompute(String imageBuildCompute) {
             return imageBuildCompute(Output.of(imageBuildCompute));
         }
 
+        /**
+         * @param keyVault ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(@Nullable Output<String> keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVault ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(String keyVault) {
             return keyVault(Output.of(keyVault));
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param primaryUserAssignedIdentity The user assigned identity resource id that represents the workspace identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryUserAssignedIdentity(@Nullable Output<String> primaryUserAssignedIdentity) {
             $.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param primaryUserAssignedIdentity The user assigned identity resource id that represents the workspace identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryUserAssignedIdentity(String primaryUserAssignedIdentity) {
             return primaryUserAssignedIdentity(Output.of(primaryUserAssignedIdentity));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceManagedResourcesSettings The service managed resource settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceManagedResourcesSettings(@Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings) {
             $.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
 
+        /**
+         * @param serviceManagedResourcesSettings The service managed resource settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceManagedResourcesSettings(ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
             return serviceManagedResourcesSettings(Output.of(serviceManagedResourcesSettings));
         }
 
+        /**
+         * @param sharedPrivateLinkResources The list of shared private link resources in this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResources(@Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources) {
             $.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
 
+        /**
+         * @param sharedPrivateLinkResources The list of shared private link resources in this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResources(List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
             return sharedPrivateLinkResources(Output.of(sharedPrivateLinkResources));
         }
 
+        /**
+         * @param sharedPrivateLinkResources The list of shared private link resources in this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResources(SharedPrivateLinkResourceArgs... sharedPrivateLinkResources) {
             return sharedPrivateLinkResources(List.of(sharedPrivateLinkResources));
         }
 
+        /**
+         * @param sku The sku of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param storageAccount ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
             $.storageAccount = storageAccount;
             return this;
         }
 
+        /**
+         * @param storageAccount ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(String storageAccount) {
             return storageAccount(Output.of(storageAccount));
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

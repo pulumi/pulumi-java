@@ -26,6 +26,10 @@ public final class RedirectIncompatibleRowSettingsArgs extends com.pulumi.resour
     @Import(name="linkedServiceName", required=true)
     private Output<Object> linkedServiceName;
 
+    /**
+     * @return Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -37,6 +41,10 @@ public final class RedirectIncompatibleRowSettingsArgs extends com.pulumi.resour
     @Import(name="path")
     private @Nullable Output<Object> path;
 
+    /**
+     * @return The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -66,20 +74,44 @@ public final class RedirectIncompatibleRowSettingsArgs extends com.pulumi.resour
             $ = new RedirectIncompatibleRowSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedServiceName Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<Object> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Object linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param path The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<Object> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Object path) {
             return path(Output.of(path));
         }

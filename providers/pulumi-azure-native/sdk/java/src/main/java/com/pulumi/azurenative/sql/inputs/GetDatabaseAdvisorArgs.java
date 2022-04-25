@@ -19,6 +19,10 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="advisorName", required=true)
     private String advisorName;
 
+    /**
+     * @return The name of the Database Advisor.
+     * 
+     */
     public String advisorName() {
         return this.advisorName;
     }
@@ -30,6 +34,10 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -41,6 +49,10 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -83,21 +99,45 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
             $ = new GetDatabaseAdvisorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advisorName The name of the Database Advisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advisorName(String advisorName) {
             $.advisorName = advisorName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

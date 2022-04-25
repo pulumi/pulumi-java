@@ -27,6 +27,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<String>> actions;
 
+    /**
+     * @return Allowed actions.
+     * 
+     */
     public Optional<Output<List<String>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataActions")
     private @Nullable Output<List<String>> dataActions;
 
+    /**
+     * @return Allowed Data actions.
+     * 
+     */
     public Optional<Output<List<String>>> dataActions() {
         return Optional.ofNullable(this.dataActions);
     }
@@ -49,6 +57,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notActions")
     private @Nullable Output<List<String>> notActions;
 
+    /**
+     * @return Denied actions.
+     * 
+     */
     public Optional<Output<List<String>>> notActions() {
         return Optional.ofNullable(this.notActions);
     }
@@ -60,6 +72,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notDataActions")
     private @Nullable Output<List<String>> notDataActions;
 
+    /**
+     * @return Denied Data actions.
+     * 
+     */
     public Optional<Output<List<String>>> notDataActions() {
         return Optional.ofNullable(this.notDataActions);
     }
@@ -91,54 +107,126 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Allowed actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<String>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions Allowed actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions Allowed actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param dataActions Allowed Data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(@Nullable Output<List<String>> dataActions) {
             $.dataActions = dataActions;
             return this;
         }
 
+        /**
+         * @param dataActions Allowed Data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(List<String> dataActions) {
             return dataActions(Output.of(dataActions));
         }
 
+        /**
+         * @param dataActions Allowed Data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(String... dataActions) {
             return dataActions(List.of(dataActions));
         }
 
+        /**
+         * @param notActions Denied actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notActions(@Nullable Output<List<String>> notActions) {
             $.notActions = notActions;
             return this;
         }
 
+        /**
+         * @param notActions Denied actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notActions(List<String> notActions) {
             return notActions(Output.of(notActions));
         }
 
+        /**
+         * @param notActions Denied actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notActions(String... notActions) {
             return notActions(List.of(notActions));
         }
 
+        /**
+         * @param notDataActions Denied Data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
             $.notDataActions = notDataActions;
             return this;
         }
 
+        /**
+         * @param notDataActions Denied Data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(List<String> notDataActions) {
             return notDataActions(Output.of(notDataActions));
         }
 
+        /**
+         * @param notDataActions Denied Data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(String... notDataActions) {
             return notDataActions(List.of(notDataActions));
         }

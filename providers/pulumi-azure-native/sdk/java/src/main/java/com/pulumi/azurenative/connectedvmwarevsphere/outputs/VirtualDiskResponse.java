@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualDiskResponse {
     /**
-     * Gets or sets the controller id.
+     * @return Gets or sets the controller id.
      * 
      */
     private final @Nullable Integer controllerKey;
     /**
-     * Gets or sets the device key value.
+     * @return Gets or sets the device key value.
      * 
      */
     private final @Nullable Integer deviceKey;
     /**
-     * Gets or sets the device name.
+     * @return Gets or sets the device name.
      * 
      */
     private final @Nullable String deviceName;
     /**
-     * Gets or sets the disk mode.
+     * @return Gets or sets the disk mode.
      * 
      */
     private final @Nullable String diskMode;
     /**
-     * Gets or sets the disk object id.
+     * @return Gets or sets the disk object id.
      * 
      */
     private final String diskObjectId;
     /**
-     * Gets or sets the disk total size.
+     * @return Gets or sets the disk total size.
      * 
      */
     private final @Nullable Integer diskSizeGB;
     /**
-     * Gets or sets the disk backing type.
+     * @return Gets or sets the disk backing type.
      * 
      */
     private final @Nullable String diskType;
     /**
-     * Gets or sets the label of the virtual disk in vCenter.
+     * @return Gets or sets the label of the virtual disk in vCenter.
      * 
      */
     private final String label;
     /**
-     * Gets or sets the name of the virtual disk.
+     * @return Gets or sets the name of the virtual disk.
      * 
      */
     private final @Nullable String name;
     /**
-     * Gets or sets the unit number of the disk on the controller.
+     * @return Gets or sets the unit number of the disk on the controller.
      * 
      */
     private final @Nullable Integer unitNumber;
@@ -88,72 +88,72 @@ public final class VirtualDiskResponse {
     }
 
     /**
-     * Gets or sets the controller id.
+     * @return Gets or sets the controller id.
      * 
-    */
+     */
     public Optional<Integer> controllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
     /**
-     * Gets or sets the device key value.
+     * @return Gets or sets the device key value.
      * 
-    */
+     */
     public Optional<Integer> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
     /**
-     * Gets or sets the device name.
+     * @return Gets or sets the device name.
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * Gets or sets the disk mode.
+     * @return Gets or sets the disk mode.
      * 
-    */
+     */
     public Optional<String> diskMode() {
         return Optional.ofNullable(this.diskMode);
     }
     /**
-     * Gets or sets the disk object id.
+     * @return Gets or sets the disk object id.
      * 
-    */
+     */
     public String diskObjectId() {
         return this.diskObjectId;
     }
     /**
-     * Gets or sets the disk total size.
+     * @return Gets or sets the disk total size.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * Gets or sets the disk backing type.
+     * @return Gets or sets the disk backing type.
      * 
-    */
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
-     * Gets or sets the label of the virtual disk in vCenter.
+     * @return Gets or sets the label of the virtual disk in vCenter.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * Gets or sets the name of the virtual disk.
+     * @return Gets or sets the name of the virtual disk.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets or sets the unit number of the disk on the controller.
+     * @return Gets or sets the unit number of the disk on the controller.
      * 
-    */
+     */
     public Optional<Integer> unitNumber() {
         return Optional.ofNullable(this.unitNumber);
     }

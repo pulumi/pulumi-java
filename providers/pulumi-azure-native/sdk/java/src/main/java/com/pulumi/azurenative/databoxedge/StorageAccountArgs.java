@@ -25,6 +25,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataPolicy", required=true)
     private Output<Either<String,DataPolicy>> dataPolicy;
 
+    /**
+     * @return Data policy of the storage Account.
+     * 
+     */
     public Output<Either<String,DataPolicy>> dataPolicy() {
         return this.dataPolicy;
     }
@@ -36,6 +40,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description for the storage Account.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -58,6 +70,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountCredentialId")
     private @Nullable Output<String> storageAccountCredentialId;
 
+    /**
+     * @return Storage Account Credential Id
+     * 
+     */
     public Optional<Output<String>> storageAccountCredentialId() {
         return Optional.ofNullable(this.storageAccountCredentialId);
     }
@@ -80,6 +100,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountName")
     private @Nullable Output<String> storageAccountName;
 
+    /**
+     * @return The StorageAccount name.
+     * 
+     */
     public Optional<Output<String>> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -91,6 +115,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountStatus")
     private @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
+    /**
+     * @return Current status of the storage account
+     * 
+     */
     public Optional<Output<Either<String,StorageAccountStatus>>> storageAccountStatus() {
         return Optional.ofNullable(this.storageAccountStatus);
     }
@@ -125,81 +153,189 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataPolicy Data policy of the storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(Output<Either<String,DataPolicy>> dataPolicy) {
             $.dataPolicy = dataPolicy;
             return this;
         }
 
+        /**
+         * @param dataPolicy Data policy of the storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
             return dataPolicy(Output.of(dataPolicy));
         }
 
+        /**
+         * @param dataPolicy Data policy of the storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(String dataPolicy) {
             return dataPolicy(Either.ofLeft(dataPolicy));
         }
 
+        /**
+         * @param dataPolicy Data policy of the storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(DataPolicy dataPolicy) {
             return dataPolicy(Either.ofRight(dataPolicy));
         }
 
+        /**
+         * @param description Description for the storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description for the storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountCredentialId Storage Account Credential Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialId(@Nullable Output<String> storageAccountCredentialId) {
             $.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
 
+        /**
+         * @param storageAccountCredentialId Storage Account Credential Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             return storageAccountCredentialId(Output.of(storageAccountCredentialId));
         }
 
+        /**
+         * @param storageAccountName The StorageAccount name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The StorageAccount name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }
 
+        /**
+         * @param storageAccountStatus Current status of the storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountStatus(@Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
             $.storageAccountStatus = storageAccountStatus;
             return this;
         }
 
+        /**
+         * @param storageAccountStatus Current status of the storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountStatus(Either<String,StorageAccountStatus> storageAccountStatus) {
             return storageAccountStatus(Output.of(storageAccountStatus));
         }
 
+        /**
+         * @param storageAccountStatus Current status of the storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountStatus(String storageAccountStatus) {
             return storageAccountStatus(Either.ofLeft(storageAccountStatus));
         }
 
+        /**
+         * @param storageAccountStatus Current status of the storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountStatus(StorageAccountStatus storageAccountStatus) {
             return storageAccountStatus(Either.ofRight(storageAccountStatus));
         }

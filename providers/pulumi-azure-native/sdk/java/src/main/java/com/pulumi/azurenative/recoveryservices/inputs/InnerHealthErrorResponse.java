@@ -25,6 +25,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="creationTimeUtc")
     private @Nullable String creationTimeUtc;
 
+    /**
+     * @return Error creation time (UTC)
+     * 
+     */
     public Optional<String> creationTimeUtc() {
         return Optional.ofNullable(this.creationTimeUtc);
     }
@@ -36,6 +40,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="entityId")
     private @Nullable String entityId;
 
+    /**
+     * @return ID of the entity.
+     * 
+     */
     public Optional<String> entityId() {
         return Optional.ofNullable(this.entityId);
     }
@@ -47,6 +55,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorCategory")
     private @Nullable String errorCategory;
 
+    /**
+     * @return Category of error.
+     * 
+     */
     public Optional<String> errorCategory() {
         return Optional.ofNullable(this.errorCategory);
     }
@@ -58,6 +70,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorCode")
     private @Nullable String errorCode;
 
+    /**
+     * @return Error code.
+     * 
+     */
     public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
@@ -69,6 +85,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorLevel")
     private @Nullable String errorLevel;
 
+    /**
+     * @return Level of error.
+     * 
+     */
     public Optional<String> errorLevel() {
         return Optional.ofNullable(this.errorLevel);
     }
@@ -80,6 +100,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorMessage")
     private @Nullable String errorMessage;
 
+    /**
+     * @return Error message.
+     * 
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
@@ -91,6 +115,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorSource")
     private @Nullable String errorSource;
 
+    /**
+     * @return Source of error.
+     * 
+     */
     public Optional<String> errorSource() {
         return Optional.ofNullable(this.errorSource);
     }
@@ -102,6 +130,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorType")
     private @Nullable String errorType;
 
+    /**
+     * @return Type of error.
+     * 
+     */
     public Optional<String> errorType() {
         return Optional.ofNullable(this.errorType);
     }
@@ -113,6 +145,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="possibleCauses")
     private @Nullable String possibleCauses;
 
+    /**
+     * @return Possible causes of error.
+     * 
+     */
     public Optional<String> possibleCauses() {
         return Optional.ofNullable(this.possibleCauses);
     }
@@ -124,6 +160,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="recommendedAction")
     private @Nullable String recommendedAction;
 
+    /**
+     * @return Recommended action to resolve error.
+     * 
+     */
     public Optional<String> recommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
@@ -135,6 +175,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="recoveryProviderErrorMessage")
     private @Nullable String recoveryProviderErrorMessage;
 
+    /**
+     * @return DRA error message.
+     * 
+     */
     public Optional<String> recoveryProviderErrorMessage() {
         return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
@@ -146,6 +190,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="summaryMessage")
     private @Nullable String summaryMessage;
 
+    /**
+     * @return Summary message of the entity.
+     * 
+     */
     public Optional<String> summaryMessage() {
         return Optional.ofNullable(this.summaryMessage);
     }
@@ -185,61 +233,133 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
             $ = new InnerHealthErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimeUtc Error creation time (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimeUtc(@Nullable String creationTimeUtc) {
             $.creationTimeUtc = creationTimeUtc;
             return this;
         }
 
+        /**
+         * @param entityId ID of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(@Nullable String entityId) {
             $.entityId = entityId;
             return this;
         }
 
+        /**
+         * @param errorCategory Category of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCategory(@Nullable String errorCategory) {
             $.errorCategory = errorCategory;
             return this;
         }
 
+        /**
+         * @param errorCode Error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(@Nullable String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorLevel Level of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLevel(@Nullable String errorLevel) {
             $.errorLevel = errorLevel;
             return this;
         }
 
+        /**
+         * @param errorMessage Error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(@Nullable String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param errorSource Source of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorSource(@Nullable String errorSource) {
             $.errorSource = errorSource;
             return this;
         }
 
+        /**
+         * @param errorType Type of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorType(@Nullable String errorType) {
             $.errorType = errorType;
             return this;
         }
 
+        /**
+         * @param possibleCauses Possible causes of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder possibleCauses(@Nullable String possibleCauses) {
             $.possibleCauses = possibleCauses;
             return this;
         }
 
+        /**
+         * @param recommendedAction Recommended action to resolve error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendedAction(@Nullable String recommendedAction) {
             $.recommendedAction = recommendedAction;
             return this;
         }
 
+        /**
+         * @param recoveryProviderErrorMessage DRA error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
             $.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
 
+        /**
+         * @param summaryMessage Summary message of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryMessage(@Nullable String summaryMessage) {
             $.summaryMessage = summaryMessage;
             return this;

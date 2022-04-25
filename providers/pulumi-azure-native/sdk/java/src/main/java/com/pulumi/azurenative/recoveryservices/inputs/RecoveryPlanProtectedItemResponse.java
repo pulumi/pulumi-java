@@ -25,6 +25,10 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ARM Id of the recovery plan protected item.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
     @Import(name="virtualMachineId")
     private @Nullable String virtualMachineId;
 
+    /**
+     * @return The virtual machine Id.
+     * 
+     */
     public Optional<String> virtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
@@ -65,11 +73,23 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
             $ = new RecoveryPlanProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM Id of the recovery plan protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param virtualMachineId The virtual machine Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
             $.virtualMachineId = virtualMachineId;
             return this;

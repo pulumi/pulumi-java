@@ -32,6 +32,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessProtocol", required=true)
     private Output<Either<String,ShareAccessProtocol>> accessProtocol;
 
+    /**
+     * @return Access protocol to be used by the share.
+     * 
+     */
     public Output<Either<String,ShareAccessProtocol>> accessProtocol() {
         return this.accessProtocol;
     }
@@ -43,6 +47,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureContainerInfo")
     private @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
 
+    /**
+     * @return Azure container mapping for the share.
+     * 
+     */
     public Optional<Output<AzureContainerInfoArgs>> azureContainerInfo() {
         return Optional.ofNullable(this.azureContainerInfo);
     }
@@ -54,6 +62,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientAccessRights")
     private @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
 
+    /**
+     * @return List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+     * 
+     */
     public Optional<Output<List<ClientAccessRightArgs>>> clientAccessRights() {
         return Optional.ofNullable(this.clientAccessRights);
     }
@@ -65,6 +77,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataPolicy")
     private @Nullable Output<Either<String,DataPolicy>> dataPolicy;
 
+    /**
+     * @return Data policy of the share.
+     * 
+     */
     public Optional<Output<Either<String,DataPolicy>>> dataPolicy() {
         return Optional.ofNullable(this.dataPolicy);
     }
@@ -76,6 +92,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description for the share.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -87,6 +107,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -98,6 +122,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitoringStatus", required=true)
     private Output<Either<String,MonitoringStatus>> monitoringStatus;
 
+    /**
+     * @return Current monitoring status of the share.
+     * 
+     */
     public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus;
     }
@@ -109,6 +137,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The share name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -120,6 +152,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="refreshDetails")
     private @Nullable Output<RefreshDetailsArgs> refreshDetails;
 
+    /**
+     * @return Details of the refresh job on this share.
+     * 
+     */
     public Optional<Output<RefreshDetailsArgs>> refreshDetails() {
         return Optional.ofNullable(this.refreshDetails);
     }
@@ -131,6 +167,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -142,6 +182,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareStatus", required=true)
     private Output<Either<String,ShareStatus>> shareStatus;
 
+    /**
+     * @return Current status of the share.
+     * 
+     */
     public Output<Either<String,ShareStatus>> shareStatus() {
         return this.shareStatus;
     }
@@ -153,6 +197,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userAccessRights")
     private @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
+    /**
+     * @return Mapping of users and corresponding access rights on the share (required for SMB protocol).
+     * 
+     */
     public Optional<Output<List<UserAccessRightArgs>>> userAccessRights() {
         return Optional.ofNullable(this.userAccessRights);
     }
@@ -192,150 +240,354 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ShareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessProtocol Access protocol to be used by the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessProtocol(Output<Either<String,ShareAccessProtocol>> accessProtocol) {
             $.accessProtocol = accessProtocol;
             return this;
         }
 
+        /**
+         * @param accessProtocol Access protocol to be used by the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessProtocol(Either<String,ShareAccessProtocol> accessProtocol) {
             return accessProtocol(Output.of(accessProtocol));
         }
 
+        /**
+         * @param accessProtocol Access protocol to be used by the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessProtocol(String accessProtocol) {
             return accessProtocol(Either.ofLeft(accessProtocol));
         }
 
+        /**
+         * @param accessProtocol Access protocol to be used by the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessProtocol(ShareAccessProtocol accessProtocol) {
             return accessProtocol(Either.ofRight(accessProtocol));
         }
 
+        /**
+         * @param azureContainerInfo Azure container mapping for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureContainerInfo(@Nullable Output<AzureContainerInfoArgs> azureContainerInfo) {
             $.azureContainerInfo = azureContainerInfo;
             return this;
         }
 
+        /**
+         * @param azureContainerInfo Azure container mapping for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureContainerInfo(AzureContainerInfoArgs azureContainerInfo) {
             return azureContainerInfo(Output.of(azureContainerInfo));
         }
 
+        /**
+         * @param clientAccessRights List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAccessRights(@Nullable Output<List<ClientAccessRightArgs>> clientAccessRights) {
             $.clientAccessRights = clientAccessRights;
             return this;
         }
 
+        /**
+         * @param clientAccessRights List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAccessRights(List<ClientAccessRightArgs> clientAccessRights) {
             return clientAccessRights(Output.of(clientAccessRights));
         }
 
+        /**
+         * @param clientAccessRights List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAccessRights(ClientAccessRightArgs... clientAccessRights) {
             return clientAccessRights(List.of(clientAccessRights));
         }
 
+        /**
+         * @param dataPolicy Data policy of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(@Nullable Output<Either<String,DataPolicy>> dataPolicy) {
             $.dataPolicy = dataPolicy;
             return this;
         }
 
+        /**
+         * @param dataPolicy Data policy of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
             return dataPolicy(Output.of(dataPolicy));
         }
 
+        /**
+         * @param dataPolicy Data policy of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(String dataPolicy) {
             return dataPolicy(Either.ofLeft(dataPolicy));
         }
 
+        /**
+         * @param dataPolicy Data policy of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPolicy(DataPolicy dataPolicy) {
             return dataPolicy(Either.ofRight(dataPolicy));
         }
 
+        /**
+         * @param description Description for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param monitoringStatus Current monitoring status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(Output<Either<String,MonitoringStatus>> monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
         }
 
+        /**
+         * @param monitoringStatus Current monitoring status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             return monitoringStatus(Output.of(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Current monitoring status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(String monitoringStatus) {
             return monitoringStatus(Either.ofLeft(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Current monitoring status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
             return monitoringStatus(Either.ofRight(monitoringStatus));
         }
 
+        /**
+         * @param name The share name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The share name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param refreshDetails Details of the refresh job on this share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshDetails(@Nullable Output<RefreshDetailsArgs> refreshDetails) {
             $.refreshDetails = refreshDetails;
             return this;
         }
 
+        /**
+         * @param refreshDetails Details of the refresh job on this share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshDetails(RefreshDetailsArgs refreshDetails) {
             return refreshDetails(Output.of(refreshDetails));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareStatus Current status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareStatus(Output<Either<String,ShareStatus>> shareStatus) {
             $.shareStatus = shareStatus;
             return this;
         }
 
+        /**
+         * @param shareStatus Current status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareStatus(Either<String,ShareStatus> shareStatus) {
             return shareStatus(Output.of(shareStatus));
         }
 
+        /**
+         * @param shareStatus Current status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareStatus(String shareStatus) {
             return shareStatus(Either.ofLeft(shareStatus));
         }
 
+        /**
+         * @param shareStatus Current status of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareStatus(ShareStatus shareStatus) {
             return shareStatus(Either.ofRight(shareStatus));
         }
 
+        /**
+         * @param userAccessRights Mapping of users and corresponding access rights on the share (required for SMB protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAccessRights(@Nullable Output<List<UserAccessRightArgs>> userAccessRights) {
             $.userAccessRights = userAccessRights;
             return this;
         }
 
+        /**
+         * @param userAccessRights Mapping of users and corresponding access rights on the share (required for SMB protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAccessRights(List<UserAccessRightArgs> userAccessRights) {
             return userAccessRights(Output.of(userAccessRights));
         }
 
+        /**
+         * @param userAccessRights Mapping of users and corresponding access rights on the share (required for SMB protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAccessRights(UserAccessRightArgs... userAccessRights) {
             return userAccessRights(List.of(userAccessRights));
         }

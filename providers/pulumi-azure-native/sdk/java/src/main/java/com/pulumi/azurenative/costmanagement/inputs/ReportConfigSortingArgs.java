@@ -26,6 +26,10 @@ public final class ReportConfigSortingArgs extends com.pulumi.resources.Resource
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
+    /**
+     * @return Direction of sort.
+     * 
+     */
     public Optional<Output<String>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -37,6 +41,10 @@ public final class ReportConfigSortingArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the column to sort.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -66,20 +74,44 @@ public final class ReportConfigSortingArgs extends com.pulumi.resources.Resource
             $ = new ReportConfigSortingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param direction Direction of sort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<String> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Direction of sort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param name The name of the column to sort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the column to sort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

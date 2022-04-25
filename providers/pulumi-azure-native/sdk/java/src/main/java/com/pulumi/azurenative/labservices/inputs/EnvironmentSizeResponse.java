@@ -29,6 +29,10 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxPrice", required=true)
     private Double maxPrice;
 
+    /**
+     * @return The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
+     * 
+     */
     public Double maxPrice() {
         return this.maxPrice;
     }
@@ -40,6 +44,10 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="minMemory", required=true)
     private Double minMemory;
 
+    /**
+     * @return The amount of memory available (in GB). This is the minimum amount of memory within this tier.
+     * 
+     */
     public Double minMemory() {
         return this.minMemory;
     }
@@ -51,6 +59,10 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="minNumberOfCores", required=true)
     private Integer minNumberOfCores;
 
+    /**
+     * @return The number of cores a VM of this size has. This is the minimum number of cores within this tier.
+     * 
+     */
     public Integer minNumberOfCores() {
         return this.minNumberOfCores;
     }
@@ -62,6 +74,10 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The size category
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="vmSizes")
     private @Nullable List<SizeInfoResponse> vmSizes;
 
+    /**
+     * @return Represents a set of compute sizes that can serve this given size type
+     * 
+     */
     public Optional<List<SizeInfoResponse>> vmSizes() {
         return Optional.ofNullable(this.vmSizes);
     }
@@ -105,31 +125,67 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
             $ = new EnvironmentSizeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPrice The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrice(Double maxPrice) {
             $.maxPrice = maxPrice;
             return this;
         }
 
+        /**
+         * @param minMemory The amount of memory available (in GB). This is the minimum amount of memory within this tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMemory(Double minMemory) {
             $.minMemory = minMemory;
             return this;
         }
 
+        /**
+         * @param minNumberOfCores The number of cores a VM of this size has. This is the minimum number of cores within this tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNumberOfCores(Integer minNumberOfCores) {
             $.minNumberOfCores = minNumberOfCores;
             return this;
         }
 
+        /**
+         * @param name The size category
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param vmSizes Represents a set of compute sizes that can serve this given size type
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSizes(@Nullable List<SizeInfoResponse> vmSizes) {
             $.vmSizes = vmSizes;
             return this;
         }
 
+        /**
+         * @param vmSizes Represents a set of compute sizes that can serve this given size type
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSizes(SizeInfoResponse... vmSizes) {
             return vmSizes(List.of(vmSizes));
         }

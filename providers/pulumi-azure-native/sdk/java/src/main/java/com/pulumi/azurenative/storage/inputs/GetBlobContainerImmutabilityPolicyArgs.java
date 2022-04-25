@@ -19,6 +19,10 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -41,6 +49,10 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
     @Import(name="immutabilityPolicyName", required=true)
     private String immutabilityPolicyName;
 
+    /**
+     * @return The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be &#39;default&#39;
+     * 
+     */
     public String immutabilityPolicyName() {
         return this.immutabilityPolicyName;
     }
@@ -52,6 +64,10 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
             $ = new GetBlobContainerImmutabilityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param immutabilityPolicyName The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPolicyName(String immutabilityPolicyName) {
             $.immutabilityPolicyName = immutabilityPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

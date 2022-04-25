@@ -34,68 +34,68 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeleteActivityResponse {
     /**
-     * Delete activity dataset reference.
+     * @return Delete activity dataset reference.
      * 
      */
     private final DatasetReferenceResponse dataset;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object enableLogging;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Log storage settings customer need to provide when enableLogging is true.
+     * @return Log storage settings customer need to provide when enableLogging is true.
      * 
      */
     private final @Nullable LogStorageSettingsResponse logStorageSettings;
     /**
-     * The max concurrent connections to connect data source at the same time.
+     * @return The max concurrent connections to connect data source at the same time.
      * 
      */
     private final @Nullable Integer maxConcurrentConnections;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object recursive;
     /**
-     * Delete activity store settings.
+     * @return Delete activity store settings.
      * 
      */
     private final @Nullable Object storeSettings;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Delete&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -131,94 +131,94 @@ public final class DeleteActivityResponse {
     }
 
     /**
-     * Delete activity dataset reference.
+     * @return Delete activity dataset reference.
      * 
-    */
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Log storage settings customer need to provide when enableLogging is true.
+     * @return Log storage settings customer need to provide when enableLogging is true.
      * 
-    */
+     */
     public Optional<LogStorageSettingsResponse> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
     /**
-     * The max concurrent connections to connect data source at the same time.
+     * @return The max concurrent connections to connect data source at the same time.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
-     * Delete activity store settings.
+     * @return Delete activity store settings.
      * 
-    */
+     */
     public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Delete&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

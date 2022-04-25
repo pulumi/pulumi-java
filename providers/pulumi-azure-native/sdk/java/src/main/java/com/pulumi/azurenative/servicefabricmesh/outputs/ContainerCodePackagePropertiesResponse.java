@@ -24,77 +24,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerCodePackagePropertiesResponse {
     /**
-     * Command array to execute within the container in exec form.
+     * @return Command array to execute within the container in exec form.
      * 
      */
     private final @Nullable List<String> commands;
     /**
-     * Reference to sinks in DiagnosticsDescription.
+     * @return Reference to sinks in DiagnosticsDescription.
      * 
      */
     private final @Nullable DiagnosticsRefResponse diagnostics;
     /**
-     * The endpoints exposed by this container.
+     * @return The endpoints exposed by this container.
      * 
      */
     private final @Nullable List<EndpointPropertiesResponse> endpoints;
     /**
-     * Override for the default entry point in the container.
+     * @return Override for the default entry point in the container.
      * 
      */
     private final @Nullable String entrypoint;
     /**
-     * The environment variables to set in this container
+     * @return The environment variables to set in this container
      * 
      */
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
     /**
-     * The Container image to use.
+     * @return The Container image to use.
      * 
      */
     private final String image;
     /**
-     * Image registry credential.
+     * @return Image registry credential.
      * 
      */
     private final @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
     /**
-     * Runtime information of a container instance.
+     * @return Runtime information of a container instance.
      * 
      */
     private final ContainerInstanceViewResponse instanceView;
     /**
-     * The labels to set in this container.
+     * @return The labels to set in this container.
      * 
      */
     private final @Nullable List<ContainerLabelResponse> labels;
     /**
-     * The name of the code package.
+     * @return The name of the code package.
      * 
      */
     private final String name;
     /**
-     * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
+     * @return A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
      * 
      */
     private final @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
     /**
-     * The resources required by this container.
+     * @return The resources required by this container.
      * 
      */
     private final ResourceRequirementsResponse resources;
     /**
-     * The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
+     * @return The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
      * 
      */
     private final @Nullable List<SettingResponse> settings;
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
+     * @return Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
      * 
      */
     private final @Nullable List<VolumeReferenceResponse> volumeRefs;
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
+     * @return Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
      * 
      */
     private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
@@ -134,107 +134,107 @@ public final class ContainerCodePackagePropertiesResponse {
     }
 
     /**
-     * Command array to execute within the container in exec form.
+     * @return Command array to execute within the container in exec form.
      * 
-    */
+     */
     public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
-     * Reference to sinks in DiagnosticsDescription.
+     * @return Reference to sinks in DiagnosticsDescription.
      * 
-    */
+     */
     public Optional<DiagnosticsRefResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
-     * The endpoints exposed by this container.
+     * @return The endpoints exposed by this container.
      * 
-    */
+     */
     public List<EndpointPropertiesResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
-     * Override for the default entry point in the container.
+     * @return Override for the default entry point in the container.
      * 
-    */
+     */
     public Optional<String> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
     /**
-     * The environment variables to set in this container
+     * @return The environment variables to set in this container
      * 
-    */
+     */
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
-     * The Container image to use.
+     * @return The Container image to use.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * Image registry credential.
+     * @return Image registry credential.
      * 
-    */
+     */
     public Optional<ImageRegistryCredentialResponse> imageRegistryCredential() {
         return Optional.ofNullable(this.imageRegistryCredential);
     }
     /**
-     * Runtime information of a container instance.
+     * @return Runtime information of a container instance.
      * 
-    */
+     */
     public ContainerInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * The labels to set in this container.
+     * @return The labels to set in this container.
      * 
-    */
+     */
     public List<ContainerLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * The name of the code package.
+     * @return The name of the code package.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
+     * @return A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
      * 
-    */
+     */
     public List<ReliableCollectionsRefResponse> reliableCollectionsRefs() {
         return this.reliableCollectionsRefs == null ? List.of() : this.reliableCollectionsRefs;
     }
     /**
-     * The resources required by this container.
+     * @return The resources required by this container.
      * 
-    */
+     */
     public ResourceRequirementsResponse resources() {
         return this.resources;
     }
     /**
-     * The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
+     * @return The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
      * 
-    */
+     */
     public List<SettingResponse> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
+     * @return Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
      * 
-    */
+     */
     public List<VolumeReferenceResponse> volumeRefs() {
         return this.volumeRefs == null ? List.of() : this.volumeRefs;
     }
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
+     * @return Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
      * 
-    */
+     */
     public List<ApplicationScopedVolumeResponse> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

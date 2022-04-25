@@ -29,6 +29,10 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends com.pulumi.r
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port number for the protocol, cannot be greater than 64000. This field is optional.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -40,6 +44,10 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends com.pulumi.r
     @Import(name="protocolType")
     private @Nullable Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType;
 
+    /**
+     * @return Protocol type.
+     * 
+     */
     public Optional<Output<Either<String,AzureFirewallApplicationRuleProtocolType>>> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }
@@ -69,28 +77,64 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends com.pulumi.r
             $ = new AzureFirewallApplicationRuleProtocolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port Port number for the protocol, cannot be greater than 64000. This field is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port number for the protocol, cannot be greater than 64000. This field is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(@Nullable Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType) {
             $.protocolType = protocolType;
             return this;
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(Either<String,AzureFirewallApplicationRuleProtocolType> protocolType) {
             return protocolType(Output.of(protocolType));
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(String protocolType) {
             return protocolType(Either.ofLeft(protocolType));
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(AzureFirewallApplicationRuleProtocolType protocolType) {
             return protocolType(Either.ofRight(protocolType));
         }

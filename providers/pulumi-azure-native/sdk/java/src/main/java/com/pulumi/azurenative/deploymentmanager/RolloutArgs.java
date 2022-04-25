@@ -26,6 +26,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactSourceId")
     private @Nullable Output<String> artifactSourceId;
 
+    /**
+     * @return The reference to the artifact source resource Id where the payload is located.
+     * 
+     */
     public Optional<Output<String>> artifactSourceId() {
         return Optional.ofNullable(this.artifactSourceId);
     }
@@ -37,6 +41,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildVersion", required=true)
     private Output<String> buildVersion;
 
+    /**
+     * @return The version of the build being deployed.
+     * 
+     */
     public Output<String> buildVersion() {
         return this.buildVersion;
     }
@@ -48,6 +56,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity", required=true)
     private Output<IdentityArgs> identity;
 
+    /**
+     * @return Identity for the resource.
+     * 
+     */
     public Output<IdentityArgs> identity() {
         return this.identity;
     }
@@ -59,6 +71,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +86,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rolloutName")
     private @Nullable Output<String> rolloutName;
 
+    /**
+     * @return The rollout name.
+     * 
+     */
     public Optional<Output<String>> rolloutName() {
         return Optional.ofNullable(this.rolloutName);
     }
@@ -92,6 +116,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepGroups", required=true)
     private Output<List<StepGroupArgs>> stepGroups;
 
+    /**
+     * @return The list of step groups that define the orchestration.
+     * 
+     */
     public Output<List<StepGroupArgs>> stepGroups() {
         return this.stepGroups;
     }
@@ -103,6 +131,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,6 +146,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetServiceTopologyId", required=true)
     private Output<String> targetServiceTopologyId;
 
+    /**
+     * @return The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+     * 
+     */
     public Output<String> targetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
@@ -150,87 +186,201 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactSourceId The reference to the artifact source resource Id where the payload is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceId(@Nullable Output<String> artifactSourceId) {
             $.artifactSourceId = artifactSourceId;
             return this;
         }
 
+        /**
+         * @param artifactSourceId The reference to the artifact source resource Id where the payload is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceId(String artifactSourceId) {
             return artifactSourceId(Output.of(artifactSourceId));
         }
 
+        /**
+         * @param buildVersion The version of the build being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildVersion(Output<String> buildVersion) {
             $.buildVersion = buildVersion;
             return this;
         }
 
+        /**
+         * @param buildVersion The version of the build being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildVersion(String buildVersion) {
             return buildVersion(Output.of(buildVersion));
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutName(@Nullable Output<String> rolloutName) {
             $.rolloutName = rolloutName;
             return this;
         }
 
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutName(String rolloutName) {
             return rolloutName(Output.of(rolloutName));
         }
 
+        /**
+         * @param stepGroups The list of step groups that define the orchestration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepGroups(Output<List<StepGroupArgs>> stepGroups) {
             $.stepGroups = stepGroups;
             return this;
         }
 
+        /**
+         * @param stepGroups The list of step groups that define the orchestration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepGroups(List<StepGroupArgs> stepGroups) {
             return stepGroups(Output.of(stepGroups));
         }
 
+        /**
+         * @param stepGroups The list of step groups that define the orchestration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepGroups(StepGroupArgs... stepGroups) {
             return stepGroups(List.of(stepGroups));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetServiceTopologyId The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceTopologyId(Output<String> targetServiceTopologyId) {
             $.targetServiceTopologyId = targetServiceTopologyId;
             return this;
         }
 
+        /**
+         * @param targetServiceTopologyId The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceTopologyId(String targetServiceTopologyId) {
             return targetServiceTopologyId(Output.of(targetServiceTopologyId));
         }

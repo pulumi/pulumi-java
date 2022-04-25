@@ -28,6 +28,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminPassword")
     private @Nullable Output<String> adminPassword;
 
+    /**
+     * @return Gets or sets administrator password.
+     * 
+     */
     public Optional<Output<String>> adminPassword() {
         return Optional.ofNullable(this.adminPassword);
     }
@@ -39,6 +43,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminUsername")
     private @Nullable Output<String> adminUsername;
 
+    /**
+     * @return Gets or sets administrator username.
+     * 
+     */
     public Optional<Output<String>> adminUsername() {
         return Optional.ofNullable(this.adminUsername);
     }
@@ -50,6 +58,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
     private @Nullable Output<String> computerName;
 
+    /**
+     * @return Gets or sets computer name.
+     * 
+     */
     public Optional<Output<String>> computerName() {
         return Optional.ofNullable(this.computerName);
     }
@@ -61,6 +73,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
     private @Nullable Output<Either<String,OsType>> osType;
 
+    /**
+     * @return Gets or sets the type of the os.
+     * 
+     */
     public Optional<Output<Either<String,OsType>>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -92,46 +108,106 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OsProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminPassword Gets or sets administrator password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminPassword(@Nullable Output<String> adminPassword) {
             $.adminPassword = adminPassword;
             return this;
         }
 
+        /**
+         * @param adminPassword Gets or sets administrator password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminPassword(String adminPassword) {
             return adminPassword(Output.of(adminPassword));
         }
 
+        /**
+         * @param adminUsername Gets or sets administrator username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
             $.adminUsername = adminUsername;
             return this;
         }
 
+        /**
+         * @param adminUsername Gets or sets administrator username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUsername(String adminUsername) {
             return adminUsername(Output.of(adminUsername));
         }
 
+        /**
+         * @param computerName Gets or sets computer name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(@Nullable Output<String> computerName) {
             $.computerName = computerName;
             return this;
         }
 
+        /**
+         * @param computerName Gets or sets computer name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(String computerName) {
             return computerName(Output.of(computerName));
         }
 
+        /**
+         * @param osType Gets or sets the type of the os.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType Gets or sets the type of the os.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OsType> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType Gets or sets the type of the os.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType Gets or sets the type of the os.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OsType osType) {
             return osType(Either.ofRight(osType));
         }

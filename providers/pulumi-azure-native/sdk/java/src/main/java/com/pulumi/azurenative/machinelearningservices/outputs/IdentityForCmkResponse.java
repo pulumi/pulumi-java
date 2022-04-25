@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IdentityForCmkResponse {
     /**
-     * The ArmId of the user assigned identity that will be used to access the customer managed key vault
+     * @return The ArmId of the user assigned identity that will be used to access the customer managed key vault
      * 
      */
     private final String userAssignedIdentity;
@@ -21,9 +21,9 @@ public final class IdentityForCmkResponse {
     }
 
     /**
-     * The ArmId of the user assigned identity that will be used to access the customer managed key vault
+     * @return The ArmId of the user assigned identity that will be used to access the customer managed key vault
      * 
-    */
+     */
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }

@@ -28,6 +28,10 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
     @Import(name="rewrite")
     private @Nullable Output<String> rewrite;
 
+    /**
+     * @return replacement string for matched part of the Uri.
+     * 
+     */
     public Optional<Output<String>> rewrite() {
         return Optional.ofNullable(this.rewrite);
     }
@@ -39,6 +43,10 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<Either<String,PathMatchType>> type;
 
+    /**
+     * @return how to match value in the Uri
+     * 
+     */
     public Output<Either<String,PathMatchType>> type() {
         return this.type;
     }
@@ -50,6 +58,10 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Uri path to match for request.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -80,37 +92,85 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
             $ = new HttpRouteMatchPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rewrite replacement string for matched part of the Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewrite(@Nullable Output<String> rewrite) {
             $.rewrite = rewrite;
             return this;
         }
 
+        /**
+         * @param rewrite replacement string for matched part of the Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewrite(String rewrite) {
             return rewrite(Output.of(rewrite));
         }
 
+        /**
+         * @param type how to match value in the Uri
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,PathMatchType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type how to match value in the Uri
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,PathMatchType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type how to match value in the Uri
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type how to match value in the Uri
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(PathMatchType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value Uri path to match for request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Uri path to match for request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

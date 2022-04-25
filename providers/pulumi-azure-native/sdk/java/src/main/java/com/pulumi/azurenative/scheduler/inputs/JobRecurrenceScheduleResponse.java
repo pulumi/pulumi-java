@@ -24,6 +24,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
     @Import(name="hours")
     private @Nullable List<Integer> hours;
 
+    /**
+     * @return Gets or sets the hours of the day that the job should execute at.
+     * 
+     */
     public Optional<List<Integer>> hours() {
         return Optional.ofNullable(this.hours);
     }
@@ -35,6 +39,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
     @Import(name="minutes")
     private @Nullable List<Integer> minutes;
 
+    /**
+     * @return Gets or sets the minutes of the hour that the job should execute at.
+     * 
+     */
     public Optional<List<Integer>> minutes() {
         return Optional.ofNullable(this.minutes);
     }
@@ -46,6 +54,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
     @Import(name="monthDays")
     private @Nullable List<Integer> monthDays;
 
+    /**
+     * @return Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+     * 
+     */
     public Optional<List<Integer>> monthDays() {
         return Optional.ofNullable(this.monthDays);
     }
@@ -57,6 +69,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
     @Import(name="monthlyOccurrences")
     private @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
+    /**
+     * @return Gets or sets the occurrences of days within a month.
+     * 
+     */
     public Optional<List<JobRecurrenceScheduleMonthlyOccurrenceResponse>> monthlyOccurrences() {
         return Optional.ofNullable(this.monthlyOccurrences);
     }
@@ -68,6 +84,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
     @Import(name="weekDays")
     private @Nullable List<String> weekDays;
 
+    /**
+     * @return Gets or sets the days of the week that the job should execute on.
+     * 
+     */
     public Optional<List<String>> weekDays() {
         return Optional.ofNullable(this.weekDays);
     }
@@ -100,47 +120,107 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
             $ = new JobRecurrenceScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours Gets or sets the hours of the day that the job should execute at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(@Nullable List<Integer> hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param hours Gets or sets the hours of the day that the job should execute at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
 
+        /**
+         * @param minutes Gets or sets the minutes of the hour that the job should execute at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(@Nullable List<Integer> minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param minutes Gets or sets the minutes of the hour that the job should execute at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
 
+        /**
+         * @param monthDays Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(@Nullable List<Integer> monthDays) {
             $.monthDays = monthDays;
             return this;
         }
 
+        /**
+         * @param monthDays Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
 
+        /**
+         * @param monthlyOccurrences Gets or sets the occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(@Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
             $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
+        /**
+         * @param monthlyOccurrences Gets or sets the occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(JobRecurrenceScheduleMonthlyOccurrenceResponse... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
 
+        /**
+         * @param weekDays Gets or sets the days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(@Nullable List<String> weekDays) {
             $.weekDays = weekDays;
             return this;
         }
 
+        /**
+         * @param weekDays Gets or sets the days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
         }

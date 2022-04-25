@@ -26,6 +26,11 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends com.pulumi.
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -37,6 +42,10 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends com.pulumi.
     @Import(name="widevineTemplate", required=true)
     private Output<String> widevineTemplate;
 
+    /**
+     * @return The Widevine template.
+     * 
+     */
     public Output<String> widevineTemplate() {
         return this.widevineTemplate;
     }
@@ -66,20 +75,46 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends com.pulumi.
             $ = new ContentKeyPolicyWidevineConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param widevineTemplate The Widevine template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevineTemplate(Output<String> widevineTemplate) {
             $.widevineTemplate = widevineTemplate;
             return this;
         }
 
+        /**
+         * @param widevineTemplate The Widevine template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevineTemplate(String widevineTemplate) {
             return widevineTemplate(Output.of(widevineTemplate));
         }

@@ -27,6 +27,10 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
     @Import(name="appConsistentFrequencyInMinutes")
     private @Nullable Integer appConsistentFrequencyInMinutes;
 
+    /**
+     * @return The app consistent snapshot frequency in minutes.
+     * 
+     */
     public Optional<Integer> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
@@ -38,6 +42,10 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
     @Import(name="crashConsistentFrequencyInMinutes")
     private @Nullable Integer crashConsistentFrequencyInMinutes;
 
+    /**
+     * @return The crash consistent snapshot frequency in minutes.
+     * 
+     */
     public Optional<Integer> crashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
@@ -50,6 +58,11 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;InMageAzureV2&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -61,6 +74,10 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
     @Import(name="multiVmSyncStatus")
     private @Nullable String multiVmSyncStatus;
 
+    /**
+     * @return A value indicating whether multi-VM sync has to be enabled.
+     * 
+     */
     public Optional<String> multiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
@@ -72,6 +89,10 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
     @Import(name="recoveryPointHistory")
     private @Nullable Integer recoveryPointHistory;
 
+    /**
+     * @return The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     public Optional<Integer> recoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
@@ -83,6 +104,10 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
     @Import(name="recoveryPointThresholdInMinutes")
     private @Nullable Integer recoveryPointThresholdInMinutes;
 
+    /**
+     * @return The recovery point threshold in minutes.
+     * 
+     */
     public Optional<Integer> recoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
@@ -116,31 +141,68 @@ public final class InMageAzureV2PolicyDetailsResponse extends com.pulumi.resourc
             $ = new InMageAzureV2PolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appConsistentFrequencyInMinutes The app consistent snapshot frequency in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param crashConsistentFrequencyInMinutes The crash consistent snapshot frequency in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             $.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;InMageAzureV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi-VM sync has to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
+        /**
+         * @param recoveryPointHistory The duration in minutes until which the recovery points need to be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             $.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
+        /**
+         * @param recoveryPointThresholdInMinutes The recovery point threshold in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             $.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;

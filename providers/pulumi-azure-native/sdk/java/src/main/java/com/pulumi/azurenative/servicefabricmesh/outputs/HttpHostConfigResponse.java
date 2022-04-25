@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class HttpHostConfigResponse {
     /**
-     * http hostname config name.
+     * @return http hostname config name.
      * 
      */
     private final String name;
     /**
-     * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+     * @return Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
      * 
      */
     private final List<HttpRouteConfigResponse> routes;
@@ -31,16 +31,16 @@ public final class HttpHostConfigResponse {
     }
 
     /**
-     * http hostname config name.
+     * @return http hostname config name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+     * @return Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
      * 
-    */
+     */
     public List<HttpRouteConfigResponse> routes() {
         return this.routes;
     }

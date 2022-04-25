@@ -23,6 +23,10 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return Public IP address of the master node of the cluster.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -34,6 +38,10 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
     @Import(name="administratorAccount")
     private @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
+    /**
+     * @return Admin credentials for master node of the cluster
+     * 
+     */
     public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
@@ -45,6 +53,10 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
     @Import(name="sshPort")
     private @Nullable Integer sshPort;
 
+    /**
+     * @return Port open for ssh connections on the master node of the cluster.
+     * 
+     */
     public Optional<Integer> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
@@ -75,16 +87,34 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
             $ = new HDInsightResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Public IP address of the master node of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param administratorAccount Admin credentials for master node of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
             $.administratorAccount = administratorAccount;
             return this;
         }
 
+        /**
+         * @param sshPort Port open for ssh connections on the master node of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(@Nullable Integer sshPort) {
             $.sshPort = sshPort;
             return this;

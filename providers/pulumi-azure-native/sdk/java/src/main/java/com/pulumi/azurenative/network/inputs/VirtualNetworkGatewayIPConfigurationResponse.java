@@ -26,6 +26,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="privateIPAddress", required=true)
     private String privateIPAddress;
 
+    /**
+     * @return Private IP Address for this gateway.
+     * 
+     */
     public String privateIPAddress() {
         return this.privateIPAddress;
     }
@@ -70,6 +86,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="privateIPAllocationMethod")
     private @Nullable String privateIPAllocationMethod;
 
+    /**
+     * @return The private IP address allocation method.
+     * 
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -81,6 +101,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the virtual network gateway IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -92,6 +116,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="publicIPAddress")
     private @Nullable SubResourceResponse publicIPAddress;
 
+    /**
+     * @return The reference to the public IP resource.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -103,6 +131,10 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return The reference to the subnet resource.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -138,41 +170,89 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends com.pulu
             $ = new VirtualNetworkGatewayIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateIPAddress Private IP Address for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the virtual network gateway IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicIPAddress The reference to the public IP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;

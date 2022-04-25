@@ -31,6 +31,10 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
     @Import(name="matchValues")
     private @Nullable Output<List<String>> matchValues;
 
+    /**
+     * @return The match value for the condition of the delivery rule
+     * 
+     */
     public Optional<Output<List<String>>> matchValues() {
         return Optional.ofNullable(this.matchValues);
     }
@@ -42,6 +46,10 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
     @Import(name="negateCondition")
     private @Nullable Output<Boolean> negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Output<Boolean>> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -60,6 +68,10 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
     @Import(name="operator", required=true)
     private Output<Either<String,RequestHeaderOperator>> operator;
 
+    /**
+     * @return Describes operator to be matched
+     * 
+     */
     public Output<Either<String,RequestHeaderOperator>> operator() {
         return this.operator;
     }
@@ -71,6 +83,10 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Name of Header to be matched
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -82,6 +98,10 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
     @Import(name="transforms")
     private @Nullable Output<List<Either<String,Transform>>> transforms;
 
+    /**
+     * @return List of transforms
+     * 
+     */
     public Optional<Output<List<Either<String,Transform>>>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -115,24 +135,54 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
             $ = new RequestHeaderMatchConditionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(@Nullable Output<List<String>> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(List<String> matchValues) {
             return matchValues(Output.of(matchValues));
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(Boolean negateCondition) {
             return negateCondition(Output.of(negateCondition));
         }
@@ -146,41 +196,95 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,RequestHeaderOperator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,RequestHeaderOperator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(RequestHeaderOperator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param selector Name of Header to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Name of Header to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(List<Either<String,Transform>> transforms) {
             return transforms(Output.of(transforms));
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(Either<String,Transform>... transforms) {
             return transforms(List.of(transforms));
         }

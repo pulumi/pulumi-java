@@ -26,6 +26,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<ActionArgs> action;
 
+    /**
+     * @return Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+     * 
+     */
     public Optional<Output<ActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -37,6 +41,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="correlationFilter")
     private @Nullable Output<CorrelationFilterArgs> correlationFilter;
 
+    /**
+     * @return Properties of correlationFilter
+     * 
+     */
     public Optional<Output<CorrelationFilterArgs>> correlationFilter() {
         return Optional.ofNullable(this.correlationFilter);
     }
@@ -48,6 +56,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterType")
     private @Nullable Output<FilterType> filterType;
 
+    /**
+     * @return Filter type that is evaluated against a BrokeredMessage.
+     * 
+     */
     public Optional<Output<FilterType>> filterType() {
         return Optional.ofNullable(this.filterType);
     }
@@ -59,6 +71,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -70,6 +86,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The rule name.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -92,6 +116,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlFilter")
     private @Nullable Output<SqlFilterArgs> sqlFilter;
 
+    /**
+     * @return Properties of sqlFilter
+     * 
+     */
     public Optional<Output<SqlFilterArgs>> sqlFilter() {
         return Optional.ofNullable(this.sqlFilter);
     }
@@ -103,6 +131,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionName", required=true)
     private Output<String> subscriptionName;
 
+    /**
+     * @return The subscription name.
+     * 
+     */
     public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
@@ -114,6 +146,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
     private Output<String> topicName;
 
+    /**
+     * @return The topic name.
+     * 
+     */
     public Output<String> topicName() {
         return this.topicName;
     }
@@ -150,83 +186,191 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<ActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(ActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param correlationFilter Properties of correlationFilter
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationFilter(@Nullable Output<CorrelationFilterArgs> correlationFilter) {
             $.correlationFilter = correlationFilter;
             return this;
         }
 
+        /**
+         * @param correlationFilter Properties of correlationFilter
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationFilter(CorrelationFilterArgs correlationFilter) {
             return correlationFilter(Output.of(correlationFilter));
         }
 
+        /**
+         * @param filterType Filter type that is evaluated against a BrokeredMessage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(@Nullable Output<FilterType> filterType) {
             $.filterType = filterType;
             return this;
         }
 
+        /**
+         * @param filterType Filter type that is evaluated against a BrokeredMessage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(FilterType filterType) {
             return filterType(Output.of(filterType));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param sqlFilter Properties of sqlFilter
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlFilter(@Nullable Output<SqlFilterArgs> sqlFilter) {
             $.sqlFilter = sqlFilter;
             return this;
         }
 
+        /**
+         * @param sqlFilter Properties of sqlFilter
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlFilter(SqlFilterArgs sqlFilter) {
             return sqlFilter(Output.of(sqlFilter));
         }
 
+        /**
+         * @param subscriptionName The subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(Output<String> subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;
         }
 
+        /**
+         * @param subscriptionName The subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(String subscriptionName) {
             return subscriptionName(Output.of(subscriptionName));
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

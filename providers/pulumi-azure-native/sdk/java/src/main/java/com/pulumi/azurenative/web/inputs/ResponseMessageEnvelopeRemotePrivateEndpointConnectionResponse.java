@@ -32,6 +32,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="error")
     private @Nullable ErrorEntityResponse error;
 
+    /**
+     * @return Azure-AsyncOperation Error info.
+     * 
+     */
     public Optional<ErrorEntityResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -45,6 +49,12 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+     * value for GET requests only.
+     * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -56,6 +66,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="identity")
     private @Nullable ManagedServiceIdentityResponse identity;
 
+    /**
+     * @return MSI resource
+     * 
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -67,6 +81,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -78,6 +96,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +111,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="plan")
     private @Nullable ArmPlanResponse plan;
 
+    /**
+     * @return Azure resource manager plan.
+     * 
+     */
     public Optional<ArmPlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -100,6 +126,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="properties")
     private @Nullable RemotePrivateEndpointConnectionResponse properties;
 
+    /**
+     * @return Resource specific properties.
+     * 
+     */
     public Optional<RemotePrivateEndpointConnectionResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -111,6 +141,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="sku")
     private @Nullable SkuDescriptionResponse sku;
 
+    /**
+     * @return SKU description of the resource.
+     * 
+     */
     public Optional<SkuDescriptionResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -122,6 +156,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Azure-AsyncOperation Status info.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -133,6 +171,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Tags associated with resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -144,6 +186,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of resource e.g &#34;Microsoft.Web/sites&#34;.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -155,6 +201,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="zones")
     private @Nullable List<String> zones;
 
+    /**
+     * @return Logical Availability Zones the service is hosted in
+     * 
+     */
     public Optional<List<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -194,66 +244,146 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
             $ = new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Azure-AsyncOperation Error info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable ErrorEntityResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param id Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+         * value for GET requests only.
+         * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param identity MSI resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param location Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Name of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param plan Azure resource manager plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable ArmPlanResponse plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param properties Resource specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param sku SKU description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable SkuDescriptionResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param status Azure-AsyncOperation Status info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Type of resource e.g &#34;Microsoft.Web/sites&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param zones Logical Availability Zones the service is hosted in
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Logical Availability Zones the service is hosted in
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

@@ -28,6 +28,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="daysOfWeek")
     private @Nullable List<String> daysOfWeek;
 
+    /**
+     * @return Set of days of the week on which this schedule is active.
+     * 
+     */
     public Optional<List<String>> daysOfWeek() {
         return Optional.ofNullable(this.daysOfWeek);
     }
@@ -39,6 +43,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the scaling schedule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="offPeakLoadBalancingAlgorithm")
     private @Nullable String offPeakLoadBalancingAlgorithm;
 
+    /**
+     * @return Load balancing algorithm for off-peak period.
+     * 
+     */
     public Optional<String> offPeakLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.offPeakLoadBalancingAlgorithm);
     }
@@ -61,6 +73,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="offPeakStartTime")
     private @Nullable String offPeakStartTime;
 
+    /**
+     * @return Starting time for off-peak period.
+     * 
+     */
     public Optional<String> offPeakStartTime() {
         return Optional.ofNullable(this.offPeakStartTime);
     }
@@ -72,6 +88,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="peakLoadBalancingAlgorithm")
     private @Nullable String peakLoadBalancingAlgorithm;
 
+    /**
+     * @return Load balancing algorithm for peak period.
+     * 
+     */
     public Optional<String> peakLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.peakLoadBalancingAlgorithm);
     }
@@ -83,6 +103,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="peakStartTime")
     private @Nullable String peakStartTime;
 
+    /**
+     * @return Starting time for peak period.
+     * 
+     */
     public Optional<String> peakStartTime() {
         return Optional.ofNullable(this.peakStartTime);
     }
@@ -94,6 +118,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownCapacityThresholdPct")
     private @Nullable Integer rampDownCapacityThresholdPct;
 
+    /**
+     * @return Capacity threshold for ramp down period.
+     * 
+     */
     public Optional<Integer> rampDownCapacityThresholdPct() {
         return Optional.ofNullable(this.rampDownCapacityThresholdPct);
     }
@@ -105,6 +133,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownForceLogoffUsers")
     private @Nullable Boolean rampDownForceLogoffUsers;
 
+    /**
+     * @return Should users be logged off forcefully from hosts.
+     * 
+     */
     public Optional<Boolean> rampDownForceLogoffUsers() {
         return Optional.ofNullable(this.rampDownForceLogoffUsers);
     }
@@ -116,6 +148,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownLoadBalancingAlgorithm")
     private @Nullable String rampDownLoadBalancingAlgorithm;
 
+    /**
+     * @return Load balancing algorithm for ramp down period.
+     * 
+     */
     public Optional<String> rampDownLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.rampDownLoadBalancingAlgorithm);
     }
@@ -127,6 +163,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownMinimumHostsPct")
     private @Nullable Integer rampDownMinimumHostsPct;
 
+    /**
+     * @return Minimum host percentage for ramp down period.
+     * 
+     */
     public Optional<Integer> rampDownMinimumHostsPct() {
         return Optional.ofNullable(this.rampDownMinimumHostsPct);
     }
@@ -138,6 +178,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownNotificationMessage")
     private @Nullable String rampDownNotificationMessage;
 
+    /**
+     * @return Notification message for users during ramp down period.
+     * 
+     */
     public Optional<String> rampDownNotificationMessage() {
         return Optional.ofNullable(this.rampDownNotificationMessage);
     }
@@ -149,6 +193,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownStartTime")
     private @Nullable String rampDownStartTime;
 
+    /**
+     * @return Starting time for ramp down period.
+     * 
+     */
     public Optional<String> rampDownStartTime() {
         return Optional.ofNullable(this.rampDownStartTime);
     }
@@ -160,6 +208,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownStopHostsWhen")
     private @Nullable String rampDownStopHostsWhen;
 
+    /**
+     * @return Specifies when to stop hosts during ramp down period.
+     * 
+     */
     public Optional<String> rampDownStopHostsWhen() {
         return Optional.ofNullable(this.rampDownStopHostsWhen);
     }
@@ -171,6 +223,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownWaitTimeMinutes")
     private @Nullable Integer rampDownWaitTimeMinutes;
 
+    /**
+     * @return Number of minutes to wait to stop hosts during ramp down period.
+     * 
+     */
     public Optional<Integer> rampDownWaitTimeMinutes() {
         return Optional.ofNullable(this.rampDownWaitTimeMinutes);
     }
@@ -182,6 +238,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpCapacityThresholdPct")
     private @Nullable Integer rampUpCapacityThresholdPct;
 
+    /**
+     * @return Capacity threshold for ramp up period.
+     * 
+     */
     public Optional<Integer> rampUpCapacityThresholdPct() {
         return Optional.ofNullable(this.rampUpCapacityThresholdPct);
     }
@@ -193,6 +253,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpLoadBalancingAlgorithm")
     private @Nullable String rampUpLoadBalancingAlgorithm;
 
+    /**
+     * @return Load balancing algorithm for ramp up period.
+     * 
+     */
     public Optional<String> rampUpLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.rampUpLoadBalancingAlgorithm);
     }
@@ -204,6 +268,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpMinimumHostsPct")
     private @Nullable Integer rampUpMinimumHostsPct;
 
+    /**
+     * @return Minimum host percentage for ramp up period.
+     * 
+     */
     public Optional<Integer> rampUpMinimumHostsPct() {
         return Optional.ofNullable(this.rampUpMinimumHostsPct);
     }
@@ -215,6 +283,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpStartTime")
     private @Nullable String rampUpStartTime;
 
+    /**
+     * @return Starting time for ramp up period.
+     * 
+     */
     public Optional<String> rampUpStartTime() {
         return Optional.ofNullable(this.rampUpStartTime);
     }
@@ -260,95 +332,209 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
             $ = new ScalingScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfWeek Set of days of the week on which this schedule is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfWeek(@Nullable List<String> daysOfWeek) {
             $.daysOfWeek = daysOfWeek;
             return this;
         }
 
+        /**
+         * @param daysOfWeek Set of days of the week on which this schedule is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfWeek(String... daysOfWeek) {
             return daysOfWeek(List.of(daysOfWeek));
         }
 
+        /**
+         * @param name Name of the scaling schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param offPeakLoadBalancingAlgorithm Load balancing algorithm for off-peak period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offPeakLoadBalancingAlgorithm(@Nullable String offPeakLoadBalancingAlgorithm) {
             $.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
             return this;
         }
 
+        /**
+         * @param offPeakStartTime Starting time for off-peak period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offPeakStartTime(@Nullable String offPeakStartTime) {
             $.offPeakStartTime = offPeakStartTime;
             return this;
         }
 
+        /**
+         * @param peakLoadBalancingAlgorithm Load balancing algorithm for peak period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peakLoadBalancingAlgorithm(@Nullable String peakLoadBalancingAlgorithm) {
             $.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
             return this;
         }
 
+        /**
+         * @param peakStartTime Starting time for peak period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peakStartTime(@Nullable String peakStartTime) {
             $.peakStartTime = peakStartTime;
             return this;
         }
 
+        /**
+         * @param rampDownCapacityThresholdPct Capacity threshold for ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownCapacityThresholdPct(@Nullable Integer rampDownCapacityThresholdPct) {
             $.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
             return this;
         }
 
+        /**
+         * @param rampDownForceLogoffUsers Should users be logged off forcefully from hosts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownForceLogoffUsers(@Nullable Boolean rampDownForceLogoffUsers) {
             $.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
             return this;
         }
 
+        /**
+         * @param rampDownLoadBalancingAlgorithm Load balancing algorithm for ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownLoadBalancingAlgorithm(@Nullable String rampDownLoadBalancingAlgorithm) {
             $.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
             return this;
         }
 
+        /**
+         * @param rampDownMinimumHostsPct Minimum host percentage for ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownMinimumHostsPct(@Nullable Integer rampDownMinimumHostsPct) {
             $.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
             return this;
         }
 
+        /**
+         * @param rampDownNotificationMessage Notification message for users during ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownNotificationMessage(@Nullable String rampDownNotificationMessage) {
             $.rampDownNotificationMessage = rampDownNotificationMessage;
             return this;
         }
 
+        /**
+         * @param rampDownStartTime Starting time for ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownStartTime(@Nullable String rampDownStartTime) {
             $.rampDownStartTime = rampDownStartTime;
             return this;
         }
 
+        /**
+         * @param rampDownStopHostsWhen Specifies when to stop hosts during ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownStopHostsWhen(@Nullable String rampDownStopHostsWhen) {
             $.rampDownStopHostsWhen = rampDownStopHostsWhen;
             return this;
         }
 
+        /**
+         * @param rampDownWaitTimeMinutes Number of minutes to wait to stop hosts during ramp down period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampDownWaitTimeMinutes(@Nullable Integer rampDownWaitTimeMinutes) {
             $.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
             return this;
         }
 
+        /**
+         * @param rampUpCapacityThresholdPct Capacity threshold for ramp up period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpCapacityThresholdPct(@Nullable Integer rampUpCapacityThresholdPct) {
             $.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
             return this;
         }
 
+        /**
+         * @param rampUpLoadBalancingAlgorithm Load balancing algorithm for ramp up period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpLoadBalancingAlgorithm(@Nullable String rampUpLoadBalancingAlgorithm) {
             $.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
             return this;
         }
 
+        /**
+         * @param rampUpMinimumHostsPct Minimum host percentage for ramp up period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpMinimumHostsPct(@Nullable Integer rampUpMinimumHostsPct) {
             $.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
             return this;
         }
 
+        /**
+         * @param rampUpStartTime Starting time for ramp up period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpStartTime(@Nullable String rampUpStartTime) {
             $.rampUpStartTime = rampUpStartTime;
             return this;

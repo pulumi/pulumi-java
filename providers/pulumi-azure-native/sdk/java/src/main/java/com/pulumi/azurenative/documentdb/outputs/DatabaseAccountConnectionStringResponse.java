@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DatabaseAccountConnectionStringResponse {
     /**
-     * Value of the connection string
+     * @return Value of the connection string
      * 
      */
     private final String connectionString;
     /**
-     * Description of the connection string
+     * @return Description of the connection string
      * 
      */
     private final String description;
@@ -29,16 +29,16 @@ public final class DatabaseAccountConnectionStringResponse {
     }
 
     /**
-     * Value of the connection string
+     * @return Value of the connection string
      * 
-    */
+     */
     public String connectionString() {
         return this.connectionString;
     }
     /**
-     * Description of the connection string
+     * @return Description of the connection string
      * 
-    */
+     */
     public String description() {
         return this.description;
     }

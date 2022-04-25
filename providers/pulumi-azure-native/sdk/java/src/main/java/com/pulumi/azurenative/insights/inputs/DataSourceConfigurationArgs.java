@@ -25,6 +25,10 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="eventLogs")
     private @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
 
+    /**
+     * @return Windows event logs configuration.
+     * 
+     */
     public Optional<Output<List<EventLogConfigurationArgs>>> eventLogs() {
         return Optional.ofNullable(this.eventLogs);
     }
@@ -36,6 +40,10 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="perfCounters")
     private @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
 
+    /**
+     * @return Performance counter configuration
+     * 
+     */
     public Optional<Output<List<PerformanceCounterConfigurationArgs>>> perfCounters() {
         return Optional.ofNullable(this.perfCounters);
     }
@@ -47,6 +55,10 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="providers")
     private @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
 
+    /**
+     * @return ETW providers configuration
+     * 
+     */
     public Optional<Output<List<EtwProviderConfigurationArgs>>> providers() {
         return Optional.ofNullable(this.providers);
     }
@@ -77,41 +89,95 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
             $ = new DataSourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventLogs Windows event logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLogs(@Nullable Output<List<EventLogConfigurationArgs>> eventLogs) {
             $.eventLogs = eventLogs;
             return this;
         }
 
+        /**
+         * @param eventLogs Windows event logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLogs(List<EventLogConfigurationArgs> eventLogs) {
             return eventLogs(Output.of(eventLogs));
         }
 
+        /**
+         * @param eventLogs Windows event logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLogs(EventLogConfigurationArgs... eventLogs) {
             return eventLogs(List.of(eventLogs));
         }
 
+        /**
+         * @param perfCounters Performance counter configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfCounters(@Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters) {
             $.perfCounters = perfCounters;
             return this;
         }
 
+        /**
+         * @param perfCounters Performance counter configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfCounters(List<PerformanceCounterConfigurationArgs> perfCounters) {
             return perfCounters(Output.of(perfCounters));
         }
 
+        /**
+         * @param perfCounters Performance counter configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfCounters(PerformanceCounterConfigurationArgs... perfCounters) {
             return perfCounters(List.of(perfCounters));
         }
 
+        /**
+         * @param providers ETW providers configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(@Nullable Output<List<EtwProviderConfigurationArgs>> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers ETW providers configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(List<EtwProviderConfigurationArgs> providers) {
             return providers(Output.of(providers));
         }
 
+        /**
+         * @param providers ETW providers configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(EtwProviderConfigurationArgs... providers) {
             return providers(List.of(providers));
         }

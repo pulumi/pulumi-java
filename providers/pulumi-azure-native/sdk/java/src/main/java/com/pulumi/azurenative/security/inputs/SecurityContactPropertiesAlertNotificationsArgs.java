@@ -29,6 +29,10 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
     @Import(name="minimalSeverity")
     private @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
 
+    /**
+     * @return Defines the minimal alert severity which will be sent as email notifications
+     * 
+     */
     public Optional<Output<Either<String,MinimalSeverity>>> minimalSeverity() {
         return Optional.ofNullable(this.minimalSeverity);
     }
@@ -40,6 +44,10 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
+    /**
+     * @return Defines if email notifications will be sent about new security alerts
+     * 
+     */
     public Optional<Output<Either<String,State>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -69,36 +77,84 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
             $ = new SecurityContactPropertiesAlertNotificationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimalSeverity Defines the minimal alert severity which will be sent as email notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalSeverity(@Nullable Output<Either<String,MinimalSeverity>> minimalSeverity) {
             $.minimalSeverity = minimalSeverity;
             return this;
         }
 
+        /**
+         * @param minimalSeverity Defines the minimal alert severity which will be sent as email notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalSeverity(Either<String,MinimalSeverity> minimalSeverity) {
             return minimalSeverity(Output.of(minimalSeverity));
         }
 
+        /**
+         * @param minimalSeverity Defines the minimal alert severity which will be sent as email notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalSeverity(String minimalSeverity) {
             return minimalSeverity(Either.ofLeft(minimalSeverity));
         }
 
+        /**
+         * @param minimalSeverity Defines the minimal alert severity which will be sent as email notifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalSeverity(MinimalSeverity minimalSeverity) {
             return minimalSeverity(Either.ofRight(minimalSeverity));
         }
 
+        /**
+         * @param state Defines if email notifications will be sent about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Defines if email notifications will be sent about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Defines if email notifications will be sent about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Defines if email notifications will be sent about new security alerts
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Either.ofRight(state));
         }

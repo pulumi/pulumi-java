@@ -21,6 +21,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Optional. It is used to store the function/usage of the key
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -32,6 +36,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -61,11 +69,23 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. It is used to store the function/usage of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param key Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;

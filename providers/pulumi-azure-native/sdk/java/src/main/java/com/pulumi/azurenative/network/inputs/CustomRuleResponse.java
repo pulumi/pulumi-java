@@ -28,6 +28,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Describes what action to be applied when rule matches.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -39,6 +43,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -50,6 +58,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="matchConditions", required=true)
     private List<FrontDoorMatchConditionResponse> matchConditions;
 
+    /**
+     * @return List of match conditions.
+     * 
+     */
     public List<FrontDoorMatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
@@ -61,6 +73,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Describes the name of the rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +88,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -83,6 +103,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rateLimitDurationInMinutes")
     private @Nullable Integer rateLimitDurationInMinutes;
 
+    /**
+     * @return Time window for resetting the rate limit count. Default is 1 minute.
+     * 
+     */
     public Optional<Integer> rateLimitDurationInMinutes() {
         return Optional.ofNullable(this.rateLimitDurationInMinutes);
     }
@@ -94,6 +118,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rateLimitThreshold")
     private @Nullable Integer rateLimitThreshold;
 
+    /**
+     * @return Number of allowed requests per client within the time window.
+     * 
+     */
     public Optional<Integer> rateLimitThreshold() {
         return Optional.ofNullable(this.rateLimitThreshold);
     }
@@ -105,6 +133,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return Describes type of rule.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -140,45 +172,99 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CustomRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<FrontDoorMatchConditionResponse> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(FrontDoorMatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param name Describes the name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param rateLimitDurationInMinutes Time window for resetting the rate limit count. Default is 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
             $.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
 
+        /**
+         * @param rateLimitThreshold Number of allowed requests per client within the time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitThreshold(@Nullable Integer rateLimitThreshold) {
             $.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
+        /**
+         * @param ruleType Describes type of rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;

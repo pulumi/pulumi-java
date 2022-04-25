@@ -13,43 +13,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
     /**
-     * Azure Internal monitoring pipeline account.
+     * @return Azure Internal monitoring pipeline account.
      * 
      */
     private final @Nullable String accountName;
     /**
-     * Azure Internal monitoring pipeline autokey associated with the certificate.
+     * @return Azure Internal monitoring pipeline autokey associated with the certificate.
      * 
      */
     private final @Nullable String autoKeyConfigUrl;
     /**
-     * A description of the sink.
+     * @return A description of the sink.
      * 
      */
     private final @Nullable String description;
     /**
-     * Azure Internal monitoring agent fluentd configuration.
+     * @return Azure Internal monitoring agent fluentd configuration.
      * 
      */
     private final @Nullable Object fluentdConfigUrl;
     /**
-     * The kind of DiagnosticsSink.
+     * @return The kind of DiagnosticsSink.
      * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
      * 
      */
     private final String kind;
     /**
-     * Azure Internal monitoring agent configuration.
+     * @return Azure Internal monitoring agent configuration.
      * 
      */
     private final @Nullable String maConfigUrl;
     /**
-     * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+     * @return Name of the sink. This value is referenced by DiagnosticsReferenceDescription
      * 
      */
     private final @Nullable String name;
     /**
-     * Azure Internal monitoring pipeline account namespace.
+     * @return Azure Internal monitoring pipeline account namespace.
      * 
      */
     private final @Nullable String namespace;
@@ -75,59 +75,59 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
     }
 
     /**
-     * Azure Internal monitoring pipeline account.
+     * @return Azure Internal monitoring pipeline account.
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * Azure Internal monitoring pipeline autokey associated with the certificate.
+     * @return Azure Internal monitoring pipeline autokey associated with the certificate.
      * 
-    */
+     */
     public Optional<String> autoKeyConfigUrl() {
         return Optional.ofNullable(this.autoKeyConfigUrl);
     }
     /**
-     * A description of the sink.
+     * @return A description of the sink.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Azure Internal monitoring agent fluentd configuration.
+     * @return Azure Internal monitoring agent fluentd configuration.
      * 
-    */
+     */
     public Optional<Object> fluentdConfigUrl() {
         return Optional.ofNullable(this.fluentdConfigUrl);
     }
     /**
-     * The kind of DiagnosticsSink.
+     * @return The kind of DiagnosticsSink.
      * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Azure Internal monitoring agent configuration.
+     * @return Azure Internal monitoring agent configuration.
      * 
-    */
+     */
     public Optional<String> maConfigUrl() {
         return Optional.ofNullable(this.maConfigUrl);
     }
     /**
-     * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+     * @return Name of the sink. This value is referenced by DiagnosticsReferenceDescription
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Azure Internal monitoring pipeline account namespace.
+     * @return Azure Internal monitoring pipeline account namespace.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }

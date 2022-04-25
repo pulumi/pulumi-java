@@ -29,6 +29,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cert")
     private @Nullable Output<String> cert;
 
+    /**
+     * @return The SSL cert data in PEM format.
+     * 
+     */
     public Optional<Output<String>> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -40,6 +44,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cname")
     private @Nullable Output<String> cname;
 
+    /**
+     * @return The CName of the certificate.
+     * 
+     */
     public Optional<Output<String>> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -51,6 +59,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -62,6 +74,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
     private @Nullable Output<Either<String,Status>> status;
 
+    /**
+     * @return SSL status. Allowed values are Enabled and Disabled.
+     * 
+     */
     public Optional<Output<Either<String,Status>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -93,46 +109,106 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
             $ = new SslConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert The SSL cert data in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable Output<String> cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param cert The SSL cert data in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             return cert(Output.of(cert));
         }
 
+        /**
+         * @param cname The CName of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable Output<String> cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param cname The CName of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(String cname) {
             return cname(Output.of(cname));
         }
 
+        /**
+         * @param key The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param status SSL status. Allowed values are Enabled and Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,Status>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status SSL status. Allowed values are Enabled and Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,Status> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status SSL status. Allowed values are Enabled and Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status SSL status. Allowed values are Enabled and Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Status status) {
             return status(Either.ofRight(status));
         }

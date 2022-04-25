@@ -26,6 +26,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="attributes")
     private @Nullable SecretAttributesResponse attributes;
 
+    /**
+     * @return The attributes of the secret.
+     * 
+     */
     public Optional<SecretAttributesResponse> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -37,6 +41,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="contentType")
     private @Nullable String contentType;
 
+    /**
+     * @return The content type of the secret.
+     * 
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -48,6 +56,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="secretUri", required=true)
     private String secretUri;
 
+    /**
+     * @return The URI to retrieve the current version of the secret.
+     * 
+     */
     public String secretUri() {
         return this.secretUri;
     }
@@ -59,6 +71,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="secretUriWithVersion", required=true)
     private String secretUriWithVersion;
 
+    /**
+     * @return The URI to retrieve the specific version of the secret.
+     * 
+     */
     public String secretUriWithVersion() {
         return this.secretUriWithVersion;
     }
@@ -70,6 +86,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -102,26 +122,56 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new SecretPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable SecretAttributesResponse attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param contentType The content type of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param secretUri The URI to retrieve the current version of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretUri(String secretUri) {
             $.secretUri = secretUri;
             return this;
         }
 
+        /**
+         * @param secretUriWithVersion The URI to retrieve the specific version of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretUriWithVersion(String secretUriWithVersion) {
             $.secretUriWithVersion = secretUriWithVersion;
             return this;
         }
 
+        /**
+         * @param value The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

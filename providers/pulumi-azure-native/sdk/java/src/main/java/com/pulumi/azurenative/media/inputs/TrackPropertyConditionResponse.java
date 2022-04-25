@@ -25,6 +25,10 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
     @Import(name="operation", required=true)
     private String operation;
 
+    /**
+     * @return Track property condition operation
+     * 
+     */
     public String operation() {
         return this.operation;
     }
@@ -36,6 +40,10 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
     @Import(name="property", required=true)
     private String property;
 
+    /**
+     * @return Track property type
+     * 
+     */
     public String property() {
         return this.property;
     }
@@ -47,6 +55,10 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Track property value
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
             $ = new TrackPropertyConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation Track property condition operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param property Track property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(String property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param value Track property value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

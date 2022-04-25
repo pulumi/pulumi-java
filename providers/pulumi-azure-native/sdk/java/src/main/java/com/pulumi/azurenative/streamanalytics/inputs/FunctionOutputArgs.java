@@ -26,6 +26,10 @@ public final class FunctionOutputArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -54,11 +58,23 @@ public final class FunctionOutputArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FunctionOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }

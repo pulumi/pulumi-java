@@ -25,6 +25,10 @@ public final class DeinterlaceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return The deinterlacing mode. Defaults to AutoPixelAdaptive.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -36,6 +40,10 @@ public final class DeinterlaceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parity")
     private @Nullable String parity;
 
+    /**
+     * @return The field parity for de-interlacing, defaults to Auto.
+     * 
+     */
     public Optional<String> parity() {
         return Optional.ofNullable(this.parity);
     }
@@ -65,11 +73,23 @@ public final class DeinterlaceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeinterlaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The deinterlacing mode. Defaults to AutoPixelAdaptive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param parity The field parity for de-interlacing, defaults to Auto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parity(@Nullable String parity) {
             $.parity = parity;
             return this;

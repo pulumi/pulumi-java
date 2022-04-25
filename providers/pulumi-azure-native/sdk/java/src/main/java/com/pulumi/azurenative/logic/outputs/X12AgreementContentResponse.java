@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class X12AgreementContentResponse {
     /**
-     * The X12 one-way receive agreement.
+     * @return The X12 one-way receive agreement.
      * 
      */
     private final X12OneWayAgreementResponse receiveAgreement;
     /**
-     * The X12 one-way send agreement.
+     * @return The X12 one-way send agreement.
      * 
      */
     private final X12OneWayAgreementResponse sendAgreement;
@@ -29,16 +29,16 @@ public final class X12AgreementContentResponse {
     }
 
     /**
-     * The X12 one-way receive agreement.
+     * @return The X12 one-way receive agreement.
      * 
-    */
+     */
     public X12OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
     /**
-     * The X12 one-way send agreement.
+     * @return The X12 one-way send agreement.
      * 
-    */
+     */
     public X12OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }

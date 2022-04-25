@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualHubRouteTableResponse {
     /**
-     * List of all routes.
+     * @return List of all routes.
      * 
      */
     private final @Nullable List<VirtualHubRouteResponse> routes;
@@ -23,9 +23,9 @@ public final class VirtualHubRouteTableResponse {
     }
 
     /**
-     * List of all routes.
+     * @return List of all routes.
      * 
-    */
+     */
     public List<VirtualHubRouteResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }

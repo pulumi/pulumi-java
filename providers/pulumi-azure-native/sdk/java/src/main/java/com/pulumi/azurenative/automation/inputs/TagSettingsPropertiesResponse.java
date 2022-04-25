@@ -27,6 +27,10 @@ public final class TagSettingsPropertiesResponse extends com.pulumi.resources.In
     @Import(name="filterOperator")
     private @Nullable String filterOperator;
 
+    /**
+     * @return Filter VMs by Any or All specified tags.
+     * 
+     */
     public Optional<String> filterOperator() {
         return Optional.ofNullable(this.filterOperator);
     }
@@ -38,6 +42,10 @@ public final class TagSettingsPropertiesResponse extends com.pulumi.resources.In
     @Import(name="tags")
     private @Nullable Map<String,List<String>> tags;
 
+    /**
+     * @return Dictionary of tags with its list of values.
+     * 
+     */
     public Optional<Map<String,List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -67,11 +75,23 @@ public final class TagSettingsPropertiesResponse extends com.pulumi.resources.In
             $ = new TagSettingsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterOperator Filter VMs by Any or All specified tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOperator(@Nullable String filterOperator) {
             $.filterOperator = filterOperator;
             return this;
         }
 
+        /**
+         * @param tags Dictionary of tags with its list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,List<String>> tags) {
             $.tags = tags;
             return this;

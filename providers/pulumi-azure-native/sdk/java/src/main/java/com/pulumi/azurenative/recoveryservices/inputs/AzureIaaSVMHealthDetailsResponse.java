@@ -25,6 +25,10 @@ public final class AzureIaaSVMHealthDetailsResponse extends com.pulumi.resources
     @Import(name="code", required=true)
     private Integer code;
 
+    /**
+     * @return Health Code
+     * 
+     */
     public Integer code() {
         return this.code;
     }
@@ -36,6 +40,10 @@ public final class AzureIaaSVMHealthDetailsResponse extends com.pulumi.resources
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Health Message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -47,6 +55,10 @@ public final class AzureIaaSVMHealthDetailsResponse extends com.pulumi.resources
     @Import(name="recommendations", required=true)
     private List<String> recommendations;
 
+    /**
+     * @return Health Recommended Actions
+     * 
+     */
     public List<String> recommendations() {
         return this.recommendations;
     }
@@ -58,6 +70,10 @@ public final class AzureIaaSVMHealthDetailsResponse extends com.pulumi.resources
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Health Title
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -89,25 +105,55 @@ public final class AzureIaaSVMHealthDetailsResponse extends com.pulumi.resources
             $ = new AzureIaaSVMHealthDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Health Code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Integer code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Health Message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(List<String> recommendations) {
             $.recommendations = recommendations;
             return this;
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
         }
 
+        /**
+         * @param title Health Title
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

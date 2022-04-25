@@ -29,6 +29,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
     @Import(name="groupConnectivityInformation")
     private @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
 
+    /**
+     * @return Group connectivity information.
+     * 
+     */
     public Optional<List<GroupConnectivityInformationResponse>> groupConnectivityInformation() {
         return Optional.ofNullable(this.groupConnectivityInformation);
     }
@@ -40,6 +44,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return NRP resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
     @Import(name="remotePrivateEndpointConnection")
     private @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
 
+    /**
+     * @return Remote private endpoint connection details.
+     * 
+     */
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> remotePrivateEndpointConnection() {
         return Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
@@ -62,6 +74,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
     @Import(name="remotePrivateLinkServiceConnectionState")
     private @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
+    /**
+     * @return Remote private link service connection state
+     * 
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> remotePrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }
@@ -93,25 +109,55 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
             $ = new PrivateLinkServiceProxyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupConnectivityInformation Group connectivity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation) {
             $.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
 
+        /**
+         * @param groupConnectivityInformation Group connectivity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivityInformation(GroupConnectivityInformationResponse... groupConnectivityInformation) {
             return groupConnectivityInformation(List.of(groupConnectivityInformation));
         }
 
+        /**
+         * @param id NRP resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param remotePrivateEndpointConnection Remote private endpoint connection details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePrivateEndpointConnection(@Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection) {
             $.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
             return this;
         }
 
+        /**
+         * @param remotePrivateLinkServiceConnectionState Remote private link service connection state
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
             $.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;

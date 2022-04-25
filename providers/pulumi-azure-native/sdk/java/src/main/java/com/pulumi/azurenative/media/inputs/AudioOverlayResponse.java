@@ -27,6 +27,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="audioGainLevel")
     private @Nullable Double audioGainLevel;
 
+    /**
+     * @return The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
+     * 
+     */
     public Optional<Double> audioGainLevel() {
         return Optional.ofNullable(this.audioGainLevel);
     }
@@ -38,6 +42,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="end")
     private @Nullable String end;
 
+    /**
+     * @return The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
+     * 
+     */
     public Optional<String> end() {
         return Optional.ofNullable(this.end);
     }
@@ -49,6 +57,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fadeInDuration")
     private @Nullable String fadeInDuration;
 
+    /**
+     * @return The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
+     * 
+     */
     public Optional<String> fadeInDuration() {
         return Optional.ofNullable(this.fadeInDuration);
     }
@@ -60,6 +72,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fadeOutDuration")
     private @Nullable String fadeOutDuration;
 
+    /**
+     * @return The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
+     * 
+     */
     public Optional<String> fadeOutDuration() {
         return Optional.ofNullable(this.fadeOutDuration);
     }
@@ -71,6 +87,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inputLabel", required=true)
     private String inputLabel;
 
+    /**
+     * @return The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
+     * 
+     */
     public String inputLabel() {
         return this.inputLabel;
     }
@@ -83,6 +103,11 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.AudioOverlay&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -94,6 +119,10 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="start")
     private @Nullable String start;
 
+    /**
+     * @return The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
+     * 
+     */
     public Optional<String> start() {
         return Optional.ofNullable(this.start);
     }
@@ -128,36 +157,79 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AudioOverlayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioGainLevel The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioGainLevel(@Nullable Double audioGainLevel) {
             $.audioGainLevel = audioGainLevel;
             return this;
         }
 
+        /**
+         * @param end The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable String end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param fadeInDuration The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
             $.fadeInDuration = fadeInDuration;
             return this;
         }
 
+        /**
+         * @param fadeOutDuration The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
             $.fadeOutDuration = fadeOutDuration;
             return this;
         }
 
+        /**
+         * @param inputLabel The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputLabel(String inputLabel) {
             $.inputLabel = inputLabel;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AudioOverlay&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param start The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable String start) {
             $.start = start;
             return this;

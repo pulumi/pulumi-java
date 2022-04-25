@@ -21,6 +21,10 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="vmScaleSetName", required=true)
     private String vmScaleSetName;
 
+    /**
+     * @return The name of the VM scale set containing the extension.
+     * 
+     */
     public String vmScaleSetName() {
         return this.vmScaleSetName;
     }
@@ -54,6 +66,10 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="vmssExtensionName", required=true)
     private String vmssExtensionName;
 
+    /**
+     * @return The name of the VM scale set extension.
+     * 
+     */
     public String vmssExtensionName() {
         return this.vmssExtensionName;
     }
@@ -85,21 +101,45 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
             $ = new GetVirtualMachineScaleSetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vmScaleSetName The name of the VM scale set containing the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmScaleSetName(String vmScaleSetName) {
             $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
+        /**
+         * @param vmssExtensionName The name of the VM scale set extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmssExtensionName(String vmssExtensionName) {
             $.vmssExtensionName = vmssExtensionName;
             return this;

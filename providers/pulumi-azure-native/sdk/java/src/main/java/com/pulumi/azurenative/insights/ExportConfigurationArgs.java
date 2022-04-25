@@ -22,6 +22,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationAccountId")
     private @Nullable Output<String> destinationAccountId;
 
+    /**
+     * @return The name of destination storage account.
+     * 
+     */
     public Optional<Output<String>> destinationAccountId() {
         return Optional.ofNullable(this.destinationAccountId);
     }
@@ -33,6 +37,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationAddress")
     private @Nullable Output<String> destinationAddress;
 
+    /**
+     * @return The SAS URL for the destination storage container. It must grant write permission.
+     * 
+     */
     public Optional<Output<String>> destinationAddress() {
         return Optional.ofNullable(this.destinationAddress);
     }
@@ -44,6 +52,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationStorageLocationId")
     private @Nullable Output<String> destinationStorageLocationId;
 
+    /**
+     * @return The location ID of the destination storage container.
+     * 
+     */
     public Optional<Output<String>> destinationStorageLocationId() {
         return Optional.ofNullable(this.destinationStorageLocationId);
     }
@@ -55,6 +67,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationStorageSubscriptionId")
     private @Nullable Output<String> destinationStorageSubscriptionId;
 
+    /**
+     * @return The subscription ID of the destination storage container.
+     * 
+     */
     public Optional<Output<String>> destinationStorageSubscriptionId() {
         return Optional.ofNullable(this.destinationStorageSubscriptionId);
     }
@@ -66,6 +82,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationType")
     private @Nullable Output<String> destinationType;
 
+    /**
+     * @return The Continuous Export destination type. This has to be &#39;Blob&#39;.
+     * 
+     */
     public Optional<Output<String>> destinationType() {
         return Optional.ofNullable(this.destinationType);
     }
@@ -77,6 +97,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="exportId")
     private @Nullable Output<String> exportId;
 
+    /**
+     * @return The Continuous Export configuration ID. This is unique within a Application Insights component.
+     * 
+     */
     public Optional<Output<String>> exportId() {
         return Optional.ofNullable(this.exportId);
     }
@@ -88,6 +112,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="isEnabled")
     private @Nullable Output<String> isEnabled;
 
+    /**
+     * @return Set to &#39;true&#39; to create a Continuous Export configuration as enabled, otherwise set it to &#39;false&#39;.
+     * 
+     */
     public Optional<Output<String>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -99,6 +127,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="notificationQueueEnabled")
     private @Nullable Output<String> notificationQueueEnabled;
 
+    /**
+     * @return Deprecated
+     * 
+     */
     public Optional<Output<String>> notificationQueueEnabled() {
         return Optional.ofNullable(this.notificationQueueEnabled);
     }
@@ -110,6 +142,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="notificationQueueUri")
     private @Nullable Output<String> notificationQueueUri;
 
+    /**
+     * @return Deprecated
+     * 
+     */
     public Optional<Output<String>> notificationQueueUri() {
         return Optional.ofNullable(this.notificationQueueUri);
     }
@@ -121,6 +157,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="recordTypes")
     private @Nullable Output<String> recordTypes;
 
+    /**
+     * @return The document types to be exported, as comma separated values. Allowed values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
+     * 
+     */
     public Optional<Output<String>> recordTypes() {
         return Optional.ofNullable(this.recordTypes);
     }
@@ -132,6 +172,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -143,6 +187,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -182,110 +230,254 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
             $ = new ExportConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationAccountId The name of destination storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAccountId(@Nullable Output<String> destinationAccountId) {
             $.destinationAccountId = destinationAccountId;
             return this;
         }
 
+        /**
+         * @param destinationAccountId The name of destination storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAccountId(String destinationAccountId) {
             return destinationAccountId(Output.of(destinationAccountId));
         }
 
+        /**
+         * @param destinationAddress The SAS URL for the destination storage container. It must grant write permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddress(@Nullable Output<String> destinationAddress) {
             $.destinationAddress = destinationAddress;
             return this;
         }
 
+        /**
+         * @param destinationAddress The SAS URL for the destination storage container. It must grant write permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddress(String destinationAddress) {
             return destinationAddress(Output.of(destinationAddress));
         }
 
+        /**
+         * @param destinationStorageLocationId The location ID of the destination storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationStorageLocationId(@Nullable Output<String> destinationStorageLocationId) {
             $.destinationStorageLocationId = destinationStorageLocationId;
             return this;
         }
 
+        /**
+         * @param destinationStorageLocationId The location ID of the destination storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationStorageLocationId(String destinationStorageLocationId) {
             return destinationStorageLocationId(Output.of(destinationStorageLocationId));
         }
 
+        /**
+         * @param destinationStorageSubscriptionId The subscription ID of the destination storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationStorageSubscriptionId(@Nullable Output<String> destinationStorageSubscriptionId) {
             $.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
             return this;
         }
 
+        /**
+         * @param destinationStorageSubscriptionId The subscription ID of the destination storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationStorageSubscriptionId(String destinationStorageSubscriptionId) {
             return destinationStorageSubscriptionId(Output.of(destinationStorageSubscriptionId));
         }
 
+        /**
+         * @param destinationType The Continuous Export destination type. This has to be &#39;Blob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(@Nullable Output<String> destinationType) {
             $.destinationType = destinationType;
             return this;
         }
 
+        /**
+         * @param destinationType The Continuous Export destination type. This has to be &#39;Blob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(String destinationType) {
             return destinationType(Output.of(destinationType));
         }
 
+        /**
+         * @param exportId The Continuous Export configuration ID. This is unique within a Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportId(@Nullable Output<String> exportId) {
             $.exportId = exportId;
             return this;
         }
 
+        /**
+         * @param exportId The Continuous Export configuration ID. This is unique within a Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportId(String exportId) {
             return exportId(Output.of(exportId));
         }
 
+        /**
+         * @param isEnabled Set to &#39;true&#39; to create a Continuous Export configuration as enabled, otherwise set it to &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<String> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Set to &#39;true&#39; to create a Continuous Export configuration as enabled, otherwise set it to &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(String isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param notificationQueueEnabled Deprecated
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationQueueEnabled(@Nullable Output<String> notificationQueueEnabled) {
             $.notificationQueueEnabled = notificationQueueEnabled;
             return this;
         }
 
+        /**
+         * @param notificationQueueEnabled Deprecated
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationQueueEnabled(String notificationQueueEnabled) {
             return notificationQueueEnabled(Output.of(notificationQueueEnabled));
         }
 
+        /**
+         * @param notificationQueueUri Deprecated
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationQueueUri(@Nullable Output<String> notificationQueueUri) {
             $.notificationQueueUri = notificationQueueUri;
             return this;
         }
 
+        /**
+         * @param notificationQueueUri Deprecated
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationQueueUri(String notificationQueueUri) {
             return notificationQueueUri(Output.of(notificationQueueUri));
         }
 
+        /**
+         * @param recordTypes The document types to be exported, as comma separated values. Allowed values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordTypes(@Nullable Output<String> recordTypes) {
             $.recordTypes = recordTypes;
             return this;
         }
 
+        /**
+         * @param recordTypes The document types to be exported, as comma separated values. Allowed values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordTypes(String recordTypes) {
             return recordTypes(Output.of(recordTypes));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

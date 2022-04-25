@@ -19,6 +19,10 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
     @Import(name="hcxEnterpriseSiteName", required=true)
     private String hcxEnterpriseSiteName;
 
+    /**
+     * @return Name of the HCX Enterprise Site in the private cloud
+     * 
+     */
     public String hcxEnterpriseSiteName() {
         return this.hcxEnterpriseSiteName;
     }
@@ -30,6 +34,10 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -41,6 +49,10 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
             $ = new GetHcxEnterpriseSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hcxEnterpriseSiteName Name of the HCX Enterprise Site in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcxEnterpriseSiteName(String hcxEnterpriseSiteName) {
             $.hcxEnterpriseSiteName = hcxEnterpriseSiteName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

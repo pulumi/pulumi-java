@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PublisherInfoResponse {
     /**
-     * The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+     * @return The &#34;OriginalName&#34; field taken from the file&#39;s version resource
      * 
      */
     private final @Nullable String binaryName;
     /**
-     * The product name taken from the file&#39;s version resource
+     * @return The product name taken from the file&#39;s version resource
      * 
      */
     private final @Nullable String productName;
     /**
-     * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * @return The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
      * 
      */
     private final @Nullable String publisherName;
     /**
-     * The binary file version taken from the file&#39;s version resource
+     * @return The binary file version taken from the file&#39;s version resource
      * 
      */
     private final @Nullable String version;
@@ -45,30 +45,30 @@ public final class PublisherInfoResponse {
     }
 
     /**
-     * The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+     * @return The &#34;OriginalName&#34; field taken from the file&#39;s version resource
      * 
-    */
+     */
     public Optional<String> binaryName() {
         return Optional.ofNullable(this.binaryName);
     }
     /**
-     * The product name taken from the file&#39;s version resource
+     * @return The product name taken from the file&#39;s version resource
      * 
-    */
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
-     * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * @return The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
      * 
-    */
+     */
     public Optional<String> publisherName() {
         return Optional.ofNullable(this.publisherName);
     }
     /**
-     * The binary file version taken from the file&#39;s version resource
+     * @return The binary file version taken from the file&#39;s version resource
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

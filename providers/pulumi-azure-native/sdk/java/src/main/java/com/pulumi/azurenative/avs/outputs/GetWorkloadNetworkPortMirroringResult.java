@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkloadNetworkPortMirroringResult {
     /**
-     * Destination VM Group.
+     * @return Destination VM Group.
      * 
      */
     private final @Nullable String destination;
     /**
-     * Direction of port mirroring profile.
+     * @return Direction of port mirroring profile.
      * 
      */
     private final @Nullable String direction;
     /**
-     * Display name of the port mirroring profile.
+     * @return Display name of the port mirroring profile.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
      */
     private final String provisioningState;
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
      */
     private final @Nullable Double revision;
     /**
-     * Source VM Group.
+     * @return Source VM Group.
      * 
      */
     private final @Nullable String source;
     /**
-     * Port Mirroring Status.
+     * @return Port Mirroring Status.
      * 
      */
     private final String status;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -88,72 +88,72 @@ public final class GetWorkloadNetworkPortMirroringResult {
     }
 
     /**
-     * Destination VM Group.
+     * @return Destination VM Group.
      * 
-    */
+     */
     public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
-     * Direction of port mirroring profile.
+     * @return Direction of port mirroring profile.
      * 
-    */
+     */
     public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
-     * Display name of the port mirroring profile.
+     * @return Display name of the port mirroring profile.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
-    */
+     */
     public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * Source VM Group.
+     * @return Source VM Group.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * Port Mirroring Status.
+     * @return Port Mirroring Status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

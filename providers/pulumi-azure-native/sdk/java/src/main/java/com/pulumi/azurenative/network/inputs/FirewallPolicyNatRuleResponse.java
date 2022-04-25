@@ -32,6 +32,10 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="action")
     private @Nullable FirewallPolicyNatRuleActionResponse action;
 
+    /**
+     * @return The action type of a Nat rule.
+     * 
+     */
     public Optional<FirewallPolicyNatRuleActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
@@ -43,6 +47,10 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,6 +62,10 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority of the Firewall Policy Rule resource.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -65,6 +77,10 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="ruleCondition")
     private @Nullable Object ruleCondition;
 
+    /**
+     * @return The match conditions for incoming traffic.
+     * 
+     */
     public Optional<Object> ruleCondition() {
         return Optional.ofNullable(this.ruleCondition);
     }
@@ -77,6 +93,11 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return The type of the rule.
+     * Expected value is &#39;FirewallPolicyNatRule&#39;.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -88,6 +109,10 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="translatedAddress")
     private @Nullable String translatedAddress;
 
+    /**
+     * @return The translated address for this NAT rule.
+     * 
+     */
     public Optional<String> translatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
@@ -99,6 +124,10 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
     @Import(name="translatedPort")
     private @Nullable String translatedPort;
 
+    /**
+     * @return The translated port for this NAT rule.
+     * 
+     */
     public Optional<String> translatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }
@@ -133,36 +162,79 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
             $ = new FirewallPolicyNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a Nat rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable FirewallPolicyNatRuleActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param name The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Priority of the Firewall Policy Rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param ruleCondition The match conditions for incoming traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCondition(@Nullable Object ruleCondition) {
             $.ruleCondition = ruleCondition;
             return this;
         }
 
+        /**
+         * @param ruleType The type of the rule.
+         * Expected value is &#39;FirewallPolicyNatRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param translatedAddress The translated address for this NAT rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder translatedAddress(@Nullable String translatedAddress) {
             $.translatedAddress = translatedAddress;
             return this;
         }
 
+        /**
+         * @param translatedPort The translated port for this NAT rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder translatedPort(@Nullable String translatedPort) {
             $.translatedPort = translatedPort;
             return this;

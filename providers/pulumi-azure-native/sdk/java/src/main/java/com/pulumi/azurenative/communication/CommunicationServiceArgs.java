@@ -23,6 +23,10 @@ public final class CommunicationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="communicationServiceName")
     private @Nullable Output<String> communicationServiceName;
 
+    /**
+     * @return The name of the CommunicationService resource.
+     * 
+     */
     public Optional<Output<String>> communicationServiceName() {
         return Optional.ofNullable(this.communicationServiceName);
     }
@@ -34,6 +38,10 @@ public final class CommunicationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="dataLocation", required=true)
     private Output<String> dataLocation;
 
+    /**
+     * @return The location where the communication service stores its data at rest.
+     * 
+     */
     public Output<String> dataLocation() {
         return this.dataLocation;
     }
@@ -45,6 +53,10 @@ public final class CommunicationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The Azure location where the CommunicationService is running.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -56,6 +68,10 @@ public final class CommunicationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class CommunicationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class CommunicationServiceArgs extends com.pulumi.resources.Resourc
             $ = new CommunicationServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param communicationServiceName The name of the CommunicationService resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationServiceName(@Nullable Output<String> communicationServiceName) {
             $.communicationServiceName = communicationServiceName;
             return this;
         }
 
+        /**
+         * @param communicationServiceName The name of the CommunicationService resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationServiceName(String communicationServiceName) {
             return communicationServiceName(Output.of(communicationServiceName));
         }
 
+        /**
+         * @param dataLocation The location where the communication service stores its data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocation(Output<String> dataLocation) {
             $.dataLocation = dataLocation;
             return this;
         }
 
+        /**
+         * @param dataLocation The location where the communication service stores its data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocation(String dataLocation) {
             return dataLocation(Output.of(dataLocation));
         }
 
+        /**
+         * @param location The Azure location where the CommunicationService is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The Azure location where the CommunicationService is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -23,6 +23,10 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
     @Import(name="objectName", required=true)
     private String objectName;
 
+    /**
+     * @return Name of the object that has the difference
+     * 
+     */
     public String objectName() {
         return this.objectName;
     }
@@ -34,6 +38,10 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -45,6 +53,10 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
     @Import(name="updateAction", required=true)
     private String updateAction;
 
+    /**
+     * @return Update action type with respect to target
+     * 
+     */
     public String updateAction() {
         return this.updateAction;
     }
@@ -75,16 +87,34 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
             $ = new SchemaComparisonValidationResultTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectName Name of the object that has the difference
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectName(String objectName) {
             $.objectName = objectName;
             return this;
         }
 
+        /**
+         * @param objectType Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param updateAction Update action type with respect to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateAction(String updateAction) {
             $.updateAction = updateAction;
             return this;

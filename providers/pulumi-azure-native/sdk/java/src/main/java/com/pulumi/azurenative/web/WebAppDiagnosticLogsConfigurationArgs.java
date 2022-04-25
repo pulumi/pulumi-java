@@ -25,6 +25,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="applicationLogs")
     private @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
 
+    /**
+     * @return Application logs configuration.
+     * 
+     */
     public Optional<Output<ApplicationLogsConfigArgs>> applicationLogs() {
         return Optional.ofNullable(this.applicationLogs);
     }
@@ -36,6 +40,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="detailedErrorMessages")
     private @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
 
+    /**
+     * @return Detailed error messages configuration.
+     * 
+     */
     public Optional<Output<EnabledConfigArgs>> detailedErrorMessages() {
         return Optional.ofNullable(this.detailedErrorMessages);
     }
@@ -47,6 +55,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="failedRequestsTracing")
     private @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
 
+    /**
+     * @return Failed requests tracing configuration.
+     * 
+     */
     public Optional<Output<EnabledConfigArgs>> failedRequestsTracing() {
         return Optional.ofNullable(this.failedRequestsTracing);
     }
@@ -58,6 +70,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="httpLogs")
     private @Nullable Output<HttpLogsConfigArgs> httpLogs;
 
+    /**
+     * @return HTTP logs configuration.
+     * 
+     */
     public Optional<Output<HttpLogsConfigArgs>> httpLogs() {
         return Optional.ofNullable(this.httpLogs);
     }
@@ -69,6 +85,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -80,6 +100,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -91,6 +115,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -125,65 +153,149 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
             $ = new WebAppDiagnosticLogsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationLogs Application logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationLogs(@Nullable Output<ApplicationLogsConfigArgs> applicationLogs) {
             $.applicationLogs = applicationLogs;
             return this;
         }
 
+        /**
+         * @param applicationLogs Application logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationLogs(ApplicationLogsConfigArgs applicationLogs) {
             return applicationLogs(Output.of(applicationLogs));
         }
 
+        /**
+         * @param detailedErrorMessages Detailed error messages configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedErrorMessages(@Nullable Output<EnabledConfigArgs> detailedErrorMessages) {
             $.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
 
+        /**
+         * @param detailedErrorMessages Detailed error messages configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedErrorMessages(EnabledConfigArgs detailedErrorMessages) {
             return detailedErrorMessages(Output.of(detailedErrorMessages));
         }
 
+        /**
+         * @param failedRequestsTracing Failed requests tracing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedRequestsTracing(@Nullable Output<EnabledConfigArgs> failedRequestsTracing) {
             $.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
 
+        /**
+         * @param failedRequestsTracing Failed requests tracing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedRequestsTracing(EnabledConfigArgs failedRequestsTracing) {
             return failedRequestsTracing(Output.of(failedRequestsTracing));
         }
 
+        /**
+         * @param httpLogs HTTP logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLogs(@Nullable Output<HttpLogsConfigArgs> httpLogs) {
             $.httpLogs = httpLogs;
             return this;
         }
 
+        /**
+         * @param httpLogs HTTP logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLogs(HttpLogsConfigArgs httpLogs) {
             return httpLogs(Output.of(httpLogs));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

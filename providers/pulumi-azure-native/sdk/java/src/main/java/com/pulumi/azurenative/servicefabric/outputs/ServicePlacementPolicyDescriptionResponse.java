@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ServicePlacementPolicyDescriptionResponse {
     /**
-     * The type of placement policy for a service fabric service. Following are the possible values.
+     * @return The type of placement policy for a service fabric service. Following are the possible values.
      * 
      */
     private final String type;
@@ -21,9 +21,9 @@ public final class ServicePlacementPolicyDescriptionResponse {
     }
 
     /**
-     * The type of placement policy for a service fabric service. Following are the possible values.
+     * @return The type of placement policy for a service fabric service. Following are the possible values.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

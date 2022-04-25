@@ -23,6 +23,10 @@ public final class ReportConfigTimePeriodResponse extends com.pulumi.resources.I
     @Import(name="from", required=true)
     private String from;
 
+    /**
+     * @return The start date to pull data from.
+     * 
+     */
     public String from() {
         return this.from;
     }
@@ -34,6 +38,10 @@ public final class ReportConfigTimePeriodResponse extends com.pulumi.resources.I
     @Import(name="to", required=true)
     private String to;
 
+    /**
+     * @return The end date to pull data to.
+     * 
+     */
     public String to() {
         return this.to;
     }
@@ -63,11 +71,23 @@ public final class ReportConfigTimePeriodResponse extends com.pulumi.resources.I
             $ = new ReportConfigTimePeriodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param from The start date to pull data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder from(String from) {
             $.from = from;
             return this;
         }
 
+        /**
+         * @param to The end date to pull data to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(String to) {
             $.to = to;
             return this;

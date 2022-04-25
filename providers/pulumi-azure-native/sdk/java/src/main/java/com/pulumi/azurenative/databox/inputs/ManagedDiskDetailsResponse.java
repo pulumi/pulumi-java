@@ -25,6 +25,11 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="dataAccountType", required=true)
     private String dataAccountType;
 
+    /**
+     * @return Account Type of the data to be transferred.
+     * Expected value is &#39;ManagedDisk&#39;.
+     * 
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
@@ -36,6 +41,10 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="resourceGroupId", required=true)
     private String resourceGroupId;
 
+    /**
+     * @return Resource Group Id of the compute disks.
+     * 
+     */
     public String resourceGroupId() {
         return this.resourceGroupId;
     }
@@ -47,6 +56,10 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="stagingStorageAccountId", required=true)
     private String stagingStorageAccountId;
 
+    /**
+     * @return Resource Id of the storage account that can be used to copy the vhd for staging.
+     * 
+     */
     public String stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
@@ -77,16 +90,35 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
             $ = new ManagedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataAccountType Account Type of the data to be transferred.
+         * Expected value is &#39;ManagedDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param resourceGroupId Resource Group Id of the compute disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(String resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param stagingStorageAccountId Resource Id of the storage account that can be used to copy the vhd for staging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
             $.stagingStorageAccountId = stagingStorageAccountId;
             return this;

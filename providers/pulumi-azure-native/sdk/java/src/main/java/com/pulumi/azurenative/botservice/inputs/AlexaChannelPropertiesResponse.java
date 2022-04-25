@@ -24,6 +24,10 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="alexaSkillId", required=true)
     private String alexaSkillId;
 
+    /**
+     * @return The Alexa skill Id
+     * 
+     */
     public String alexaSkillId() {
         return this.alexaSkillId;
     }
@@ -35,6 +39,10 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -46,6 +54,10 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="serviceEndpointUri", required=true)
     private String serviceEndpointUri;
 
+    /**
+     * @return Full Uri used to configured the skill in Alexa
+     * 
+     */
     public String serviceEndpointUri() {
         return this.serviceEndpointUri;
     }
@@ -57,6 +69,10 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="urlFragment", required=true)
     private String urlFragment;
 
+    /**
+     * @return Url fragment used in part of the Uri configured in Alexa
+     * 
+     */
     public String urlFragment() {
         return this.urlFragment;
     }
@@ -88,21 +104,45 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
             $ = new AlexaChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alexaSkillId The Alexa skill Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder alexaSkillId(String alexaSkillId) {
             $.alexaSkillId = alexaSkillId;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param serviceEndpointUri Full Uri used to configured the skill in Alexa
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointUri(String serviceEndpointUri) {
             $.serviceEndpointUri = serviceEndpointUri;
             return this;
         }
 
+        /**
+         * @param urlFragment Url fragment used in part of the Uri configured in Alexa
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlFragment(String urlFragment) {
             $.urlFragment = urlFragment;
             return this;

@@ -27,6 +27,10 @@ public final class HttpLogsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="azureBlobStorage")
     private @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
 
+    /**
+     * @return Http logs to azure blob storage configuration.
+     * 
+     */
     public Optional<Output<AzureBlobStorageHttpLogsConfigArgs>> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
@@ -38,6 +42,10 @@ public final class HttpLogsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileSystem")
     private @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem;
 
+    /**
+     * @return Http logs to file system configuration.
+     * 
+     */
     public Optional<Output<FileSystemHttpLogsConfigArgs>> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -67,20 +75,44 @@ public final class HttpLogsConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new HttpLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureBlobStorage Http logs to azure blob storage configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorage(@Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage) {
             $.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
+        /**
+         * @param azureBlobStorage Http logs to azure blob storage configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorage(AzureBlobStorageHttpLogsConfigArgs azureBlobStorage) {
             return azureBlobStorage(Output.of(azureBlobStorage));
         }
 
+        /**
+         * @param fileSystem Http logs to file system configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileSystem Http logs to file system configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(FileSystemHttpLogsConfigArgs fileSystem) {
             return fileSystem(Output.of(fileSystem));
         }

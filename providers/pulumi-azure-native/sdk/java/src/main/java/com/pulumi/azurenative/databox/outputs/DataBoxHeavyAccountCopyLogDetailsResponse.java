@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class DataBoxHeavyAccountCopyLogDetailsResponse {
     /**
-     * Account name.
+     * @return Account name.
      * 
      */
     private final String accountName;
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBoxHeavy&#39;.
      * 
      */
     private final String copyLogDetailsType;
     /**
-     * Link for copy logs.
+     * @return Link for copy logs.
      * 
      */
     private final List<String> copyLogLink;
     /**
-     * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
+     * @return Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
      * 
      */
     private final List<String> copyVerboseLogLink;
@@ -45,31 +45,31 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
     }
 
     /**
-     * Account name.
+     * @return Account name.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBoxHeavy&#39;.
      * 
-    */
+     */
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
-     * Link for copy logs.
+     * @return Link for copy logs.
      * 
-    */
+     */
     public List<String> copyLogLink() {
         return this.copyLogLink;
     }
     /**
-     * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
+     * @return Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
      * 
-    */
+     */
     public List<String> copyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }

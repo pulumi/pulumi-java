@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AppInsightsCredentialsResponse {
     /**
-     * The AppInsights application ID.
+     * @return The AppInsights application ID.
      * 
      */
     private final @Nullable String appId;
     /**
-     * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * @return The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
      */
     private final @Nullable String instrumentationKey;
@@ -31,16 +31,16 @@ public final class AppInsightsCredentialsResponse {
     }
 
     /**
-     * The AppInsights application ID.
+     * @return The AppInsights application ID.
      * 
-    */
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
-     * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * @return The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
-    */
+     */
     public Optional<String> instrumentationKey() {
         return Optional.ofNullable(this.instrumentationKey);
     }

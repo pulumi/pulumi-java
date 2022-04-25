@@ -23,6 +23,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="isPrimaryNic", required=true)
     private String isPrimaryNic;
 
+    /**
+     * @return A value indicating whether this is the primary NIC.
+     * 
+     */
     public String isPrimaryNic() {
         return this.isPrimaryNic;
     }
@@ -34,6 +38,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="isSelectedForFailover", required=true)
     private String isSelectedForFailover;
 
+    /**
+     * @return A value indicating whether this NIC is selected for failover.
+     * 
+     */
     public String isSelectedForFailover() {
         return this.isSelectedForFailover;
     }
@@ -45,6 +53,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="nicId", required=true)
     private String nicId;
 
+    /**
+     * @return The NIC Id.
+     * 
+     */
     public String nicId() {
         return this.nicId;
     }
@@ -56,6 +68,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceIPAddress", required=true)
     private String sourceIPAddress;
 
+    /**
+     * @return The source IP address.
+     * 
+     */
     public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
@@ -67,6 +83,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceIPAddressType", required=true)
     private String sourceIPAddressType;
 
+    /**
+     * @return The source IP address type.
+     * 
+     */
     public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
@@ -78,6 +98,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNetworkId", required=true)
     private String sourceNetworkId;
 
+    /**
+     * @return Source network Id.
+     * 
+     */
     public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
@@ -89,6 +113,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceSubnetName", required=true)
     private String sourceSubnetName;
 
+    /**
+     * @return Source subnet name.
+     * 
+     */
     public String sourceSubnetName() {
         return this.sourceSubnetName;
     }
@@ -100,6 +128,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="targetIPAddress", required=true)
     private String targetIPAddress;
 
+    /**
+     * @return The target IP address.
+     * 
+     */
     public String targetIPAddress() {
         return this.targetIPAddress;
     }
@@ -111,6 +143,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="targetIPAddressType", required=true)
     private String targetIPAddressType;
 
+    /**
+     * @return The target IP address type.
+     * 
+     */
     public String targetIPAddressType() {
         return this.targetIPAddressType;
     }
@@ -122,6 +158,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="targetSubnetName", required=true)
     private String targetSubnetName;
 
+    /**
+     * @return Target subnet name.
+     * 
+     */
     public String targetSubnetName() {
         return this.targetSubnetName;
     }
@@ -133,6 +173,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="testIPAddress", required=true)
     private String testIPAddress;
 
+    /**
+     * @return The test IP address.
+     * 
+     */
     public String testIPAddress() {
         return this.testIPAddress;
     }
@@ -144,6 +188,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="testIPAddressType", required=true)
     private String testIPAddressType;
 
+    /**
+     * @return The test IP address type.
+     * 
+     */
     public String testIPAddressType() {
         return this.testIPAddressType;
     }
@@ -155,6 +203,10 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="testSubnetName", required=true)
     private String testSubnetName;
 
+    /**
+     * @return Test subnet name.
+     * 
+     */
     public String testSubnetName() {
         return this.testSubnetName;
     }
@@ -195,66 +247,144 @@ public final class InMageRcmNicDetailsResponse extends com.pulumi.resources.Invo
             $ = new InMageRcmNicDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isPrimaryNic A value indicating whether this is the primary NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrimaryNic(String isPrimaryNic) {
             $.isPrimaryNic = isPrimaryNic;
             return this;
         }
 
+        /**
+         * @param isSelectedForFailover A value indicating whether this NIC is selected for failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSelectedForFailover(String isSelectedForFailover) {
             $.isSelectedForFailover = isSelectedForFailover;
             return this;
         }
 
+        /**
+         * @param nicId The NIC Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicId(String nicId) {
             $.nicId = nicId;
             return this;
         }
 
+        /**
+         * @param sourceIPAddress The source IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIPAddress(String sourceIPAddress) {
             $.sourceIPAddress = sourceIPAddress;
             return this;
         }
 
+        /**
+         * @param sourceIPAddressType The source IP address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIPAddressType(String sourceIPAddressType) {
             $.sourceIPAddressType = sourceIPAddressType;
             return this;
         }
 
+        /**
+         * @param sourceNetworkId Source network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNetworkId(String sourceNetworkId) {
             $.sourceNetworkId = sourceNetworkId;
             return this;
         }
 
+        /**
+         * @param sourceSubnetName Source subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSubnetName(String sourceSubnetName) {
             $.sourceSubnetName = sourceSubnetName;
             return this;
         }
 
+        /**
+         * @param targetIPAddress The target IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIPAddress(String targetIPAddress) {
             $.targetIPAddress = targetIPAddress;
             return this;
         }
 
+        /**
+         * @param targetIPAddressType The target IP address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIPAddressType(String targetIPAddressType) {
             $.targetIPAddressType = targetIPAddressType;
             return this;
         }
 
+        /**
+         * @param targetSubnetName Target subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubnetName(String targetSubnetName) {
             $.targetSubnetName = targetSubnetName;
             return this;
         }
 
+        /**
+         * @param testIPAddress The test IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIPAddress(String testIPAddress) {
             $.testIPAddress = testIPAddress;
             return this;
         }
 
+        /**
+         * @param testIPAddressType The test IP address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIPAddressType(String testIPAddressType) {
             $.testIPAddressType = testIPAddressType;
             return this;
         }
 
+        /**
+         * @param testSubnetName Test subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSubnetName(String testSubnetName) {
             $.testSubnetName = testSubnetName;
             return this;

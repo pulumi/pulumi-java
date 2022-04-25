@@ -25,6 +25,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gatewayEndpoint", required=true)
     private String gatewayEndpoint;
 
+    /**
+     * @return The gateway endpoint used by the connected registry to communicate with its parent.
+     * 
+     */
     public String gatewayEndpoint() {
         return this.gatewayEndpoint;
     }
@@ -36,6 +40,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastSyncTime", required=true)
     private String lastSyncTime;
 
+    /**
+     * @return The last time a sync occurred between the connected registry and its parent.
+     * 
+     */
     public String lastSyncTime() {
         return this.lastSyncTime;
     }
@@ -47,6 +55,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="messageTtl", required=true)
     private String messageTtl;
 
+    /**
+     * @return The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+     * 
+     */
     public String messageTtl() {
         return this.messageTtl;
     }
@@ -58,6 +70,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="schedule")
     private @Nullable String schedule;
 
+    /**
+     * @return The cron expression indicating the schedule that the connected registry will sync with its parent.
+     * 
+     */
     public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -69,6 +85,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="syncWindow")
     private @Nullable String syncWindow;
 
+    /**
+     * @return The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+     * 
+     */
     public Optional<String> syncWindow() {
         return Optional.ofNullable(this.syncWindow);
     }
@@ -80,6 +100,10 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="tokenId", required=true)
     private String tokenId;
 
+    /**
+     * @return The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+     * 
+     */
     public String tokenId() {
         return this.tokenId;
     }
@@ -113,31 +137,67 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
             $ = new SyncPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayEndpoint The gateway endpoint used by the connected registry to communicate with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayEndpoint(String gatewayEndpoint) {
             $.gatewayEndpoint = gatewayEndpoint;
             return this;
         }
 
+        /**
+         * @param lastSyncTime The last time a sync occurred between the connected registry and its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncTime(String lastSyncTime) {
             $.lastSyncTime = lastSyncTime;
             return this;
         }
 
+        /**
+         * @param messageTtl The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTtl(String messageTtl) {
             $.messageTtl = messageTtl;
             return this;
         }
 
+        /**
+         * @param schedule The cron expression indicating the schedule that the connected registry will sync with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable String schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param syncWindow The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncWindow(@Nullable String syncWindow) {
             $.syncWindow = syncWindow;
             return this;
         }
 
+        /**
+         * @param tokenId The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenId(String tokenId) {
             $.tokenId = tokenId;
             return this;

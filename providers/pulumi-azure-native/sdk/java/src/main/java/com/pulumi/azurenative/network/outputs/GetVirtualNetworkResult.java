@@ -22,92 +22,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualNetworkResult {
     /**
-     * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+     * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
      */
     private final @Nullable AddressSpaceResponse addressSpace;
     /**
-     * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+     * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
      */
     private final @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities;
     /**
-     * The DDoS protection plan associated with the virtual network.
+     * @return The DDoS protection plan associated with the virtual network.
      * 
      */
     private final @Nullable SubResourceResponse ddosProtectionPlan;
     /**
-     * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+     * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
      */
     private final @Nullable DhcpOptionsResponse dhcpOptions;
     /**
-     * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+     * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
      */
     private final @Nullable Boolean enableDdosProtection;
     /**
-     * Indicates if VM protection is enabled for all the subnets in the virtual network.
+     * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
      */
     private final @Nullable Boolean enableVmProtection;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The extended location of the virtual network.
+     * @return The extended location of the virtual network.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Array of IpAllocation which reference this VNET.
+     * @return Array of IpAllocation which reference this VNET.
      * 
      */
     private final @Nullable List<SubResourceResponse> ipAllocations;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the virtual network resource.
+     * @return The provisioning state of the virtual network resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resourceGuid property of the Virtual Network resource.
+     * @return The resourceGuid property of the Virtual Network resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * A list of subnets in a Virtual Network.
+     * @return A list of subnets in a Virtual Network.
      * 
      */
     private final @Nullable List<SubnetResponse> subnets;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * A list of peerings in a Virtual Network.
+     * @return A list of peerings in a Virtual Network.
      * 
      */
     private final @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings;
@@ -153,128 +153,128 @@ public final class GetVirtualNetworkResult {
     }
 
     /**
-     * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+     * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
     /**
-     * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+     * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
-    */
+     */
     public Optional<VirtualNetworkBgpCommunitiesResponse> bgpCommunities() {
         return Optional.ofNullable(this.bgpCommunities);
     }
     /**
-     * The DDoS protection plan associated with the virtual network.
+     * @return The DDoS protection plan associated with the virtual network.
      * 
-    */
+     */
     public Optional<SubResourceResponse> ddosProtectionPlan() {
         return Optional.ofNullable(this.ddosProtectionPlan);
     }
     /**
-     * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+     * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
-    */
+     */
     public Optional<DhcpOptionsResponse> dhcpOptions() {
         return Optional.ofNullable(this.dhcpOptions);
     }
     /**
-     * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+     * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
-    */
+     */
     public Optional<Boolean> enableDdosProtection() {
         return Optional.ofNullable(this.enableDdosProtection);
     }
     /**
-     * Indicates if VM protection is enabled for all the subnets in the virtual network.
+     * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
-    */
+     */
     public Optional<Boolean> enableVmProtection() {
         return Optional.ofNullable(this.enableVmProtection);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The extended location of the virtual network.
+     * @return The extended location of the virtual network.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Array of IpAllocation which reference this VNET.
+     * @return Array of IpAllocation which reference this VNET.
      * 
-    */
+     */
     public List<SubResourceResponse> ipAllocations() {
         return this.ipAllocations == null ? List.of() : this.ipAllocations;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the virtual network resource.
+     * @return The provisioning state of the virtual network resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resourceGuid property of the Virtual Network resource.
+     * @return The resourceGuid property of the Virtual Network resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * A list of subnets in a Virtual Network.
+     * @return A list of subnets in a Virtual Network.
      * 
-    */
+     */
     public List<SubnetResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of peerings in a Virtual Network.
+     * @return A list of peerings in a Virtual Network.
      * 
-    */
+     */
     public List<VirtualNetworkPeeringResponse> virtualNetworkPeerings() {
         return this.virtualNetworkPeerings == null ? List.of() : this.virtualNetworkPeerings;
     }

@@ -30,6 +30,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
     @Import(name="associations")
     private @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
 
+    /**
+     * @return Waf associations
+     * 
+     */
     public Optional<Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>>> associations() {
         return Optional.ofNullable(this.associations);
     }
@@ -42,6 +46,11 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the Security policy to create.
+     * Expected value is &#39;WebApplicationFirewall&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -53,6 +62,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
     @Import(name="wafPolicy")
     private @Nullable Output<ResourceReferenceArgs> wafPolicy;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> wafPolicy() {
         return Optional.ofNullable(this.wafPolicy);
     }
@@ -83,33 +96,77 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
             $ = new SecurityPolicyWebApplicationFirewallParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associations Waf associations
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(@Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations) {
             $.associations = associations;
             return this;
         }
 
+        /**
+         * @param associations Waf associations
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
             return associations(Output.of(associations));
         }
 
+        /**
+         * @param associations Waf associations
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(SecurityPolicyWebApplicationFirewallAssociationArgs... associations) {
             return associations(List.of(associations));
         }
 
+        /**
+         * @param type The type of the Security policy to create.
+         * Expected value is &#39;WebApplicationFirewall&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the Security policy to create.
+         * Expected value is &#39;WebApplicationFirewall&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param wafPolicy Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafPolicy(@Nullable Output<ResourceReferenceArgs> wafPolicy) {
             $.wafPolicy = wafPolicy;
             return this;
         }
 
+        /**
+         * @param wafPolicy Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafPolicy(ResourceReferenceArgs wafPolicy) {
             return wafPolicy(Output.of(wafPolicy));
         }

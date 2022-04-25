@@ -30,6 +30,10 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
     @Import(name="type")
     private @Nullable Output<Either<String,FlowLogFormatType>> type;
 
+    /**
+     * @return The file type of flow log.
+     * 
+     */
     public Optional<Output<Either<String,FlowLogFormatType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -41,6 +45,10 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return The version (revision) of the flow log.
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -70,28 +78,64 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
             $ = new FlowLogFormatParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The file type of flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,FlowLogFormatType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The file type of flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,FlowLogFormatType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The file type of flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The file type of flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(FlowLogFormatType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param version The version (revision) of the flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version (revision) of the flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

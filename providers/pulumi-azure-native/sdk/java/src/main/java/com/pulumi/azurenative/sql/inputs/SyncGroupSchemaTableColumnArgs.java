@@ -26,6 +26,10 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
     @Import(name="dataSize")
     private @Nullable Output<String> dataSize;
 
+    /**
+     * @return Data size of the column.
+     * 
+     */
     public Optional<Output<String>> dataSize() {
         return Optional.ofNullable(this.dataSize);
     }
@@ -37,6 +41,10 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return Data type of the column.
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -48,6 +56,10 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
     @Import(name="quotedName")
     private @Nullable Output<String> quotedName;
 
+    /**
+     * @return Quoted name of sync group table column.
+     * 
+     */
     public Optional<Output<String>> quotedName() {
         return Optional.ofNullable(this.quotedName);
     }
@@ -78,29 +90,65 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
             $ = new SyncGroupSchemaTableColumnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSize Data size of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSize(@Nullable Output<String> dataSize) {
             $.dataSize = dataSize;
             return this;
         }
 
+        /**
+         * @param dataSize Data size of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSize(String dataSize) {
             return dataSize(Output.of(dataSize));
         }
 
+        /**
+         * @param dataType Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param quotedName Quoted name of sync group table column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotedName(@Nullable Output<String> quotedName) {
             $.quotedName = quotedName;
             return this;
         }
 
+        /**
+         * @param quotedName Quoted name of sync group table column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotedName(String quotedName) {
             return quotedName(Output.of(quotedName));
         }

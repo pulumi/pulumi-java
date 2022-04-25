@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class AS2AcknowledgementConnectionSettingsResponse {
     /**
-     * Indicates whether to ignore mismatch in certificate name.
+     * @return Indicates whether to ignore mismatch in certificate name.
      * 
      */
     private final Boolean ignoreCertificateNameMismatch;
     /**
-     * Indicates whether to keep the connection alive.
+     * @return Indicates whether to keep the connection alive.
      * 
      */
     private final Boolean keepHttpConnectionAlive;
     /**
-     * Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
+     * @return Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
      */
     private final Boolean supportHttpStatusCodeContinue;
     /**
-     * Indicates whether to unfold the HTTP headers.
+     * @return Indicates whether to unfold the HTTP headers.
      * 
      */
     private final Boolean unfoldHttpHeaders;
@@ -43,30 +43,30 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
     }
 
     /**
-     * Indicates whether to ignore mismatch in certificate name.
+     * @return Indicates whether to ignore mismatch in certificate name.
      * 
-    */
+     */
     public Boolean ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
     /**
-     * Indicates whether to keep the connection alive.
+     * @return Indicates whether to keep the connection alive.
      * 
-    */
+     */
     public Boolean keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
     /**
-     * Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
+     * @return Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
-    */
+     */
     public Boolean supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
     /**
-     * Indicates whether to unfold the HTTP headers.
+     * @return Indicates whether to unfold the HTTP headers.
      * 
-    */
+     */
     public Boolean unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }

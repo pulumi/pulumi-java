@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LabelingJobImagePropertiesResponse {
     /**
-     * Annotation type of image labeling tasks.
+     * @return Annotation type of image labeling tasks.
      * 
      */
     private final @Nullable String annotationType;
     /**
-     * Media type of data asset.
+     * @return Media type of data asset.
      * 
      */
     private final String mediaType;
@@ -31,16 +31,16 @@ public final class LabelingJobImagePropertiesResponse {
     }
 
     /**
-     * Annotation type of image labeling tasks.
+     * @return Annotation type of image labeling tasks.
      * 
-    */
+     */
     public Optional<String> annotationType() {
         return Optional.ofNullable(this.annotationType);
     }
     /**
-     * Media type of data asset.
+     * @return Media type of data asset.
      * 
-    */
+     */
     public String mediaType() {
         return this.mediaType;
     }

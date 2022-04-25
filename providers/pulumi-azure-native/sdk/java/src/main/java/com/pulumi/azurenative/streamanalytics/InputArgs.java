@@ -25,6 +25,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputName")
     private @Nullable Output<String> inputName;
 
+    /**
+     * @return The name of the input.
+     * 
+     */
     public Optional<Output<String>> inputName() {
         return Optional.ofNullable(this.inputName);
     }
@@ -36,6 +40,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
     private Output<String> jobName;
 
+    /**
+     * @return The name of the streaming job.
+     * 
+     */
     public Output<String> jobName() {
         return this.jobName;
     }
@@ -47,6 +55,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
+    /**
+     * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -69,6 +85,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,55 +121,127 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputName The name of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputName(@Nullable Output<String> inputName) {
             $.inputName = inputName;
             return this;
         }
 
+        /**
+         * @param inputName The name of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputName(String inputName) {
             return inputName(Output.of(inputName));
         }
 
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ReferenceInputPropertiesArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(StreamInputPropertiesArgs properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

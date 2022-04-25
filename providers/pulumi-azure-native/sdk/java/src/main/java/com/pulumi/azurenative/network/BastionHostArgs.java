@@ -25,6 +25,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bastionHostName")
     private @Nullable Output<String> bastionHostName;
 
+    /**
+     * @return The name of the Bastion Host.
+     * 
+     */
     public Optional<Output<String>> bastionHostName() {
         return Optional.ofNullable(this.bastionHostName);
     }
@@ -36,6 +40,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return FQDN for the endpoint on which bastion host is accessible.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -47,6 +55,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipConfigurations")
     private @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
 
+    /**
+     * @return IP configuration of the Bastion Host resource.
+     * 
+     */
     public Optional<Output<List<BastionHostIPConfigurationArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -69,6 +85,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +100,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,69 +153,159 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BastionHostArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bastionHostName The name of the Bastion Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bastionHostName(@Nullable Output<String> bastionHostName) {
             $.bastionHostName = bastionHostName;
             return this;
         }
 
+        /**
+         * @param bastionHostName The name of the Bastion Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bastionHostName(String bastionHostName) {
             return bastionHostName(Output.of(bastionHostName));
         }
 
+        /**
+         * @param dnsName FQDN for the endpoint on which bastion host is accessible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName FQDN for the endpoint on which bastion host is accessible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipConfigurations IP configuration of the Bastion Host resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations IP configuration of the Bastion Host resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<BastionHostIPConfigurationArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations IP configuration of the Bastion Host resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(BastionHostIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

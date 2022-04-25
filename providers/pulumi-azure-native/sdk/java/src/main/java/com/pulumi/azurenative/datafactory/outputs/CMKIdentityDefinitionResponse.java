@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CMKIdentityDefinitionResponse {
     /**
-     * The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
+     * @return The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
      * 
      */
     private final @Nullable String userAssignedIdentity;
@@ -23,9 +23,9 @@ public final class CMKIdentityDefinitionResponse {
     }
 
     /**
-     * The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
+     * @return The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
      * 
-    */
+     */
     public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }

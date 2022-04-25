@@ -32,6 +32,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="actionAfterReboot")
     private @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
 
+    /**
+     * @return Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+     * 
+     */
     public Optional<Output<Either<String,ActionAfterReboot>>> actionAfterReboot() {
         return Optional.ofNullable(this.actionAfterReboot);
     }
@@ -43,6 +47,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="allowModuleOverwrite")
     private @Nullable Output<Boolean> allowModuleOverwrite;
 
+    /**
+     * @return If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
+     * 
+     */
     public Optional<Output<Boolean>> allowModuleOverwrite() {
         return Optional.ofNullable(this.allowModuleOverwrite);
     }
@@ -54,6 +62,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationMode")
     private @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
 
+    /**
+     * @return Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
+     * 
+     */
     public Optional<Output<Either<String,ConfigurationMode>>> configurationMode() {
         return Optional.ofNullable(this.configurationMode);
     }
@@ -65,6 +77,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationModeFrequencyMins")
     private @Nullable Output<Double> configurationModeFrequencyMins;
 
+    /**
+     * @return How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
+     * 
+     */
     public Optional<Output<Double>> configurationModeFrequencyMins() {
         return Optional.ofNullable(this.configurationModeFrequencyMins);
     }
@@ -76,6 +92,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="rebootIfNeeded")
     private @Nullable Output<Boolean> rebootIfNeeded;
 
+    /**
+     * @return Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
+     * 
+     */
     public Optional<Output<Boolean>> rebootIfNeeded() {
         return Optional.ofNullable(this.rebootIfNeeded);
     }
@@ -87,6 +107,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="refreshFrequencyMins")
     private @Nullable Output<Double> refreshFrequencyMins;
 
+    /**
+     * @return The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
+     * 
+     */
     public Optional<Output<Double>> refreshFrequencyMins() {
         return Optional.ofNullable(this.refreshFrequencyMins);
     }
@@ -120,72 +144,168 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
             $ = new ConfigurationSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionAfterReboot Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionAfterReboot(@Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot) {
             $.actionAfterReboot = actionAfterReboot;
             return this;
         }
 
+        /**
+         * @param actionAfterReboot Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionAfterReboot(Either<String,ActionAfterReboot> actionAfterReboot) {
             return actionAfterReboot(Output.of(actionAfterReboot));
         }
 
+        /**
+         * @param actionAfterReboot Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionAfterReboot(String actionAfterReboot) {
             return actionAfterReboot(Either.ofLeft(actionAfterReboot));
         }
 
+        /**
+         * @param actionAfterReboot Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionAfterReboot(ActionAfterReboot actionAfterReboot) {
             return actionAfterReboot(Either.ofRight(actionAfterReboot));
         }
 
+        /**
+         * @param allowModuleOverwrite If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowModuleOverwrite(@Nullable Output<Boolean> allowModuleOverwrite) {
             $.allowModuleOverwrite = allowModuleOverwrite;
             return this;
         }
 
+        /**
+         * @param allowModuleOverwrite If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowModuleOverwrite(Boolean allowModuleOverwrite) {
             return allowModuleOverwrite(Output.of(allowModuleOverwrite));
         }
 
+        /**
+         * @param configurationMode Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationMode(@Nullable Output<Either<String,ConfigurationMode>> configurationMode) {
             $.configurationMode = configurationMode;
             return this;
         }
 
+        /**
+         * @param configurationMode Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationMode(Either<String,ConfigurationMode> configurationMode) {
             return configurationMode(Output.of(configurationMode));
         }
 
+        /**
+         * @param configurationMode Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationMode(String configurationMode) {
             return configurationMode(Either.ofLeft(configurationMode));
         }
 
+        /**
+         * @param configurationMode Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationMode(ConfigurationMode configurationMode) {
             return configurationMode(Either.ofRight(configurationMode));
         }
 
+        /**
+         * @param configurationModeFrequencyMins How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationModeFrequencyMins(@Nullable Output<Double> configurationModeFrequencyMins) {
             $.configurationModeFrequencyMins = configurationModeFrequencyMins;
             return this;
         }
 
+        /**
+         * @param configurationModeFrequencyMins How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationModeFrequencyMins(Double configurationModeFrequencyMins) {
             return configurationModeFrequencyMins(Output.of(configurationModeFrequencyMins));
         }
 
+        /**
+         * @param rebootIfNeeded Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootIfNeeded(@Nullable Output<Boolean> rebootIfNeeded) {
             $.rebootIfNeeded = rebootIfNeeded;
             return this;
         }
 
+        /**
+         * @param rebootIfNeeded Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootIfNeeded(Boolean rebootIfNeeded) {
             return rebootIfNeeded(Output.of(rebootIfNeeded));
         }
 
+        /**
+         * @param refreshFrequencyMins The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshFrequencyMins(@Nullable Output<Double> refreshFrequencyMins) {
             $.refreshFrequencyMins = refreshFrequencyMins;
             return this;
         }
 
+        /**
+         * @param refreshFrequencyMins The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshFrequencyMins(Double refreshFrequencyMins) {
             return refreshFrequencyMins(Output.of(refreshFrequencyMins));
         }

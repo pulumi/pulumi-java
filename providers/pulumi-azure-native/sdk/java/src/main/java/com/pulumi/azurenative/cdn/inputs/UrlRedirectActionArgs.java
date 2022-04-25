@@ -27,6 +27,11 @@ public final class UrlRedirectActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the action for the delivery rule.
+     * Expected value is &#39;UrlRedirect&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class UrlRedirectActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameters", required=true)
     private Output<UrlRedirectActionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the action.
+     * 
+     */
     public Output<UrlRedirectActionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class UrlRedirectActionArgs extends com.pulumi.resources.ResourceAr
             $ = new UrlRedirectActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;UrlRedirect&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;UrlRedirect&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<UrlRedirectActionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(UrlRedirectActionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

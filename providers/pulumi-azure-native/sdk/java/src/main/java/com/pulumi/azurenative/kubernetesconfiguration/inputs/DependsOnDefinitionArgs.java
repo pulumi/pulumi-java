@@ -26,6 +26,10 @@ public final class DependsOnDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="kustomizationName")
     private @Nullable Output<String> kustomizationName;
 
+    /**
+     * @return Name of the kustomization to claim dependency on
+     * 
+     */
     public Optional<Output<String>> kustomizationName() {
         return Optional.ofNullable(this.kustomizationName);
     }
@@ -54,11 +58,23 @@ public final class DependsOnDefinitionArgs extends com.pulumi.resources.Resource
             $ = new DependsOnDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kustomizationName Name of the kustomization to claim dependency on
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustomizationName(@Nullable Output<String> kustomizationName) {
             $.kustomizationName = kustomizationName;
             return this;
         }
 
+        /**
+         * @param kustomizationName Name of the kustomization to claim dependency on
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustomizationName(String kustomizationName) {
             return kustomizationName(Output.of(kustomizationName));
         }

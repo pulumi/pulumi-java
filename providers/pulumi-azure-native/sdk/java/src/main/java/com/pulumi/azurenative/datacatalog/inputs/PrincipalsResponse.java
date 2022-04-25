@@ -25,6 +25,10 @@ public final class PrincipalsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return Object Id for the user
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -36,6 +40,10 @@ public final class PrincipalsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="upn")
     private @Nullable String upn;
 
+    /**
+     * @return UPN of the user.
+     * 
+     */
     public Optional<String> upn() {
         return Optional.ofNullable(this.upn);
     }
@@ -65,11 +73,23 @@ public final class PrincipalsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrincipalsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId Object Id for the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param upn UPN of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upn(@Nullable String upn) {
             $.upn = upn;
             return this;

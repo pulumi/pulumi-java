@@ -27,6 +27,10 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alg", required=true)
     private Output<Either<String,AccessPolicyEccAlgo>> alg;
 
+    /**
+     * @return Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+     * 
+     */
     public Output<Either<String,AccessPolicyEccAlgo>> alg() {
         return this.alg;
     }
@@ -38,6 +42,10 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kid", required=true)
     private Output<String> kid;
 
+    /**
+     * @return JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+     * 
+     */
     public Output<String> kid() {
         return this.kid;
     }
@@ -50,6 +58,11 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -61,6 +74,10 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="x", required=true)
     private Output<String> x;
 
+    /**
+     * @return X coordinate.
+     * 
+     */
     public Output<String> x() {
         return this.x;
     }
@@ -72,6 +89,10 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="y", required=true)
     private Output<String> y;
 
+    /**
+     * @return Y coordinate.
+     * 
+     */
     public Output<String> y() {
         return this.y;
     }
@@ -104,55 +125,129 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EccTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alg Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(Output<Either<String,AccessPolicyEccAlgo>> alg) {
             $.alg = alg;
             return this;
         }
 
+        /**
+         * @param alg Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(Either<String,AccessPolicyEccAlgo> alg) {
             return alg(Output.of(alg));
         }
 
+        /**
+         * @param alg Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(String alg) {
             return alg(Either.ofLeft(alg));
         }
 
+        /**
+         * @param alg Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(AccessPolicyEccAlgo alg) {
             return alg(Either.ofRight(alg));
         }
 
+        /**
+         * @param kid JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kid(Output<String> kid) {
             $.kid = kid;
             return this;
         }
 
+        /**
+         * @param kid JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kid(String kid) {
             return kid(Output.of(kid));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param x X coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Output<String> x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param x X coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(String x) {
             return x(Output.of(x));
         }
 
+        /**
+         * @param y Y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Output<String> y) {
             $.y = y;
             return this;
         }
 
+        /**
+         * @param y Y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(String y) {
             return y(Output.of(y));
         }

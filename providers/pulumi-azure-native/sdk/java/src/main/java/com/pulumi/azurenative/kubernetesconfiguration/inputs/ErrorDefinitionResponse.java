@@ -23,6 +23,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Service specific error code which serves as the substatus for the HTTP error code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Description of the error.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -63,11 +71,23 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
             $ = new ErrorDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Service specific error code which serves as the substatus for the HTTP error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Description of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

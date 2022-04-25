@@ -23,6 +23,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The issue requiring attention.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -34,6 +38,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return The time when the condition was raised.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -63,11 +71,23 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message The issue requiring attention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param timestamp The time when the condition was raised.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;

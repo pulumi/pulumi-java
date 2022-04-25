@@ -25,6 +25,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="dataSetId", required=true)
     private String dataSetId;
 
+    /**
+     * @return Id of data set
+     * 
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
@@ -36,6 +40,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="dataSetType", required=true)
     private String dataSetType;
 
+    /**
+     * @return Type of the data set
+     * 
+     */
     public String dataSetType() {
         return this.dataSetType;
     }
@@ -47,6 +55,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="durationMs", required=true)
     private Integer durationMs;
 
+    /**
+     * @return Duration of data set level copy
+     * 
+     */
     public Integer durationMs() {
         return this.durationMs;
     }
@@ -58,6 +70,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End time of data set level copy
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -69,6 +85,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="filesRead", required=true)
     private Double filesRead;
 
+    /**
+     * @return The number of files read from the source data set
+     * 
+     */
     public Double filesRead() {
         return this.filesRead;
     }
@@ -80,6 +100,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="filesWritten", required=true)
     private Double filesWritten;
 
+    /**
+     * @return The number of files written into the sink data set
+     * 
+     */
     public Double filesWritten() {
         return this.filesWritten;
     }
@@ -91,6 +115,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Error message if any
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -102,6 +130,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the data set
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -113,6 +145,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="rowsCopied", required=true)
     private Double rowsCopied;
 
+    /**
+     * @return The number of files copied into the sink data set
+     * 
+     */
     public Double rowsCopied() {
         return this.rowsCopied;
     }
@@ -124,6 +160,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="rowsRead", required=true)
     private Double rowsRead;
 
+    /**
+     * @return The number of rows read from the source data set.
+     * 
+     */
     public Double rowsRead() {
         return this.rowsRead;
     }
@@ -135,6 +175,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="sizeRead", required=true)
     private Double sizeRead;
 
+    /**
+     * @return The size of the data read from the source data set in bytes
+     * 
+     */
     public Double sizeRead() {
         return this.sizeRead;
     }
@@ -146,6 +190,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="sizeWritten", required=true)
     private Double sizeWritten;
 
+    /**
+     * @return The size of the data written into the sink data set in bytes
+     * 
+     */
     public Double sizeWritten() {
         return this.sizeWritten;
     }
@@ -157,6 +205,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of data set level copy
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -168,6 +220,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Raw Status
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -179,6 +235,10 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="vCore", required=true)
     private Double vCore;
 
+    /**
+     * @return The vCore units consumed for the data set synchronization
+     * 
+     */
     public Double vCore() {
         return this.vCore;
     }
@@ -221,76 +281,166 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
             $ = new SynchronizationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSetId Id of data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetId(String dataSetId) {
             $.dataSetId = dataSetId;
             return this;
         }
 
+        /**
+         * @param dataSetType Type of the data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetType(String dataSetType) {
             $.dataSetType = dataSetType;
             return this;
         }
 
+        /**
+         * @param durationMs Duration of data set level copy
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(Integer durationMs) {
             $.durationMs = durationMs;
             return this;
         }
 
+        /**
+         * @param endTime End time of data set level copy
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param filesRead The number of files read from the source data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesRead(Double filesRead) {
             $.filesRead = filesRead;
             return this;
         }
 
+        /**
+         * @param filesWritten The number of files written into the sink data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesWritten(Double filesWritten) {
             $.filesWritten = filesWritten;
             return this;
         }
 
+        /**
+         * @param message Error message if any
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name Name of the data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param rowsCopied The number of files copied into the sink data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowsCopied(Double rowsCopied) {
             $.rowsCopied = rowsCopied;
             return this;
         }
 
+        /**
+         * @param rowsRead The number of rows read from the source data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowsRead(Double rowsRead) {
             $.rowsRead = rowsRead;
             return this;
         }
 
+        /**
+         * @param sizeRead The size of the data read from the source data set in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeRead(Double sizeRead) {
             $.sizeRead = sizeRead;
             return this;
         }
 
+        /**
+         * @param sizeWritten The size of the data written into the sink data set in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeWritten(Double sizeWritten) {
             $.sizeWritten = sizeWritten;
             return this;
         }
 
+        /**
+         * @param startTime Start time of data set level copy
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status Raw Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param vCore The vCore units consumed for the data set synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCore(Double vCore) {
             $.vCore = vCore;
             return this;

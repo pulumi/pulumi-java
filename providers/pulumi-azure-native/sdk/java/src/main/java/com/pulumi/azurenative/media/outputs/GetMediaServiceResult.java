@@ -18,53 +18,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMediaServiceResult {
     /**
-     * The account encryption properties.
+     * @return The account encryption properties.
      * 
      */
     private final @Nullable AccountEncryptionResponse encryption;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The Managed Identity for the Media Services account.
+     * @return The Managed Identity for the Media Services account.
      * 
      */
     private final @Nullable MediaServiceIdentityResponse identity;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The Media Services account ID.
+     * @return The Media Services account ID.
      * 
      */
     private final String mediaServiceId;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The storage accounts for this resource.
+     * @return The storage accounts for this resource.
      * 
      */
     private final @Nullable List<StorageAccountResponse> storageAccounts;
     private final @Nullable String storageAuthentication;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -96,51 +96,51 @@ public final class GetMediaServiceResult {
     }
 
     /**
-     * The account encryption properties.
+     * @return The account encryption properties.
      * 
-    */
+     */
     public Optional<AccountEncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Managed Identity for the Media Services account.
+     * @return The Managed Identity for the Media Services account.
      * 
-    */
+     */
     public Optional<MediaServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The Media Services account ID.
+     * @return The Media Services account ID.
      * 
-    */
+     */
     public String mediaServiceId() {
         return this.mediaServiceId;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The storage accounts for this resource.
+     * @return The storage accounts for this resource.
      * 
-    */
+     */
     public List<StorageAccountResponse> storageAccounts() {
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
     }
@@ -148,23 +148,23 @@ public final class GetMediaServiceResult {
         return Optional.ofNullable(this.storageAuthentication);
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

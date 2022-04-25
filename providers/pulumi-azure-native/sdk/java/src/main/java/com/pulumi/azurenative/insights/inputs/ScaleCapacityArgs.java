@@ -24,6 +24,10 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="default", required=true)
     private Output<String> default_;
 
+    /**
+     * @return the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
+     * 
+     */
     public Output<String> default_() {
         return this.default_;
     }
@@ -35,6 +39,10 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximum", required=true)
     private Output<String> maximum;
 
+    /**
+     * @return the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
+     * 
+     */
     public Output<String> maximum() {
         return this.maximum;
     }
@@ -46,6 +54,10 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimum", required=true)
     private Output<String> minimum;
 
+    /**
+     * @return the minimum number of instances for the resource.
+     * 
+     */
     public Output<String> minimum() {
         return this.minimum;
     }
@@ -76,29 +88,65 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleCapacityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(Output<String> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(String default_) {
             return default_(Output.of(default_));
         }
 
+        /**
+         * @param maximum the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Output<String> maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param maximum the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(String maximum) {
             return maximum(Output.of(maximum));
         }
 
+        /**
+         * @param minimum the minimum number of instances for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Output<String> minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param minimum the minimum number of instances for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(String minimum) {
             return minimum(Output.of(minimum));
         }

@@ -23,147 +23,147 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualNetworkGatewayConnectionResult {
     /**
-     * The authorizationKey.
+     * @return The authorizationKey.
      * 
      */
     private final @Nullable String authorizationKey;
     /**
-     * The connection mode for this connection.
+     * @return The connection mode for this connection.
      * 
      */
     private final @Nullable String connectionMode;
     /**
-     * Connection protocol used for this connection.
+     * @return Connection protocol used for this connection.
      * 
      */
     private final @Nullable String connectionProtocol;
     /**
-     * Virtual Network Gateway connection status.
+     * @return Virtual Network Gateway connection status.
      * 
      */
     private final String connectionStatus;
     /**
-     * Gateway connection type.
+     * @return Gateway connection type.
      * 
      */
     private final String connectionType;
     /**
-     * The dead peer detection timeout of this connection in seconds.
+     * @return The dead peer detection timeout of this connection in seconds.
      * 
      */
     private final @Nullable Integer dpdTimeoutSeconds;
     /**
-     * The egress bytes transferred in this connection.
+     * @return The egress bytes transferred in this connection.
      * 
      */
     private final Double egressBytesTransferred;
     /**
-     * EnableBgp flag.
+     * @return EnableBgp flag.
      * 
      */
     private final @Nullable Boolean enableBgp;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Bypass ExpressRoute Gateway for data forwarding.
+     * @return Bypass ExpressRoute Gateway for data forwarding.
      * 
      */
     private final @Nullable Boolean expressRouteGatewayBypass;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The ingress bytes transferred in this connection.
+     * @return The ingress bytes transferred in this connection.
      * 
      */
     private final Double ingressBytesTransferred;
     /**
-     * The IPSec Policies to be considered by this connection.
+     * @return The IPSec Policies to be considered by this connection.
      * 
      */
     private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
     /**
-     * The reference to local network gateway resource.
+     * @return The reference to local network gateway resource.
      * 
      */
     private final @Nullable LocalNetworkGatewayResponse localNetworkGateway2;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The reference to peerings resource.
+     * @return The reference to peerings resource.
      * 
      */
     private final @Nullable SubResourceResponse peer;
     /**
-     * The provisioning state of the virtual network gateway connection resource.
+     * @return The provisioning state of the virtual network gateway connection resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource GUID property of the virtual network gateway connection resource.
+     * @return The resource GUID property of the virtual network gateway connection resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * The routing weight.
+     * @return The routing weight.
      * 
      */
     private final @Nullable Integer routingWeight;
     /**
-     * The IPSec shared key.
+     * @return The IPSec shared key.
      * 
      */
     private final @Nullable String sharedKey;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The Traffic Selector Policies to be considered by this connection.
+     * @return The Traffic Selector Policies to be considered by this connection.
      * 
      */
     private final @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
     /**
-     * Collection of all tunnels&#39; connection health status.
+     * @return Collection of all tunnels&#39; connection health status.
      * 
      */
     private final List<TunnelConnectionHealthResponse> tunnelConnectionStatus;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Use private local Azure IP for the connection.
+     * @return Use private local Azure IP for the connection.
      * 
      */
     private final @Nullable Boolean useLocalAzureIpAddress;
     /**
-     * Enable policy-based traffic selectors.
+     * @return Enable policy-based traffic selectors.
      * 
      */
     private final @Nullable Boolean usePolicyBasedTrafficSelectors;
     /**
-     * The reference to virtual network gateway resource.
+     * @return The reference to virtual network gateway resource.
      * 
      */
     private final VirtualNetworkGatewayResponse virtualNetworkGateway1;
     /**
-     * The reference to virtual network gateway resource.
+     * @return The reference to virtual network gateway resource.
      * 
      */
     private final @Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2;
@@ -231,205 +231,205 @@ public final class GetVirtualNetworkGatewayConnectionResult {
     }
 
     /**
-     * The authorizationKey.
+     * @return The authorizationKey.
      * 
-    */
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
-     * The connection mode for this connection.
+     * @return The connection mode for this connection.
      * 
-    */
+     */
     public Optional<String> connectionMode() {
         return Optional.ofNullable(this.connectionMode);
     }
     /**
-     * Connection protocol used for this connection.
+     * @return Connection protocol used for this connection.
      * 
-    */
+     */
     public Optional<String> connectionProtocol() {
         return Optional.ofNullable(this.connectionProtocol);
     }
     /**
-     * Virtual Network Gateway connection status.
+     * @return Virtual Network Gateway connection status.
      * 
-    */
+     */
     public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
-     * Gateway connection type.
+     * @return Gateway connection type.
      * 
-    */
+     */
     public String connectionType() {
         return this.connectionType;
     }
     /**
-     * The dead peer detection timeout of this connection in seconds.
+     * @return The dead peer detection timeout of this connection in seconds.
      * 
-    */
+     */
     public Optional<Integer> dpdTimeoutSeconds() {
         return Optional.ofNullable(this.dpdTimeoutSeconds);
     }
     /**
-     * The egress bytes transferred in this connection.
+     * @return The egress bytes transferred in this connection.
      * 
-    */
+     */
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
-     * EnableBgp flag.
+     * @return EnableBgp flag.
      * 
-    */
+     */
     public Optional<Boolean> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Bypass ExpressRoute Gateway for data forwarding.
+     * @return Bypass ExpressRoute Gateway for data forwarding.
      * 
-    */
+     */
     public Optional<Boolean> expressRouteGatewayBypass() {
         return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The ingress bytes transferred in this connection.
+     * @return The ingress bytes transferred in this connection.
      * 
-    */
+     */
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
-     * The IPSec Policies to be considered by this connection.
+     * @return The IPSec Policies to be considered by this connection.
      * 
-    */
+     */
     public List<IpsecPolicyResponse> ipsecPolicies() {
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
     }
     /**
-     * The reference to local network gateway resource.
+     * @return The reference to local network gateway resource.
      * 
-    */
+     */
     public Optional<LocalNetworkGatewayResponse> localNetworkGateway2() {
         return Optional.ofNullable(this.localNetworkGateway2);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The reference to peerings resource.
+     * @return The reference to peerings resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> peer() {
         return Optional.ofNullable(this.peer);
     }
     /**
-     * The provisioning state of the virtual network gateway connection resource.
+     * @return The provisioning state of the virtual network gateway connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the virtual network gateway connection resource.
+     * @return The resource GUID property of the virtual network gateway connection resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * The routing weight.
+     * @return The routing weight.
      * 
-    */
+     */
     public Optional<Integer> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
     /**
-     * The IPSec shared key.
+     * @return The IPSec shared key.
      * 
-    */
+     */
     public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The Traffic Selector Policies to be considered by this connection.
+     * @return The Traffic Selector Policies to be considered by this connection.
      * 
-    */
+     */
     public List<TrafficSelectorPolicyResponse> trafficSelectorPolicies() {
         return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
     }
     /**
-     * Collection of all tunnels&#39; connection health status.
+     * @return Collection of all tunnels&#39; connection health status.
      * 
-    */
+     */
     public List<TunnelConnectionHealthResponse> tunnelConnectionStatus() {
         return this.tunnelConnectionStatus;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Use private local Azure IP for the connection.
+     * @return Use private local Azure IP for the connection.
      * 
-    */
+     */
     public Optional<Boolean> useLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
     /**
-     * Enable policy-based traffic selectors.
+     * @return Enable policy-based traffic selectors.
      * 
-    */
+     */
     public Optional<Boolean> usePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
     /**
-     * The reference to virtual network gateway resource.
+     * @return The reference to virtual network gateway resource.
      * 
-    */
+     */
     public VirtualNetworkGatewayResponse virtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
     }
     /**
-     * The reference to virtual network gateway resource.
+     * @return The reference to virtual network gateway resource.
      * 
-    */
+     */
     public Optional<VirtualNetworkGatewayResponse> virtualNetworkGateway2() {
         return Optional.ofNullable(this.virtualNetworkGateway2);
     }

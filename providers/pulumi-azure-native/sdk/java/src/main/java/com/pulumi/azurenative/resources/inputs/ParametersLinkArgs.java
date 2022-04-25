@@ -26,6 +26,10 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contentVersion")
     private @Nullable Output<String> contentVersion;
 
+    /**
+     * @return If included, must match the ContentVersion in the template.
+     * 
+     */
     public Optional<Output<String>> contentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
@@ -37,6 +41,10 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The URI of the parameters file.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -66,20 +74,44 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ParametersLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentVersion If included, must match the ContentVersion in the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentVersion(@Nullable Output<String> contentVersion) {
             $.contentVersion = contentVersion;
             return this;
         }
 
+        /**
+         * @param contentVersion If included, must match the ContentVersion in the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentVersion(String contentVersion) {
             return contentVersion(Output.of(contentVersion));
         }
 
+        /**
+         * @param uri The URI of the parameters file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the parameters file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

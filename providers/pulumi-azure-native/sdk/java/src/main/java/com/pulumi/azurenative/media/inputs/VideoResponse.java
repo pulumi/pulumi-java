@@ -26,6 +26,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyFrameInterval")
     private @Nullable String keyFrameInterval;
 
+    /**
+     * @return The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * 
+     */
     public Optional<String> keyFrameInterval() {
         return Optional.ofNullable(this.keyFrameInterval);
     }
@@ -37,6 +41,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -49,6 +57,11 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.Video&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -60,6 +73,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stretchMode")
     private @Nullable String stretchMode;
 
+    /**
+     * @return The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * 
+     */
     public Optional<String> stretchMode() {
         return Optional.ofNullable(this.stretchMode);
     }
@@ -71,6 +88,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syncMode")
     private @Nullable String syncMode;
 
+    /**
+     * @return The Video Sync Mode
+     * 
+     */
     public Optional<String> syncMode() {
         return Optional.ofNullable(this.syncMode);
     }
@@ -103,26 +124,57 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VideoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyFrameInterval The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             $.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
+        /**
+         * @param label An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.Video&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param stretchMode The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+         * 
+         * @return builder
+         * 
+         */
         public Builder stretchMode(@Nullable String stretchMode) {
             $.stretchMode = stretchMode;
             return this;
         }
 
+        /**
+         * @param syncMode The Video Sync Mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncMode(@Nullable String syncMode) {
             $.syncMode = syncMode;
             return this;

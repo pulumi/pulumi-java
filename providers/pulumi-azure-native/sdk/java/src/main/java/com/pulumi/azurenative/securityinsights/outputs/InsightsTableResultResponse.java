@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InsightsTableResultResponse {
     /**
-     * Columns Metadata of the table
+     * @return Columns Metadata of the table
      * 
      */
     private final @Nullable List<InsightsTableResultResponseColumns> columns;
     /**
-     * Rows data of the table
+     * @return Rows data of the table
      * 
      */
     private final @Nullable List<List<String>> rows;
@@ -32,16 +32,16 @@ public final class InsightsTableResultResponse {
     }
 
     /**
-     * Columns Metadata of the table
+     * @return Columns Metadata of the table
      * 
-    */
+     */
     public List<InsightsTableResultResponseColumns> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
-     * Rows data of the table
+     * @return Rows data of the table
      * 
-    */
+     */
     public List<List<String>> rows() {
         return this.rows == null ? List.of() : this.rows;
     }

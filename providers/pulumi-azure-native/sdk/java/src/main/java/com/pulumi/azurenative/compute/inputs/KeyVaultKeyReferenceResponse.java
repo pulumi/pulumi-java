@@ -24,6 +24,10 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="keyUrl", required=true)
     private String keyUrl;
 
+    /**
+     * @return The URL referencing a key encryption key in Key Vault.
+     * 
+     */
     public String keyUrl() {
         return this.keyUrl;
     }
@@ -35,6 +39,10 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="sourceVault", required=true)
     private SubResourceResponse sourceVault;
 
+    /**
+     * @return The relative URL of the Key Vault containing the key.
+     * 
+     */
     public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }
@@ -64,11 +72,23 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
             $ = new KeyVaultKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUrl The URL referencing a key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(String keyUrl) {
             $.keyUrl = keyUrl;
             return this;
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SubResourceResponse sourceVault) {
             $.sourceVault = sourceVault;
             return this;

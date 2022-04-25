@@ -26,6 +26,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="keyVaultMetaInfo")
     private @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
 
+    /**
+     * @return The Key Vault information for connecting to user managed encryption keys.
+     * 
+     */
     public Optional<KeyVaultMetaInfoResponse> keyVaultMetaInfo() {
         return Optional.ofNullable(this.keyVaultMetaInfo);
     }
@@ -37,6 +41,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -66,11 +74,23 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultMetaInfo The Key Vault information for connecting to user managed encryption keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo) {
             $.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
 
+        /**
+         * @param type The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

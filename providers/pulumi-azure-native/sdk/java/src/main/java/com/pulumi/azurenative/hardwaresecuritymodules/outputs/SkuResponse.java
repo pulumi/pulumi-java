@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * SKU of the dedicated HSM
+     * @return SKU of the dedicated HSM
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class SkuResponse {
     }
 
     /**
-     * SKU of the dedicated HSM
+     * @return SKU of the dedicated HSM
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

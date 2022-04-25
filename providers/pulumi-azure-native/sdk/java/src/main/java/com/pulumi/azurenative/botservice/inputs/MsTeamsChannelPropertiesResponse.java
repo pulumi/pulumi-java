@@ -27,6 +27,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="acceptedTerms")
     private @Nullable Boolean acceptedTerms;
 
+    /**
+     * @return Whether this channel accepted terms
+     * 
+     */
     public Optional<Boolean> acceptedTerms() {
         return Optional.ofNullable(this.acceptedTerms);
     }
@@ -38,6 +42,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="callingWebHook")
     private @Nullable String callingWebHook;
 
+    /**
+     * @return Webhook for Microsoft Teams channel calls
+     * 
+     */
     public Optional<String> callingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
@@ -49,6 +57,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="deploymentEnvironment")
     private @Nullable String deploymentEnvironment;
 
+    /**
+     * @return Deployment environment for Microsoft Teams channel calls
+     * 
+     */
     public Optional<String> deploymentEnvironment() {
         return Optional.ofNullable(this.deploymentEnvironment);
     }
@@ -60,6 +72,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="enableCalling")
     private @Nullable Boolean enableCalling;
 
+    /**
+     * @return Enable calling for Microsoft Teams channel
+     * 
+     */
     public Optional<Boolean> enableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
@@ -71,6 +87,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="incomingCallRoute")
     private @Nullable String incomingCallRoute;
 
+    /**
+     * @return Webhook for Microsoft Teams channel calls
+     * 
+     */
     public Optional<String> incomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
@@ -82,6 +102,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -115,31 +139,67 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
             $ = new MsTeamsChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptedTerms Whether this channel accepted terms
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
             $.acceptedTerms = acceptedTerms;
             return this;
         }
 
+        /**
+         * @param callingWebHook Webhook for Microsoft Teams channel calls
+         * 
+         * @return builder
+         * 
+         */
         public Builder callingWebHook(@Nullable String callingWebHook) {
             $.callingWebHook = callingWebHook;
             return this;
         }
 
+        /**
+         * @param deploymentEnvironment Deployment environment for Microsoft Teams channel calls
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
             $.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
 
+        /**
+         * @param enableCalling Enable calling for Microsoft Teams channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCalling(@Nullable Boolean enableCalling) {
             $.enableCalling = enableCalling;
             return this;
         }
 
+        /**
+         * @param incomingCallRoute Webhook for Microsoft Teams channel calls
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             $.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;

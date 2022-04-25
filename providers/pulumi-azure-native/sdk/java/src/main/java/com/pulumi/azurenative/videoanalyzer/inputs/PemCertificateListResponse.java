@@ -25,6 +25,10 @@ public final class PemCertificateListResponse extends com.pulumi.resources.Invok
     @Import(name="certificates", required=true)
     private List<String> certificates;
 
+    /**
+     * @return PEM formatted public certificates. One certificate per entry.
+     * 
+     */
     public List<String> certificates() {
         return this.certificates;
     }
@@ -37,6 +41,11 @@ public final class PemCertificateListResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -66,15 +75,34 @@ public final class PemCertificateListResponse extends com.pulumi.resources.Invok
             $ = new PemCertificateListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates PEM formatted public certificates. One certificate per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(List<String> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates PEM formatted public certificates. One certificate per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

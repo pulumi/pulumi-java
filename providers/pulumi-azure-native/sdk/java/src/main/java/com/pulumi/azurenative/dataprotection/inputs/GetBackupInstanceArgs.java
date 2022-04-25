@@ -19,6 +19,10 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="backupInstanceName", required=true)
     private String backupInstanceName;
 
+    /**
+     * @return The name of the backup instance
+     * 
+     */
     public String backupInstanceName() {
         return this.backupInstanceName;
     }
@@ -30,6 +34,10 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the backup vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the backup vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -71,16 +83,34 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetBackupInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupInstanceName The name of the backup instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupInstanceName(String backupInstanceName) {
             $.backupInstanceName = backupInstanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the backup vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the backup vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

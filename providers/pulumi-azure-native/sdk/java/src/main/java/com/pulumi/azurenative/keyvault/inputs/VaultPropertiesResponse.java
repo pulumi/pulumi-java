@@ -33,6 +33,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="accessPolicies")
     private @Nullable List<AccessPolicyEntryResponse> accessPolicies;
 
+    /**
+     * @return An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+     * 
+     */
     public Optional<List<AccessPolicyEntryResponse>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -44,6 +48,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enablePurgeProtection")
     private @Nullable Boolean enablePurgeProtection;
 
+    /**
+     * @return Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
+     * 
+     */
     public Optional<Boolean> enablePurgeProtection() {
         return Optional.ofNullable(this.enablePurgeProtection);
     }
@@ -55,6 +63,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enableRbacAuthorization")
     private @Nullable Boolean enableRbacAuthorization;
 
+    /**
+     * @return Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
+     * 
+     */
     public Optional<Boolean> enableRbacAuthorization() {
         return Optional.ofNullable(this.enableRbacAuthorization);
     }
@@ -66,6 +78,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enableSoftDelete")
     private @Nullable Boolean enableSoftDelete;
 
+    /**
+     * @return Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * 
+     */
     public Optional<Boolean> enableSoftDelete() {
         return Optional.ofNullable(this.enableSoftDelete);
     }
@@ -77,6 +93,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabledForDeployment")
     private @Nullable Boolean enabledForDeployment;
 
+    /**
+     * @return Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+     * 
+     */
     public Optional<Boolean> enabledForDeployment() {
         return Optional.ofNullable(this.enabledForDeployment);
     }
@@ -88,6 +108,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabledForDiskEncryption")
     private @Nullable Boolean enabledForDiskEncryption;
 
+    /**
+     * @return Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+     * 
+     */
     public Optional<Boolean> enabledForDiskEncryption() {
         return Optional.ofNullable(this.enabledForDiskEncryption);
     }
@@ -99,6 +123,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabledForTemplateDeployment")
     private @Nullable Boolean enabledForTemplateDeployment;
 
+    /**
+     * @return Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
+     * 
+     */
     public Optional<Boolean> enabledForTemplateDeployment() {
         return Optional.ofNullable(this.enabledForTemplateDeployment);
     }
@@ -110,6 +138,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hsmPoolResourceId", required=true)
     private String hsmPoolResourceId;
 
+    /**
+     * @return The resource id of HSM Pool.
+     * 
+     */
     public String hsmPoolResourceId() {
         return this.hsmPoolResourceId;
     }
@@ -121,6 +153,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="networkAcls")
     private @Nullable NetworkRuleSetResponse networkAcls;
 
+    /**
+     * @return Rules governing the accessibility of the key vault from specific network locations.
+     * 
+     */
     public Optional<NetworkRuleSetResponse> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
@@ -132,6 +168,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="privateEndpointConnections", required=true)
     private List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
 
+    /**
+     * @return List of private endpoint connections associated with the key vault.
+     * 
+     */
     public List<PrivateEndpointConnectionItemResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
@@ -143,6 +183,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Provisioning state of the vault.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -154,6 +198,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sku", required=true)
     private SkuResponse sku;
 
+    /**
+     * @return SKU details
+     * 
+     */
     public SkuResponse sku() {
         return this.sku;
     }
@@ -165,6 +213,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="softDeleteRetentionInDays")
     private @Nullable Integer softDeleteRetentionInDays;
 
+    /**
+     * @return softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+     * 
+     */
     public Optional<Integer> softDeleteRetentionInDays() {
         return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
@@ -176,6 +228,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -187,6 +243,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="vaultUri")
     private @Nullable String vaultUri;
 
+    /**
+     * @return The URI of the vault for performing operations on keys and secrets. This property is readonly
+     * 
+     */
     public Optional<String> vaultUri() {
         return Optional.ofNullable(this.vaultUri);
     }
@@ -229,84 +289,186 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new VaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable List<AccessPolicyEntryResponse> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(AccessPolicyEntryResponse... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
 
+        /**
+         * @param enablePurgeProtection Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             $.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
+        /**
+         * @param enableRbacAuthorization Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
             $.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
 
+        /**
+         * @param enableSoftDelete Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             $.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
+        /**
+         * @param enabledForDeployment Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
             $.enabledForDeployment = enabledForDeployment;
             return this;
         }
 
+        /**
+         * @param enabledForDiskEncryption Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
             $.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
 
+        /**
+         * @param enabledForTemplateDeployment Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
             $.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
 
+        /**
+         * @param hsmPoolResourceId The resource id of HSM Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmPoolResourceId(String hsmPoolResourceId) {
             $.hsmPoolResourceId = hsmPoolResourceId;
             return this;
         }
 
+        /**
+         * @param networkAcls Rules governing the accessibility of the key vault from specific network locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
             $.networkAcls = networkAcls;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections List of private endpoint connections associated with the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionItemResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections List of private endpoint connections associated with the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionItemResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param softDeleteRetentionInDays softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             $.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
+        /**
+         * @param tenantId The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param vaultUri The URI of the vault for performing operations on keys and secrets. This property is readonly
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(@Nullable String vaultUri) {
             $.vaultUri = vaultUri;
             return this;

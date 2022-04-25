@@ -25,6 +25,10 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return Version of the Logz agent installed on the VM.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -36,6 +40,10 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Request of a list vm host update operation.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -65,11 +73,23 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VMResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion Version of the Logz agent installed on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param id Request of a list vm host update operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

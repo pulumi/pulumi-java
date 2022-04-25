@@ -28,6 +28,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
     @Import(name="offer")
     private @Nullable Output<String> offer;
 
+    /**
+     * @return Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * 
+     */
     public Optional<Output<String>> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -39,6 +43,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
     @Import(name="planInfo")
     private @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
 
+    /**
+     * @return Optional configuration of purchase plan for platform image.
+     * 
+     */
     public Optional<Output<PlatformImagePurchasePlanArgs>> planInfo() {
         return Optional.ofNullable(this.planInfo);
     }
@@ -50,6 +58,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -61,6 +73,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -73,6 +89,11 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of source image you want to start with.
+     * Expected value is &#39;PlatformImage&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -84,6 +105,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -117,56 +142,130 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
             $ = new ImageTemplatePlatformImageSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offer Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param planInfo Optional configuration of purchase plan for platform image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planInfo(@Nullable Output<PlatformImagePurchasePlanArgs> planInfo) {
             $.planInfo = planInfo;
             return this;
         }
 
+        /**
+         * @param planInfo Optional configuration of purchase plan for platform image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planInfo(PlatformImagePurchasePlanArgs planInfo) {
             return planInfo(Output.of(planInfo));
         }
 
+        /**
+         * @param publisher Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param sku Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;PlatformImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;PlatformImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

@@ -33,6 +33,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendAddressPools")
     private @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
 
+    /**
+     * @return Collection of backend address pools used by a load balancer.
+     * 
+     */
     public Optional<Output<List<BackendAddressPoolArgs>>> backendAddressPools() {
         return Optional.ofNullable(this.backendAddressPools);
     }
@@ -44,6 +48,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the load balancer.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -55,6 +63,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frontendIPConfigurations")
     private @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
 
+    /**
+     * @return Object representing the frontend IPs to be used for the load balancer.
+     * 
+     */
     public Optional<Output<List<FrontendIPConfigurationArgs>>> frontendIPConfigurations() {
         return Optional.ofNullable(this.frontendIPConfigurations);
     }
@@ -66,6 +78,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -77,6 +93,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundNatPools")
     private @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
 
+    /**
+     * @return Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
+     * 
+     */
     public Optional<Output<List<InboundNatPoolArgs>>> inboundNatPools() {
         return Optional.ofNullable(this.inboundNatPools);
     }
@@ -88,6 +108,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundNatRules")
     private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
+    /**
+     * @return Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+     * 
+     */
     public Optional<Output<List<InboundNatRuleArgs>>> inboundNatRules() {
         return Optional.ofNullable(this.inboundNatRules);
     }
@@ -99,6 +123,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerName")
     private @Nullable Output<String> loadBalancerName;
 
+    /**
+     * @return The name of the load balancer.
+     * 
+     */
     public Optional<Output<String>> loadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
@@ -110,6 +138,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingRules")
     private @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
+    /**
+     * @return Object collection representing the load balancing rules Gets the provisioning.
+     * 
+     */
     public Optional<Output<List<LoadBalancingRuleArgs>>> loadBalancingRules() {
         return Optional.ofNullable(this.loadBalancingRules);
     }
@@ -121,6 +153,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -132,6 +168,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outboundRules")
     private @Nullable Output<List<OutboundRuleArgs>> outboundRules;
 
+    /**
+     * @return The outbound rules.
+     * 
+     */
     public Optional<Output<List<OutboundRuleArgs>>> outboundRules() {
         return Optional.ofNullable(this.outboundRules);
     }
@@ -143,6 +183,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="probes")
     private @Nullable Output<List<ProbeArgs>> probes;
 
+    /**
+     * @return Collection of probe objects used in the load balancer.
+     * 
+     */
     public Optional<Output<List<ProbeArgs>>> probes() {
         return Optional.ofNullable(this.probes);
     }
@@ -154,6 +198,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -165,6 +213,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<LoadBalancerSkuArgs> sku;
 
+    /**
+     * @return The load balancer SKU.
+     * 
+     */
     public Optional<Output<LoadBalancerSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -176,6 +228,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -217,156 +273,366 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddressPools Collection of backend address pools used by a load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(@Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools) {
             $.backendAddressPools = backendAddressPools;
             return this;
         }
 
+        /**
+         * @param backendAddressPools Collection of backend address pools used by a load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(List<BackendAddressPoolArgs> backendAddressPools) {
             return backendAddressPools(Output.of(backendAddressPools));
         }
 
+        /**
+         * @param backendAddressPools Collection of backend address pools used by a load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(BackendAddressPoolArgs... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
 
+        /**
+         * @param extendedLocation The extended location of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param frontendIPConfigurations Object representing the frontend IPs to be used for the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(@Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Object representing the frontend IPs to be used for the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(List<FrontendIPConfigurationArgs> frontendIPConfigurations) {
             return frontendIPConfigurations(Output.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param frontendIPConfigurations Object representing the frontend IPs to be used for the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(FrontendIPConfigurationArgs... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param inboundNatPools Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(@Nullable Output<List<InboundNatPoolArgs>> inboundNatPools) {
             $.inboundNatPools = inboundNatPools;
             return this;
         }
 
+        /**
+         * @param inboundNatPools Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
             return inboundNatPools(Output.of(inboundNatPools));
         }
 
+        /**
+         * @param inboundNatPools Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(InboundNatPoolArgs... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
         }
 
+        /**
+         * @param inboundNatRules Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
             $.inboundNatRules = inboundNatRules;
             return this;
         }
 
+        /**
+         * @param inboundNatRules Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(List<InboundNatRuleArgs> inboundNatRules) {
             return inboundNatRules(Output.of(inboundNatRules));
         }
 
+        /**
+         * @param inboundNatRules Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
         }
 
+        /**
+         * @param loadBalancerName The name of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The name of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             return loadBalancerName(Output.of(loadBalancerName));
         }
 
+        /**
+         * @param loadBalancingRules Object collection representing the load balancing rules Gets the provisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(@Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules) {
             $.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
+        /**
+         * @param loadBalancingRules Object collection representing the load balancing rules Gets the provisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(List<LoadBalancingRuleArgs> loadBalancingRules) {
             return loadBalancingRules(Output.of(loadBalancingRules));
         }
 
+        /**
+         * @param loadBalancingRules Object collection representing the load balancing rules Gets the provisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(LoadBalancingRuleArgs... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param outboundRules The outbound rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundRules(@Nullable Output<List<OutboundRuleArgs>> outboundRules) {
             $.outboundRules = outboundRules;
             return this;
         }
 
+        /**
+         * @param outboundRules The outbound rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundRules(List<OutboundRuleArgs> outboundRules) {
             return outboundRules(Output.of(outboundRules));
         }
 
+        /**
+         * @param outboundRules The outbound rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundRules(OutboundRuleArgs... outboundRules) {
             return outboundRules(List.of(outboundRules));
         }
 
+        /**
+         * @param probes Collection of probe objects used in the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probes(@Nullable Output<List<ProbeArgs>> probes) {
             $.probes = probes;
             return this;
         }
 
+        /**
+         * @param probes Collection of probe objects used in the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probes(List<ProbeArgs> probes) {
             return probes(Output.of(probes));
         }
 
+        /**
+         * @param probes Collection of probe objects used in the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probes(ProbeArgs... probes) {
             return probes(List.of(probes));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<LoadBalancerSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The load balancer SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(LoadBalancerSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

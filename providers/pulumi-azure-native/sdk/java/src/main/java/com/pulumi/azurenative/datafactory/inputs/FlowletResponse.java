@@ -32,6 +32,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the data flow.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -43,6 +47,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the data flow.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +62,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="folder")
     private @Nullable DataFlowResponseFolder folder;
 
+    /**
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * 
+     */
     public Optional<DataFlowResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -65,6 +77,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="script")
     private @Nullable String script;
 
+    /**
+     * @return Flowlet script.
+     * 
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
@@ -76,6 +92,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scriptLines")
     private @Nullable List<String> scriptLines;
 
+    /**
+     * @return Flowlet script lines.
+     * 
+     */
     public Optional<List<String>> scriptLines() {
         return Optional.ofNullable(this.scriptLines);
     }
@@ -87,6 +107,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinks")
     private @Nullable List<DataFlowSinkResponse> sinks;
 
+    /**
+     * @return List of sinks in Flowlet.
+     * 
+     */
     public Optional<List<DataFlowSinkResponse>> sinks() {
         return Optional.ofNullable(this.sinks);
     }
@@ -98,6 +122,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sources")
     private @Nullable List<DataFlowSourceResponse> sources;
 
+    /**
+     * @return List of sources in Flowlet.
+     * 
+     */
     public Optional<List<DataFlowSourceResponse>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -109,6 +137,10 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transformations")
     private @Nullable List<TransformationResponse> transformations;
 
+    /**
+     * @return List of transformations in Flowlet.
+     * 
+     */
     public Optional<List<TransformationResponse>> transformations() {
         return Optional.ofNullable(this.transformations);
     }
@@ -121,6 +153,11 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of data flow.
+     * Expected value is &#39;Flowlet&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -157,66 +194,151 @@ public final class FlowletResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FlowletResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description The description of the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param folder The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable DataFlowResponseFolder folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param script Flowlet script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable String script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param scriptLines Flowlet script lines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLines(@Nullable List<String> scriptLines) {
             $.scriptLines = scriptLines;
             return this;
         }
 
+        /**
+         * @param scriptLines Flowlet script lines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLines(String... scriptLines) {
             return scriptLines(List.of(scriptLines));
         }
 
+        /**
+         * @param sinks List of sinks in Flowlet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(@Nullable List<DataFlowSinkResponse> sinks) {
             $.sinks = sinks;
             return this;
         }
 
+        /**
+         * @param sinks List of sinks in Flowlet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(DataFlowSinkResponse... sinks) {
             return sinks(List.of(sinks));
         }
 
+        /**
+         * @param sources List of sources in Flowlet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable List<DataFlowSourceResponse> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources List of sources in Flowlet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(DataFlowSourceResponse... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param transformations List of transformations in Flowlet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(@Nullable List<TransformationResponse> transformations) {
             $.transformations = transformations;
             return this;
         }
 
+        /**
+         * @param transformations List of transformations in Flowlet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(TransformationResponse... transformations) {
             return transformations(List.of(transformations));
         }
 
+        /**
+         * @param type Type of data flow.
+         * Expected value is &#39;Flowlet&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -16,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSoftwareUpdateConfigurationByNameResult {
     /**
-     * CreatedBy property, which only appears in the response.
+     * @return CreatedBy property, which only appears in the response.
      * 
      */
     private final String createdBy;
     /**
-     * Creation time of the resource, which only appears in the response.
+     * @return Creation time of the resource, which only appears in the response.
      * 
      */
     private final String creationTime;
     /**
-     * Details of provisioning error
+     * @return Details of provisioning error
      * 
      */
     private final @Nullable ErrorResponseResponse error;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * LastModifiedBy property, which only appears in the response.
+     * @return LastModifiedBy property, which only appears in the response.
      * 
      */
     private final String lastModifiedBy;
     /**
-     * Last time resource was modified, which only appears in the response.
+     * @return Last time resource was modified, which only appears in the response.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state for the software update configuration, which only appears in the response.
+     * @return Provisioning state for the software update configuration, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Schedule information for the Software update configuration
+     * @return Schedule information for the Software update configuration
      * 
      */
     private final SUCSchedulePropertiesResponse scheduleInfo;
     /**
-     * Tasks information for the Software update configuration.
+     * @return Tasks information for the Software update configuration.
      * 
      */
     private final @Nullable SoftwareUpdateConfigurationTasksResponse tasks;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * update specific properties for the Software update configuration
+     * @return update specific properties for the Software update configuration
      * 
      */
     private final UpdateConfigurationResponse updateConfiguration;
@@ -105,86 +105,86 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
     }
 
     /**
-     * CreatedBy property, which only appears in the response.
+     * @return CreatedBy property, which only appears in the response.
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * Creation time of the resource, which only appears in the response.
+     * @return Creation time of the resource, which only appears in the response.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Details of provisioning error
+     * @return Details of provisioning error
      * 
-    */
+     */
     public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * LastModifiedBy property, which only appears in the response.
+     * @return LastModifiedBy property, which only appears in the response.
      * 
-    */
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * Last time resource was modified, which only appears in the response.
+     * @return Last time resource was modified, which only appears in the response.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state for the software update configuration, which only appears in the response.
+     * @return Provisioning state for the software update configuration, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Schedule information for the Software update configuration
+     * @return Schedule information for the Software update configuration
      * 
-    */
+     */
     public SUCSchedulePropertiesResponse scheduleInfo() {
         return this.scheduleInfo;
     }
     /**
-     * Tasks information for the Software update configuration.
+     * @return Tasks information for the Software update configuration.
      * 
-    */
+     */
     public Optional<SoftwareUpdateConfigurationTasksResponse> tasks() {
         return Optional.ofNullable(this.tasks);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * update specific properties for the Software update configuration
+     * @return update specific properties for the Software update configuration
      * 
-    */
+     */
     public UpdateConfigurationResponse updateConfiguration() {
         return this.updateConfiguration;
     }

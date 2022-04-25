@@ -15,57 +15,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KubeletConfigResponse {
     /**
-     * Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+     * @return Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
      * 
      */
     private final @Nullable List<String> allowedUnsafeSysctls;
     /**
-     * The maximum number of container log files that can be present for a container. The number must be ≥ 2.
+     * @return The maximum number of container log files that can be present for a container. The number must be ≥ 2.
      * 
      */
     private final @Nullable Integer containerLogMaxFiles;
     /**
-     * The maximum size (e.g. 10Mi) of container log file before it is rotated.
+     * @return The maximum size (e.g. 10Mi) of container log file before it is rotated.
      * 
      */
     private final @Nullable Integer containerLogMaxSizeMB;
     /**
-     * Enable CPU CFS quota enforcement for containers that specify CPU limits.
+     * @return Enable CPU CFS quota enforcement for containers that specify CPU limits.
      * 
      */
     private final @Nullable Boolean cpuCfsQuota;
     /**
-     * Sets CPU CFS quota period value.
+     * @return Sets CPU CFS quota period value.
      * 
      */
     private final @Nullable String cpuCfsQuotaPeriod;
     /**
-     * CPU Manager policy to use.
+     * @return CPU Manager policy to use.
      * 
      */
     private final @Nullable String cpuManagerPolicy;
     /**
-     * If set to true it will make the Kubelet fail to start if swap is enabled on the node.
+     * @return If set to true it will make the Kubelet fail to start if swap is enabled on the node.
      * 
      */
     private final @Nullable Boolean failSwapOn;
     /**
-     * The percent of disk usage after which image garbage collection is always run.
+     * @return The percent of disk usage after which image garbage collection is always run.
      * 
      */
     private final @Nullable Integer imageGcHighThreshold;
     /**
-     * The percent of disk usage before which image garbage collection is never run.
+     * @return The percent of disk usage before which image garbage collection is never run.
      * 
      */
     private final @Nullable Integer imageGcLowThreshold;
     /**
-     * The maximum number of processes per pod.
+     * @return The maximum number of processes per pod.
      * 
      */
     private final @Nullable Integer podMaxPids;
     /**
-     * Topology Manager policy to use.
+     * @return Topology Manager policy to use.
      * 
      */
     private final @Nullable String topologyManagerPolicy;
@@ -97,79 +97,79 @@ public final class KubeletConfigResponse {
     }
 
     /**
-     * Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+     * @return Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
      * 
-    */
+     */
     public List<String> allowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls == null ? List.of() : this.allowedUnsafeSysctls;
     }
     /**
-     * The maximum number of container log files that can be present for a container. The number must be ≥ 2.
+     * @return The maximum number of container log files that can be present for a container. The number must be ≥ 2.
      * 
-    */
+     */
     public Optional<Integer> containerLogMaxFiles() {
         return Optional.ofNullable(this.containerLogMaxFiles);
     }
     /**
-     * The maximum size (e.g. 10Mi) of container log file before it is rotated.
+     * @return The maximum size (e.g. 10Mi) of container log file before it is rotated.
      * 
-    */
+     */
     public Optional<Integer> containerLogMaxSizeMB() {
         return Optional.ofNullable(this.containerLogMaxSizeMB);
     }
     /**
-     * Enable CPU CFS quota enforcement for containers that specify CPU limits.
+     * @return Enable CPU CFS quota enforcement for containers that specify CPU limits.
      * 
-    */
+     */
     public Optional<Boolean> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
     /**
-     * Sets CPU CFS quota period value.
+     * @return Sets CPU CFS quota period value.
      * 
-    */
+     */
     public Optional<String> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
     /**
-     * CPU Manager policy to use.
+     * @return CPU Manager policy to use.
      * 
-    */
+     */
     public Optional<String> cpuManagerPolicy() {
         return Optional.ofNullable(this.cpuManagerPolicy);
     }
     /**
-     * If set to true it will make the Kubelet fail to start if swap is enabled on the node.
+     * @return If set to true it will make the Kubelet fail to start if swap is enabled on the node.
      * 
-    */
+     */
     public Optional<Boolean> failSwapOn() {
         return Optional.ofNullable(this.failSwapOn);
     }
     /**
-     * The percent of disk usage after which image garbage collection is always run.
+     * @return The percent of disk usage after which image garbage collection is always run.
      * 
-    */
+     */
     public Optional<Integer> imageGcHighThreshold() {
         return Optional.ofNullable(this.imageGcHighThreshold);
     }
     /**
-     * The percent of disk usage before which image garbage collection is never run.
+     * @return The percent of disk usage before which image garbage collection is never run.
      * 
-    */
+     */
     public Optional<Integer> imageGcLowThreshold() {
         return Optional.ofNullable(this.imageGcLowThreshold);
     }
     /**
-     * The maximum number of processes per pod.
+     * @return The maximum number of processes per pod.
      * 
-    */
+     */
     public Optional<Integer> podMaxPids() {
         return Optional.ofNullable(this.podMaxPids);
     }
     /**
-     * Topology Manager policy to use.
+     * @return Topology Manager policy to use.
      * 
-    */
+     */
     public Optional<String> topologyManagerPolicy() {
         return Optional.ofNullable(this.topologyManagerPolicy);
     }

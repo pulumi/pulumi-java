@@ -21,82 +21,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AmlComputeResponseProperties {
     /**
-     * Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+     * @return Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
      * 
      */
     private final String allocationState;
     /**
-     * The time at which the compute entered its current allocation state.
+     * @return The time at which the compute entered its current allocation state.
      * 
      */
     private final String allocationStateTransitionTime;
     /**
-     * The number of compute nodes currently assigned to the compute.
+     * @return The number of compute nodes currently assigned to the compute.
      * 
      */
     private final Integer currentNodeCount;
     /**
-     * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+     * @return Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
      * 
      */
     private final @Nullable Boolean enableNodePublicIp;
     /**
-     * Collection of errors encountered by various compute nodes during node setup.
+     * @return Collection of errors encountered by various compute nodes during node setup.
      * 
      */
     private final List<MachineLearningServiceErrorResponse> errors;
     /**
-     * Network is isolated or not
+     * @return Network is isolated or not
      * 
      */
     private final @Nullable Boolean isolatedNetwork;
     /**
-     * Counts of various node states on the compute.
+     * @return Counts of various node states on the compute.
      * 
      */
     private final NodeStateCountsResponse nodeStateCounts;
     /**
-     * Compute OS Type
+     * @return Compute OS Type
      * 
      */
     private final @Nullable String osType;
     /**
-     * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
      * 
      */
     private final @Nullable String remoteLoginPortPublicAccess;
     /**
-     * Scale settings for AML Compute
+     * @return Scale settings for AML Compute
      * 
      */
     private final @Nullable ScaleSettingsResponse scaleSettings;
     /**
-     * Virtual network subnet resource ID the compute nodes belong to.
+     * @return Virtual network subnet resource ID the compute nodes belong to.
      * 
      */
     private final @Nullable ResourceIdResponse subnet;
     /**
-     * The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+     * @return The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
      * 
      */
     private final Integer targetNodeCount;
     /**
-     * Credentials for an administrator user account that will be created on each compute node.
+     * @return Credentials for an administrator user account that will be created on each compute node.
      * 
      */
     private final @Nullable UserAccountCredentialsResponse userAccountCredentials;
     /**
-     * Virtual Machine image for AML Compute - windows only
+     * @return Virtual Machine image for AML Compute - windows only
      * 
      */
     private final @Nullable VirtualMachineImageResponse virtualMachineImage;
     /**
-     * Virtual Machine priority
+     * @return Virtual Machine priority
      * 
      */
     private final @Nullable String vmPriority;
     /**
-     * Virtual Machine Size
+     * @return Virtual Machine Size
      * 
      */
     private final @Nullable String vmSize;
@@ -138,114 +138,114 @@ public final class AmlComputeResponseProperties {
     }
 
     /**
-     * Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+     * @return Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
      * 
-    */
+     */
     public String allocationState() {
         return this.allocationState;
     }
     /**
-     * The time at which the compute entered its current allocation state.
+     * @return The time at which the compute entered its current allocation state.
      * 
-    */
+     */
     public String allocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
     }
     /**
-     * The number of compute nodes currently assigned to the compute.
+     * @return The number of compute nodes currently assigned to the compute.
      * 
-    */
+     */
     public Integer currentNodeCount() {
         return this.currentNodeCount;
     }
     /**
-     * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+     * @return Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
      * 
-    */
+     */
     public Optional<Boolean> enableNodePublicIp() {
         return Optional.ofNullable(this.enableNodePublicIp);
     }
     /**
-     * Collection of errors encountered by various compute nodes during node setup.
+     * @return Collection of errors encountered by various compute nodes during node setup.
      * 
-    */
+     */
     public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Network is isolated or not
+     * @return Network is isolated or not
      * 
-    */
+     */
     public Optional<Boolean> isolatedNetwork() {
         return Optional.ofNullable(this.isolatedNetwork);
     }
     /**
-     * Counts of various node states on the compute.
+     * @return Counts of various node states on the compute.
      * 
-    */
+     */
     public NodeStateCountsResponse nodeStateCounts() {
         return this.nodeStateCounts;
     }
     /**
-     * Compute OS Type
+     * @return Compute OS Type
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
      * 
-    */
+     */
     public Optional<String> remoteLoginPortPublicAccess() {
         return Optional.ofNullable(this.remoteLoginPortPublicAccess);
     }
     /**
-     * Scale settings for AML Compute
+     * @return Scale settings for AML Compute
      * 
-    */
+     */
     public Optional<ScaleSettingsResponse> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
     /**
-     * Virtual network subnet resource ID the compute nodes belong to.
+     * @return Virtual network subnet resource ID the compute nodes belong to.
      * 
-    */
+     */
     public Optional<ResourceIdResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+     * @return The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
      * 
-    */
+     */
     public Integer targetNodeCount() {
         return this.targetNodeCount;
     }
     /**
-     * Credentials for an administrator user account that will be created on each compute node.
+     * @return Credentials for an administrator user account that will be created on each compute node.
      * 
-    */
+     */
     public Optional<UserAccountCredentialsResponse> userAccountCredentials() {
         return Optional.ofNullable(this.userAccountCredentials);
     }
     /**
-     * Virtual Machine image for AML Compute - windows only
+     * @return Virtual Machine image for AML Compute - windows only
      * 
-    */
+     */
     public Optional<VirtualMachineImageResponse> virtualMachineImage() {
         return Optional.ofNullable(this.virtualMachineImage);
     }
     /**
-     * Virtual Machine priority
+     * @return Virtual Machine priority
      * 
-    */
+     */
     public Optional<String> vmPriority() {
         return Optional.ofNullable(this.vmPriority);
     }
     /**
-     * Virtual Machine Size
+     * @return Virtual Machine Size
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }

@@ -26,6 +26,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="combinedHealth", required=true)
     private String combinedHealth;
 
+    /**
+     * @return Combined Health Status.
+     * 
+     */
     public String combinedHealth() {
         return this.combinedHealth;
     }
@@ -37,6 +41,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="downloadActivity", required=true)
     private ServerEndpointSyncActivityStatusResponse downloadActivity;
 
+    /**
+     * @return Download sync activity
+     * 
+     */
     public ServerEndpointSyncActivityStatusResponse downloadActivity() {
         return this.downloadActivity;
     }
@@ -48,6 +56,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="downloadHealth", required=true)
     private String downloadHealth;
 
+    /**
+     * @return Download Health Status.
+     * 
+     */
     public String downloadHealth() {
         return this.downloadHealth;
     }
@@ -59,6 +71,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="downloadStatus", required=true)
     private ServerEndpointSyncSessionStatusResponse downloadStatus;
 
+    /**
+     * @return Download Status
+     * 
+     */
     public ServerEndpointSyncSessionStatusResponse downloadStatus() {
         return this.downloadStatus;
     }
@@ -70,6 +86,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last Updated Timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -81,6 +101,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="offlineDataTransferStatus", required=true)
     private String offlineDataTransferStatus;
 
+    /**
+     * @return Offline Data Transfer State
+     * 
+     */
     public String offlineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
@@ -92,6 +116,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="syncActivity", required=true)
     private String syncActivity;
 
+    /**
+     * @return Sync activity
+     * 
+     */
     public String syncActivity() {
         return this.syncActivity;
     }
@@ -103,6 +131,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="totalPersistentFilesNotSyncingCount", required=true)
     private Double totalPersistentFilesNotSyncingCount;
 
+    /**
+     * @return Total count of persistent files not syncing (combined upload + download).
+     * 
+     */
     public Double totalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
@@ -114,6 +146,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="uploadActivity", required=true)
     private ServerEndpointSyncActivityStatusResponse uploadActivity;
 
+    /**
+     * @return Upload sync activity
+     * 
+     */
     public ServerEndpointSyncActivityStatusResponse uploadActivity() {
         return this.uploadActivity;
     }
@@ -125,6 +161,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="uploadHealth", required=true)
     private String uploadHealth;
 
+    /**
+     * @return Upload Health Status.
+     * 
+     */
     public String uploadHealth() {
         return this.uploadHealth;
     }
@@ -136,6 +176,10 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
     @Import(name="uploadStatus", required=true)
     private ServerEndpointSyncSessionStatusResponse uploadStatus;
 
+    /**
+     * @return Upload Status
+     * 
+     */
     public ServerEndpointSyncSessionStatusResponse uploadStatus() {
         return this.uploadStatus;
     }
@@ -174,56 +218,122 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
             $ = new ServerEndpointSyncStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param combinedHealth Combined Health Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combinedHealth(String combinedHealth) {
             $.combinedHealth = combinedHealth;
             return this;
         }
 
+        /**
+         * @param downloadActivity Download sync activity
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadActivity(ServerEndpointSyncActivityStatusResponse downloadActivity) {
             $.downloadActivity = downloadActivity;
             return this;
         }
 
+        /**
+         * @param downloadHealth Download Health Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadHealth(String downloadHealth) {
             $.downloadHealth = downloadHealth;
             return this;
         }
 
+        /**
+         * @param downloadStatus Download Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadStatus(ServerEndpointSyncSessionStatusResponse downloadStatus) {
             $.downloadStatus = downloadStatus;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last Updated Timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param offlineDataTransferStatus Offline Data Transfer State
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineDataTransferStatus(String offlineDataTransferStatus) {
             $.offlineDataTransferStatus = offlineDataTransferStatus;
             return this;
         }
 
+        /**
+         * @param syncActivity Sync activity
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncActivity(String syncActivity) {
             $.syncActivity = syncActivity;
             return this;
         }
 
+        /**
+         * @param totalPersistentFilesNotSyncingCount Total count of persistent files not syncing (combined upload + download).
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalPersistentFilesNotSyncingCount(Double totalPersistentFilesNotSyncingCount) {
             $.totalPersistentFilesNotSyncingCount = totalPersistentFilesNotSyncingCount;
             return this;
         }
 
+        /**
+         * @param uploadActivity Upload sync activity
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadActivity(ServerEndpointSyncActivityStatusResponse uploadActivity) {
             $.uploadActivity = uploadActivity;
             return this;
         }
 
+        /**
+         * @param uploadHealth Upload Health Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadHealth(String uploadHealth) {
             $.uploadHealth = uploadHealth;
             return this;
         }
 
+        /**
+         * @param uploadStatus Upload Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadStatus(ServerEndpointSyncSessionStatusResponse uploadStatus) {
             $.uploadStatus = uploadStatus;
             return this;

@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHierarchySettingResult {
     /**
-     * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
+     * @return Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
      * 
      */
     private final @Nullable String defaultManagementGroup;
     /**
-     * The fully qualified ID for the settings object.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000/settings/default.
+     * @return The fully qualified ID for the settings object.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000/settings/default.
      * 
      */
     private final String id;
     /**
-     * The name of the object. In this case, default.
+     * @return The name of the object. In this case, default.
      * 
      */
     private final String name;
     /**
-     * Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
+     * @return Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
      * 
      */
     private final @Nullable Boolean requireAuthorizationForGroupCreation;
     /**
-     * The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
+     * @return The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
+     * @return The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class GetHierarchySettingResult {
     }
 
     /**
-     * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
+     * @return Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
      * 
-    */
+     */
     public Optional<String> defaultManagementGroup() {
         return Optional.ofNullable(this.defaultManagementGroup);
     }
     /**
-     * The fully qualified ID for the settings object.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000/settings/default.
+     * @return The fully qualified ID for the settings object.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000/settings/default.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the object. In this case, default.
+     * @return The name of the object. In this case, default.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
+     * @return Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
      * 
-    */
+     */
     public Optional<Boolean> requireAuthorizationForGroupCreation() {
         return Optional.ofNullable(this.requireAuthorizationForGroupCreation);
     }
     /**
-     * The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
+     * @return The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
+     * @return The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -28,6 +28,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="ask", required=true)
     private String ask;
 
+    /**
+     * @return The key that must be used as FairPlay Application Secret key.
+     * 
+     */
     public String ask() {
         return this.ask;
     }
@@ -39,6 +43,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="fairPlayPfx", required=true)
     private String fairPlayPfx;
 
+    /**
+     * @return The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+     * 
+     */
     public String fairPlayPfx() {
         return this.fairPlayPfx;
     }
@@ -50,6 +58,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="fairPlayPfxPassword", required=true)
     private String fairPlayPfxPassword;
 
+    /**
+     * @return The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+     * 
+     */
     public String fairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
@@ -62,6 +74,11 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -73,6 +90,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="offlineRentalConfiguration")
     private @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
 
+    /**
+     * @return Offline rental policy
+     * 
+     */
     public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> offlineRentalConfiguration() {
         return Optional.ofNullable(this.offlineRentalConfiguration);
     }
@@ -84,6 +105,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="rentalAndLeaseKeyType", required=true)
     private String rentalAndLeaseKeyType;
 
+    /**
+     * @return The rental and lease key type.
+     * 
+     */
     public String rentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
@@ -95,6 +120,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
     @Import(name="rentalDuration", required=true)
     private Double rentalDuration;
 
+    /**
+     * @return The rental duration. Must be greater than or equal to 0.
+     * 
+     */
     public Double rentalDuration() {
         return this.rentalDuration;
     }
@@ -129,36 +158,79 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
             $ = new ContentKeyPolicyFairPlayConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ask The key that must be used as FairPlay Application Secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ask(String ask) {
             $.ask = ask;
             return this;
         }
 
+        /**
+         * @param fairPlayPfx The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlayPfx(String fairPlayPfx) {
             $.fairPlayPfx = fairPlayPfx;
             return this;
         }
 
+        /**
+         * @param fairPlayPfxPassword The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
             $.fairPlayPfxPassword = fairPlayPfxPassword;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param offlineRentalConfiguration Offline rental policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration) {
             $.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
 
+        /**
+         * @param rentalAndLeaseKeyType The rental and lease key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalAndLeaseKeyType(String rentalAndLeaseKeyType) {
             $.rentalAndLeaseKeyType = rentalAndLeaseKeyType;
             return this;
         }
 
+        /**
+         * @param rentalDuration The rental duration. Must be greater than or equal to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rentalDuration(Double rentalDuration) {
             $.rentalDuration = rentalDuration;
             return this;

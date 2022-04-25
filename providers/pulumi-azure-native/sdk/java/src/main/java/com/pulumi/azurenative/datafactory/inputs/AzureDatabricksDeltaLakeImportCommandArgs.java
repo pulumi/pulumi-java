@@ -28,6 +28,10 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends com.pulumi.
     @Import(name="dateFormat")
     private @Nullable Output<Object> dateFormat;
 
+    /**
+     * @return Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
@@ -39,6 +43,10 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends com.pulumi.
     @Import(name="timestampFormat")
     private @Nullable Output<Object> timestampFormat;
 
+    /**
+     * @return Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> timestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
@@ -51,6 +59,11 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends com.pulumi.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The import setting type.
+     * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -81,29 +94,67 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends com.pulumi.
             $ = new AzureDatabricksDeltaLakeImportCommandArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateFormat Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(@Nullable Output<Object> dateFormat) {
             $.dateFormat = dateFormat;
             return this;
         }
 
+        /**
+         * @param dateFormat Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(Object dateFormat) {
             return dateFormat(Output.of(dateFormat));
         }
 
+        /**
+         * @param timestampFormat Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampFormat(@Nullable Output<Object> timestampFormat) {
             $.timestampFormat = timestampFormat;
             return this;
         }
 
+        /**
+         * @param timestampFormat Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampFormat(Object timestampFormat) {
             return timestampFormat(Output.of(timestampFormat));
         }
 
+        /**
+         * @param type The import setting type.
+         * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The import setting type.
+         * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

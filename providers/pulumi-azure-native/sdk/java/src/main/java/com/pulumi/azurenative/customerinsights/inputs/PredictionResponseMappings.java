@@ -23,6 +23,10 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
     @Import(name="grade", required=true)
     private String grade;
 
+    /**
+     * @return The grade of the link mapping.
+     * 
+     */
     public String grade() {
         return this.grade;
     }
@@ -34,6 +38,10 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return The reason of the link mapping.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -45,6 +53,10 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
     @Import(name="score", required=true)
     private String score;
 
+    /**
+     * @return The score of the link mapping.
+     * 
+     */
     public String score() {
         return this.score;
     }
@@ -75,16 +87,34 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
             $ = new PredictionResponseMappings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grade The grade of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grade(String grade) {
             $.grade = grade;
             return this;
         }
 
+        /**
+         * @param reason The reason of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param score The score of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder score(String score) {
             $.score = score;
             return this;

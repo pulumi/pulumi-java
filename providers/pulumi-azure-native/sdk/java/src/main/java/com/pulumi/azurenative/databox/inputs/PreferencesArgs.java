@@ -29,6 +29,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionPreferences")
     private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
+    /**
+     * @return Preferences related to the Encryption.
+     * 
+     */
     public Optional<Output<EncryptionPreferencesArgs>> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
@@ -40,6 +44,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredDataCenterRegion")
     private @Nullable Output<List<String>> preferredDataCenterRegion;
 
+    /**
+     * @return Preferred data center region.
+     * 
+     */
     public Optional<Output<List<String>>> preferredDataCenterRegion() {
         return Optional.ofNullable(this.preferredDataCenterRegion);
     }
@@ -51,6 +59,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportPreferences")
     private @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
+    /**
+     * @return Preferences related to the shipment logistics of the sku.
+     * 
+     */
     public Optional<Output<TransportPreferencesArgs>> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
@@ -81,33 +93,75 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionPreferences Preferences related to the Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionPreferences(@Nullable Output<EncryptionPreferencesArgs> encryptionPreferences) {
             $.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
+        /**
+         * @param encryptionPreferences Preferences related to the Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionPreferences(EncryptionPreferencesArgs encryptionPreferences) {
             return encryptionPreferences(Output.of(encryptionPreferences));
         }
 
+        /**
+         * @param preferredDataCenterRegion Preferred data center region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredDataCenterRegion(@Nullable Output<List<String>> preferredDataCenterRegion) {
             $.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
 
+        /**
+         * @param preferredDataCenterRegion Preferred data center region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredDataCenterRegion(List<String> preferredDataCenterRegion) {
             return preferredDataCenterRegion(Output.of(preferredDataCenterRegion));
         }
 
+        /**
+         * @param preferredDataCenterRegion Preferred data center region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
             return preferredDataCenterRegion(List.of(preferredDataCenterRegion));
         }
 
+        /**
+         * @param transportPreferences Preferences related to the shipment logistics of the sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
             $.transportPreferences = transportPreferences;
             return this;
         }
 
+        /**
+         * @param transportPreferences Preferences related to the shipment logistics of the sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportPreferences(TransportPreferencesArgs transportPreferences) {
             return transportPreferences(Output.of(transportPreferences));
         }

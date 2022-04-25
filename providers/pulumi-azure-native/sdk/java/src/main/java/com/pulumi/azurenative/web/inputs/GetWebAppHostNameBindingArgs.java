@@ -19,6 +19,10 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return Hostname in the hostname binding.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
             $ = new GetWebAppHostNameBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName Hostname in the hostname binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -16,58 +16,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDigitalTwinResult {
     /**
-     * Time when DigitalTwinsInstance was created.
+     * @return Time when DigitalTwinsInstance was created.
      * 
      */
     private final String createdTime;
     /**
-     * Api endpoint to work with DigitalTwinsInstance.
+     * @return Api endpoint to work with DigitalTwinsInstance.
      * 
      */
     private final String hostName;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The managed identity for the DigitalTwinsInstance.
+     * @return The managed identity for the DigitalTwinsInstance.
      * 
      */
     private final @Nullable DigitalTwinsIdentityResponse identity;
     /**
-     * Time when DigitalTwinsInstance was updated.
+     * @return Time when DigitalTwinsInstance was updated.
      * 
      */
     private final String lastUpdatedTime;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final String location;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * Public network access for the DigitalTwinsInstance.
+     * @return Public network access for the DigitalTwinsInstance.
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -101,51 +101,51 @@ public final class GetDigitalTwinResult {
     }
 
     /**
-     * Time when DigitalTwinsInstance was created.
+     * @return Time when DigitalTwinsInstance was created.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Api endpoint to work with DigitalTwinsInstance.
+     * @return Api endpoint to work with DigitalTwinsInstance.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The managed identity for the DigitalTwinsInstance.
+     * @return The managed identity for the DigitalTwinsInstance.
      * 
-    */
+     */
     public Optional<DigitalTwinsIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Time when DigitalTwinsInstance was updated.
+     * @return Time when DigitalTwinsInstance was updated.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -153,30 +153,30 @@ public final class GetDigitalTwinResult {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Public network access for the DigitalTwinsInstance.
+     * @return Public network access for the DigitalTwinsInstance.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

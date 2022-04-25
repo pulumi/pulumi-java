@@ -28,6 +28,10 @@ public final class ZipDeflateReadSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="preserveZipFileNameAsFolder")
     private @Nullable Output<Object> preserveZipFileNameAsFolder;
 
+    /**
+     * @return Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> preserveZipFileNameAsFolder() {
         return Optional.ofNullable(this.preserveZipFileNameAsFolder);
     }
@@ -40,6 +44,11 @@ public final class ZipDeflateReadSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The Compression setting type.
+     * Expected value is &#39;ZipDeflateReadSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -69,20 +78,46 @@ public final class ZipDeflateReadSettingsArgs extends com.pulumi.resources.Resou
             $ = new ZipDeflateReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preserveZipFileNameAsFolder Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveZipFileNameAsFolder(@Nullable Output<Object> preserveZipFileNameAsFolder) {
             $.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
 
+        /**
+         * @param preserveZipFileNameAsFolder Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveZipFileNameAsFolder(Object preserveZipFileNameAsFolder) {
             return preserveZipFileNameAsFolder(Output.of(preserveZipFileNameAsFolder));
         }
 
+        /**
+         * @param type The Compression setting type.
+         * Expected value is &#39;ZipDeflateReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The Compression setting type.
+         * Expected value is &#39;ZipDeflateReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

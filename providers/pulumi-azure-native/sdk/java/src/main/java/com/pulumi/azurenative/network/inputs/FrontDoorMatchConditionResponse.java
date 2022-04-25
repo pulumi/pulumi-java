@@ -27,6 +27,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
     @Import(name="matchValue", required=true)
     private List<String> matchValue;
 
+    /**
+     * @return List of possible match values.
+     * 
+     */
     public List<String> matchValue() {
         return this.matchValue;
     }
@@ -38,6 +42,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
     @Import(name="matchVariable", required=true)
     private String matchVariable;
 
+    /**
+     * @return Request variable to compare with.
+     * 
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
@@ -49,6 +57,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
     @Import(name="negateCondition")
     private @Nullable Boolean negateCondition;
 
+    /**
+     * @return Describes if the result of this condition should be negated.
+     * 
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -60,6 +72,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return Comparison type to use for matching with the variable value.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -71,6 +87,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
     @Import(name="selector")
     private @Nullable String selector;
 
+    /**
+     * @return Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+     * 
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -82,6 +102,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
     @Import(name="transforms")
     private @Nullable List<String> transforms;
 
+    /**
+     * @return List of transforms.
+     * 
+     */
     public Optional<List<String>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -115,40 +139,88 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
             $ = new FrontDoorMatchConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValue List of possible match values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValue(List<String> matchValue) {
             $.matchValue = matchValue;
             return this;
         }
 
+        /**
+         * @param matchValue List of possible match values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValue(String... matchValue) {
             return matchValue(List.of(matchValue));
         }
 
+        /**
+         * @param matchVariable Request variable to compare with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(String matchVariable) {
             $.matchVariable = matchVariable;
             return this;
         }
 
+        /**
+         * @param negateCondition Describes if the result of this condition should be negated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param operator Comparison type to use for matching with the variable value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param selector Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable String selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable List<String> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
         }

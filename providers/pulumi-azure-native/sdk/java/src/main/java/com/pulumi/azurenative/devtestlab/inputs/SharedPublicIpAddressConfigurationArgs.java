@@ -27,6 +27,10 @@ public final class SharedPublicIpAddressConfigurationArgs extends com.pulumi.res
     @Import(name="inboundNatRules")
     private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
+    /**
+     * @return The incoming NAT rules
+     * 
+     */
     public Optional<Output<List<InboundNatRuleArgs>>> inboundNatRules() {
         return Optional.ofNullable(this.inboundNatRules);
     }
@@ -55,15 +59,33 @@ public final class SharedPublicIpAddressConfigurationArgs extends com.pulumi.res
             $ = new SharedPublicIpAddressConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inboundNatRules The incoming NAT rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
             $.inboundNatRules = inboundNatRules;
             return this;
         }
 
+        /**
+         * @param inboundNatRules The incoming NAT rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(List<InboundNatRuleArgs> inboundNatRules) {
             return inboundNatRules(Output.of(inboundNatRules));
         }
 
+        /**
+         * @param inboundNatRules The incoming NAT rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
         }

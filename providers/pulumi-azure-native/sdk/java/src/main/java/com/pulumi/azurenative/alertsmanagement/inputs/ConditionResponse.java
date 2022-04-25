@@ -26,6 +26,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operator")
     private @Nullable String operator;
 
+    /**
+     * @return operator for a given condition
+     * 
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -37,6 +41,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return list of values to match for a given condition.
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -66,16 +74,34 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator operator for a given condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param values list of values to match for a given condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of values to match for a given condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

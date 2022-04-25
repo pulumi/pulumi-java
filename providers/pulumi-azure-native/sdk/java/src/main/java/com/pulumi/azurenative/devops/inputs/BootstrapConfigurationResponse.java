@@ -26,6 +26,10 @@ public final class BootstrapConfigurationResponse extends com.pulumi.resources.I
     @Import(name="sourceRepository")
     private @Nullable CodeRepositoryResponse sourceRepository;
 
+    /**
+     * @return Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
+     * 
+     */
     public Optional<CodeRepositoryResponse> sourceRepository() {
         return Optional.ofNullable(this.sourceRepository);
     }
@@ -37,6 +41,10 @@ public final class BootstrapConfigurationResponse extends com.pulumi.resources.I
     @Import(name="template", required=true)
     private PipelineTemplateResponse template;
 
+    /**
+     * @return Template used to bootstrap the pipeline.
+     * 
+     */
     public PipelineTemplateResponse template() {
         return this.template;
     }
@@ -66,11 +74,23 @@ public final class BootstrapConfigurationResponse extends com.pulumi.resources.I
             $ = new BootstrapConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceRepository Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRepository(@Nullable CodeRepositoryResponse sourceRepository) {
             $.sourceRepository = sourceRepository;
             return this;
         }
 
+        /**
+         * @param template Template used to bootstrap the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(PipelineTemplateResponse template) {
             $.template = template;
             return this;

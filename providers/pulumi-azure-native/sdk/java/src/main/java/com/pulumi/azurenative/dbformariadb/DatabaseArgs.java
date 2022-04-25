@@ -22,6 +22,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="charset")
     private @Nullable Output<String> charset;
 
+    /**
+     * @return The charset of the database.
+     * 
+     */
     public Optional<Output<String>> charset() {
         return Optional.ofNullable(this.charset);
     }
@@ -33,6 +37,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collation")
     private @Nullable Output<String> collation;
 
+    /**
+     * @return The collation of the database.
+     * 
+     */
     public Optional<Output<String>> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -44,6 +52,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -55,6 +67,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -98,47 +118,107 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charset The charset of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charset(@Nullable Output<String> charset) {
             $.charset = charset;
             return this;
         }
 
+        /**
+         * @param charset The charset of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charset(String charset) {
             return charset(Output.of(charset));
         }
 
+        /**
+         * @param collation The collation of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param collation The collation of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

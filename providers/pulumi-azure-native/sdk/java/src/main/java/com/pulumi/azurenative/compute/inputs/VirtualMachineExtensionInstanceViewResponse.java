@@ -27,6 +27,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The virtual machine extension name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -49,6 +57,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="substatuses")
     private @Nullable List<InstanceViewStatusResponse> substatuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> substatuses() {
         return Optional.ofNullable(this.substatuses);
     }
@@ -60,6 +72,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -71,6 +87,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="typeHandlerVersion")
     private @Nullable String typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -103,34 +123,76 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
             $ = new VirtualMachineExtensionInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The virtual machine extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param substatuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
             $.substatuses = substatuses;
             return this;
         }
 
+        /**
+         * @param substatuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substatuses(InstanceViewStatusResponse... substatuses) {
             return substatuses(List.of(substatuses));
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;

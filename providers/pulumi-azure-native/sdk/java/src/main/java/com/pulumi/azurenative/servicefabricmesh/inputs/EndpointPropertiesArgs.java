@@ -27,6 +27,10 @@ public final class EndpointPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class EndpointPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port used by the container.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -67,20 +75,44 @@ public final class EndpointPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new EndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port Port used by the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port used by the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

@@ -25,6 +25,10 @@ public final class NodePlacementConfigurationResponse extends com.pulumi.resourc
     @Import(name="policy")
     private @Nullable String policy;
 
+    /**
+     * @return Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
+     * 
+     */
     public Optional<String> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -53,6 +57,12 @@ public final class NodePlacementConfigurationResponse extends com.pulumi.resourc
             $ = new NodePlacementConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policy Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable String policy) {
             $.policy = policy;
             return this;

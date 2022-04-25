@@ -21,6 +21,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeTableName", required=true)
     private String routeTableName;
 
+    /**
+     * @return The name of the route table.
+     * 
+     */
     public String routeTableName() {
         return this.routeTableName;
     }
@@ -73,16 +85,34 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param routeTableName The name of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(String routeTableName) {
             $.routeTableName = routeTableName;
             return this;

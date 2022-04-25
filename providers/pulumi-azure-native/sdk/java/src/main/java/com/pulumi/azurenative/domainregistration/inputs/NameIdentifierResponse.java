@@ -25,6 +25,10 @@ public final class NameIdentifierResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the object.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class NameIdentifierResponse extends com.pulumi.resources.InvokeArg
             $ = new NameIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

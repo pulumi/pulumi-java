@@ -23,6 +23,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="maxInstances")
     private @Nullable Integer maxInstances;
 
+    /**
+     * @return Maximum number of instances for this deployment.
+     * 
+     */
     public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -34,6 +38,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="minInstances")
     private @Nullable Integer minInstances;
 
+    /**
+     * @return Minimum number of instances for this deployment.
+     * 
+     */
     public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -45,6 +53,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="pollingInterval")
     private @Nullable String pollingInterval;
 
+    /**
+     * @return The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+     * 
+     */
     public Optional<String> pollingInterval() {
         return Optional.ofNullable(this.pollingInterval);
     }
@@ -56,6 +68,11 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="scaleType", required=true)
     private String scaleType;
 
+    /**
+     * @return
+     * Expected value is &#39;Auto&#39;.
+     * 
+     */
     public String scaleType() {
         return this.scaleType;
     }
@@ -67,6 +84,10 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="targetUtilizationPercentage")
     private @Nullable Integer targetUtilizationPercentage;
 
+    /**
+     * @return Target CPU usage for the autoscaler.
+     * 
+     */
     public Optional<Integer> targetUtilizationPercentage() {
         return Optional.ofNullable(this.targetUtilizationPercentage);
     }
@@ -99,26 +120,57 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
             $ = new AutoScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Integer maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Minimum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(@Nullable Integer minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param pollingInterval The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingInterval(@Nullable String pollingInterval) {
             $.pollingInterval = pollingInterval;
             return this;
         }
 
+        /**
+         * @param scaleType
+         * Expected value is &#39;Auto&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param targetUtilizationPercentage Target CPU usage for the autoscaler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
             $.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;

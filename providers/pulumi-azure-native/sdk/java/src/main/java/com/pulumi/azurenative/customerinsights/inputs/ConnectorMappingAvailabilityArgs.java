@@ -27,6 +27,10 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
     @Import(name="frequency")
     private @Nullable Output<FrequencyTypes> frequency;
 
+    /**
+     * @return The frequency to update.
+     * 
+     */
     public Optional<Output<FrequencyTypes>> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -38,6 +42,10 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
     @Import(name="interval", required=true)
     private Output<Integer> interval;
 
+    /**
+     * @return The interval of the given frequency to use.
+     * 
+     */
     public Output<Integer> interval() {
         return this.interval;
     }
@@ -67,20 +75,44 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
             $ = new ConnectorMappingAvailabilityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency The frequency to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable Output<FrequencyTypes> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency The frequency to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(FrequencyTypes frequency) {
             return frequency(Output.of(frequency));
         }
 
+        /**
+         * @param interval The interval of the given frequency to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The interval of the given frequency to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }

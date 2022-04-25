@@ -26,6 +26,10 @@ public final class RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkAr
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkAr
             $ = new RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

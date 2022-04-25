@@ -26,6 +26,10 @@ public final class ExtendedPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="diskExclusionProperties")
     private @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
+    /**
+     * @return Extended Properties for Disk Exclusion.
+     * 
+     */
     public Optional<Output<DiskExclusionPropertiesArgs>> diskExclusionProperties() {
         return Optional.ofNullable(this.diskExclusionProperties);
     }
@@ -54,11 +58,23 @@ public final class ExtendedPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new ExtendedPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskExclusionProperties Extended Properties for Disk Exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskExclusionProperties(@Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties) {
             $.diskExclusionProperties = diskExclusionProperties;
             return this;
         }
 
+        /**
+         * @param diskExclusionProperties Extended Properties for Disk Exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskExclusionProperties(DiskExclusionPropertiesArgs diskExclusionProperties) {
             return diskExclusionProperties(Output.of(diskExclusionProperties));
         }

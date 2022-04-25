@@ -29,6 +29,10 @@ public final class TerminalSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fontSize")
     private @Nullable Output<Either<String,FontSize>> fontSize;
 
+    /**
+     * @return Size of terminal font.
+     * 
+     */
     public Optional<Output<Either<String,FontSize>>> fontSize() {
         return Optional.ofNullable(this.fontSize);
     }
@@ -40,6 +44,10 @@ public final class TerminalSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fontStyle")
     private @Nullable Output<Either<String,FontStyle>> fontStyle;
 
+    /**
+     * @return Style of terminal font.
+     * 
+     */
     public Optional<Output<Either<String,FontStyle>>> fontStyle() {
         return Optional.ofNullable(this.fontStyle);
     }
@@ -69,36 +77,84 @@ public final class TerminalSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new TerminalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fontSize Size of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontSize(@Nullable Output<Either<String,FontSize>> fontSize) {
             $.fontSize = fontSize;
             return this;
         }
 
+        /**
+         * @param fontSize Size of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontSize(Either<String,FontSize> fontSize) {
             return fontSize(Output.of(fontSize));
         }
 
+        /**
+         * @param fontSize Size of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontSize(String fontSize) {
             return fontSize(Either.ofLeft(fontSize));
         }
 
+        /**
+         * @param fontSize Size of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontSize(FontSize fontSize) {
             return fontSize(Either.ofRight(fontSize));
         }
 
+        /**
+         * @param fontStyle Style of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontStyle(@Nullable Output<Either<String,FontStyle>> fontStyle) {
             $.fontStyle = fontStyle;
             return this;
         }
 
+        /**
+         * @param fontStyle Style of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontStyle(Either<String,FontStyle> fontStyle) {
             return fontStyle(Output.of(fontStyle));
         }
 
+        /**
+         * @param fontStyle Style of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontStyle(String fontStyle) {
             return fontStyle(Either.ofLeft(fontStyle));
         }
 
+        /**
+         * @param fontStyle Style of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontStyle(FontStyle fontStyle) {
             return fontStyle(Either.ofRight(fontStyle));
         }

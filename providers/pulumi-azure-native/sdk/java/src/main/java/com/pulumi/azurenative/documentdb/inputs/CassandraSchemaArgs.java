@@ -29,6 +29,10 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterKeys")
     private @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
 
+    /**
+     * @return List of cluster key.
+     * 
+     */
     public Optional<Output<List<ClusterKeyArgs>>> clusterKeys() {
         return Optional.ofNullable(this.clusterKeys);
     }
@@ -40,6 +44,10 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="columns")
     private @Nullable Output<List<ColumnArgs>> columns;
 
+    /**
+     * @return List of Cassandra table columns.
+     * 
+     */
     public Optional<Output<List<ColumnArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -51,6 +59,10 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="partitionKeys")
     private @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
 
+    /**
+     * @return List of partition key.
+     * 
+     */
     public Optional<Output<List<CassandraPartitionKeyArgs>>> partitionKeys() {
         return Optional.ofNullable(this.partitionKeys);
     }
@@ -81,41 +93,95 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
             $ = new CassandraSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterKeys List of cluster key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterKeys(@Nullable Output<List<ClusterKeyArgs>> clusterKeys) {
             $.clusterKeys = clusterKeys;
             return this;
         }
 
+        /**
+         * @param clusterKeys List of cluster key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterKeys(List<ClusterKeyArgs> clusterKeys) {
             return clusterKeys(Output.of(clusterKeys));
         }
 
+        /**
+         * @param clusterKeys List of cluster key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterKeys(ClusterKeyArgs... clusterKeys) {
             return clusterKeys(List.of(clusterKeys));
         }
 
+        /**
+         * @param columns List of Cassandra table columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns List of Cassandra table columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<ColumnArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns List of Cassandra table columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(ColumnArgs... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param partitionKeys List of partition key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(@Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys) {
             $.partitionKeys = partitionKeys;
             return this;
         }
 
+        /**
+         * @param partitionKeys List of partition key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(List<CassandraPartitionKeyArgs> partitionKeys) {
             return partitionKeys(Output.of(partitionKeys));
         }
 
+        /**
+         * @param partitionKeys List of partition key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(CassandraPartitionKeyArgs... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }

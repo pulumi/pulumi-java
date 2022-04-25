@@ -19,6 +19,10 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="standardId", required=true)
     private String standardId;
 
+    /**
+     * @return The Security Standard key - unique key for the standard type
+     * 
+     */
     public String standardId() {
         return this.standardId;
     }
@@ -59,11 +67,23 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStandardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param standardId The Security Standard key - unique key for the standard type
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardId(String standardId) {
             $.standardId = standardId;
             return this;

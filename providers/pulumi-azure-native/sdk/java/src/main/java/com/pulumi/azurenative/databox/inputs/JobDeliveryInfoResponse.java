@@ -25,6 +25,10 @@ public final class JobDeliveryInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scheduledDateTime")
     private @Nullable String scheduledDateTime;
 
+    /**
+     * @return Scheduled date time.
+     * 
+     */
     public Optional<String> scheduledDateTime() {
         return Optional.ofNullable(this.scheduledDateTime);
     }
@@ -53,6 +57,12 @@ public final class JobDeliveryInfoResponse extends com.pulumi.resources.InvokeAr
             $ = new JobDeliveryInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduledDateTime Scheduled date time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
             $.scheduledDateTime = scheduledDateTime;
             return this;

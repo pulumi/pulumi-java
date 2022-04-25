@@ -25,6 +25,11 @@ public final class SystemAssignedIdentityAuthInfoResponse extends com.pulumi.res
     @Import(name="authType", required=true)
     private String authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;systemAssignedIdentity&#39;.
+     * 
+     */
     public String authType() {
         return this.authType;
     }
@@ -53,6 +58,13 @@ public final class SystemAssignedIdentityAuthInfoResponse extends com.pulumi.res
             $ = new SystemAssignedIdentityAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;systemAssignedIdentity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             $.authType = authType;
             return this;

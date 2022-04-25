@@ -23,6 +23,10 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
     @Import(name="fabricName", required=true)
     private Output<String> fabricName;
 
+    /**
+     * @return Fabric name.
+     * 
+     */
     public Output<String> fabricName() {
         return this.fabricName;
     }
@@ -34,6 +38,10 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
     @Import(name="mappingName")
     private @Nullable Output<String> mappingName;
 
+    /**
+     * @return Protection container mapping name.
+     * 
+     */
     public Optional<Output<String>> mappingName() {
         return Optional.ofNullable(this.mappingName);
     }
@@ -45,6 +53,10 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
     @Import(name="properties")
     private @Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties;
 
+    /**
+     * @return Configure protection input properties.
+     * 
+     */
     public Optional<Output<CreateProtectionContainerMappingInputPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
     @Import(name="protectionContainerName", required=true)
     private Output<String> protectionContainerName;
 
+    /**
+     * @return Protection container name.
+     * 
+     */
     public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
@@ -67,6 +83,10 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -111,56 +135,128 @@ public final class ReplicationProtectionContainerMappingArgs extends com.pulumi.
             $ = new ReplicationProtectionContainerMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             return fabricName(Output.of(fabricName));
         }
 
+        /**
+         * @param mappingName Protection container mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingName(@Nullable Output<String> mappingName) {
             $.mappingName = mappingName;
             return this;
         }
 
+        /**
+         * @param mappingName Protection container mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingName(String mappingName) {
             return mappingName(Output.of(mappingName));
         }
 
+        /**
+         * @param properties Configure protection input properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Configure protection input properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CreateProtectionContainerMappingInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param protectionContainerName Protection container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionContainerName(Output<String> protectionContainerName) {
             $.protectionContainerName = protectionContainerName;
             return this;
         }
 
+        /**
+         * @param protectionContainerName Protection container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionContainerName(String protectionContainerName) {
             return protectionContainerName(Output.of(protectionContainerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

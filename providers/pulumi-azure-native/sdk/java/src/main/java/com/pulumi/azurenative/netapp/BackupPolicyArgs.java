@@ -27,6 +27,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -38,6 +42,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
     private @Nullable Output<String> backupPolicyName;
 
+    /**
+     * @return Backup policy Name which uniquely identify backup policy.
+     * 
+     */
     public Optional<Output<String>> backupPolicyName() {
         return Optional.ofNullable(this.backupPolicyName);
     }
@@ -49,6 +57,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dailyBackupsToKeep")
     private @Nullable Output<Integer> dailyBackupsToKeep;
 
+    /**
+     * @return Daily backups count to keep
+     * 
+     */
     public Optional<Output<Integer>> dailyBackupsToKeep() {
         return Optional.ofNullable(this.dailyBackupsToKeep);
     }
@@ -60,6 +72,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return The property to decide policy is enabled or not
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -71,6 +87,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -82,6 +102,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monthlyBackupsToKeep")
     private @Nullable Output<Integer> monthlyBackupsToKeep;
 
+    /**
+     * @return Monthly backups count to keep
+     * 
+     */
     public Optional<Output<Integer>> monthlyBackupsToKeep() {
         return Optional.ofNullable(this.monthlyBackupsToKeep);
     }
@@ -93,6 +117,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -104,6 +132,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +147,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeBackups")
     private @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
 
+    /**
+     * @return A list of volumes assigned to this policy
+     * 
+     */
     public Optional<Output<List<VolumeBackupsArgs>>> volumeBackups() {
         return Optional.ofNullable(this.volumeBackups);
     }
@@ -126,6 +162,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumesAssigned")
     private @Nullable Output<Integer> volumesAssigned;
 
+    /**
+     * @return Volumes using current backup policy
+     * 
+     */
     public Optional<Output<Integer>> volumesAssigned() {
         return Optional.ofNullable(this.volumesAssigned);
     }
@@ -137,6 +177,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weeklyBackupsToKeep")
     private @Nullable Output<Integer> weeklyBackupsToKeep;
 
+    /**
+     * @return Weekly backups count to keep
+     * 
+     */
     public Optional<Output<Integer>> weeklyBackupsToKeep() {
         return Optional.ofNullable(this.weeklyBackupsToKeep);
     }
@@ -148,6 +192,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="yearlyBackupsToKeep")
     private @Nullable Output<Integer> yearlyBackupsToKeep;
 
+    /**
+     * @return Yearly backups count to keep
+     * 
+     */
     public Optional<Output<Integer>> yearlyBackupsToKeep() {
         return Optional.ofNullable(this.yearlyBackupsToKeep);
     }
@@ -187,114 +235,264 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param backupPolicyName Backup policy Name which uniquely identify backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
             $.backupPolicyName = backupPolicyName;
             return this;
         }
 
+        /**
+         * @param backupPolicyName Backup policy Name which uniquely identify backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(String backupPolicyName) {
             return backupPolicyName(Output.of(backupPolicyName));
         }
 
+        /**
+         * @param dailyBackupsToKeep Daily backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyBackupsToKeep(@Nullable Output<Integer> dailyBackupsToKeep) {
             $.dailyBackupsToKeep = dailyBackupsToKeep;
             return this;
         }
 
+        /**
+         * @param dailyBackupsToKeep Daily backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyBackupsToKeep(Integer dailyBackupsToKeep) {
             return dailyBackupsToKeep(Output.of(dailyBackupsToKeep));
         }
 
+        /**
+         * @param enabled The property to decide policy is enabled or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled The property to decide policy is enabled or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param monthlyBackupsToKeep Monthly backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyBackupsToKeep(@Nullable Output<Integer> monthlyBackupsToKeep) {
             $.monthlyBackupsToKeep = monthlyBackupsToKeep;
             return this;
         }
 
+        /**
+         * @param monthlyBackupsToKeep Monthly backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyBackupsToKeep(Integer monthlyBackupsToKeep) {
             return monthlyBackupsToKeep(Output.of(monthlyBackupsToKeep));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param volumeBackups A list of volumes assigned to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeBackups(@Nullable Output<List<VolumeBackupsArgs>> volumeBackups) {
             $.volumeBackups = volumeBackups;
             return this;
         }
 
+        /**
+         * @param volumeBackups A list of volumes assigned to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeBackups(List<VolumeBackupsArgs> volumeBackups) {
             return volumeBackups(Output.of(volumeBackups));
         }
 
+        /**
+         * @param volumeBackups A list of volumes assigned to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeBackups(VolumeBackupsArgs... volumeBackups) {
             return volumeBackups(List.of(volumeBackups));
         }
 
+        /**
+         * @param volumesAssigned Volumes using current backup policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumesAssigned(@Nullable Output<Integer> volumesAssigned) {
             $.volumesAssigned = volumesAssigned;
             return this;
         }
 
+        /**
+         * @param volumesAssigned Volumes using current backup policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumesAssigned(Integer volumesAssigned) {
             return volumesAssigned(Output.of(volumesAssigned));
         }
 
+        /**
+         * @param weeklyBackupsToKeep Weekly backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyBackupsToKeep(@Nullable Output<Integer> weeklyBackupsToKeep) {
             $.weeklyBackupsToKeep = weeklyBackupsToKeep;
             return this;
         }
 
+        /**
+         * @param weeklyBackupsToKeep Weekly backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyBackupsToKeep(Integer weeklyBackupsToKeep) {
             return weeklyBackupsToKeep(Output.of(weeklyBackupsToKeep));
         }
 
+        /**
+         * @param yearlyBackupsToKeep Yearly backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlyBackupsToKeep(@Nullable Output<Integer> yearlyBackupsToKeep) {
             $.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
 
+        /**
+         * @param yearlyBackupsToKeep Yearly backups count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlyBackupsToKeep(Integer yearlyBackupsToKeep) {
             return yearlyBackupsToKeep(Output.of(yearlyBackupsToKeep));
         }

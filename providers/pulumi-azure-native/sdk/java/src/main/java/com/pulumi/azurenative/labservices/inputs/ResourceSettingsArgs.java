@@ -29,6 +29,10 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="galleryImageResourceId")
     private @Nullable Output<String> galleryImageResourceId;
 
+    /**
+     * @return The resource id of the gallery image used for creating the virtual machine
+     * 
+     */
     public Optional<Output<String>> galleryImageResourceId() {
         return Optional.ofNullable(this.galleryImageResourceId);
     }
@@ -40,6 +44,10 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="referenceVm", required=true)
     private Output<ReferenceVmArgs> referenceVm;
 
+    /**
+     * @return Details specific to Reference Vm
+     * 
+     */
     public Output<ReferenceVmArgs> referenceVm() {
         return this.referenceVm;
     }
@@ -51,6 +59,10 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="size")
     private @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
+    /**
+     * @return The size of the virtual machine
+     * 
+     */
     public Optional<Output<Either<String,ManagedLabVmSize>>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -81,37 +93,85 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleryImageResourceId The resource id of the gallery image used for creating the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageResourceId(@Nullable Output<String> galleryImageResourceId) {
             $.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
 
+        /**
+         * @param galleryImageResourceId The resource id of the gallery image used for creating the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageResourceId(String galleryImageResourceId) {
             return galleryImageResourceId(Output.of(galleryImageResourceId));
         }
 
+        /**
+         * @param referenceVm Details specific to Reference Vm
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceVm(Output<ReferenceVmArgs> referenceVm) {
             $.referenceVm = referenceVm;
             return this;
         }
 
+        /**
+         * @param referenceVm Details specific to Reference Vm
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceVm(ReferenceVmArgs referenceVm) {
             return referenceVm(Output.of(referenceVm));
         }
 
+        /**
+         * @param size The size of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Either<String,ManagedLabVmSize>> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The size of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Either<String,ManagedLabVmSize> size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param size The size of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Either.ofLeft(size));
         }
 
+        /**
+         * @param size The size of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(ManagedLabVmSize size) {
             return size(Either.ofRight(size));
         }

@@ -23,6 +23,10 @@ public final class ConfigurationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the configuration.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ConfigurationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Version of the configuration.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class ConfigurationInfoResponse extends com.pulumi.resources.Invoke
             $ = new ConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Version of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

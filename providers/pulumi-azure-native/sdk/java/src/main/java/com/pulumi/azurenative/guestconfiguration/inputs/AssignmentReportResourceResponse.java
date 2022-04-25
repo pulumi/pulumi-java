@@ -28,6 +28,10 @@ public final class AssignmentReportResourceResponse extends com.pulumi.resources
     @Import(name="complianceStatus", required=true)
     private String complianceStatus;
 
+    /**
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
+     * 
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
@@ -39,6 +43,10 @@ public final class AssignmentReportResourceResponse extends com.pulumi.resources
     @Import(name="properties", required=true)
     private Object properties;
 
+    /**
+     * @return Properties of a guest configuration assignment resource.
+     * 
+     */
     public Object properties() {
         return this.properties;
     }
@@ -50,6 +58,10 @@ public final class AssignmentReportResourceResponse extends com.pulumi.resources
     @Import(name="reasons")
     private @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
 
+    /**
+     * @return Compliance reason and reason code for a resource.
+     * 
+     */
     public Optional<List<AssignmentReportResourceComplianceReasonResponse>> reasons() {
         return Optional.ofNullable(this.reasons);
     }
@@ -61,6 +73,10 @@ public final class AssignmentReportResourceResponse extends com.pulumi.resources
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return Name of the guest configuration assignment resource setting.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -92,25 +108,55 @@ public final class AssignmentReportResourceResponse extends com.pulumi.resources
             $ = new AssignmentReportResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complianceStatus A value indicating compliance status of the machine for the assigned guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatus(String complianceStatus) {
             $.complianceStatus = complianceStatus;
             return this;
         }
 
+        /**
+         * @param properties Properties of a guest configuration assignment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param reasons Compliance reason and reason code for a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasons(@Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons) {
             $.reasons = reasons;
             return this;
         }
 
+        /**
+         * @param reasons Compliance reason and reason code for a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasons(AssignmentReportResourceComplianceReasonResponse... reasons) {
             return reasons(List.of(reasons));
         }
 
+        /**
+         * @param resourceId Name of the guest configuration assignment resource setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

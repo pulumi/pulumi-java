@@ -27,6 +27,10 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="creationParameters", required=true)
     private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
 
+    /**
+     * @return Describes parameters for creating application-scoped volumes.
+     * 
+     */
     public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters() {
         return this.creationParameters;
     }
@@ -38,6 +42,10 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="destinationPath", required=true)
     private String destinationPath;
 
+    /**
+     * @return The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+     * 
+     */
     public String destinationPath() {
         return this.destinationPath;
     }
@@ -49,6 +57,10 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the volume being referenced.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="readOnly")
     private @Nullable Boolean readOnly;
 
+    /**
+     * @return The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+     * 
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -91,21 +107,45 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
             $ = new ApplicationScopedVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationParameters Describes parameters for creating application-scoped volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters) {
             $.creationParameters = creationParameters;
             return this;
         }
 
+        /**
+         * @param destinationPath The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPath(String destinationPath) {
             $.destinationPath = destinationPath;
             return this;
         }
 
+        /**
+         * @param name Name of the volume being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param readOnly The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Boolean readOnly) {
             $.readOnly = readOnly;
             return this;

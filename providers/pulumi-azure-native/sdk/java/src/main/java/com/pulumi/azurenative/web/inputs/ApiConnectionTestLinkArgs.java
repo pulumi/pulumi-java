@@ -26,6 +26,10 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
     @Import(name="method")
     private @Nullable Output<String> method;
 
+    /**
+     * @return HTTP Method
+     * 
+     */
     public Optional<Output<String>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -37,6 +41,10 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
     @Import(name="requestUri")
     private @Nullable Output<String> requestUri;
 
+    /**
+     * @return Test link request URI
+     * 
+     */
     public Optional<Output<String>> requestUri() {
         return Optional.ofNullable(this.requestUri);
     }
@@ -66,20 +74,44 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
             $ = new ApiConnectionTestLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param method HTTP Method
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method HTTP Method
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param requestUri Test link request URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUri(@Nullable Output<String> requestUri) {
             $.requestUri = requestUri;
             return this;
         }
 
+        /**
+         * @param requestUri Test link request URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUri(String requestUri) {
             return requestUri(Output.of(requestUri));
         }

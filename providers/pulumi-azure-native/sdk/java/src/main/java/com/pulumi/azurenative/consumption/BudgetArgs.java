@@ -30,6 +30,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="amount", required=true)
     private Output<Double> amount;
 
+    /**
+     * @return The total amount of cost to track with the budget
+     * 
+     */
     public Output<Double> amount() {
         return this.amount;
     }
@@ -41,6 +45,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetName")
     private @Nullable Output<String> budgetName;
 
+    /**
+     * @return Budget Name.
+     * 
+     */
     public Optional<Output<String>> budgetName() {
         return Optional.ofNullable(this.budgetName);
     }
@@ -52,6 +60,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category", required=true)
     private Output<Either<String,CategoryType>> category;
 
+    /**
+     * @return The category of the budget, whether the budget tracks cost or usage.
+     * 
+     */
     public Output<Either<String,CategoryType>> category() {
         return this.category;
     }
@@ -63,6 +75,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -74,6 +90,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<BudgetFilterArgs> filter;
 
+    /**
+     * @return May be used to filter budgets by user-specified dimensions and/or tags.
+     * 
+     */
     public Optional<Output<BudgetFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -85,6 +105,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
     private @Nullable Output<Map<String,NotificationArgs>> notifications;
 
+    /**
+     * @return Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+     * 
+     */
     public Optional<Output<Map<String,NotificationArgs>>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
@@ -96,6 +120,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope associated with budget operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -107,6 +135,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeGrain", required=true)
     private Output<Either<String,TimeGrainType>> timeGrain;
 
+    /**
+     * @return The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+     * 
+     */
     public Output<Either<String,TimeGrainType>> timeGrain() {
         return this.timeGrain;
     }
@@ -118,6 +150,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePeriod", required=true)
     private Output<BudgetTimePeriodArgs> timePeriod;
 
+    /**
+     * @return Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
+     * 
+     */
     public Output<BudgetTimePeriodArgs> timePeriod() {
         return this.timePeriod;
     }
@@ -154,99 +190,231 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amount The total amount of cost to track with the budget
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(Output<Double> amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param amount The total amount of cost to track with the budget
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(Double amount) {
             return amount(Output.of(amount));
         }
 
+        /**
+         * @param budgetName Budget Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(@Nullable Output<String> budgetName) {
             $.budgetName = budgetName;
             return this;
         }
 
+        /**
+         * @param budgetName Budget Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(String budgetName) {
             return budgetName(Output.of(budgetName));
         }
 
+        /**
+         * @param category The category of the budget, whether the budget tracks cost or usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(Output<Either<String,CategoryType>> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category The category of the budget, whether the budget tracks cost or usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(Either<String,CategoryType> category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param category The category of the budget, whether the budget tracks cost or usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Either.ofLeft(category));
         }
 
+        /**
+         * @param category The category of the budget, whether the budget tracks cost or usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(CategoryType category) {
             return category(Either.ofRight(category));
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param filter May be used to filter budgets by user-specified dimensions and/or tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BudgetFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter May be used to filter budgets by user-specified dimensions and/or tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BudgetFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param notifications Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(@Nullable Output<Map<String,NotificationArgs>> notifications) {
             $.notifications = notifications;
             return this;
         }
 
+        /**
+         * @param notifications Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(Map<String,NotificationArgs> notifications) {
             return notifications(Output.of(notifications));
         }
 
+        /**
+         * @param scope The scope associated with budget operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope associated with budget operations. This includes &#39;/subscriptions/{subscriptionId}/&#39; for subscription scope, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;/providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for billingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for invoiceSection scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param timeGrain The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(Output<Either<String,TimeGrainType>> timeGrain) {
             $.timeGrain = timeGrain;
             return this;
         }
 
+        /**
+         * @param timeGrain The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(Either<String,TimeGrainType> timeGrain) {
             return timeGrain(Output.of(timeGrain));
         }
 
+        /**
+         * @param timeGrain The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(String timeGrain) {
             return timeGrain(Either.ofLeft(timeGrain));
         }
 
+        /**
+         * @param timeGrain The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(TimeGrainType timeGrain) {
             return timeGrain(Either.ofRight(timeGrain));
         }
 
+        /**
+         * @param timePeriod Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(Output<BudgetTimePeriodArgs> timePeriod) {
             $.timePeriod = timePeriod;
             return this;
         }
 
+        /**
+         * @param timePeriod Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(BudgetTimePeriodArgs timePeriod) {
             return timePeriod(Output.of(timePeriod));
         }

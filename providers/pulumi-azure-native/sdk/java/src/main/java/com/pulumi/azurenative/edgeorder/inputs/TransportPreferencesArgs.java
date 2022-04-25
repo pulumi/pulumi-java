@@ -26,6 +26,10 @@ public final class TransportPreferencesArgs extends com.pulumi.resources.Resourc
     @Import(name="preferredShipmentType", required=true)
     private Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
+    /**
+     * @return Indicates Shipment Logistics type that the customer preferred.
+     * 
+     */
     public Output<Either<String,TransportShipmentTypes>> preferredShipmentType() {
         return this.preferredShipmentType;
     }
@@ -54,19 +58,43 @@ public final class TransportPreferencesArgs extends com.pulumi.resources.Resourc
             $ = new TransportPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preferredShipmentType Indicates Shipment Logistics type that the customer preferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShipmentType(Output<Either<String,TransportShipmentTypes>> preferredShipmentType) {
             $.preferredShipmentType = preferredShipmentType;
             return this;
         }
 
+        /**
+         * @param preferredShipmentType Indicates Shipment Logistics type that the customer preferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShipmentType(Either<String,TransportShipmentTypes> preferredShipmentType) {
             return preferredShipmentType(Output.of(preferredShipmentType));
         }
 
+        /**
+         * @param preferredShipmentType Indicates Shipment Logistics type that the customer preferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShipmentType(String preferredShipmentType) {
             return preferredShipmentType(Either.ofLeft(preferredShipmentType));
         }
 
+        /**
+         * @param preferredShipmentType Indicates Shipment Logistics type that the customer preferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShipmentType(TransportShipmentTypes preferredShipmentType) {
             return preferredShipmentType(Either.ofRight(preferredShipmentType));
         }

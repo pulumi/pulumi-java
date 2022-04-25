@@ -30,6 +30,10 @@ public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.
     @Import(name="nodes", required=true)
     private Output<List<EnterpriseChannelNodeArgs>> nodes;
 
+    /**
+     * @return The nodes associated with the Enterprise Channel.
+     * 
+     */
     public Output<List<EnterpriseChannelNodeArgs>> nodes() {
         return this.nodes;
     }
@@ -41,6 +45,10 @@ public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.
     @Import(name="state")
     private @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
+    /**
+     * @return The current state of the Enterprise Channel.
+     * 
+     */
     public Optional<Output<Either<String,EnterpriseChannelState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -70,32 +78,74 @@ public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.
             $ = new EnterpriseChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodes The nodes associated with the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(Output<List<EnterpriseChannelNodeArgs>> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes The nodes associated with the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(List<EnterpriseChannelNodeArgs> nodes) {
             return nodes(Output.of(nodes));
         }
 
+        /**
+         * @param nodes The nodes associated with the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(EnterpriseChannelNodeArgs... nodes) {
             return nodes(List.of(nodes));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,EnterpriseChannelState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,EnterpriseChannelState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(EnterpriseChannelState state) {
             return state(Either.ofRight(state));
         }

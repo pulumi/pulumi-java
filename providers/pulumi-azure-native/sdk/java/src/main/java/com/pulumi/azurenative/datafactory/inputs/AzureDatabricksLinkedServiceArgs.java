@@ -36,6 +36,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="accessToken")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
+    /**
+     * @return Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -47,6 +51,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -58,6 +66,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="authentication")
     private @Nullable Output<Object> authentication;
 
+    /**
+     * @return Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -69,6 +81,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -80,6 +96,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="credential")
     private @Nullable Output<CredentialReferenceArgs> credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<Output<CredentialReferenceArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -91,6 +111,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -102,6 +126,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="domain", required=true)
     private Output<Object> domain;
 
+    /**
+     * @return &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> domain() {
         return this.domain;
     }
@@ -113,6 +141,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -124,6 +156,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="existingClusterId")
     private @Nullable Output<Object> existingClusterId;
 
+    /**
+     * @return The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> existingClusterId() {
         return Optional.ofNullable(this.existingClusterId);
     }
@@ -135,6 +171,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="instancePoolId")
     private @Nullable Output<Object> instancePoolId;
 
+    /**
+     * @return The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> instancePoolId() {
         return Optional.ofNullable(this.instancePoolId);
     }
@@ -146,6 +186,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterCustomTags")
     private @Nullable Output<Map<String,Object>> newClusterCustomTags;
 
+    /**
+     * @return Additional tags for cluster resources. This property is ignored in instance pool configurations.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> newClusterCustomTags() {
         return Optional.ofNullable(this.newClusterCustomTags);
     }
@@ -157,6 +201,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterDriverNodeType")
     private @Nullable Output<Object> newClusterDriverNodeType;
 
+    /**
+     * @return The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> newClusterDriverNodeType() {
         return Optional.ofNullable(this.newClusterDriverNodeType);
     }
@@ -168,6 +216,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterEnableElasticDisk")
     private @Nullable Output<Object> newClusterEnableElasticDisk;
 
+    /**
+     * @return Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> newClusterEnableElasticDisk() {
         return Optional.ofNullable(this.newClusterEnableElasticDisk);
     }
@@ -179,6 +231,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterInitScripts")
     private @Nullable Output<Object> newClusterInitScripts;
 
+    /**
+     * @return User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Output<Object>> newClusterInitScripts() {
         return Optional.ofNullable(this.newClusterInitScripts);
     }
@@ -190,6 +246,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterLogDestination")
     private @Nullable Output<Object> newClusterLogDestination;
 
+    /**
+     * @return Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> newClusterLogDestination() {
         return Optional.ofNullable(this.newClusterLogDestination);
     }
@@ -201,6 +261,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterNodeType")
     private @Nullable Output<Object> newClusterNodeType;
 
+    /**
+     * @return The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> newClusterNodeType() {
         return Optional.ofNullable(this.newClusterNodeType);
     }
@@ -212,6 +276,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterNumOfWorker")
     private @Nullable Output<Object> newClusterNumOfWorker;
 
+    /**
+     * @return If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> newClusterNumOfWorker() {
         return Optional.ofNullable(this.newClusterNumOfWorker);
     }
@@ -223,6 +291,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterSparkConf")
     private @Nullable Output<Map<String,Object>> newClusterSparkConf;
 
+    /**
+     * @return A set of optional, user-specified Spark configuration key-value pairs.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> newClusterSparkConf() {
         return Optional.ofNullable(this.newClusterSparkConf);
     }
@@ -234,6 +306,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterSparkEnvVars")
     private @Nullable Output<Map<String,Object>> newClusterSparkEnvVars;
 
+    /**
+     * @return A set of optional, user-specified Spark environment variables key-value pairs.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> newClusterSparkEnvVars() {
         return Optional.ofNullable(this.newClusterSparkEnvVars);
     }
@@ -245,6 +321,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="newClusterVersion")
     private @Nullable Output<Object> newClusterVersion;
 
+    /**
+     * @return If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> newClusterVersion() {
         return Optional.ofNullable(this.newClusterVersion);
     }
@@ -256,6 +336,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -267,6 +351,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="policyId")
     private @Nullable Output<Object> policyId;
 
+    /**
+     * @return The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -279,6 +367,11 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureDatabricks&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -290,6 +383,10 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
     @Import(name="workspaceResourceId")
     private @Nullable Output<Object> workspaceResourceId;
 
+    /**
+     * @return Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -341,230 +438,538 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
             $ = new AzureDatabricksLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(AzureKeyVaultSecretReferenceArgs accessToken) {
             return accessToken(Either.ofLeft(accessToken));
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(SecureStringArgs accessToken) {
             return accessToken(Either.ofRight(accessToken));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authentication Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Output<Object> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Object authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialReferenceArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param domain &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<Object> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Object domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param existingClusterId The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingClusterId(@Nullable Output<Object> existingClusterId) {
             $.existingClusterId = existingClusterId;
             return this;
         }
 
+        /**
+         * @param existingClusterId The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingClusterId(Object existingClusterId) {
             return existingClusterId(Output.of(existingClusterId));
         }
 
+        /**
+         * @param instancePoolId The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePoolId(@Nullable Output<Object> instancePoolId) {
             $.instancePoolId = instancePoolId;
             return this;
         }
 
+        /**
+         * @param instancePoolId The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePoolId(Object instancePoolId) {
             return instancePoolId(Output.of(instancePoolId));
         }
 
+        /**
+         * @param newClusterCustomTags Additional tags for cluster resources. This property is ignored in instance pool configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterCustomTags(@Nullable Output<Map<String,Object>> newClusterCustomTags) {
             $.newClusterCustomTags = newClusterCustomTags;
             return this;
         }
 
+        /**
+         * @param newClusterCustomTags Additional tags for cluster resources. This property is ignored in instance pool configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterCustomTags(Map<String,Object> newClusterCustomTags) {
             return newClusterCustomTags(Output.of(newClusterCustomTags));
         }
 
+        /**
+         * @param newClusterDriverNodeType The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterDriverNodeType(@Nullable Output<Object> newClusterDriverNodeType) {
             $.newClusterDriverNodeType = newClusterDriverNodeType;
             return this;
         }
 
+        /**
+         * @param newClusterDriverNodeType The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterDriverNodeType(Object newClusterDriverNodeType) {
             return newClusterDriverNodeType(Output.of(newClusterDriverNodeType));
         }
 
+        /**
+         * @param newClusterEnableElasticDisk Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterEnableElasticDisk(@Nullable Output<Object> newClusterEnableElasticDisk) {
             $.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
             return this;
         }
 
+        /**
+         * @param newClusterEnableElasticDisk Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterEnableElasticDisk(Object newClusterEnableElasticDisk) {
             return newClusterEnableElasticDisk(Output.of(newClusterEnableElasticDisk));
         }
 
+        /**
+         * @param newClusterInitScripts User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterInitScripts(@Nullable Output<Object> newClusterInitScripts) {
             $.newClusterInitScripts = newClusterInitScripts;
             return this;
         }
 
+        /**
+         * @param newClusterInitScripts User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterInitScripts(Object newClusterInitScripts) {
             return newClusterInitScripts(Output.of(newClusterInitScripts));
         }
 
+        /**
+         * @param newClusterLogDestination Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterLogDestination(@Nullable Output<Object> newClusterLogDestination) {
             $.newClusterLogDestination = newClusterLogDestination;
             return this;
         }
 
+        /**
+         * @param newClusterLogDestination Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterLogDestination(Object newClusterLogDestination) {
             return newClusterLogDestination(Output.of(newClusterLogDestination));
         }
 
+        /**
+         * @param newClusterNodeType The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterNodeType(@Nullable Output<Object> newClusterNodeType) {
             $.newClusterNodeType = newClusterNodeType;
             return this;
         }
 
+        /**
+         * @param newClusterNodeType The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterNodeType(Object newClusterNodeType) {
             return newClusterNodeType(Output.of(newClusterNodeType));
         }
 
+        /**
+         * @param newClusterNumOfWorker If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterNumOfWorker(@Nullable Output<Object> newClusterNumOfWorker) {
             $.newClusterNumOfWorker = newClusterNumOfWorker;
             return this;
         }
 
+        /**
+         * @param newClusterNumOfWorker If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterNumOfWorker(Object newClusterNumOfWorker) {
             return newClusterNumOfWorker(Output.of(newClusterNumOfWorker));
         }
 
+        /**
+         * @param newClusterSparkConf A set of optional, user-specified Spark configuration key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterSparkConf(@Nullable Output<Map<String,Object>> newClusterSparkConf) {
             $.newClusterSparkConf = newClusterSparkConf;
             return this;
         }
 
+        /**
+         * @param newClusterSparkConf A set of optional, user-specified Spark configuration key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterSparkConf(Map<String,Object> newClusterSparkConf) {
             return newClusterSparkConf(Output.of(newClusterSparkConf));
         }
 
+        /**
+         * @param newClusterSparkEnvVars A set of optional, user-specified Spark environment variables key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterSparkEnvVars(@Nullable Output<Map<String,Object>> newClusterSparkEnvVars) {
             $.newClusterSparkEnvVars = newClusterSparkEnvVars;
             return this;
         }
 
+        /**
+         * @param newClusterSparkEnvVars A set of optional, user-specified Spark environment variables key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterSparkEnvVars(Map<String,Object> newClusterSparkEnvVars) {
             return newClusterSparkEnvVars(Output.of(newClusterSparkEnvVars));
         }
 
+        /**
+         * @param newClusterVersion If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterVersion(@Nullable Output<Object> newClusterVersion) {
             $.newClusterVersion = newClusterVersion;
             return this;
         }
 
+        /**
+         * @param newClusterVersion If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder newClusterVersion(Object newClusterVersion) {
             return newClusterVersion(Output.of(newClusterVersion));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param policyId The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<Object> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(Object policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDatabricks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDatabricks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param workspaceResourceId Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable Output<Object> workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(Object workspaceResourceId) {
             return workspaceResourceId(Output.of(workspaceResourceId));
         }

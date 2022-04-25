@@ -27,6 +27,10 @@ public final class AllowedAudiencesValidationArgs extends com.pulumi.resources.R
     @Import(name="allowedAudiences")
     private @Nullable Output<List<String>> allowedAudiences;
 
+    /**
+     * @return The configuration settings of the allowed list of audiences from which to validate the JWT token.
+     * 
+     */
     public Optional<Output<List<String>>> allowedAudiences() {
         return Optional.ofNullable(this.allowedAudiences);
     }
@@ -55,15 +59,33 @@ public final class AllowedAudiencesValidationArgs extends com.pulumi.resources.R
             $ = new AllowedAudiencesValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedAudiences The configuration settings of the allowed list of audiences from which to validate the JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
             $.allowedAudiences = allowedAudiences;
             return this;
         }
 
+        /**
+         * @param allowedAudiences The configuration settings of the allowed list of audiences from which to validate the JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(List<String> allowedAudiences) {
             return allowedAudiences(Output.of(allowedAudiences));
         }
 
+        /**
+         * @param allowedAudiences The configuration settings of the allowed list of audiences from which to validate the JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }

@@ -27,6 +27,10 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="columnName", required=true)
     private Output<String> columnName;
 
+    /**
+     * @return The column name of the import file.
+     * 
+     */
     public Output<String> columnName() {
         return this.columnName;
     }
@@ -38,6 +42,10 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="customFormatSpecifier")
     private @Nullable Output<String> customFormatSpecifier;
 
+    /**
+     * @return Custom format specifier for input parsing.
+     * 
+     */
     public Optional<Output<String>> customFormatSpecifier() {
         return Optional.ofNullable(this.customFormatSpecifier);
     }
@@ -49,6 +57,10 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="isEncrypted")
     private @Nullable Output<Boolean> isEncrypted;
 
+    /**
+     * @return Indicates if the column is encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
@@ -60,6 +72,10 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="propertyName", required=true)
     private Output<String> propertyName;
 
+    /**
+     * @return The property name of the mapping entity.
+     * 
+     */
     public Output<String> propertyName() {
         return this.propertyName;
     }
@@ -91,38 +107,86 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
             $ = new ConnectorMappingStructureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName The column name of the import file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(Output<String> columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param columnName The column name of the import file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             return columnName(Output.of(columnName));
         }
 
+        /**
+         * @param customFormatSpecifier Custom format specifier for input parsing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFormatSpecifier(@Nullable Output<String> customFormatSpecifier) {
             $.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
 
+        /**
+         * @param customFormatSpecifier Custom format specifier for input parsing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFormatSpecifier(String customFormatSpecifier) {
             return customFormatSpecifier(Output.of(customFormatSpecifier));
         }
 
+        /**
+         * @param isEncrypted Indicates if the column is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             $.isEncrypted = isEncrypted;
             return this;
         }
 
+        /**
+         * @param isEncrypted Indicates if the column is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncrypted(Boolean isEncrypted) {
             return isEncrypted(Output.of(isEncrypted));
         }
 
+        /**
+         * @param propertyName The property name of the mapping entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(Output<String> propertyName) {
             $.propertyName = propertyName;
             return this;
         }
 
+        /**
+         * @param propertyName The property name of the mapping entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(String propertyName) {
             return propertyName(Output.of(propertyName));
         }

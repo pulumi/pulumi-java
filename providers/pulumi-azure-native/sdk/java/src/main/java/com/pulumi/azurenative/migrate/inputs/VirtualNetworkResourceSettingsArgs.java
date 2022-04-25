@@ -30,6 +30,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="addressSpace")
     private @Nullable Output<List<String>> addressSpace;
 
+    /**
+     * @return Gets or sets the address prefixes for the virtual network.
+     * 
+     */
     public Optional<Output<List<String>>> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
@@ -42,6 +46,11 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+     * deployed in the virtual network.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -54,6 +63,11 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="enableDdosProtection")
     private @Nullable Output<Boolean> enableDdosProtection;
 
+    /**
+     * @return Gets or sets a value indicating whether gets or sets whether the
+     * DDOS protection should be switched on.
+     * 
+     */
     public Optional<Output<Boolean>> enableDdosProtection() {
         return Optional.ofNullable(this.enableDdosProtection);
     }
@@ -66,6 +80,11 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -77,6 +96,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="subnets")
     private @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
 
+    /**
+     * @return Gets or sets List of subnets in a VirtualNetwork.
+     * 
+     */
     public Optional<Output<List<SubnetResourceSettingsArgs>>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -88,6 +111,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -121,68 +148,165 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
             $ = new VirtualNetworkResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressSpace Gets or sets the address prefixes for the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(@Nullable Output<List<String>> addressSpace) {
             $.addressSpace = addressSpace;
             return this;
         }
 
+        /**
+         * @param addressSpace Gets or sets the address prefixes for the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(List<String> addressSpace) {
             return addressSpace(Output.of(addressSpace));
         }
 
+        /**
+         * @param addressSpace Gets or sets the address prefixes for the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(String... addressSpace) {
             return addressSpace(List.of(addressSpace));
         }
 
+        /**
+         * @param dnsServers Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+         * deployed in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+         * deployed in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+         * deployed in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param enableDdosProtection Gets or sets a value indicating whether gets or sets whether the
+         * DDOS protection should be switched on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
             $.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
+        /**
+         * @param enableDdosProtection Gets or sets a value indicating whether gets or sets whether the
+         * DDOS protection should be switched on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDdosProtection(Boolean enableDdosProtection) {
             return enableDdosProtection(Output.of(enableDdosProtection));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param subnets Gets or sets List of subnets in a VirtualNetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable Output<List<SubnetResourceSettingsArgs>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets Gets or sets List of subnets in a VirtualNetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<SubnetResourceSettingsArgs> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets Gets or sets List of subnets in a VirtualNetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(SubnetResourceSettingsArgs... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }

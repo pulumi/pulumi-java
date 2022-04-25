@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RequestSchemeMatchConditionParametersResponse {
     /**
-     * The match value for the condition of the delivery rule
+     * @return The match value for the condition of the delivery rule
      * 
      */
     private final @Nullable List<String> matchValues;
     /**
-     * Describes if this is negate condition or not
+     * @return Describes if this is negate condition or not
      * 
      */
     private final @Nullable Boolean negateCondition;
     private final String odataType;
     /**
-     * Describes operator to be matched
+     * @return Describes operator to be matched
      * 
      */
     private final String operator;
@@ -43,16 +43,16 @@ public final class RequestSchemeMatchConditionParametersResponse {
     }
 
     /**
-     * The match value for the condition of the delivery rule
+     * @return The match value for the condition of the delivery rule
      * 
-    */
+     */
     public List<String> matchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
     /**
-     * Describes if this is negate condition or not
+     * @return Describes if this is negate condition or not
      * 
-    */
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -60,9 +60,9 @@ public final class RequestSchemeMatchConditionParametersResponse {
         return this.odataType;
     }
     /**
-     * Describes operator to be matched
+     * @return Describes operator to be matched
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }

@@ -13,57 +13,57 @@ import java.util.Objects;
 @CustomType
 public final class ServerEndpointSyncStatusResponse {
     /**
-     * Combined Health Status.
+     * @return Combined Health Status.
      * 
      */
     private final String combinedHealth;
     /**
-     * Download sync activity
+     * @return Download sync activity
      * 
      */
     private final ServerEndpointSyncActivityStatusResponse downloadActivity;
     /**
-     * Download Health Status.
+     * @return Download Health Status.
      * 
      */
     private final String downloadHealth;
     /**
-     * Download Status
+     * @return Download Status
      * 
      */
     private final ServerEndpointSyncSessionStatusResponse downloadStatus;
     /**
-     * Last Updated Timestamp
+     * @return Last Updated Timestamp
      * 
      */
     private final String lastUpdatedTimestamp;
     /**
-     * Offline Data Transfer State
+     * @return Offline Data Transfer State
      * 
      */
     private final String offlineDataTransferStatus;
     /**
-     * Sync activity
+     * @return Sync activity
      * 
      */
     private final String syncActivity;
     /**
-     * Total count of persistent files not syncing (combined upload + download).
+     * @return Total count of persistent files not syncing (combined upload + download).
      * 
      */
     private final Double totalPersistentFilesNotSyncingCount;
     /**
-     * Upload sync activity
+     * @return Upload sync activity
      * 
      */
     private final ServerEndpointSyncActivityStatusResponse uploadActivity;
     /**
-     * Upload Health Status.
+     * @return Upload Health Status.
      * 
      */
     private final String uploadHealth;
     /**
-     * Upload Status
+     * @return Upload Status
      * 
      */
     private final ServerEndpointSyncSessionStatusResponse uploadStatus;
@@ -95,79 +95,79 @@ public final class ServerEndpointSyncStatusResponse {
     }
 
     /**
-     * Combined Health Status.
+     * @return Combined Health Status.
      * 
-    */
+     */
     public String combinedHealth() {
         return this.combinedHealth;
     }
     /**
-     * Download sync activity
+     * @return Download sync activity
      * 
-    */
+     */
     public ServerEndpointSyncActivityStatusResponse downloadActivity() {
         return this.downloadActivity;
     }
     /**
-     * Download Health Status.
+     * @return Download Health Status.
      * 
-    */
+     */
     public String downloadHealth() {
         return this.downloadHealth;
     }
     /**
-     * Download Status
+     * @return Download Status
      * 
-    */
+     */
     public ServerEndpointSyncSessionStatusResponse downloadStatus() {
         return this.downloadStatus;
     }
     /**
-     * Last Updated Timestamp
+     * @return Last Updated Timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
-     * Offline Data Transfer State
+     * @return Offline Data Transfer State
      * 
-    */
+     */
     public String offlineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
     /**
-     * Sync activity
+     * @return Sync activity
      * 
-    */
+     */
     public String syncActivity() {
         return this.syncActivity;
     }
     /**
-     * Total count of persistent files not syncing (combined upload + download).
+     * @return Total count of persistent files not syncing (combined upload + download).
      * 
-    */
+     */
     public Double totalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
     /**
-     * Upload sync activity
+     * @return Upload sync activity
      * 
-    */
+     */
     public ServerEndpointSyncActivityStatusResponse uploadActivity() {
         return this.uploadActivity;
     }
     /**
-     * Upload Health Status.
+     * @return Upload Health Status.
      * 
-    */
+     */
     public String uploadHealth() {
         return this.uploadHealth;
     }
     /**
-     * Upload Status
+     * @return Upload Status
      * 
-    */
+     */
     public ServerEndpointSyncSessionStatusResponse uploadStatus() {
         return this.uploadStatus;
     }

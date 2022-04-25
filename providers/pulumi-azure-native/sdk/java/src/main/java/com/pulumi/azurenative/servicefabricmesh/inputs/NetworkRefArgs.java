@@ -28,6 +28,10 @@ public final class NetworkRefArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointRefs")
     private @Nullable Output<List<EndpointRefArgs>> endpointRefs;
 
+    /**
+     * @return A list of endpoints that are exposed on this network.
+     * 
+     */
     public Optional<Output<List<EndpointRefArgs>>> endpointRefs() {
         return Optional.ofNullable(this.endpointRefs);
     }
@@ -39,6 +43,10 @@ public final class NetworkRefArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the network
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,24 +76,54 @@ public final class NetworkRefArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkRefArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointRefs A list of endpoints that are exposed on this network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointRefs(@Nullable Output<List<EndpointRefArgs>> endpointRefs) {
             $.endpointRefs = endpointRefs;
             return this;
         }
 
+        /**
+         * @param endpointRefs A list of endpoints that are exposed on this network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointRefs(List<EndpointRefArgs> endpointRefs) {
             return endpointRefs(Output.of(endpointRefs));
         }
 
+        /**
+         * @param endpointRefs A list of endpoints that are exposed on this network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointRefs(EndpointRefArgs... endpointRefs) {
             return endpointRefs(List.of(endpointRefs));
         }
 
+        /**
+         * @param name Name of the network
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the network
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

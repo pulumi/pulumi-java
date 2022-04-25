@@ -26,6 +26,10 @@ public final class SiteAgentPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="keyVaultId")
     private @Nullable Output<String> keyVaultId;
 
+    /**
+     * @return Key vault ARM Id.
+     * 
+     */
     public Optional<Output<String>> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -37,6 +41,10 @@ public final class SiteAgentPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="keyVaultUri")
     private @Nullable Output<String> keyVaultUri;
 
+    /**
+     * @return Key vault URI.
+     * 
+     */
     public Optional<Output<String>> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -66,20 +74,44 @@ public final class SiteAgentPropertiesArgs extends com.pulumi.resources.Resource
             $ = new SiteAgentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultId Key vault ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultId Key vault ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(String keyVaultId) {
             return keyVaultId(Output.of(keyVaultId));
         }
 
+        /**
+         * @param keyVaultUri Key vault URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVaultUri Key vault URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             return keyVaultUri(Output.of(keyVaultUri));
         }

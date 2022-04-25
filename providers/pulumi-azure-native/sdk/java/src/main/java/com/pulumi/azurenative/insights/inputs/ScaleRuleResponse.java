@@ -24,6 +24,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricTrigger", required=true)
     private MetricTriggerResponse metricTrigger;
 
+    /**
+     * @return the trigger that results in a scaling action.
+     * 
+     */
     public MetricTriggerResponse metricTrigger() {
         return this.metricTrigger;
     }
@@ -35,6 +39,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scaleAction", required=true)
     private ScaleActionResponse scaleAction;
 
+    /**
+     * @return the parameters for the scaling action.
+     * 
+     */
     public ScaleActionResponse scaleAction() {
         return this.scaleAction;
     }
@@ -64,11 +72,23 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricTrigger the trigger that results in a scaling action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTrigger(MetricTriggerResponse metricTrigger) {
             $.metricTrigger = metricTrigger;
             return this;
         }
 
+        /**
+         * @param scaleAction the parameters for the scaling action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleAction(ScaleActionResponse scaleAction) {
             $.scaleAction = scaleAction;
             return this;

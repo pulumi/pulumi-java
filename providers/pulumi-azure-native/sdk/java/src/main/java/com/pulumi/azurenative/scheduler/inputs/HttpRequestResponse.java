@@ -26,6 +26,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authentication")
     private @Nullable Object authentication;
 
+    /**
+     * @return Gets or sets the authentication method of the request.
+     * 
+     */
     public Optional<Object> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -37,6 +41,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="body")
     private @Nullable String body;
 
+    /**
+     * @return Gets or sets the request body.
+     * 
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
@@ -48,6 +56,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="headers")
     private @Nullable Map<String,String> headers;
 
+    /**
+     * @return Gets or sets the headers.
+     * 
+     */
     public Optional<Map<String,String>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -59,6 +71,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="method")
     private @Nullable String method;
 
+    /**
+     * @return Gets or sets the method of the request.
+     * 
+     */
     public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
@@ -70,6 +86,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return Gets or sets the URI of the request.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -102,26 +122,56 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HttpRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Gets or sets the authentication method of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Object authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param body Gets or sets the request body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable String body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param headers Gets or sets the headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Map<String,String> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param method Gets or sets the method of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param uri Gets or sets the URI of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

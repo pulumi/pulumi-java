@@ -19,6 +19,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pu
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pu
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API will get a gateway for the production slot&#39;s Virtual Network.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -71,16 +83,34 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pu
             $ = new GetWebAppSwiftVirtualNetworkConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API will get a gateway for the production slot&#39;s Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

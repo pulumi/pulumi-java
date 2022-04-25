@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PortResponse {
     /**
-     * The port number.
+     * @return The port number.
      * 
      */
     private final Integer port;
     /**
-     * The protocol associated with the port.
+     * @return The protocol associated with the port.
      * 
      */
     private final @Nullable String protocol;
@@ -32,16 +32,16 @@ public final class PortResponse {
     }
 
     /**
-     * The port number.
+     * @return The port number.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The protocol associated with the port.
+     * @return The protocol associated with the port.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }

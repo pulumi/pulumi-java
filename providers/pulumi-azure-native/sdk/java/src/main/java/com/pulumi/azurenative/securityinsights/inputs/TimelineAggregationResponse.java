@@ -24,6 +24,10 @@ public final class TimelineAggregationResponse extends com.pulumi.resources.Invo
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return the total items found for a kind
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class TimelineAggregationResponse extends com.pulumi.resources.Invo
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return the query kind
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -64,11 +72,23 @@ public final class TimelineAggregationResponse extends com.pulumi.resources.Invo
             $ = new TimelineAggregationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count the total items found for a kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param kind the query kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;

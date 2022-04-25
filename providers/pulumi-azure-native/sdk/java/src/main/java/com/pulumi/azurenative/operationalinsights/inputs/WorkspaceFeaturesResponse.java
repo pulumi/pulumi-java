@@ -26,6 +26,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterResourceId")
     private @Nullable String clusterResourceId;
 
+    /**
+     * @return Dedicated LA cluster resourceId that is linked to the workspaces.
+     * 
+     */
     public Optional<String> clusterResourceId() {
         return Optional.ofNullable(this.clusterResourceId);
     }
@@ -37,6 +41,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
     @Import(name="disableLocalAuth")
     private @Nullable Boolean disableLocalAuth;
 
+    /**
+     * @return Disable Non-AAD based Auth.
+     * 
+     */
     public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
@@ -48,6 +56,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
     @Import(name="enableDataExport")
     private @Nullable Boolean enableDataExport;
 
+    /**
+     * @return Flag that indicate if data should be exported.
+     * 
+     */
     public Optional<Boolean> enableDataExport() {
         return Optional.ofNullable(this.enableDataExport);
     }
@@ -59,6 +71,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
     @Import(name="enableLogAccessUsingOnlyResourcePermissions")
     private @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
 
+    /**
+     * @return Flag that indicate which permission to use - resource or workspace or both.
+     * 
+     */
     public Optional<Boolean> enableLogAccessUsingOnlyResourcePermissions() {
         return Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
@@ -70,6 +86,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
     @Import(name="immediatePurgeDataOn30Days")
     private @Nullable Boolean immediatePurgeDataOn30Days;
 
+    /**
+     * @return Flag that describes if we want to remove the data after 30 days.
+     * 
+     */
     public Optional<Boolean> immediatePurgeDataOn30Days() {
         return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
@@ -102,26 +122,56 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
             $ = new WorkspaceFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterResourceId Dedicated LA cluster resourceId that is linked to the workspaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceId(@Nullable String clusterResourceId) {
             $.clusterResourceId = clusterResourceId;
             return this;
         }
 
+        /**
+         * @param disableLocalAuth Disable Non-AAD based Auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             $.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
+        /**
+         * @param enableDataExport Flag that indicate if data should be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDataExport(@Nullable Boolean enableDataExport) {
             $.enableDataExport = enableDataExport;
             return this;
         }
 
+        /**
+         * @param enableLogAccessUsingOnlyResourcePermissions Flag that indicate which permission to use - resource or workspace or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
             $.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
 
+        /**
+         * @param immediatePurgeDataOn30Days Flag that describes if we want to remove the data after 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             $.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;

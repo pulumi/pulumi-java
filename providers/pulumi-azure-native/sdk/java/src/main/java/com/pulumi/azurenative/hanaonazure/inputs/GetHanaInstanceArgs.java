@@ -19,6 +19,10 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hanaInstanceName", required=true)
     private String hanaInstanceName;
 
+    /**
+     * @return Name of the SAP HANA on Azure instance.
+     * 
+     */
     public String hanaInstanceName() {
         return this.hanaInstanceName;
     }
@@ -30,6 +34,10 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHanaInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hanaInstanceName Name of the SAP HANA on Azure instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaInstanceName(String hanaInstanceName) {
             $.hanaInstanceName = hanaInstanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

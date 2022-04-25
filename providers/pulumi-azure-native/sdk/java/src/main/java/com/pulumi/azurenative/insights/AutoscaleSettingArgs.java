@@ -28,6 +28,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoscaleSettingName")
     private @Nullable Output<String> autoscaleSettingName;
 
+    /**
+     * @return The autoscale setting name.
+     * 
+     */
     public Optional<Output<String>> autoscaleSettingName() {
         return Optional.ofNullable(this.autoscaleSettingName);
     }
@@ -39,6 +43,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -50,6 +58,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +73,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return the name of the autoscale setting.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +88,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notifications")
     private @Nullable Output<List<AutoscaleNotificationArgs>> notifications;
 
+    /**
+     * @return the collection of notifications.
+     * 
+     */
     public Optional<Output<List<AutoscaleNotificationArgs>>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
@@ -83,6 +103,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="profiles", required=true)
     private Output<List<AutoscaleProfileArgs>> profiles;
 
+    /**
+     * @return the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+     * 
+     */
     public Output<List<AutoscaleProfileArgs>> profiles() {
         return this.profiles;
     }
@@ -94,6 +118,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -105,6 +133,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -116,6 +148,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetResourceLocation")
     private @Nullable Output<String> targetResourceLocation;
 
+    /**
+     * @return the location of the resource that the autoscale setting should be added to.
+     * 
+     */
     public Optional<Output<String>> targetResourceLocation() {
         return Optional.ofNullable(this.targetResourceLocation);
     }
@@ -127,6 +163,10 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetResourceUri")
     private @Nullable Output<String> targetResourceUri;
 
+    /**
+     * @return the resource identifier of the resource that the autoscale setting should be added to.
+     * 
+     */
     public Optional<Output<String>> targetResourceUri() {
         return Optional.ofNullable(this.targetResourceUri);
     }
@@ -164,100 +204,232 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
             $ = new AutoscaleSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleSettingName The autoscale setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleSettingName(@Nullable Output<String> autoscaleSettingName) {
             $.autoscaleSettingName = autoscaleSettingName;
             return this;
         }
 
+        /**
+         * @param autoscaleSettingName The autoscale setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleSettingName(String autoscaleSettingName) {
             return autoscaleSettingName(Output.of(autoscaleSettingName));
         }
 
+        /**
+         * @param enabled the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name the name of the autoscale setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name the name of the autoscale setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notifications the collection of notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(@Nullable Output<List<AutoscaleNotificationArgs>> notifications) {
             $.notifications = notifications;
             return this;
         }
 
+        /**
+         * @param notifications the collection of notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(List<AutoscaleNotificationArgs> notifications) {
             return notifications(Output.of(notifications));
         }
 
+        /**
+         * @param notifications the collection of notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(AutoscaleNotificationArgs... notifications) {
             return notifications(List.of(notifications));
         }
 
+        /**
+         * @param profiles the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profiles(Output<List<AutoscaleProfileArgs>> profiles) {
             $.profiles = profiles;
             return this;
         }
 
+        /**
+         * @param profiles the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profiles(List<AutoscaleProfileArgs> profiles) {
             return profiles(Output.of(profiles));
         }
 
+        /**
+         * @param profiles the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profiles(AutoscaleProfileArgs... profiles) {
             return profiles(List.of(profiles));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetResourceLocation the location of the resource that the autoscale setting should be added to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceLocation(@Nullable Output<String> targetResourceLocation) {
             $.targetResourceLocation = targetResourceLocation;
             return this;
         }
 
+        /**
+         * @param targetResourceLocation the location of the resource that the autoscale setting should be added to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceLocation(String targetResourceLocation) {
             return targetResourceLocation(Output.of(targetResourceLocation));
         }
 
+        /**
+         * @param targetResourceUri the resource identifier of the resource that the autoscale setting should be added to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceUri(@Nullable Output<String> targetResourceUri) {
             $.targetResourceUri = targetResourceUri;
             return this;
         }
 
+        /**
+         * @param targetResourceUri the resource identifier of the resource that the autoscale setting should be added to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceUri(String targetResourceUri) {
             return targetResourceUri(Output.of(targetResourceUri));
         }

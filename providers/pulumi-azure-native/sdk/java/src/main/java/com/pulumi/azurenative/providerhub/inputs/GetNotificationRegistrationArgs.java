@@ -19,6 +19,10 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
     @Import(name="notificationRegistrationName", required=true)
     private String notificationRegistrationName;
 
+    /**
+     * @return The notification registration.
+     * 
+     */
     public String notificationRegistrationName() {
         return this.notificationRegistrationName;
     }
@@ -30,6 +34,10 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -59,11 +67,23 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
             $ = new GetNotificationRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationRegistrationName The notification registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationRegistrationName(String notificationRegistrationName) {
             $.notificationRegistrationName = notificationRegistrationName;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;

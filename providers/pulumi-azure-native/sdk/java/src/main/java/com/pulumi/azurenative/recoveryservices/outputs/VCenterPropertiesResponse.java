@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VCenterPropertiesResponse {
     /**
-     * The VCenter discovery status.
+     * @return The VCenter discovery status.
      * 
      */
     private final @Nullable String discoveryStatus;
     /**
-     * The ARM resource name of the fabric containing this VCenter.
+     * @return The ARM resource name of the fabric containing this VCenter.
      * 
      */
     private final @Nullable String fabricArmResourceName;
     /**
-     * Friendly name of the vCenter.
+     * @return Friendly name of the vCenter.
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * The health errors for this VCenter.
+     * @return The health errors for this VCenter.
      * 
      */
     private final @Nullable List<HealthErrorResponse> healthErrors;
     /**
-     * The infrastructure Id of vCenter.
+     * @return The infrastructure Id of vCenter.
      * 
      */
     private final @Nullable String infrastructureId;
     /**
-     * VCenter internal ID.
+     * @return VCenter internal ID.
      * 
      */
     private final @Nullable String internalId;
     /**
-     * The IP address of the vCenter.
+     * @return The IP address of the vCenter.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * The time when the last heartbeat was received by vCenter.
+     * @return The time when the last heartbeat was received by vCenter.
      * 
      */
     private final @Nullable String lastHeartbeat;
     /**
-     * The port number for discovery.
+     * @return The port number for discovery.
      * 
      */
     private final @Nullable String port;
     /**
-     * The process server Id.
+     * @return The process server Id.
      * 
      */
     private final @Nullable String processServerId;
     /**
-     * The account Id which has privileges to discover the vCenter.
+     * @return The account Id which has privileges to discover the vCenter.
      * 
      */
     private final @Nullable String runAsAccountId;
@@ -96,79 +96,79 @@ public final class VCenterPropertiesResponse {
     }
 
     /**
-     * The VCenter discovery status.
+     * @return The VCenter discovery status.
      * 
-    */
+     */
     public Optional<String> discoveryStatus() {
         return Optional.ofNullable(this.discoveryStatus);
     }
     /**
-     * The ARM resource name of the fabric containing this VCenter.
+     * @return The ARM resource name of the fabric containing this VCenter.
      * 
-    */
+     */
     public Optional<String> fabricArmResourceName() {
         return Optional.ofNullable(this.fabricArmResourceName);
     }
     /**
-     * Friendly name of the vCenter.
+     * @return Friendly name of the vCenter.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * The health errors for this VCenter.
+     * @return The health errors for this VCenter.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
-     * The infrastructure Id of vCenter.
+     * @return The infrastructure Id of vCenter.
      * 
-    */
+     */
     public Optional<String> infrastructureId() {
         return Optional.ofNullable(this.infrastructureId);
     }
     /**
-     * VCenter internal ID.
+     * @return VCenter internal ID.
      * 
-    */
+     */
     public Optional<String> internalId() {
         return Optional.ofNullable(this.internalId);
     }
     /**
-     * The IP address of the vCenter.
+     * @return The IP address of the vCenter.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The time when the last heartbeat was received by vCenter.
+     * @return The time when the last heartbeat was received by vCenter.
      * 
-    */
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
-     * The port number for discovery.
+     * @return The port number for discovery.
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The process server Id.
+     * @return The process server Id.
      * 
-    */
+     */
     public Optional<String> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
     /**
-     * The account Id which has privileges to discover the vCenter.
+     * @return The account Id which has privileges to discover the vCenter.
      * 
-    */
+     */
     public Optional<String> runAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }

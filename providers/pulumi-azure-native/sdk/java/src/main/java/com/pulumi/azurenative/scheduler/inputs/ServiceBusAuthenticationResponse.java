@@ -21,6 +21,10 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
     @Import(name="sasKey")
     private @Nullable String sasKey;
 
+    /**
+     * @return Gets or sets the SAS key.
+     * 
+     */
     public Optional<String> sasKey() {
         return Optional.ofNullable(this.sasKey);
     }
@@ -32,6 +36,10 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
     @Import(name="sasKeyName")
     private @Nullable String sasKeyName;
 
+    /**
+     * @return Gets or sets the SAS key name.
+     * 
+     */
     public Optional<String> sasKeyName() {
         return Optional.ofNullable(this.sasKeyName);
     }
@@ -43,6 +51,10 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Gets or sets the authentication type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -73,16 +85,34 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
             $ = new ServiceBusAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasKey Gets or sets the SAS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasKey(@Nullable String sasKey) {
             $.sasKey = sasKey;
             return this;
         }
 
+        /**
+         * @param sasKeyName Gets or sets the SAS key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasKeyName(@Nullable String sasKeyName) {
             $.sasKeyName = sasKeyName;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

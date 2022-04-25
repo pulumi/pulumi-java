@@ -19,6 +19,10 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="incidentId", required=true)
     private String incidentId;
 
+    /**
+     * @return Incident ID
+     * 
+     */
     public String incidentId() {
         return this.incidentId;
     }
@@ -30,6 +34,10 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="operationalInsightsResourceProvider", required=true)
     private String operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -41,6 +49,10 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="relationName", required=true)
     private String relationName;
 
+    /**
+     * @return Relation Name
+     * 
+     */
     public String relationName() {
         return this.relationName;
     }
@@ -52,6 +64,10 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -95,26 +115,56 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetIncidentRelationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(String incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationName(String relationName) {
             $.relationName = relationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

@@ -27,6 +27,10 @@ public final class ManagedRuleGroupOverrideResponse extends com.pulumi.resources
     @Import(name="ruleGroupName", required=true)
     private String ruleGroupName;
 
+    /**
+     * @return Describes the managed rule group within the rule set to override
+     * 
+     */
     public String ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -38,6 +42,10 @@ public final class ManagedRuleGroupOverrideResponse extends com.pulumi.resources
     @Import(name="rules")
     private @Nullable List<ManagedRuleOverrideResponse> rules;
 
+    /**
+     * @return List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+     * 
+     */
     public Optional<List<ManagedRuleOverrideResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -67,16 +75,34 @@ public final class ManagedRuleGroupOverrideResponse extends com.pulumi.resources
             $ = new ManagedRuleGroupOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleGroupName Describes the managed rule group within the rule set to override
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<ManagedRuleOverrideResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ManagedRuleOverrideResponse... rules) {
             return rules(List.of(rules));
         }

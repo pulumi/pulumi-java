@@ -25,6 +25,10 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
     @Import(name="conditionProperties", required=true)
     private AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
 
+    /**
+     * @return The configuration of the automation rule condition
+     * 
+     */
     public AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties() {
         return this.conditionProperties;
     }
@@ -37,6 +41,11 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
     @Import(name="conditionType", required=true)
     private String conditionType;
 
+    /**
+     * @return The type of the automation rule condition
+     * Expected value is &#39;Property&#39;.
+     * 
+     */
     public String conditionType() {
         return this.conditionType;
     }
@@ -66,11 +75,24 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
             $ = new AutomationRulePropertyValuesConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditionProperties The configuration of the automation rule condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionProperties(AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties) {
             $.conditionProperties = conditionProperties;
             return this;
         }
 
+        /**
+         * @param conditionType The type of the automation rule condition
+         * Expected value is &#39;Property&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionType(String conditionType) {
             $.conditionType = conditionType;
             return this;

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationResponse {
     /**
-     * Symmetric key for authentication.
+     * @return Symmetric key for authentication.
      * 
      */
     private final @Nullable SymmetricKeyResponse symmetricKey;
@@ -23,9 +23,9 @@ public final class AuthenticationResponse {
     }
 
     /**
-     * Symmetric key for authentication.
+     * @return Symmetric key for authentication.
      * 
-    */
+     */
     public Optional<SymmetricKeyResponse> symmetricKey() {
         return Optional.ofNullable(this.symmetricKey);
     }

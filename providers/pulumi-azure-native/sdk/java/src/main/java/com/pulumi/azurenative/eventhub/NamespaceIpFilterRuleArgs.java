@@ -24,6 +24,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
     @Import(name="action")
     private @Nullable Output<Either<String,IPAction>> action;
 
+    /**
+     * @return The IP Filter Action
+     * 
+     */
     public Optional<Output<Either<String,IPAction>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -35,6 +39,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
     @Import(name="filterName")
     private @Nullable Output<String> filterName;
 
+    /**
+     * @return IP Filter name
+     * 
+     */
     public Optional<Output<String>> filterName() {
         return Optional.ofNullable(this.filterName);
     }
@@ -46,6 +54,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
     @Import(name="ipFilterRuleName")
     private @Nullable Output<String> ipFilterRuleName;
 
+    /**
+     * @return The IP Filter Rule name.
+     * 
+     */
     public Optional<Output<String>> ipFilterRuleName() {
         return Optional.ofNullable(this.ipFilterRuleName);
     }
@@ -57,6 +69,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
     @Import(name="ipMask")
     private @Nullable Output<String> ipMask;
 
+    /**
+     * @return IP Mask
+     * 
+     */
     public Optional<Output<String>> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -68,6 +84,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -79,6 +99,10 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,64 +136,148 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
             $ = new NamespaceIpFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,IPAction>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,IPAction> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(IPAction action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param filterName IP Filter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(@Nullable Output<String> filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param filterName IP Filter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             return filterName(Output.of(filterName));
         }
 
+        /**
+         * @param ipFilterRuleName The IP Filter Rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRuleName(@Nullable Output<String> ipFilterRuleName) {
             $.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
 
+        /**
+         * @param ipFilterRuleName The IP Filter Rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRuleName(String ipFilterRuleName) {
             return ipFilterRuleName(Output.of(ipFilterRuleName));
         }
 
+        /**
+         * @param ipMask IP Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(@Nullable Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;
         }
 
+        /**
+         * @param ipMask IP Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(String ipMask) {
             return ipMask(Output.of(ipMask));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

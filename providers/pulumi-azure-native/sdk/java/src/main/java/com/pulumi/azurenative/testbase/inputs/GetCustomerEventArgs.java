@@ -19,6 +19,10 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="customerEventName", required=true)
     private String customerEventName;
 
+    /**
+     * @return The resource name of the Test Base Customer event.
+     * 
+     */
     public String customerEventName() {
         return this.customerEventName;
     }
@@ -30,6 +34,10 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="testBaseAccountName", required=true)
     private String testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -71,16 +83,34 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetCustomerEventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerEventName The resource name of the Test Base Customer event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEventName(String customerEventName) {
             $.customerEventName = customerEventName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;

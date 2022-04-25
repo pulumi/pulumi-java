@@ -26,6 +26,10 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Specifies the principal id for the identity for the job.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -37,6 +41,10 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Specifies the tenant id for the identity for the job.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -48,6 +56,10 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -78,16 +90,34 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
             $ = new IdentityDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Specifies the principal id for the identity for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId Specifies the tenant id for the identity for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

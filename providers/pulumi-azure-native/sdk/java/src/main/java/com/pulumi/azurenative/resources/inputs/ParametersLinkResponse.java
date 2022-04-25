@@ -25,6 +25,10 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="contentVersion")
     private @Nullable String contentVersion;
 
+    /**
+     * @return If included, must match the ContentVersion in the template.
+     * 
+     */
     public Optional<String> contentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
@@ -36,6 +40,10 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI of the parameters file.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -65,11 +73,23 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
             $ = new ParametersLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentVersion If included, must match the ContentVersion in the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentVersion(@Nullable String contentVersion) {
             $.contentVersion = contentVersion;
             return this;
         }
 
+        /**
+         * @param uri The URI of the parameters file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

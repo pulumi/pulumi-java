@@ -26,6 +26,10 @@ public final class ApiDefinitionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The URL of the API definition.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -54,11 +58,23 @@ public final class ApiDefinitionInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new ApiDefinitionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The URL of the API definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the API definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

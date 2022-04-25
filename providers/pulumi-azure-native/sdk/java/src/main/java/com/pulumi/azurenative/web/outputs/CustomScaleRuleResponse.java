@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomScaleRuleResponse {
     /**
-     * Authentication secrets for the custom scale rule.
+     * @return Authentication secrets for the custom scale rule.
      * 
      */
     private final @Nullable List<ScaleRuleAuthResponse> auth;
     /**
-     * Metadata properties to describe custom scale rule.
+     * @return Metadata properties to describe custom scale rule.
      * 
      */
     private final @Nullable Map<String,String> metadata;
     /**
-     * Type of the custom scale rule
+     * @return Type of the custom scale rule
      * eg: azure-servicebus, redis etc.
      * 
      */
@@ -42,24 +42,24 @@ public final class CustomScaleRuleResponse {
     }
 
     /**
-     * Authentication secrets for the custom scale rule.
+     * @return Authentication secrets for the custom scale rule.
      * 
-    */
+     */
     public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
-     * Metadata properties to describe custom scale rule.
+     * @return Metadata properties to describe custom scale rule.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Type of the custom scale rule
+     * @return Type of the custom scale rule
      * eg: azure-servicebus, redis etc.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

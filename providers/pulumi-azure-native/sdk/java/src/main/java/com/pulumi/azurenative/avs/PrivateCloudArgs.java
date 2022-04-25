@@ -30,6 +30,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identitySources")
     private @Nullable Output<List<IdentitySourceArgs>> identitySources;
 
+    /**
+     * @return vCenter Single Sign On Identity Sources
+     * 
+     */
     public Optional<Output<List<IdentitySourceArgs>>> identitySources() {
         return Optional.ofNullable(this.identitySources);
     }
@@ -41,6 +45,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="internet")
     private @Nullable Output<Either<String,InternetEnum>> internet;
 
+    /**
+     * @return Connectivity to internet is enabled or disabled
+     * 
+     */
     public Optional<Output<Either<String,InternetEnum>>> internet() {
         return Optional.ofNullable(this.internet);
     }
@@ -52,6 +60,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -63,6 +75,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managementCluster", required=true)
     private Output<ManagementClusterArgs> managementCluster;
 
+    /**
+     * @return The default cluster used for management
+     * 
+     */
     public Output<ManagementClusterArgs> managementCluster() {
         return this.managementCluster;
     }
@@ -74,6 +90,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkBlock", required=true)
     private Output<String> networkBlock;
 
+    /**
+     * @return The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+     * 
+     */
     public Output<String> networkBlock() {
         return this.networkBlock;
     }
@@ -85,6 +105,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nsxtPassword")
     private @Nullable Output<String> nsxtPassword;
 
+    /**
+     * @return Optionally, set the NSX-T Manager password when the private cloud is created
+     * 
+     */
     public Optional<Output<String>> nsxtPassword() {
         return Optional.ofNullable(this.nsxtPassword);
     }
@@ -96,6 +120,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName")
     private @Nullable Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Optional<Output<String>> privateCloudName() {
         return Optional.ofNullable(this.privateCloudName);
     }
@@ -107,6 +135,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -118,6 +150,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return The private cloud SKU
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -129,6 +165,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,6 +180,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vcenterPassword")
     private @Nullable Output<String> vcenterPassword;
 
+    /**
+     * @return Optionally, set the vCenter admin password when the private cloud is created
+     * 
+     */
     public Optional<Output<String>> vcenterPassword() {
         return Optional.ofNullable(this.vcenterPassword);
     }
@@ -178,113 +222,263 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrivateCloudArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identitySources vCenter Single Sign On Identity Sources
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySources(@Nullable Output<List<IdentitySourceArgs>> identitySources) {
             $.identitySources = identitySources;
             return this;
         }
 
+        /**
+         * @param identitySources vCenter Single Sign On Identity Sources
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySources(List<IdentitySourceArgs> identitySources) {
             return identitySources(Output.of(identitySources));
         }
 
+        /**
+         * @param identitySources vCenter Single Sign On Identity Sources
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySources(IdentitySourceArgs... identitySources) {
             return identitySources(List.of(identitySources));
         }
 
+        /**
+         * @param internet Connectivity to internet is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder internet(@Nullable Output<Either<String,InternetEnum>> internet) {
             $.internet = internet;
             return this;
         }
 
+        /**
+         * @param internet Connectivity to internet is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder internet(Either<String,InternetEnum> internet) {
             return internet(Output.of(internet));
         }
 
+        /**
+         * @param internet Connectivity to internet is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder internet(String internet) {
             return internet(Either.ofLeft(internet));
         }
 
+        /**
+         * @param internet Connectivity to internet is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder internet(InternetEnum internet) {
             return internet(Either.ofRight(internet));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managementCluster The default cluster used for management
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementCluster(Output<ManagementClusterArgs> managementCluster) {
             $.managementCluster = managementCluster;
             return this;
         }
 
+        /**
+         * @param managementCluster The default cluster used for management
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementCluster(ManagementClusterArgs managementCluster) {
             return managementCluster(Output.of(managementCluster));
         }
 
+        /**
+         * @param networkBlock The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkBlock(Output<String> networkBlock) {
             $.networkBlock = networkBlock;
             return this;
         }
 
+        /**
+         * @param networkBlock The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkBlock(String networkBlock) {
             return networkBlock(Output.of(networkBlock));
         }
 
+        /**
+         * @param nsxtPassword Optionally, set the NSX-T Manager password when the private cloud is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder nsxtPassword(@Nullable Output<String> nsxtPassword) {
             $.nsxtPassword = nsxtPassword;
             return this;
         }
 
+        /**
+         * @param nsxtPassword Optionally, set the NSX-T Manager password when the private cloud is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder nsxtPassword(String nsxtPassword) {
             return nsxtPassword(Output.of(nsxtPassword));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(@Nullable Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The private cloud SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The private cloud SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vcenterPassword Optionally, set the vCenter admin password when the private cloud is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterPassword(@Nullable Output<String> vcenterPassword) {
             $.vcenterPassword = vcenterPassword;
             return this;
         }
 
+        /**
+         * @param vcenterPassword Optionally, set the vCenter admin password when the private cloud is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterPassword(String vcenterPassword) {
             return vcenterPassword(Output.of(vcenterPassword));
         }

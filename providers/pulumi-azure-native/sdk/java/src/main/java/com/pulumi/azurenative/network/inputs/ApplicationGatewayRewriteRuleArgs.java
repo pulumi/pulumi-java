@@ -30,6 +30,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="actionSet")
     private @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
 
+    /**
+     * @return Set of actions to be done as part of the rewrite Rule.
+     * 
+     */
     public Optional<Output<ApplicationGatewayRewriteRuleActionSetArgs>> actionSet() {
         return Optional.ofNullable(this.actionSet);
     }
@@ -41,6 +45,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="conditions")
     private @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
 
+    /**
+     * @return Conditions based on which the action set execution will be evaluated.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayRewriteRuleConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -52,6 +60,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the rewrite rule that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,6 +75,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="ruleSequence")
     private @Nullable Output<Integer> ruleSequence;
 
+    /**
+     * @return Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
+     * 
+     */
     public Optional<Output<Integer>> ruleSequence() {
         return Optional.ofNullable(this.ruleSequence);
     }
@@ -94,42 +110,96 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
             $ = new ApplicationGatewayRewriteRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionSet Set of actions to be done as part of the rewrite Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionSet(@Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet) {
             $.actionSet = actionSet;
             return this;
         }
 
+        /**
+         * @param actionSet Set of actions to be done as part of the rewrite Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionSet(ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
             return actionSet(Output.of(actionSet));
         }
 
+        /**
+         * @param conditions Conditions based on which the action set execution will be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Conditions based on which the action set execution will be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Conditions based on which the action set execution will be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ApplicationGatewayRewriteRuleConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param name Name of the rewrite rule that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the rewrite rule that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ruleSequence Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSequence(@Nullable Output<Integer> ruleSequence) {
             $.ruleSequence = ruleSequence;
             return this;
         }
 
+        /**
+         * @param ruleSequence Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSequence(Integer ruleSequence) {
             return ruleSequence(Output.of(ruleSequence));
         }

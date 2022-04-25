@@ -27,6 +27,10 @@ public final class UniqueKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="paths")
     private @Nullable Output<List<String>> paths;
 
+    /**
+     * @return List of paths must be unique for each document in the Azure Cosmos DB service
+     * 
+     */
     public Optional<Output<List<String>>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -55,15 +59,33 @@ public final class UniqueKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UniqueKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param paths List of paths must be unique for each document in the Azure Cosmos DB service
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable Output<List<String>> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths List of paths must be unique for each document in the Azure Cosmos DB service
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             return paths(Output.of(paths));
         }
 
+        /**
+         * @param paths List of paths must be unique for each document in the Azure Cosmos DB service
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }

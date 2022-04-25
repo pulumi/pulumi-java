@@ -30,6 +30,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
     @Import(name="fabricSpecificDetails")
     private @Nullable Output<Object> fabricSpecificDetails;
 
+    /**
+     * @return Fabric specific input properties.
+     * 
+     */
     public Optional<Output<Object>> fabricSpecificDetails() {
         return Optional.ofNullable(this.fabricSpecificDetails);
     }
@@ -41,6 +45,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
     @Import(name="recoveryFabricName")
     private @Nullable Output<String> recoveryFabricName;
 
+    /**
+     * @return Recovery fabric Name.
+     * 
+     */
     public Optional<Output<String>> recoveryFabricName() {
         return Optional.ofNullable(this.recoveryFabricName);
     }
@@ -52,6 +60,10 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
     @Import(name="recoveryNetworkId")
     private @Nullable Output<String> recoveryNetworkId;
 
+    /**
+     * @return Recovery network Id.
+     * 
+     */
     public Optional<Output<String>> recoveryNetworkId() {
         return Optional.ofNullable(this.recoveryNetworkId);
     }
@@ -82,29 +94,65 @@ public final class CreateNetworkMappingInputPropertiesArgs extends com.pulumi.re
             $ = new CreateNetworkMappingInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricSpecificDetails Fabric specific input properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricSpecificDetails(@Nullable Output<Object> fabricSpecificDetails) {
             $.fabricSpecificDetails = fabricSpecificDetails;
             return this;
         }
 
+        /**
+         * @param fabricSpecificDetails Fabric specific input properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricSpecificDetails(Object fabricSpecificDetails) {
             return fabricSpecificDetails(Output.of(fabricSpecificDetails));
         }
 
+        /**
+         * @param recoveryFabricName Recovery fabric Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricName(@Nullable Output<String> recoveryFabricName) {
             $.recoveryFabricName = recoveryFabricName;
             return this;
         }
 
+        /**
+         * @param recoveryFabricName Recovery fabric Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricName(String recoveryFabricName) {
             return recoveryFabricName(Output.of(recoveryFabricName));
         }
 
+        /**
+         * @param recoveryNetworkId Recovery network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNetworkId(@Nullable Output<String> recoveryNetworkId) {
             $.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
 
+        /**
+         * @param recoveryNetworkId Recovery network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNetworkId(String recoveryNetworkId) {
             return recoveryNetworkId(Output.of(recoveryNetworkId));
         }

@@ -13,57 +13,57 @@ import java.util.Objects;
 @CustomType
 public final class LastPatchInstallationSummaryResponse {
     /**
-     * The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * @return The errors that were encountered during execution of the operation. The details array contains the list of them.
      * 
      */
     private final ApiErrorResponse error;
     /**
-     * The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
+     * @return The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
      * 
      */
     private final Integer excludedPatchCount;
     /**
-     * The count of patches that failed installation.
+     * @return The count of patches that failed installation.
      * 
      */
     private final Integer failedPatchCount;
     /**
-     * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * @return The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
      * 
      */
     private final String installationActivityId;
     /**
-     * The count of patches that successfully installed.
+     * @return The count of patches that successfully installed.
      * 
      */
     private final Integer installedPatchCount;
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * Describes whether the operation ran out of time before it completed all its intended actions
+     * @return Describes whether the operation ran out of time before it completed all its intended actions
      * 
      */
     private final Boolean maintenanceWindowExceeded;
     /**
-     * The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
+     * @return The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
      * 
      */
     private final Integer notSelectedPatchCount;
     /**
-     * The number of all available patches expected to be installed over the course of the patch installation operation.
+     * @return The number of all available patches expected to be installed over the course of the patch installation operation.
      * 
      */
     private final Integer pendingPatchCount;
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
      */
     private final String startTime;
     /**
-     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+     * @return The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
      */
     private final String status;
@@ -95,79 +95,79 @@ public final class LastPatchInstallationSummaryResponse {
     }
 
     /**
-     * The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * @return The errors that were encountered during execution of the operation. The details array contains the list of them.
      * 
-    */
+     */
     public ApiErrorResponse error() {
         return this.error;
     }
     /**
-     * The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
+     * @return The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
      * 
-    */
+     */
     public Integer excludedPatchCount() {
         return this.excludedPatchCount;
     }
     /**
-     * The count of patches that failed installation.
+     * @return The count of patches that failed installation.
      * 
-    */
+     */
     public Integer failedPatchCount() {
         return this.failedPatchCount;
     }
     /**
-     * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * @return The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
      * 
-    */
+     */
     public String installationActivityId() {
         return this.installationActivityId;
     }
     /**
-     * The count of patches that successfully installed.
+     * @return The count of patches that successfully installed.
      * 
-    */
+     */
     public Integer installedPatchCount() {
         return this.installedPatchCount;
     }
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * Describes whether the operation ran out of time before it completed all its intended actions
+     * @return Describes whether the operation ran out of time before it completed all its intended actions
      * 
-    */
+     */
     public Boolean maintenanceWindowExceeded() {
         return this.maintenanceWindowExceeded;
     }
     /**
-     * The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
+     * @return The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
      * 
-    */
+     */
     public Integer notSelectedPatchCount() {
         return this.notSelectedPatchCount;
     }
     /**
-     * The number of all available patches expected to be installed over the course of the patch installation operation.
+     * @return The number of all available patches expected to be installed over the course of the patch installation operation.
      * 
-    */
+     */
     public Integer pendingPatchCount() {
         return this.pendingPatchCount;
     }
     /**
-     * The UTC timestamp when the operation began.
+     * @return The UTC timestamp when the operation began.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+     * @return The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

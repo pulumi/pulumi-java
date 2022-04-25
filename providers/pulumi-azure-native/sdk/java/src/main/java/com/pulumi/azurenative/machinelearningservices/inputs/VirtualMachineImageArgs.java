@@ -24,6 +24,10 @@ public final class VirtualMachineImageArgs extends com.pulumi.resources.Resource
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Virtual Machine image path
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class VirtualMachineImageArgs extends com.pulumi.resources.Resource
             $ = new VirtualMachineImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Virtual Machine image path
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Virtual Machine image path
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

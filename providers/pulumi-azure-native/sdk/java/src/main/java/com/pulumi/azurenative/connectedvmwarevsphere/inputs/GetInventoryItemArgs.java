@@ -19,6 +19,10 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="inventoryItemName", required=true)
     private String inventoryItemName;
 
+    /**
+     * @return Name of the inventoryItem.
+     * 
+     */
     public String inventoryItemName() {
         return this.inventoryItemName;
     }
@@ -30,6 +34,10 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="vcenterName", required=true)
     private String vcenterName;
 
+    /**
+     * @return Name of the vCenter.
+     * 
+     */
     public String vcenterName() {
         return this.vcenterName;
     }
@@ -71,16 +83,34 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetInventoryItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inventoryItemName Name of the inventoryItem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryItemName(String inventoryItemName) {
             $.inventoryItemName = inventoryItemName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterName(String vcenterName) {
             $.vcenterName = vcenterName;
             return this;

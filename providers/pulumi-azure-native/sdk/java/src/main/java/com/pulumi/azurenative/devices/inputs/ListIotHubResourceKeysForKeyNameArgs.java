@@ -19,6 +19,10 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of the shared access policy.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -30,6 +34,10 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the IoT hub.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the IoT hub.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
             $ = new ListIotHubResourceKeysForKeyNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

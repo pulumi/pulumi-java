@@ -26,6 +26,10 @@ public final class ExportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configuration")
     private @Nullable ExportDatasetConfigurationResponse configuration;
 
+    /**
+     * @return The export dataset configuration.
+     * 
+     */
     public Optional<ExportDatasetConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -37,6 +41,10 @@ public final class ExportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="granularity")
     private @Nullable String granularity;
 
+    /**
+     * @return The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+     * 
+     */
     public Optional<String> granularity() {
         return Optional.ofNullable(this.granularity);
     }
@@ -66,11 +74,23 @@ public final class ExportDatasetResponse extends com.pulumi.resources.InvokeArgs
             $ = new ExportDatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration The export dataset configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable ExportDatasetConfigurationResponse configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param granularity The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder granularity(@Nullable String granularity) {
             $.granularity = granularity;
             return this;

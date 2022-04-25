@@ -21,57 +21,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureDataExplorerLinkedServiceResponse {
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
      */
     private final @Nullable CredentialReferenceResponse credential;
     /**
-     * Database name for connection. Type: string (or Expression with resultType string).
+     * @return Database name for connection. Type: string (or Expression with resultType string).
      * 
      */
     private final Object database;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
+     * @return The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
      */
     private final Object endpoint;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+     * @return The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object servicePrincipalId;
     /**
-     * The key of the service principal used to authenticate against Kusto.
+     * @return The key of the service principal used to authenticate against Kusto.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
     /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object tenant;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AzureDataExplorer&#39;.
      * 
      */
@@ -104,80 +104,80 @@ public final class AzureDataExplorerLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Database name for connection. Type: string (or Expression with resultType string).
+     * @return Database name for connection. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object database() {
         return this.database;
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
+     * @return The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Object endpoint() {
         return this.endpoint;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
+     * @return The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The key of the service principal used to authenticate against Kusto.
+     * @return The key of the service principal used to authenticate against Kusto.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AzureDataExplorer&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTemplateFileCustomizerResponse {
     /**
-     * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
+     * @return The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
      * 
      */
     private final @Nullable String destination;
     /**
-     * Friendly Name to provide context on what this customization step does
+     * @return Friendly Name to provide context on what this customization step does
      * 
      */
     private final @Nullable String name;
     /**
-     * SHA256 checksum of the file provided in the sourceUri field above
+     * @return SHA256 checksum of the file provided in the sourceUri field above
      * 
      */
     private final @Nullable String sha256Checksum;
     /**
-     * The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
+     * @return The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
      * 
      */
     private final @Nullable String sourceUri;
     /**
-     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
      * Expected value is &#39;File&#39;.
      * 
      */
@@ -53,38 +53,38 @@ public final class ImageTemplateFileCustomizerResponse {
     }
 
     /**
-     * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
+     * @return The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
      * 
-    */
+     */
     public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
-     * Friendly Name to provide context on what this customization step does
+     * @return Friendly Name to provide context on what this customization step does
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * SHA256 checksum of the file provided in the sourceUri field above
+     * @return SHA256 checksum of the file provided in the sourceUri field above
      * 
-    */
+     */
     public Optional<String> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
-     * The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
+     * @return The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
      * 
-    */
+     */
     public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
      * Expected value is &#39;File&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

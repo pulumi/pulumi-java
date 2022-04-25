@@ -26,6 +26,10 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
     @Import(name="backupFileShare", required=true)
     private FileShareResponse backupFileShare;
 
+    /**
+     * @return Backup file share information for file share to be used for temporarily storing files.
+     * 
+     */
     public FileShareResponse backupFileShare() {
         return this.backupFileShare;
     }
@@ -37,6 +41,10 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
     @Import(name="connectionInfo", required=true)
     private SqlConnectionInfoResponse connectionInfo;
 
+    /**
+     * @return Connection information for SQL Server
+     * 
+     */
     public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
@@ -48,6 +56,10 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
     @Import(name="selectedCertificates", required=true)
     private List<SelectedCertificateInputResponse> selectedCertificates;
 
+    /**
+     * @return List containing certificate names and corresponding password to use for encrypting the exported certificate.
+     * 
+     */
     public List<SelectedCertificateInputResponse> selectedCertificates() {
         return this.selectedCertificates;
     }
@@ -78,21 +90,45 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
             $ = new GetTdeCertificatesSqlTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupFileShare Backup file share information for file share to be used for temporarily storing files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(FileShareResponse backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param connectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
 
+        /**
+         * @param selectedCertificates List containing certificate names and corresponding password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedCertificates(List<SelectedCertificateInputResponse> selectedCertificates) {
             $.selectedCertificates = selectedCertificates;
             return this;
         }
 
+        /**
+         * @param selectedCertificates List containing certificate names and corresponding password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedCertificates(SelectedCertificateInputResponse... selectedCertificates) {
             return selectedCertificates(List.of(selectedCertificates));
         }

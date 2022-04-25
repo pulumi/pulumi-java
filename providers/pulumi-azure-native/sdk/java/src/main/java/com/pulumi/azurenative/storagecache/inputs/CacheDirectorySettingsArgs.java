@@ -27,6 +27,10 @@ public final class CacheDirectorySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="activeDirectory")
     private @Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory;
 
+    /**
+     * @return Specifies settings for joining the HPC Cache to an Active Directory domain.
+     * 
+     */
     public Optional<Output<CacheActiveDirectorySettingsArgs>> activeDirectory() {
         return Optional.ofNullable(this.activeDirectory);
     }
@@ -38,6 +42,10 @@ public final class CacheDirectorySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="usernameDownload")
     private @Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload;
 
+    /**
+     * @return Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
+     * 
+     */
     public Optional<Output<CacheUsernameDownloadSettingsArgs>> usernameDownload() {
         return Optional.ofNullable(this.usernameDownload);
     }
@@ -67,20 +75,44 @@ public final class CacheDirectorySettingsArgs extends com.pulumi.resources.Resou
             $ = new CacheDirectorySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDirectory Specifies settings for joining the HPC Cache to an Active Directory domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectory(@Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory) {
             $.activeDirectory = activeDirectory;
             return this;
         }
 
+        /**
+         * @param activeDirectory Specifies settings for joining the HPC Cache to an Active Directory domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectory(CacheActiveDirectorySettingsArgs activeDirectory) {
             return activeDirectory(Output.of(activeDirectory));
         }
 
+        /**
+         * @param usernameDownload Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameDownload(@Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload) {
             $.usernameDownload = usernameDownload;
             return this;
         }
 
+        /**
+         * @param usernameDownload Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameDownload(CacheUsernameDownloadSettingsArgs usernameDownload) {
             return usernameDownload(Output.of(usernameDownload));
         }

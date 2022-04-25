@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSyncAgentResult {
     /**
-     * Expiration time of the sync agent version.
+     * @return Expiration time of the sync agent version.
      * 
      */
     private final String expiryTime;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * If the sync agent version is up to date.
+     * @return If the sync agent version is up to date.
      * 
      */
     private final Boolean isUpToDate;
     /**
-     * Last alive time of the sync agent.
+     * @return Last alive time of the sync agent.
      * 
      */
     private final String lastAliveTime;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * State of the sync agent.
+     * @return State of the sync agent.
      * 
      */
     private final String state;
     /**
-     * ARM resource id of the sync database in the sync agent.
+     * @return ARM resource id of the sync database in the sync agent.
      * 
      */
     private final @Nullable String syncDatabaseId;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Version of the sync agent.
+     * @return Version of the sync agent.
      * 
      */
     private final String version;
@@ -81,65 +81,65 @@ public final class GetSyncAgentResult {
     }
 
     /**
-     * Expiration time of the sync agent version.
+     * @return Expiration time of the sync agent version.
      * 
-    */
+     */
     public String expiryTime() {
         return this.expiryTime;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * If the sync agent version is up to date.
+     * @return If the sync agent version is up to date.
      * 
-    */
+     */
     public Boolean isUpToDate() {
         return this.isUpToDate;
     }
     /**
-     * Last alive time of the sync agent.
+     * @return Last alive time of the sync agent.
      * 
-    */
+     */
     public String lastAliveTime() {
         return this.lastAliveTime;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the sync agent.
+     * @return State of the sync agent.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * ARM resource id of the sync database in the sync agent.
+     * @return ARM resource id of the sync database in the sync agent.
      * 
-    */
+     */
     public Optional<String> syncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the sync agent.
+     * @return Version of the sync agent.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

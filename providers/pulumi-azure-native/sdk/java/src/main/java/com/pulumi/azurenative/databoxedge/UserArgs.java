@@ -25,6 +25,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -36,6 +40,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptedPassword")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
+    /**
+     * @return The password details.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> encryptedPassword() {
         return Optional.ofNullable(this.encryptedPassword);
     }
@@ -47,6 +55,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The user name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userType", required=true)
     private Output<Either<String,UserType>> userType;
 
+    /**
+     * @return Type of the user.
+     * 
+     */
     public Output<Either<String,UserType>> userType() {
         return this.userType;
     }
@@ -101,55 +121,127 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param encryptedPassword The password details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedPassword(@Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword) {
             $.encryptedPassword = encryptedPassword;
             return this;
         }
 
+        /**
+         * @param encryptedPassword The password details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedPassword(AsymmetricEncryptedSecretArgs encryptedPassword) {
             return encryptedPassword(Output.of(encryptedPassword));
         }
 
+        /**
+         * @param name The user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param userType Type of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userType(Output<Either<String,UserType>> userType) {
             $.userType = userType;
             return this;
         }
 
+        /**
+         * @param userType Type of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userType(Either<String,UserType> userType) {
             return userType(Output.of(userType));
         }
 
+        /**
+         * @param userType Type of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userType(String userType) {
             return userType(Either.ofLeft(userType));
         }
 
+        /**
+         * @param userType Type of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userType(UserType userType) {
             return userType(Either.ofRight(userType));
         }

@@ -27,6 +27,10 @@ public final class OpenIdConnectClientCredentialArgs extends com.pulumi.resource
     @Import(name="clientSecretSettingName")
     private @Nullable Output<String> clientSecretSettingName;
 
+    /**
+     * @return The app setting that contains the client secret for the custom Open ID Connect provider.
+     * 
+     */
     public Optional<Output<String>> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
@@ -38,6 +42,10 @@ public final class OpenIdConnectClientCredentialArgs extends com.pulumi.resource
     @Import(name="method")
     private @Nullable Output<ClientCredentialMethod> method;
 
+    /**
+     * @return The method that should be used to authenticate the user.
+     * 
+     */
     public Optional<Output<ClientCredentialMethod>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -67,20 +75,44 @@ public final class OpenIdConnectClientCredentialArgs extends com.pulumi.resource
             $ = new OpenIdConnectClientCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientSecretSettingName The app setting that contains the client secret for the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
             $.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
+        /**
+         * @param clientSecretSettingName The app setting that contains the client secret for the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecretSettingName(String clientSecretSettingName) {
             return clientSecretSettingName(Output.of(clientSecretSettingName));
         }
 
+        /**
+         * @param method The method that should be used to authenticate the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<ClientCredentialMethod> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method The method that should be used to authenticate the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(ClientCredentialMethod method) {
             return method(Output.of(method));
         }

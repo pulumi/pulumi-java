@@ -33,6 +33,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -44,6 +48,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="blobPathBeginsWith")
     private @Nullable Output<String> blobPathBeginsWith;
 
+    /**
+     * @return The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * 
+     */
     public Optional<Output<String>> blobPathBeginsWith() {
         return Optional.ofNullable(this.blobPathBeginsWith);
     }
@@ -55,6 +63,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="blobPathEndsWith")
     private @Nullable Output<String> blobPathEndsWith;
 
+    /**
+     * @return The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * 
+     */
     public Optional<Output<String>> blobPathEndsWith() {
         return Optional.ofNullable(this.blobPathEndsWith);
     }
@@ -66,6 +78,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,6 +93,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="events", required=true)
     private Output<List<Either<String,BlobEventTypes>>> events;
 
+    /**
+     * @return The type of events that cause this trigger to fire.
+     * 
+     */
     public Output<List<Either<String,BlobEventTypes>>> events() {
         return this.events;
     }
@@ -88,6 +108,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ignoreEmptyBlobs")
     private @Nullable Output<Boolean> ignoreEmptyBlobs;
 
+    /**
+     * @return If set to true, blobs with zero bytes will be ignored.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreEmptyBlobs() {
         return Optional.ofNullable(this.ignoreEmptyBlobs);
     }
@@ -99,6 +123,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="pipelines")
     private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
+    /**
+     * @return Pipelines that need to be started.
+     * 
+     */
     public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
         return Optional.ofNullable(this.pipelines);
     }
@@ -110,6 +138,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The ARM resource ID of the Storage Account.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -122,6 +154,11 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;BlobEventsTrigger&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -158,95 +195,223 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
             $ = new BlobEventsTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param blobPathBeginsWith The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathBeginsWith(@Nullable Output<String> blobPathBeginsWith) {
             $.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
 
+        /**
+         * @param blobPathBeginsWith The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathBeginsWith(String blobPathBeginsWith) {
             return blobPathBeginsWith(Output.of(blobPathBeginsWith));
         }
 
+        /**
+         * @param blobPathEndsWith The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathEndsWith(@Nullable Output<String> blobPathEndsWith) {
             $.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
 
+        /**
+         * @param blobPathEndsWith The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathEndsWith(String blobPathEndsWith) {
             return blobPathEndsWith(Output.of(blobPathEndsWith));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param events The type of events that cause this trigger to fire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(Output<List<Either<String,BlobEventTypes>>> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events The type of events that cause this trigger to fire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<Either<String,BlobEventTypes>> events) {
             return events(Output.of(events));
         }
 
+        /**
+         * @param events The type of events that cause this trigger to fire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(Either<String,BlobEventTypes>... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param ignoreEmptyBlobs If set to true, blobs with zero bytes will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreEmptyBlobs(@Nullable Output<Boolean> ignoreEmptyBlobs) {
             $.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
 
+        /**
+         * @param ignoreEmptyBlobs If set to true, blobs with zero bytes will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreEmptyBlobs(Boolean ignoreEmptyBlobs) {
             return ignoreEmptyBlobs(Output.of(ignoreEmptyBlobs));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             $.pipelines = pipelines;
             return this;
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
             return pipelines(Output.of(pipelines));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
 
+        /**
+         * @param scope The ARM resource ID of the Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The ARM resource ID of the Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;BlobEventsTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;BlobEventsTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

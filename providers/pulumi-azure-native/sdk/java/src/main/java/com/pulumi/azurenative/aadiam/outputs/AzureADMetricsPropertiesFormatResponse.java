@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AzureADMetricsPropertiesFormatResponse {
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
      */
     private final String provisioningState;
@@ -21,9 +21,9 @@ public final class AzureADMetricsPropertiesFormatResponse {
     }
 
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

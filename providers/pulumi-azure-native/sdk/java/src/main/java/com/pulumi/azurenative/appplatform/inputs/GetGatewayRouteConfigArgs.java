@@ -19,6 +19,10 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="gatewayName", required=true)
     private String gatewayName;
 
+    /**
+     * @return The name of Spring Cloud Gateway.
+     * 
+     */
     public String gatewayName() {
         return this.gatewayName;
     }
@@ -30,6 +34,10 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="routeConfigName", required=true)
     private String routeConfigName;
 
+    /**
+     * @return The name of the Spring Cloud Gateway route config.
+     * 
+     */
     public String routeConfigName() {
         return this.routeConfigName;
     }
@@ -52,6 +64,10 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
             $ = new GetGatewayRouteConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param routeConfigName The name of the Spring Cloud Gateway route config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfigName(String routeConfigName) {
             $.routeConfigName = routeConfigName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

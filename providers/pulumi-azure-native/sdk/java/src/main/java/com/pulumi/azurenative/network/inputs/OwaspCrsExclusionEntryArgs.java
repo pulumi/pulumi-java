@@ -27,6 +27,10 @@ public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.Resou
     @Import(name="matchVariable", required=true)
     private Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
 
+    /**
+     * @return The variable to be excluded.
+     * 
+     */
     public Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable() {
         return this.matchVariable;
     }
@@ -38,6 +42,10 @@ public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.Resou
     @Import(name="selector", required=true)
     private Output<String> selector;
 
+    /**
+     * @return When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     public Output<String> selector() {
         return this.selector;
     }
@@ -49,6 +57,10 @@ public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.Resou
     @Import(name="selectorMatchOperator", required=true)
     private Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
 
+    /**
+     * @return When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     public Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
@@ -79,45 +91,105 @@ public final class OwaspCrsExclusionEntryArgs extends com.pulumi.resources.Resou
             $ = new OwaspCrsExclusionEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchVariable The variable to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable) {
             $.matchVariable = matchVariable;
             return this;
         }
 
+        /**
+         * @param matchVariable The variable to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(Either<String,OwaspCrsExclusionEntryMatchVariable> matchVariable) {
             return matchVariable(Output.of(matchVariable));
         }
 
+        /**
+         * @param matchVariable The variable to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(String matchVariable) {
             return matchVariable(Either.ofLeft(matchVariable));
         }
 
+        /**
+         * @param matchVariable The variable to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(OwaspCrsExclusionEntryMatchVariable matchVariable) {
             return matchVariable(Either.ofRight(matchVariable));
         }
 
+        /**
+         * @param selector When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param selectorMatchOperator When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
             $.selectorMatchOperator = selectorMatchOperator;
             return this;
         }
 
+        /**
+         * @param selectorMatchOperator When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(Either<String,OwaspCrsExclusionEntrySelectorMatchOperator> selectorMatchOperator) {
             return selectorMatchOperator(Output.of(selectorMatchOperator));
         }
 
+        /**
+         * @param selectorMatchOperator When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             return selectorMatchOperator(Either.ofLeft(selectorMatchOperator));
         }
 
+        /**
+         * @param selectorMatchOperator When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(OwaspCrsExclusionEntrySelectorMatchOperator selectorMatchOperator) {
             return selectorMatchOperator(Either.ofRight(selectorMatchOperator));
         }

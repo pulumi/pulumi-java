@@ -19,6 +19,10 @@ public final class GetPrivateStoreOfferArgs extends com.pulumi.resources.InvokeA
     @Import(name="offerId", required=true)
     private String offerId;
 
+    /**
+     * @return The offer ID to update or delete
+     * 
+     */
     public String offerId() {
         return this.offerId;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateStoreOfferArgs extends com.pulumi.resources.InvokeA
     @Import(name="privateStoreId", required=true)
     private String privateStoreId;
 
+    /**
+     * @return The store ID - must use the tenant ID
+     * 
+     */
     public String privateStoreId() {
         return this.privateStoreId;
     }
@@ -59,11 +67,23 @@ public final class GetPrivateStoreOfferArgs extends com.pulumi.resources.InvokeA
             $ = new GetPrivateStoreOfferArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offerId The offer ID to update or delete
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerId(String offerId) {
             $.offerId = offerId;
             return this;
         }
 
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateStoreId(String privateStoreId) {
             $.privateStoreId = privateStoreId;
             return this;

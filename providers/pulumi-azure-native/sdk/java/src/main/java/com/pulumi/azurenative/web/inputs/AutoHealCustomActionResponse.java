@@ -26,6 +26,10 @@ public final class AutoHealCustomActionResponse extends com.pulumi.resources.Inv
     @Import(name="exe")
     private @Nullable String exe;
 
+    /**
+     * @return Executable to be run.
+     * 
+     */
     public Optional<String> exe() {
         return Optional.ofNullable(this.exe);
     }
@@ -37,6 +41,10 @@ public final class AutoHealCustomActionResponse extends com.pulumi.resources.Inv
     @Import(name="parameters")
     private @Nullable String parameters;
 
+    /**
+     * @return Parameters for the executable.
+     * 
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -66,11 +74,23 @@ public final class AutoHealCustomActionResponse extends com.pulumi.resources.Inv
             $ = new AutoHealCustomActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exe Executable to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exe(@Nullable String exe) {
             $.exe = exe;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for the executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable String parameters) {
             $.parameters = parameters;
             return this;

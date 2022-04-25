@@ -24,6 +24,10 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The supported Azure location where the attestation provider should be created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="properties", required=true)
     private Output<AttestationServiceCreationSpecificParamsArgs> properties;
 
+    /**
+     * @return Properties of the attestation provider
+     * 
+     */
     public Output<AttestationServiceCreationSpecificParamsArgs> properties() {
         return this.properties;
     }
@@ -46,6 +54,10 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="providerName")
     private @Nullable Output<String> providerName;
 
+    /**
+     * @return Name of the attestation provider.
+     * 
+     */
     public Optional<Output<String>> providerName() {
         return Optional.ofNullable(this.providerName);
     }
@@ -57,6 +69,10 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags that will be assigned to the attestation provider.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
             $ = new AttestationProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The supported Azure location where the attestation provider should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The supported Azure location where the attestation provider should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Properties of the attestation provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<AttestationServiceCreationSpecificParamsArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the attestation provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(AttestationServiceCreationSpecificParamsArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerName Name of the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(@Nullable Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName Name of the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags that will be assigned to the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags that will be assigned to the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

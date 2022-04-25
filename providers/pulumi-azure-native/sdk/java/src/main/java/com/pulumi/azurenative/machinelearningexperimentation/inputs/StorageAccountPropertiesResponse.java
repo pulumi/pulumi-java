@@ -23,6 +23,10 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
     @Import(name="accessKey", required=true)
     private String accessKey;
 
+    /**
+     * @return The access key to the storage account.
+     * 
+     */
     public String accessKey() {
         return this.accessKey;
     }
@@ -34,6 +38,10 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
     @Import(name="storageAccountId", required=true)
     private String storageAccountId;
 
+    /**
+     * @return The fully qualified arm Id of the storage account.
+     * 
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }
@@ -63,11 +71,23 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
             $ = new StorageAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey The access key to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(String accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param storageAccountId The fully qualified arm Id of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;

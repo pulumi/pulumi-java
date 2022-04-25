@@ -13,62 +13,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackendResponse {
     /**
-     * Location of the backend (IP address or FQDN)
+     * @return Location of the backend (IP address or FQDN)
      * 
      */
     private final @Nullable String address;
     /**
-     * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+     * @return The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
      * 
      */
     private final @Nullable String backendHostHeader;
     /**
-     * Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String enabledState;
     /**
-     * The HTTP TCP port number. Must be between 1 and 65535.
+     * @return The HTTP TCP port number. Must be between 1 and 65535.
      * 
      */
     private final @Nullable Integer httpPort;
     /**
-     * The HTTPS TCP port number. Must be between 1 and 65535.
+     * @return The HTTPS TCP port number. Must be between 1 and 65535.
      * 
      */
     private final @Nullable Integer httpsPort;
     /**
-     * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+     * @return Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * The Approval status for the connection to the Private Link
+     * @return The Approval status for the connection to the Private Link
      * 
      */
     private final String privateEndpointStatus;
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     private final @Nullable String privateLinkAlias;
     /**
-     * A custom message to be included in the approval request to connect to the Private Link
+     * @return A custom message to be included in the approval request to connect to the Private Link
      * 
      */
     private final @Nullable String privateLinkApprovalMessage;
     /**
-     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
     private final @Nullable String privateLinkLocation;
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     private final @Nullable String privateLinkResourceId;
     /**
-     * Weight of this endpoint for load balancing purposes.
+     * @return Weight of this endpoint for load balancing purposes.
      * 
      */
     private final @Nullable Integer weight;
@@ -102,86 +102,86 @@ public final class BackendResponse {
     }
 
     /**
-     * Location of the backend (IP address or FQDN)
+     * @return Location of the backend (IP address or FQDN)
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+     * @return The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
      * 
-    */
+     */
     public Optional<String> backendHostHeader() {
         return Optional.ofNullable(this.backendHostHeader);
     }
     /**
-     * Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * The HTTP TCP port number. Must be between 1 and 65535.
+     * @return The HTTP TCP port number. Must be between 1 and 65535.
      * 
-    */
+     */
     public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
-     * The HTTPS TCP port number. Must be between 1 and 65535.
+     * @return The HTTPS TCP port number. Must be between 1 and 65535.
      * 
-    */
+     */
     public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
-     * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+     * @return Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The Approval status for the connection to the Private Link
+     * @return The Approval status for the connection to the Private Link
      * 
-    */
+     */
     public String privateEndpointStatus() {
         return this.privateEndpointStatus;
     }
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
-    */
+     */
     public Optional<String> privateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
     /**
-     * A custom message to be included in the approval request to connect to the Private Link
+     * @return A custom message to be included in the approval request to connect to the Private Link
      * 
-    */
+     */
     public Optional<String> privateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
-     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
-    */
+     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
-    */
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
-     * Weight of this endpoint for load balancing purposes.
+     * @return Weight of this endpoint for load balancing purposes.
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

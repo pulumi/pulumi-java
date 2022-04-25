@@ -27,6 +27,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
     @Import(name="connectVia")
     private @Nullable Output<EntityReferenceArgs> connectVia;
 
+    /**
+     * @return The self-hosted integration runtime reference.
+     * 
+     */
     public Optional<Output<EntityReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -38,6 +42,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path to contain the staged data in the Blob storage.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
     @Import(name="stagingLinkedService")
     private @Nullable Output<EntityReferenceArgs> stagingLinkedService;
 
+    /**
+     * @return The staging linked service reference.
+     * 
+     */
     public Optional<Output<EntityReferenceArgs>> stagingLinkedService() {
         return Optional.ofNullable(this.stagingLinkedService);
     }
@@ -79,29 +91,65 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
             $ = new IntegrationRuntimeDataProxyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectVia The self-hosted integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<EntityReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The self-hosted integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(EntityReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param path The path to contain the staged data in the Blob storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to contain the staged data in the Blob storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param stagingLinkedService The staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingLinkedService(@Nullable Output<EntityReferenceArgs> stagingLinkedService) {
             $.stagingLinkedService = stagingLinkedService;
             return this;
         }
 
+        /**
+         * @param stagingLinkedService The staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingLinkedService(EntityReferenceArgs stagingLinkedService) {
             return stagingLinkedService(Output.of(stagingLinkedService));
         }

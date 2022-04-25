@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitoredResourceResponse {
     /**
-     * The ARM id of the resource.
+     * @return The ARM id of the resource.
      * 
      */
     private final @Nullable String id;
     /**
-     * Reason for why the resource is sending logs (or why it is not sending).
+     * @return Reason for why the resource is sending logs (or why it is not sending).
      * 
      */
     private final @Nullable String reasonForLogsStatus;
     /**
-     * Reason for why the resource is sending metrics (or why it is not sending).
+     * @return Reason for why the resource is sending metrics (or why it is not sending).
      * 
      */
     private final @Nullable String reasonForMetricsStatus;
     /**
-     * Flag indicating if resource is sending logs to Logz.
+     * @return Flag indicating if resource is sending logs to Logz.
      * 
      */
     private final @Nullable Boolean sendingLogs;
     /**
-     * Flag indicating if resource is sending metrics to Logz.
+     * @return Flag indicating if resource is sending metrics to Logz.
      * 
      */
     private final @Nullable Boolean sendingMetrics;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
@@ -61,44 +61,44 @@ public final class MonitoredResourceResponse {
     }
 
     /**
-     * The ARM id of the resource.
+     * @return The ARM id of the resource.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Reason for why the resource is sending logs (or why it is not sending).
+     * @return Reason for why the resource is sending logs (or why it is not sending).
      * 
-    */
+     */
     public Optional<String> reasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
     /**
-     * Reason for why the resource is sending metrics (or why it is not sending).
+     * @return Reason for why the resource is sending metrics (or why it is not sending).
      * 
-    */
+     */
     public Optional<String> reasonForMetricsStatus() {
         return Optional.ofNullable(this.reasonForMetricsStatus);
     }
     /**
-     * Flag indicating if resource is sending logs to Logz.
+     * @return Flag indicating if resource is sending logs to Logz.
      * 
-    */
+     */
     public Optional<Boolean> sendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
     /**
-     * Flag indicating if resource is sending metrics to Logz.
+     * @return Flag indicating if resource is sending metrics to Logz.
      * 
-    */
+     */
     public Optional<Boolean> sendingMetrics() {
         return Optional.ofNullable(this.sendingMetrics);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }

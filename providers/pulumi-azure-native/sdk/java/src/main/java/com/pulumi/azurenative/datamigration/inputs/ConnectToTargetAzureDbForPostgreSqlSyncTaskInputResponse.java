@@ -23,6 +23,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
     @Import(name="sourceConnectionInfo", required=true)
     private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source PostgreSQL server
+     * 
+     */
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -34,6 +38,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
     @Import(name="targetConnectionInfo", required=true)
     private PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for PostgreSQL server
+     * 
+     */
     public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -63,11 +71,23 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
             $ = new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for PostgreSQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

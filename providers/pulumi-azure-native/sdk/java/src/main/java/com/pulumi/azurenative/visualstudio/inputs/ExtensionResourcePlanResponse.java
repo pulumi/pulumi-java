@@ -25,6 +25,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the plan.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
     @Import(name="product")
     private @Nullable String product;
 
+    /**
+     * @return Product name.
+     * 
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
@@ -47,6 +55,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
     @Import(name="promotionCode")
     private @Nullable String promotionCode;
 
+    /**
+     * @return Optional: the promotion code associated with the plan.
+     * 
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -58,6 +70,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return Name of the extension publisher.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -69,6 +85,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return A string that uniquely identifies the plan version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -101,26 +121,56 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
             $ = new ExtensionResourcePlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param product Product name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable String product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param promotionCode Optional: the promotion code associated with the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable String promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param publisher Name of the extension publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param version A string that uniquely identifies the plan version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

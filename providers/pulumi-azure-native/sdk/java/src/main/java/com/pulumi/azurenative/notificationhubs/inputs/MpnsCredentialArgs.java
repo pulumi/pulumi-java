@@ -26,6 +26,10 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateKey")
     private @Nullable Output<String> certificateKey;
 
+    /**
+     * @return The certificate key for this credential.
+     * 
+     */
     public Optional<Output<String>> certificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
@@ -37,6 +41,10 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mpnsCertificate")
     private @Nullable Output<String> mpnsCertificate;
 
+    /**
+     * @return The MPNS certificate.
+     * 
+     */
     public Optional<Output<String>> mpnsCertificate() {
         return Optional.ofNullable(this.mpnsCertificate);
     }
@@ -48,6 +56,10 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The MPNS certificate Thumbprint
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -78,29 +90,65 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MpnsCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateKey The certificate key for this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateKey(@Nullable Output<String> certificateKey) {
             $.certificateKey = certificateKey;
             return this;
         }
 
+        /**
+         * @param certificateKey The certificate key for this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateKey(String certificateKey) {
             return certificateKey(Output.of(certificateKey));
         }
 
+        /**
+         * @param mpnsCertificate The MPNS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mpnsCertificate(@Nullable Output<String> mpnsCertificate) {
             $.mpnsCertificate = mpnsCertificate;
             return this;
         }
 
+        /**
+         * @param mpnsCertificate The MPNS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mpnsCertificate(String mpnsCertificate) {
             return mpnsCertificate(Output.of(mpnsCertificate));
         }
 
+        /**
+         * @param thumbprint The MPNS certificate Thumbprint
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The MPNS certificate Thumbprint
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

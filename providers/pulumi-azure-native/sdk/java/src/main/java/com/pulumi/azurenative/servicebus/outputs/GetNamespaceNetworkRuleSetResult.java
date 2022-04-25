@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNamespaceNetworkRuleSetResult {
     /**
-     * Default Action for Network Rule Set
+     * @return Default Action for Network Rule Set
      * 
      */
     private final @Nullable String defaultAction;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * List of IpRules
+     * @return List of IpRules
      * 
      */
     private final @Nullable List<NWRuleSetIpRulesResponse> ipRules;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * List VirtualNetwork Rules
+     * @return List VirtualNetwork Rules
      * 
      */
     private final @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules;
@@ -62,44 +62,44 @@ public final class GetNamespaceNetworkRuleSetResult {
     }
 
     /**
-     * Default Action for Network Rule Set
+     * @return Default Action for Network Rule Set
      * 
-    */
+     */
     public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of IpRules
+     * @return List of IpRules
      * 
-    */
+     */
     public List<NWRuleSetIpRulesResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * List VirtualNetwork Rules
+     * @return List VirtualNetwork Rules
      * 
-    */
+     */
     public List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

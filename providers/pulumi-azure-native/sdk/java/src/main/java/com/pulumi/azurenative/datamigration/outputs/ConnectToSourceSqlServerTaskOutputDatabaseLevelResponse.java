@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     /**
-     * SQL Server compatibility level of database
+     * @return SQL Server compatibility level of database
      * 
      */
     private final String compatibilityLevel;
     /**
-     * The list of database files
+     * @return The list of database files
      * 
      */
     private final List<DatabaseFileInfoResponse> databaseFiles;
     /**
-     * State of the database
+     * @return State of the database
      * 
      */
     private final String databaseState;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Database name
+     * @return Database name
      * 
      */
     private final String name;
     /**
-     * Type of result - database level or task level
+     * @return Type of result - database level or task level
      * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Size of the file in megabytes
+     * @return Size of the file in megabytes
      * 
      */
     private final Double sizeMB;
@@ -68,52 +68,52 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     }
 
     /**
-     * SQL Server compatibility level of database
+     * @return SQL Server compatibility level of database
      * 
-    */
+     */
     public String compatibilityLevel() {
         return this.compatibilityLevel;
     }
     /**
-     * The list of database files
+     * @return The list of database files
      * 
-    */
+     */
     public List<DatabaseFileInfoResponse> databaseFiles() {
         return this.databaseFiles;
     }
     /**
-     * State of the database
+     * @return State of the database
      * 
-    */
+     */
     public String databaseState() {
         return this.databaseState;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Database name
+     * @return Database name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of result - database level or task level
+     * @return Type of result - database level or task level
      * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Size of the file in megabytes
+     * @return Size of the file in megabytes
      * 
-    */
+     */
     public Double sizeMB() {
         return this.sizeMB;
     }

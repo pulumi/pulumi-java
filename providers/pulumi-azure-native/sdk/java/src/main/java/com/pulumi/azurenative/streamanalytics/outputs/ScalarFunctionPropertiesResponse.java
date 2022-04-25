@@ -18,27 +18,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScalarFunctionPropertiesResponse {
     /**
-     * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+     * @return The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
      * 
      */
     private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
     /**
-     * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * @return The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
     private final String etag;
     /**
-     * A list of inputs describing the parameters of the function.
+     * @return A list of inputs describing the parameters of the function.
      * 
      */
     private final @Nullable List<FunctionInputResponse> inputs;
     /**
-     * The output of the function.
+     * @return The output of the function.
      * 
      */
     private final @Nullable FunctionOutputResponse output;
     /**
-     * Indicates the type of function.
+     * @return Indicates the type of function.
      * Expected value is &#39;Scalar&#39;.
      * 
      */
@@ -59,38 +59,38 @@ public final class ScalarFunctionPropertiesResponse {
     }
 
     /**
-     * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+     * @return The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
      * 
-    */
+     */
     public Optional<Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse>> binding() {
         return Optional.ofNullable(this.binding);
     }
     /**
-     * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * @return The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A list of inputs describing the parameters of the function.
+     * @return A list of inputs describing the parameters of the function.
      * 
-    */
+     */
     public List<FunctionInputResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
-     * The output of the function.
+     * @return The output of the function.
      * 
-    */
+     */
     public Optional<FunctionOutputResponse> output() {
         return Optional.ofNullable(this.output);
     }
     /**
-     * Indicates the type of function.
+     * @return Indicates the type of function.
      * Expected value is &#39;Scalar&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

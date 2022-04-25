@@ -28,6 +28,10 @@ public final class ExampleRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="globalParameters")
     private @Nullable Map<String,Object> globalParameters;
 
+    /**
+     * @return Sample input data for the web service&#39;s global parameters
+     * 
+     */
     public Optional<Map<String,Object>> globalParameters() {
         return Optional.ofNullable(this.globalParameters);
     }
@@ -39,6 +43,10 @@ public final class ExampleRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="inputs")
     private @Nullable Map<String,List<List<Object>>> inputs;
 
+    /**
+     * @return Sample input data for the web service&#39;s input(s) given as an input name to sample input values matrix map.
+     * 
+     */
     public Optional<Map<String,List<List<Object>>>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -68,11 +76,23 @@ public final class ExampleRequestResponse extends com.pulumi.resources.InvokeArg
             $ = new ExampleRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalParameters Sample input data for the web service&#39;s global parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             $.globalParameters = globalParameters;
             return this;
         }
 
+        /**
+         * @param inputs Sample input data for the web service&#39;s input(s) given as an input name to sample input values matrix map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
             $.inputs = inputs;
             return this;

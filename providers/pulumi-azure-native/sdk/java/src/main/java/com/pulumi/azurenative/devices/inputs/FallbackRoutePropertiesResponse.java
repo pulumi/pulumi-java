@@ -27,6 +27,10 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="condition")
     private @Nullable String condition;
 
+    /**
+     * @return The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * 
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -38,6 +42,10 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="endpointNames", required=true)
     private List<String> endpointNames;
 
+    /**
+     * @return The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+     * 
+     */
     public List<String> endpointNames() {
         return this.endpointNames;
     }
@@ -49,6 +57,10 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Used to specify whether the fallback route is enabled.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -60,6 +72,10 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The source to which the routing rule is to be applied to. For example, DeviceMessages
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -103,30 +123,66 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
             $ = new FallbackRoutePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(List<String> endpointNames) {
             $.endpointNames = endpointNames;
             return this;
         }
 
+        /**
+         * @param endpointNames The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
 
+        /**
+         * @param isEnabled Used to specify whether the fallback route is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param name The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param source The source to which the routing rule is to be applied to. For example, DeviceMessages
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;

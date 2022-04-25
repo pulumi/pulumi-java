@@ -19,6 +19,10 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -30,6 +34,10 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="linkedServiceName", required=true)
     private String linkedServiceName;
 
+    /**
+     * @return The linked service name.
+     * 
+     */
     public String linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -41,6 +49,10 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName The linked service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(String linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

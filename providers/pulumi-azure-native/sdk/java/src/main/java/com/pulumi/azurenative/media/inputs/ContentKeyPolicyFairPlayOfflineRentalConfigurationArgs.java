@@ -20,6 +20,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     @Import(name="playbackDurationSeconds", required=true)
     private Output<Double> playbackDurationSeconds;
 
+    /**
+     * @return Playback duration
+     * 
+     */
     public Output<Double> playbackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
@@ -31,6 +35,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     @Import(name="storageDurationSeconds", required=true)
     private Output<Double> storageDurationSeconds;
 
+    /**
+     * @return Storage duration
+     * 
+     */
     public Output<Double> storageDurationSeconds() {
         return this.storageDurationSeconds;
     }
@@ -60,20 +68,44 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
             $ = new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param playbackDurationSeconds Playback duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder playbackDurationSeconds(Output<Double> playbackDurationSeconds) {
             $.playbackDurationSeconds = playbackDurationSeconds;
             return this;
         }
 
+        /**
+         * @param playbackDurationSeconds Playback duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
             return playbackDurationSeconds(Output.of(playbackDurationSeconds));
         }
 
+        /**
+         * @param storageDurationSeconds Storage duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageDurationSeconds(Output<Double> storageDurationSeconds) {
             $.storageDurationSeconds = storageDurationSeconds;
             return this;
         }
 
+        /**
+         * @param storageDurationSeconds Storage duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageDurationSeconds(Double storageDurationSeconds) {
             return storageDurationSeconds(Output.of(storageDurationSeconds));
         }

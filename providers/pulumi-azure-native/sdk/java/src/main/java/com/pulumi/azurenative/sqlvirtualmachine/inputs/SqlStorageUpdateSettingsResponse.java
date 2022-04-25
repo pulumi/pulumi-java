@@ -26,6 +26,10 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
     @Import(name="diskConfigurationType")
     private @Nullable String diskConfigurationType;
 
+    /**
+     * @return Disk configuration to apply to SQL Server.
+     * 
+     */
     public Optional<String> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
@@ -37,6 +41,10 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
     @Import(name="diskCount")
     private @Nullable Integer diskCount;
 
+    /**
+     * @return Virtual machine disk count.
+     * 
+     */
     public Optional<Integer> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
@@ -48,6 +56,10 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
     @Import(name="startingDeviceId")
     private @Nullable Integer startingDeviceId;
 
+    /**
+     * @return Device id of the first disk to be updated.
+     * 
+     */
     public Optional<Integer> startingDeviceId() {
         return Optional.ofNullable(this.startingDeviceId);
     }
@@ -78,16 +90,34 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
             $ = new SqlStorageUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
             $.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
+        /**
+         * @param diskCount Virtual machine disk count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(@Nullable Integer diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param startingDeviceId Device id of the first disk to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
             $.startingDeviceId = startingDeviceId;
             return this;

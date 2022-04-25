@@ -19,6 +19,10 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeResourceName", required=true)
     private String volumeResourceName;
 
+    /**
+     * @return The identity of the volume.
+     * 
+     */
     public String volumeResourceName() {
         return this.volumeResourceName;
     }
@@ -59,11 +67,23 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param volumeResourceName The identity of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeResourceName(String volumeResourceName) {
             $.volumeResourceName = volumeResourceName;
             return this;

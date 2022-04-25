@@ -23,6 +23,10 @@ public final class BlobShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sasUri", required=true)
     private String sasUri;
 
+    /**
+     * @return SAS URI of Azure Storage Account Container.
+     * 
+     */
     public String sasUri() {
         return this.sasUri;
     }
@@ -51,6 +55,12 @@ public final class BlobShareResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BlobShareResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasUri SAS URI of Azure Storage Account Container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUri(String sasUri) {
             $.sasUri = sasUri;
             return this;

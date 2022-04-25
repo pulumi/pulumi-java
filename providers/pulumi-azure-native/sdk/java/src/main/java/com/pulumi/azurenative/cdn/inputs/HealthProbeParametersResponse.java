@@ -26,6 +26,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probeIntervalInSeconds")
     private @Nullable Integer probeIntervalInSeconds;
 
+    /**
+     * @return The number of seconds between health probes.Default is 240sec.
+     * 
+     */
     public Optional<Integer> probeIntervalInSeconds() {
         return Optional.ofNullable(this.probeIntervalInSeconds);
     }
@@ -37,6 +41,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probePath")
     private @Nullable String probePath;
 
+    /**
+     * @return The path relative to the origin that is used to determine the health of the origin.
+     * 
+     */
     public Optional<String> probePath() {
         return Optional.ofNullable(this.probePath);
     }
@@ -48,6 +56,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probeProtocol")
     private @Nullable String probeProtocol;
 
+    /**
+     * @return Protocol to use for health probe.
+     * 
+     */
     public Optional<String> probeProtocol() {
         return Optional.ofNullable(this.probeProtocol);
     }
@@ -59,6 +71,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probeRequestType")
     private @Nullable String probeRequestType;
 
+    /**
+     * @return The type of health probe request that is made.
+     * 
+     */
     public Optional<String> probeRequestType() {
         return Optional.ofNullable(this.probeRequestType);
     }
@@ -90,21 +106,45 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
             $ = new HealthProbeParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param probeIntervalInSeconds The number of seconds between health probes.Default is 240sec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
             $.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param probePath The path relative to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probePath(@Nullable String probePath) {
             $.probePath = probePath;
             return this;
         }
 
+        /**
+         * @param probeProtocol Protocol to use for health probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(@Nullable String probeProtocol) {
             $.probeProtocol = probeProtocol;
             return this;
         }
 
+        /**
+         * @param probeRequestType The type of health probe request that is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeRequestType(@Nullable String probeRequestType) {
             $.probeRequestType = probeRequestType;
             return this;

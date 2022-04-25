@@ -27,6 +27,10 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -55,11 +59,23 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
             $ = new ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }

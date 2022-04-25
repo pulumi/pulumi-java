@@ -26,6 +26,10 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isEncrypted")
     private @Nullable Boolean isEncrypted;
 
+    /**
+     * @return Gets or sets the isEncrypted flag of the connection field definition.
+     * 
+     */
     public Optional<Boolean> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
@@ -37,6 +41,10 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isOptional")
     private @Nullable Boolean isOptional;
 
+    /**
+     * @return Gets or sets the isOptional flag of the connection field definition.
+     * 
+     */
     public Optional<Boolean> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
@@ -48,6 +56,10 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Gets or sets the type of the connection field definition.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -78,16 +90,34 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
             $ = new FieldDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEncrypted Gets or sets the isEncrypted flag of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             $.isEncrypted = isEncrypted;
             return this;
         }
 
+        /**
+         * @param isOptional Gets or sets the isOptional flag of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOptional(@Nullable Boolean isOptional) {
             $.isOptional = isOptional;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the type of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

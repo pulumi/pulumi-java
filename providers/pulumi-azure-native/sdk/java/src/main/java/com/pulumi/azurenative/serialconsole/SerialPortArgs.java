@@ -23,6 +23,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResource", required=true)
     private Output<String> parentResource;
 
+    /**
+     * @return The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+     * 
+     */
     public Output<String> parentResource() {
         return this.parentResource;
     }
@@ -34,6 +38,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
     private Output<String> parentResourceType;
 
+    /**
+     * @return The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
+     * 
+     */
     public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
@@ -45,6 +53,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceProviderNamespace", required=true)
     private Output<String> resourceProviderNamespace;
 
+    /**
+     * @return The namespace of the resource provider.
+     * 
+     */
     public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -67,6 +83,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialPort")
     private @Nullable Output<String> serialPort;
 
+    /**
+     * @return The name of the serial port to create.
+     * 
+     */
     public Optional<Output<String>> serialPort() {
         return Optional.ofNullable(this.serialPort);
     }
@@ -78,6 +98,10 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<SerialPortState> state;
 
+    /**
+     * @return Specifies whether the port is enabled for a serial console connection.
+     * 
+     */
     public Optional<Output<SerialPortState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -111,56 +135,128 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SerialPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentResource The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResource(Output<String> parentResource) {
             $.parentResource = parentResource;
             return this;
         }
 
+        /**
+         * @param parentResource The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResource(String parentResource) {
             return parentResource(Output.of(parentResource));
         }
 
+        /**
+         * @param parentResourceType The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(Output<String> parentResourceType) {
             $.parentResourceType = parentResourceType;
             return this;
         }
 
+        /**
+         * @param parentResourceType The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(String parentResourceType) {
             return parentResourceType(Output.of(parentResourceType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             return resourceProviderNamespace(Output.of(resourceProviderNamespace));
         }
 
+        /**
+         * @param serialPort The name of the serial port to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialPort(@Nullable Output<String> serialPort) {
             $.serialPort = serialPort;
             return this;
         }
 
+        /**
+         * @param serialPort The name of the serial port to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialPort(String serialPort) {
             return serialPort(Output.of(serialPort));
         }
 
+        /**
+         * @param state Specifies whether the port is enabled for a serial console connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<SerialPortState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Specifies whether the port is enabled for a serial console connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(SerialPortState state) {
             return state(Output.of(state));
         }

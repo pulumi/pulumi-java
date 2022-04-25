@@ -22,122 +22,122 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNetworkGatewayResponse {
     /**
-     * ActiveActive flag.
+     * @return ActiveActive flag.
      * 
      */
     private final @Nullable Boolean activeActive;
     /**
-     * Virtual network gateway&#39;s BGP speaker settings.
+     * @return Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
     private final @Nullable BgpSettingsResponse bgpSettings;
     /**
-     * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
      * 
      */
     private final @Nullable AddressSpaceResponse customRoutes;
     /**
-     * Whether BGP is enabled for this virtual network gateway or not.
+     * @return Whether BGP is enabled for this virtual network gateway or not.
      * 
      */
     private final @Nullable Boolean enableBgp;
     /**
-     * Whether dns forwarding is enabled or not.
+     * @return Whether dns forwarding is enabled or not.
      * 
      */
     private final @Nullable Boolean enableDnsForwarding;
     /**
-     * Whether private IP needs to be enabled on this gateway for connections or not.
+     * @return Whether private IP needs to be enabled on this gateway for connections or not.
      * 
      */
     private final @Nullable Boolean enablePrivateIpAddress;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The extended location of type local virtual network gateway.
+     * @return The extended location of type local virtual network gateway.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
      * 
      */
     private final @Nullable SubResourceResponse gatewayDefaultSite;
     /**
-     * The type of this virtual network gateway.
+     * @return The type of this virtual network gateway.
      * 
      */
     private final @Nullable String gatewayType;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The IP address allocated by the gateway to which dns requests can be sent.
+     * @return The IP address allocated by the gateway to which dns requests can be sent.
      * 
      */
     private final String inboundDnsForwardingEndpoint;
     /**
-     * IP configurations for virtual network gateway.
+     * @return IP configurations for virtual network gateway.
      * 
      */
     private final @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the virtual network gateway resource.
+     * @return The provisioning state of the virtual network gateway resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource GUID property of the virtual network gateway resource.
+     * @return The resource GUID property of the virtual network gateway resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
      * 
      */
     private final @Nullable VirtualNetworkGatewaySkuResponse sku;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
      * 
      */
     private final @Nullable String vNetExtendedLocationResourceId;
     /**
-     * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
      * 
      */
     private final @Nullable VpnClientConfigurationResponse vpnClientConfiguration;
     /**
-     * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
      * 
      */
     private final @Nullable String vpnGatewayGeneration;
     /**
-     * The type of this virtual network gateway.
+     * @return The type of this virtual network gateway.
      * 
      */
     private final @Nullable String vpnType;
@@ -195,170 +195,170 @@ public final class VirtualNetworkGatewayResponse {
     }
 
     /**
-     * ActiveActive flag.
+     * @return ActiveActive flag.
      * 
-    */
+     */
     public Optional<Boolean> activeActive() {
         return Optional.ofNullable(this.activeActive);
     }
     /**
-     * Virtual network gateway&#39;s BGP speaker settings.
+     * @return Virtual network gateway&#39;s BGP speaker settings.
      * 
-    */
+     */
     public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
-     * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> customRoutes() {
         return Optional.ofNullable(this.customRoutes);
     }
     /**
-     * Whether BGP is enabled for this virtual network gateway or not.
+     * @return Whether BGP is enabled for this virtual network gateway or not.
      * 
-    */
+     */
     public Optional<Boolean> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
     /**
-     * Whether dns forwarding is enabled or not.
+     * @return Whether dns forwarding is enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> enableDnsForwarding() {
         return Optional.ofNullable(this.enableDnsForwarding);
     }
     /**
-     * Whether private IP needs to be enabled on this gateway for connections or not.
+     * @return Whether private IP needs to be enabled on this gateway for connections or not.
      * 
-    */
+     */
     public Optional<Boolean> enablePrivateIpAddress() {
         return Optional.ofNullable(this.enablePrivateIpAddress);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The extended location of type local virtual network gateway.
+     * @return The extended location of type local virtual network gateway.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
      * 
-    */
+     */
     public Optional<SubResourceResponse> gatewayDefaultSite() {
         return Optional.ofNullable(this.gatewayDefaultSite);
     }
     /**
-     * The type of this virtual network gateway.
+     * @return The type of this virtual network gateway.
      * 
-    */
+     */
     public Optional<String> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The IP address allocated by the gateway to which dns requests can be sent.
+     * @return The IP address allocated by the gateway to which dns requests can be sent.
      * 
-    */
+     */
     public String inboundDnsForwardingEndpoint() {
         return this.inboundDnsForwardingEndpoint;
     }
     /**
-     * IP configurations for virtual network gateway.
+     * @return IP configurations for virtual network gateway.
      * 
-    */
+     */
     public List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the virtual network gateway resource.
+     * @return The provisioning state of the virtual network gateway resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the virtual network gateway resource.
+     * @return The resource GUID property of the virtual network gateway resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
      * 
-    */
+     */
     public Optional<VirtualNetworkGatewaySkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
      * 
-    */
+     */
     public Optional<String> vNetExtendedLocationResourceId() {
         return Optional.ofNullable(this.vNetExtendedLocationResourceId);
     }
     /**
-     * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
      * 
-    */
+     */
     public Optional<VpnClientConfigurationResponse> vpnClientConfiguration() {
         return Optional.ofNullable(this.vpnClientConfiguration);
     }
     /**
-     * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
      * 
-    */
+     */
     public Optional<String> vpnGatewayGeneration() {
         return Optional.ofNullable(this.vpnGatewayGeneration);
     }
     /**
-     * The type of this virtual network gateway.
+     * @return The type of this virtual network gateway.
      * 
-    */
+     */
     public Optional<String> vpnType() {
         return Optional.ofNullable(this.vpnType);
     }

@@ -27,6 +27,10 @@ public final class FileSystemApplicationLogsConfigArgs extends com.pulumi.resour
     @Import(name="level")
     private @Nullable Output<LogLevel> level;
 
+    /**
+     * @return Log level.
+     * 
+     */
     public Optional<Output<LogLevel>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -55,11 +59,23 @@ public final class FileSystemApplicationLogsConfigArgs extends com.pulumi.resour
             $ = new FileSystemApplicationLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<LogLevel> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(LogLevel level) {
             return level(Output.of(level));
         }

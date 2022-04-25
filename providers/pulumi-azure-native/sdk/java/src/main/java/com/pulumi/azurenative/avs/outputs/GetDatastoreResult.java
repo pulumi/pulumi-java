@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDatastoreResult {
     /**
-     * An iSCSI volume
+     * @return An iSCSI volume
      * 
      */
     private final @Nullable DiskPoolVolumeResponse diskPoolVolume;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * An Azure NetApp Files volume
+     * @return An Azure NetApp Files volume
      * 
      */
     private final @Nullable NetAppVolumeResponse netAppVolume;
     /**
-     * The state of the datastore provisioning
+     * @return The state of the datastore provisioning
      * 
      */
     private final String provisioningState;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -61,44 +61,44 @@ public final class GetDatastoreResult {
     }
 
     /**
-     * An iSCSI volume
+     * @return An iSCSI volume
      * 
-    */
+     */
     public Optional<DiskPoolVolumeResponse> diskPoolVolume() {
         return Optional.ofNullable(this.diskPoolVolume);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * An Azure NetApp Files volume
+     * @return An Azure NetApp Files volume
      * 
-    */
+     */
     public Optional<NetAppVolumeResponse> netAppVolume() {
         return Optional.ofNullable(this.netAppVolume);
     }
     /**
-     * The state of the datastore provisioning
+     * @return The state of the datastore provisioning
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

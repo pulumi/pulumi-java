@@ -25,6 +25,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of the key vault key.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -36,6 +40,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultUri", required=true)
     private String keyVaultUri;
 
+    /**
+     * @return The Uri of the key vault.
+     * 
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
@@ -47,6 +55,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The version of the key vault key.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -58,6 +70,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="userIdentity")
     private @Nullable String userIdentity;
 
+    /**
+     * @return The user assigned identity (ARM resource id) that has access to the key.
+     * 
+     */
     public Optional<String> userIdentity() {
         return Optional.ofNullable(this.userIdentity);
     }
@@ -89,21 +105,45 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the key vault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The Uri of the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVersion The version of the key vault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param userIdentity The user assigned identity (ARM resource id) that has access to the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIdentity(@Nullable String userIdentity) {
             $.userIdentity = userIdentity;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class JobStatusResponse {
     /**
-     * Defines the job name.
+     * @return Defines the job name.
      * 
      */
     private final String jobName;
     /**
-     * Gets or sets the monitoring job percentage.
+     * @return Gets or sets the monitoring job percentage.
      * 
      */
     private final String jobProgress;
@@ -29,16 +29,16 @@ public final class JobStatusResponse {
     }
 
     /**
-     * Defines the job name.
+     * @return Defines the job name.
      * 
-    */
+     */
     public String jobName() {
         return this.jobName;
     }
     /**
-     * Gets or sets the monitoring job percentage.
+     * @return Gets or sets the monitoring job percentage.
      * 
-    */
+     */
     public String jobProgress() {
         return this.jobProgress;
     }

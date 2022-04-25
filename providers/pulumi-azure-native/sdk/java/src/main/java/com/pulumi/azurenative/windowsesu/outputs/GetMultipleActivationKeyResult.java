@@ -15,63 +15,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMultipleActivationKeyResult {
     /**
-     * Agreement number under which the key is requested.
+     * @return Agreement number under which the key is requested.
      * 
      */
     private final @Nullable String agreementNumber;
     /**
-     * End of support of security updates activated by the MAK key.
+     * @return End of support of security updates activated by the MAK key.
      * 
      */
     private final String expirationDate;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Number of activations/servers using the MAK key.
+     * @return Number of activations/servers using the MAK key.
      * 
      */
     private final @Nullable Integer installedServerNumber;
     /**
-     * &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
+     * @return &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
      * 
      */
     private final @Nullable Boolean isEligible;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * MAK 5x5 key.
+     * @return MAK 5x5 key.
      * 
      */
     private final String multipleActivationKey;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Type of OS for which the key is requested.
+     * @return Type of OS for which the key is requested.
      * 
      */
     private final @Nullable String osType;
     private final String provisioningState;
     /**
-     * Type of support
+     * @return Type of support
      * 
      */
     private final @Nullable String supportType;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -107,65 +107,65 @@ public final class GetMultipleActivationKeyResult {
     }
 
     /**
-     * Agreement number under which the key is requested.
+     * @return Agreement number under which the key is requested.
      * 
-    */
+     */
     public Optional<String> agreementNumber() {
         return Optional.ofNullable(this.agreementNumber);
     }
     /**
-     * End of support of security updates activated by the MAK key.
+     * @return End of support of security updates activated by the MAK key.
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Number of activations/servers using the MAK key.
+     * @return Number of activations/servers using the MAK key.
      * 
-    */
+     */
     public Optional<Integer> installedServerNumber() {
         return Optional.ofNullable(this.installedServerNumber);
     }
     /**
-     * &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
+     * @return &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
      * 
-    */
+     */
     public Optional<Boolean> isEligible() {
         return Optional.ofNullable(this.isEligible);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * MAK 5x5 key.
+     * @return MAK 5x5 key.
      * 
-    */
+     */
     public String multipleActivationKey() {
         return this.multipleActivationKey;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of OS for which the key is requested.
+     * @return Type of OS for which the key is requested.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -173,23 +173,23 @@ public final class GetMultipleActivationKeyResult {
         return this.provisioningState;
     }
     /**
-     * Type of support
+     * @return Type of support
      * 
-    */
+     */
     public Optional<String> supportType() {
         return Optional.ofNullable(this.supportType);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

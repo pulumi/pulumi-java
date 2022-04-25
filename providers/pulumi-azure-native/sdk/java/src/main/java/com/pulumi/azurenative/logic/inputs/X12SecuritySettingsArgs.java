@@ -26,6 +26,10 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationQualifier", required=true)
     private Output<String> authorizationQualifier;
 
+    /**
+     * @return The authorization qualifier.
+     * 
+     */
     public Output<String> authorizationQualifier() {
         return this.authorizationQualifier;
     }
@@ -37,6 +41,10 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationValue")
     private @Nullable Output<String> authorizationValue;
 
+    /**
+     * @return The authorization value.
+     * 
+     */
     public Optional<Output<String>> authorizationValue() {
         return Optional.ofNullable(this.authorizationValue);
     }
@@ -48,6 +56,10 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="passwordValue")
     private @Nullable Output<String> passwordValue;
 
+    /**
+     * @return The password value.
+     * 
+     */
     public Optional<Output<String>> passwordValue() {
         return Optional.ofNullable(this.passwordValue);
     }
@@ -59,6 +71,10 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="securityQualifier", required=true)
     private Output<String> securityQualifier;
 
+    /**
+     * @return The security qualifier.
+     * 
+     */
     public Output<String> securityQualifier() {
         return this.securityQualifier;
     }
@@ -90,38 +106,86 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
             $ = new X12SecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationQualifier The authorization qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationQualifier(Output<String> authorizationQualifier) {
             $.authorizationQualifier = authorizationQualifier;
             return this;
         }
 
+        /**
+         * @param authorizationQualifier The authorization qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationQualifier(String authorizationQualifier) {
             return authorizationQualifier(Output.of(authorizationQualifier));
         }
 
+        /**
+         * @param authorizationValue The authorization value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationValue(@Nullable Output<String> authorizationValue) {
             $.authorizationValue = authorizationValue;
             return this;
         }
 
+        /**
+         * @param authorizationValue The authorization value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationValue(String authorizationValue) {
             return authorizationValue(Output.of(authorizationValue));
         }
 
+        /**
+         * @param passwordValue The password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordValue(@Nullable Output<String> passwordValue) {
             $.passwordValue = passwordValue;
             return this;
         }
 
+        /**
+         * @param passwordValue The password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordValue(String passwordValue) {
             return passwordValue(Output.of(passwordValue));
         }
 
+        /**
+         * @param securityQualifier The security qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityQualifier(Output<String> securityQualifier) {
             $.securityQualifier = securityQualifier;
             return this;
         }
 
+        /**
+         * @param securityQualifier The security qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityQualifier(String securityQualifier) {
             return securityQualifier(Output.of(securityQualifier));
         }

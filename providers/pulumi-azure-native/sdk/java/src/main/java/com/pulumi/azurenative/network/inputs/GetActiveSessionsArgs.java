@@ -19,6 +19,10 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="bastionHostName", required=true)
     private String bastionHostName;
 
+    /**
+     * @return The name of the Bastion Host.
+     * 
+     */
     public String bastionHostName() {
         return this.bastionHostName;
     }
@@ -30,6 +34,10 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetActiveSessionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bastionHostName The name of the Bastion Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bastionHostName(String bastionHostName) {
             $.bastionHostName = bastionHostName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

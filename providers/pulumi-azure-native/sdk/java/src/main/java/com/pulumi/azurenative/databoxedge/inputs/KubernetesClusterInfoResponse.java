@@ -26,6 +26,10 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
     @Import(name="etcdInfo", required=true)
     private EtcdInfoResponse etcdInfo;
 
+    /**
+     * @return Etcd configuration
+     * 
+     */
     public EtcdInfoResponse etcdInfo() {
         return this.etcdInfo;
     }
@@ -37,6 +41,10 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
     @Import(name="nodes", required=true)
     private List<NodeInfoResponse> nodes;
 
+    /**
+     * @return Kubernetes cluster nodes
+     * 
+     */
     public List<NodeInfoResponse> nodes() {
         return this.nodes;
     }
@@ -48,6 +56,10 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Kubernetes cluster version
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -78,20 +90,44 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
             $ = new KubernetesClusterInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etcdInfo Etcd configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder etcdInfo(EtcdInfoResponse etcdInfo) {
             $.etcdInfo = etcdInfo;
             return this;
         }
 
+        /**
+         * @param nodes Kubernetes cluster nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(List<NodeInfoResponse> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes Kubernetes cluster nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(NodeInfoResponse... nodes) {
             return nodes(List.of(nodes));
         }
 
+        /**
+         * @param version Kubernetes cluster version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

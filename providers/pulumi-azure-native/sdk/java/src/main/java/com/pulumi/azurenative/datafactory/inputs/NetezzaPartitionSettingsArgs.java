@@ -26,6 +26,10 @@ public final class NetezzaPartitionSettingsArgs extends com.pulumi.resources.Res
     @Import(name="partitionColumnName")
     private @Nullable Output<Object> partitionColumnName;
 
+    /**
+     * @return The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
@@ -37,6 +41,10 @@ public final class NetezzaPartitionSettingsArgs extends com.pulumi.resources.Res
     @Import(name="partitionLowerBound")
     private @Nullable Output<Object> partitionLowerBound;
 
+    /**
+     * @return The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
@@ -48,6 +56,10 @@ public final class NetezzaPartitionSettingsArgs extends com.pulumi.resources.Res
     @Import(name="partitionUpperBound")
     private @Nullable Output<Object> partitionUpperBound;
 
+    /**
+     * @return The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -78,29 +90,65 @@ public final class NetezzaPartitionSettingsArgs extends com.pulumi.resources.Res
             $ = new NetezzaPartitionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionColumnName The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
             $.partitionColumnName = partitionColumnName;
             return this;
         }
 
+        /**
+         * @param partitionColumnName The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(Object partitionColumnName) {
             return partitionColumnName(Output.of(partitionColumnName));
         }
 
+        /**
+         * @param partitionLowerBound The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
             $.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
+        /**
+         * @param partitionLowerBound The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionLowerBound(Object partitionLowerBound) {
             return partitionLowerBound(Output.of(partitionLowerBound));
         }
 
+        /**
+         * @param partitionUpperBound The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
             $.partitionUpperBound = partitionUpperBound;
             return this;
         }
 
+        /**
+         * @param partitionUpperBound The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionUpperBound(Object partitionUpperBound) {
             return partitionUpperBound(Output.of(partitionUpperBound));
         }

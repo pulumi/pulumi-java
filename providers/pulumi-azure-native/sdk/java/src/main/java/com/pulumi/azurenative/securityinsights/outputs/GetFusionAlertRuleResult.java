@@ -14,63 +14,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFusionAlertRuleResult {
     /**
-     * The Name of the alert rule template used to create this rule.
+     * @return The Name of the alert rule template used to create this rule.
      * 
      */
     private final String alertRuleTemplateName;
     /**
-     * The description of the alert rule.
+     * @return The description of the alert rule.
      * 
      */
     private final String description;
     /**
-     * The display name for alerts created by this alert rule.
+     * @return The display name for alerts created by this alert rule.
      * 
      */
     private final String displayName;
     /**
-     * Determines whether this alert rule is enabled or disabled.
+     * @return Determines whether this alert rule is enabled or disabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * The kind of the alert rule
+     * @return The kind of the alert rule
      * Expected value is &#39;Fusion&#39;.
      * 
      */
     private final String kind;
     /**
-     * The last time that this alert has been modified.
+     * @return The last time that this alert has been modified.
      * 
      */
     private final String lastModifiedUtc;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The severity for alerts created by this alert rule.
+     * @return The severity for alerts created by this alert rule.
      * 
      */
     private final String severity;
     /**
-     * The tactics of the alert rule
+     * @return The tactics of the alert rule
      * 
      */
     private final List<String> tactics;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -104,87 +104,87 @@ public final class GetFusionAlertRuleResult {
     }
 
     /**
-     * The Name of the alert rule template used to create this rule.
+     * @return The Name of the alert rule template used to create this rule.
      * 
-    */
+     */
     public String alertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
     /**
-     * The description of the alert rule.
+     * @return The description of the alert rule.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name for alerts created by this alert rule.
+     * @return The display name for alerts created by this alert rule.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Determines whether this alert rule is enabled or disabled.
+     * @return Determines whether this alert rule is enabled or disabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the alert rule
+     * @return The kind of the alert rule
      * Expected value is &#39;Fusion&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The last time that this alert has been modified.
+     * @return The last time that this alert has been modified.
      * 
-    */
+     */
     public String lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The severity for alerts created by this alert rule.
+     * @return The severity for alerts created by this alert rule.
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * The tactics of the alert rule
+     * @return The tactics of the alert rule
      * 
-    */
+     */
     public List<String> tactics() {
         return this.tactics;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

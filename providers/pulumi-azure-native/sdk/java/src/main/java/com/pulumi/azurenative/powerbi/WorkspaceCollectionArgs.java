@@ -24,6 +24,10 @@ public final class WorkspaceCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Azure location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class WorkspaceCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Azure resource group
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -60,6 +68,10 @@ public final class WorkspaceCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="workspaceCollectionName")
     private @Nullable Output<String> workspaceCollectionName;
 
+    /**
+     * @return Power BI Embedded Workspace Collection name
+     * 
+     */
     public Optional<Output<String>> workspaceCollectionName() {
         return Optional.ofNullable(this.workspaceCollectionName);
     }
@@ -92,20 +104,44 @@ public final class WorkspaceCollectionArgs extends com.pulumi.resources.Resource
             $ = new WorkspaceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Azure location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
@@ -128,11 +164,23 @@ public final class WorkspaceCollectionArgs extends com.pulumi.resources.Resource
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceCollectionName Power BI Embedded Workspace Collection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCollectionName(@Nullable Output<String> workspaceCollectionName) {
             $.workspaceCollectionName = workspaceCollectionName;
             return this;
         }
 
+        /**
+         * @param workspaceCollectionName Power BI Embedded Workspace Collection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCollectionName(String workspaceCollectionName) {
             return workspaceCollectionName(Output.of(workspaceCollectionName));
         }

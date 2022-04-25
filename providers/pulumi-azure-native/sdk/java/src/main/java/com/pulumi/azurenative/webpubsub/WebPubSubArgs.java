@@ -31,6 +31,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHandler")
     private @Nullable Output<EventHandlerSettingsArgs> eventHandler;
 
+    /**
+     * @return The settings for event handler in webpubsub service.
+     * 
+     */
     public Optional<Output<EventHandlerSettingsArgs>> eventHandler() {
         return Optional.ofNullable(this.eventHandler);
     }
@@ -47,6 +51,15 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="features")
     private @Nullable Output<List<WebPubSubFeatureArgs>> features;
 
+    /**
+     * @return List of the featureFlags.
+     * 
+     * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+     * And the response will only include featureFlags that are explicitly set.
+     * When a featureFlag is not explicitly set, its globally default value will be used
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+     * 
+     */
     public Optional<Output<List<WebPubSubFeatureArgs>>> features() {
         return Optional.ofNullable(this.features);
     }
@@ -58,6 +71,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ManagedIdentityArgs> identity;
 
+    /**
+     * @return The managed identity response
+     * 
+     */
     public Optional<Output<ManagedIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -69,6 +86,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +101,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkACLs")
     private @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
 
+    /**
+     * @return Network ACLs
+     * 
+     */
     public Optional<Output<WebPubSubNetworkACLsArgs>> networkACLs() {
         return Optional.ofNullable(this.networkACLs);
     }
@@ -93,6 +118,12 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<String> publicNetworkAccess;
 
+    /**
+     * @return Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * When it&#39;s Enabled, network ACLs still apply.
+     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
+     * 
+     */
     public Optional<Output<String>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -104,6 +135,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +150,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -126,6 +165,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ResourceSkuArgs> sku;
 
+    /**
+     * @return The billing information of the resource.(e.g. Free, Standard)
+     * 
+     */
     public Optional<Output<ResourceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -137,6 +180,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,6 +195,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tls")
     private @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
+    /**
+     * @return TLS settings.
+     * 
+     */
     public Optional<Output<WebPubSubTlsSettingsArgs>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -186,105 +237,262 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebPubSubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHandler The settings for event handler in webpubsub service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandler(@Nullable Output<EventHandlerSettingsArgs> eventHandler) {
             $.eventHandler = eventHandler;
             return this;
         }
 
+        /**
+         * @param eventHandler The settings for event handler in webpubsub service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandler(EventHandlerSettingsArgs eventHandler) {
             return eventHandler(Output.of(eventHandler));
         }
 
+        /**
+         * @param features List of the featureFlags.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, its globally default value will be used
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(@Nullable Output<List<WebPubSubFeatureArgs>> features) {
             $.features = features;
             return this;
         }
 
+        /**
+         * @param features List of the featureFlags.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, its globally default value will be used
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(List<WebPubSubFeatureArgs> features) {
             return features(Output.of(features));
         }
 
+        /**
+         * @param features List of the featureFlags.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, its globally default value will be used
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(WebPubSubFeatureArgs... features) {
             return features(List.of(features));
         }
 
+        /**
+         * @param identity The managed identity response
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The managed identity response
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkACLs Network ACLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkACLs(@Nullable Output<WebPubSubNetworkACLsArgs> networkACLs) {
             $.networkACLs = networkACLs;
             return this;
         }
 
+        /**
+         * @param networkACLs Network ACLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkACLs(WebPubSubNetworkACLsArgs networkACLs) {
             return networkACLs(Output.of(networkACLs));
         }
 
+        /**
+         * @param publicNetworkAccess Enable or disable public network access. Default to &#34;Enabled&#34;.
+         * When it&#39;s Enabled, network ACLs still apply.
+         * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Enable or disable public network access. Default to &#34;Enabled&#34;.
+         * When it&#39;s Enabled, network ACLs still apply.
+         * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku The billing information of the resource.(e.g. Free, Standard)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The billing information of the resource.(e.g. Free, Standard)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ResourceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tls TLS settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<WebPubSubTlsSettingsArgs> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls TLS settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(WebPubSubTlsSettingsArgs tls) {
             return tls(Output.of(tls));
         }

@@ -29,6 +29,12 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="context")
     private @Nullable String context;
 
+    /**
+     * @return Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+     * The path is relative to the asset path which must contain a single Blob URI value.
+     * &lt;seealso href=&#34;https://docs.docker.com/engine/context/working-with-contexts/&#34; /&gt;
+     * 
+     */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
@@ -41,6 +47,11 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dockerSpecificationType", required=true)
     private String dockerSpecificationType;
 
+    /**
+     * @return Enum to determine docker specification type. Must be either Build or Image.
+     * Expected value is &#39;Build&#39;.
+     * 
+     */
     public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
@@ -53,6 +64,11 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dockerfile", required=true)
     private String dockerfile;
 
+    /**
+     * @return Docker command line instructions to assemble an image.
+     * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
+     * 
+     */
     public String dockerfile() {
         return this.dockerfile;
     }
@@ -64,6 +80,10 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="platform")
     private @Nullable DockerImagePlatformResponse platform;
 
+    /**
+     * @return The platform information of the docker image.
+     * 
+     */
     public Optional<DockerImagePlatformResponse> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -95,21 +115,49 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DockerBuildResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+         * The path is relative to the asset path which must contain a single Blob URI value.
+         * &lt;seealso href=&#34;https://docs.docker.com/engine/context/working-with-contexts/&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable String context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param dockerSpecificationType Enum to determine docker specification type. Must be either Build or Image.
+         * Expected value is &#39;Build&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerSpecificationType(String dockerSpecificationType) {
             $.dockerSpecificationType = dockerSpecificationType;
             return this;
         }
 
+        /**
+         * @param dockerfile Docker command line instructions to assemble an image.
+         * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerfile(String dockerfile) {
             $.dockerfile = dockerfile;
             return this;
         }
 
+        /**
+         * @param platform The platform information of the docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable DockerImagePlatformResponse platform) {
             $.platform = platform;
             return this;

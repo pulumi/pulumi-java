@@ -22,6 +22,10 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The $expand=children query string parameter allows clients to request inclusion of children in the response payload.  $expand=path includes the path from the root group to the current group.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -33,6 +37,10 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
     @Import(name="filter")
     private @Nullable String filter;
 
+    /**
+     * @return A filter which allows the exclusion of subscriptions from results (i.e. &#39;$filter=children.childType ne Subscription&#39;)
+     * 
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -44,6 +52,10 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return Management Group ID.
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -55,6 +67,10 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
     @Import(name="recurse")
     private @Nullable Boolean recurse;
 
+    /**
+     * @return The $recurse=true query string parameter allows clients to request inclusion of entire hierarchy in the response payload. Note that  $expand=children must be passed up if $recurse is set to true.
+     * 
+     */
     public Optional<Boolean> recurse() {
         return Optional.ofNullable(this.recurse);
     }
@@ -86,21 +102,45 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
             $ = new GetManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The $expand=children query string parameter allows clients to request inclusion of children in the response payload.  $expand=path includes the path from the root group to the current group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param filter A filter which allows the exclusion of subscriptions from results (i.e. &#39;$filter=children.childType ne Subscription&#39;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param recurse The $recurse=true query string parameter allows clients to request inclusion of entire hierarchy in the response payload. Note that  $expand=children must be passed up if $recurse is set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurse(@Nullable Boolean recurse) {
             $.recurse = recurse;
             return this;

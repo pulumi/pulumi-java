@@ -19,6 +19,10 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database on which the sync group is hosted.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -30,6 +34,10 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -52,6 +64,10 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="syncGroupName", required=true)
     private String syncGroupName;
 
+    /**
+     * @return The name of the sync group on which the sync member is hosted.
+     * 
+     */
     public String syncGroupName() {
         return this.syncGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="syncMemberName", required=true)
     private String syncMemberName;
 
+    /**
+     * @return The name of the sync member.
+     * 
+     */
     public String syncMemberName() {
         return this.syncMemberName;
     }
@@ -95,26 +115,56 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSyncMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name of the database on which the sync group is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param syncGroupName The name of the sync group on which the sync member is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncGroupName(String syncGroupName) {
             $.syncGroupName = syncGroupName;
             return this;
         }
 
+        /**
+         * @param syncMemberName The name of the sync member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncMemberName(String syncMemberName) {
             $.syncMemberName = syncMemberName;
             return this;

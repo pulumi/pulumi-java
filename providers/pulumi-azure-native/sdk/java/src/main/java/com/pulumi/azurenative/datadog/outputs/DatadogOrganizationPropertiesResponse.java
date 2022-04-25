@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DatadogOrganizationPropertiesResponse {
     /**
-     * Id of the Datadog organization.
+     * @return Id of the Datadog organization.
      * 
      */
     private final String id;
     /**
-     * Name of the Datadog organization.
+     * @return Name of the Datadog organization.
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class DatadogOrganizationPropertiesResponse {
     }
 
     /**
-     * Id of the Datadog organization.
+     * @return Id of the Datadog organization.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the Datadog organization.
+     * @return Name of the Datadog organization.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

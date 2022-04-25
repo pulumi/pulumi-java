@@ -27,6 +27,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ignoreMissingVNetServiceEndpoint")
     private @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
 
+    /**
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreMissingVNetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
@@ -67,20 +75,44 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ignoreMissingVNetServiceEndpoint Create firewall rule before the virtual network has vnet service endpoint enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint) {
             $.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }
 
+        /**
+         * @param ignoreMissingVNetServiceEndpoint Create firewall rule before the virtual network has vnet service endpoint enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVNetServiceEndpoint(Boolean ignoreMissingVNetServiceEndpoint) {
             return ignoreMissingVNetServiceEndpoint(Output.of(ignoreMissingVNetServiceEndpoint));
         }

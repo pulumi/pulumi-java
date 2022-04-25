@@ -26,6 +26,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="ssh")
     private @Nullable Output<SshConfigurationArgs> ssh;
 
+    /**
+     * @return Specifies the ssh key configuration for a Linux OS.
+     * 
+     */
     public Optional<Output<SshConfigurationArgs>> ssh() {
         return Optional.ofNullable(this.ssh);
     }
@@ -54,11 +58,23 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
             $ = new LinuxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ssh Specifies the ssh key configuration for a Linux OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
             $.ssh = ssh;
             return this;
         }
 
+        /**
+         * @param ssh Specifies the ssh key configuration for a Linux OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(SshConfigurationArgs ssh) {
             return ssh(Output.of(ssh));
         }

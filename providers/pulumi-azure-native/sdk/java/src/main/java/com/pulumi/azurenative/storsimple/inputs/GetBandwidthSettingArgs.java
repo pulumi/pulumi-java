@@ -19,6 +19,10 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="bandwidthSettingName", required=true)
     private String bandwidthSettingName;
 
+    /**
+     * @return The name of bandwidth setting to be fetched.
+     * 
+     */
     public String bandwidthSettingName() {
         return this.bandwidthSettingName;
     }
@@ -30,6 +34,10 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -41,6 +49,10 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
             $ = new GetBandwidthSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthSettingName The name of bandwidth setting to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthSettingName(String bandwidthSettingName) {
             $.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

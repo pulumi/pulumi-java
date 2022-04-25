@@ -26,6 +26,10 @@ public final class UserRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="recommendationAction")
     private @Nullable Output<String> recommendationAction;
 
+    /**
+     * @return The recommendation action of the machine or rule
+     * 
+     */
     public Optional<Output<String>> recommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
@@ -37,6 +41,10 @@ public final class UserRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Represents a user that is recommended to be allowed for a certain rule
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -66,20 +74,44 @@ public final class UserRecommendationArgs extends com.pulumi.resources.ResourceA
             $ = new UserRecommendationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recommendationAction The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
             $.recommendationAction = recommendationAction;
             return this;
         }
 
+        /**
+         * @param recommendationAction The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationAction(String recommendationAction) {
             return recommendationAction(Output.of(recommendationAction));
         }
 
+        /**
+         * @param username Represents a user that is recommended to be allowed for a certain rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Represents a user that is recommended to be allowed for a certain rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

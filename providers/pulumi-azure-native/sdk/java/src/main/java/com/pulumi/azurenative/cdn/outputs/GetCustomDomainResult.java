@@ -16,57 +16,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCustomDomainResult {
     /**
-     * Certificate parameters for securing custom HTTPS
+     * @return Certificate parameters for securing custom HTTPS
      * 
      */
     private final @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters;
     /**
-     * Provisioning status of Custom Https of the custom domain.
+     * @return Provisioning status of Custom Https of the custom domain.
      * 
      */
     private final String customHttpsProvisioningState;
     /**
-     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
      */
     private final String customHttpsProvisioningSubstate;
     /**
-     * The host name of the custom domain. Must be a domain name.
+     * @return The host name of the custom domain. Must be a domain name.
      * 
      */
     private final String hostName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning status of the custom domain.
+     * @return Provisioning status of the custom domain.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource status of the custom domain.
+     * @return Resource status of the custom domain.
      * 
      */
     private final String resourceState;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+     * @return Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
      */
     private final @Nullable String validationData;
@@ -98,79 +98,79 @@ public final class GetCustomDomainResult {
     }
 
     /**
-     * Certificate parameters for securing custom HTTPS
+     * @return Certificate parameters for securing custom HTTPS
      * 
-    */
+     */
     public Optional<Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> customHttpsParameters() {
         return Optional.ofNullable(this.customHttpsParameters);
     }
     /**
-     * Provisioning status of Custom Https of the custom domain.
+     * @return Provisioning status of Custom Https of the custom domain.
      * 
-    */
+     */
     public String customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
-     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
-    */
+     */
     public String customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
-     * The host name of the custom domain. Must be a domain name.
+     * @return The host name of the custom domain. Must be a domain name.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning status of the custom domain.
+     * @return Provisioning status of the custom domain.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource status of the custom domain.
+     * @return Resource status of the custom domain.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+     * @return Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
-    */
+     */
     public Optional<String> validationData() {
         return Optional.ofNullable(this.validationData);
     }

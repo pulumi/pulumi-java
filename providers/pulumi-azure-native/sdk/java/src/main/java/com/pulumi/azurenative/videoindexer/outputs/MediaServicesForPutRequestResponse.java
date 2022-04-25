@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MediaServicesForPutRequestResponse {
     /**
-     * The media services resource id
+     * @return The media services resource id
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * The user assigned identity to be used to grant permissions
+     * @return The user assigned identity to be used to grant permissions
      * 
      */
     private final @Nullable String userAssignedIdentity;
@@ -31,16 +31,16 @@ public final class MediaServicesForPutRequestResponse {
     }
 
     /**
-     * The media services resource id
+     * @return The media services resource id
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * The user assigned identity to be used to grant permissions
+     * @return The user assigned identity to be used to grant permissions
      * 
-    */
+     */
     public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }

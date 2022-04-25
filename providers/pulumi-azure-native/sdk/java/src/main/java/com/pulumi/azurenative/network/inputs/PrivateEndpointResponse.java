@@ -32,6 +32,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="customDnsConfigs")
     private @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
 
+    /**
+     * @return An array of custom dns configurations.
+     * 
+     */
     public Optional<List<CustomDnsConfigPropertiesFormatResponse>> customDnsConfigs() {
         return Optional.ofNullable(this.customDnsConfigs);
     }
@@ -43,6 +47,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -54,6 +62,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extendedLocation")
     private @Nullable ExtendedLocationResponse extendedLocation;
 
+    /**
+     * @return The extended location of the load balancer.
+     * 
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -65,6 +77,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -76,6 +92,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -87,6 +107,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="manualPrivateLinkServiceConnections")
     private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
+    /**
+     * @return A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+     * 
+     */
     public Optional<List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
         return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
@@ -98,6 +122,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -109,6 +137,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="networkInterfaces", required=true)
     private List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return An array of references to the network interfaces created for this private endpoint.
+     * 
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
@@ -120,6 +152,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="privateLinkServiceConnections")
     private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
+    /**
+     * @return A grouping of information about the connection to the remote resource.
+     * 
+     */
     public Optional<List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections() {
         return Optional.ofNullable(this.privateLinkServiceConnections);
     }
@@ -131,6 +167,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the private endpoint resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -142,6 +182,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="subnet")
     private @Nullable SubnetResponse subnet;
 
+    /**
+     * @return The ID of the subnet from which the private IP will be allocated.
+     * 
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -153,6 +197,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -164,6 +212,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -204,82 +256,184 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
             $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDnsConfigs An array of custom dns configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs) {
             $.customDnsConfigs = customDnsConfigs;
             return this;
         }
 
+        /**
+         * @param customDnsConfigs An array of custom dns configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatResponse... customDnsConfigs) {
             return customDnsConfigs(List.of(customDnsConfigs));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of references to the network interfaces created for this private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of references to the network interfaces created for this private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param privateLinkServiceConnections A grouping of information about the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
             $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnections A grouping of information about the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionResponse... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the private endpoint resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param subnet The ID of the subnet from which the private IP will be allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

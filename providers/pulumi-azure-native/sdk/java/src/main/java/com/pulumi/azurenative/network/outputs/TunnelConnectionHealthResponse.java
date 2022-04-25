@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class TunnelConnectionHealthResponse {
     /**
-     * Virtual Network Gateway connection status.
+     * @return Virtual Network Gateway connection status.
      * 
      */
     private final String connectionStatus;
     /**
-     * The Egress Bytes Transferred in this connection.
+     * @return The Egress Bytes Transferred in this connection.
      * 
      */
     private final Double egressBytesTransferred;
     /**
-     * The Ingress Bytes Transferred in this connection.
+     * @return The Ingress Bytes Transferred in this connection.
      * 
      */
     private final Double ingressBytesTransferred;
     /**
-     * The time at which connection was established in Utc format.
+     * @return The time at which connection was established in Utc format.
      * 
      */
     private final String lastConnectionEstablishedUtcTime;
     /**
-     * Tunnel name.
+     * @return Tunnel name.
      * 
      */
     private final String tunnel;
@@ -51,37 +51,37 @@ public final class TunnelConnectionHealthResponse {
     }
 
     /**
-     * Virtual Network Gateway connection status.
+     * @return Virtual Network Gateway connection status.
      * 
-    */
+     */
     public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
-     * The Egress Bytes Transferred in this connection.
+     * @return The Egress Bytes Transferred in this connection.
      * 
-    */
+     */
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
-     * The Ingress Bytes Transferred in this connection.
+     * @return The Ingress Bytes Transferred in this connection.
      * 
-    */
+     */
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
-     * The time at which connection was established in Utc format.
+     * @return The time at which connection was established in Utc format.
      * 
-    */
+     */
     public String lastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
     }
     /**
-     * Tunnel name.
+     * @return Tunnel name.
      * 
-    */
+     */
     public String tunnel() {
         return this.tunnel;
     }

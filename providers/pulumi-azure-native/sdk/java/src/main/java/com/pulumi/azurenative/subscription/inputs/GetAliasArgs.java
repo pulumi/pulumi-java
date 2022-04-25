@@ -19,6 +19,10 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="aliasName", required=true)
     private String aliasName;
 
+    /**
+     * @return Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+     * 
+     */
     public String aliasName() {
         return this.aliasName;
     }
@@ -47,6 +51,12 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasName Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasName(String aliasName) {
             $.aliasName = aliasName;
             return this;

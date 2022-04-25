@@ -25,6 +25,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="assignment")
     private @Nullable AssignmentInfoResponse assignment;
 
+    /**
+     * @return Configuration details of the guest configuration assignment.
+     * 
+     */
     public Optional<AssignmentInfoResponse> assignment() {
         return Optional.ofNullable(this.assignment);
     }
@@ -36,6 +40,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="complianceStatus", required=true)
     private String complianceStatus;
 
+    /**
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
+     * 
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
@@ -47,6 +55,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End date and time of the guest configuration assignment compliance status check.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -58,6 +70,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ARM resource id of the report for the guest configuration assignment.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -69,6 +85,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="operationType", required=true)
     private String operationType;
 
+    /**
+     * @return Type of report, Consistency or Initial
+     * 
+     */
     public String operationType() {
         return this.operationType;
     }
@@ -80,6 +100,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="reportId", required=true)
     private String reportId;
 
+    /**
+     * @return GUID that identifies the guest configuration assignment report under a subscription, resource group.
+     * 
+     */
     public String reportId() {
         return this.reportId;
     }
@@ -91,6 +115,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="resources")
     private @Nullable List<AssignmentReportResourceResponse> resources;
 
+    /**
+     * @return The list of resources for which guest configuration assignment compliance is checked.
+     * 
+     */
     public Optional<List<AssignmentReportResourceResponse>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -102,6 +130,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start date and time of the guest configuration assignment compliance status check.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -113,6 +145,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
     @Import(name="vm")
     private @Nullable VMInfoResponse vm;
 
+    /**
+     * @return Information about the VM.
+     * 
+     */
     public Optional<VMInfoResponse> vm() {
         return Optional.ofNullable(this.vm);
     }
@@ -149,50 +185,110 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
             $ = new AssignmentReportResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignment Configuration details of the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignment(@Nullable AssignmentInfoResponse assignment) {
             $.assignment = assignment;
             return this;
         }
 
+        /**
+         * @param complianceStatus A value indicating compliance status of the machine for the assigned guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatus(String complianceStatus) {
             $.complianceStatus = complianceStatus;
             return this;
         }
 
+        /**
+         * @param endTime End date and time of the guest configuration assignment compliance status check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param id ARM resource id of the report for the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param operationType Type of report, Consistency or Initial
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(String operationType) {
             $.operationType = operationType;
             return this;
         }
 
+        /**
+         * @param reportId GUID that identifies the guest configuration assignment report under a subscription, resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportId(String reportId) {
             $.reportId = reportId;
             return this;
         }
 
+        /**
+         * @param resources The list of resources for which guest configuration assignment compliance is checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable List<AssignmentReportResourceResponse> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources The list of resources for which guest configuration assignment compliance is checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(AssignmentReportResourceResponse... resources) {
             return resources(List.of(resources));
         }
 
+        /**
+         * @param startTime Start date and time of the guest configuration assignment compliance status check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param vm Information about the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(@Nullable VMInfoResponse vm) {
             $.vm = vm;
             return this;

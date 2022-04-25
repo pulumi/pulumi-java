@@ -28,6 +28,10 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
     private @Nullable Output<String> height;
 
+    /**
+     * @return The desired output video height.
+     * 
+     */
     public Optional<Output<String>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -39,6 +43,10 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<Either<String,VideoScaleMode>> mode;
 
+    /**
+     * @return Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+     * 
+     */
     public Optional<Output<Either<String,VideoScaleMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -50,6 +58,10 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
     private @Nullable Output<String> width;
 
+    /**
+     * @return The desired output video width.
+     * 
+     */
     public Optional<Output<String>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -80,37 +92,85 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VideoScaleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The desired output video height.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<String> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height The desired output video height.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(String height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param mode Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,VideoScaleMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,VideoScaleMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(VideoScaleMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param width The desired output video width.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<String> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width The desired output video width.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(String width) {
             return width(Output.of(width));
         }

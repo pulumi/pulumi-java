@@ -22,6 +22,10 @@ public final class DataLakeAnalyticsPropertiesArgs extends com.pulumi.resources.
     @Import(name="dataLakeStoreAccountName")
     private @Nullable Output<String> dataLakeStoreAccountName;
 
+    /**
+     * @return DataLake Store Account Name
+     * 
+     */
     public Optional<Output<String>> dataLakeStoreAccountName() {
         return Optional.ofNullable(this.dataLakeStoreAccountName);
     }
@@ -50,11 +54,23 @@ public final class DataLakeAnalyticsPropertiesArgs extends com.pulumi.resources.
             $ = new DataLakeAnalyticsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataLakeStoreAccountName DataLake Store Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeStoreAccountName(@Nullable Output<String> dataLakeStoreAccountName) {
             $.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
 
+        /**
+         * @param dataLakeStoreAccountName DataLake Store Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeStoreAccountName(String dataLakeStoreAccountName) {
             return dataLakeStoreAccountName(Output.of(dataLakeStoreAccountName));
         }

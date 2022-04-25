@@ -24,6 +24,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
     private Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
+     * 
+     */
     public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
@@ -35,6 +39,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="messageId", required=true)
     private String messageId;
 
+    /**
+     * @return The message id on which the validation settings has to be applied.
+     * 
+     */
     public String messageId() {
         return this.messageId;
     }
@@ -46,6 +54,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="trailingSeparatorPolicy", required=true)
     private String trailingSeparatorPolicy;
 
+    /**
+     * @return The trailing separator policy.
+     * 
+     */
     public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
@@ -57,6 +69,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
     private Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
+     * 
+     */
     public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
@@ -68,6 +84,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="validateCharacterSet", required=true)
     private Boolean validateCharacterSet;
 
+    /**
+     * @return The value indicating whether to validate character Set.
+     * 
+     */
     public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
     }
@@ -79,6 +99,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="validateEDITypes", required=true)
     private Boolean validateEDITypes;
 
+    /**
+     * @return The value indicating whether to validate EDI types.
+     * 
+     */
     public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
@@ -90,6 +114,10 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="validateXSDTypes", required=true)
     private Boolean validateXSDTypes;
 
+    /**
+     * @return The value indicating whether to validate XSD types.
+     * 
+     */
     public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }
@@ -124,36 +152,78 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
             $ = new X12ValidationOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowLeadingAndTrailingSpacesAndZeroes The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param messageId The message id on which the validation settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
 
+        /**
+         * @param trimLeadingAndTrailingSpacesAndZeroes The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param validateCharacterSet The value indicating whether to validate character Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
             $.validateCharacterSet = validateCharacterSet;
             return this;
         }
 
+        /**
+         * @param validateEDITypes The value indicating whether to validate EDI types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateEDITypes(Boolean validateEDITypes) {
             $.validateEDITypes = validateEDITypes;
             return this;
         }
 
+        /**
+         * @param validateXSDTypes The value indicating whether to validate XSD types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             $.validateXSDTypes = validateXSDTypes;
             return this;

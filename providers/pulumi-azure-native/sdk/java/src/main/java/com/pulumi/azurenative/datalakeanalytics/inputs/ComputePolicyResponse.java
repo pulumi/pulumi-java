@@ -24,6 +24,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maxDegreeOfParallelismPerJob", required=true)
     private Integer maxDegreeOfParallelismPerJob;
 
+    /**
+     * @return The maximum degree of parallelism per job this user can use to submit jobs.
+     * 
+     */
     public Integer maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
@@ -46,6 +54,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="minPriorityPerJob", required=true)
     private Integer minPriorityPerJob;
 
+    /**
+     * @return The minimum priority per job this user can use to submit jobs.
+     * 
+     */
     public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
@@ -57,6 +69,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -68,6 +84,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="objectId", required=true)
     private String objectId;
 
+    /**
+     * @return The AAD object identifier for the entity to create a policy for.
+     * 
+     */
     public String objectId() {
         return this.objectId;
     }
@@ -79,6 +99,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return The type of AAD object the object identifier refers to.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -90,6 +114,10 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -124,36 +152,78 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new ComputePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param maxDegreeOfParallelismPerJob The maximum degree of parallelism per job this user can use to submit jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
             $.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
+        /**
+         * @param minPriorityPerJob The minimum priority per job this user can use to submit jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPriorityPerJob(Integer minPriorityPerJob) {
             $.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param objectId The AAD object identifier for the entity to create a policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectType The type of AAD object the object identifier refers to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

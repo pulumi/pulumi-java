@@ -14,67 +14,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExportExecutionResponse {
     /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * The details of any error.
+     * @return The details of any error.
      * 
      */
     private final @Nullable ErrorDetailsResponse error;
     /**
-     * The type of the export execution.
+     * @return The type of the export execution.
      * 
      */
     private final @Nullable String executionType;
     /**
-     * The name of the exported file.
+     * @return The name of the exported file.
      * 
      */
     private final @Nullable String fileName;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The time when the export execution finished.
+     * @return The time when the export execution finished.
      * 
      */
     private final @Nullable String processingEndTime;
     /**
-     * The time when export was picked up to be executed.
+     * @return The time when export was picked up to be executed.
      * 
      */
     private final @Nullable String processingStartTime;
     /**
-     * The export settings that were in effect for this execution.
+     * @return The export settings that were in effect for this execution.
      * 
      */
     private final @Nullable CommonExportPropertiesResponse runSettings;
     /**
-     * The last known status of the export execution.
+     * @return The last known status of the export execution.
      * 
      */
     private final @Nullable String status;
     /**
-     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
+     * @return The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
      * 
      */
     private final @Nullable String submittedBy;
     /**
-     * The time when export was queued to be executed.
+     * @return The time when export was queued to be executed.
      * 
      */
     private final @Nullable String submittedTime;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -110,93 +110,93 @@ public final class ExportExecutionResponse {
     }
 
     /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * The details of any error.
+     * @return The details of any error.
      * 
-    */
+     */
     public Optional<ErrorDetailsResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * The type of the export execution.
+     * @return The type of the export execution.
      * 
-    */
+     */
     public Optional<String> executionType() {
         return Optional.ofNullable(this.executionType);
     }
     /**
-     * The name of the exported file.
+     * @return The name of the exported file.
      * 
-    */
+     */
     public Optional<String> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The time when the export execution finished.
+     * @return The time when the export execution finished.
      * 
-    */
+     */
     public Optional<String> processingEndTime() {
         return Optional.ofNullable(this.processingEndTime);
     }
     /**
-     * The time when export was picked up to be executed.
+     * @return The time when export was picked up to be executed.
      * 
-    */
+     */
     public Optional<String> processingStartTime() {
         return Optional.ofNullable(this.processingStartTime);
     }
     /**
-     * The export settings that were in effect for this execution.
+     * @return The export settings that were in effect for this execution.
      * 
-    */
+     */
     public Optional<CommonExportPropertiesResponse> runSettings() {
         return Optional.ofNullable(this.runSettings);
     }
     /**
-     * The last known status of the export execution.
+     * @return The last known status of the export execution.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
+     * @return The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
      * 
-    */
+     */
     public Optional<String> submittedBy() {
         return Optional.ofNullable(this.submittedBy);
     }
     /**
-     * The time when export was queued to be executed.
+     * @return The time when export was queued to be executed.
      * 
-    */
+     */
     public Optional<String> submittedTime() {
         return Optional.ofNullable(this.submittedTime);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

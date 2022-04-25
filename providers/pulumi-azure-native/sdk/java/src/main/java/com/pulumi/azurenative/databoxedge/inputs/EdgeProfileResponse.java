@@ -25,6 +25,10 @@ public final class EdgeProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscription")
     private @Nullable EdgeProfileSubscriptionResponse subscription;
 
+    /**
+     * @return Edge Profile Subscription
+     * 
+     */
     public Optional<EdgeProfileSubscriptionResponse> subscription() {
         return Optional.ofNullable(this.subscription);
     }
@@ -53,6 +57,12 @@ public final class EdgeProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EdgeProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscription Edge Profile Subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(@Nullable EdgeProfileSubscriptionResponse subscription) {
             $.subscription = subscription;
             return this;

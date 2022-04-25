@@ -25,6 +25,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="allowHubToRemoteVnetTransit")
     private @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
 
+    /**
+     * @return Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> allowHubToRemoteVnetTransit() {
         return Optional.ofNullable(this.allowHubToRemoteVnetTransit);
     }
@@ -36,6 +40,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="allowRemoteVnetToUseHubVnetGateways")
     private @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
+    /**
+     * @return Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
+     * 
+     */
     public Optional<Output<Boolean>> allowRemoteVnetToUseHubVnetGateways() {
         return Optional.ofNullable(this.allowRemoteVnetToUseHubVnetGateways);
     }
@@ -47,6 +55,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return The name of the HubVirtualNetworkConnection.
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -58,6 +70,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="enableInternetSecurity")
     private @Nullable Output<Boolean> enableInternetSecurity;
 
+    /**
+     * @return Enable internet security.
+     * 
+     */
     public Optional<Output<Boolean>> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
@@ -69,6 +85,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -80,6 +100,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +115,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="remoteVirtualNetwork")
     private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
+    /**
+     * @return Reference to the remote virtual network.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> remoteVirtualNetwork() {
         return Optional.ofNullable(this.remoteVirtualNetwork);
     }
@@ -102,6 +130,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the HubVirtualNetworkConnection.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,6 +145,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="routingConfiguration")
     private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
+    /**
+     * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * 
+     */
     public Optional<Output<RoutingConfigurationArgs>> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
@@ -124,6 +160,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="virtualHubName", required=true)
     private Output<String> virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
@@ -161,92 +201,212 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
             $ = new HubVirtualNetworkConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowHubToRemoteVnetTransit Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHubToRemoteVnetTransit(@Nullable Output<Boolean> allowHubToRemoteVnetTransit) {
             $.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
             return this;
         }
 
+        /**
+         * @param allowHubToRemoteVnetTransit Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHubToRemoteVnetTransit(Boolean allowHubToRemoteVnetTransit) {
             return allowHubToRemoteVnetTransit(Output.of(allowHubToRemoteVnetTransit));
         }
 
+        /**
+         * @param allowRemoteVnetToUseHubVnetGateways Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways) {
             $.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
             return this;
         }
 
+        /**
+         * @param allowRemoteVnetToUseHubVnetGateways Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowRemoteVnetToUseHubVnetGateways(Boolean allowRemoteVnetToUseHubVnetGateways) {
             return allowRemoteVnetToUseHubVnetGateways(Output.of(allowRemoteVnetToUseHubVnetGateways));
         }
 
+        /**
+         * @param connectionName The name of the HubVirtualNetworkConnection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName The name of the HubVirtualNetworkConnection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param enableInternetSecurity Enable internet security.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
             $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
+        /**
+         * @param enableInternetSecurity Enable internet security.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInternetSecurity(Boolean enableInternetSecurity) {
             return enableInternetSecurity(Output.of(enableInternetSecurity));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param remoteVirtualNetwork Reference to the remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
             $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
+        /**
+         * @param remoteVirtualNetwork Reference to the remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVirtualNetwork(SubResourceArgs remoteVirtualNetwork) {
             return remoteVirtualNetwork(Output.of(remoteVirtualNetwork));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the HubVirtualNetworkConnection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the HubVirtualNetworkConnection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routingConfiguration The Routing Configuration indicating the associated and propagated route tables on this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             $.routingConfiguration = routingConfiguration;
             return this;
         }
 
+        /**
+         * @param routingConfiguration The Routing Configuration indicating the associated and propagated route tables on this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingConfiguration(RoutingConfigurationArgs routingConfiguration) {
             return routingConfiguration(Output.of(routingConfiguration));
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(Output<String> virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             return virtualHubName(Output.of(virtualHubName));
         }

@@ -26,6 +26,10 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     @Import(name="operator")
     private @Nullable String operator;
 
+    /**
+     * @return The operator to use for evaluation the condition
+     * 
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -37,6 +41,10 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     @Import(name="propertyName")
     private @Nullable String propertyName;
 
+    /**
+     * @return The property to evaluate
+     * 
+     */
     public Optional<String> propertyName() {
         return Optional.ofNullable(this.propertyName);
     }
@@ -48,6 +56,10 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     @Import(name="propertyValues")
     private @Nullable List<String> propertyValues;
 
+    /**
+     * @return The values to use for evaluating the condition
+     * 
+     */
     public Optional<List<String>> propertyValues() {
         return Optional.ofNullable(this.propertyValues);
     }
@@ -78,21 +90,45 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
             $ = new AutomationRulePropertyValuesConditionResponseConditionProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator The operator to use for evaluation the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param propertyName The property to evaluate
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(@Nullable String propertyName) {
             $.propertyName = propertyName;
             return this;
         }
 
+        /**
+         * @param propertyValues The values to use for evaluating the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyValues(@Nullable List<String> propertyValues) {
             $.propertyValues = propertyValues;
             return this;
         }
 
+        /**
+         * @param propertyValues The values to use for evaluating the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyValues(String... propertyValues) {
             return propertyValues(List.of(propertyValues));
         }

@@ -35,6 +35,10 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="onError")
     private @Nullable Output<Either<String,OnErrorType>> onError;
 
+    /**
+     * @return A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+     * 
+     */
     public Optional<Output<Either<String,OnErrorType>>> onError() {
         return Optional.ofNullable(this.onError);
     }
@@ -46,6 +50,10 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="preset", required=true)
     private Output<Object> preset;
 
+    /**
+     * @return Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+     * 
+     */
     public Output<Object> preset() {
         return this.preset;
     }
@@ -57,6 +65,10 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="relativePriority")
     private @Nullable Output<Either<String,Priority>> relativePriority;
 
+    /**
+     * @return Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+     * 
+     */
     public Optional<Output<Either<String,Priority>>> relativePriority() {
         return Optional.ofNullable(this.relativePriority);
     }
@@ -87,45 +99,105 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
             $ = new TransformOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onError A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onError(@Nullable Output<Either<String,OnErrorType>> onError) {
             $.onError = onError;
             return this;
         }
 
+        /**
+         * @param onError A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onError(Either<String,OnErrorType> onError) {
             return onError(Output.of(onError));
         }
 
+        /**
+         * @param onError A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onError(String onError) {
             return onError(Either.ofLeft(onError));
         }
 
+        /**
+         * @param onError A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onError(OnErrorType onError) {
             return onError(Either.ofRight(onError));
         }
 
+        /**
+         * @param preset Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(Output<Object> preset) {
             $.preset = preset;
             return this;
         }
 
+        /**
+         * @param preset Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(Object preset) {
             return preset(Output.of(preset));
         }
 
+        /**
+         * @param relativePriority Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePriority(@Nullable Output<Either<String,Priority>> relativePriority) {
             $.relativePriority = relativePriority;
             return this;
         }
 
+        /**
+         * @param relativePriority Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePriority(Either<String,Priority> relativePriority) {
             return relativePriority(Output.of(relativePriority));
         }
 
+        /**
+         * @param relativePriority Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePriority(String relativePriority) {
             return relativePriority(Either.ofLeft(relativePriority));
         }
 
+        /**
+         * @param relativePriority Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePriority(Priority relativePriority) {
             return relativePriority(Either.ofRight(relativePriority));
         }

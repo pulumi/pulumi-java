@@ -24,6 +24,10 @@ public final class ExportDeliveryInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="destination", required=true)
     private Output<ExportDeliveryDestinationArgs> destination;
 
+    /**
+     * @return Has destination for the export being delivered.
+     * 
+     */
     public Output<ExportDeliveryDestinationArgs> destination() {
         return this.destination;
     }
@@ -52,11 +56,23 @@ public final class ExportDeliveryInfoArgs extends com.pulumi.resources.ResourceA
             $ = new ExportDeliveryInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Has destination for the export being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<ExportDeliveryDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Has destination for the export being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(ExportDeliveryDestinationArgs destination) {
             return destination(Output.of(destination));
         }

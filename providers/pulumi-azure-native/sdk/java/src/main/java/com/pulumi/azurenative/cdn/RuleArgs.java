@@ -49,6 +49,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
     private Output<List<Object>> actions;
 
+    /**
+     * @return A list of actions that are executed when all the conditions of a rule are satisfied.
+     * 
+     */
     public Output<List<Object>> actions() {
         return this.actions;
     }
@@ -60,6 +64,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<Object>> conditions;
 
+    /**
+     * @return A list of conditions that must be matched for the actions to be executed
+     * 
+     */
     public Optional<Output<List<Object>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -71,6 +79,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchProcessingBehavior")
     private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
+    /**
+     * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * 
+     */
     public Optional<Output<Either<String,MatchProcessingBehavior>>> matchProcessingBehavior() {
         return Optional.ofNullable(this.matchProcessingBehavior);
     }
@@ -82,6 +94,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
     private Output<Integer> order;
 
+    /**
+     * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * 
+     */
     public Output<Integer> order() {
         return this.order;
     }
@@ -93,6 +109,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -104,6 +124,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +139,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return Name of the delivery rule which is unique within the endpoint.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -126,6 +154,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName", required=true)
     private Output<String> ruleSetName;
 
+    /**
+     * @return Name of the rule set under the profile.
+     * 
+     */
     public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
@@ -161,90 +193,210 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<Object>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Object> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<Object>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<Object> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(Object... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             $.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
             return matchProcessingBehavior(Output.of(matchProcessingBehavior));
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(String matchProcessingBehavior) {
             return matchProcessingBehavior(Either.ofLeft(matchProcessingBehavior));
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(MatchProcessingBehavior matchProcessingBehavior) {
             return matchProcessingBehavior(Either.ofRight(matchProcessingBehavior));
         }
 
+        /**
+         * @param order The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Output<Integer> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             return order(Output.of(order));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName Name of the delivery rule which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName Name of the delivery rule which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param ruleSetName Name of the rule set under the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(Output<String> ruleSetName) {
             $.ruleSetName = ruleSetName;
             return this;
         }
 
+        /**
+         * @param ruleSetName Name of the rule set under the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(String ruleSetName) {
             return ruleSetName(Output.of(ruleSetName));
         }

@@ -28,6 +28,10 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="diskEncryptionKey")
     private @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
+    /**
+     * @return Specifies the location of the disk encryption key, which is a Key Vault Secret.
+     * 
+     */
     public Optional<Output<KeyVaultSecretReferenceArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
@@ -39,6 +43,10 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether disk encryption should be enabled on the virtual machine.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -50,6 +58,10 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="keyEncryptionKey")
     private @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
+    /**
+     * @return Specifies the location of the key encryption key in Key Vault.
+     * 
+     */
     public Optional<Output<KeyVaultKeyReferenceArgs>> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -80,29 +92,65 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
             $ = new DiskEncryptionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionKey Specifies the location of the disk encryption key, which is a Key Vault Secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(@Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKey Specifies the location of the disk encryption key, which is a Key Vault Secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(KeyVaultSecretReferenceArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
+        /**
+         * @param enabled Specifies whether disk encryption should be enabled on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether disk encryption should be enabled on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param keyEncryptionKey Specifies the location of the key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
+        /**
+         * @param keyEncryptionKey Specifies the location of the key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(KeyVaultKeyReferenceArgs keyEncryptionKey) {
             return keyEncryptionKey(Output.of(keyEncryptionKey));
         }

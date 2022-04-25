@@ -26,6 +26,10 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
     @Import(name="domain", required=true)
     private Object domain;
 
+    /**
+     * @return Domain for windows authentication.
+     * 
+     */
     public Object domain() {
         return this.domain;
     }
@@ -37,6 +41,10 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
     @Import(name="password", required=true)
     private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password for windows authentication.
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
@@ -48,6 +56,10 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
     @Import(name="userName", required=true)
     private Object userName;
 
+    /**
+     * @return UseName for windows authentication.
+     * 
+     */
     public Object userName() {
         return this.userName;
     }
@@ -78,24 +90,54 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
             $ = new SSISAccessCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain Domain for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Object domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param userName UseName for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             $.userName = userName;
             return this;

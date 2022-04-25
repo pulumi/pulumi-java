@@ -68,6 +68,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -79,6 +83,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -90,6 +98,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="expression", required=true)
     private ExpressionResponse expression;
 
+    /**
+     * @return An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
+     * 
+     */
     public ExpressionResponse expression() {
         return this.expression;
     }
@@ -101,6 +113,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="ifFalseActivities")
     private @Nullable List<Object> ifFalseActivities;
 
+    /**
+     * @return List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+     * 
+     */
     public Optional<List<Object>> ifFalseActivities() {
         return Optional.ofNullable(this.ifFalseActivities);
     }
@@ -112,6 +128,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="ifTrueActivities")
     private @Nullable List<Object> ifTrueActivities;
 
+    /**
+     * @return List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+     * 
+     */
     public Optional<List<Object>> ifTrueActivities() {
         return Optional.ofNullable(this.ifTrueActivities);
     }
@@ -123,6 +143,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -135,6 +159,11 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;IfCondition&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -146,6 +175,10 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -181,58 +214,131 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
             $ = new IfConditionActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expression An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(ExpressionResponse expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param ifFalseActivities List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifFalseActivities(@Nullable List<Object> ifFalseActivities) {
             $.ifFalseActivities = ifFalseActivities;
             return this;
         }
 
+        /**
+         * @param ifFalseActivities List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifFalseActivities(Object... ifFalseActivities) {
             return ifFalseActivities(List.of(ifFalseActivities));
         }
 
+        /**
+         * @param ifTrueActivities List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifTrueActivities(@Nullable List<Object> ifTrueActivities) {
             $.ifTrueActivities = ifTrueActivities;
             return this;
         }
 
+        /**
+         * @param ifTrueActivities List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifTrueActivities(Object... ifTrueActivities) {
             return ifTrueActivities(List.of(ifTrueActivities));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;IfCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -28,6 +28,10 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="applicationDeltaHealthPolicies")
     private @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
 
+    /**
+     * @return Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
+     * 
+     */
     public Optional<Map<String,ApplicationDeltaHealthPolicyResponse>> applicationDeltaHealthPolicies() {
         return Optional.ofNullable(this.applicationDeltaHealthPolicies);
     }
@@ -41,6 +45,12 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="maxPercentDeltaUnhealthyApplications", required=true)
     private Integer maxPercentDeltaUnhealthyApplications;
 
+    /**
+     * @return The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+     * The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+     * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+     * 
+     */
     public Integer maxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
     }
@@ -54,6 +64,12 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="maxPercentDeltaUnhealthyNodes", required=true)
     private Integer maxPercentDeltaUnhealthyNodes;
 
+    /**
+     * @return The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+     * The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+     * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+     * 
+     */
     public Integer maxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
     }
@@ -67,6 +83,12 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
     private Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
+    /**
+     * @return The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+     * The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+     * The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+     * 
+     */
     public Integer maxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
@@ -98,21 +120,51 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
             $ = new ClusterUpgradeDeltaHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationDeltaHealthPolicies Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationDeltaHealthPolicies(@Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies) {
             $.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
             return this;
         }
 
+        /**
+         * @param maxPercentDeltaUnhealthyApplications The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+         * The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+         * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
             $.maxPercentDeltaUnhealthyApplications = maxPercentDeltaUnhealthyApplications;
             return this;
         }
 
+        /**
+         * @param maxPercentDeltaUnhealthyNodes The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+         * The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+         * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
             $.maxPercentDeltaUnhealthyNodes = maxPercentDeltaUnhealthyNodes;
             return this;
         }
 
+        /**
+         * @param maxPercentUpgradeDomainDeltaUnhealthyNodes The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+         * The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+         * The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             $.maxPercentUpgradeDomainDeltaUnhealthyNodes = maxPercentUpgradeDomainDeltaUnhealthyNodes;
             return this;

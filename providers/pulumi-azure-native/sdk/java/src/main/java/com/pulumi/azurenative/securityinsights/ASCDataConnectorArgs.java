@@ -24,6 +24,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataConnectorId")
     private @Nullable Output<String> dataConnectorId;
 
+    /**
+     * @return Connector ID
+     * 
+     */
     public Optional<Output<String>> dataConnectorId() {
         return Optional.ofNullable(this.dataConnectorId);
     }
@@ -35,6 +39,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataTypes")
     private @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
 
+    /**
+     * @return The available data types for the connector.
+     * 
+     */
     public Optional<Output<AlertsDataTypeOfDataConnectorArgs>> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
@@ -47,6 +55,11 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the data connector
+     * Expected value is &#39;AzureSecurityCenter&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -58,6 +71,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +86,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return The subscription id to connect to, and get the data from.
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -80,6 +101,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -113,56 +138,130 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
             $ = new ASCDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
             $.dataConnectorId = dataConnectorId;
             return this;
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(String dataConnectorId) {
             return dataConnectorId(Output.of(dataConnectorId));
         }
 
+        /**
+         * @param dataTypes The available data types for the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(@Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes) {
             $.dataTypes = dataTypes;
             return this;
         }
 
+        /**
+         * @param dataTypes The available data types for the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(AlertsDataTypeOfDataConnectorArgs dataTypes) {
             return dataTypes(Output.of(dataTypes));
         }
 
+        /**
+         * @param kind The kind of the data connector
+         * Expected value is &#39;AzureSecurityCenter&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the data connector
+         * Expected value is &#39;AzureSecurityCenter&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param subscriptionId The subscription id to connect to, and get the data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription id to connect to, and get the data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

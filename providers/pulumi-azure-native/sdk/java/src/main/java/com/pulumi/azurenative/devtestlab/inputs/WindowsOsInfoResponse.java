@@ -25,6 +25,10 @@ public final class WindowsOsInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="windowsOsState")
     private @Nullable String windowsOsState;
 
+    /**
+     * @return The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * 
+     */
     public Optional<String> windowsOsState() {
         return Optional.ofNullable(this.windowsOsState);
     }
@@ -53,6 +57,12 @@ public final class WindowsOsInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new WindowsOsInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param windowsOsState The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsState(@Nullable String windowsOsState) {
             $.windowsOsState = windowsOsState;
             return this;

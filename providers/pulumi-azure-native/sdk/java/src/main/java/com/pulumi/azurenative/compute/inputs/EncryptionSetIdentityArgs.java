@@ -28,6 +28,10 @@ public final class EncryptionSetIdentityArgs extends com.pulumi.resources.Resour
     @Import(name="type")
     private @Nullable Output<Either<String,DiskEncryptionSetIdentityType>> type;
 
+    /**
+     * @return The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+     * 
+     */
     public Optional<Output<Either<String,DiskEncryptionSetIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class EncryptionSetIdentityArgs extends com.pulumi.resources.Resour
             $ = new EncryptionSetIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,DiskEncryptionSetIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,DiskEncryptionSetIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DiskEncryptionSetIdentityType type) {
             return type(Either.ofRight(type));
         }

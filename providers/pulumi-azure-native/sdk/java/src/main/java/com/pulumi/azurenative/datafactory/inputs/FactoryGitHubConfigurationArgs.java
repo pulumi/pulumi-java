@@ -28,6 +28,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -39,6 +43,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return GitHub bring your own app client id.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -50,6 +58,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clientSecret")
     private @Nullable Output<GitHubClientSecretArgs> clientSecret;
 
+    /**
+     * @return GitHub bring your own app client secret information.
+     * 
+     */
     public Optional<Output<GitHubClientSecretArgs>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -61,6 +73,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="collaborationBranch", required=true)
     private Output<String> collaborationBranch;
 
+    /**
+     * @return Collaboration branch.
+     * 
+     */
     public Output<String> collaborationBranch() {
         return this.collaborationBranch;
     }
@@ -72,6 +88,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="hostName")
     private @Nullable Output<String> hostName;
 
+    /**
+     * @return GitHub Enterprise host name. For example: https://github.mydomain.com
+     * 
+     */
     public Optional<Output<String>> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -83,6 +103,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="lastCommitId")
     private @Nullable Output<String> lastCommitId;
 
+    /**
+     * @return Last commit id.
+     * 
+     */
     public Optional<Output<String>> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
@@ -94,6 +118,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="repositoryName", required=true)
     private Output<String> repositoryName;
 
+    /**
+     * @return Repository name.
+     * 
+     */
     public Output<String> repositoryName() {
         return this.repositoryName;
     }
@@ -105,6 +133,10 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="rootFolder", required=true)
     private Output<String> rootFolder;
 
+    /**
+     * @return Root folder.
+     * 
+     */
     public Output<String> rootFolder() {
         return this.rootFolder;
     }
@@ -117,6 +149,11 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of repo configuration.
+     * Expected value is &#39;FactoryGitHubConfiguration&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -153,83 +190,193 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
             $ = new FactoryGitHubConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param clientId GitHub bring your own app client id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId GitHub bring your own app client id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret GitHub bring your own app client secret information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<GitHubClientSecretArgs> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret GitHub bring your own app client secret information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(GitHubClientSecretArgs clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param collaborationBranch Collaboration branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collaborationBranch(Output<String> collaborationBranch) {
             $.collaborationBranch = collaborationBranch;
             return this;
         }
 
+        /**
+         * @param collaborationBranch Collaboration branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collaborationBranch(String collaborationBranch) {
             return collaborationBranch(Output.of(collaborationBranch));
         }
 
+        /**
+         * @param hostName GitHub Enterprise host name. For example: https://github.mydomain.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName GitHub Enterprise host name. For example: https://github.mydomain.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param lastCommitId Last commit id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
             $.lastCommitId = lastCommitId;
             return this;
         }
 
+        /**
+         * @param lastCommitId Last commit id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCommitId(String lastCommitId) {
             return lastCommitId(Output.of(lastCommitId));
         }
 
+        /**
+         * @param repositoryName Repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName Repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
+        /**
+         * @param rootFolder Root folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolder(Output<String> rootFolder) {
             $.rootFolder = rootFolder;
             return this;
         }
 
+        /**
+         * @param rootFolder Root folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolder(String rootFolder) {
             return rootFolder(Output.of(rootFolder));
         }
 
+        /**
+         * @param type Type of repo configuration.
+         * Expected value is &#39;FactoryGitHubConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of repo configuration.
+         * Expected value is &#39;FactoryGitHubConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -25,6 +25,10 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
     @Import(name="currentVersionedKeyIdentifier", required=true)
     private String currentVersionedKeyIdentifier;
 
+    /**
+     * @return The object identifier of the current versioned Key Vault Key in use.
+     * 
+     */
     public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
@@ -36,6 +40,10 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
     @Import(name="keyUri")
     private @Nullable String keyUri;
 
+    /**
+     * @return The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+     * 
+     */
     public Optional<String> keyUri() {
         return Optional.ofNullable(this.keyUri);
     }
@@ -47,6 +55,10 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
     @Import(name="lastKeyRotationTimestamp", required=true)
     private String lastKeyRotationTimestamp;
 
+    /**
+     * @return Timestamp of last rotation of the Key Vault Key.
+     * 
+     */
     public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
@@ -77,16 +89,34 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
             $ = new EncryptionScopeKeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentVersionedKeyIdentifier The object identifier of the current versioned Key Vault Key in use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
             $.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyUri The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUri(@Nullable String keyUri) {
             $.keyUri = keyUri;
             return this;
         }
 
+        /**
+         * @param lastKeyRotationTimestamp Timestamp of last rotation of the Key Vault Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             $.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
             return this;

@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOpenIdConnectProviderResult {
     /**
-     * Client ID of developer console which is the client application.
+     * @return Client ID of developer console which is the client application.
      * 
      */
     private final String clientId;
     /**
-     * Client Secret of developer console which is the client application.
+     * @return Client Secret of developer console which is the client application.
      * 
      */
     private final @Nullable String clientSecret;
     /**
-     * User-friendly description of OpenID Connect Provider.
+     * @return User-friendly description of OpenID Connect Provider.
      * 
      */
     private final @Nullable String description;
     /**
-     * User-friendly OpenID Connect Provider name.
+     * @return User-friendly OpenID Connect Provider name.
      * 
      */
     private final String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Metadata endpoint URI.
+     * @return Metadata endpoint URI.
      * 
      */
     private final String metadataEndpoint;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
@@ -73,58 +73,58 @@ public final class GetOpenIdConnectProviderResult {
     }
 
     /**
-     * Client ID of developer console which is the client application.
+     * @return Client ID of developer console which is the client application.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Client Secret of developer console which is the client application.
+     * @return Client Secret of developer console which is the client application.
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * User-friendly description of OpenID Connect Provider.
+     * @return User-friendly description of OpenID Connect Provider.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * User-friendly OpenID Connect Provider name.
+     * @return User-friendly OpenID Connect Provider name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Metadata endpoint URI.
+     * @return Metadata endpoint URI.
      * 
-    */
+     */
     public String metadataEndpoint() {
         return this.metadataEndpoint;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

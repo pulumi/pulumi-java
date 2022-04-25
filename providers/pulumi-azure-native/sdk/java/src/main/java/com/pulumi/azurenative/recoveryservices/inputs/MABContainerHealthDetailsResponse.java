@@ -27,6 +27,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
     @Import(name="code")
     private @Nullable Integer code;
 
+    /**
+     * @return Health Code
+     * 
+     */
     public Optional<Integer> code() {
         return Optional.ofNullable(this.code);
     }
@@ -38,6 +42,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Health Message
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -49,6 +57,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
     @Import(name="recommendations")
     private @Nullable List<String> recommendations;
 
+    /**
+     * @return Health Recommended Actions
+     * 
+     */
     public Optional<List<String>> recommendations() {
         return Optional.ofNullable(this.recommendations);
     }
@@ -60,6 +72,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return Health Title
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -91,25 +107,55 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
             $ = new MABContainerHealthDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Health Code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Integer code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Health Message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(@Nullable List<String> recommendations) {
             $.recommendations = recommendations;
             return this;
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
         }
 
+        /**
+         * @param title Health Title
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;

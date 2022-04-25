@@ -26,6 +26,10 @@ public final class CloudServiceRoleProfilePropertiesResponse extends com.pulumi.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class CloudServiceRoleProfilePropertiesResponse extends com.pulumi.
     @Import(name="sku")
     private @Nullable CloudServiceRoleSkuResponse sku;
 
+    /**
+     * @return Describes the cloud service role sku.
+     * 
+     */
     public Optional<CloudServiceRoleSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -66,11 +74,23 @@ public final class CloudServiceRoleProfilePropertiesResponse extends com.pulumi.
             $ = new CloudServiceRoleProfilePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sku Describes the cloud service role sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable CloudServiceRoleSkuResponse sku) {
             $.sku = sku;
             return this;

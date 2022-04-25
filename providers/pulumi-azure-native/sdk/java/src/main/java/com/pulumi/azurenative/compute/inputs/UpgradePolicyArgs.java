@@ -28,6 +28,10 @@ public final class UpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automaticOSUpgradePolicy")
     private @Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
 
+    /**
+     * @return Configuration parameters used for performing automatic OS Upgrade.
+     * 
+     */
     public Optional<Output<AutomaticOSUpgradePolicyArgs>> automaticOSUpgradePolicy() {
         return Optional.ofNullable(this.automaticOSUpgradePolicy);
     }
@@ -39,6 +43,10 @@ public final class UpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<UpgradeMode> mode;
 
+    /**
+     * @return Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+     * 
+     */
     public Optional<Output<UpgradeMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -50,6 +58,10 @@ public final class UpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rollingUpgradePolicy")
     private @Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 
+    /**
+     * @return The configuration parameters used while performing a rolling upgrade.
+     * 
+     */
     public Optional<Output<RollingUpgradePolicyArgs>> rollingUpgradePolicy() {
         return Optional.ofNullable(this.rollingUpgradePolicy);
     }
@@ -80,29 +92,65 @@ public final class UpgradePolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UpgradePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticOSUpgradePolicy Configuration parameters used for performing automatic OS Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticOSUpgradePolicy(@Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy) {
             $.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
 
+        /**
+         * @param automaticOSUpgradePolicy Configuration parameters used for performing automatic OS Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticOSUpgradePolicy(AutomaticOSUpgradePolicyArgs automaticOSUpgradePolicy) {
             return automaticOSUpgradePolicy(Output.of(automaticOSUpgradePolicy));
         }
 
+        /**
+         * @param mode Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<UpgradeMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(UpgradeMode mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param rollingUpgradePolicy The configuration parameters used while performing a rolling upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpgradePolicy(@Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
             $.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
 
+        /**
+         * @param rollingUpgradePolicy The configuration parameters used while performing a rolling upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpgradePolicy(RollingUpgradePolicyArgs rollingUpgradePolicy) {
             return rollingUpgradePolicy(Output.of(rollingUpgradePolicy));
         }

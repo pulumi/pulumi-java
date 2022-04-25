@@ -23,6 +23,10 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
     @Import(name="planName", required=true)
     private String planName;
 
+    /**
+     * @return Name of the purchase plan.
+     * 
+     */
     public String planName() {
         return this.planName;
     }
@@ -34,6 +38,10 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
     @Import(name="planProduct", required=true)
     private String planProduct;
 
+    /**
+     * @return Product of the purchase plan.
+     * 
+     */
     public String planProduct() {
         return this.planProduct;
     }
@@ -45,6 +53,10 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
     @Import(name="planPublisher", required=true)
     private String planPublisher;
 
+    /**
+     * @return Publisher of the purchase plan.
+     * 
+     */
     public String planPublisher() {
         return this.planPublisher;
     }
@@ -75,16 +87,34 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
             $ = new PlatformImagePurchasePlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planName Name of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planName(String planName) {
             $.planName = planName;
             return this;
         }
 
+        /**
+         * @param planProduct Product of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planProduct(String planProduct) {
             $.planProduct = planProduct;
             return this;
         }
 
+        /**
+         * @param planPublisher Publisher of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planPublisher(String planPublisher) {
             $.planPublisher = planPublisher;
             return this;

@@ -23,6 +23,10 @@ public final class ClientAccessRightResponse extends com.pulumi.resources.Invoke
     @Import(name="accessPermission", required=true)
     private String accessPermission;
 
+    /**
+     * @return Type of access to be allowed for the client.
+     * 
+     */
     public String accessPermission() {
         return this.accessPermission;
     }
@@ -34,6 +38,10 @@ public final class ClientAccessRightResponse extends com.pulumi.resources.Invoke
     @Import(name="client", required=true)
     private String client;
 
+    /**
+     * @return IP of the client.
+     * 
+     */
     public String client() {
         return this.client;
     }
@@ -63,11 +71,23 @@ public final class ClientAccessRightResponse extends com.pulumi.resources.Invoke
             $ = new ClientAccessRightResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPermission Type of access to be allowed for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPermission(String accessPermission) {
             $.accessPermission = accessPermission;
             return this;
         }
 
+        /**
+         * @param client IP of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(String client) {
             $.client = client;
             return this;

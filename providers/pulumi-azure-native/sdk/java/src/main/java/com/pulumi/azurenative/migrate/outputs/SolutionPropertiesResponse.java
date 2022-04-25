@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SolutionPropertiesResponse {
     /**
-     * Gets or sets the cleanup state of the solution.
+     * @return Gets or sets the cleanup state of the solution.
      * 
      */
     private final @Nullable String cleanupState;
     /**
-     * Gets or sets the details of the solution.
+     * @return Gets or sets the details of the solution.
      * 
      */
     private final @Nullable SolutionDetailsResponse details;
     /**
-     * Gets or sets the goal of the solution.
+     * @return Gets or sets the goal of the solution.
      * 
      */
     private final @Nullable String goal;
     /**
-     * Gets or sets the purpose of the solution.
+     * @return Gets or sets the purpose of the solution.
      * 
      */
     private final @Nullable String purpose;
     /**
-     * Gets or sets the current status of the solution.
+     * @return Gets or sets the current status of the solution.
      * 
      */
     private final @Nullable String status;
     /**
-     * Gets or sets the summary of the solution.
+     * @return Gets or sets the summary of the solution.
      * 
      */
     private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
     /**
-     * Gets or sets the tool being used in the solution.
+     * @return Gets or sets the tool being used in the solution.
      * 
      */
     private final @Nullable String tool;
@@ -70,51 +70,51 @@ public final class SolutionPropertiesResponse {
     }
 
     /**
-     * Gets or sets the cleanup state of the solution.
+     * @return Gets or sets the cleanup state of the solution.
      * 
-    */
+     */
     public Optional<String> cleanupState() {
         return Optional.ofNullable(this.cleanupState);
     }
     /**
-     * Gets or sets the details of the solution.
+     * @return Gets or sets the details of the solution.
      * 
-    */
+     */
     public Optional<SolutionDetailsResponse> details() {
         return Optional.ofNullable(this.details);
     }
     /**
-     * Gets or sets the goal of the solution.
+     * @return Gets or sets the goal of the solution.
      * 
-    */
+     */
     public Optional<String> goal() {
         return Optional.ofNullable(this.goal);
     }
     /**
-     * Gets or sets the purpose of the solution.
+     * @return Gets or sets the purpose of the solution.
      * 
-    */
+     */
     public Optional<String> purpose() {
         return Optional.ofNullable(this.purpose);
     }
     /**
-     * Gets or sets the current status of the solution.
+     * @return Gets or sets the current status of the solution.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Gets or sets the summary of the solution.
+     * @return Gets or sets the summary of the solution.
      * 
-    */
+     */
     public Optional<Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse>> summary() {
         return Optional.ofNullable(this.summary);
     }
     /**
-     * Gets or sets the tool being used in the solution.
+     * @return Gets or sets the tool being used in the solution.
      * 
-    */
+     */
     public Optional<String> tool() {
         return Optional.ofNullable(this.tool);
     }

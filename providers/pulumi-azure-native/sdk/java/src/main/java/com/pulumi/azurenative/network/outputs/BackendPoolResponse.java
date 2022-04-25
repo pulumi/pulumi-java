@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackendPoolResponse {
     /**
-     * The set of backends for this pool
+     * @return The set of backends for this pool
      * 
      */
     private final @Nullable List<BackendResponse> backends;
     /**
-     * L7 health probe settings for a backend pool
+     * @return L7 health probe settings for a backend pool
      * 
      */
     private final @Nullable SubResourceResponse healthProbeSettings;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Load balancing settings for a backend pool
+     * @return Load balancing settings for a backend pool
      * 
      */
     private final @Nullable SubResourceResponse loadBalancingSettings;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Resource status.
+     * @return Resource status.
      * 
      */
     private final String resourceState;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class BackendPoolResponse {
     }
 
     /**
-     * The set of backends for this pool
+     * @return The set of backends for this pool
      * 
-    */
+     */
     public List<BackendResponse> backends() {
         return this.backends == null ? List.of() : this.backends;
     }
     /**
-     * L7 health probe settings for a backend pool
+     * @return L7 health probe settings for a backend pool
      * 
-    */
+     */
     public Optional<SubResourceResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Load balancing settings for a backend pool
+     * @return Load balancing settings for a backend pool
      * 
-    */
+     */
     public Optional<SubResourceResponse> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class GetDigitalTwinsEndpointResult {
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * Extension resource name.
+     * @return Extension resource name.
      * 
      */
     private final String name;
     /**
-     * DigitalTwinsInstance endpoint resource properties.
+     * @return DigitalTwinsInstance endpoint resource properties.
      * 
      */
     private final Object properties;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -47,30 +47,30 @@ public final class GetDigitalTwinsEndpointResult {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Extension resource name.
+     * @return Extension resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * DigitalTwinsInstance endpoint resource properties.
+     * @return DigitalTwinsInstance endpoint resource properties.
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

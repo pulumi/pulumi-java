@@ -26,6 +26,10 @@ public final class ServicePrincipalProfileArgs extends com.pulumi.resources.Reso
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client ID used for the cluster (immutable).
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -37,6 +41,10 @@ public final class ServicePrincipalProfileArgs extends com.pulumi.resources.Reso
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return The client secret used for the cluster (immutable).
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -66,20 +74,44 @@ public final class ServicePrincipalProfileArgs extends com.pulumi.resources.Reso
             $ = new ServicePrincipalProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client ID used for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client ID used for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The client secret used for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret used for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }

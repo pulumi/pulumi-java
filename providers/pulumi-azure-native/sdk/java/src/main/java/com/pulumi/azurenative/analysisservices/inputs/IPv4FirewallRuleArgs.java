@@ -26,6 +26,10 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="firewallRuleName")
     private @Nullable Output<String> firewallRuleName;
 
+    /**
+     * @return The rule name.
+     * 
+     */
     public Optional<Output<String>> firewallRuleName() {
         return Optional.ofNullable(this.firewallRuleName);
     }
@@ -37,6 +41,10 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rangeEnd")
     private @Nullable Output<String> rangeEnd;
 
+    /**
+     * @return The end range of IPv4.
+     * 
+     */
     public Optional<Output<String>> rangeEnd() {
         return Optional.ofNullable(this.rangeEnd);
     }
@@ -48,6 +56,10 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rangeStart")
     private @Nullable Output<String> rangeStart;
 
+    /**
+     * @return The start range of IPv4.
+     * 
+     */
     public Optional<Output<String>> rangeStart() {
         return Optional.ofNullable(this.rangeStart);
     }
@@ -78,29 +90,65 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
             $ = new IPv4FirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallRuleName The rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             $.firewallRuleName = firewallRuleName;
             return this;
         }
 
+        /**
+         * @param firewallRuleName The rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(String firewallRuleName) {
             return firewallRuleName(Output.of(firewallRuleName));
         }
 
+        /**
+         * @param rangeEnd The end range of IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(@Nullable Output<String> rangeEnd) {
             $.rangeEnd = rangeEnd;
             return this;
         }
 
+        /**
+         * @param rangeEnd The end range of IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(String rangeEnd) {
             return rangeEnd(Output.of(rangeEnd));
         }
 
+        /**
+         * @param rangeStart The start range of IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(@Nullable Output<String> rangeStart) {
             $.rangeStart = rangeStart;
             return this;
         }
 
+        /**
+         * @param rangeStart The start range of IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(String rangeStart) {
             return rangeStart(Output.of(rangeStart));
         }

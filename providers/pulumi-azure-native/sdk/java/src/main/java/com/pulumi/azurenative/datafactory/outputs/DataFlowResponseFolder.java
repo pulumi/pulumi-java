@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataFlowResponseFolder {
     /**
-     * The name of the folder that this data flow is in.
+     * @return The name of the folder that this data flow is in.
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class DataFlowResponseFolder {
     }
 
     /**
-     * The name of the folder that this data flow is in.
+     * @return The name of the folder that this data flow is in.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

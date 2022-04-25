@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StreamingLocatorContentKeyResponse {
     /**
-     * ID of Content Key
+     * @return ID of Content Key
      * 
      */
     private final String id;
     /**
-     * Label of Content Key as specified in the Streaming Policy
+     * @return Label of Content Key as specified in the Streaming Policy
      * 
      */
     private final @Nullable String labelReferenceInStreamingPolicy;
     /**
-     * ContentKeyPolicy used by Content Key
+     * @return ContentKeyPolicy used by Content Key
      * 
      */
     private final String policyName;
     /**
-     * Tracks which use this Content Key
+     * @return Tracks which use this Content Key
      * 
      */
     private final List<TrackSelectionResponse> tracks;
     /**
-     * Encryption type of Content Key
+     * @return Encryption type of Content Key
      * 
      */
     private final String type;
     /**
-     * Value of Content Key
+     * @return Value of Content Key
      * 
      */
     private final @Nullable String value;
@@ -61,44 +61,44 @@ public final class StreamingLocatorContentKeyResponse {
     }
 
     /**
-     * ID of Content Key
+     * @return ID of Content Key
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Label of Content Key as specified in the Streaming Policy
+     * @return Label of Content Key as specified in the Streaming Policy
      * 
-    */
+     */
     public Optional<String> labelReferenceInStreamingPolicy() {
         return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
     /**
-     * ContentKeyPolicy used by Content Key
+     * @return ContentKeyPolicy used by Content Key
      * 
-    */
+     */
     public String policyName() {
         return this.policyName;
     }
     /**
-     * Tracks which use this Content Key
+     * @return Tracks which use this Content Key
      * 
-    */
+     */
     public List<TrackSelectionResponse> tracks() {
         return this.tracks;
     }
     /**
-     * Encryption type of Content Key
+     * @return Encryption type of Content Key
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of Content Key
+     * @return Value of Content Key
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

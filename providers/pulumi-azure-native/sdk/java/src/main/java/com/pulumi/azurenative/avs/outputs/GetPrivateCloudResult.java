@@ -19,102 +19,102 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPrivateCloudResult {
     /**
-     * An ExpressRoute Circuit
+     * @return An ExpressRoute Circuit
      * 
      */
     private final @Nullable CircuitResponse circuit;
     /**
-     * The endpoints
+     * @return The endpoints
      * 
      */
     private final EndpointsResponse endpoints;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * vCenter Single Sign On Identity Sources
+     * @return vCenter Single Sign On Identity Sources
      * 
      */
     private final @Nullable List<IdentitySourceResponse> identitySources;
     /**
-     * Connectivity to internet is enabled or disabled
+     * @return Connectivity to internet is enabled or disabled
      * 
      */
     private final @Nullable String internet;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * The default cluster used for management
+     * @return The default cluster used for management
      * 
      */
     private final ManagementClusterResponse managementCluster;
     /**
-     * Network used to access vCenter Server and NSX-T Manager
+     * @return Network used to access vCenter Server and NSX-T Manager
      * 
      */
     private final String managementNetwork;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+     * @return The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
      * 
      */
     private final String networkBlock;
     /**
-     * Thumbprint of the NSX-T Manager SSL certificate
+     * @return Thumbprint of the NSX-T Manager SSL certificate
      * 
      */
     private final String nsxtCertificateThumbprint;
     /**
-     * Optionally, set the NSX-T Manager password when the private cloud is created
+     * @return Optionally, set the NSX-T Manager password when the private cloud is created
      * 
      */
     private final @Nullable String nsxtPassword;
     /**
-     * Used for virtual machine cold migration, cloning, and snapshot migration
+     * @return Used for virtual machine cold migration, cloning, and snapshot migration
      * 
      */
     private final String provisioningNetwork;
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
      */
     private final String provisioningState;
     /**
-     * The private cloud SKU
+     * @return The private cloud SKU
      * 
      */
     private final SkuResponse sku;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Thumbprint of the vCenter Server SSL certificate
+     * @return Thumbprint of the vCenter Server SSL certificate
      * 
      */
     private final String vcenterCertificateThumbprint;
     /**
-     * Optionally, set the vCenter admin password when the private cloud is created
+     * @return Optionally, set the vCenter admin password when the private cloud is created
      * 
      */
     private final @Nullable String vcenterPassword;
     /**
-     * Used for live migration of virtual machines
+     * @return Used for live migration of virtual machines
      * 
      */
     private final String vmotionNetwork;
@@ -164,142 +164,142 @@ public final class GetPrivateCloudResult {
     }
 
     /**
-     * An ExpressRoute Circuit
+     * @return An ExpressRoute Circuit
      * 
-    */
+     */
     public Optional<CircuitResponse> circuit() {
         return Optional.ofNullable(this.circuit);
     }
     /**
-     * The endpoints
+     * @return The endpoints
      * 
-    */
+     */
     public EndpointsResponse endpoints() {
         return this.endpoints;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * vCenter Single Sign On Identity Sources
+     * @return vCenter Single Sign On Identity Sources
      * 
-    */
+     */
     public List<IdentitySourceResponse> identitySources() {
         return this.identitySources == null ? List.of() : this.identitySources;
     }
     /**
-     * Connectivity to internet is enabled or disabled
+     * @return Connectivity to internet is enabled or disabled
      * 
-    */
+     */
     public Optional<String> internet() {
         return Optional.ofNullable(this.internet);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The default cluster used for management
+     * @return The default cluster used for management
      * 
-    */
+     */
     public ManagementClusterResponse managementCluster() {
         return this.managementCluster;
     }
     /**
-     * Network used to access vCenter Server and NSX-T Manager
+     * @return Network used to access vCenter Server and NSX-T Manager
      * 
-    */
+     */
     public String managementNetwork() {
         return this.managementNetwork;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
+     * @return The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
      * 
-    */
+     */
     public String networkBlock() {
         return this.networkBlock;
     }
     /**
-     * Thumbprint of the NSX-T Manager SSL certificate
+     * @return Thumbprint of the NSX-T Manager SSL certificate
      * 
-    */
+     */
     public String nsxtCertificateThumbprint() {
         return this.nsxtCertificateThumbprint;
     }
     /**
-     * Optionally, set the NSX-T Manager password when the private cloud is created
+     * @return Optionally, set the NSX-T Manager password when the private cloud is created
      * 
-    */
+     */
     public Optional<String> nsxtPassword() {
         return Optional.ofNullable(this.nsxtPassword);
     }
     /**
-     * Used for virtual machine cold migration, cloning, and snapshot migration
+     * @return Used for virtual machine cold migration, cloning, and snapshot migration
      * 
-    */
+     */
     public String provisioningNetwork() {
         return this.provisioningNetwork;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The private cloud SKU
+     * @return The private cloud SKU
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Thumbprint of the vCenter Server SSL certificate
+     * @return Thumbprint of the vCenter Server SSL certificate
      * 
-    */
+     */
     public String vcenterCertificateThumbprint() {
         return this.vcenterCertificateThumbprint;
     }
     /**
-     * Optionally, set the vCenter admin password when the private cloud is created
+     * @return Optionally, set the vCenter admin password when the private cloud is created
      * 
-    */
+     */
     public Optional<String> vcenterPassword() {
         return Optional.ofNullable(this.vcenterPassword);
     }
     /**
-     * Used for live migration of virtual machines
+     * @return Used for live migration of virtual machines
      * 
-    */
+     */
     public String vmotionNetwork() {
         return this.vmotionNetwork;
     }

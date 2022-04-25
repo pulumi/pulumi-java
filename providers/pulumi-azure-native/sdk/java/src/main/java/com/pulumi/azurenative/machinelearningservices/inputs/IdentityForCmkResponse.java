@@ -23,6 +23,10 @@ public final class IdentityForCmkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userAssignedIdentity", required=true)
     private String userAssignedIdentity;
 
+    /**
+     * @return The ArmId of the user assigned identity that will be used to access the customer managed key vault
+     * 
+     */
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
@@ -51,6 +55,12 @@ public final class IdentityForCmkResponse extends com.pulumi.resources.InvokeArg
             $ = new IdentityForCmkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userAssignedIdentity The ArmId of the user assigned identity that will be used to access the customer managed key vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

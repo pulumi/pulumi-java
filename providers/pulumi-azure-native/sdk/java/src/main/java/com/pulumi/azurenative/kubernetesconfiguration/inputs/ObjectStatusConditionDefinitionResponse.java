@@ -25,6 +25,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
     @Import(name="lastTransitionTime")
     private @Nullable String lastTransitionTime;
 
+    /**
+     * @return Last time this status condition has changed
+     * 
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
@@ -36,6 +40,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return A more verbose description of the object status condition
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -47,6 +55,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
     @Import(name="reason")
     private @Nullable String reason;
 
+    /**
+     * @return Reason for the specified status condition type status
+     * 
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -58,6 +70,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the Kubernetes object condition type
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -69,6 +85,10 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Object status condition type for this object
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -101,26 +121,56 @@ public final class ObjectStatusConditionDefinitionResponse extends com.pulumi.re
             $ = new ObjectStatusConditionDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastTransitionTime Last time this status condition has changed
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param message A more verbose description of the object status condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param reason Reason for the specified status condition type status
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable String reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param status Status of the Kubernetes object condition type
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type Object status condition type for this object
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

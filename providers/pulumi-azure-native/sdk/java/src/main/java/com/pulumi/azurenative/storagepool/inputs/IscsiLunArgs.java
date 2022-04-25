@@ -24,6 +24,10 @@ public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedDiskAzureResourceId", required=true)
     private Output<String> managedDiskAzureResourceId;
 
+    /**
+     * @return Azure Resource ID of the Managed Disk.
+     * 
+     */
     public Output<String> managedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
     }
@@ -35,6 +39,10 @@ public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return User defined name for iSCSI LUN; example: &#34;lun0&#34;
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,20 +72,44 @@ public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IscsiLunArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedDiskAzureResourceId Azure Resource ID of the Managed Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDiskAzureResourceId(Output<String> managedDiskAzureResourceId) {
             $.managedDiskAzureResourceId = managedDiskAzureResourceId;
             return this;
         }
 
+        /**
+         * @param managedDiskAzureResourceId Azure Resource ID of the Managed Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
             return managedDiskAzureResourceId(Output.of(managedDiskAzureResourceId));
         }
 
+        /**
+         * @param name User defined name for iSCSI LUN; example: &#34;lun0&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User defined name for iSCSI LUN; example: &#34;lun0&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

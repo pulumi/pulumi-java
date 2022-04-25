@@ -26,6 +26,10 @@ public final class PrivateDnsZoneConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class PrivateDnsZoneConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="privateDnsZoneId")
     private @Nullable Output<String> privateDnsZoneId;
 
+    /**
+     * @return The resource id of the private dns zone.
+     * 
+     */
     public Optional<Output<String>> privateDnsZoneId() {
         return Optional.ofNullable(this.privateDnsZoneId);
     }
@@ -66,20 +74,44 @@ public final class PrivateDnsZoneConfigArgs extends com.pulumi.resources.Resourc
             $ = new PrivateDnsZoneConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateDnsZoneId The resource id of the private dns zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneId(@Nullable Output<String> privateDnsZoneId) {
             $.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
 
+        /**
+         * @param privateDnsZoneId The resource id of the private dns zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneId(String privateDnsZoneId) {
             return privateDnsZoneId(Output.of(privateDnsZoneId));
         }

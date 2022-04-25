@@ -25,6 +25,10 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends com.
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Display name of the role definition
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends com.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id of the role definition
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -47,6 +55,10 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends com.
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the role definition
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends com.
             $ = new PolicyAssignmentPropertiesResponseRoleDefinition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the role definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param id Id of the role definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param type Type of the role definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

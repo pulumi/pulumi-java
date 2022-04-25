@@ -16,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBackendResult {
     /**
-     * Backend Credentials Contract Properties
+     * @return Backend Credentials Contract Properties
      * 
      */
     private final @Nullable BackendCredentialsContractResponse credentials;
     /**
-     * Backend Description.
+     * @return Backend Description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Backend Properties contract
+     * @return Backend Properties contract
      * 
      */
     private final BackendPropertiesResponse properties;
     /**
-     * Backend communication protocol.
+     * @return Backend communication protocol.
      * 
      */
     private final String protocol;
     /**
-     * Backend Proxy Contract Properties
+     * @return Backend Proxy Contract Properties
      * 
      */
     private final @Nullable BackendProxyContractResponse proxy;
     /**
-     * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+     * @return Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * Backend Title.
+     * @return Backend Title.
      * 
      */
     private final @Nullable String title;
     /**
-     * Backend TLS Properties
+     * @return Backend TLS Properties
      * 
      */
     private final @Nullable BackendTlsPropertiesResponse tls;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
     /**
-     * Runtime Url of the Backend.
+     * @return Runtime Url of the Backend.
      * 
      */
     private final String url;
@@ -105,86 +105,86 @@ public final class GetBackendResult {
     }
 
     /**
-     * Backend Credentials Contract Properties
+     * @return Backend Credentials Contract Properties
      * 
-    */
+     */
     public Optional<BackendCredentialsContractResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * Backend Description.
+     * @return Backend Description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Backend Properties contract
+     * @return Backend Properties contract
      * 
-    */
+     */
     public BackendPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Backend communication protocol.
+     * @return Backend communication protocol.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * Backend Proxy Contract Properties
+     * @return Backend Proxy Contract Properties
      * 
-    */
+     */
     public Optional<BackendProxyContractResponse> proxy() {
         return Optional.ofNullable(this.proxy);
     }
     /**
-     * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+     * @return Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Backend Title.
+     * @return Backend Title.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Backend TLS Properties
+     * @return Backend TLS Properties
      * 
-    */
+     */
     public Optional<BackendTlsPropertiesResponse> tls() {
         return Optional.ofNullable(this.tls);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Runtime Url of the Backend.
+     * @return Runtime Url of the Backend.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

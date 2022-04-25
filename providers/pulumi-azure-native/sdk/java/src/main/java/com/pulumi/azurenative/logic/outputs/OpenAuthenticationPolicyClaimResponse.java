@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OpenAuthenticationPolicyClaimResponse {
     /**
-     * The name of the claim.
+     * @return The name of the claim.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of the claim.
+     * @return The value of the claim.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class OpenAuthenticationPolicyClaimResponse {
     }
 
     /**
-     * The name of the claim.
+     * @return The name of the claim.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of the claim.
+     * @return The value of the claim.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

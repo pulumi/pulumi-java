@@ -26,6 +26,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return Location of the backend (IP address or FQDN)
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -37,6 +41,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backendHostHeader")
     private @Nullable String backendHostHeader;
 
+    /**
+     * @return The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+     * 
+     */
     public Optional<String> backendHostHeader() {
         return Optional.ofNullable(this.backendHostHeader);
     }
@@ -48,6 +56,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -59,6 +71,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpPort")
     private @Nullable Integer httpPort;
 
+    /**
+     * @return The HTTP TCP port number. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
@@ -70,6 +86,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpsPort")
     private @Nullable Integer httpsPort;
 
+    /**
+     * @return The HTTPS TCP port number. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
@@ -81,6 +101,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -92,6 +116,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateEndpointStatus", required=true)
     private String privateEndpointStatus;
 
+    /**
+     * @return The Approval status for the connection to the Private Link
+     * 
+     */
     public String privateEndpointStatus() {
         return this.privateEndpointStatus;
     }
@@ -103,6 +131,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateLinkAlias")
     private @Nullable String privateLinkAlias;
 
+    /**
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * 
+     */
     public Optional<String> privateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
@@ -114,6 +146,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateLinkApprovalMessage")
     private @Nullable String privateLinkApprovalMessage;
 
+    /**
+     * @return A custom message to be included in the approval request to connect to the Private Link
+     * 
+     */
     public Optional<String> privateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
@@ -125,6 +161,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateLinkLocation")
     private @Nullable String privateLinkLocation;
 
+    /**
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+     * 
+     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
@@ -136,6 +176,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateLinkResourceId")
     private @Nullable String privateLinkResourceId;
 
+    /**
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * 
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -147,6 +191,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight")
     private @Nullable Integer weight;
 
+    /**
+     * @return Weight of this endpoint for load balancing purposes.
+     * 
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -186,61 +234,133 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackendResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Location of the backend (IP address or FQDN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param backendHostHeader The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHostHeader(@Nullable String backendHostHeader) {
             $.backendHostHeader = backendHostHeader;
             return this;
         }
 
+        /**
+         * @param enabledState Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param httpPort The HTTP TCP port number. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPort(@Nullable Integer httpPort) {
             $.httpPort = httpPort;
             return this;
         }
 
+        /**
+         * @param httpsPort The HTTPS TCP port number. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsPort(@Nullable Integer httpsPort) {
             $.httpsPort = httpsPort;
             return this;
         }
 
+        /**
+         * @param priority Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param privateEndpointStatus The Approval status for the connection to the Private Link
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointStatus(String privateEndpointStatus) {
             $.privateEndpointStatus = privateEndpointStatus;
             return this;
         }
 
+        /**
+         * @param privateLinkAlias The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             $.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
+        /**
+         * @param privateLinkApprovalMessage A custom message to be included in the approval request to connect to the Private Link
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
+        /**
+         * @param privateLinkLocation The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             $.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param weight Weight of this endpoint for load balancing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Integer weight) {
             $.weight = weight;
             return this;

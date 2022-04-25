@@ -30,6 +30,10 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="dcAccessSecurityCode", required=true)
     private DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
+    /**
+     * @return Dc Access Security Code for Customer Managed Shipping
+     * 
+     */
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
@@ -41,6 +45,10 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="error", required=true)
     private CloudErrorResponse error;
 
+    /**
+     * @return Error while fetching the secrets.
+     * 
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
@@ -53,6 +61,11 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="jobSecretsType", required=true)
     private String jobSecretsType;
 
+    /**
+     * @return Used to indicate what type of job secrets object.
+     * Expected value is &#39;DataBox&#39;.
+     * 
+     */
     public String jobSecretsType() {
         return this.jobSecretsType;
     }
@@ -64,6 +77,10 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="podSecrets")
     private @Nullable List<DataBoxSecretResponse> podSecrets;
 
+    /**
+     * @return Contains the list of secret objects for a job.
+     * 
+     */
     public Optional<List<DataBoxSecretResponse>> podSecrets() {
         return Optional.ofNullable(this.podSecrets);
     }
@@ -95,26 +112,57 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
             $ = new DataboxJobSecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dcAccessSecurityCode Dc Access Security Code for Customer Managed Shipping
+         * 
+         * @return builder
+         * 
+         */
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             $.dcAccessSecurityCode = dcAccessSecurityCode;
             return this;
         }
 
+        /**
+         * @param error Error while fetching the secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(CloudErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param jobSecretsType Used to indicate what type of job secrets object.
+         * Expected value is &#39;DataBox&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobSecretsType(String jobSecretsType) {
             $.jobSecretsType = jobSecretsType;
             return this;
         }
 
+        /**
+         * @param podSecrets Contains the list of secret objects for a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
             $.podSecrets = podSecrets;
             return this;
         }
 
+        /**
+         * @param podSecrets Contains the list of secret objects for a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSecrets(DataBoxSecretResponse... podSecrets) {
             return podSecrets(List.of(podSecrets));
         }

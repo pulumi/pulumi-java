@@ -24,6 +24,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="capacityInBytes", required=true)
     private Double capacityInBytes;
 
+    /**
+     * @return The disk capacity in bytes.
+     * 
+     */
     public Double capacityInBytes() {
         return this.capacityInBytes;
     }
@@ -35,6 +39,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskEncryptionSetId", required=true)
     private String diskEncryptionSetId;
 
+    /**
+     * @return The disk encryption set ARM Id.
+     * 
+     */
     public String diskEncryptionSetId() {
         return this.diskEncryptionSetId;
     }
@@ -46,6 +54,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskId", required=true)
     private String diskId;
 
+    /**
+     * @return The disk Id.
+     * 
+     */
     public String diskId() {
         return this.diskId;
     }
@@ -57,6 +69,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -68,6 +84,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return The disk type.
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -79,6 +99,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="isOSDisk", required=true)
     private String isOSDisk;
 
+    /**
+     * @return A value indicating whether the disk is the OS disk.
+     * 
+     */
     public String isOSDisk() {
         return this.isOSDisk;
     }
@@ -90,6 +114,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="logStorageAccountId", required=true)
     private String logStorageAccountId;
 
+    /**
+     * @return The log storage account ARM Id.
+     * 
+     */
     public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
@@ -101,6 +129,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="seedManagedDiskId", required=true)
     private String seedManagedDiskId;
 
+    /**
+     * @return The ARM Id of the seed managed disk.
+     * 
+     */
     public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
@@ -112,6 +144,10 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="targetManagedDiskId", required=true)
     private String targetManagedDiskId;
 
+    /**
+     * @return The ARM Id of the target managed disk.
+     * 
+     */
     public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
@@ -148,46 +184,100 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
             $ = new InMageRcmProtectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityInBytes The disk capacity in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityInBytes(Double capacityInBytes) {
             $.capacityInBytes = capacityInBytes;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetId The disk encryption set ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param diskId The disk Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(String diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskName The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskType The disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param isOSDisk A value indicating whether the disk is the OS disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOSDisk(String isOSDisk) {
             $.isOSDisk = isOSDisk;
             return this;
         }
 
+        /**
+         * @param logStorageAccountId The log storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(String logStorageAccountId) {
             $.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
+        /**
+         * @param seedManagedDiskId The ARM Id of the seed managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedManagedDiskId(String seedManagedDiskId) {
             $.seedManagedDiskId = seedManagedDiskId;
             return this;
         }
 
+        /**
+         * @param targetManagedDiskId The ARM Id of the target managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetManagedDiskId(String targetManagedDiskId) {
             $.targetManagedDiskId = targetManagedDiskId;
             return this;

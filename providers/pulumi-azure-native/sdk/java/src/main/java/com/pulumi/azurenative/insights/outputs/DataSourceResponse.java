@@ -14,7 +14,7 @@ import java.util.Objects;
 public final class DataSourceResponse {
     private final DataSourceConfigurationResponse configuration;
     /**
-     * Datasource kind
+     * @return Datasource kind
      * 
      */
     private final String kind;
@@ -34,9 +34,9 @@ public final class DataSourceResponse {
         return this.configuration;
     }
     /**
-     * Datasource kind
+     * @return Datasource kind
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }

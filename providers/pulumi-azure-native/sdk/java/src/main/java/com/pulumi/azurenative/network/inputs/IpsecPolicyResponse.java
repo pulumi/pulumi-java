@@ -24,6 +24,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dhGroup", required=true)
     private String dhGroup;
 
+    /**
+     * @return The DH Group used in IKE Phase 1 for initial SA.
+     * 
+     */
     public String dhGroup() {
         return this.dhGroup;
     }
@@ -35,6 +39,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ikeEncryption", required=true)
     private String ikeEncryption;
 
+    /**
+     * @return The IKE encryption algorithm (IKE phase 2).
+     * 
+     */
     public String ikeEncryption() {
         return this.ikeEncryption;
     }
@@ -46,6 +54,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ikeIntegrity", required=true)
     private String ikeIntegrity;
 
+    /**
+     * @return The IKE integrity algorithm (IKE phase 2).
+     * 
+     */
     public String ikeIntegrity() {
         return this.ikeIntegrity;
     }
@@ -57,6 +69,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipsecEncryption", required=true)
     private String ipsecEncryption;
 
+    /**
+     * @return The IPSec encryption algorithm (IKE phase 1).
+     * 
+     */
     public String ipsecEncryption() {
         return this.ipsecEncryption;
     }
@@ -68,6 +84,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipsecIntegrity", required=true)
     private String ipsecIntegrity;
 
+    /**
+     * @return The IPSec integrity algorithm (IKE phase 1).
+     * 
+     */
     public String ipsecIntegrity() {
         return this.ipsecIntegrity;
     }
@@ -79,6 +99,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pfsGroup", required=true)
     private String pfsGroup;
 
+    /**
+     * @return The Pfs Group used in IKE Phase 2 for new child SA.
+     * 
+     */
     public String pfsGroup() {
         return this.pfsGroup;
     }
@@ -90,6 +114,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="saDataSizeKilobytes", required=true)
     private Integer saDataSizeKilobytes;
 
+    /**
+     * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+     * 
+     */
     public Integer saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
@@ -101,6 +129,10 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="saLifeTimeSeconds", required=true)
     private Integer saLifeTimeSeconds;
 
+    /**
+     * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+     * 
+     */
     public Integer saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
@@ -136,41 +168,89 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IpsecPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhGroup The DH Group used in IKE Phase 1 for initial SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhGroup(String dhGroup) {
             $.dhGroup = dhGroup;
             return this;
         }
 
+        /**
+         * @param ikeEncryption The IKE encryption algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeEncryption(String ikeEncryption) {
             $.ikeEncryption = ikeEncryption;
             return this;
         }
 
+        /**
+         * @param ikeIntegrity The IKE integrity algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeIntegrity(String ikeIntegrity) {
             $.ikeIntegrity = ikeIntegrity;
             return this;
         }
 
+        /**
+         * @param ipsecEncryption The IPSec encryption algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecEncryption(String ipsecEncryption) {
             $.ipsecEncryption = ipsecEncryption;
             return this;
         }
 
+        /**
+         * @param ipsecIntegrity The IPSec integrity algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecIntegrity(String ipsecIntegrity) {
             $.ipsecIntegrity = ipsecIntegrity;
             return this;
         }
 
+        /**
+         * @param pfsGroup The Pfs Group used in IKE Phase 2 for new child SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfsGroup(String pfsGroup) {
             $.pfsGroup = pfsGroup;
             return this;
         }
 
+        /**
+         * @param saDataSizeKilobytes The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
             $.saDataSizeKilobytes = saDataSizeKilobytes;
             return this;
         }
 
+        /**
+         * @param saLifeTimeSeconds The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
             $.saLifeTimeSeconds = saLifeTimeSeconds;
             return this;

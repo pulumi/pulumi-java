@@ -22,6 +22,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -33,6 +37,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentialName")
     private @Nullable Output<String> credentialName;
 
+    /**
+     * @return The parameters supplied to the create or update credential operation.
+     * 
+     */
     public Optional<Output<String>> credentialName() {
         return Optional.ofNullable(this.credentialName);
     }
@@ -44,6 +52,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gets or sets the description of the credential.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +67,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the credential.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -66,6 +82,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Gets or sets the password of the credential.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -77,6 +97,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return Gets or sets the user name of the credential.
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -122,65 +150,149 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param credentialName The parameters supplied to the create or update credential operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(@Nullable Output<String> credentialName) {
             $.credentialName = credentialName;
             return this;
         }
 
+        /**
+         * @param credentialName The parameters supplied to the create or update credential operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(String credentialName) {
             return credentialName(Output.of(credentialName));
         }
 
+        /**
+         * @param description Gets or sets the description of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gets or sets the description of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Gets or sets the name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param password Gets or sets the password of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Gets or sets the password of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param userName Gets or sets the user name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Gets or sets the user name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

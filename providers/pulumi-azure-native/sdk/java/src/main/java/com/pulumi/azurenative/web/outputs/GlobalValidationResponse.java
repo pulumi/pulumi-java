@@ -14,24 +14,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GlobalValidationResponse {
     /**
-     * The paths for which unauthenticated flow would not be redirected to the login page.
+     * @return The paths for which unauthenticated flow would not be redirected to the login page.
      * 
      */
     private final @Nullable List<String> excludedPaths;
     /**
-     * The default authentication provider to use when multiple providers are configured.
+     * @return The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
      * action is set to &#34;RedirectToLoginPage&#34;.
      * 
      */
     private final @Nullable String redirectToProvider;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean requireAuthentication;
     /**
-     * The action to take when an unauthenticated client attempts to access the app.
+     * @return The action to take when an unauthenticated client attempts to access the app.
      * 
      */
     private final @Nullable String unauthenticatedClientAction;
@@ -49,32 +49,32 @@ public final class GlobalValidationResponse {
     }
 
     /**
-     * The paths for which unauthenticated flow would not be redirected to the login page.
+     * @return The paths for which unauthenticated flow would not be redirected to the login page.
      * 
-    */
+     */
     public List<String> excludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
     /**
-     * The default authentication provider to use when multiple providers are configured.
+     * @return The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
      * action is set to &#34;RedirectToLoginPage&#34;.
      * 
-    */
+     */
     public Optional<String> redirectToProvider() {
         return Optional.ofNullable(this.redirectToProvider);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> requireAuthentication() {
         return Optional.ofNullable(this.requireAuthentication);
     }
     /**
-     * The action to take when an unauthenticated client attempts to access the app.
+     * @return The action to take when an unauthenticated client attempts to access the app.
      * 
-    */
+     */
     public Optional<String> unauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }

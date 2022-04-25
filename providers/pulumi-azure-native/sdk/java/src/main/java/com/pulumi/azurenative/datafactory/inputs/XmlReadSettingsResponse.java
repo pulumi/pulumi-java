@@ -30,6 +30,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="compressionProperties")
     private @Nullable Object compressionProperties;
 
+    /**
+     * @return Compression settings.
+     * 
+     */
     public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -41,6 +45,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="detectDataType")
     private @Nullable Object detectDataType;
 
+    /**
+     * @return Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> detectDataType() {
         return Optional.ofNullable(this.detectDataType);
     }
@@ -52,6 +60,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="namespacePrefixes")
     private @Nullable Object namespacePrefixes;
 
+    /**
+     * @return Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
+     * 
+     */
     public Optional<Object> namespacePrefixes() {
         return Optional.ofNullable(this.namespacePrefixes);
     }
@@ -63,6 +75,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="namespaces")
     private @Nullable Object namespaces;
 
+    /**
+     * @return Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> namespaces() {
         return Optional.ofNullable(this.namespaces);
     }
@@ -75,6 +91,11 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;XmlReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -86,6 +107,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="validationMode")
     private @Nullable Object validationMode;
 
+    /**
+     * @return Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> validationMode() {
         return Optional.ofNullable(this.validationMode);
     }
@@ -119,31 +144,68 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new XmlReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(@Nullable Object compressionProperties) {
             $.compressionProperties = compressionProperties;
             return this;
         }
 
+        /**
+         * @param detectDataType Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectDataType(@Nullable Object detectDataType) {
             $.detectDataType = detectDataType;
             return this;
         }
 
+        /**
+         * @param namespacePrefixes Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
             $.namespacePrefixes = namespacePrefixes;
             return this;
         }
 
+        /**
+         * @param namespaces Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaces(@Nullable Object namespaces) {
             $.namespaces = namespaces;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;XmlReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param validationMode Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationMode(@Nullable Object validationMode) {
             $.validationMode = validationMode;
             return this;

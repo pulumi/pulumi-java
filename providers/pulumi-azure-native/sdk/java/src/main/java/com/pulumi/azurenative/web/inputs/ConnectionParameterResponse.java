@@ -26,6 +26,10 @@ public final class ConnectionParameterResponse extends com.pulumi.resources.Invo
     @Import(name="oAuthSettings")
     private @Nullable ApiOAuthSettingsResponse oAuthSettings;
 
+    /**
+     * @return OAuth settings for the connection provider
+     * 
+     */
     public Optional<ApiOAuthSettingsResponse> oAuthSettings() {
         return Optional.ofNullable(this.oAuthSettings);
     }
@@ -37,6 +41,10 @@ public final class ConnectionParameterResponse extends com.pulumi.resources.Invo
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the parameter
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,11 +74,23 @@ public final class ConnectionParameterResponse extends com.pulumi.resources.Invo
             $ = new ConnectionParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oAuthSettings OAuth settings for the connection provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder oAuthSettings(@Nullable ApiOAuthSettingsResponse oAuthSettings) {
             $.oAuthSettings = oAuthSettings;
             return this;
         }
 
+        /**
+         * @param type Type of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

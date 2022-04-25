@@ -31,6 +31,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="additionalSettings")
     private @Nullable Output<String> additionalSettings;
 
+    /**
+     * @return Additional connection settings
+     * 
+     */
     public Optional<Output<String>> additionalSettings() {
         return Optional.ofNullable(this.additionalSettings);
     }
@@ -42,6 +46,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="authentication")
     private @Nullable Output<Either<String,AuthenticationType>> authentication;
 
+    /**
+     * @return Authentication type to use for connection
+     * 
+     */
     public Optional<Output<Either<String,AuthenticationType>>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -53,6 +61,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataSource", required=true)
     private Output<String> dataSource;
 
+    /**
+     * @return Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     * 
+     */
     public Output<String> dataSource() {
         return this.dataSource;
     }
@@ -64,6 +76,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryptConnection")
     private @Nullable Output<Boolean> encryptConnection;
 
+    /**
+     * @return Whether to encrypt the connection
+     * 
+     */
     public Optional<Output<Boolean>> encryptConnection() {
         return Optional.ofNullable(this.encryptConnection);
     }
@@ -75,6 +91,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password credential.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -86,6 +106,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="platform")
     private @Nullable Output<Either<String,SqlSourcePlatform>> platform;
 
+    /**
+     * @return Server platform type for connection
+     * 
+     */
     public Optional<Output<Either<String,SqlSourcePlatform>>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -97,6 +121,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="trustServerCertificate")
     private @Nullable Output<Boolean> trustServerCertificate;
 
+    /**
+     * @return Whether to trust the server certificate
+     * 
+     */
     public Optional<Output<Boolean>> trustServerCertificate() {
         return Optional.ofNullable(this.trustServerCertificate);
     }
@@ -109,6 +137,11 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of connection info
+     * Expected value is &#39;SqlConnectionInfo&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -120,6 +153,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return User name
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -156,99 +193,233 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new SqlConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalSettings Additional connection settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalSettings(@Nullable Output<String> additionalSettings) {
             $.additionalSettings = additionalSettings;
             return this;
         }
 
+        /**
+         * @param additionalSettings Additional connection settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalSettings(String additionalSettings) {
             return additionalSettings(Output.of(additionalSettings));
         }
 
+        /**
+         * @param authentication Authentication type to use for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Output<Either<String,AuthenticationType>> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Authentication type to use for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Either<String,AuthenticationType> authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param authentication Authentication type to use for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(String authentication) {
             return authentication(Either.ofLeft(authentication));
         }
 
+        /**
+         * @param authentication Authentication type to use for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(AuthenticationType authentication) {
             return authentication(Either.ofRight(authentication));
         }
 
+        /**
+         * @param dataSource Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(Output<String> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(String dataSource) {
             return dataSource(Output.of(dataSource));
         }
 
+        /**
+         * @param encryptConnection Whether to encrypt the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptConnection(@Nullable Output<Boolean> encryptConnection) {
             $.encryptConnection = encryptConnection;
             return this;
         }
 
+        /**
+         * @param encryptConnection Whether to encrypt the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptConnection(Boolean encryptConnection) {
             return encryptConnection(Output.of(encryptConnection));
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param platform Server platform type for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<Either<String,SqlSourcePlatform>> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform Server platform type for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(Either<String,SqlSourcePlatform> platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param platform Server platform type for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             return platform(Either.ofLeft(platform));
         }
 
+        /**
+         * @param platform Server platform type for connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(SqlSourcePlatform platform) {
             return platform(Either.ofRight(platform));
         }
 
+        /**
+         * @param trustServerCertificate Whether to trust the server certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustServerCertificate(@Nullable Output<Boolean> trustServerCertificate) {
             $.trustServerCertificate = trustServerCertificate;
             return this;
         }
 
+        /**
+         * @param trustServerCertificate Whether to trust the server certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustServerCertificate(Boolean trustServerCertificate) {
             return trustServerCertificate(Output.of(trustServerCertificate));
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;SqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;SqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

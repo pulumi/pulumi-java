@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ScheduleResponse {
     /**
-     * frequency (in minutes) at which rule condition should be evaluated.
+     * @return frequency (in minutes) at which rule condition should be evaluated.
      * 
      */
     private final Integer frequencyInMinutes;
     /**
-     * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+     * @return Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
      * 
      */
     private final Integer timeWindowInMinutes;
@@ -29,16 +29,16 @@ public final class ScheduleResponse {
     }
 
     /**
-     * frequency (in minutes) at which rule condition should be evaluated.
+     * @return frequency (in minutes) at which rule condition should be evaluated.
      * 
-    */
+     */
     public Integer frequencyInMinutes() {
         return this.frequencyInMinutes;
     }
     /**
-     * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+     * @return Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
      * 
-    */
+     */
     public Integer timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }

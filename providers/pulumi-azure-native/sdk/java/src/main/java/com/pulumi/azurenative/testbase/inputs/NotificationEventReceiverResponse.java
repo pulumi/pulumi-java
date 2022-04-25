@@ -26,6 +26,10 @@ public final class NotificationEventReceiverResponse extends com.pulumi.resource
     @Import(name="receiverType")
     private @Nullable String receiverType;
 
+    /**
+     * @return The type of the notification event receiver.
+     * 
+     */
     public Optional<String> receiverType() {
         return Optional.ofNullable(this.receiverType);
     }
@@ -37,6 +41,10 @@ public final class NotificationEventReceiverResponse extends com.pulumi.resource
     @Import(name="receiverValue")
     private @Nullable NotificationReceiverValueResponse receiverValue;
 
+    /**
+     * @return The notification event receiver value.
+     * 
+     */
     public Optional<NotificationReceiverValueResponse> receiverValue() {
         return Optional.ofNullable(this.receiverValue);
     }
@@ -66,11 +74,23 @@ public final class NotificationEventReceiverResponse extends com.pulumi.resource
             $ = new NotificationEventReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiverType The type of the notification event receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverType(@Nullable String receiverType) {
             $.receiverType = receiverType;
             return this;
         }
 
+        /**
+         * @param receiverValue The notification event receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
             $.receiverValue = receiverValue;
             return this;

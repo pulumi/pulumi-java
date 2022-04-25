@@ -29,6 +29,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,SkuName>> name;
 
+    /**
+     * @return SKU name.
+     * 
+     */
     public Optional<Output<Either<String,SkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<Either<String,SkuTier>> tier;
 
+    /**
+     * @return The SKU tier. This is based on the SKU name.
+     * 
+     */
     public Optional<Output<Either<String,SkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -69,36 +77,84 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier The SKU tier. This is based on the SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,SkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The SKU tier. This is based on the SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,SkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The SKU tier. This is based on the SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The SKU tier. This is based on the SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(SkuTier tier) {
             return tier(Either.ofRight(tier));
         }

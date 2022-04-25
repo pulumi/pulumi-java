@@ -22,6 +22,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
     @Import(name="channel", required=true)
     private Output<String> channel;
 
+    /**
+     * @return Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+     * 
+     */
     public Output<String> channel() {
         return this.channel;
     }
@@ -33,6 +37,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Resource ID used by Resource Manager to uniquely identify the scope.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -44,6 +52,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Display name for the scope.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -55,6 +67,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -66,6 +82,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -77,6 +97,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
     @Import(name="subchannel", required=true)
     private Output<String> subchannel;
 
+    /**
+     * @return Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+     * 
+     */
     public Output<String> subchannel() {
         return this.subchannel;
     }
@@ -110,56 +134,128 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
             $ = new SettingsPropertiesCacheArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channel Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(Output<String> channel) {
             $.channel = channel;
             return this;
         }
 
+        /**
+         * @param channel Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(String channel) {
             return channel(Output.of(channel));
         }
 
+        /**
+         * @param id Resource ID used by Resource Manager to uniquely identify the scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID used by Resource Manager to uniquely identify the scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Display name for the scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Display name for the scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param status Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param subchannel Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder subchannel(Output<String> subchannel) {
             $.subchannel = subchannel;
             return this;
         }
 
+        /**
+         * @param subchannel Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder subchannel(String subchannel) {
             return subchannel(Output.of(subchannel));
         }

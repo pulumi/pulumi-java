@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class RecommendedActionImpactRecordResponse {
     /**
-     * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+     * @return Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
      * 
      */
     private final Double absoluteValue;
     /**
-     * Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+     * @return Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
      * 
      */
     private final Double changeValueAbsolute;
     /**
-     * Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+     * @return Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
      * 
      */
     private final Double changeValueRelative;
     /**
-     * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * @return Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
      */
     private final String dimensionName;
     /**
-     * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * @return Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
      */
     private final String unit;
@@ -51,37 +51,37 @@ public final class RecommendedActionImpactRecordResponse {
     }
 
     /**
-     * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+     * @return Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
      * 
-    */
+     */
     public Double absoluteValue() {
         return this.absoluteValue;
     }
     /**
-     * Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+     * @return Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
      * 
-    */
+     */
     public Double changeValueAbsolute() {
         return this.changeValueAbsolute;
     }
     /**
-     * Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+     * @return Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
      * 
-    */
+     */
     public Double changeValueRelative() {
         return this.changeValueRelative;
     }
     /**
-     * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * @return Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
-    */
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
     /**
-     * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * @return Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }

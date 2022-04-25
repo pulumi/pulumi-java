@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExpressRouteCircuitPeeringConfigResponse {
     /**
-     * The communities of bgp peering. Specified for microsoft peering.
+     * @return The communities of bgp peering. Specified for microsoft peering.
      * 
      */
     private final @Nullable List<String> advertisedCommunities;
     /**
-     * The reference to AdvertisedPublicPrefixes.
+     * @return The reference to AdvertisedPublicPrefixes.
      * 
      */
     private final @Nullable List<String> advertisedPublicPrefixes;
     /**
-     * The advertised public prefix state of the Peering resource.
+     * @return The advertised public prefix state of the Peering resource.
      * 
      */
     private final String advertisedPublicPrefixesState;
     /**
-     * The CustomerASN of the peering.
+     * @return The CustomerASN of the peering.
      * 
      */
     private final @Nullable Integer customerASN;
     /**
-     * The legacy mode of the peering.
+     * @return The legacy mode of the peering.
      * 
      */
     private final @Nullable Integer legacyMode;
     /**
-     * The RoutingRegistryName of the configuration.
+     * @return The RoutingRegistryName of the configuration.
      * 
      */
     private final @Nullable String routingRegistryName;
@@ -61,44 +61,44 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
     }
 
     /**
-     * The communities of bgp peering. Specified for microsoft peering.
+     * @return The communities of bgp peering. Specified for microsoft peering.
      * 
-    */
+     */
     public List<String> advertisedCommunities() {
         return this.advertisedCommunities == null ? List.of() : this.advertisedCommunities;
     }
     /**
-     * The reference to AdvertisedPublicPrefixes.
+     * @return The reference to AdvertisedPublicPrefixes.
      * 
-    */
+     */
     public List<String> advertisedPublicPrefixes() {
         return this.advertisedPublicPrefixes == null ? List.of() : this.advertisedPublicPrefixes;
     }
     /**
-     * The advertised public prefix state of the Peering resource.
+     * @return The advertised public prefix state of the Peering resource.
      * 
-    */
+     */
     public String advertisedPublicPrefixesState() {
         return this.advertisedPublicPrefixesState;
     }
     /**
-     * The CustomerASN of the peering.
+     * @return The CustomerASN of the peering.
      * 
-    */
+     */
     public Optional<Integer> customerASN() {
         return Optional.ofNullable(this.customerASN);
     }
     /**
-     * The legacy mode of the peering.
+     * @return The legacy mode of the peering.
      * 
-    */
+     */
     public Optional<Integer> legacyMode() {
         return Optional.ofNullable(this.legacyMode);
     }
     /**
-     * The RoutingRegistryName of the configuration.
+     * @return The RoutingRegistryName of the configuration.
      * 
-    */
+     */
     public Optional<String> routingRegistryName() {
         return Optional.ofNullable(this.routingRegistryName);
     }

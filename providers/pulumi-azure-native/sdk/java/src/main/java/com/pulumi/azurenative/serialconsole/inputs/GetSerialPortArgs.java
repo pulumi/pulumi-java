@@ -19,6 +19,10 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentResource", required=true)
     private String parentResource;
 
+    /**
+     * @return The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+     * 
+     */
     public String parentResource() {
         return this.parentResource;
     }
@@ -30,6 +34,10 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentResourceType", required=true)
     private String parentResourceType;
 
+    /**
+     * @return The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
+     * 
+     */
     public String parentResourceType() {
         return this.parentResourceType;
     }
@@ -41,6 +49,10 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceProviderNamespace", required=true)
     private String resourceProviderNamespace;
 
+    /**
+     * @return The namespace of the resource provider.
+     * 
+     */
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -63,6 +79,10 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serialPort", required=true)
     private String serialPort;
 
+    /**
+     * @return The name of the serial port to connect to.
+     * 
+     */
     public String serialPort() {
         return this.serialPort;
     }
@@ -95,26 +115,56 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSerialPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentResource The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResource(String parentResource) {
             $.parentResource = parentResource;
             return this;
         }
 
+        /**
+         * @param parentResourceType The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(String parentResourceType) {
             $.parentResourceType = parentResourceType;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
+        /**
+         * @param serialPort The name of the serial port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialPort(String serialPort) {
             $.serialPort = serialPort;
             return this;

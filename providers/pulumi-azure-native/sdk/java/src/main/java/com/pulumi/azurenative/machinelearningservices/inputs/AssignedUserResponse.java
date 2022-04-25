@@ -23,6 +23,10 @@ public final class AssignedUserResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="objectId", required=true)
     private String objectId;
 
+    /**
+     * @return User’s AAD Object Id.
+     * 
+     */
     public String objectId() {
         return this.objectId;
     }
@@ -34,6 +38,10 @@ public final class AssignedUserResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return User’s AAD Tenant Id.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -63,11 +71,23 @@ public final class AssignedUserResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AssignedUserResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId User’s AAD Object Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param tenantId User’s AAD Tenant Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;

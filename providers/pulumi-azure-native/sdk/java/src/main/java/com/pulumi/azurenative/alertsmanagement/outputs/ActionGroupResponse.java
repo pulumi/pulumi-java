@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ActionGroupResponse {
     /**
-     * Action group to trigger if action rule matches
+     * @return Action group to trigger if action rule matches
      * 
      */
     private final String actionGroupId;
     /**
-     * conditions on which alerts will be filtered
+     * @return conditions on which alerts will be filtered
      * 
      */
     private final @Nullable ConditionsResponse conditions;
     /**
-     * Creation time of action rule. Date-Time in ISO-8601 format.
+     * @return Creation time of action rule. Date-Time in ISO-8601 format.
      * 
      */
     private final String createdAt;
     /**
-     * Created by user name.
+     * @return Created by user name.
      * 
      */
     private final String createdBy;
     /**
-     * Description of action rule
+     * @return Description of action rule
      * 
      */
     private final @Nullable String description;
     /**
-     * Last updated time of action rule. Date-Time in ISO-8601 format.
+     * @return Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
      */
     private final String lastModifiedAt;
     /**
-     * Last modified by user name.
+     * @return Last modified by user name.
      * 
      */
     private final String lastModifiedBy;
     /**
-     * scope on which action rule will apply
+     * @return scope on which action rule will apply
      * 
      */
     private final @Nullable ScopeResponse scope;
     /**
-     * Indicates if the given action rule is enabled or disabled
+     * @return Indicates if the given action rule is enabled or disabled
      * 
      */
     private final @Nullable String status;
     /**
-     * Indicates type of action rule
+     * @return Indicates type of action rule
      * Expected value is &#39;ActionGroup&#39;.
      * 
      */
@@ -90,73 +90,73 @@ public final class ActionGroupResponse {
     }
 
     /**
-     * Action group to trigger if action rule matches
+     * @return Action group to trigger if action rule matches
      * 
-    */
+     */
     public String actionGroupId() {
         return this.actionGroupId;
     }
     /**
-     * conditions on which alerts will be filtered
+     * @return conditions on which alerts will be filtered
      * 
-    */
+     */
     public Optional<ConditionsResponse> conditions() {
         return Optional.ofNullable(this.conditions);
     }
     /**
-     * Creation time of action rule. Date-Time in ISO-8601 format.
+     * @return Creation time of action rule. Date-Time in ISO-8601 format.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Created by user name.
+     * @return Created by user name.
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * Description of action rule
+     * @return Description of action rule
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Last updated time of action rule. Date-Time in ISO-8601 format.
+     * @return Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * Last modified by user name.
+     * @return Last modified by user name.
      * 
-    */
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * scope on which action rule will apply
+     * @return scope on which action rule will apply
      * 
-    */
+     */
     public Optional<ScopeResponse> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Indicates if the given action rule is enabled or disabled
+     * @return Indicates if the given action rule is enabled or disabled
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Indicates type of action rule
+     * @return Indicates type of action rule
      * Expected value is &#39;ActionGroup&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

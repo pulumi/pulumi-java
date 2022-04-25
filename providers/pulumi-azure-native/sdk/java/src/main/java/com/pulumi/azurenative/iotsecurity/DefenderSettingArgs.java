@@ -25,6 +25,10 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deviceQuota", required=true)
     private Output<Integer> deviceQuota;
 
+    /**
+     * @return Size of the device quota. Value is required to be in multiples of 100.
+     * 
+     */
     public Output<Integer> deviceQuota() {
         return this.deviceQuota;
     }
@@ -36,6 +40,10 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mdeIntegration", required=true)
     private Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
 
+    /**
+     * @return MDE integration configuration
+     * 
+     */
     public Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration() {
         return this.mdeIntegration;
     }
@@ -47,6 +55,10 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="onboardingKind", required=true)
     private Output<Either<String,OnboardingKind>> onboardingKind;
 
+    /**
+     * @return The kind of onboarding for the subscription
+     * 
+     */
     public Output<Either<String,OnboardingKind>> onboardingKind() {
         return this.onboardingKind;
     }
@@ -58,6 +70,10 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sentinelWorkspaceResourceIds", required=true)
     private Output<List<String>> sentinelWorkspaceResourceIds;
 
+    /**
+     * @return Sentinel Workspace Resource Ids
+     * 
+     */
     public Output<List<String>> sentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
@@ -89,50 +105,116 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
             $ = new DefenderSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceQuota Size of the device quota. Value is required to be in multiples of 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceQuota(Output<Integer> deviceQuota) {
             $.deviceQuota = deviceQuota;
             return this;
         }
 
+        /**
+         * @param deviceQuota Size of the device quota. Value is required to be in multiples of 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceQuota(Integer deviceQuota) {
             return deviceQuota(Output.of(deviceQuota));
         }
 
+        /**
+         * @param mdeIntegration MDE integration configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdeIntegration(Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration) {
             $.mdeIntegration = mdeIntegration;
             return this;
         }
 
+        /**
+         * @param mdeIntegration MDE integration configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdeIntegration(DefenderSettingsPropertiesMdeIntegrationArgs mdeIntegration) {
             return mdeIntegration(Output.of(mdeIntegration));
         }
 
+        /**
+         * @param onboardingKind The kind of onboarding for the subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder onboardingKind(Output<Either<String,OnboardingKind>> onboardingKind) {
             $.onboardingKind = onboardingKind;
             return this;
         }
 
+        /**
+         * @param onboardingKind The kind of onboarding for the subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder onboardingKind(Either<String,OnboardingKind> onboardingKind) {
             return onboardingKind(Output.of(onboardingKind));
         }
 
+        /**
+         * @param onboardingKind The kind of onboarding for the subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder onboardingKind(String onboardingKind) {
             return onboardingKind(Either.ofLeft(onboardingKind));
         }
 
+        /**
+         * @param onboardingKind The kind of onboarding for the subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder onboardingKind(OnboardingKind onboardingKind) {
             return onboardingKind(Either.ofRight(onboardingKind));
         }
 
+        /**
+         * @param sentinelWorkspaceResourceIds Sentinel Workspace Resource Ids
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentinelWorkspaceResourceIds(Output<List<String>> sentinelWorkspaceResourceIds) {
             $.sentinelWorkspaceResourceIds = sentinelWorkspaceResourceIds;
             return this;
         }
 
+        /**
+         * @param sentinelWorkspaceResourceIds Sentinel Workspace Resource Ids
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
             return sentinelWorkspaceResourceIds(Output.of(sentinelWorkspaceResourceIds));
         }
 
+        /**
+         * @param sentinelWorkspaceResourceIds Sentinel Workspace Resource Ids
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentinelWorkspaceResourceIds(String... sentinelWorkspaceResourceIds) {
             return sentinelWorkspaceResourceIds(List.of(sentinelWorkspaceResourceIds));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListAccountChannelTypesResult {
     /**
-     * Channel descriptions
+     * @return Channel descriptions
      * 
      */
     private final @Nullable List<ChannelTypeDescriptionResponse> value;
@@ -23,9 +23,9 @@ public final class ListAccountChannelTypesResult {
     }
 
     /**
-     * Channel descriptions
+     * @return Channel descriptions
      * 
-    */
+     */
     public List<ChannelTypeDescriptionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

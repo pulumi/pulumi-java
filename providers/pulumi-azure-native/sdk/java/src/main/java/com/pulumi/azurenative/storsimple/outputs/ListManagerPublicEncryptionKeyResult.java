@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListManagerPublicEncryptionKeyResult {
     /**
-     * The algorithm used to encrypt the &#34;Value&#34;.
+     * @return The algorithm used to encrypt the &#34;Value&#34;.
      * 
      */
     private final String encryptionAlgorithm;
     /**
-     * The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
+     * @return The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
      * 
      */
     private final String value;
     /**
-     * The thumbprint of the cert that was used to encrypt &#34;Value&#34;.
+     * @return The thumbprint of the cert that was used to encrypt &#34;Value&#34;.
      * 
      */
     private final @Nullable String valueCertificateThumbprint;
@@ -38,23 +38,23 @@ public final class ListManagerPublicEncryptionKeyResult {
     }
 
     /**
-     * The algorithm used to encrypt the &#34;Value&#34;.
+     * @return The algorithm used to encrypt the &#34;Value&#34;.
      * 
-    */
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
-     * The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
+     * @return The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }
     /**
-     * The thumbprint of the cert that was used to encrypt &#34;Value&#34;.
+     * @return The thumbprint of the cert that was used to encrypt &#34;Value&#34;.
      * 
-    */
+     */
     public Optional<String> valueCertificateThumbprint() {
         return Optional.ofNullable(this.valueCertificateThumbprint);
     }

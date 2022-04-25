@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomLocationPropertiesResponseAuthentication {
     /**
-     * The type of the Custom Locations authentication
+     * @return The type of the Custom Locations authentication
      * 
      */
     private final @Nullable String type;
@@ -23,9 +23,9 @@ public final class CustomLocationPropertiesResponseAuthentication {
     }
 
     /**
-     * The type of the Custom Locations authentication
+     * @return The type of the Custom Locations authentication
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

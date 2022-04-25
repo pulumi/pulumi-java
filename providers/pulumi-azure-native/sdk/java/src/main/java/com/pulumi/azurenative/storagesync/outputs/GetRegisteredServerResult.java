@@ -13,127 +13,127 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRegisteredServerResult {
     /**
-     * Registered Server Agent Version
+     * @return Registered Server Agent Version
      * 
      */
     private final @Nullable String agentVersion;
     /**
-     * Registered Server Agent Version Expiration Date
+     * @return Registered Server Agent Version Expiration Date
      * 
      */
     private final String agentVersionExpirationDate;
     /**
-     * Registered Server Agent Version Status
+     * @return Registered Server Agent Version Status
      * 
      */
     private final String agentVersionStatus;
     /**
-     * Registered Server clusterId
+     * @return Registered Server clusterId
      * 
      */
     private final @Nullable String clusterId;
     /**
-     * Registered Server clusterName
+     * @return Registered Server clusterName
      * 
      */
     private final @Nullable String clusterName;
     /**
-     * Resource discoveryEndpointUri
+     * @return Resource discoveryEndpointUri
      * 
      */
     private final @Nullable String discoveryEndpointUri;
     /**
-     * Friendly Name
+     * @return Friendly Name
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Registered Server last heart beat
+     * @return Registered Server last heart beat
      * 
      */
     private final @Nullable String lastHeartBeat;
     /**
-     * Resource Last Operation Name
+     * @return Resource Last Operation Name
      * 
      */
     private final @Nullable String lastOperationName;
     /**
-     * Registered Server lastWorkflowId
+     * @return Registered Server lastWorkflowId
      * 
      */
     private final @Nullable String lastWorkflowId;
     /**
-     * Management Endpoint Uri
+     * @return Management Endpoint Uri
      * 
      */
     private final @Nullable String managementEndpointUri;
     /**
-     * Monitoring Configuration
+     * @return Monitoring Configuration
      * 
      */
     private final @Nullable String monitoringConfiguration;
     /**
-     * Telemetry Endpoint Uri
+     * @return Telemetry Endpoint Uri
      * 
      */
     private final @Nullable String monitoringEndpointUri;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Registered Server Provisioning State
+     * @return Registered Server Provisioning State
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Resource Location
+     * @return Resource Location
      * 
      */
     private final @Nullable String resourceLocation;
     /**
-     * Registered Server Certificate
+     * @return Registered Server Certificate
      * 
      */
     private final @Nullable String serverCertificate;
     /**
-     * Registered Server serverId
+     * @return Registered Server serverId
      * 
      */
     private final @Nullable String serverId;
     /**
-     * Registered Server Management Error Code
+     * @return Registered Server Management Error Code
      * 
      */
     private final @Nullable Integer serverManagementErrorCode;
     /**
-     * Registered Server OS Version
+     * @return Registered Server OS Version
      * 
      */
     private final @Nullable String serverOSVersion;
     /**
-     * Registered Server serverRole
+     * @return Registered Server serverRole
      * 
      */
     private final @Nullable String serverRole;
     /**
-     * Service Location
+     * @return Service Location
      * 
      */
     private final @Nullable String serviceLocation;
     /**
-     * Registered Server storageSyncServiceUid
+     * @return Registered Server storageSyncServiceUid
      * 
      */
     private final @Nullable String storageSyncServiceUid;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -193,177 +193,177 @@ public final class GetRegisteredServerResult {
     }
 
     /**
-     * Registered Server Agent Version
+     * @return Registered Server Agent Version
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
-     * Registered Server Agent Version Expiration Date
+     * @return Registered Server Agent Version Expiration Date
      * 
-    */
+     */
     public String agentVersionExpirationDate() {
         return this.agentVersionExpirationDate;
     }
     /**
-     * Registered Server Agent Version Status
+     * @return Registered Server Agent Version Status
      * 
-    */
+     */
     public String agentVersionStatus() {
         return this.agentVersionStatus;
     }
     /**
-     * Registered Server clusterId
+     * @return Registered Server clusterId
      * 
-    */
+     */
     public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
-     * Registered Server clusterName
+     * @return Registered Server clusterName
      * 
-    */
+     */
     public Optional<String> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
     /**
-     * Resource discoveryEndpointUri
+     * @return Resource discoveryEndpointUri
      * 
-    */
+     */
     public Optional<String> discoveryEndpointUri() {
         return Optional.ofNullable(this.discoveryEndpointUri);
     }
     /**
-     * Friendly Name
+     * @return Friendly Name
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Registered Server last heart beat
+     * @return Registered Server last heart beat
      * 
-    */
+     */
     public Optional<String> lastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
     /**
-     * Resource Last Operation Name
+     * @return Resource Last Operation Name
      * 
-    */
+     */
     public Optional<String> lastOperationName() {
         return Optional.ofNullable(this.lastOperationName);
     }
     /**
-     * Registered Server lastWorkflowId
+     * @return Registered Server lastWorkflowId
      * 
-    */
+     */
     public Optional<String> lastWorkflowId() {
         return Optional.ofNullable(this.lastWorkflowId);
     }
     /**
-     * Management Endpoint Uri
+     * @return Management Endpoint Uri
      * 
-    */
+     */
     public Optional<String> managementEndpointUri() {
         return Optional.ofNullable(this.managementEndpointUri);
     }
     /**
-     * Monitoring Configuration
+     * @return Monitoring Configuration
      * 
-    */
+     */
     public Optional<String> monitoringConfiguration() {
         return Optional.ofNullable(this.monitoringConfiguration);
     }
     /**
-     * Telemetry Endpoint Uri
+     * @return Telemetry Endpoint Uri
      * 
-    */
+     */
     public Optional<String> monitoringEndpointUri() {
         return Optional.ofNullable(this.monitoringEndpointUri);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Registered Server Provisioning State
+     * @return Registered Server Provisioning State
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Resource Location
+     * @return Resource Location
      * 
-    */
+     */
     public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
-     * Registered Server Certificate
+     * @return Registered Server Certificate
      * 
-    */
+     */
     public Optional<String> serverCertificate() {
         return Optional.ofNullable(this.serverCertificate);
     }
     /**
-     * Registered Server serverId
+     * @return Registered Server serverId
      * 
-    */
+     */
     public Optional<String> serverId() {
         return Optional.ofNullable(this.serverId);
     }
     /**
-     * Registered Server Management Error Code
+     * @return Registered Server Management Error Code
      * 
-    */
+     */
     public Optional<Integer> serverManagementErrorCode() {
         return Optional.ofNullable(this.serverManagementErrorCode);
     }
     /**
-     * Registered Server OS Version
+     * @return Registered Server OS Version
      * 
-    */
+     */
     public Optional<String> serverOSVersion() {
         return Optional.ofNullable(this.serverOSVersion);
     }
     /**
-     * Registered Server serverRole
+     * @return Registered Server serverRole
      * 
-    */
+     */
     public Optional<String> serverRole() {
         return Optional.ofNullable(this.serverRole);
     }
     /**
-     * Service Location
+     * @return Service Location
      * 
-    */
+     */
     public Optional<String> serviceLocation() {
         return Optional.ofNullable(this.serviceLocation);
     }
     /**
-     * Registered Server storageSyncServiceUid
+     * @return Registered Server storageSyncServiceUid
      * 
-    */
+     */
     public Optional<String> storageSyncServiceUid() {
         return Optional.ofNullable(this.storageSyncServiceUid);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

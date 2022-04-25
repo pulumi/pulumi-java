@@ -26,6 +26,10 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
     @Import(name="alerts")
     private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
+    /**
+     * @return Alerts data type connection.
+     * 
+     */
     public Optional<Output<DataConnectorDataTypeCommonArgs>> alerts() {
         return Optional.ofNullable(this.alerts);
     }
@@ -37,6 +41,10 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
     @Import(name="discoveryLogs")
     private @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
+    /**
+     * @return Discovery log data type connection.
+     * 
+     */
     public Optional<Output<DataConnectorDataTypeCommonArgs>> discoveryLogs() {
         return Optional.ofNullable(this.discoveryLogs);
     }
@@ -66,20 +74,44 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
             $ = new MCASDataConnectorDataTypesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alerts Alerts data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alerts(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
             $.alerts = alerts;
             return this;
         }
 
+        /**
+         * @param alerts Alerts data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alerts(DataConnectorDataTypeCommonArgs alerts) {
             return alerts(Output.of(alerts));
         }
 
+        /**
+         * @param discoveryLogs Discovery log data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryLogs(@Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs) {
             $.discoveryLogs = discoveryLogs;
             return this;
         }
 
+        /**
+         * @param discoveryLogs Discovery log data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryLogs(DataConnectorDataTypeCommonArgs discoveryLogs) {
             return discoveryLogs(Output.of(discoveryLogs));
         }

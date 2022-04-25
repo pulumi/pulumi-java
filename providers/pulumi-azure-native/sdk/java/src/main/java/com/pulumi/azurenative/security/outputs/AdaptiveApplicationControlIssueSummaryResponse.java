@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AdaptiveApplicationControlIssueSummaryResponse {
     /**
-     * An alert that machines within a group can have
+     * @return An alert that machines within a group can have
      * 
      */
     private final @Nullable String issue;
     /**
-     * The number of machines in the group that have this alert
+     * @return The number of machines in the group that have this alert
      * 
      */
     private final @Nullable Double numberOfVms;
@@ -32,16 +32,16 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
     }
 
     /**
-     * An alert that machines within a group can have
+     * @return An alert that machines within a group can have
      * 
-    */
+     */
     public Optional<String> issue() {
         return Optional.ofNullable(this.issue);
     }
     /**
-     * The number of machines in the group that have this alert
+     * @return The number of machines in the group that have this alert
      * 
-    */
+     */
     public Optional<Double> numberOfVms() {
         return Optional.ofNullable(this.numberOfVms);
     }

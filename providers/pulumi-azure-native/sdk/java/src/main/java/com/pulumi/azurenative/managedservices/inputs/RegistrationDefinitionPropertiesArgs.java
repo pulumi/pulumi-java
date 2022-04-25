@@ -28,6 +28,10 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="authorizations", required=true)
     private Output<List<AuthorizationArgs>> authorizations;
 
+    /**
+     * @return Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * 
+     */
     public Output<List<AuthorizationArgs>> authorizations() {
         return this.authorizations;
     }
@@ -39,6 +43,10 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the registration definition.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="managedByTenantId", required=true)
     private Output<String> managedByTenantId;
 
+    /**
+     * @return Id of the managedBy tenant.
+     * 
+     */
     public Output<String> managedByTenantId() {
         return this.managedByTenantId;
     }
@@ -61,6 +73,10 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="registrationDefinitionName")
     private @Nullable Output<String> registrationDefinitionName;
 
+    /**
+     * @return Name of the registration definition.
+     * 
+     */
     public Optional<Output<String>> registrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }
@@ -92,42 +108,96 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
             $ = new RegistrationDefinitionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(Output<List<AuthorizationArgs>> authorizations) {
             $.authorizations = authorizations;
             return this;
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(List<AuthorizationArgs> authorizations) {
             return authorizations(Output.of(authorizations));
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(AuthorizationArgs... authorizations) {
             return authorizations(List.of(authorizations));
         }
 
+        /**
+         * @param description Description of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param managedByTenantId Id of the managedBy tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedByTenantId(Output<String> managedByTenantId) {
             $.managedByTenantId = managedByTenantId;
             return this;
         }
 
+        /**
+         * @param managedByTenantId Id of the managedBy tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedByTenantId(String managedByTenantId) {
             return managedByTenantId(Output.of(managedByTenantId));
         }
 
+        /**
+         * @param registrationDefinitionName Name of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionName(@Nullable Output<String> registrationDefinitionName) {
             $.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
 
+        /**
+         * @param registrationDefinitionName Name of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionName(String registrationDefinitionName) {
             return registrationDefinitionName(Output.of(registrationDefinitionName));
         }

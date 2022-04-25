@@ -26,6 +26,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The plan ID.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="product")
     private @Nullable Output<String> product;
 
+    /**
+     * @return The offer ID.
+     * 
+     */
     public Optional<Output<String>> product() {
         return Optional.ofNullable(this.product);
     }
@@ -48,6 +56,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="promotionCode")
     private @Nullable Output<String> promotionCode;
 
+    /**
+     * @return The promotion code.
+     * 
+     */
     public Optional<Output<String>> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -59,6 +71,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The publisher ID.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -70,6 +86,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The plan&#39;s version.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -102,47 +122,107 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param product The offer ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product The offer ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(String promotionCode) {
             return promotionCode(Output.of(promotionCode));
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param version The plan&#39;s version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The plan&#39;s version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

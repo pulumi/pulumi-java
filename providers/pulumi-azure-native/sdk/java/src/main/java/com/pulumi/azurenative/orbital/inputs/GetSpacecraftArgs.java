@@ -19,6 +19,10 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="spacecraftName", required=true)
     private String spacecraftName;
 
+    /**
+     * @return Spacecraft ID
+     * 
+     */
     public String spacecraftName() {
         return this.spacecraftName;
     }
@@ -59,11 +67,23 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSpacecraftArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraftName(String spacecraftName) {
             $.spacecraftName = spacecraftName;
             return this;

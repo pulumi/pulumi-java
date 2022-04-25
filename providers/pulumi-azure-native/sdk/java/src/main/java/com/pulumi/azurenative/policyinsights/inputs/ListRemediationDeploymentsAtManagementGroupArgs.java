@@ -22,6 +22,10 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
     @Import(name="managementGroupId", required=true)
     private String managementGroupId;
 
+    /**
+     * @return Management group ID.
+     * 
+     */
     public String managementGroupId() {
         return this.managementGroupId;
     }
@@ -33,6 +37,10 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
     @Import(name="managementGroupsNamespace", required=true)
     private String managementGroupsNamespace;
 
+    /**
+     * @return The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+     * 
+     */
     public String managementGroupsNamespace() {
         return this.managementGroupsNamespace;
     }
@@ -44,6 +52,10 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -55,6 +67,10 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
     @Import(name="top")
     private @Nullable Integer top;
 
+    /**
+     * @return Maximum number of records to return.
+     * 
+     */
     public Optional<Integer> top() {
         return Optional.ofNullable(this.top);
     }
@@ -86,21 +102,45 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
             $ = new ListRemediationDeploymentsAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroupId Management group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(String managementGroupId) {
             $.managementGroupId = managementGroupId;
             return this;
         }
 
+        /**
+         * @param managementGroupsNamespace The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
             $.managementGroupsNamespace = managementGroupsNamespace;
             return this;
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param top Maximum number of records to return.
+         * 
+         * @return builder
+         * 
+         */
         public Builder top(@Nullable Integer top) {
             $.top = top;
             return this;

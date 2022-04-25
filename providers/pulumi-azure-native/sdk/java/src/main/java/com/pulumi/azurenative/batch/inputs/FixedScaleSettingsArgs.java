@@ -24,6 +24,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeDeallocationOption")
     private @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
 
+    /**
+     * @return If omitted, the default value is Requeue.
+     * 
+     */
     public Optional<Output<ComputeNodeDeallocationOption>> nodeDeallocationOption() {
         return Optional.ofNullable(this.nodeDeallocationOption);
     }
@@ -35,6 +39,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="resizeTimeout")
     private @Nullable Output<String> resizeTimeout;
 
+    /**
+     * @return The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+     * 
+     */
     public Optional<Output<String>> resizeTimeout() {
         return Optional.ofNullable(this.resizeTimeout);
     }
@@ -46,6 +54,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetDedicatedNodes")
     private @Nullable Output<Integer> targetDedicatedNodes;
 
+    /**
+     * @return At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+     * 
+     */
     public Optional<Output<Integer>> targetDedicatedNodes() {
         return Optional.ofNullable(this.targetDedicatedNodes);
     }
@@ -57,6 +69,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetLowPriorityNodes")
     private @Nullable Output<Integer> targetLowPriorityNodes;
 
+    /**
+     * @return At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+     * 
+     */
     public Optional<Output<Integer>> targetLowPriorityNodes() {
         return Optional.ofNullable(this.targetLowPriorityNodes);
     }
@@ -88,38 +104,86 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new FixedScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeDeallocationOption If omitted, the default value is Requeue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeDeallocationOption(@Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption) {
             $.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
+        /**
+         * @param nodeDeallocationOption If omitted, the default value is Requeue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeDeallocationOption(ComputeNodeDeallocationOption nodeDeallocationOption) {
             return nodeDeallocationOption(Output.of(nodeDeallocationOption));
         }
 
+        /**
+         * @param resizeTimeout The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeTimeout(@Nullable Output<String> resizeTimeout) {
             $.resizeTimeout = resizeTimeout;
             return this;
         }
 
+        /**
+         * @param resizeTimeout The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeTimeout(String resizeTimeout) {
             return resizeTimeout(Output.of(resizeTimeout));
         }
 
+        /**
+         * @param targetDedicatedNodes At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDedicatedNodes(@Nullable Output<Integer> targetDedicatedNodes) {
             $.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
+        /**
+         * @param targetDedicatedNodes At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDedicatedNodes(Integer targetDedicatedNodes) {
             return targetDedicatedNodes(Output.of(targetDedicatedNodes));
         }
 
+        /**
+         * @param targetLowPriorityNodes At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLowPriorityNodes(@Nullable Output<Integer> targetLowPriorityNodes) {
             $.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
 
+        /**
+         * @param targetLowPriorityNodes At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLowPriorityNodes(Integer targetLowPriorityNodes) {
             return targetLowPriorityNodes(Output.of(targetLowPriorityNodes));
         }

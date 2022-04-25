@@ -27,6 +27,10 @@ public final class IncludedPathResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="indexes")
     private @Nullable List<IndexesResponse> indexes;
 
+    /**
+     * @return List of indexes for this path
+     * 
+     */
     public Optional<List<IndexesResponse>> indexes() {
         return Optional.ofNullable(this.indexes);
     }
@@ -38,6 +42,10 @@ public final class IncludedPathResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -67,15 +75,33 @@ public final class IncludedPathResponse extends com.pulumi.resources.InvokeArgs 
             $ = new IncludedPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param indexes List of indexes for this path
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(@Nullable List<IndexesResponse> indexes) {
             $.indexes = indexes;
             return this;
         }
 
+        /**
+         * @param indexes List of indexes for this path
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(IndexesResponse... indexes) {
             return indexes(List.of(indexes));
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;

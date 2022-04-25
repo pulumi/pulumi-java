@@ -26,6 +26,10 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exchange")
     private @Nullable String exchange;
 
+    /**
+     * @return The domain name of the mail host for this MX record.
+     * 
+     */
     public Optional<String> exchange() {
         return Optional.ofNullable(this.exchange);
     }
@@ -37,6 +41,10 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preference")
     private @Nullable Integer preference;
 
+    /**
+     * @return The preference value for this MX record.
+     * 
+     */
     public Optional<Integer> preference() {
         return Optional.ofNullable(this.preference);
     }
@@ -66,11 +74,23 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MxRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exchange The domain name of the mail host for this MX record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchange(@Nullable String exchange) {
             $.exchange = exchange;
             return this;
         }
 
+        /**
+         * @param preference The preference value for this MX record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preference(@Nullable Integer preference) {
             $.preference = preference;
             return this;

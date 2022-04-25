@@ -19,6 +19,10 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupName", required=true)
     private String backupName;
 
+    /**
+     * @return The name of the backup
+     * 
+     */
     public String backupName() {
         return this.backupName;
     }
@@ -41,6 +49,10 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="poolName", required=true)
     private String poolName;
 
+    /**
+     * @return The name of the capacity pool
+     * 
+     */
     public String poolName() {
         return this.poolName;
     }
@@ -52,6 +64,10 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeName", required=true)
     private String volumeName;
 
+    /**
+     * @return The name of the volume
+     * 
+     */
     public String volumeName() {
         return this.volumeName;
     }
@@ -95,26 +115,56 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param backupName The name of the backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupName(String backupName) {
             $.backupName = backupName;
             return this;
         }
 
+        /**
+         * @param poolName The name of the capacity pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(String poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param volumeName The name of the volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(String volumeName) {
             $.volumeName = volumeName;
             return this;

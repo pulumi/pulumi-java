@@ -27,6 +27,10 @@ public final class TxtRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<List<String>> value;
 
+    /**
+     * @return The text value of this TXT record.
+     * 
+     */
     public Optional<Output<List<String>>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -55,15 +59,33 @@ public final class TxtRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TxtRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The text value of this TXT record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<List<String>> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The text value of this TXT record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(List<String> value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param value The text value of this TXT record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String... value) {
             return value(List.of(value));
         }

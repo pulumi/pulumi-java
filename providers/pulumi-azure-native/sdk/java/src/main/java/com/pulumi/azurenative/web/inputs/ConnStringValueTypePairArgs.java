@@ -25,6 +25,10 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<ConnectionStringType> type;
 
+    /**
+     * @return Type of database.
+     * 
+     */
     public Output<ConnectionStringType> type() {
         return this.type;
     }
@@ -36,6 +40,10 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value of pair.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -65,20 +73,44 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
             $ = new ConnStringValueTypePairArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ConnectionStringType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ConnectionStringType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value Value of pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

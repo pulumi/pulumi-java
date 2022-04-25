@@ -23,6 +23,10 @@ public final class StageDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display name of the resource stage.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class StageDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="stageName", required=true)
     private String stageName;
 
+    /**
+     * @return Stage name
+     * 
+     */
     public String stageName() {
         return this.stageName;
     }
@@ -45,6 +53,10 @@ public final class StageDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="stageStatus", required=true)
     private String stageStatus;
 
+    /**
+     * @return Stage status.
+     * 
+     */
     public String stageStatus() {
         return this.stageStatus;
     }
@@ -56,6 +68,10 @@ public final class StageDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Stage start time
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -87,21 +103,45 @@ public final class StageDetailsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new StageDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the resource stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param stageName Stage name
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             $.stageName = stageName;
             return this;
         }
 
+        /**
+         * @param stageStatus Stage status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageStatus(String stageStatus) {
             $.stageStatus = stageStatus;
             return this;
         }
 
+        /**
+         * @param startTime Stage start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

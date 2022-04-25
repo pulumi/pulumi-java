@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AADBasedSecurityPrincipalResponse {
     /**
-     * LedgerRole associated with the Security Principal of Ledger
+     * @return LedgerRole associated with the Security Principal of Ledger
      * 
      */
     private final @Nullable String ledgerRoleName;
     /**
-     * UUID/GUID based Principal Id of the Security Principal
+     * @return UUID/GUID based Principal Id of the Security Principal
      * 
      */
     private final @Nullable String principalId;
     /**
-     * UUID/GUID based Tenant Id of the Security Principal
+     * @return UUID/GUID based Tenant Id of the Security Principal
      * 
      */
     private final @Nullable String tenantId;
@@ -38,23 +38,23 @@ public final class AADBasedSecurityPrincipalResponse {
     }
 
     /**
-     * LedgerRole associated with the Security Principal of Ledger
+     * @return LedgerRole associated with the Security Principal of Ledger
      * 
-    */
+     */
     public Optional<String> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
     /**
-     * UUID/GUID based Principal Id of the Security Principal
+     * @return UUID/GUID based Principal Id of the Security Principal
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
-     * UUID/GUID based Tenant Id of the Security Principal
+     * @return UUID/GUID based Tenant Id of the Security Principal
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

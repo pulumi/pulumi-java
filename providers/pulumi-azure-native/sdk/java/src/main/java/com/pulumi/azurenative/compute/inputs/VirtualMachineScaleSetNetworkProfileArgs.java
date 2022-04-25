@@ -31,6 +31,10 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
     @Import(name="healthProbe")
     private @Nullable Output<ApiEntityReferenceArgs> healthProbe;
 
+    /**
+     * @return A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}&#39;.
+     * 
+     */
     public Optional<Output<ApiEntityReferenceArgs>> healthProbe() {
         return Optional.ofNullable(this.healthProbe);
     }
@@ -42,6 +46,10 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
     @Import(name="networkApiVersion")
     private @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
+    /**
+     * @return specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+     * 
+     */
     public Optional<Output<Either<String,NetworkApiVersion>>> networkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
@@ -53,6 +61,10 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
     @Import(name="networkInterfaceConfigurations")
     private @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
+    /**
+     * @return The list of network configurations.
+     * 
+     */
     public Optional<Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>>> networkInterfaceConfigurations() {
         return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
@@ -83,41 +95,95 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
             $ = new VirtualMachineScaleSetNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthProbe A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbe(@Nullable Output<ApiEntityReferenceArgs> healthProbe) {
             $.healthProbe = healthProbe;
             return this;
         }
 
+        /**
+         * @param healthProbe A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbe(ApiEntityReferenceArgs healthProbe) {
             return healthProbe(Output.of(healthProbe));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(@Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion) {
             $.networkApiVersion = networkApiVersion;
             return this;
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(Either<String,NetworkApiVersion> networkApiVersion) {
             return networkApiVersion(Output.of(networkApiVersion));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(String networkApiVersion) {
             return networkApiVersion(Either.ofLeft(networkApiVersion));
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(NetworkApiVersion networkApiVersion) {
             return networkApiVersion(Either.ofRight(networkApiVersion));
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(Output.of(networkInterfaceConfigurations));
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationArgs... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
         }

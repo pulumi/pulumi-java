@@ -29,6 +29,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataRetentionTime", required=true)
     private Output<String> dataRetentionTime;
 
+    /**
+     * @return ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
+     * 
+     */
     public Output<String> dataRetentionTime() {
         return this.dataRetentionTime;
     }
@@ -40,6 +44,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="environmentName")
     private @Nullable Output<String> environmentName;
 
+    /**
+     * @return Name of the environment
+     * 
+     */
     public Optional<Output<String>> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
@@ -52,6 +60,11 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the environment.
+     * Expected value is &#39;Gen1&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -63,6 +76,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -74,6 +91,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="partitionKeyProperties")
     private @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
+    /**
+     * @return The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+     * 
+     */
     public Optional<Output<List<TimeSeriesIdPropertyArgs>>> partitionKeyProperties() {
         return Optional.ofNullable(this.partitionKeyProperties);
     }
@@ -85,6 +106,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -96,6 +121,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -107,6 +136,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="storageLimitExceededBehavior")
     private @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
+    /**
+     * @return The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * 
+     */
     public Optional<Output<Either<String,StorageLimitExceededBehavior>>> storageLimitExceededBehavior() {
         return Optional.ofNullable(this.storageLimitExceededBehavior);
     }
@@ -118,6 +151,10 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional properties for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -154,95 +191,223 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
             $ = new Gen1EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataRetentionTime ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRetentionTime(Output<String> dataRetentionTime) {
             $.dataRetentionTime = dataRetentionTime;
             return this;
         }
 
+        /**
+         * @param dataRetentionTime ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRetentionTime(String dataRetentionTime) {
             return dataRetentionTime(Output.of(dataRetentionTime));
         }
 
+        /**
+         * @param environmentName Name of the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(@Nullable Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName Name of the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param kind The kind of the environment.
+         * Expected value is &#39;Gen1&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the environment.
+         * Expected value is &#39;Gen1&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param partitionKeyProperties The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeyProperties(@Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
             $.partitionKeyProperties = partitionKeyProperties;
             return this;
         }
 
+        /**
+         * @param partitionKeyProperties The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeyProperties(List<TimeSeriesIdPropertyArgs> partitionKeyProperties) {
             return partitionKeyProperties(Output.of(partitionKeyProperties));
         }
 
+        /**
+         * @param partitionKeyProperties The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeyProperties(TimeSeriesIdPropertyArgs... partitionKeyProperties) {
             return partitionKeyProperties(List.of(partitionKeyProperties));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param storageLimitExceededBehavior The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLimitExceededBehavior(@Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior) {
             $.storageLimitExceededBehavior = storageLimitExceededBehavior;
             return this;
         }
 
+        /**
+         * @param storageLimitExceededBehavior The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLimitExceededBehavior(Either<String,StorageLimitExceededBehavior> storageLimitExceededBehavior) {
             return storageLimitExceededBehavior(Output.of(storageLimitExceededBehavior));
         }
 
+        /**
+         * @param storageLimitExceededBehavior The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLimitExceededBehavior(String storageLimitExceededBehavior) {
             return storageLimitExceededBehavior(Either.ofLeft(storageLimitExceededBehavior));
         }
 
+        /**
+         * @param storageLimitExceededBehavior The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLimitExceededBehavior(StorageLimitExceededBehavior storageLimitExceededBehavior) {
             return storageLimitExceededBehavior(Either.ofRight(storageLimitExceededBehavior));
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

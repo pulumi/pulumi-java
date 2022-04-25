@@ -19,6 +19,10 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
     @Import(name="computeName", required=true)
     private String computeName;
 
+    /**
+     * @return Name of the Azure Machine Learning compute.
+     * 
+     */
     public String computeName() {
         return this.computeName;
     }
@@ -30,6 +34,10 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
             $ = new ListMachineLearningComputeNodesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeName Name of the Azure Machine Learning compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeName(String computeName) {
             $.computeName = computeName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

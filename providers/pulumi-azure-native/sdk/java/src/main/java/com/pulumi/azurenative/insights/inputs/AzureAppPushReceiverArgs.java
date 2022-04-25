@@ -24,6 +24,10 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
     @Import(name="emailAddress", required=true)
     private Output<String> emailAddress;
 
+    /**
+     * @return The email address registered for the Azure mobile app.
+     * 
+     */
     public Output<String> emailAddress() {
         return this.emailAddress;
     }
@@ -35,6 +39,10 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,20 +72,44 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
             $ = new AzureAppPushReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress The email address registered for the Azure mobile app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress The email address registered for the Azure mobile app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param name The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

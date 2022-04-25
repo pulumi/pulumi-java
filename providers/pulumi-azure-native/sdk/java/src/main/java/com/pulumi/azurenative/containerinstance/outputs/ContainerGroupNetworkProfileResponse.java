@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ContainerGroupNetworkProfileResponse {
     /**
-     * The identifier for a network profile.
+     * @return The identifier for a network profile.
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class ContainerGroupNetworkProfileResponse {
     }
 
     /**
-     * The identifier for a network profile.
+     * @return The identifier for a network profile.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

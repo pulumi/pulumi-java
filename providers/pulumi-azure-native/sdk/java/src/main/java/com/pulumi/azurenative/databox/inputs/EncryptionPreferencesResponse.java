@@ -26,6 +26,10 @@ public final class EncryptionPreferencesResponse extends com.pulumi.resources.In
     @Import(name="doubleEncryption")
     private @Nullable String doubleEncryption;
 
+    /**
+     * @return Defines secondary layer of software-based encryption enablement.
+     * 
+     */
     public Optional<String> doubleEncryption() {
         return Optional.ofNullable(this.doubleEncryption);
     }
@@ -54,6 +58,12 @@ public final class EncryptionPreferencesResponse extends com.pulumi.resources.In
             $ = new EncryptionPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doubleEncryption Defines secondary layer of software-based encryption enablement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryption(@Nullable String doubleEncryption) {
             $.doubleEncryption = doubleEncryption;
             return this;

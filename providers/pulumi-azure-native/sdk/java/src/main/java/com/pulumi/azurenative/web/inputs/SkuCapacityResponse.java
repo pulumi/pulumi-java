@@ -26,6 +26,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="default")
     private @Nullable Integer default_;
 
+    /**
+     * @return Default number of workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Integer> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -37,6 +41,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elasticMaximum")
     private @Nullable Integer elasticMaximum;
 
+    /**
+     * @return Maximum number of Elastic workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Integer> elasticMaximum() {
         return Optional.ofNullable(this.elasticMaximum);
     }
@@ -48,6 +56,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maximum")
     private @Nullable Integer maximum;
 
+    /**
+     * @return Maximum number of workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Integer> maximum() {
         return Optional.ofNullable(this.maximum);
     }
@@ -59,6 +71,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minimum")
     private @Nullable Integer minimum;
 
+    /**
+     * @return Minimum number of workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Integer> minimum() {
         return Optional.ofNullable(this.minimum);
     }
@@ -70,6 +86,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scaleType")
     private @Nullable String scaleType;
 
+    /**
+     * @return Available scale configurations for an App Service plan.
+     * 
+     */
     public Optional<String> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }
@@ -102,26 +122,56 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuCapacityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ Default number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Integer default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param elasticMaximum Maximum number of Elastic workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
             $.elasticMaximum = elasticMaximum;
             return this;
         }
 
+        /**
+         * @param maximum Maximum number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(@Nullable Integer maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param minimum Minimum number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(@Nullable Integer minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param scaleType Available scale configurations for an App Service plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(@Nullable String scaleType) {
             $.scaleType = scaleType;
             return this;

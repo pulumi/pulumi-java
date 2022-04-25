@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewaySslPolicyResponse {
     /**
-     * Ssl cipher suites to be enabled in the specified order to application gateway.
+     * @return Ssl cipher suites to be enabled in the specified order to application gateway.
      * 
      */
     private final @Nullable List<String> cipherSuites;
     /**
-     * Ssl protocols to be disabled on application gateway.
+     * @return Ssl protocols to be disabled on application gateway.
      * 
      */
     private final @Nullable List<String> disabledSslProtocols;
     /**
-     * Minimum version of Ssl protocol to be supported on application gateway.
+     * @return Minimum version of Ssl protocol to be supported on application gateway.
      * 
      */
     private final @Nullable String minProtocolVersion;
     /**
-     * Name of Ssl predefined policy.
+     * @return Name of Ssl predefined policy.
      * 
      */
     private final @Nullable String policyName;
     /**
-     * Type of Ssl Policy.
+     * @return Type of Ssl Policy.
      * 
      */
     private final @Nullable String policyType;
@@ -53,37 +53,37 @@ public final class ApplicationGatewaySslPolicyResponse {
     }
 
     /**
-     * Ssl cipher suites to be enabled in the specified order to application gateway.
+     * @return Ssl cipher suites to be enabled in the specified order to application gateway.
      * 
-    */
+     */
     public List<String> cipherSuites() {
         return this.cipherSuites == null ? List.of() : this.cipherSuites;
     }
     /**
-     * Ssl protocols to be disabled on application gateway.
+     * @return Ssl protocols to be disabled on application gateway.
      * 
-    */
+     */
     public List<String> disabledSslProtocols() {
         return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
     }
     /**
-     * Minimum version of Ssl protocol to be supported on application gateway.
+     * @return Minimum version of Ssl protocol to be supported on application gateway.
      * 
-    */
+     */
     public Optional<String> minProtocolVersion() {
         return Optional.ofNullable(this.minProtocolVersion);
     }
     /**
-     * Name of Ssl predefined policy.
+     * @return Name of Ssl predefined policy.
      * 
-    */
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
     /**
-     * Type of Ssl Policy.
+     * @return Type of Ssl Policy.
      * 
-    */
+     */
     public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }

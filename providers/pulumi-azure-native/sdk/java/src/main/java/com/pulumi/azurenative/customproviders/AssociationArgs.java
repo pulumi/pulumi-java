@@ -22,6 +22,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="associationName")
     private @Nullable Output<String> associationName;
 
+    /**
+     * @return The name of the association.
+     * 
+     */
     public Optional<Output<String>> associationName() {
         return Optional.ofNullable(this.associationName);
     }
@@ -33,6 +37,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope of the association. The scope can be any valid REST resource instance. For example, use &#39;/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}&#39; for a virtual machine resource.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -44,6 +52,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceId")
     private @Nullable Output<String> targetResourceId;
 
+    /**
+     * @return The REST resource instance of the target resource for this association.
+     * 
+     */
     public Optional<Output<String>> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
@@ -74,29 +86,65 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationName The name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(@Nullable Output<String> associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param associationName The name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             return associationName(Output.of(associationName));
         }
 
+        /**
+         * @param scope The scope of the association. The scope can be any valid REST resource instance. For example, use &#39;/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}&#39; for a virtual machine resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope of the association. The scope can be any valid REST resource instance. For example, use &#39;/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}&#39; for a virtual machine resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param targetResourceId The REST resource instance of the target resource for this association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param targetResourceId The REST resource instance of the target resource for this association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(String targetResourceId) {
             return targetResourceId(Output.of(targetResourceId));
         }

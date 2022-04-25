@@ -14,23 +14,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UnsecuredEndpointResponse {
     /**
-     * Credentials to be presented to the endpoint.
+     * @return Credentials to be presented to the endpoint.
      * 
      */
     private final UsernamePasswordCredentialsResponse credentials;
     /**
-     * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+     * @return Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
      * 
      */
     private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
      * 
      */
     private final String type;
     /**
-     * The endpoint URL for Video Analyzer to connect to.
+     * @return The endpoint URL for Video Analyzer to connect to.
      * 
      */
     private final String url;
@@ -48,31 +48,31 @@ public final class UnsecuredEndpointResponse {
     }
 
     /**
-     * Credentials to be presented to the endpoint.
+     * @return Credentials to be presented to the endpoint.
      * 
-    */
+     */
     public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
     /**
-     * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+     * @return Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
      * 
-    */
+     */
     public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return Optional.ofNullable(this.tunnel);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The endpoint URL for Video Analyzer to connect to.
+     * @return The endpoint URL for Video Analyzer to connect to.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

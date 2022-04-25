@@ -26,6 +26,10 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
     @Import(name="certificates", required=true)
     private Output<List<String>> certificates;
 
+    /**
+     * @return PEM formatted public certificates. One certificate per entry.
+     * 
+     */
     public Output<List<String>> certificates() {
         return this.certificates;
     }
@@ -38,6 +42,11 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -67,24 +76,56 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
             $ = new PemCertificateListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates PEM formatted public certificates. One certificate per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(Output<List<String>> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates PEM formatted public certificates. One certificate per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(List<String> certificates) {
             return certificates(Output.of(certificates));
         }
 
+        /**
+         * @param certificates PEM formatted public certificates. One certificate per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

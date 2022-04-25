@@ -26,6 +26,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return The number of worker VMs.  Must be between 3 and 20 (immutable).
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return The disk size of the worker VMs.  Must be 128 or greater (immutable).
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -48,6 +56,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The worker profile name.  Must be &#34;worker&#34; (immutable).
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The Azure resource ID of the worker subnet (immutable).
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -70,6 +86,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return The size of the worker VMs (immutable).
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -102,26 +122,56 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
             $ = new WorkerProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of worker VMs.  Must be between 3 and 20 (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param diskSizeGB The disk size of the worker VMs.  Must be 128 or greater (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param name The worker profile name.  Must be &#34;worker&#34; (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param subnetId The Azure resource ID of the worker subnet (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param vmSize The size of the worker VMs (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;

@@ -26,6 +26,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertContext")
     private @Nullable Output<ConditionArgs> alertContext;
 
+    /**
+     * @return filter alerts by alert context (payload)
+     * 
+     */
     public Optional<Output<ConditionArgs>> alertContext() {
         return Optional.ofNullable(this.alertContext);
     }
@@ -37,6 +41,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertRuleId")
     private @Nullable Output<ConditionArgs> alertRuleId;
 
+    /**
+     * @return filter alerts by alert rule id
+     * 
+     */
     public Optional<Output<ConditionArgs>> alertRuleId() {
         return Optional.ofNullable(this.alertRuleId);
     }
@@ -48,6 +56,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<ConditionArgs> description;
 
+    /**
+     * @return filter alerts by alert rule description
+     * 
+     */
     public Optional<Output<ConditionArgs>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorCondition")
     private @Nullable Output<ConditionArgs> monitorCondition;
 
+    /**
+     * @return filter alerts by monitor condition
+     * 
+     */
     public Optional<Output<ConditionArgs>> monitorCondition() {
         return Optional.ofNullable(this.monitorCondition);
     }
@@ -70,6 +86,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorService")
     private @Nullable Output<ConditionArgs> monitorService;
 
+    /**
+     * @return filter alerts by monitor service
+     * 
+     */
     public Optional<Output<ConditionArgs>> monitorService() {
         return Optional.ofNullable(this.monitorService);
     }
@@ -81,6 +101,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity")
     private @Nullable Output<ConditionArgs> severity;
 
+    /**
+     * @return filter alerts by severity
+     * 
+     */
     public Optional<Output<ConditionArgs>> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -92,6 +116,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceType")
     private @Nullable Output<ConditionArgs> targetResourceType;
 
+    /**
+     * @return filter alerts by target resource type
+     * 
+     */
     public Optional<Output<ConditionArgs>> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }
@@ -126,65 +154,149 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConditionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertContext filter alerts by alert context (payload)
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertContext(@Nullable Output<ConditionArgs> alertContext) {
             $.alertContext = alertContext;
             return this;
         }
 
+        /**
+         * @param alertContext filter alerts by alert context (payload)
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertContext(ConditionArgs alertContext) {
             return alertContext(Output.of(alertContext));
         }
 
+        /**
+         * @param alertRuleId filter alerts by alert rule id
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleId(@Nullable Output<ConditionArgs> alertRuleId) {
             $.alertRuleId = alertRuleId;
             return this;
         }
 
+        /**
+         * @param alertRuleId filter alerts by alert rule id
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleId(ConditionArgs alertRuleId) {
             return alertRuleId(Output.of(alertRuleId));
         }
 
+        /**
+         * @param description filter alerts by alert rule description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<ConditionArgs> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description filter alerts by alert rule description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(ConditionArgs description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param monitorCondition filter alerts by monitor condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorCondition(@Nullable Output<ConditionArgs> monitorCondition) {
             $.monitorCondition = monitorCondition;
             return this;
         }
 
+        /**
+         * @param monitorCondition filter alerts by monitor condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorCondition(ConditionArgs monitorCondition) {
             return monitorCondition(Output.of(monitorCondition));
         }
 
+        /**
+         * @param monitorService filter alerts by monitor service
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorService(@Nullable Output<ConditionArgs> monitorService) {
             $.monitorService = monitorService;
             return this;
         }
 
+        /**
+         * @param monitorService filter alerts by monitor service
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorService(ConditionArgs monitorService) {
             return monitorService(Output.of(monitorService));
         }
 
+        /**
+         * @param severity filter alerts by severity
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Output<ConditionArgs> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity filter alerts by severity
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(ConditionArgs severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param targetResourceType filter alerts by target resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceType(@Nullable Output<ConditionArgs> targetResourceType) {
             $.targetResourceType = targetResourceType;
             return this;
         }
 
+        /**
+         * @param targetResourceType filter alerts by target resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceType(ConditionArgs targetResourceType) {
             return targetResourceType(Output.of(targetResourceType));
         }

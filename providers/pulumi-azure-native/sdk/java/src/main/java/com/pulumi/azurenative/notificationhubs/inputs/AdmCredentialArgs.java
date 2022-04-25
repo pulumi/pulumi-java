@@ -26,6 +26,10 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authTokenUrl")
     private @Nullable Output<String> authTokenUrl;
 
+    /**
+     * @return The URL of the authorization token.
+     * 
+     */
     public Optional<Output<String>> authTokenUrl() {
         return Optional.ofNullable(this.authTokenUrl);
     }
@@ -37,6 +41,10 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client identifier.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -48,6 +56,10 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return The credential secret access key.
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -78,29 +90,65 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AdmCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authTokenUrl The URL of the authorization token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authTokenUrl(@Nullable Output<String> authTokenUrl) {
             $.authTokenUrl = authTokenUrl;
             return this;
         }
 
+        /**
+         * @param authTokenUrl The URL of the authorization token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authTokenUrl(String authTokenUrl) {
             return authTokenUrl(Output.of(authTokenUrl));
         }
 
+        /**
+         * @param clientId The client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The credential secret access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The credential secret access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }

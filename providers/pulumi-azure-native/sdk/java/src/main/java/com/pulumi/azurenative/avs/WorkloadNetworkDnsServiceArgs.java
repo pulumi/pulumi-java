@@ -26,6 +26,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="defaultDnsZone")
     private @Nullable Output<String> defaultDnsZone;
 
+    /**
+     * @return Default DNS zone of the DNS Service.
+     * 
+     */
     public Optional<Output<String>> defaultDnsZone() {
         return Optional.ofNullable(this.defaultDnsZone);
     }
@@ -37,6 +41,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the DNS Service.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="dnsServiceId")
     private @Nullable Output<String> dnsServiceId;
 
+    /**
+     * @return NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
+     * 
+     */
     public Optional<Output<String>> dnsServiceId() {
         return Optional.ofNullable(this.dnsServiceId);
     }
@@ -59,6 +71,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="dnsServiceIp")
     private @Nullable Output<String> dnsServiceIp;
 
+    /**
+     * @return DNS service IP of the DNS Service.
+     * 
+     */
     public Optional<Output<String>> dnsServiceIp() {
         return Optional.ofNullable(this.dnsServiceIp);
     }
@@ -70,6 +86,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="fqdnZones")
     private @Nullable Output<List<String>> fqdnZones;
 
+    /**
+     * @return FQDN zones of the DNS Service.
+     * 
+     */
     public Optional<Output<List<String>>> fqdnZones() {
         return Optional.ofNullable(this.fqdnZones);
     }
@@ -81,6 +101,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="logLevel")
     private @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
+    /**
+     * @return DNS Service log level.
+     * 
+     */
     public Optional<Output<Either<String,DnsServiceLogLevelEnum>>> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -92,6 +116,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -103,6 +131,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
     @Import(name="revision")
     private @Nullable Output<Double> revision;
 
+    /**
+     * @return NSX revision number.
+     * 
+     */
     public Optional<Output<Double>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -150,95 +186,221 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
             $ = new WorkloadNetworkDnsServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultDnsZone Default DNS zone of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDnsZone(@Nullable Output<String> defaultDnsZone) {
             $.defaultDnsZone = defaultDnsZone;
             return this;
         }
 
+        /**
+         * @param defaultDnsZone Default DNS zone of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDnsZone(String defaultDnsZone) {
             return defaultDnsZone(Output.of(defaultDnsZone));
         }
 
+        /**
+         * @param displayName Display name of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param dnsServiceId NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceId(@Nullable Output<String> dnsServiceId) {
             $.dnsServiceId = dnsServiceId;
             return this;
         }
 
+        /**
+         * @param dnsServiceId NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceId(String dnsServiceId) {
             return dnsServiceId(Output.of(dnsServiceId));
         }
 
+        /**
+         * @param dnsServiceIp DNS service IP of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIp(@Nullable Output<String> dnsServiceIp) {
             $.dnsServiceIp = dnsServiceIp;
             return this;
         }
 
+        /**
+         * @param dnsServiceIp DNS service IP of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIp(String dnsServiceIp) {
             return dnsServiceIp(Output.of(dnsServiceIp));
         }
 
+        /**
+         * @param fqdnZones FQDN zones of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdnZones(@Nullable Output<List<String>> fqdnZones) {
             $.fqdnZones = fqdnZones;
             return this;
         }
 
+        /**
+         * @param fqdnZones FQDN zones of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdnZones(List<String> fqdnZones) {
             return fqdnZones(Output.of(fqdnZones));
         }
 
+        /**
+         * @param fqdnZones FQDN zones of the DNS Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdnZones(String... fqdnZones) {
             return fqdnZones(List.of(fqdnZones));
         }
 
+        /**
+         * @param logLevel DNS Service log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel DNS Service log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(Either<String,DnsServiceLogLevelEnum> logLevel) {
             return logLevel(Output.of(logLevel));
         }
 
+        /**
+         * @param logLevel DNS Service log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(String logLevel) {
             return logLevel(Either.ofLeft(logLevel));
         }
 
+        /**
+         * @param logLevel DNS Service log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(DnsServiceLogLevelEnum logLevel) {
             return logLevel(Either.ofRight(logLevel));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Double> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Double revision) {
             return revision(Output.of(revision));
         }

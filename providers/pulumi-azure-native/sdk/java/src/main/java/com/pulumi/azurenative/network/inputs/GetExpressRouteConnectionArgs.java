@@ -19,6 +19,10 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return The name of the ExpressRoute connection.
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -30,6 +34,10 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
     @Import(name="expressRouteGatewayName", required=true)
     private String expressRouteGatewayName;
 
+    /**
+     * @return The name of the ExpressRoute gateway.
+     * 
+     */
     public String expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
@@ -41,6 +49,10 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
             $ = new GetExpressRouteConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the ExpressRoute connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param expressRouteGatewayName The name of the ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
             $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

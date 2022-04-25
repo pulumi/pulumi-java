@@ -29,6 +29,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -40,6 +44,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="events", required=true)
     private List<Object> events;
 
+    /**
+     * @return The list of event types that cause this trigger to fire.
+     * 
+     */
     public List<Object> events() {
         return this.events;
     }
@@ -62,6 +74,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="pipelines")
     private @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
+    /**
+     * @return Pipelines that need to be started.
+     * 
+     */
     public Optional<List<TriggerPipelineReferenceResponse>> pipelines() {
         return Optional.ofNullable(this.pipelines);
     }
@@ -73,6 +89,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="runtimeState", required=true)
     private String runtimeState;
 
+    /**
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
@@ -84,6 +104,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The ARM resource ID of the Azure Event Grid Topic.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -95,6 +119,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="subjectBeginsWith")
     private @Nullable String subjectBeginsWith;
 
+    /**
+     * @return The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     * 
+     */
     public Optional<String> subjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
@@ -106,6 +134,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="subjectEndsWith")
     private @Nullable String subjectEndsWith;
 
+    /**
+     * @return The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     * 
+     */
     public Optional<String> subjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }
@@ -118,6 +150,11 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;CustomEventsTrigger&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -154,58 +191,131 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
             $ = new CustomEventsTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param events The list of event types that cause this trigger to fire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<Object> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events The list of event types that cause this trigger to fire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(Object... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             $.pipelines = pipelines;
             return this;
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
             return pipelines(List.of(pipelines));
         }
 
+        /**
+         * @param runtimeState Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeState(String runtimeState) {
             $.runtimeState = runtimeState;
             return this;
         }
 
+        /**
+         * @param scope The ARM resource ID of the Azure Event Grid Topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param subjectBeginsWith The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             $.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
+        /**
+         * @param subjectEndsWith The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             $.subjectEndsWith = subjectEndsWith;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;CustomEventsTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

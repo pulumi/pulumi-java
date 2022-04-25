@@ -26,6 +26,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -37,6 +41,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return Resource Type.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -66,20 +74,44 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param resourceType Resource Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Resource Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

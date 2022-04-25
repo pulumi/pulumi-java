@@ -27,6 +27,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the rule.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationAddresses")
     private @Nullable List<String> destinationAddresses;
 
+    /**
+     * @return List of destination IP addresses or Service Tags.
+     * 
+     */
     public Optional<List<String>> destinationAddresses() {
         return Optional.ofNullable(this.destinationAddresses);
     }
@@ -49,6 +57,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationPorts")
     private @Nullable List<String> destinationPorts;
 
+    /**
+     * @return List of destination ports.
+     * 
+     */
     public Optional<List<String>> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
@@ -60,6 +72,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipProtocols")
     private @Nullable List<String> ipProtocols;
 
+    /**
+     * @return Array of FirewallPolicyRuleNetworkProtocols.
+     * 
+     */
     public Optional<List<String>> ipProtocols() {
         return Optional.ofNullable(this.ipProtocols);
     }
@@ -71,6 +87,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,11 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return Rule Type.
+     * Expected value is &#39;NatRule&#39;.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -94,6 +119,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceAddresses")
     private @Nullable List<String> sourceAddresses;
 
+    /**
+     * @return List of source IP addresses for this rule.
+     * 
+     */
     public Optional<List<String>> sourceAddresses() {
         return Optional.ofNullable(this.sourceAddresses);
     }
@@ -105,6 +134,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceIpGroups")
     private @Nullable List<String> sourceIpGroups;
 
+    /**
+     * @return List of source IpGroups for this rule.
+     * 
+     */
     public Optional<List<String>> sourceIpGroups() {
         return Optional.ofNullable(this.sourceIpGroups);
     }
@@ -116,6 +149,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="translatedAddress")
     private @Nullable String translatedAddress;
 
+    /**
+     * @return The translated address for this NAT rule.
+     * 
+     */
     public Optional<String> translatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
@@ -127,6 +164,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="translatedFqdn")
     private @Nullable String translatedFqdn;
 
+    /**
+     * @return The translated FQDN for this NAT rule.
+     * 
+     */
     public Optional<String> translatedFqdn() {
         return Optional.ofNullable(this.translatedFqdn);
     }
@@ -138,6 +179,10 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="translatedPort")
     private @Nullable String translatedPort;
 
+    /**
+     * @return The translated port for this NAT rule.
+     * 
+     */
     public Optional<String> translatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }
@@ -176,76 +221,173 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NatRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses or Service Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             $.destinationAddresses = destinationAddresses;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses or Service Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             $.destinationPorts = destinationPorts;
             return this;
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
 
+        /**
+         * @param ipProtocols Array of FirewallPolicyRuleNetworkProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
             $.ipProtocols = ipProtocols;
             return this;
         }
 
+        /**
+         * @param ipProtocols Array of FirewallPolicyRuleNetworkProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
         }
 
+        /**
+         * @param name Name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param ruleType Rule Type.
+         * Expected value is &#39;NatRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             $.sourceAddresses = sourceAddresses;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             $.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
         }
 
+        /**
+         * @param translatedAddress The translated address for this NAT rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder translatedAddress(@Nullable String translatedAddress) {
             $.translatedAddress = translatedAddress;
             return this;
         }
 
+        /**
+         * @param translatedFqdn The translated FQDN for this NAT rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder translatedFqdn(@Nullable String translatedFqdn) {
             $.translatedFqdn = translatedFqdn;
             return this;
         }
 
+        /**
+         * @param translatedPort The translated port for this NAT rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder translatedPort(@Nullable String translatedPort) {
             $.translatedPort = translatedPort;
             return this;

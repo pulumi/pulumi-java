@@ -19,6 +19,10 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
     private String automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public String automationAccountName() {
         return this.automationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="watcherName", required=true)
     private String watcherName;
 
+    /**
+     * @return The watcher name.
+     * 
+     */
     public String watcherName() {
         return this.watcherName;
     }
@@ -71,16 +83,34 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWatcherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param watcherName The watcher name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder watcherName(String watcherName) {
             $.watcherName = watcherName;
             return this;

@@ -15,57 +15,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkGroupResult {
     /**
-     * Network group conditional filter.
+     * @return Network group conditional filter.
      * 
      */
     private final @Nullable String conditionalMembership;
     /**
-     * A description of the network group.
+     * @return A description of the network group.
      * 
      */
     private final @Nullable String description;
     /**
-     * A friendly name for the network group.
+     * @return A friendly name for the network group.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Group members of network group.
+     * @return Group members of network group.
      * 
      */
     private final @Nullable List<GroupMembersItemResponse> groupMembers;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Group member type.
+     * @return Group member type.
      * 
      */
     private final @Nullable String memberType;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the scope assignment resource.
+     * @return The provisioning state of the scope assignment resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -97,79 +97,79 @@ public final class GetNetworkGroupResult {
     }
 
     /**
-     * Network group conditional filter.
+     * @return Network group conditional filter.
      * 
-    */
+     */
     public Optional<String> conditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
     /**
-     * A description of the network group.
+     * @return A description of the network group.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A friendly name for the network group.
+     * @return A friendly name for the network group.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Group members of network group.
+     * @return Group members of network group.
      * 
-    */
+     */
     public List<GroupMembersItemResponse> groupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Group member type.
+     * @return Group member type.
      * 
-    */
+     */
     public Optional<String> memberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the scope assignment resource.
+     * @return The provisioning state of the scope assignment resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

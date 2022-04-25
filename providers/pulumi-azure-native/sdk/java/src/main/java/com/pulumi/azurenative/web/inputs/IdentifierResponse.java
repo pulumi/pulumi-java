@@ -25,6 +25,10 @@ public final class IdentifierResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class IdentifierResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -47,6 +55,10 @@ public final class IdentifierResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class IdentifierResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -69,6 +85,10 @@ public final class IdentifierResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return String representation of the identity.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -101,26 +121,56 @@ public final class IdentifierResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IdentifierResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value String representation of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -30,6 +30,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="additionalRecipients")
     private @Nullable Output<List<String>> additionalRecipients;
 
+    /**
+     * @return The list of additional recipients
+     * 
+     */
     public Optional<Output<List<String>>> additionalRecipients() {
         return Optional.ofNullable(this.additionalRecipients);
     }
@@ -41,6 +45,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="notifyDcAdmins")
     private @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
+    /**
+     * @return Should domain controller admins be notified
+     * 
+     */
     public Optional<Output<Either<String,NotifyDcAdmins>>> notifyDcAdmins() {
         return Optional.ofNullable(this.notifyDcAdmins);
     }
@@ -52,6 +60,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="notifyGlobalAdmins")
     private @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
+    /**
+     * @return Should global admins be notified
+     * 
+     */
     public Optional<Output<Either<String,NotifyGlobalAdmins>>> notifyGlobalAdmins() {
         return Optional.ofNullable(this.notifyGlobalAdmins);
     }
@@ -82,49 +94,115 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
             $ = new NotificationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalRecipients The list of additional recipients
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalRecipients(@Nullable Output<List<String>> additionalRecipients) {
             $.additionalRecipients = additionalRecipients;
             return this;
         }
 
+        /**
+         * @param additionalRecipients The list of additional recipients
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalRecipients(List<String> additionalRecipients) {
             return additionalRecipients(Output.of(additionalRecipients));
         }
 
+        /**
+         * @param additionalRecipients The list of additional recipients
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalRecipients(String... additionalRecipients) {
             return additionalRecipients(List.of(additionalRecipients));
         }
 
+        /**
+         * @param notifyDcAdmins Should domain controller admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyDcAdmins(@Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
             $.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
 
+        /**
+         * @param notifyDcAdmins Should domain controller admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyDcAdmins(Either<String,NotifyDcAdmins> notifyDcAdmins) {
             return notifyDcAdmins(Output.of(notifyDcAdmins));
         }
 
+        /**
+         * @param notifyDcAdmins Should domain controller admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyDcAdmins(String notifyDcAdmins) {
             return notifyDcAdmins(Either.ofLeft(notifyDcAdmins));
         }
 
+        /**
+         * @param notifyDcAdmins Should domain controller admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyDcAdmins(NotifyDcAdmins notifyDcAdmins) {
             return notifyDcAdmins(Either.ofRight(notifyDcAdmins));
         }
 
+        /**
+         * @param notifyGlobalAdmins Should global admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyGlobalAdmins(@Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
             $.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
 
+        /**
+         * @param notifyGlobalAdmins Should global admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyGlobalAdmins(Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
             return notifyGlobalAdmins(Output.of(notifyGlobalAdmins));
         }
 
+        /**
+         * @param notifyGlobalAdmins Should global admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyGlobalAdmins(String notifyGlobalAdmins) {
             return notifyGlobalAdmins(Either.ofLeft(notifyGlobalAdmins));
         }
 
+        /**
+         * @param notifyGlobalAdmins Should global admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyGlobalAdmins(NotifyGlobalAdmins notifyGlobalAdmins) {
             return notifyGlobalAdmins(Either.ofRight(notifyGlobalAdmins));
         }

@@ -25,6 +25,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bandwidthSettingName")
     private @Nullable Output<String> bandwidthSettingName;
 
+    /**
+     * @return The bandwidth setting name.
+     * 
+     */
     public Optional<Output<String>> bandwidthSettingName() {
         return Optional.ofNullable(this.bandwidthSettingName);
     }
@@ -36,6 +40,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind")
     private @Nullable Output<Kind> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     public Optional<Output<Kind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -47,6 +55,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="managerName", required=true)
     private Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Output<String> managerName() {
         return this.managerName;
     }
@@ -58,6 +70,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="schedules", required=true)
     private Output<List<BandwidthScheduleArgs>> schedules;
 
+    /**
+     * @return The schedules.
+     * 
+     */
     public Output<List<BandwidthScheduleArgs>> schedules() {
         return this.schedules;
     }
@@ -101,51 +121,117 @@ public final class BandwidthSettingArgs extends com.pulumi.resources.ResourceArg
             $ = new BandwidthSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthSettingName The bandwidth setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthSettingName(@Nullable Output<String> bandwidthSettingName) {
             $.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
 
+        /**
+         * @param bandwidthSettingName The bandwidth setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthSettingName(String bandwidthSettingName) {
             return bandwidthSettingName(Output.of(bandwidthSettingName));
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Kind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schedules The schedules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(Output<List<BandwidthScheduleArgs>> schedules) {
             $.schedules = schedules;
             return this;
         }
 
+        /**
+         * @param schedules The schedules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(List<BandwidthScheduleArgs> schedules) {
             return schedules(Output.of(schedules));
         }
 
+        /**
+         * @param schedules The schedules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(BandwidthScheduleArgs... schedules) {
             return schedules(List.of(schedules));
         }

@@ -29,6 +29,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="authorization")
     private @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
+    /**
+     * @return Authorization header authentication
+     * 
+     */
     public Optional<Output<BackendAuthorizationHeaderCredentialsArgs>> authorization() {
         return Optional.ofNullable(this.authorization);
     }
@@ -40,6 +44,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="certificate")
     private @Nullable Output<List<String>> certificate;
 
+    /**
+     * @return List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+     * 
+     */
     public Optional<Output<List<String>>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -51,6 +59,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="certificateIds")
     private @Nullable Output<List<String>> certificateIds;
 
+    /**
+     * @return List of Client Certificate Ids.
+     * 
+     */
     public Optional<Output<List<String>>> certificateIds() {
         return Optional.ofNullable(this.certificateIds);
     }
@@ -62,6 +74,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="header")
     private @Nullable Output<Map<String,List<String>>> header;
 
+    /**
+     * @return Header Parameter description.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> header() {
         return Optional.ofNullable(this.header);
     }
@@ -73,6 +89,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="query")
     private @Nullable Output<Map<String,List<String>>> query;
 
+    /**
+     * @return Query Parameter description.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -105,55 +125,127 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
             $ = new BackendCredentialsContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorization Authorization header authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(@Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param authorization Authorization header authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(BackendAuthorizationHeaderCredentialsArgs authorization) {
             return authorization(Output.of(authorization));
         }
 
+        /**
+         * @param certificate List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<List<String>> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(List<String> certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param certificate List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String... certificate) {
             return certificate(List.of(certificate));
         }
 
+        /**
+         * @param certificateIds List of Client Certificate Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIds(@Nullable Output<List<String>> certificateIds) {
             $.certificateIds = certificateIds;
             return this;
         }
 
+        /**
+         * @param certificateIds List of Client Certificate Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIds(List<String> certificateIds) {
             return certificateIds(Output.of(certificateIds));
         }
 
+        /**
+         * @param certificateIds List of Client Certificate Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIds(String... certificateIds) {
             return certificateIds(List.of(certificateIds));
         }
 
+        /**
+         * @param header Header Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(@Nullable Output<Map<String,List<String>>> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header Header Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(Map<String,List<String>> header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param query Query Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<Map<String,List<String>>> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Query Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Map<String,List<String>> query) {
             return query(Output.of(query));
         }

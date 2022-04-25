@@ -26,6 +26,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterBootstrapAccount")
     private @Nullable Output<String> clusterBootstrapAccount;
 
+    /**
+     * @return Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+     * 
+     */
     public Optional<Output<String>> clusterBootstrapAccount() {
         return Optional.ofNullable(this.clusterBootstrapAccount);
     }
@@ -37,6 +41,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterOperatorAccount")
     private @Nullable Output<String> clusterOperatorAccount;
 
+    /**
+     * @return Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+     * 
+     */
     public Optional<Output<String>> clusterOperatorAccount() {
         return Optional.ofNullable(this.clusterOperatorAccount);
     }
@@ -48,6 +56,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="domainFqdn")
     private @Nullable Output<String> domainFqdn;
 
+    /**
+     * @return Fully qualified name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainFqdn() {
         return Optional.ofNullable(this.domainFqdn);
     }
@@ -59,6 +71,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fileShareWitnessPath")
     private @Nullable Output<String> fileShareWitnessPath;
 
+    /**
+     * @return Optional path for fileshare witness.
+     * 
+     */
     public Optional<Output<String>> fileShareWitnessPath() {
         return Optional.ofNullable(this.fileShareWitnessPath);
     }
@@ -70,6 +86,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ouPath")
     private @Nullable Output<String> ouPath;
 
+    /**
+     * @return Organizational Unit path in which the nodes and cluster will be present.
+     * 
+     */
     public Optional<Output<String>> ouPath() {
         return Optional.ofNullable(this.ouPath);
     }
@@ -81,6 +101,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlServiceAccount")
     private @Nullable Output<String> sqlServiceAccount;
 
+    /**
+     * @return Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+     * 
+     */
     public Optional<Output<String>> sqlServiceAccount() {
         return Optional.ofNullable(this.sqlServiceAccount);
     }
@@ -92,6 +116,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageAccountPrimaryKey")
     private @Nullable Output<String> storageAccountPrimaryKey;
 
+    /**
+     * @return Primary key of the witness storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountPrimaryKey() {
         return Optional.ofNullable(this.storageAccountPrimaryKey);
     }
@@ -103,6 +131,10 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageAccountUrl")
     private @Nullable Output<String> storageAccountUrl;
 
+    /**
+     * @return Fully qualified ARM resource id of the witness storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }
@@ -138,74 +170,170 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
             $ = new WsfcDomainProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterBootstrapAccount Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterBootstrapAccount(@Nullable Output<String> clusterBootstrapAccount) {
             $.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
 
+        /**
+         * @param clusterBootstrapAccount Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterBootstrapAccount(String clusterBootstrapAccount) {
             return clusterBootstrapAccount(Output.of(clusterBootstrapAccount));
         }
 
+        /**
+         * @param clusterOperatorAccount Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterOperatorAccount(@Nullable Output<String> clusterOperatorAccount) {
             $.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
 
+        /**
+         * @param clusterOperatorAccount Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterOperatorAccount(String clusterOperatorAccount) {
             return clusterOperatorAccount(Output.of(clusterOperatorAccount));
         }
 
+        /**
+         * @param domainFqdn Fully qualified name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainFqdn(@Nullable Output<String> domainFqdn) {
             $.domainFqdn = domainFqdn;
             return this;
         }
 
+        /**
+         * @param domainFqdn Fully qualified name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainFqdn(String domainFqdn) {
             return domainFqdn(Output.of(domainFqdn));
         }
 
+        /**
+         * @param fileShareWitnessPath Optional path for fileshare witness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareWitnessPath(@Nullable Output<String> fileShareWitnessPath) {
             $.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
 
+        /**
+         * @param fileShareWitnessPath Optional path for fileshare witness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareWitnessPath(String fileShareWitnessPath) {
             return fileShareWitnessPath(Output.of(fileShareWitnessPath));
         }
 
+        /**
+         * @param ouPath Organizational Unit path in which the nodes and cluster will be present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ouPath(@Nullable Output<String> ouPath) {
             $.ouPath = ouPath;
             return this;
         }
 
+        /**
+         * @param ouPath Organizational Unit path in which the nodes and cluster will be present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ouPath(String ouPath) {
             return ouPath(Output.of(ouPath));
         }
 
+        /**
+         * @param sqlServiceAccount Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServiceAccount(@Nullable Output<String> sqlServiceAccount) {
             $.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
 
+        /**
+         * @param sqlServiceAccount Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServiceAccount(String sqlServiceAccount) {
             return sqlServiceAccount(Output.of(sqlServiceAccount));
         }
 
+        /**
+         * @param storageAccountPrimaryKey Primary key of the witness storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountPrimaryKey(@Nullable Output<String> storageAccountPrimaryKey) {
             $.storageAccountPrimaryKey = storageAccountPrimaryKey;
             return this;
         }
 
+        /**
+         * @param storageAccountPrimaryKey Primary key of the witness storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountPrimaryKey(String storageAccountPrimaryKey) {
             return storageAccountPrimaryKey(Output.of(storageAccountPrimaryKey));
         }
 
+        /**
+         * @param storageAccountUrl Fully qualified ARM resource id of the witness storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(@Nullable Output<String> storageAccountUrl) {
             $.storageAccountUrl = storageAccountUrl;
             return this;
         }
 
+        /**
+         * @param storageAccountUrl Fully qualified ARM resource id of the witness storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(String storageAccountUrl) {
             return storageAccountUrl(Output.of(storageAccountUrl));
         }

@@ -19,6 +19,10 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sshPublicKeyName", required=true)
     private String sshPublicKeyName;
 
+    /**
+     * @return The name of the SSH public key.
+     * 
+     */
     public String sshPublicKeyName() {
         return this.sshPublicKeyName;
     }
@@ -59,11 +67,23 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sshPublicKeyName The name of the SSH public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicKeyName(String sshPublicKeyName) {
             $.sshPublicKeyName = sshPublicKeyName;
             return this;

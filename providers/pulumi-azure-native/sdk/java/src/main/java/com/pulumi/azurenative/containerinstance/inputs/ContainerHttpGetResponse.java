@@ -27,6 +27,10 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="httpHeaders")
     private @Nullable HttpHeadersResponse httpHeaders;
 
+    /**
+     * @return The HTTP headers.
+     * 
+     */
     public Optional<HttpHeadersResponse> httpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
@@ -38,6 +42,10 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path to probe.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,10 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port number to probe.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -60,6 +72,10 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="scheme")
     private @Nullable String scheme;
 
+    /**
+     * @return The scheme.
+     * 
+     */
     public Optional<String> scheme() {
         return Optional.ofNullable(this.scheme);
     }
@@ -91,21 +107,45 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
             $ = new ContainerHttpGetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpHeaders The HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(@Nullable HttpHeadersResponse httpHeaders) {
             $.httpHeaders = httpHeaders;
             return this;
         }
 
+        /**
+         * @param path The path to probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param port The port number to probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param scheme The scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(@Nullable String scheme) {
             $.scheme = scheme;
             return this;

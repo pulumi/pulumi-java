@@ -27,6 +27,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="allowedAuthenticationType")
     private @Nullable Integer allowedAuthenticationType;
 
+    /**
+     * @return A value indicating the authentication type.
+     * 
+     */
     public Optional<Integer> allowedAuthenticationType() {
         return Optional.ofNullable(this.allowedAuthenticationType);
     }
@@ -38,6 +42,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
     private @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
+    /**
+     * @return A value indicating the application consistent frequency.
+     * 
+     */
     public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
@@ -49,6 +57,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="compression")
     private @Nullable String compression;
 
+    /**
+     * @return A value indicating whether compression has to be enabled.
+     * 
+     */
     public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -60,6 +72,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="initialReplicationMethod")
     private @Nullable String initialReplicationMethod;
 
+    /**
+     * @return A value indicating whether IR is online.
+     * 
+     */
     public Optional<String> initialReplicationMethod() {
         return Optional.ofNullable(this.initialReplicationMethod);
     }
@@ -72,6 +88,11 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;HyperVReplicaBasePolicyDetails&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -83,6 +104,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="offlineReplicationExportPath")
     private @Nullable String offlineReplicationExportPath;
 
+    /**
+     * @return A value indicating the offline IR export path.
+     * 
+     */
     public Optional<String> offlineReplicationExportPath() {
         return Optional.ofNullable(this.offlineReplicationExportPath);
     }
@@ -94,6 +119,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="offlineReplicationImportPath")
     private @Nullable String offlineReplicationImportPath;
 
+    /**
+     * @return A value indicating the offline IR import path.
+     * 
+     */
     public Optional<String> offlineReplicationImportPath() {
         return Optional.ofNullable(this.offlineReplicationImportPath);
     }
@@ -105,6 +134,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="onlineReplicationStartTime")
     private @Nullable String onlineReplicationStartTime;
 
+    /**
+     * @return A value indicating the online IR start time.
+     * 
+     */
     public Optional<String> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
@@ -116,6 +149,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="recoveryPoints")
     private @Nullable Integer recoveryPoints;
 
+    /**
+     * @return A value indicating the number of recovery points.
+     * 
+     */
     public Optional<Integer> recoveryPoints() {
         return Optional.ofNullable(this.recoveryPoints);
     }
@@ -127,6 +164,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="replicaDeletionOption")
     private @Nullable String replicaDeletionOption;
 
+    /**
+     * @return A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
+     * 
+     */
     public Optional<String> replicaDeletionOption() {
         return Optional.ofNullable(this.replicaDeletionOption);
     }
@@ -138,6 +179,10 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
     @Import(name="replicationPort")
     private @Nullable Integer replicationPort;
 
+    /**
+     * @return A value indicating the recovery HTTPS port.
+     * 
+     */
     public Optional<Integer> replicationPort() {
         return Optional.ofNullable(this.replicationPort);
     }
@@ -176,56 +221,123 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
             $ = new HyperVReplicaBasePolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedAuthenticationType A value indicating the authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
             $.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
 
+        /**
+         * @param applicationConsistentSnapshotFrequencyInHours A value indicating the application consistent frequency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
+        /**
+         * @param compression A value indicating whether compression has to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable String compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param initialReplicationMethod A value indicating whether IR is online.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
             $.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;HyperVReplicaBasePolicyDetails&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param offlineReplicationExportPath A value indicating the offline IR export path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
             $.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
 
+        /**
+         * @param offlineReplicationImportPath A value indicating the offline IR import path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
             $.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
 
+        /**
+         * @param onlineReplicationStartTime A value indicating the online IR start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
+        /**
+         * @param recoveryPoints A value indicating the number of recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
             $.recoveryPoints = recoveryPoints;
             return this;
         }
 
+        /**
+         * @param replicaDeletionOption A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaDeletionOption(@Nullable String replicaDeletionOption) {
             $.replicaDeletionOption = replicaDeletionOption;
             return this;
         }
 
+        /**
+         * @param replicationPort A value indicating the recovery HTTPS port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationPort(@Nullable Integer replicationPort) {
             $.replicationPort = replicationPort;
             return this;

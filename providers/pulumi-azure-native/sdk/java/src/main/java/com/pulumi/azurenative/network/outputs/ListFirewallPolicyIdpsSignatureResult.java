@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListFirewallPolicyIdpsSignatureResult {
     /**
-     * Number of total records matching the query.
+     * @return Number of total records matching the query.
      * 
      */
     private final @Nullable Double matchingRecordsCount;
     /**
-     * Array containing the results of the query
+     * @return Array containing the results of the query
      * 
      */
     private final @Nullable List<SingleQueryResultResponse> signatures;
@@ -33,16 +33,16 @@ public final class ListFirewallPolicyIdpsSignatureResult {
     }
 
     /**
-     * Number of total records matching the query.
+     * @return Number of total records matching the query.
      * 
-    */
+     */
     public Optional<Double> matchingRecordsCount() {
         return Optional.ofNullable(this.matchingRecordsCount);
     }
     /**
-     * Array containing the results of the query
+     * @return Array containing the results of the query
      * 
-    */
+     */
     public List<SingleQueryResultResponse> signatures() {
         return this.signatures == null ? List.of() : this.signatures;
     }

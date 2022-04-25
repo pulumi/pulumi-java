@@ -19,6 +19,10 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationName", required=true)
     private String automationName;
 
+    /**
+     * @return The security automation name.
+     * 
+     */
     public String automationName() {
         return this.automationName;
     }
@@ -30,6 +34,10 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAutomationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationName The security automation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationName(String automationName) {
             $.automationName = automationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

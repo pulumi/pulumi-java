@@ -19,6 +19,10 @@ public final class GetHierarchySettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return Management Group ID.
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -47,6 +51,12 @@ public final class GetHierarchySettingArgs extends com.pulumi.resources.InvokeAr
             $ = new GetHierarchySettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;

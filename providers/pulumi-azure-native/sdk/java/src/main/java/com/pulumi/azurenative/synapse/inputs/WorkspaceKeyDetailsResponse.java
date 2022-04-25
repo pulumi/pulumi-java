@@ -25,6 +25,10 @@ public final class WorkspaceKeyDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="keyVaultUrl")
     private @Nullable String keyVaultUrl;
 
+    /**
+     * @return Workspace Key sub-resource key vault url
+     * 
+     */
     public Optional<String> keyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
@@ -36,6 +40,10 @@ public final class WorkspaceKeyDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Workspace Key sub-resource name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class WorkspaceKeyDetailsResponse extends com.pulumi.resources.Invo
             $ = new WorkspaceKeyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultUrl Workspace Key sub-resource key vault url
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
             $.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
+        /**
+         * @param name Workspace Key sub-resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

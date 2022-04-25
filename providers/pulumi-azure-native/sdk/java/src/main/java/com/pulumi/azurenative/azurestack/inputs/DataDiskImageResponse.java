@@ -24,6 +24,10 @@ public final class DataDiskImageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lun", required=true)
     private Integer lun;
 
+    /**
+     * @return The LUN.
+     * 
+     */
     public Integer lun() {
         return this.lun;
     }
@@ -35,6 +39,10 @@ public final class DataDiskImageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceBlobSasUri", required=true)
     private String sourceBlobSasUri;
 
+    /**
+     * @return SAS key for source blob.
+     * 
+     */
     public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
@@ -64,11 +72,23 @@ public final class DataDiskImageResponse extends com.pulumi.resources.InvokeArgs
             $ = new DataDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lun The LUN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param sourceBlobSasUri SAS key for source blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBlobSasUri(String sourceBlobSasUri) {
             $.sourceBlobSasUri = sourceBlobSasUri;
             return this;

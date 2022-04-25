@@ -24,6 +24,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<SecretResourcePropertiesArgs> properties;
 
+    /**
+     * @return Describes the properties of a secret resource.
+     * 
+     */
     public Output<SecretResourcePropertiesArgs> properties() {
         return this.properties;
     }
@@ -46,6 +54,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretResourceName")
     private @Nullable Output<String> secretResourceName;
 
+    /**
+     * @return The name of the secret resource.
+     * 
+     */
     public Optional<Output<String>> secretResourceName() {
         return Optional.ofNullable(this.secretResourceName);
     }
@@ -68,6 +84,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Describes the properties of a secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<SecretResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Describes the properties of a secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SecretResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param secretResourceName The name of the secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretResourceName(@Nullable Output<String> secretResourceName) {
             $.secretResourceName = secretResourceName;
             return this;
         }
 
+        /**
+         * @param secretResourceName The name of the secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretResourceName(String secretResourceName) {
             return secretResourceName(Output.of(secretResourceName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

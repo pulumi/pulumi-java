@@ -25,6 +25,10 @@ public final class BudgetTimePeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="endDate")
     private @Nullable String endDate;
 
+    /**
+     * @return The end date for the budget. If not provided, we default this to 10 years from the start date.
+     * 
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -36,6 +40,10 @@ public final class BudgetTimePeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="startDate", required=true)
     private String startDate;
 
+    /**
+     * @return The start date for the budget.
+     * 
+     */
     public String startDate() {
         return this.startDate;
     }
@@ -65,11 +73,23 @@ public final class BudgetTimePeriodResponse extends com.pulumi.resources.InvokeA
             $ = new BudgetTimePeriodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate The end date for the budget. If not provided, we default this to 10 years from the start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable String endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param startDate The start date for the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(String startDate) {
             $.startDate = startDate;
             return this;

@@ -25,6 +25,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="certificateData")
     private @Nullable String certificateData;
 
+    /**
+     * @return The certificate for SSH.
+     * 
+     */
     public Optional<String> certificateData() {
         return Optional.ofNullable(this.certificateData);
     }
@@ -53,6 +57,12 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateData The certificate for SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateData(@Nullable String certificateData) {
             $.certificateData = certificateData;
             return this;

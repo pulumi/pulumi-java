@@ -27,6 +27,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="defaultAction")
     private @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
+    /**
+     * @return Default Action for Network Rule Set
+     * 
+     */
     public Optional<Output<Either<String,DefaultAction>>> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -38,6 +42,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="ipRules")
     private @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
 
+    /**
+     * @return List of IpRules
+     * 
+     */
     public Optional<Output<List<NWRuleSetIpRulesArgs>>> ipRules() {
         return Optional.ofNullable(this.ipRules);
     }
@@ -49,6 +57,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -60,6 +72,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,6 +87,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="virtualNetworkRules")
     private @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
+    /**
+     * @return List VirtualNetwork Rules
+     * 
+     */
     public Optional<Output<List<NWRuleSetVirtualNetworkRulesArgs>>> virtualNetworkRules() {
         return Optional.ofNullable(this.virtualNetworkRules);
     }
@@ -103,63 +123,147 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
             $ = new NamespaceNetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable Output<Either<String,DefaultAction>> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(String defaultAction) {
             return defaultAction(Either.ofLeft(defaultAction));
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(DefaultAction defaultAction) {
             return defaultAction(Either.ofRight(defaultAction));
         }
 
+        /**
+         * @param ipRules List of IpRules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(@Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules List of IpRules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(List<NWRuleSetIpRulesArgs> ipRules) {
             return ipRules(Output.of(ipRules));
         }
 
+        /**
+         * @param ipRules List of IpRules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(NWRuleSetIpRulesArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualNetworkRules List VirtualNetwork Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(@Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
             $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRules List VirtualNetwork Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
             return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
 
+        /**
+         * @param virtualNetworkRules List VirtualNetwork Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(NWRuleSetVirtualNetworkRulesArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
         }

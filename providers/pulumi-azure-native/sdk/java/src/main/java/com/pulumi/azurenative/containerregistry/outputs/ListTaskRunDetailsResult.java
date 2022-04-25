@@ -20,52 +20,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListTaskRunDetailsResult {
     /**
-     * How the run should be forced to rerun even if the run request configuration has not changed
+     * @return How the run should be forced to rerun even if the run request configuration has not changed
      * 
      */
     private final @Nullable String forceUpdateTag;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
      */
     private final @Nullable IdentityPropertiesResponse identity;
     /**
-     * The location of the resource
+     * @return The location of the resource
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of this task run
+     * @return The provisioning state of this task run
      * 
      */
     private final String provisioningState;
     /**
-     * The request (parameters) for the run
+     * @return The request (parameters) for the run
      * 
      */
     private final @Nullable Object runRequest;
     /**
-     * The result of this task run
+     * @return The result of this task run
      * 
      */
     private final RunResponse runResult;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -95,72 +95,72 @@ public final class ListTaskRunDetailsResult {
     }
 
     /**
-     * How the run should be forced to rerun even if the run request configuration has not changed
+     * @return How the run should be forced to rerun even if the run request configuration has not changed
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
-    */
+     */
     public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The location of the resource
+     * @return The location of the resource
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of this task run
+     * @return The provisioning state of this task run
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The request (parameters) for the run
+     * @return The request (parameters) for the run
      * 
-    */
+     */
     public Optional<Object> runRequest() {
         return Optional.ofNullable(this.runRequest);
     }
     /**
-     * The result of this task run
+     * @return The result of this task run
      * 
-    */
+     */
     public RunResponse runResult() {
         return this.runResult;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

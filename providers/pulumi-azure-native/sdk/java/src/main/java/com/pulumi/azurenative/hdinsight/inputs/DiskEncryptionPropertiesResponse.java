@@ -27,6 +27,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="encryptionAlgorithm")
     private @Nullable String encryptionAlgorithm;
 
+    /**
+     * @return Algorithm identifier for encryption, default RSA-OAEP.
+     * 
+     */
     public Optional<String> encryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
@@ -38,6 +42,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="encryptionAtHost")
     private @Nullable Boolean encryptionAtHost;
 
+    /**
+     * @return Indicates whether or not resource disk encryption is enabled.
+     * 
+     */
     public Optional<Boolean> encryptionAtHost() {
         return Optional.ofNullable(this.encryptionAtHost);
     }
@@ -49,6 +57,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return Key name that is used for enabling disk encryption.
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -60,6 +72,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return Specific key version that is used for enabling disk encryption.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -71,6 +87,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="msiResourceId")
     private @Nullable String msiResourceId;
 
+    /**
+     * @return Resource ID of Managed Identity that is used to access the key vault.
+     * 
+     */
     public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
@@ -82,6 +102,10 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="vaultUri")
     private @Nullable String vaultUri;
 
+    /**
+     * @return Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+     * 
+     */
     public Optional<String> vaultUri() {
         return Optional.ofNullable(this.vaultUri);
     }
@@ -115,31 +139,67 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
             $ = new DiskEncryptionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm Algorithm identifier for encryption, default RSA-OAEP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionAtHost Indicates whether or not resource disk encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             $.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
+        /**
+         * @param keyName Key name that is used for enabling disk encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVersion Specific key version that is used for enabling disk encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param msiResourceId Resource ID of Managed Identity that is used to access the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(@Nullable String msiResourceId) {
             $.msiResourceId = msiResourceId;
             return this;
         }
 
+        /**
+         * @param vaultUri Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(@Nullable String vaultUri) {
             $.vaultUri = vaultUri;
             return this;

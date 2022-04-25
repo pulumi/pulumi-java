@@ -25,6 +25,10 @@ public final class EntityParentGroupInfoResponse extends com.pulumi.resources.In
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class EntityParentGroupInfoResponse extends com.pulumi.resources.In
             $ = new EntityParentGroupInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

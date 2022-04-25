@@ -22,6 +22,10 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
     @Import(name="countryCode")
     private @Nullable Output<String> countryCode;
 
+    /**
+     * @return Country code of Azure tenant (e.g. &#39;US&#39;). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
+     * 
+     */
     public Optional<Output<String>> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
@@ -33,6 +37,10 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the B2C tenant.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -62,20 +70,44 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
             $ = new CreateTenantRequestBodyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countryCode Country code of Azure tenant (e.g. &#39;US&#39;). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(@Nullable Output<String> countryCode) {
             $.countryCode = countryCode;
             return this;
         }
 
+        /**
+         * @param countryCode Country code of Azure tenant (e.g. &#39;US&#39;). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(String countryCode) {
             return countryCode(Output.of(countryCode));
         }
 
+        /**
+         * @param displayName The display name of the B2C tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the B2C tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

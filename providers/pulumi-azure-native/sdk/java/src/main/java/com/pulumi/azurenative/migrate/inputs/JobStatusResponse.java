@@ -23,6 +23,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobName", required=true)
     private String jobName;
 
+    /**
+     * @return Defines the job name.
+     * 
+     */
     public String jobName() {
         return this.jobName;
     }
@@ -34,6 +38,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobProgress", required=true)
     private String jobProgress;
 
+    /**
+     * @return Gets or sets the monitoring job percentage.
+     * 
+     */
     public String jobProgress() {
         return this.jobProgress;
     }
@@ -63,11 +71,23 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobName Defines the job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobProgress Gets or sets the monitoring job percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobProgress(String jobProgress) {
             $.jobProgress = jobProgress;
             return this;

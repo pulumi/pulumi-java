@@ -23,6 +23,10 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Storage class name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
     @Import(name="posixCompliant", required=true)
     private String posixCompliant;
 
+    /**
+     * @return If provisioned storage is posix compliant.
+     * 
+     */
     public String posixCompliant() {
         return this.posixCompliant;
     }
@@ -45,6 +53,10 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Storage class type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
             $ = new KubernetesRoleStorageClassInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Storage class name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param posixCompliant If provisioned storage is posix compliant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixCompliant(String posixCompliant) {
             $.posixCompliant = posixCompliant;
             return this;
         }
 
+        /**
+         * @param type Storage class type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

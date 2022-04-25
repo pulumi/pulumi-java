@@ -29,6 +29,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessKey1", required=true)
     private Output<String> accessKey1;
 
+    /**
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
+     * 
+     */
     public Output<String> accessKey1() {
         return this.accessKey1;
     }
@@ -40,6 +44,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessKey2")
     private @Nullable Output<String> accessKey2;
 
+    /**
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
+     * 
+     */
     public Optional<Output<String>> accessKey2() {
         return Optional.ofNullable(this.accessKey2);
     }
@@ -51,6 +59,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
     private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
+    /**
+     * @return Specifies the authentication type being used for connecting to the endpoint.
+     * 
+     */
     public Optional<Output<Either<String,AuthenticationType>>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -62,6 +74,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterSecret")
     private @Nullable Output<String> deadLetterSecret;
 
+    /**
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     public Optional<Output<String>> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
@@ -73,6 +89,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterUri")
     private @Nullable Output<String> deadLetterUri;
 
+    /**
+     * @return Dead letter storage URL for identity-based authentication.
+     * 
+     */
     public Optional<Output<String>> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
@@ -85,6 +105,11 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return The type of Digital Twins endpoint
+     * Expected value is &#39;EventGrid&#39;.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -96,6 +121,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicEndpoint", required=true)
     private Output<String> topicEndpoint;
 
+    /**
+     * @return EventGrid Topic Endpoint
+     * 
+     */
     public Output<String> topicEndpoint() {
         return this.topicEndpoint;
     }
@@ -130,73 +159,171 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventGridArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey1 EventGrid secondary accesskey. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey1(Output<String> accessKey1) {
             $.accessKey1 = accessKey1;
             return this;
         }
 
+        /**
+         * @param accessKey1 EventGrid secondary accesskey. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey1(String accessKey1) {
             return accessKey1(Output.of(accessKey1));
         }
 
+        /**
+         * @param accessKey2 EventGrid secondary accesskey. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey2(@Nullable Output<String> accessKey2) {
             $.accessKey2 = accessKey2;
             return this;
         }
 
+        /**
+         * @param accessKey2 EventGrid secondary accesskey. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey2(String accessKey2) {
             return accessKey2(Output.of(accessKey2));
         }
 
+        /**
+         * @param authenticationType Specifies the authentication type being used for connecting to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Specifies the authentication type being used for connecting to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType Specifies the authentication type being used for connecting to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType Specifies the authentication type being used for connecting to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(AuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param deadLetterSecret Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
             $.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
+        /**
+         * @param deadLetterSecret Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterSecret(String deadLetterSecret) {
             return deadLetterSecret(Output.of(deadLetterSecret));
         }
 
+        /**
+         * @param deadLetterUri Dead letter storage URL for identity-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
             $.deadLetterUri = deadLetterUri;
             return this;
         }
 
+        /**
+         * @param deadLetterUri Dead letter storage URL for identity-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterUri(String deadLetterUri) {
             return deadLetterUri(Output.of(deadLetterUri));
         }
 
+        /**
+         * @param endpointType The type of Digital Twins endpoint
+         * Expected value is &#39;EventGrid&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType The type of Digital Twins endpoint
+         * Expected value is &#39;EventGrid&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param topicEndpoint EventGrid Topic Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicEndpoint(Output<String> topicEndpoint) {
             $.topicEndpoint = topicEndpoint;
             return this;
         }
 
+        /**
+         * @param topicEndpoint EventGrid Topic Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicEndpoint(String topicEndpoint) {
             return topicEndpoint(Output.of(topicEndpoint));
         }

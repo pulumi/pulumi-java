@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NodeInfoResponse {
     /**
-     * IP Configuration of the Kubernetes node.
+     * @return IP Configuration of the Kubernetes node.
      * 
      */
     private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
     /**
-     * Node name.
+     * @return Node name.
      * 
      */
     private final String name;
     /**
-     * Node type - Master/Worker
+     * @return Node type - Master/Worker
      * 
      */
     private final String type;
@@ -39,23 +39,23 @@ public final class NodeInfoResponse {
     }
 
     /**
-     * IP Configuration of the Kubernetes node.
+     * @return IP Configuration of the Kubernetes node.
      * 
-    */
+     */
     public List<KubernetesIPConfigurationResponse> ipConfiguration() {
         return this.ipConfiguration == null ? List.of() : this.ipConfiguration;
     }
     /**
-     * Node name.
+     * @return Node name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Node type - Master/Worker
+     * @return Node type - Master/Worker
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

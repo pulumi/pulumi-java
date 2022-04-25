@@ -29,6 +29,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Name of the item
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -40,6 +44,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -51,6 +59,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="errorCount", required=true)
     private Double errorCount;
 
+    /**
+     * @return Number of database/object errors.
+     * 
+     */
     public Double errorCount() {
         return this.errorCount;
     }
@@ -62,6 +74,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="errorPrefix", required=true)
     private String errorPrefix;
 
+    /**
+     * @return Wildcard string prefix to use for querying all errors of the item
+     * 
+     */
     public String errorPrefix() {
         return this.errorPrefix;
     }
@@ -73,6 +89,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Migration exceptions and warnings.
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -84,6 +104,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -95,6 +119,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Migration progress message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -106,6 +134,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="numberOfObjects", required=true)
     private Double numberOfObjects;
 
+    /**
+     * @return Number of objects
+     * 
+     */
     public Double numberOfObjects() {
         return this.numberOfObjects;
     }
@@ -117,6 +149,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="numberOfObjectsCompleted", required=true)
     private Double numberOfObjectsCompleted;
 
+    /**
+     * @return Number of successfully completed objects
+     * 
+     */
     public Double numberOfObjectsCompleted() {
         return this.numberOfObjectsCompleted;
     }
@@ -128,6 +164,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="objectSummary", required=true)
     private Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
 
+    /**
+     * @return Summary of object results in the migration
+     * 
+     */
     public Map<String,DataItemMigrationSummaryResultResponse> objectSummary() {
         return this.objectSummary;
     }
@@ -139,6 +179,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="resultPrefix", required=true)
     private String resultPrefix;
 
+    /**
+     * @return Wildcard string prefix to use for querying all sub-tem results of the item
+     * 
+     */
     public String resultPrefix() {
         return this.resultPrefix;
     }
@@ -151,6 +195,11 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -162,6 +211,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="stage", required=true)
     private String stage;
 
+    /**
+     * @return Migration stage that this database is in
+     * 
+     */
     public String stage() {
         return this.stage;
     }
@@ -173,6 +226,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -184,6 +241,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -195,6 +256,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     @Import(name="statusMessage", required=true)
     private String statusMessage;
 
+    /**
+     * @return Status message
+     * 
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
@@ -238,85 +303,188 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
             $ = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Name of the item
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param errorCount Number of database/object errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCount(Double errorCount) {
             $.errorCount = errorCount;
             return this;
         }
 
+        /**
+         * @param errorPrefix Wildcard string prefix to use for querying all errors of the item
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorPrefix(String errorPrefix) {
             $.errorPrefix = errorPrefix;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param message Migration progress message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param numberOfObjects Number of objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfObjects(Double numberOfObjects) {
             $.numberOfObjects = numberOfObjects;
             return this;
         }
 
+        /**
+         * @param numberOfObjectsCompleted Number of successfully completed objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfObjectsCompleted(Double numberOfObjectsCompleted) {
             $.numberOfObjectsCompleted = numberOfObjectsCompleted;
             return this;
         }
 
+        /**
+         * @param objectSummary Summary of object results in the migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectSummary(Map<String,DataItemMigrationSummaryResultResponse> objectSummary) {
             $.objectSummary = objectSummary;
             return this;
         }
 
+        /**
+         * @param resultPrefix Wildcard string prefix to use for querying all sub-tem results of the item
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultPrefix(String resultPrefix) {
             $.resultPrefix = resultPrefix;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;DatabaseLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param stage Migration stage that this database is in
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param state Current state of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param statusMessage Status message
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(String statusMessage) {
             $.statusMessage = statusMessage;
             return this;

@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class ConnectToTargetSqlDbTaskOutputResponse {
     /**
-     * Source databases as a map from database name to database id
+     * @return Source databases as a map from database name to database id
      * 
      */
     private final Map<String,String> databases;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
      */
     private final String targetServerBrandVersion;
     /**
-     * Version of the target server
+     * @return Version of the target server
      * 
      */
     private final String targetServerVersion;
@@ -44,30 +44,30 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
     }
 
     /**
-     * Source databases as a map from database name to database id
+     * @return Source databases as a map from database name to database id
      * 
-    */
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Version of the target server
+     * @return Version of the target server
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }

@@ -24,6 +24,10 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="migrationProgress", required=true)
     private MigrationProgressResponse migrationProgress;
 
+    /**
+     * @return Migration Progress
+     * 
+     */
     public MigrationProgressResponse migrationProgress() {
         return this.migrationProgress;
     }
@@ -35,6 +39,10 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="oldSubnetId", required=true)
     private String oldSubnetId;
 
+    /**
+     * @return Old Subnet Id
+     * 
+     */
     public String oldSubnetId() {
         return this.oldSubnetId;
     }
@@ -46,6 +54,10 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="oldVnetSiteId", required=true)
     private String oldVnetSiteId;
 
+    /**
+     * @return Old Vnet Site Id
+     * 
+     */
     public String oldVnetSiteId() {
         return this.oldVnetSiteId;
     }
@@ -76,16 +88,34 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
             $ = new MigrationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrationProgress Migration Progress
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationProgress(MigrationProgressResponse migrationProgress) {
             $.migrationProgress = migrationProgress;
             return this;
         }
 
+        /**
+         * @param oldSubnetId Old Subnet Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldSubnetId(String oldSubnetId) {
             $.oldSubnetId = oldSubnetId;
             return this;
         }
 
+        /**
+         * @param oldVnetSiteId Old Vnet Site Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldVnetSiteId(String oldVnetSiteId) {
             $.oldVnetSiteId = oldVnetSiteId;
             return this;

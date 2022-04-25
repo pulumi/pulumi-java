@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetFilterPropertiesResponse {
     /**
-     * Has comparison expression for a dimension
+     * @return Has comparison expression for a dimension
      * 
      */
     private final @Nullable BudgetComparisonExpressionResponse dimensions;
     /**
-     * Has comparison expression for a tag
+     * @return Has comparison expression for a tag
      * 
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
@@ -31,16 +31,16 @@ public final class BudgetFilterPropertiesResponse {
     }
 
     /**
-     * Has comparison expression for a dimension
+     * @return Has comparison expression for a dimension
      * 
-    */
+     */
     public Optional<BudgetComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
-     * Has comparison expression for a tag
+     * @return Has comparison expression for a tag
      * 
-    */
+     */
     public Optional<BudgetComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }

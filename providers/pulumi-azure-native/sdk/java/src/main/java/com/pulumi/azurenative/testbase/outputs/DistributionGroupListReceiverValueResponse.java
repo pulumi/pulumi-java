@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DistributionGroupListReceiverValueResponse {
     /**
-     * The list of distribution groups.
+     * @return The list of distribution groups.
      * 
      */
     private final @Nullable List<String> distributionGroups;
@@ -23,9 +23,9 @@ public final class DistributionGroupListReceiverValueResponse {
     }
 
     /**
-     * The list of distribution groups.
+     * @return The list of distribution groups.
      * 
-    */
+     */
     public List<String> distributionGroups() {
         return this.distributionGroups == null ? List.of() : this.distributionGroups;
     }

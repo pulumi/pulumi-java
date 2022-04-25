@@ -19,6 +19,10 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -30,6 +34,10 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
             $ = new GetRemediationAtResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

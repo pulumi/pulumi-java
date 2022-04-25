@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListDatabaseAccountConnectionStringsResult {
     /**
-     * An array that contains the connection strings for the Cosmos DB account.
+     * @return An array that contains the connection strings for the Cosmos DB account.
      * 
      */
     private final @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings;
@@ -23,9 +23,9 @@ public final class ListDatabaseAccountConnectionStringsResult {
     }
 
     /**
-     * An array that contains the connection strings for the Cosmos DB account.
+     * @return An array that contains the connection strings for the Cosmos DB account.
      * 
-    */
+     */
     public List<DatabaseAccountConnectionStringResponse> connectionStrings() {
         return this.connectionStrings == null ? List.of() : this.connectionStrings;
     }

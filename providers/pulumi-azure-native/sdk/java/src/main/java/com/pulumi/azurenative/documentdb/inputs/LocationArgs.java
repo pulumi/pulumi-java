@@ -28,6 +28,10 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failoverPriority")
     private @Nullable Output<Integer> failoverPriority;
 
+    /**
+     * @return The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * 
+     */
     public Optional<Output<Integer>> failoverPriority() {
         return Optional.ofNullable(this.failoverPriority);
     }
@@ -39,6 +43,10 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isZoneRedundant")
     private @Nullable Output<Boolean> isZoneRedundant;
 
+    /**
+     * @return Flag to indicate whether or not this region is an AvailabilityZone region
+     * 
+     */
     public Optional<Output<Boolean>> isZoneRedundant() {
         return Optional.ofNullable(this.isZoneRedundant);
     }
@@ -50,6 +58,10 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationName")
     private @Nullable Output<String> locationName;
 
+    /**
+     * @return The name of the region.
+     * 
+     */
     public Optional<Output<String>> locationName() {
         return Optional.ofNullable(this.locationName);
     }
@@ -80,29 +92,65 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverPriority The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPriority(@Nullable Output<Integer> failoverPriority) {
             $.failoverPriority = failoverPriority;
             return this;
         }
 
+        /**
+         * @param failoverPriority The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPriority(Integer failoverPriority) {
             return failoverPriority(Output.of(failoverPriority));
         }
 
+        /**
+         * @param isZoneRedundant Flag to indicate whether or not this region is an AvailabilityZone region
+         * 
+         * @return builder
+         * 
+         */
         public Builder isZoneRedundant(@Nullable Output<Boolean> isZoneRedundant) {
             $.isZoneRedundant = isZoneRedundant;
             return this;
         }
 
+        /**
+         * @param isZoneRedundant Flag to indicate whether or not this region is an AvailabilityZone region
+         * 
+         * @return builder
+         * 
+         */
         public Builder isZoneRedundant(Boolean isZoneRedundant) {
             return isZoneRedundant(Output.of(isZoneRedundant));
         }
 
+        /**
+         * @param locationName The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(@Nullable Output<String> locationName) {
             $.locationName = locationName;
             return this;
         }
 
+        /**
+         * @param locationName The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(String locationName) {
             return locationName(Output.of(locationName));
         }

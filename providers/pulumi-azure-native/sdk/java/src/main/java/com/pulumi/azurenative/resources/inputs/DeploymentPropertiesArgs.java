@@ -32,6 +32,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="debugSetting")
     private @Nullable Output<DebugSettingArgs> debugSetting;
 
+    /**
+     * @return The debug setting of the deployment.
+     * 
+     */
     public Optional<Output<DebugSettingArgs>> debugSetting() {
         return Optional.ofNullable(this.debugSetting);
     }
@@ -43,6 +47,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="expressionEvaluationOptions")
     private @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
 
+    /**
+     * @return Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
+     * 
+     */
     public Optional<Output<ExpressionEvaluationOptionsArgs>> expressionEvaluationOptions() {
         return Optional.ofNullable(this.expressionEvaluationOptions);
     }
@@ -54,6 +62,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="mode", required=true)
     private Output<DeploymentMode> mode;
 
+    /**
+     * @return The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
+     * 
+     */
     public Output<DeploymentMode> mode() {
         return this.mode;
     }
@@ -65,6 +77,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="onErrorDeployment")
     private @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
 
+    /**
+     * @return The deployment on error behavior.
+     * 
+     */
     public Optional<Output<OnErrorDeploymentArgs>> onErrorDeployment() {
         return Optional.ofNullable(this.onErrorDeployment);
     }
@@ -76,6 +92,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="parameters")
     private @Nullable Output<Object> parameters;
 
+    /**
+     * @return Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+     * 
+     */
     public Optional<Output<Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -87,6 +107,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="parametersLink")
     private @Nullable Output<ParametersLinkArgs> parametersLink;
 
+    /**
+     * @return The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
+     * 
+     */
     public Optional<Output<ParametersLinkArgs>> parametersLink() {
         return Optional.ofNullable(this.parametersLink);
     }
@@ -98,6 +122,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="template")
     private @Nullable Output<Object> template;
 
+    /**
+     * @return The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+     * 
+     */
     public Optional<Output<Object>> template() {
         return Optional.ofNullable(this.template);
     }
@@ -109,6 +137,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="templateLink")
     private @Nullable Output<TemplateLinkArgs> templateLink;
 
+    /**
+     * @return The URI of the template. Use either the templateLink property or the template property, but not both.
+     * 
+     */
     public Optional<Output<TemplateLinkArgs>> templateLink() {
         return Optional.ofNullable(this.templateLink);
     }
@@ -144,74 +176,170 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new DeploymentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param debugSetting The debug setting of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder debugSetting(@Nullable Output<DebugSettingArgs> debugSetting) {
             $.debugSetting = debugSetting;
             return this;
         }
 
+        /**
+         * @param debugSetting The debug setting of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder debugSetting(DebugSettingArgs debugSetting) {
             return debugSetting(Output.of(debugSetting));
         }
 
+        /**
+         * @param expressionEvaluationOptions Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressionEvaluationOptions(@Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
             $.expressionEvaluationOptions = expressionEvaluationOptions;
             return this;
         }
 
+        /**
+         * @param expressionEvaluationOptions Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressionEvaluationOptions(ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
             return expressionEvaluationOptions(Output.of(expressionEvaluationOptions));
         }
 
+        /**
+         * @param mode The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Output<DeploymentMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(DeploymentMode mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param onErrorDeployment The deployment on error behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onErrorDeployment(@Nullable Output<OnErrorDeploymentArgs> onErrorDeployment) {
             $.onErrorDeployment = onErrorDeployment;
             return this;
         }
 
+        /**
+         * @param onErrorDeployment The deployment on error behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onErrorDeployment(OnErrorDeploymentArgs onErrorDeployment) {
             return onErrorDeployment(Output.of(onErrorDeployment));
         }
 
+        /**
+         * @param parameters Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parametersLink The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersLink(@Nullable Output<ParametersLinkArgs> parametersLink) {
             $.parametersLink = parametersLink;
             return this;
         }
 
+        /**
+         * @param parametersLink The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersLink(ParametersLinkArgs parametersLink) {
             return parametersLink(Output.of(parametersLink));
         }
 
+        /**
+         * @param template The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(@Nullable Output<Object> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Object template) {
             return template(Output.of(template));
         }
 
+        /**
+         * @param templateLink The URI of the template. Use either the templateLink property or the template property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateLink(@Nullable Output<TemplateLinkArgs> templateLink) {
             $.templateLink = templateLink;
             return this;
         }
 
+        /**
+         * @param templateLink The URI of the template. Use either the templateLink property or the template property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateLink(TemplateLinkArgs templateLink) {
             return templateLink(Output.of(templateLink));
         }

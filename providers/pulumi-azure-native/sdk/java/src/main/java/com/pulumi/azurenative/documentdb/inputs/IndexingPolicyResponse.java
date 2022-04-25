@@ -32,6 +32,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="automatic")
     private @Nullable Boolean automatic;
 
+    /**
+     * @return Indicates if the indexing policy is automatic
+     * 
+     */
     public Optional<Boolean> automatic() {
         return Optional.ofNullable(this.automatic);
     }
@@ -43,6 +47,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="compositeIndexes")
     private @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
+    /**
+     * @return List of composite path list
+     * 
+     */
     public Optional<List<List<CompositePathResponse>>> compositeIndexes() {
         return Optional.ofNullable(this.compositeIndexes);
     }
@@ -54,6 +62,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="excludedPaths")
     private @Nullable List<ExcludedPathResponse> excludedPaths;
 
+    /**
+     * @return List of paths to exclude from indexing
+     * 
+     */
     public Optional<List<ExcludedPathResponse>> excludedPaths() {
         return Optional.ofNullable(this.excludedPaths);
     }
@@ -65,6 +77,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="includedPaths")
     private @Nullable List<IncludedPathResponse> includedPaths;
 
+    /**
+     * @return List of paths to include in the indexing
+     * 
+     */
     public Optional<List<IncludedPathResponse>> includedPaths() {
         return Optional.ofNullable(this.includedPaths);
     }
@@ -76,6 +92,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="indexingMode")
     private @Nullable String indexingMode;
 
+    /**
+     * @return Indicates the indexing mode.
+     * 
+     */
     public Optional<String> indexingMode() {
         return Optional.ofNullable(this.indexingMode);
     }
@@ -87,6 +107,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="spatialIndexes")
     private @Nullable List<SpatialSpecResponse> spatialIndexes;
 
+    /**
+     * @return List of spatial specifics
+     * 
+     */
     public Optional<List<SpatialSpecResponse>> spatialIndexes() {
         return Optional.ofNullable(this.spatialIndexes);
     }
@@ -120,48 +144,108 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
             $ = new IndexingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automatic Indicates if the indexing policy is automatic
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(@Nullable Boolean automatic) {
             $.automatic = automatic;
             return this;
         }
 
+        /**
+         * @param compositeIndexes List of composite path list
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
             $.compositeIndexes = compositeIndexes;
             return this;
         }
 
+        /**
+         * @param compositeIndexes List of composite path list
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeIndexes(List<CompositePathResponse>... compositeIndexes) {
             return compositeIndexes(List.of(compositeIndexes));
         }
 
+        /**
+         * @param excludedPaths List of paths to exclude from indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(@Nullable List<ExcludedPathResponse> excludedPaths) {
             $.excludedPaths = excludedPaths;
             return this;
         }
 
+        /**
+         * @param excludedPaths List of paths to exclude from indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(ExcludedPathResponse... excludedPaths) {
             return excludedPaths(List.of(excludedPaths));
         }
 
+        /**
+         * @param includedPaths List of paths to include in the indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(@Nullable List<IncludedPathResponse> includedPaths) {
             $.includedPaths = includedPaths;
             return this;
         }
 
+        /**
+         * @param includedPaths List of paths to include in the indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(IncludedPathResponse... includedPaths) {
             return includedPaths(List.of(includedPaths));
         }
 
+        /**
+         * @param indexingMode Indicates the indexing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingMode(@Nullable String indexingMode) {
             $.indexingMode = indexingMode;
             return this;
         }
 
+        /**
+         * @param spatialIndexes List of spatial specifics
+         * 
+         * @return builder
+         * 
+         */
         public Builder spatialIndexes(@Nullable List<SpatialSpecResponse> spatialIndexes) {
             $.spatialIndexes = spatialIndexes;
             return this;
         }
 
+        /**
+         * @param spatialIndexes List of spatial specifics
+         * 
+         * @return builder
+         * 
+         */
         public Builder spatialIndexes(SpatialSpecResponse... spatialIndexes) {
             return spatialIndexes(List.of(spatialIndexes));
         }

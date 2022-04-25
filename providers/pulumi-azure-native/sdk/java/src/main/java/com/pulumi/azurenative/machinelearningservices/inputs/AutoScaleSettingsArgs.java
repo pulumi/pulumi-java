@@ -24,6 +24,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxInstances")
     private @Nullable Output<Integer> maxInstances;
 
+    /**
+     * @return Maximum number of instances for this deployment.
+     * 
+     */
     public Optional<Output<Integer>> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -35,6 +39,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="minInstances")
     private @Nullable Output<Integer> minInstances;
 
+    /**
+     * @return Minimum number of instances for this deployment.
+     * 
+     */
     public Optional<Output<Integer>> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -46,6 +54,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="pollingInterval")
     private @Nullable Output<String> pollingInterval;
 
+    /**
+     * @return The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+     * 
+     */
     public Optional<Output<String>> pollingInterval() {
         return Optional.ofNullable(this.pollingInterval);
     }
@@ -57,6 +69,11 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scaleType", required=true)
     private Output<String> scaleType;
 
+    /**
+     * @return
+     * Expected value is &#39;Auto&#39;.
+     * 
+     */
     public Output<String> scaleType() {
         return this.scaleType;
     }
@@ -68,6 +85,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="targetUtilizationPercentage")
     private @Nullable Output<Integer> targetUtilizationPercentage;
 
+    /**
+     * @return Target CPU usage for the autoscaler.
+     * 
+     */
     public Optional<Output<Integer>> targetUtilizationPercentage() {
         return Optional.ofNullable(this.targetUtilizationPercentage);
     }
@@ -100,47 +121,109 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             return maxInstances(Output.of(maxInstances));
         }
 
+        /**
+         * @param minInstances Minimum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Minimum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(Integer minInstances) {
             return minInstances(Output.of(minInstances));
         }
 
+        /**
+         * @param pollingInterval The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingInterval(@Nullable Output<String> pollingInterval) {
             $.pollingInterval = pollingInterval;
             return this;
         }
 
+        /**
+         * @param pollingInterval The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingInterval(String pollingInterval) {
             return pollingInterval(Output.of(pollingInterval));
         }
 
+        /**
+         * @param scaleType
+         * Expected value is &#39;Auto&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(Output<String> scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param scaleType
+         * Expected value is &#39;Auto&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             return scaleType(Output.of(scaleType));
         }
 
+        /**
+         * @param targetUtilizationPercentage Target CPU usage for the autoscaler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilizationPercentage(@Nullable Output<Integer> targetUtilizationPercentage) {
             $.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }
 
+        /**
+         * @param targetUtilizationPercentage Target CPU usage for the autoscaler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilizationPercentage(Integer targetUtilizationPercentage) {
             return targetUtilizationPercentage(Output.of(targetUtilizationPercentage));
         }

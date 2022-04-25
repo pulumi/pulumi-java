@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedIntegrationRuntimeNodeResponse {
     /**
-     * The errors that occurred on this integration runtime node.
+     * @return The errors that occurred on this integration runtime node.
      * 
      */
     private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
     /**
-     * The managed integration runtime node id.
+     * @return The managed integration runtime node id.
      * 
      */
     private final String nodeId;
     /**
-     * The managed integration runtime node status.
+     * @return The managed integration runtime node status.
      * 
      */
     private final String status;
@@ -39,23 +39,23 @@ public final class ManagedIntegrationRuntimeNodeResponse {
     }
 
     /**
-     * The errors that occurred on this integration runtime node.
+     * @return The errors that occurred on this integration runtime node.
      * 
-    */
+     */
     public List<ManagedIntegrationRuntimeErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * The managed integration runtime node id.
+     * @return The managed integration runtime node id.
      * 
-    */
+     */
     public String nodeId() {
         return this.nodeId;
     }
     /**
-     * The managed integration runtime node status.
+     * @return The managed integration runtime node status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

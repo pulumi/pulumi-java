@@ -36,6 +36,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="accessKey")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
 
+    /**
+     * @return The Azure Batch account access key.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
@@ -47,6 +51,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="accountName", required=true)
     private Object accountName;
 
+    /**
+     * @return The Azure Batch account name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object accountName() {
         return this.accountName;
     }
@@ -58,6 +66,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -69,6 +81,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="batchUri", required=true)
     private Object batchUri;
 
+    /**
+     * @return The Azure Batch URI. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object batchUri() {
         return this.batchUri;
     }
@@ -80,6 +96,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -91,6 +111,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="credential")
     private @Nullable CredentialReferenceResponse credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -102,6 +126,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -113,6 +141,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -124,6 +156,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return The Azure Storage linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -135,6 +171,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -146,6 +186,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="poolName", required=true)
     private Object poolName;
 
+    /**
+     * @return The Azure Batch pool name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object poolName() {
         return this.poolName;
     }
@@ -158,6 +202,11 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureBatch&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -197,73 +246,164 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
             $ = new AzureBatchLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey The Azure Batch account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param accessKey The Azure Batch account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(AzureKeyVaultSecretReferenceResponse accessKey) {
             return accessKey(Either.ofLeft(accessKey));
         }
 
+        /**
+         * @param accessKey The Azure Batch account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(SecureStringResponse accessKey) {
             return accessKey(Either.ofRight(accessKey));
         }
 
+        /**
+         * @param accountName The Azure Batch account name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Object accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param batchUri The Azure Batch URI. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchUri(Object batchUri) {
             $.batchUri = batchUri;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param linkedServiceName The Azure Storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param poolName The Azure Batch pool name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(Object poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureBatch&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

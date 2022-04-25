@@ -15,52 +15,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventHubResult {
     /**
-     * Properties of capture description
+     * @return Properties of capture description
      * 
      */
     private final @Nullable CaptureDescriptionResponse captureDescription;
     /**
-     * Exact time the Event Hub was created.
+     * @return Exact time the Event Hub was created.
      * 
      */
     private final String createdAt;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+     * @return Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
      */
     private final @Nullable Double messageRetentionInDays;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+     * @return Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
      */
     private final @Nullable Double partitionCount;
     /**
-     * Current number of shards on the Event Hub.
+     * @return Current number of shards on the Event Hub.
      * 
      */
     private final List<String> partitionIds;
     /**
-     * Enumerates the possible values for the status of the Event Hub.
+     * @return Enumerates the possible values for the status of the Event Hub.
      * 
      */
     private final @Nullable String status;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * The exact time the message was updated.
+     * @return The exact time the message was updated.
      * 
      */
     private final String updatedAt;
@@ -90,72 +90,72 @@ public final class GetEventHubResult {
     }
 
     /**
-     * Properties of capture description
+     * @return Properties of capture description
      * 
-    */
+     */
     public Optional<CaptureDescriptionResponse> captureDescription() {
         return Optional.ofNullable(this.captureDescription);
     }
     /**
-     * Exact time the Event Hub was created.
+     * @return Exact time the Event Hub was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+     * @return Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
-    */
+     */
     public Optional<Double> messageRetentionInDays() {
         return Optional.ofNullable(this.messageRetentionInDays);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+     * @return Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
-    */
+     */
     public Optional<Double> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
     /**
-     * Current number of shards on the Event Hub.
+     * @return Current number of shards on the Event Hub.
      * 
-    */
+     */
     public List<String> partitionIds() {
         return this.partitionIds;
     }
     /**
-     * Enumerates the possible values for the status of the Event Hub.
+     * @return Enumerates the possible values for the status of the Event Hub.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The exact time the message was updated.
+     * @return The exact time the message was updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

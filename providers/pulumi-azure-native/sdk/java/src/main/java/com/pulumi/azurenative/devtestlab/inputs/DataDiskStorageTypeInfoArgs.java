@@ -28,6 +28,10 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
     @Import(name="lun")
     private @Nullable Output<String> lun;
 
+    /**
+     * @return Disk Lun
+     * 
+     */
     public Optional<Output<String>> lun() {
         return Optional.ofNullable(this.lun);
     }
@@ -39,6 +43,10 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
     @Import(name="storageType")
     private @Nullable Output<Either<String,StorageType>> storageType;
 
+    /**
+     * @return Disk Storage Type
+     * 
+     */
     public Optional<Output<Either<String,StorageType>>> storageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -68,28 +76,64 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
             $ = new DataDiskStorageTypeInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lun Disk Lun
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(@Nullable Output<String> lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param lun Disk Lun
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(String lun) {
             return lun(Output.of(lun));
         }
 
+        /**
+         * @param storageType Disk Storage Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(@Nullable Output<Either<String,StorageType>> storageType) {
             $.storageType = storageType;
             return this;
         }
 
+        /**
+         * @param storageType Disk Storage Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(Either<String,StorageType> storageType) {
             return storageType(Output.of(storageType));
         }
 
+        /**
+         * @param storageType Disk Storage Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             return storageType(Either.ofLeft(storageType));
         }
 
+        /**
+         * @param storageType Disk Storage Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(StorageType storageType) {
             return storageType(Either.ofRight(storageType));
         }

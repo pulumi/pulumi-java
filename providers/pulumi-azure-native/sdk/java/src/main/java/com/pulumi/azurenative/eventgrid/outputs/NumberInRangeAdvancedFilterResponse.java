@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NumberInRangeAdvancedFilterResponse {
     /**
-     * The field/property in the event based on which you want to filter.
+     * @return The field/property in the event based on which you want to filter.
      * 
      */
     private final @Nullable String key;
     /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is &#39;NumberInRange&#39;.
      * 
      */
     private final String operatorType;
     /**
-     * The set of filter values.
+     * @return The set of filter values.
      * 
      */
     private final @Nullable List<List<Double>> values;
@@ -41,24 +41,24 @@ public final class NumberInRangeAdvancedFilterResponse {
     }
 
     /**
-     * The field/property in the event based on which you want to filter.
+     * @return The field/property in the event based on which you want to filter.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is &#39;NumberInRange&#39;.
      * 
-    */
+     */
     public String operatorType() {
         return this.operatorType;
     }
     /**
-     * The set of filter values.
+     * @return The set of filter values.
      * 
-    */
+     */
     public List<List<Double>> values() {
         return this.values == null ? List.of() : this.values;
     }

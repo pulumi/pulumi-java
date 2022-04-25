@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListControllerConnectionDetailsResult {
     /**
-     * List of Azure Dev Spaces Controller connection details.
+     * @return List of Azure Dev Spaces Controller connection details.
      * 
      */
     private final @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList;
@@ -23,9 +23,9 @@ public final class ListControllerConnectionDetailsResult {
     }
 
     /**
-     * List of Azure Dev Spaces Controller connection details.
+     * @return List of Azure Dev Spaces Controller connection details.
      * 
-    */
+     */
     public List<ControllerConnectionDetailsResponse> connectionDetailsList() {
         return this.connectionDetailsList == null ? List.of() : this.connectionDetailsList;
     }

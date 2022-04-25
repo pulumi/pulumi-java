@@ -27,6 +27,10 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipRules")
     private @Nullable Output<List<IpRuleArgs>> ipRules;
 
+    /**
+     * @return A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the &#39;publicNetworkAccess&#39; of the search service is &#39;enabled&#39;; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
+     * 
+     */
     public Optional<Output<List<IpRuleArgs>>> ipRules() {
         return Optional.ofNullable(this.ipRules);
     }
@@ -55,15 +59,33 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipRules A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the &#39;publicNetworkAccess&#39; of the search service is &#39;enabled&#39;; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(@Nullable Output<List<IpRuleArgs>> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the &#39;publicNetworkAccess&#39; of the search service is &#39;enabled&#39;; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(List<IpRuleArgs> ipRules) {
             return ipRules(Output.of(ipRules));
         }
 
+        /**
+         * @param ipRules A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the &#39;publicNetworkAccess&#39; of the search service is &#39;enabled&#39;; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(IpRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }

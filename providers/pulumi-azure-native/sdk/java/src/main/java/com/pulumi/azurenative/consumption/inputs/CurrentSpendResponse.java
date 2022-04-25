@@ -24,6 +24,10 @@ public final class CurrentSpendResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="amount", required=true)
     private Double amount;
 
+    /**
+     * @return The total amount of cost which is being tracked by the budget.
+     * 
+     */
     public Double amount() {
         return this.amount;
     }
@@ -35,6 +39,10 @@ public final class CurrentSpendResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="unit", required=true)
     private String unit;
 
+    /**
+     * @return The unit of measure for the budget amount.
+     * 
+     */
     public String unit() {
         return this.unit;
     }
@@ -64,11 +72,23 @@ public final class CurrentSpendResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CurrentSpendResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amount The total amount of cost which is being tracked by the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(Double amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param unit The unit of measure for the budget amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             $.unit = unit;
             return this;

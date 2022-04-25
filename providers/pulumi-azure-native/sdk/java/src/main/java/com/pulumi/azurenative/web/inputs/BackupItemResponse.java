@@ -30,6 +30,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupId", required=true)
     private Integer backupId;
 
+    /**
+     * @return Id of the backup.
+     * 
+     */
     public Integer backupId() {
         return this.backupId;
     }
@@ -41,6 +45,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobName", required=true)
     private String blobName;
 
+    /**
+     * @return Name of the blob which contains data for this backup.
+     * 
+     */
     public String blobName() {
         return this.blobName;
     }
@@ -52,6 +60,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="correlationId", required=true)
     private String correlationId;
 
+    /**
+     * @return Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+     * 
+     */
     public String correlationId() {
         return this.correlationId;
     }
@@ -63,6 +75,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="created", required=true)
     private String created;
 
+    /**
+     * @return Timestamp of the backup creation.
+     * 
+     */
     public String created() {
         return this.created;
     }
@@ -74,6 +90,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="databases", required=true)
     private List<DatabaseBackupSettingResponse> databases;
 
+    /**
+     * @return List of databases included in the backup.
+     * 
+     */
     public List<DatabaseBackupSettingResponse> databases() {
         return this.databases;
     }
@@ -85,6 +105,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="finishedTimeStamp", required=true)
     private String finishedTimeStamp;
 
+    /**
+     * @return Timestamp when this backup finished.
+     * 
+     */
     public String finishedTimeStamp() {
         return this.finishedTimeStamp;
     }
@@ -96,6 +120,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -107,6 +135,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -118,6 +150,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastRestoreTimeStamp", required=true)
     private String lastRestoreTimeStamp;
 
+    /**
+     * @return Timestamp of a last restore operation which used this backup.
+     * 
+     */
     public String lastRestoreTimeStamp() {
         return this.lastRestoreTimeStamp;
     }
@@ -129,6 +165,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="log", required=true)
     private String log;
 
+    /**
+     * @return Details regarding this backup. Might contain an error message.
+     * 
+     */
     public String log() {
         return this.log;
     }
@@ -140,6 +180,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -151,6 +195,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduled", required=true)
     private Boolean scheduled;
 
+    /**
+     * @return True if this backup has been created due to a schedule being triggered.
+     * 
+     */
     public Boolean scheduled() {
         return this.scheduled;
     }
@@ -162,6 +210,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sizeInBytes", required=true)
     private Double sizeInBytes;
 
+    /**
+     * @return Size of the backup in bytes.
+     * 
+     */
     public Double sizeInBytes() {
         return this.sizeInBytes;
     }
@@ -173,6 +225,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Backup status.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -184,6 +240,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountUrl", required=true)
     private String storageAccountUrl;
 
+    /**
+     * @return SAS URL for the storage account container which contains this backup.
+     * 
+     */
     public String storageAccountUrl() {
         return this.storageAccountUrl;
     }
@@ -195,6 +255,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -206,6 +270,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="websiteSizeInBytes", required=true)
     private Double websiteSizeInBytes;
 
+    /**
+     * @return Size of the original web app which has been backed up.
+     * 
+     */
     public Double websiteSizeInBytes() {
         return this.websiteSizeInBytes;
     }
@@ -250,90 +318,198 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackupItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupId Id of the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(Integer backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param blobName Name of the blob which contains data for this backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobName(String blobName) {
             $.blobName = blobName;
             return this;
         }
 
+        /**
+         * @param correlationId Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(String correlationId) {
             $.correlationId = correlationId;
             return this;
         }
 
+        /**
+         * @param created Timestamp of the backup creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(String created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param databases List of databases included in the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(List<DatabaseBackupSettingResponse> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param databases List of databases included in the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(DatabaseBackupSettingResponse... databases) {
             return databases(List.of(databases));
         }
 
+        /**
+         * @param finishedTimeStamp Timestamp when this backup finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishedTimeStamp(String finishedTimeStamp) {
             $.finishedTimeStamp = finishedTimeStamp;
             return this;
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param lastRestoreTimeStamp Timestamp of a last restore operation which used this backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRestoreTimeStamp(String lastRestoreTimeStamp) {
             $.lastRestoreTimeStamp = lastRestoreTimeStamp;
             return this;
         }
 
+        /**
+         * @param log Details regarding this backup. Might contain an error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder log(String log) {
             $.log = log;
             return this;
         }
 
+        /**
+         * @param name Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param scheduled True if this backup has been created due to a schedule being triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduled(Boolean scheduled) {
             $.scheduled = scheduled;
             return this;
         }
 
+        /**
+         * @param sizeInBytes Size of the backup in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInBytes(Double sizeInBytes) {
             $.sizeInBytes = sizeInBytes;
             return this;
         }
 
+        /**
+         * @param status Backup status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param storageAccountUrl SAS URL for the storage account container which contains this backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(String storageAccountUrl) {
             $.storageAccountUrl = storageAccountUrl;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param websiteSizeInBytes Size of the original web app which has been backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder websiteSizeInBytes(Double websiteSizeInBytes) {
             $.websiteSizeInBytes = websiteSizeInBytes;
             return this;

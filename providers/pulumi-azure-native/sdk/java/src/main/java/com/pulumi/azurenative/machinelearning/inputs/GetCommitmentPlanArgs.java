@@ -19,6 +19,10 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="commitmentPlanName", required=true)
     private String commitmentPlanName;
 
+    /**
+     * @return The Azure ML commitment plan name.
+     * 
+     */
     public String commitmentPlanName() {
         return this.commitmentPlanName;
     }
@@ -30,6 +34,10 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCommitmentPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commitmentPlanName The Azure ML commitment plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentPlanName(String commitmentPlanName) {
             $.commitmentPlanName = commitmentPlanName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

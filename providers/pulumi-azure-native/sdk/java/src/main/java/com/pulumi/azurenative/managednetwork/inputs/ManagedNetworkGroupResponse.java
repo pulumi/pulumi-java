@@ -27,6 +27,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -38,6 +42,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -49,6 +57,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Responsibility role under which this Managed Network Group will be created
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -60,6 +72,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -71,6 +87,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="managementGroups")
     private @Nullable List<ResourceIdResponse> managementGroups;
 
+    /**
+     * @return The collection of management groups covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> managementGroups() {
         return Optional.ofNullable(this.managementGroups);
     }
@@ -82,6 +102,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -93,6 +117,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the ManagedNetwork resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -104,6 +132,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="subnets")
     private @Nullable List<ResourceIdResponse> subnets;
 
+    /**
+     * @return The collection of  subnets covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -115,6 +147,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="subscriptions")
     private @Nullable List<ResourceIdResponse> subscriptions;
 
+    /**
+     * @return The collection of subscriptions covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> subscriptions() {
         return Optional.ofNullable(this.subscriptions);
     }
@@ -126,6 +162,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -137,6 +177,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
     @Import(name="virtualNetworks")
     private @Nullable List<ResourceIdResponse> virtualNetworks;
 
+    /**
+     * @return The collection of virtual nets covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> virtualNetworks() {
         return Optional.ofNullable(this.virtualNetworks);
     }
@@ -175,73 +219,163 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
             $ = new ManagedNetworkGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Responsibility role under which this Managed Network Group will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param managementGroups The collection of management groups covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
             $.managementGroups = managementGroups;
             return this;
         }
 
+        /**
+         * @param managementGroups The collection of management groups covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroups(ResourceIdResponse... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
 
+        /**
+         * @param name The name of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the ManagedNetwork resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param subnets The collection of  subnets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The collection of  subnets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(ResourceIdResponse... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param subscriptions The collection of subscriptions covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
         }
 
+        /**
+         * @param subscriptions The collection of subscriptions covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(ResourceIdResponse... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }
 
+        /**
+         * @param type The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param virtualNetworks The collection of virtual nets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
             $.virtualNetworks = virtualNetworks;
             return this;
         }
 
+        /**
+         * @param virtualNetworks The collection of virtual nets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworks(ResourceIdResponse... virtualNetworks) {
             return virtualNetworks(List.of(virtualNetworks));
         }

@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlDatabaseGetPropertiesResponseResource {
     /**
-     * A system generated property that specified the addressable path of the collections resource.
+     * @return A system generated property that specified the addressable path of the collections resource.
      * 
      */
     private final @Nullable String colls;
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
     private final String etag;
     /**
-     * Name of the Cosmos DB SQL database
+     * @return Name of the Cosmos DB SQL database
      * 
      */
     private final String id;
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
      */
     private final String rid;
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
     private final Double ts;
     /**
-     * A system generated property that specifies the addressable path of the users resource.
+     * @return A system generated property that specifies the addressable path of the users resource.
      * 
      */
     private final @Nullable String users;
@@ -60,44 +60,44 @@ public final class SqlDatabaseGetPropertiesResponseResource {
     }
 
     /**
-     * A system generated property that specified the addressable path of the collections resource.
+     * @return A system generated property that specified the addressable path of the collections resource.
      * 
-    */
+     */
     public Optional<String> colls() {
         return Optional.ofNullable(this.colls);
     }
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Name of the Cosmos DB SQL database
+     * @return Name of the Cosmos DB SQL database
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
-    */
+     */
     public String rid() {
         return this.rid;
     }
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
-    */
+     */
     public Double ts() {
         return this.ts;
     }
     /**
-     * A system generated property that specifies the addressable path of the users resource.
+     * @return A system generated property that specifies the addressable path of the users resource.
      * 
-    */
+     */
     public Optional<String> users() {
         return Optional.ofNullable(this.users);
     }

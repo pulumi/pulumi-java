@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ConnectionStatePropertiesResponse {
     /**
-     * The actions required on the managed private endpoint
+     * @return The actions required on the managed private endpoint
      * 
      */
     private final String actionsRequired;
     /**
-     * The managed private endpoint description
+     * @return The managed private endpoint description
      * 
      */
     private final String description;
     /**
-     * The approval status
+     * @return The approval status
      * 
      */
     private final String status;
@@ -36,23 +36,23 @@ public final class ConnectionStatePropertiesResponse {
     }
 
     /**
-     * The actions required on the managed private endpoint
+     * @return The actions required on the managed private endpoint
      * 
-    */
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
-     * The managed private endpoint description
+     * @return The managed private endpoint description
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The approval status
+     * @return The approval status
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

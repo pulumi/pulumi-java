@@ -21,78 +21,78 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebActivityResponse {
     /**
-     * Authentication method used for calling the endpoint.
+     * @return Authentication method used for calling the endpoint.
      * 
      */
     private final @Nullable WebActivityAuthenticationResponse authentication;
     /**
-     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object body;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * List of datasets passed to web endpoint.
+     * @return List of datasets passed to web endpoint.
      * 
      */
     private final @Nullable List<DatasetReferenceResponse> datasets;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+     * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object headers;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * List of linked services passed to web endpoint.
+     * @return List of linked services passed to web endpoint.
      * 
      */
     private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
     /**
-     * Rest API method for target endpoint.
+     * @return Rest API method for target endpoint.
      * 
      */
     private final String method;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;WebActivity&#39;.
      * 
      */
     private final String type;
     /**
-     * Web activity target endpoint and path. Type: string (or Expression with resultType string).
+     * @return Web activity target endpoint and path. Type: string (or Expression with resultType string).
      * 
      */
     private final Object url;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -132,108 +132,108 @@ public final class WebActivityResponse {
     }
 
     /**
-     * Authentication method used for calling the endpoint.
+     * @return Authentication method used for calling the endpoint.
      * 
-    */
+     */
     public Optional<WebActivityAuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
-     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * List of datasets passed to web endpoint.
+     * @return List of datasets passed to web endpoint.
      * 
-    */
+     */
     public List<DatasetReferenceResponse> datasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+     * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> headers() {
         return Optional.ofNullable(this.headers);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * List of linked services passed to web endpoint.
+     * @return List of linked services passed to web endpoint.
      * 
-    */
+     */
     public List<LinkedServiceReferenceResponse> linkedServices() {
         return this.linkedServices == null ? List.of() : this.linkedServices;
     }
     /**
-     * Rest API method for target endpoint.
+     * @return Rest API method for target endpoint.
      * 
-    */
+     */
     public String method() {
         return this.method;
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;WebActivity&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Web activity target endpoint and path. Type: string (or Expression with resultType string).
+     * @return Web activity target endpoint and path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

@@ -27,6 +27,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="domainNameLabel")
     private @Nullable Output<String> domainNameLabel;
 
+    /**
+     * @return Gets or sets the domain name label.
+     * 
+     */
     public Optional<Output<String>> domainNameLabel() {
         return Optional.ofNullable(this.domainNameLabel);
     }
@@ -38,6 +42,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
+    /**
+     * @return Gets or sets the fully qualified domain name.
+     * 
+     */
     public Optional<Output<String>> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -49,6 +57,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="publicIpAllocationMethod")
     private @Nullable Output<String> publicIpAllocationMethod;
 
+    /**
+     * @return Gets or sets public IP allocation method.
+     * 
+     */
     public Optional<Output<String>> publicIpAllocationMethod() {
         return Optional.ofNullable(this.publicIpAllocationMethod);
     }
@@ -61,6 +73,11 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -72,6 +89,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return Gets or sets public IP sku.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -83,6 +104,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -94,6 +119,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
     @Import(name="zones")
     private @Nullable Output<String> zones;
 
+    /**
+     * @return Gets or sets public IP zones.
+     * 
+     */
     public Optional<Output<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -128,65 +157,151 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
             $ = new PublicIPAddressResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainNameLabel Gets or sets the domain name label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(@Nullable Output<String> domainNameLabel) {
             $.domainNameLabel = domainNameLabel;
             return this;
         }
 
+        /**
+         * @param domainNameLabel Gets or sets the domain name label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(String domainNameLabel) {
             return domainNameLabel(Output.of(domainNameLabel));
         }
 
+        /**
+         * @param fqdn Gets or sets the fully qualified domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn Gets or sets the fully qualified domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param publicIpAllocationMethod Gets or sets public IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAllocationMethod(@Nullable Output<String> publicIpAllocationMethod) {
             $.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
 
+        /**
+         * @param publicIpAllocationMethod Gets or sets public IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAllocationMethod(String publicIpAllocationMethod) {
             return publicIpAllocationMethod(Output.of(publicIpAllocationMethod));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param sku Gets or sets public IP sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets public IP sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }
 
+        /**
+         * @param zones Gets or sets public IP zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Gets or sets public IP zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String zones) {
             return zones(Output.of(zones));
         }

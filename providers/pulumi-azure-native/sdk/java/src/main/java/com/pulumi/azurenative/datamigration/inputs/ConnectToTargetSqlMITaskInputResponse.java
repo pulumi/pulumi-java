@@ -23,6 +23,10 @@ public final class ConnectToTargetSqlMITaskInputResponse extends com.pulumi.reso
     @Import(name="targetConnectionInfo", required=true)
     private SqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for target SQL Server
+     * 
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -51,6 +55,12 @@ public final class ConnectToTargetSqlMITaskInputResponse extends com.pulumi.reso
             $ = new ConnectToTargetSqlMITaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

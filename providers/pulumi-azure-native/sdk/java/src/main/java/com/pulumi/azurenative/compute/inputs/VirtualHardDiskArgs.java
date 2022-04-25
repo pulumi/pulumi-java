@@ -26,6 +26,10 @@ public final class VirtualHardDiskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return Specifies the virtual hard disk&#39;s uri.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -54,11 +58,23 @@ public final class VirtualHardDiskArgs extends com.pulumi.resources.ResourceArgs
             $ = new VirtualHardDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri Specifies the virtual hard disk&#39;s uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Specifies the virtual hard disk&#39;s uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

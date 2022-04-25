@@ -22,6 +22,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="commentId")
     private @Nullable Output<String> commentId;
 
+    /**
+     * @return Comment identifier within an Issue. Must be unique in the current Issue.
+     * 
+     */
     public Optional<Output<String>> commentId() {
         return Optional.ofNullable(this.commentId);
     }
@@ -44,6 +52,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return Date and time when the comment was created.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -55,6 +67,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="issueId", required=true)
     private Output<String> issueId;
 
+    /**
+     * @return Issue identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Output<String> issueId() {
         return this.issueId;
     }
@@ -66,6 +82,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -88,6 +112,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return Comment text.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -99,6 +127,10 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return A resource identifier for the user who left the comment.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -134,74 +166,170 @@ public final class ApiIssueCommentArgs extends com.pulumi.resources.ResourceArgs
             $ = new ApiIssueCommentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param commentId Comment identifier within an Issue. Must be unique in the current Issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commentId(@Nullable Output<String> commentId) {
             $.commentId = commentId;
             return this;
         }
 
+        /**
+         * @param commentId Comment identifier within an Issue. Must be unique in the current Issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commentId(String commentId) {
             return commentId(Output.of(commentId));
         }
 
+        /**
+         * @param createdDate Date and time when the comment was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate Date and time when the comment was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(Output<String> issueId) {
             $.issueId = issueId;
             return this;
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(String issueId) {
             return issueId(Output.of(issueId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param text Comment text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Comment text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param userId A resource identifier for the user who left the comment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId A resource identifier for the user who left the comment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

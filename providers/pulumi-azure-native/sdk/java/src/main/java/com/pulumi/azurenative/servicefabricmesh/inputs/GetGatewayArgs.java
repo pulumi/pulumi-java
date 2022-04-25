@@ -19,6 +19,10 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayResourceName", required=true)
     private String gatewayResourceName;
 
+    /**
+     * @return The identity of the gateway.
+     * 
+     */
     public String gatewayResourceName() {
         return this.gatewayResourceName;
     }
@@ -30,6 +34,10 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayResourceName The identity of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayResourceName(String gatewayResourceName) {
             $.gatewayResourceName = gatewayResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

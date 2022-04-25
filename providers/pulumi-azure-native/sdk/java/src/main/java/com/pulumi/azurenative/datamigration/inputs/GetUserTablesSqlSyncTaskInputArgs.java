@@ -26,6 +26,10 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="selectedSourceDatabases", required=true)
     private Output<List<String>> selectedSourceDatabases;
 
+    /**
+     * @return List of source database names to collect tables for
+     * 
+     */
     public Output<List<String>> selectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
@@ -37,6 +41,10 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="selectedTargetDatabases", required=true)
     private Output<List<String>> selectedTargetDatabases;
 
+    /**
+     * @return List of target database names to collect tables for
+     * 
+     */
     public Output<List<String>> selectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
@@ -48,6 +56,10 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -59,6 +71,10 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="targetConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for SQL DB
+     * 
+     */
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -90,46 +106,106 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
             $ = new GetUserTablesSqlSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedSourceDatabases List of source database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedSourceDatabases(Output<List<String>> selectedSourceDatabases) {
             $.selectedSourceDatabases = selectedSourceDatabases;
             return this;
         }
 
+        /**
+         * @param selectedSourceDatabases List of source database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedSourceDatabases(List<String> selectedSourceDatabases) {
             return selectedSourceDatabases(Output.of(selectedSourceDatabases));
         }
 
+        /**
+         * @param selectedSourceDatabases List of source database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedSourceDatabases(String... selectedSourceDatabases) {
             return selectedSourceDatabases(List.of(selectedSourceDatabases));
         }
 
+        /**
+         * @param selectedTargetDatabases List of target database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedTargetDatabases(Output<List<String>> selectedTargetDatabases) {
             $.selectedTargetDatabases = selectedTargetDatabases;
             return this;
         }
 
+        /**
+         * @param selectedTargetDatabases List of target database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedTargetDatabases(List<String> selectedTargetDatabases) {
             return selectedTargetDatabases(Output.of(selectedTargetDatabases));
         }
 
+        /**
+         * @param selectedTargetDatabases List of target database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedTargetDatabases(String... selectedTargetDatabases) {
             return selectedTargetDatabases(List.of(selectedTargetDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for SQL DB
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for SQL DB
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

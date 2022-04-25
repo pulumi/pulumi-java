@@ -22,6 +22,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheName", required=true)
     private Output<String> cacheName;
 
+    /**
+     * @return The name of the Redis cache.
+     * 
+     */
     public Output<String> cacheName() {
         return this.cacheName;
     }
@@ -33,6 +37,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endIP", required=true)
     private Output<String> endIP;
 
+    /**
+     * @return highest IP address included in the range
+     * 
+     */
     public Output<String> endIP() {
         return this.endIP;
     }
@@ -44,6 +52,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The name of the firewall rule.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -66,6 +82,10 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startIP", required=true)
     private Output<String> startIP;
 
+    /**
+     * @return lowest IP address included in the range
+     * 
+     */
     public Output<String> startIP() {
         return this.startIP;
     }
@@ -98,47 +118,107 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheName The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(Output<String> cacheName) {
             $.cacheName = cacheName;
             return this;
         }
 
+        /**
+         * @param cacheName The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(String cacheName) {
             return cacheName(Output.of(cacheName));
         }
 
+        /**
+         * @param endIP highest IP address included in the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIP(Output<String> endIP) {
             $.endIP = endIP;
             return this;
         }
 
+        /**
+         * @param endIP highest IP address included in the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIP(String endIP) {
             return endIP(Output.of(endIP));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The name of the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param startIP lowest IP address included in the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIP(Output<String> startIP) {
             $.startIP = startIP;
             return this;
         }
 
+        /**
+         * @param startIP lowest IP address included in the range
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIP(String startIP) {
             return startIP(Output.of(startIP));
         }

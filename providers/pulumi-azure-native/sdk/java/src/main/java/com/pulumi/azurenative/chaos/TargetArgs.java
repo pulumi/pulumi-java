@@ -23,6 +23,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the target resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentProviderNamespace", required=true)
     private Output<String> parentProviderNamespace;
 
+    /**
+     * @return String that represents a resource provider namespace.
+     * 
+     */
     public Output<String> parentProviderNamespace() {
         return this.parentProviderNamespace;
     }
@@ -45,6 +53,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceName", required=true)
     private Output<String> parentResourceName;
 
+    /**
+     * @return String that represents a resource name.
+     * 
+     */
     public Output<String> parentResourceName() {
         return this.parentResourceName;
     }
@@ -56,6 +68,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
     private Output<String> parentResourceType;
 
+    /**
+     * @return String that represents a resource type.
+     * 
+     */
     public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
@@ -67,6 +83,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Object> properties;
 
+    /**
+     * @return The properties of the target resource.
+     * 
+     */
     public Output<Object> properties() {
         return this.properties;
     }
@@ -78,6 +98,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return String that represents an Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -89,6 +113,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetName")
     private @Nullable Output<String> targetName;
 
+    /**
+     * @return String that represents a Target resource name.
+     * 
+     */
     public Optional<Output<String>> targetName() {
         return Optional.ofNullable(this.targetName);
     }
@@ -123,65 +151,149 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Location of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param parentProviderNamespace String that represents a resource provider namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
             $.parentProviderNamespace = parentProviderNamespace;
             return this;
         }
 
+        /**
+         * @param parentProviderNamespace String that represents a resource provider namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentProviderNamespace(String parentProviderNamespace) {
             return parentProviderNamespace(Output.of(parentProviderNamespace));
         }
 
+        /**
+         * @param parentResourceName String that represents a resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceName(Output<String> parentResourceName) {
             $.parentResourceName = parentResourceName;
             return this;
         }
 
+        /**
+         * @param parentResourceName String that represents a resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceName(String parentResourceName) {
             return parentResourceName(Output.of(parentResourceName));
         }
 
+        /**
+         * @param parentResourceType String that represents a resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(Output<String> parentResourceType) {
             $.parentResourceType = parentResourceType;
             return this;
         }
 
+        /**
+         * @param parentResourceType String that represents a resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(String parentResourceType) {
             return parentResourceType(Output.of(parentResourceType));
         }
 
+        /**
+         * @param properties The properties of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param targetName String that represents a Target resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(@Nullable Output<String> targetName) {
             $.targetName = targetName;
             return this;
         }
 
+        /**
+         * @param targetName String that represents a Target resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(String targetName) {
             return targetName(Output.of(targetName));
         }
