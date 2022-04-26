@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum AofFrequency {
-        AofFrequency_1s("1s"),
+        _1s("1s"),
         Always("always");
 
         private final String value;

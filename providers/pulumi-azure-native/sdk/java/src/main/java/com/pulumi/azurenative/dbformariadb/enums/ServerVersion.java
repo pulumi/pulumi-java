@@ -14,8 +14,8 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum ServerVersion {
-        ServerVersion_10_2("10.2"),
-        ServerVersion_10_3("10.3");
+        _10_2("10.2"),
+        _10_3("10.3");
 
         private final String value;
 
