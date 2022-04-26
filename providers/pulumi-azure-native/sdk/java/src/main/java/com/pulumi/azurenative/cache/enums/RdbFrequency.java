@@ -14,9 +14,9 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum RdbFrequency {
-        RdbFrequency_1h("1h"),
-        RdbFrequency_6h("6h"),
-        RdbFrequency_12h("12h");
+        _1h("1h"),
+        _6h("6h"),
+        _12h("12h");
 
         private final String value;
 

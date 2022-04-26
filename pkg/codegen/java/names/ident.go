@@ -88,11 +88,6 @@ func MakeSafeEnumName(name, typeName string) (string, error) {
 	regex := regexp.MustCompile(`_+`)
 	safeName = regex.ReplaceAllString(safeName, "_")
 
-	// If the enum name starts with an underscore, add the type name as a prefix.
-	if strings.HasPrefix(safeName, "_") {
-		safeName = typeName + safeName
-	}
-
 	return safeName, nil
 }
 
