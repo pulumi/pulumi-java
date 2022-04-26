@@ -85,7 +85,11 @@ func resourceName(r *schema.Resource) string {
 }
 
 func tokenToFunctionName(tok string) string {
-	return tokenToName(tok)
+	return names.LowerCamelCase(tokenToName(tok))
+}
+
+func tokenToFunctionResultClassName(tok string) names.Ident {
+	return names.Ident(fmt.Sprintf("%sResult", tokenToName(tok)))
 }
 
 func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
@@ -1502,7 +1506,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		}
 
 		outputsPkg := javaPkg.Dot(names.Ident("outputs"))
-		resultClass := names.Ident(tokenToName(fun.Token) + "Result")
+		resultClass := tokenToFunctionResultClassName(fun.Token)
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
 		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
@@ -1522,7 +1526,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			returnType = ctx.imports.Ref(names.Void)
 		}
 
-		methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
+		methodName := tokenToFunctionName(fun.Token)
 
 		// Emit datasource inputs method
 		invokeOptions := ctx.ref(names.InvokeOptions)
