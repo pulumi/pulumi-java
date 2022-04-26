@@ -1736,7 +1736,7 @@ func (q qualifier) append(typeName string) string {
 	case noQualifier:
 		return typeName
 	default:
-		return fmt.Sprintf("%s.%s", q.String(), typeName)
+		return fmt.Sprintf("%s.%s", typeName, q.String())
 	}
 }
 
