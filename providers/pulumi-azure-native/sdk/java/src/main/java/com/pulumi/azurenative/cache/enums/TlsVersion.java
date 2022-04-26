@@ -14,9 +14,9 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum TlsVersion {
-        TlsVersion_1_0("1.0"),
-        TlsVersion_1_1("1.1"),
-        TlsVersion_1_2("1.2");
+        _1_0("1.0"),
+        _1_1("1.1"),
+        _1_2("1.2");
 
         private final String value;
 

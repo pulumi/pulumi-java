@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum ReplicationSchedule {
-        ReplicationSchedule_10minutely("_10minutely"),
+        _10minutely("_10minutely"),
         Hourly("hourly"),
         Daily("daily");
 

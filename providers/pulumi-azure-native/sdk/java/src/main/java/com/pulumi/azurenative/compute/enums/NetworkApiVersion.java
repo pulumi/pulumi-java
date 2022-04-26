@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum NetworkApiVersion {
-        NetworkApiVersion_20201101("2020-11-01");
+        _20201101("2020-11-01");
 
         private final String value;
 

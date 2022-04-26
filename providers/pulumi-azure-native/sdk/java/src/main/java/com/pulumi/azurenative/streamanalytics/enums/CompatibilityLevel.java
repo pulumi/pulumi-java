@@ -14,7 +14,7 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum CompatibilityLevel {
-        CompatibilityLevel_1_0("1.0");
+        _1_0("1.0");
 
         private final String value;
 

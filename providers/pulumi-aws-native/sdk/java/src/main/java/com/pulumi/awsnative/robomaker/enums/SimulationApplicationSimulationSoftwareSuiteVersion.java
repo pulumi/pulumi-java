@@ -16,7 +16,7 @@ import java.util.StringJoiner;
     public enum SimulationApplicationSimulationSoftwareSuiteVersion {
         Seven("7"),
         Nine("9"),
-        SimulationApplicationSimulationSoftwareSuiteVersion_11("11"),
+        _11("11"),
         Kinetic("Kinetic"),
         Melodic("Melodic"),
         Dashing("Dashing"),
